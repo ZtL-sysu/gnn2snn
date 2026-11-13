@@ -1,0 +1,68 @@
+{
+  "41": {
+    "frozen_files_verified": 6,
+    "processed_files_verified": 5,
+    "teacher_accuracy": 0.7066
+  },
+  "42": {
+    "frozen_files_verified": 6,
+    "processed_files_verified": 5,
+    "teacher_accuracy": 0.703
+  },
+  "43": {
+    "frozen_files_verified": 6,
+    "processed_files_verified": 5,
+    "teacher_accuracy": 0.7074
+  },
+  "author_provenance": {
+    "affine_base_source_files": {
+      "line_neuron": {
+        "path": "neurons/line_neuron.py",
+        "sha256": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f"
+      },
+      "relu_neuron": {
+        "path": "neurons/relu_neuron.py",
+        "sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851"
+      }
+    },
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "e0_e1_class_identity": true,
+    "e0_source_file": {
+      "head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161",
+      "path": "neurons/relu_neuron.py",
+      "sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851"
+    },
+    "worktree_clean_except_ignored_bytecode": true
+  },
+  "check": "e3_e5_precheck_v1",
+  "note": "hash/shape/structure gate only; no GPU, no scientific result",
+  "row_coverage": {
+    "modes": 9,
+    "rows": 108,
+    "seeds": [
+      41,
+      42,
+      43
+    ],
+    "site_count_histogram": {
+      "20": 12,
+      "4": 12,
+      "6": 60,
+      "8": 24
+    },
+    "timesteps": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "shape_census": {
+    "E_per_N": 8.0,
+    "batches_128": 40,
+    "edges": 4703392,
+    "graphs": 5000,
+    "nodes": 587924
+  },
+  "status": "PASS"
+}

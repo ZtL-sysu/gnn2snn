@@ -9,11 +9,11 @@
 | 目标陈述 | 完成 `PROTOCOL-v3.md` + 分类头补充 + CURRENT_SCOPE 中 E0–E6 全部实验与公平对照、验证集上的书面 Story 判定、六节全新终稿、引用核查与当前稿独立 CCFA≥7/10；并同步到本仓库 agent 分支 |
 | 背景与动机 | 用户 2026-11-13 22:52 +0800 指令：读取 GitHub gnn2snn 最新进展与协议，按科研流水线标准推进，代码本机 3060 跑，按 research-github-sync 传仓库，目标为完成协议中的所有工作 |
 | 边界 | 不改研究方向、不缩数据子集、不伪造基线/效率、不远程 GPU、不擅自合并 main、不 force push、不发布 Release、不上传凭证/私人对话/大失败镜像；不修改旧证据哈希 |
-| 时间尺度 | 心跳期（跨会话续跑；心跳配置需用户确认后创建，当前未创建） |
+| 时间尺度 | 心跳期（跨会话续跑；已启用，`FREQ=HOURLY;INTERVAL=1;BYMINUTE=0,15,30,45` = 每 15 分钟，2026-11-14 07:32 用户要求调小后更新） |
 | 资源约束 | 本机 RTX 3060 12 GiB，Conda dyg-cold；contract v4 计算上限 E1≤80 / E2≤200 / E4≤80 / E3+E5≤40 / E6≤100 GPU 小时；单 GPU 单作业 |
 | 判定者 | 系统指标（冻结协议的 .3pp + 完整成本门槛）、文档产物（六节新稿与审计）、独立评审（CCFA≥7/10） |
 | 确认档位 | 授权档：用户已一次性授权「本机跑代码 + 增量 push 到 agent 分支 + 完成协议工作」。清单外操作（merge/force push/远程计算/发布）仍需逐项确认 |
-| 运行模式 | 会话内死磕 + 建议心跳续跑（待用户确认） |
+| 运行模式 | 会话内死磕 + 每 15 分钟心跳续跑（ACTIVE；GPU 空闲即必须启动真实作业，见 GPU_QUEUE.md） |
 
 ## 2 手段弹药库
 
@@ -28,7 +28,7 @@
 | A7 | 外部资源 | 钉死 DCGS 源码 checkout（commit 精确匹配） | 可用 | `DCGS_REPO` 指向本机 checkout | 低 | PASS |
 | A8 | 外部资源 | 9 个教师权重与 verified-evidence.zip、seed41/42/43 教师目录 | 可用 | 主工作树原路径只读 | 低 | PASS |
 | A9 | 外部资源 | GitHub `ZtL-sysu/gnn2snn` 远端读写 | 可用（fetch 成功；push 待核对） | `git push` 到本 agent 分支 | 中 | PASS（仅 agent 分支） |
-| A10 | 可组合编排 | 定时自动化心跳续跑 | 能力可用但**未启用**（需用户确认配置） | automation_update | 中 | 待确认 |
+| A10 | 可组合编排 | 定时自动化心跳续跑 | **已启用 ACTIVE**：每 15 分钟，按 GitHub 已推送进度、强制 GPU 满载队列 | automation_update / GPU_QUEUE.md | 中 | PASS |
 | — | 已剔除 | novix exp-4090 远程 GPU | 用户最新指令禁止 | — | — | 剔除：仅本机 3060 |
 
 ## 3 成功标准证据清单（锁定，来自冻结协议；不得修改）
@@ -79,6 +79,7 @@
 | R4 | 不变流程多 seed 补网格 | 冻结输入门禁全 PASS；进程/GPU 判无存活作业后顺序跑 4 个本机 GPU 作业全部 exit 0：42/43 冻结全训练无标签校准（45000×2 遍，复用 frozen `calibrate_loader`）、42/43 E1 六行 ×4T 全 5000 验证（各 24 逐样本 NPZ）；流程等价性交叉验证 PASS、逐样本核验 42/43 均 PASS；跨 seed 汇总 336 行固定列指标 | S2 大幅推进（72 组逐样本证据齐全）但仍 FAIL（缺 ANN/历史 DC-adapt 汇总/共享 theta）；S3 精度条件满足但双门槛 NOT EVALUABLE（成本/墙钟缺）故仍 FAIL；S4–S8 未动；S9 待本轮 push 远端确认 | 无失败（连败 0） | 继续 M3 收尾：共享 theta + 历史六站点 DC-adapt + ANN 行，再 E3/E5 完整成本与 falsifier（S3 前置），之后 E2/E4/E6 |
 | R4b | 证据完整性修复 + 清单发布（非科学推进） | 唤醒门禁全 PASS（12 项冻结输入 / contract v4 / P4 running / 0 个 python 进程 / 0 GPU 作业）；发现未发布的 R4 23 产物草稿清单因 4 个新增脚本去标识而失效，按不可变规则不覆盖，改新建 74 产物权威清单（含全部 48 个逐样本 NPZ）并 `verify` PASS；新增冻结门禁与上传内容检查两个只读工具；重验流程等价性、E1 预检、10/10 公开副本均 PASS | S2/S3 状态不变（仍 FAIL），S4–S8 未动；S9 本地清单 verify PASS，仍待远端 SHA 核对；**E1 判据 NOT EVALUABLE 不变，P4 仍 running** | 无失败（连败 0）；工具层 `tasklist /FI` 在 Git Bash 被路径改写，已用 PowerShell CIM 替代；`conda run -c` 多行脚本报 NotImplementedError，已改单行 | 不把打包当科学进展；下一轮直接进 M3 收尾（共享 theta / 历史六站点 / ANN 行 / 完整成本与墙钟） |
 | R5 | 补齐 E1 残余行 + 全行判据重算 | 唤醒门禁 PASS（12 项冻结输入 / 5/5 官方 processed 哈希 / contract v4 / P4 running / 0 个 python-conda 进程 / GPU 0%955MiB）；保留上一轮三次 CLI 失败证据并去标识公开，修复默认参数解析与 `rel()` 外部 DCGS 路径两处缺陷；单一后台作业 `LYwybZ` 顺序跑完 seed41/42/43，各 5000 图、3 行 ×4T，全部 `rc=0`（251.8/252.3/252.8 s）；新增 36 份逐样本 NPZ，`verify` PASS；seed41 六站点 DC-adapt T4/T8 与 E0 canonical 逐位一致；ANN 上界行 12 NPZ 独立复验；`aggregate_e1_fullrows_v1.py` 汇总 10 行族 ×4T ×3seed = 120 份逐样本证据、40 描述行、560 固定列指标；新建 72 产物权威清单 `create`+`verify` PASS | **S2 大幅推进但仍 FAIL**（120 份逐样本证据与哈希齐全并核验 PASS，但每行完整已知成本/未决项/ms/graph 仍缺）；**S3 仍 FAIL 且数字被诚实重算**：按 ALL 8 转换对照（含两个 DC readout 版本）取最强，T4 差距 0.0667pp、T8 0.0467pp，取代 R4 的 0.0333pp，精度条件仍单独满足但双门槛 NOT EVALUABLE；S4–S8 未动；P4 仍 running；S9 本地清单 PASS、远端 SHA 待写回 | 无 GPU 失败（连败 0）；三次 CLI 失败为旧策略且已修复，证据保留；重启前静态复核拦下第二处必现缺陷，未形成 GPU 失败 | 不因精度条件满足而给 E1 加 pass；下一轮最高优先 E3/E5 完整操作成本 + 3 次重复中位墙钟 + gate-bound/误差 falsifier，再 E2/E4/E6，再 Story/稿件/引用/独立评审 |
+| R6 | 按 GitHub 进度补 E3/E5，恢复 GPU 满载 | 用户要求「按已上传进度推进 + 3060 拉满 + 间隔调小」；远端 `9865101` 后 3 小时空转。修复未上传草稿的 120→108 硬编码，precheck PASS、E3 成本账完成（108 行 / 218 指标 / 双约定 / unresolved 保留）；启动 E5 全 5000 图 37 配置 ×3 重复 GPU 长作业 `ThE3rS`（PID 27348，GPU 84% / 3824 MiB）；心跳改每 15 分钟并建立 GPU_QUEUE.md | S2/S3 仍 FAIL（aggregate 未跑、E1 NOT EVALUABLE）；S9 本检查点待远端核对；S4–S8 未动 | 3 小时空转属**条件不备**（草稿脚本阻塞且未上传），已补弹药库 A10/A11 并换道为「按 GitHub 进度 + 队列满载」 | 继续：作业在跑则监督、结束后 aggregate → 结果检查点 → E2/E4/E6 |
 
 ## 7 守护记录
 
@@ -96,7 +97,7 @@
 | ①达成 | 未触发 | S2–S8 均未完成 |
 | ②用户叫停 | 未触发 | 用户本轮是恢复指令 |
 | ③穷尽 | 未触发 | 弹药库 A1–A9 可用，策略库未穷尽 |
-| ④期限 | 未触发 | 用户未设期限；心跳配置待确认 |
+| ④期限 | 未触发 | 用户未设期限；心跳每 15 分钟 ACTIVE，随时可叫停 |
 
 ## 9 迭代与复盘
 
