@@ -1,5 +1,6 @@
 # Grok Bot 审阅
 
-- 主文件：[gnn2snn-phd-review.md](gnn2snn-phd-review.md)
-- 范围：只读审阅公开仓库 `ZtL-sysu/gnn2snn`（审阅时 `main` 为 `f548601`），并对照已核验的 GNN→SNN / ANN-to-SNN 文献。
-- 性质：外部建议，不构成对历史稿的投稿许可，也不改动仓库原有证据。
+本目录是 Grok Bot 对公开仓库 `ZtL-sysu/gnn2snn` 的外部审阅，不改动原有研究证据，也不构成对历史稿的投稿许可。
+
+- [gnn2snn-phd-review.md](gnn2snn-phd-review.md)：通读审阅、改进建议与博士论文路线图（2026-11-13；当时对照的 `main` 为 `f548601`，该文随后随 `47b2e19` 合入）。
+- [cvpr-submission-review.md](cvpr-submission-review.md)：针对计划投 CVPR 2027 的稿件（`paper/historical-draft/`）的审稿式意见与截止时间线（2026-11-13；仓库 `main` 为 `47b2e19`）。**结论：不建议提交该稿。**
