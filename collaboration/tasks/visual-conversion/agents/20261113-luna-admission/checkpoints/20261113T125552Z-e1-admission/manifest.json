@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-luna-admission",
+  "created_at_utc": "2026-11-13T12:57:16.938701+00:00",
+  "status": "completed",
+  "input_git_head": "c28bd222d96643ba628a546f2420d124c6778f73",
+  "protocol": {
+    "path": "collaboration/tasks/visual-conversion/TASK.md",
+    "sha256": "629a9c15df1e73c09cc91262712f75e81604f74539f4ed2e0c2f3fc813867bbb",
+    "bytes": 1995
+  },
+  "artifacts": [
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-luna-admission/REVIEW.md",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-luna-admission/HANDOFF.md",
+      "sha256": "56382d7a71241095a61a00bab3258788f0a8336bc708d13eb106a56c9aa912a0",
+      "bytes": 1292
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-luna-admission/LOG.md",
+      "sha256": "6eacd4af5418f4930f9da67f35cc7b4a253662adeb29371d2b8e8944a7bcfe79",
+      "bytes": 657
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-luna-admission/checkpoints/20261113T125552Z-e1-admission/CHECKPOINT.md",
+      "sha256": "db8b21a0e6bba98855cb5616014dd3d7be57affeb525ad957fd42b008c81cee2",
+      "bytes": 1614
+    }
+  ]
+}

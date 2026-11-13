@@ -1,0 +1,3 @@
+# Append-only review log
+
+- 2026-11-13T12:55:36Z — Resumed assigned isolated-worktree review. Read collaboration protocol/project/task, applicable CCF reviewer/integrity-auditor guidance, and research-github-sync format. Inspected current v3 protocol, matched-head addendum, feasibility lock, E0 report, canonical-repeat report, matched-control code/synthetic evidence, and bounded novelty screen. Result: conditional recommendation to admit bounded E1 measurement after upstream gates; E0 accepted narrowly as aggregate + same-platform canonical repeat, with historical DC drift retained. No official run, code edit, test rerun, or delegated panel work.
