@@ -1,0 +1,188 @@
+{
+  "status": "curated_checkpoint",
+  "created_at_utc": "2026-11-13T11:53:04.151754+00:00",
+  "local_evidence_preserved": true,
+  "source_tree_not_moved": true,
+  "publication_scope": "key successful code/full-validation evidence, concise failed-route summaries; no datasets/duplicate weights/raw chats",
+  "items": [
+    {
+      "local_artifact": "local:PROTOCOL-v3.md",
+      "published": "research/visual-graphs/continuation_20261113/PROTOCOL-v3.md",
+      "original_sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+      "published_sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+      "bytes": 4321,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:PROTOCOL-E1-head-addendum-v1.md",
+      "published": "research/visual-graphs/continuation_20261113/PROTOCOL-E1-head-addendum-v1.md",
+      "original_sha256": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+      "published_sha256": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+      "bytes": 3127,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:numerical-correction-v3.md",
+      "published": "research/visual-graphs/continuation_20261113/numerical-correction-v3.md",
+      "original_sha256": "5d04a4806d50b48ed17a2cef38a671dd670711cae9d571e6bef4985b15df5db0",
+      "published_sha256": "5d04a4806d50b48ed17a2cef38a671dd670711cae9d571e6bef4985b15df5db0",
+      "bytes": 2904,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:strong-result-feasibility-lock-v3.md",
+      "published": "research/visual-graphs/continuation_20261113/strong-result-feasibility-lock-v3.md",
+      "original_sha256": "10599bdc14cb5cd49d81b151e6f85866619fe2898f628ae54757d9f162be0598",
+      "published_sha256": "10599bdc14cb5cd49d81b151e6f85866619fe2898f628ae54757d9f162be0598",
+      "bytes": 5220,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:USER_UPDATE-local-github-sync-v1.md",
+      "published": "research/visual-graphs/continuation_20261113/USER_UPDATE-local-github-sync-v1.md",
+      "original_sha256": "6d9adb32ee6e8430a3d8894f44bf84fb32a9fcbfc3446a3100f76f06c02995a0",
+      "published_sha256": "6d9adb32ee6e8430a3d8894f44bf84fb32a9fcbfc3446a3100f76f06c02995a0",
+      "bytes": 1274,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:code/eval_teacher.py",
+      "published": "research/visual-graphs/continuation_20261113/code/eval_teacher.py",
+      "original_sha256": "d61be470a724824954a06ee6e98b02a200f772c961d70b334cdda35b61128af3",
+      "published_sha256": "d61be470a724824954a06ee6e98b02a200f772c961d70b334cdda35b61128af3",
+      "bytes": 21944,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:code/eval_affine_validation.py",
+      "published": "research/visual-graphs/continuation_20261113/code/eval_affine_validation.py",
+      "original_sha256": "d90f9fd6c3e902b6defb1f44d99496e2d3def9084277ae6bca2e041025fd45cb",
+      "published_sha256": "7ed27a2ba0ab0a0f159ab8a7260b2abdb71629dee0a67896b732c85f51ac6fb4",
+      "bytes": 20210,
+      "byte_identical": false,
+      "publication_change": "Clarified that historicalDC codes node-branch ReLUs, not edges; no numerical code change."
+    },
+    {
+      "local_artifact": "local:code/matched_controls.py",
+      "published": "research/visual-graphs/continuation_20261113/code/matched_controls.py",
+      "original_sha256": "7d912d3077fd934bf51c17045044350f2691265143cf1365d75bb630de3d8146",
+      "published_sha256": "7d912d3077fd934bf51c17045044350f2691265143cf1365d75bb630de3d8146",
+      "bytes": 10205,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:code/check_matched_controls.py",
+      "published": "research/visual-graphs/continuation_20261113/code/check_matched_controls.py",
+      "original_sha256": "f1d6f68d325ddd07b351ff091128b9788f40217a248c27d3a62d0d98570656c3",
+      "published_sha256": "f1d6f68d325ddd07b351ff091128b9788f40217a248c27d3a62d0d98570656c3",
+      "bytes": 8369,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:code/test_eval_affine_validation.py",
+      "published": "research/visual-graphs/continuation_20261113/code/test_eval_affine_validation.py",
+      "original_sha256": "67050c6bdc7eced236d77703dd1797ada32b4526398c1c9bb9d67a84ee79fdf5",
+      "published_sha256": "67050c6bdc7eced236d77703dd1797ada32b4526398c1c9bb9d67a84ee79fdf5",
+      "bytes": 1577,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:inputs/canonical-baseline-val.npz",
+      "published": "research/visual-graphs/continuation_20261113/inputs/canonical-baseline-val.npz",
+      "original_sha256": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+      "published_sha256": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+      "bytes": 928958,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:reviews/canonical-e0-admissibility-v3.md",
+      "published": "research/visual-graphs/continuation_20261113/reviews/canonical-e0-admissibility-v3.md",
+      "original_sha256": "3176b9221499e911d9d739b9cff761fdba48f62b2ea32446c0a1179751c23a72",
+      "published_sha256": "6fa47bef2fd4e0939b5bb4e8699fa500cc66dc03749e70d02c29bd629cb2f5ea",
+      "bytes": 5991,
+      "byte_identical": false,
+      "publication_change": "Removed Markdown trailing spaces in public review copy; original local review unchanged."
+    },
+    {
+      "local_artifact": "local:reviews/numerical-protocol-correction-v2.md",
+      "published": "research/visual-graphs/continuation_20261113/reviews/numerical-protocol-correction-v2.md",
+      "original_sha256": "dbe47ef303a5375ad374cb10419d836235a6f2d5d27944a190281d9705b20a74",
+      "published_sha256": "f3d50334eeb41349d16d35697b0464742230bae41dda119e0b5f4e1a9de3a1b2",
+      "bytes": 5755,
+      "byte_identical": false,
+      "publication_change": "Removed Markdown trailing spaces in public review copy; original local review unchanged."
+    },
+    {
+      "local_artifact": "local:reviews/targeted-novelty-screen-v1.md",
+      "published": "research/visual-graphs/continuation_20261113/reviews/targeted-novelty-screen-v1.md",
+      "original_sha256": "a8059be52ec0256438c406210608ae603985b1ccf13299cb4c7111cccb8c760a",
+      "published_sha256": "a8059be52ec0256438c406210608ae603985b1ccf13299cb4c7111cccb8c760a",
+      "bytes": 6331,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:logs/e0-fullval-v1-failure.md",
+      "published": "research/visual-graphs/continuation_20261113/logs/e0-fullval-v1-failure.md",
+      "original_sha256": "e73073ecb941f333d93c0e1d4b8c1560742cf8419bc49135f5ba13740a8b7739",
+      "published_sha256": "e73073ecb941f333d93c0e1d4b8c1560742cf8419bc49135f5ba13740a8b7739",
+      "bytes": 1265,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:logs/fullval-v3-difference.json",
+      "published": "research/visual-graphs/continuation_20261113/logs/fullval-v3-difference.json",
+      "original_sha256": "9b87e179e6ce4422ec1a52f8cb898cd249ebaa6d45cf37ed396e40f6a36daf4f",
+      "published_sha256": "9b87e179e6ce4422ec1a52f8cb898cd249ebaa6d45cf37ed396e40f6a36daf4f",
+      "bytes": 500,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:logs/graph1850-numerical-case.json",
+      "published": "research/visual-graphs/continuation_20261113/logs/graph1850-numerical-case.json",
+      "original_sha256": "6ba4a2f0fd844ccfb6c22e038c90064d00733f44af0368457a56744216d05747",
+      "published_sha256": "6ba4a2f0fd844ccfb6c22e038c90064d00733f44af0368457a56744216d05747",
+      "bytes": 264,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:newrun/e0_seed41_canonical_accepted_v3/report.json",
+      "published": "research/visual-graphs/continuation_20261113/results/e0_seed41_val.json",
+      "original_sha256": "50a7e90c1f7ab2f10e8595e27d7221c6a9aa207d5fe013eaecad0e698df49e26",
+      "published_sha256": "50a7e90c1f7ab2f10e8595e27d7221c6a9aa207d5fe013eaecad0e698df49e26",
+      "bytes": 9599,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:logs/canonical-fullrepeat-v1/report.json",
+      "published": "research/visual-graphs/continuation_20261113/logs/canonical-fullrepeat-v1/report.json",
+      "original_sha256": "a580cbe8ca441fc3f74d9b850add029bc299613b9ba364e8ec7944f1391938b4",
+      "published_sha256": "532f3ea12b7ace0a3d0a9b4aeb7b9bde024726d3876e0c192eb70af3b9542668",
+      "bytes": 23020,
+      "byte_identical": false
+    },
+    {
+      "local_artifact": "local:logs/diagnostic_v2/deterministic-repeat-batch14.json",
+      "published": "research/visual-graphs/continuation_20261113/logs/diagnostic_v2/deterministic-repeat-batch14.json",
+      "original_sha256": "1827ad9115ea757c9f4f667c58db36dbb62a164883ebda52ebb7c40a22da9ee6",
+      "published_sha256": "1827ad9115ea757c9f4f667c58db36dbb62a164883ebda52ebb7c40a22da9ee6",
+      "bytes": 3113,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:logs/correctness-v2/report.json",
+      "published": "research/visual-graphs/continuation_20261113/results/synthetic-correctness.json",
+      "original_sha256": "818370d3d53c1935e924b69034571674a22b53ae767210cdc037cbe4f0882b97",
+      "published_sha256": "818370d3d53c1935e924b69034571674a22b53ae767210cdc037cbe4f0882b97",
+      "bytes": 1397,
+      "byte_identical": true
+    },
+    {
+      "local_artifact": "local:historical/gd_val1.npz",
+      "published": "research/visual-graphs/continuation_20261113/inputs/historical-gd-val1.npz",
+      "original_sha256": "473d88de22c46dce7fede61df1d6a8abdc7bdd682abd4a64704f978d28f5f177",
+      "published_sha256": "473d88de22c46dce7fede61df1d6a8abdc7bdd682abd4a64704f978d28f5f177",
+      "bytes": 1375848,
+      "byte_identical": true
+    }
+  ]
+}

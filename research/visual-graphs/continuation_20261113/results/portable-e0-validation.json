@@ -1,0 +1,166 @@
+{
+  "status": "complete",
+  "dataset": "CIFAR10",
+  "split": "val",
+  "graphs": 5000,
+  "expected_graphs": 5000,
+  "seed": 41,
+  "converter": "both",
+  "teacher_accuracy": 0.7066,
+  "checkpoint_sha256_start": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+  "checkpoint_sha256_end": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+  "calibration_sha256_start": "b28485ddfa8ef259ca048f3272662fedc1e4f519b0324cfa514ccf82b2cf8a9e",
+  "calibration_sha256_end": "b28485ddfa8ef259ca048f3272662fedc1e4f519b0324cfa514ccf82b2cf8a9e",
+  "reference_sha256": "473d88de22c46dce7fede61df1d6a8abdc7bdd682abd4a64704f978d28f5f177",
+  "reference_comparison_policy": "PROTOCOL-v3 exact canonical arrays and historical aggregate metrics; historical DC numerical drift reported",
+  "canonical_bitwise_verified": true,
+  "reference_numerics": {
+    "dc_adapt_T4": {
+      "max_abs_logit_difference": 0.15234947204589844,
+      "mean_abs_logit_difference": 0.0007662316121160984,
+      "rms_logit_difference": 0.004670538776665751,
+      "outside_original_tight_tolerance": 2836,
+      "original_tight_logit_criterion_passed": false,
+      "predicted_classes_exact": true,
+      "historical_class_mismatches": 0,
+      "historical_changed_indices": []
+    },
+    "dc_adapt_T8": {
+      "max_abs_logit_difference": 0.02459239959716797,
+      "mean_abs_logit_difference": 0.0007009673345834017,
+      "rms_logit_difference": 0.0021107725150561114,
+      "outside_original_tight_tolerance": 10186,
+      "original_tight_logit_criterion_passed": false,
+      "predicted_classes_exact": false,
+      "historical_class_mismatches": 1,
+      "historical_changed_indices": [
+        1850
+      ]
+    }
+  },
+  "data_sha256_start": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "data_sha256_end": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "teacher_metadata_sha256": "b49aafa95a91f65da40c388e91a88e89ed4d9d807e8b1e5e2978b2d32f4f3acf",
+  "source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+  "source_sha256_start": {
+    "evaluator": "d61be470a724824954a06ee6e98b02a200f772c961d70b334cdda35b61128af3",
+    "protocol": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "numerical_correction": "5d04a4806d50b48ed17a2cef38a671dd670711cae9d571e6bef4985b15df5db0",
+    "author_source": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+    "teacher_builder": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "calibration_validator": "fa580fc290a33a0ee4f9ae4885b839bb4e0573898e7da68e2aab253b9ccee7ea",
+    "converter": "66a8a3060a3888cc2ffe4e7daa452992758c9288f4463cd1fb28d5f0a14a7a1e",
+    "hybrid_base": "1833199458f3d7482bb7d98ac783746f6fe780127db0f570635016548978fd0a",
+    "teacher_model": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "author_verifier": "a031ebdbc816cbde28af3f919284b08e5ba087e271415b1bedec37306c9bc541",
+    "calibration:gated_frozen_gate_calibrate.py": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "calibration:gated_frozen_gate_validate.py": "fa580fc290a33a0ee4f9ae4885b839bb4e0573898e7da68e2aab253b9ccee7ea",
+    "calibration:activation_histogram.py": "59e7fb79a6655d9060c630da289211e74f8714c8a10086a92de708f5a3fea9b3",
+    "calibration:gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "calibration:gated_frozen_gate_prototype.py": "9fb56d1d940b36e78db5d04879d0586f57b0db95de7d95ef009d99290701ae88",
+    "calibration:gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "calibration:gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "calibration:gated-frozen-gate-prototype-protocol.md": "545c92896cfaa8f186d0087dcc9a6db9d9f1bd1c78da56d5e7e08498d0baa40c",
+    "calibration:gated-frozen-gate-calibration-validation-protocol.md": "21c83ed2517625d3ce65d36943d64894e3987779a39d4508a1fb0ae72d8c5a78",
+    "historical_reference": "473d88de22c46dce7fede61df1d6a8abdc7bdd682abd4a64704f978d28f5f177",
+    "canonical_reference": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3"
+  },
+  "source_sha256_end": {
+    "evaluator": "d61be470a724824954a06ee6e98b02a200f772c961d70b334cdda35b61128af3",
+    "protocol": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "numerical_correction": "5d04a4806d50b48ed17a2cef38a671dd670711cae9d571e6bef4985b15df5db0",
+    "author_source": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+    "teacher_builder": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "calibration_validator": "fa580fc290a33a0ee4f9ae4885b839bb4e0573898e7da68e2aab253b9ccee7ea",
+    "converter": "66a8a3060a3888cc2ffe4e7daa452992758c9288f4463cd1fb28d5f0a14a7a1e",
+    "hybrid_base": "1833199458f3d7482bb7d98ac783746f6fe780127db0f570635016548978fd0a",
+    "teacher_model": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "author_verifier": "a031ebdbc816cbde28af3f919284b08e5ba087e271415b1bedec37306c9bc541",
+    "calibration:gated_frozen_gate_calibrate.py": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "calibration:gated_frozen_gate_validate.py": "fa580fc290a33a0ee4f9ae4885b839bb4e0573898e7da68e2aab253b9ccee7ea",
+    "calibration:activation_histogram.py": "59e7fb79a6655d9060c630da289211e74f8714c8a10086a92de708f5a3fea9b3",
+    "calibration:gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "calibration:gated_frozen_gate_prototype.py": "9fb56d1d940b36e78db5d04879d0586f57b0db95de7d95ef009d99290701ae88",
+    "calibration:gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "calibration:gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "calibration:gated-frozen-gate-prototype-protocol.md": "545c92896cfaa8f186d0087dcc9a6db9d9f1bd1c78da56d5e7e08498d0baa40c",
+    "calibration:gated-frozen-gate-calibration-validation-protocol.md": "21c83ed2517625d3ce65d36943d64894e3987779a39d4508a1fb0ae72d8c5a78",
+    "historical_reference": "473d88de22c46dce7fede61df1d6a8abdc7bdd682abd4a64704f978d28f5f177",
+    "canonical_reference": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3"
+  },
+  "runtime": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "elapsed_sec": 26.980376100051217,
+  "rows": [
+    {
+      "method": "ann_T4",
+      "accuracy": 0.7066,
+      "teacher_agreement": 1.0,
+      "logit_mse": 0.0,
+      "teacher_to_model_kl": 1.7076901004386968e-10,
+      "nonzero_scalar_events": 0,
+      "source_unit_calls": 0,
+      "analog_gate_evaluations": 0,
+      "analog_gate_edge_channel_elements": 0
+    },
+    {
+      "method": "ann_T8",
+      "accuracy": 0.7066,
+      "teacher_agreement": 1.0,
+      "logit_mse": 0.0,
+      "teacher_to_model_kl": 1.7076901004386968e-10,
+      "nonzero_scalar_events": 0,
+      "source_unit_calls": 0,
+      "analog_gate_evaluations": 0,
+      "analog_gate_edge_channel_elements": 0
+    },
+    {
+      "method": "dc_adapt_T4",
+      "accuracy": 0.7072,
+      "teacher_agreement": 0.9962,
+      "logit_mse": 0.0009355494403280318,
+      "teacher_to_model_kl": 0.00011265881039435044,
+      "nonzero_scalar_events": 285056230,
+      "source_unit_calls": 1200,
+      "analog_gate_evaluations": 640,
+      "analog_gate_edge_channel_elements": 5267799040
+    },
+    {
+      "method": "dc_adapt_T8",
+      "accuracy": 0.7066,
+      "teacher_agreement": 0.9982,
+      "logit_mse": 6.597588799195364e-05,
+      "teacher_to_model_kl": 8.714222531125415e-06,
+      "nonzero_scalar_events": 357563678,
+      "source_unit_calls": 2160,
+      "analog_gate_evaluations": 1280,
+      "analog_gate_edge_channel_elements": 10535598080
+    }
+  ],
+  "operation_ledger": {
+    "scope": "partial observed counts only; not full compute, latency, energy, or hardware cost",
+    "dense_affine_and_graph_aggregation_ops": null,
+    "memory_traffic_bytes": null,
+    "wall_clock_breakdown_by_method": null
+  },
+  "interpretation": "DC adaptation uses analog gates and signed graded source events; ANN rows are the frozen teacher output. Labels are read only by the scoring loader.",
+  "smoke_limit": null,
+  "predictions_sha256": "c7eb906b15e24c4d792319bbf49c798c0989dcbcfc960b2262abfc9f81631c80"
+}

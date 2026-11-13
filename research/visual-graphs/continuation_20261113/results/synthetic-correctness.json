@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "scope": "synthetic correctness only; no official-data accuracy or efficiency claim",
+  "rows": [
+    {
+      "check": "check_gated_affine_base_v1.py",
+      "exit_code": 0,
+      "source_sha256": "291a662d0a277052c4fc7cda8f995d0d2ac6da4debc8ad9109a31196d9fad17b",
+      "source_unchanged": true,
+      "elapsed_sec": 6.790109799942002
+    },
+    {
+      "check": "check_gated_affine_cal_v1.py",
+      "exit_code": 0,
+      "source_sha256": "58c7a514d56babb2ac5ae6f32da2d8d3e716f81e1911dc0a74defac8bb965887",
+      "source_unchanged": true,
+      "elapsed_sec": 5.589432600070722
+    },
+    {
+      "check": "check_gated_affine_profile_v1.py",
+      "exit_code": 0,
+      "source_sha256": "0453b0c743f49948e4b6dcd2e3b52e0387f7b1318e3a089f13652fcde9b55e1d",
+      "source_unchanged": true,
+      "elapsed_sec": 6.334622800000943
+    },
+    {
+      "check": "check_centered_derivation_v1.py",
+      "exit_code": 0,
+      "source_sha256": "db6c4144e92a35307337019b2c202a2e24099558199b5bf5d4462c621e95df84",
+      "source_unchanged": true,
+      "elapsed_sec": 5.851411600015126
+    },
+    {
+      "check": "check_stable_gate_bound_v1.py",
+      "exit_code": 0,
+      "source_sha256": "6a9ddd3ef94bd8d4bc705f3dcde367ef599b8343ff5d216c15b2548456b80d4d",
+      "source_unchanged": true,
+      "elapsed_sec": 1.742104500066489
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "diagnostic": "deterministic DC T8 repeatability on batch 14",
+  "official_indices": [
+    1792,
+    1919
+  ],
+  "graphs": 128,
+  "device": "cuda",
+  "torch": "2.11.0+cu128",
+  "deterministic_algorithms": true,
+  "cudnn_deterministic": true,
+  "cudnn_benchmark": false,
+  "cublas_workspace_config": ":4096:8",
+  "checkpoint_sha256": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+  "calibration_sha256": "b28485ddfa8ef259ca048f3272662fedc1e4f519b0324cfa514ccf82b2cf8a9e",
+  "canonical_archive_sha256": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+  "historical_archive_sha256": "473d88de22c46dce7fede61df1d6a8abdc7bdd682abd4a64704f978d28f5f177",
+  "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+  "author_source_provenance": {
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "worktree_clean_except_ignored_bytecode": true,
+    "untracked_bytecode_entries": 10,
+    "source_file": "neurons/relu_neuron.py",
+    "source_file_sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+    "source_head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161",
+    "source_worktree_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161"
+  },
+  "events_site_order": [
+    "gated_0",
+    "gated_1",
+    "gated_2",
+    "gated_3",
+    "mlp_0",
+    "mlp_1"
+  ],
+  "repeatability": {
+    "bitwise_equal": true,
+    "class_mismatches": 0,
+    "max_abs_error": 0.0,
+    "mean_abs_error": 0.0,
+    "elements_outside_rtol1e-5_atol1e-4": 0
+  },
+  "runs": [
+    {
+      "repeat": 1,
+      "events_per_site": [
+        1598677,
+        2135412,
+        2531546,
+        2885589,
+        12986,
+        7209
+      ],
+      "analog_gate_evaluations": 32,
+      "output_vs_canonical": {
+        "bitwise_equal": true,
+        "class_mismatches": 0,
+        "max_abs_error": 0.0,
+        "mean_abs_error": 0.0,
+        "elements_outside_rtol1e-5_atol1e-4": 0
+      },
+      "output_vs_historical": {
+        "bitwise_equal": false,
+        "class_mismatches": 1,
+        "max_abs_error": 0.01535177230834961,
+        "mean_abs_error": 0.0006357441889122128,
+        "elements_outside_rtol1e-5_atol1e-4": 252
+      },
+      "finite": true
+    },
+    {
+      "repeat": 2,
+      "events_per_site": [
+        1598677,
+        2135412,
+        2531546,
+        2885589,
+        12986,
+        7209
+      ],
+      "analog_gate_evaluations": 32,
+      "output_vs_canonical": {
+        "bitwise_equal": true,
+        "class_mismatches": 0,
+        "max_abs_error": 0.0,
+        "mean_abs_error": 0.0,
+        "elements_outside_rtol1e-5_atol1e-4": 0
+      },
+      "output_vs_historical": {
+        "bitwise_equal": false,
+        "class_mismatches": 1,
+        "max_abs_error": 0.01535177230834961,
+        "mean_abs_error": 0.0006357441889122128,
+        "elements_outside_rtol1e-5_atol1e-4": 252
+      },
+      "finite": true
+    }
+  ],
+  "note": "Input labels are held in a separate scoring batch and never passed to teacher or converter."
+}

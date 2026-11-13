@@ -1,0 +1,10 @@
+{
+  "index": 1850,
+  "label": 2,
+  "teacher_prediction": 4,
+  "old_prediction": 4,
+  "new_prediction": 3,
+  "old_top_two_margin": 0.0005972385406494141,
+  "new_top_two_margin": 0.0006630420684814453,
+  "max_abs_logit_difference": 0.0025472640991210938
+}

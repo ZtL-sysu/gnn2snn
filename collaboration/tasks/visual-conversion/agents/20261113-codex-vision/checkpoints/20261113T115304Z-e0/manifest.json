@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-codex-vision",
+  "created_at_utc": "2026-11-13T12:43:45.545663+00:00",
+  "status": "in_progress",
+  "input_git_head": "f19a2f2177363b3c6164c2f6e2aaa67847dea777",
+  "protocol": {
+    "path": "research/visual-graphs/continuation_20261113/PROTOCOL-v3.md",
+    "sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "bytes": 4321
+  },
+  "artifacts": [
+    {
+      "path": "collaboration/PROTOCOL.md",
+      "sha256": "e87d914adb05cef302b454f6077fd0e5e5ed3734cb72da02887c39819079986f",
+      "bytes": 1410
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-codex-vision/checkpoints/20261113T115304Z-e0/CHECKPOINT.md",
+      "sha256": "fabc5a77e771b2d66f18349dea674b2086dc2eb718d8f957fdbdc84f9485968c",
+      "bytes": 2643
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-codex-vision/checkpoints/20261113T115304Z-e0/metrics.csv",
+      "sha256": "580fe30fdd0d0c09d4d7e56222348d880b977cbd44978ca8409e7c5eb0e56ab0",
+      "bytes": 6044
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/CURRENT_SCOPE.md",
+      "sha256": "8d20a6e9b6fee94b9d0bf59cb96b3c6e539db0039885adaa6060fc811170e0df",
+      "bytes": 1102
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/PROTOCOL-E1-head-addendum-v1.md",
+      "sha256": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+      "bytes": 3127
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/PROTOCOL-v3.md",
+      "sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+      "bytes": 4321
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/PUBLICATION_INDEX.json",
+      "sha256": "366df2d7f6a74e9a6efa6d2f687e91abba94113bf360262af67ede8efe32b1c1",
+      "bytes": 10059
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/README.md",
+      "sha256": "be30075819c86917e9b97fd4dcf194ce363b76dc194efa752724392e179eb5ac",
+      "bytes": 2826
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/USER_UPDATE-local-github-sync-v1.md",
+      "sha256": "6d9adb32ee6e8430a3d8894f44bf84fb32a9fcbfc3446a3100f76f06c02995a0",
+      "bytes": 1274
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/check_matched_controls.py",
+      "sha256": "f1d6f68d325ddd07b351ff091128b9788f40217a248c27d3a62d0d98570656c3",
+      "bytes": 8369
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/eval_affine_validation.py",
+      "sha256": "7ed27a2ba0ab0a0f159ab8a7260b2abdb71629dee0a67896b732c85f51ac6fb4",
+      "bytes": 20212
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/eval_teacher.py",
+      "sha256": "d61be470a724824954a06ee6e98b02a200f772c961d70b334cdda35b61128af3",
+      "bytes": 21944
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/matched_controls.py",
+      "sha256": "7d912d3077fd934bf51c17045044350f2691265143cf1365d75bb630de3d8146",
+      "bytes": 10205
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/test_eval_affine_validation.py",
+      "sha256": "67050c6bdc7eced236d77703dd1797ada32b4526398c1c9bb9d67a84ee79fdf5",
+      "bytes": 1577
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/inputs/canonical-baseline-val.npz",
+      "sha256": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+      "bytes": 928958
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/inputs/historical-gd-val1.npz",
+      "sha256": "473d88de22c46dce7fede61df1d6a8abdc7bdd682abd4a64704f978d28f5f177",
+      "bytes": 1375848
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/logs/canonical-fullrepeat-v1/report.json",
+      "sha256": "532f3ea12b7ace0a3d0a9b4aeb7b9bde024726d3876e0c192eb70af3b9542668",
+      "bytes": 23020
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/logs/diagnostic_v2/deterministic-repeat-batch14.json",
+      "sha256": "1827ad9115ea757c9f4f667c58db36dbb62a164883ebda52ebb7c40a22da9ee6",
+      "bytes": 3113
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/logs/e0-fullval-v1-failure.md",
+      "sha256": "e73073ecb941f333d93c0e1d4b8c1560742cf8419bc49135f5ba13740a8b7739",
+      "bytes": 1265
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/logs/fullval-v3-difference.json",
+      "sha256": "9b87e179e6ce4422ec1a52f8cb898cd249ebaa6d45cf37ed396e40f6a36daf4f",
+      "bytes": 500
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/logs/graph1850-numerical-case.json",
+      "sha256": "6ba4a2f0fd844ccfb6c22e038c90064d00733f44af0368457a56744216d05747",
+      "bytes": 264
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/numerical-correction-v3.md",
+      "sha256": "5d04a4806d50b48ed17a2cef38a671dd670711cae9d571e6bef4985b15df5db0",
+      "bytes": 2904
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/results/e0_seed41_val.json",
+      "sha256": "50a7e90c1f7ab2f10e8595e27d7221c6a9aa207d5fe013eaecad0e698df49e26",
+      "bytes": 9599
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/results/matched-controls-check.txt",
+      "sha256": "68eb3910611743cfb8cbf956d7f90c5a5523eb55da393415e9c2565bb42ccd62",
+      "bytes": 404
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/results/portable-e0-validation.json",
+      "sha256": "b60b51ab0c1465c9a3dba0c88c7cdbd3dd481ef5c239d1253955fa8211cf7769",
+      "bytes": 9599
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/results/synthetic-correctness.json",
+      "sha256": "818370d3d53c1935e924b69034571674a22b53ae767210cdc037cbe4f0882b97",
+      "bytes": 1397
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/reviews/canonical-e0-admissibility-v3.md",
+      "sha256": "6fa47bef2fd4e0939b5bb4e8699fa500cc66dc03749e70d02c29bd629cb2f5ea",
+      "bytes": 5991
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/reviews/numerical-protocol-correction-v2.md",
+      "sha256": "f3d50334eeb41349d16d35697b0464742230bae41dda119e0b5f4e1a9de3a1b2",
+      "bytes": 5755
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/reviews/targeted-novelty-screen-v1.md",
+      "sha256": "a8059be52ec0256438c406210608ae603985b1ccf13299cb4c7111cccb8c760a",
+      "bytes": 6331
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/strong-result-feasibility-lock-v3.md",
+      "sha256": "10599bdc14cb5cd49d81b151e6f85866619fe2898f628ae54757d9f162be0598",
+      "bytes": 5220
+    }
+  ]
+}

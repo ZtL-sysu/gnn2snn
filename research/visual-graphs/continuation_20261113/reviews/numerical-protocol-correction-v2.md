@@ -1,0 +1,28 @@
+# Independent numerical-protocol correction review
+
+**Date:** 2026-11-13
+**Question:** Does the proposed v2 E0 rule distinguish legitimate floating-point variation from an outcome-driven relaxation?
+**Decision:** The *policy distinction* is defensible if described as aggregate-baseline reproduction rather than exact logit/prediction reproduction, and if v1 failure stays recorded. **E0 v2 has nevertheless failed its own frozen exact-class rule**: T8 differs from the historical reference on one graph. Do not mark E0 passed, waive that mismatch, or rerun until a favorable realization. No residual-prefix method test was run.
+
+## Evidence inspected
+
+`logs/e0-fullval-v1-failure.md` / `logs/e0_fullval_v1.log` report the first complete 5,000-graph seed-41 CIFAR10 validation attempt: teacher indices, labels, classes and logits passed; DC T4 classes matched all 5,000, but the v1 float32 logit criterion failed on 2,836/50,000 elements (5.67%), maximum absolute difference 0.15234947. The run stopped at T4, so that attempt provides no T8 result.
+
+The controlled first-128 diagnostic at `logs/diagnostic_v1/e0_first128_determinism.json` used the same checkpoint SHA `d26df76d…5598b40`, calibration SHA `b28485dd…2cf8a9e`, and pinned author-source commit. Teacher logits matched the saved reference within the old tolerance (maximum absolute error `7.63e−6`; zero violating elements). DC classes matched the reference in all observed T4/T8 runs, but DC logits did not: nondeterministic-off repeats had T4 maxima 0.07636 and 0.04247 (69/70 elements outside old tolerance) and T8 maxima 0.02429 and 0.01976 (199/211 outside); deterministic-on repeat also differed (T4 max 0.05825, 60 outside; T8 max 0.01976, 284 outside). These 128-example observations suggest numerical variability; they do not identify its cause or establish full-split class stability.
+
+The subsequent complete saved run is summarized in `logs/fullval-v3-difference.json` (`status: v2_failed`, 5,000 graphs): teacher accuracy 70.66%; DC T4 accuracy 70.72%, zero reference-class changes, maximum logit difference 0.15234947; DC T8 accuracy 70.66%, **one** reference-class change at index 1850 (1/5,000 = 0.02%), maximum logit difference 0.02459240. T8 aggregate accuracy still matches because the one class change did not alter the total number correct. The same run's `newrun/e0_seed41_clean_diagnostic_v3/unvalidated-metrics.json` is explicitly marked unvalidated. It contains no accepted result. The saved v3 run cannot be compared repeat-to-repeat against the previous failed full run because that earlier run did not preserve raw predictions.
+
+## Assessment of the proposed change
+
+The user guidance's E0 completion criterion is reproduction of the existing full-validation **reported numbers**, allowing a floating tolerance that must be frozen in advance. Exact samplewise DC-logit equality at `rtol=1e−5, atol=1e−4` was added by execution-contract v1; it is stricter than that user-level E0 description. Given observed same-input output variability, it is reasonable to version the plan and distinguish stable aggregate baseline metrics from a tight/bitwise logit-reproduction claim. The proposed v2 does not enlarge the numerical tolerance: it retains the old tight DC criterion as a reported diagnostic and preserves the .3 pp plus complete-cost method target.
+
+That rationale does **not** make v2 a pass. Its new exact predicted-class requirement is stricter than the original guidance too, and the complete T8 comparison has now failed it. The exact result is one class flip with unchanged aggregate T8 accuracy. This is a real reproducibility finding, not a reason to delete index 1850 or change the acceptance rule again. As written, `PROTOCOL-v2.md` must remain **failed/not accepted for E0** unless the run's inputs or implementation are repaired under a new, explicit versioned decision; no post-hoc exception for this one item is supported.
+
+## Conditions for any later E0 acceptance
+
+1. Preserve the v1 strict-logit failure and this full-split v2 failure; neither is rewritten as a pass. The versioned P0 reopen in `execution-contract-v2.md` / `PROTOCOL-v2.md` is the right way to record the correction; make no further criterion changes without another explicit, pre-run protocol version.
+2. Audit the saved full-split artifacts and input/source hashes, then determine why the canonical DC forward yields a different T8 class. First ensure there is one canonical implementation/configuration and an explainable numeric path. Do not run repeated nondeterministic realizations and select a passing one.
+3. Keep the v2 exact full-split index/label and both-T4/T8 class/accuracy checks unless a future authorized protocol explicitly replaces them before a new run. For the diagnostic logit metrics, report max/mean/RMS error and count outside the original tight tolerance for **both** T4 and T8; do not invent a looser passing logit threshold.
+4. If v2 is later accepted on exact classes and frozen aggregate metrics, describe E0 only as *historical metric/class reproduction with numerical logit variability documented*. Do not describe it as tight-logit or exact trajectory reproduction. E0 still supplies no evidence for the proposed method's accuracy/cost advantage.
+
+**Gate outcome:** E0 v1 failed its tight T4 logit test. E0 v2 failed the T8 class-equivalence test. E0 is not passed; current P1A status and the method campaign are unchanged by this report. The versioned v2 removal of a tight DC-logit pass condition is a defensible correction to an over-strong internal invariant, but it is not grounds to override v2's observed class mismatch. Any further protocol must be based on a reproducibility diagnosis, not on the desire to pass these outputs.

@@ -1,0 +1,24 @@
+{
+  "status": "v2_failed",
+  "graphs": 5000,
+  "rows": [
+    {
+      "T": 4,
+      "accuracy": 0.7072,
+      "reference_accuracy": 0.7072,
+      "class_mismatch_count": 0,
+      "indices": [],
+      "max_abs_logit_difference": 0.15234947204589844
+    },
+    {
+      "T": 8,
+      "accuracy": 0.7066,
+      "reference_accuracy": 0.7066,
+      "class_mismatch_count": 1,
+      "indices": [
+        1850
+      ],
+      "max_abs_logit_difference": 0.02459239959716797
+    }
+  ]
+}
