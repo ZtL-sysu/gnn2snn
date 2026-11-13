@@ -2,8 +2,6 @@
 
 以下原始目录用于历史定位；精简仓库不逐个保留所有旧运行。
 
-以下原始目录用于历史定位；精简仓库不逐个保留所有旧运行。
-
 ## 2026-10-28：方向建立与图转换基线
 
 WorkBuddy围绕ANN→SNN、概率脉冲、FTBC、低时步转换形成方向卡、guidance与CCFA启动材料。最初的Spiking-GNN-Conversion在Cora/CiteSeer/PubMed上运行两层GCN，研究朴素、偏置修正和校准上界，并进行多seed/T-grid实验。早期修复过test.index排序导致的特征图错位、lam缩放、第二层应累计二进制脉冲以及PubMed稀疏文件读取等问题。
