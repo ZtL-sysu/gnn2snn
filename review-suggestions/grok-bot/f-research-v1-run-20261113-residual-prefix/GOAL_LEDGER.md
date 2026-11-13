@@ -43,7 +43,7 @@
 | S6 | 仅基于验证集的书面 Story 判定，之后新测试集一次确认并披露历史暴露 | 文档产物 | 用测试集调参/选点 | 待验证 |
 | S7 | 全新六节稿件 + 完整证据 E0–E6 + 引用≥36 篇且近 3–5 年占多数 + 去重审计 | 文档产物 | 用旧稿冒充、想法评分代替 | FAIL |
 | S8 | 当前完整稿经实质独立 CCFA 评审 ≥7/10 | 独立评审 | 同角色自评、空评阅、历史稿评分 | FAIL |
-| S9 | 过程检查点按 research-github-sync 增量同步到 agent 分支且远端 SHA 核对 | 远端确认 | 仅本地 commit 就报「已上传」 | 进行中（R1–R3 + R4b 检查点均已 push 并 `git ls-remote` 核对；R4b 证据提交 `5ece63c582f6639e177f94fd64434d279e427d97`、远端确认写回提交 `6d6a62173583c0931556a2dafdbad0a6b3edf776` 均已核对本地 HEAD == 远端 SHA；R5 检查点 `20261113T202500Z-e1-fullrow-residual` 的 72 产物清单本地 `create`+`verify` PASS，远端 SHA 核对将在 push 后写回；协议整体未完成，故 S9 不判 PASS） |
+| S9 | 过程检查点按 research-github-sync 增量同步到 agent 分支且远端 SHA 核对 | 远端确认 | 仅本地 commit 就报「已上传」 | 进行中（R1–R3 + R4b 检查点均已 push 并 `git ls-remote` 核对；R4b 证据提交 `5ece63c582f6639e177f94fd64434d279e427d97`、远端确认写回提交 `6d6a62173583c0931556a2dafdbad0a6b3edf776` 均已核对本地 HEAD == 远端 SHA；R5 证据提交 `1fd6437e4c4c234704b125aeaeaba0fb0e982fc3` 已 push 且 `git ls-remote` 返回同一 SHA，81 个明确文件、72 产物清单 `verify` PASS、上传预检 PASS（80 文件 / 48 NPZ / 0 problems）；该远端事实的写回提交 SHA 将在下次唤醒记录；协议整体未完成，故 S9 不判 PASS） |
 
 ## 4 里程碑链
 
