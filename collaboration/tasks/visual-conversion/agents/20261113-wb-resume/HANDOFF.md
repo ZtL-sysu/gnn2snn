@@ -32,3 +32,10 @@ None. No official-data GPU inference was started this round. No remote GPU job, 
 2. Implement the missing official-validation evaluator for the matched controls (`code/eval_controls_validation_v2.py` plus its tests), the task interrupted on `20261113-luna-controls`. `matched_controls.py` already provides `dc_adapt_analog_head_forward`, `per_consumer_forward` and the `cse_only` alias; `gated_affine_cal_v1.profile_thresholds` only supports generic/first_analog/centered, so control thresholds must be derived explicitly from the frozen full-train calibration.
 3. Run fixed full-5000 validation on the local 3060 in `dyg-cold`; preserve per-sample logits, hashes, device and timing. Do not tune scale/seeds/thresholds against results; primary scale=1 frozen.
 4. Stop conditions: input-hash mismatch, canonical index/label drift, protocol/source/clock mismatch, or exceeding the E1 compute ceiling in contract v4. Keep failures as evidence.
+
+## R2 update — 2026-11-13T15:08:34Z
+
+- Implemented the interrupted control evaluator: `research/visual-graphs/continuation_20261113/code/eval_controls_validation_v2.py` and `code/test_eval_controls_validation_v2.py`. Only the two paths assigned on `20261113-luna-controls` plus this agent's own collaboration directory were written; owner files and TASK.md untouched.
+- Frozen dual-calibration binding verified: affine_cal1.json (18 bound inputs rehashed) + gcal_v1.json (six sites) + teacher best.pt d26df76d… . Synthetic tests 4 passed; PRECHECK OK.
+- **Live job**: official full-5000 seed41 validation of `dc_adapt_analog_head`, `per_consumer`, `cse_only` × T1/2/4/8 on local RTX 3060, started 2026-11-13T15:08:08Z. Tool job handle `tzmLS9`, local Python PID 33240, first-batch probe 9.071 s / 2.98 GiB peak. Output `results/e1-seed41-controls-v1/` under the run root; log `logs/e1_seed41_controls_v1.log`. Not yet complete at this checkpoint; no result is claimed.
+- Next: verify the finished run (per-sample NPZ, report hashes, canonical teacher check), publish the resulting evidence or a truthful failure summary as the next checkpoint, then seeds 42/43 and complete cost accounting.

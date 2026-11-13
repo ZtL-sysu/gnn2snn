@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-wb-resume",
+  "created_at_utc": "2026-11-13T15:09:38.980149+00:00",
+  "status": "in_progress",
+  "input_git_head": "8db2a760a01391bd65af8fe7f64ff5cb2b44911a",
+  "protocol": {
+    "path": "collaboration/tasks/visual-conversion/TASK.md",
+    "sha256": "7b156284abbc3119233f9d87da9071bdf2656a672603a293e5a0a276bc6f977f",
+    "bytes": 1778
+  },
+  "artifacts": [
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/checkpoints/20261113T150834Z-controls-code/CHECKPOINT.md",
+      "sha256": "457675dc6a7eb29f3f1faa4da16ee758c1fb3c810132d34ffc7163c061eb1417",
+      "bytes": 3201
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/HANDOFF.md",
+      "sha256": "8fc119f16ae640a0f71154cf72c58033f2330addec85d03457bcede88566dd7f",
+      "bytes": 5385
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/LOG.md",
+      "sha256": "0e08fb5a4fb33f57a1a8b5a5a9a712b7b6cd2a91737b36e2e8e9ded3abfbe402",
+      "bytes": 2015
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/GOAL_LEDGER.md",
+      "sha256": "e9853a23cee9d9a2a95acc3c5643104e8c45dc735b50a7d3b6b4dbd9ffcca13e",
+      "bytes": 9527
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/eval_controls_validation_v2.py",
+      "sha256": "707eb29e91f7d47ce8030a5dbbfb5c1167b22003f2e4b12cad5a551c38080520",
+      "bytes": 19896
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/test_eval_controls_validation_v2.py",
+      "sha256": "254d47b3202132368bc133e0b40e72fba741b36bd1512bf848e2bc2de24ee0fd",
+      "bytes": 4026
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/PROTOCOL-E1-head-addendum-v1.md",
+      "sha256": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+      "bytes": 3127
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/matched_controls.py",
+      "sha256": "7d912d3077fd934bf51c17045044350f2691265143cf1365d75bb630de3d8146",
+      "bytes": 10205
+    }
+  ]
+}
