@@ -10,3 +10,5 @@
 - Writers: 20261113-codex-vision发布本任务agents/20261113-codex-vision/及research/visual-graphs/continuation_20261113/；原takeover和review-suggestions材料不改。未来发布者另建分支/独立工作区并登记可写路径。
 - Execution: 本机Conda，RTX3060；完整官方划分和图；seeds41/42/43；scale1冻结；验证选点后测试一次并披露历史测试暴露。
 - Change control: 任务owner只能在用户范围内版本化修订，保留失败并重验受影响门槛；新增发布授权不等于科学完成或merge授权。
+
+- Assigned reviewer: 20261113-luna-admission, branch agent/visual-conversion/20261113-luna-admission; write only collaboration/tasks/visual-conversion/agents/20261113-luna-admission/. Read science/source/results, no GPU runs, no edits to shared scientific code/protocol. Task owner assigned this bounded independent admission review; it is not final manuscript review or default-branch merge authority.
