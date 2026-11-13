@@ -1,0 +1,45 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[review]{cvpr}
+\input{preamble}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+\usepackage{graphicx,amsmath,amssymb,booktabs}
+\def\confName{CVPR}
+\def\confYear{2027}
+\title{Converting Graph Neural Networks for Graph-Structured Vision: Exact Error Identity, Membrane Readout, and an Accuracy--Energy Frontier on Superpixel Graphs}
+\author{Anonymous Submission --- Paper ID *****}
+\input{numbers}
+% The author-kit review ruler is drawn by lineno into the gutter in
+% two-column mode and overlaps body text. Keep the review/confidential
+% header but suppress the intrusive line numbers for readability.
+\AtBeginDocument{\nolinenumbers}
+\newcommand{\Bh}{\hat{B}}
+\newcommand{\RAEW}{R A(E_1W_2)}
+\begin{document}
+\maketitle
+\begin{abstract}
+ANN-to-SNN conversion is analysed almost exclusively on row-stochastic convolutional operators. We transfer a conversion framework originally assembled for graph node classification to graph-structured visual classification, where images ship as superpixel graphs. A fixed linear global pooling operator preserves the exact conversion-error identity $\hat{B}-B=R A(E_1W_2)$, which we verify to machine precision with a unified float64 forward pass. We find that the closed-form bias $\beta^\star=\theta/(2T)$ becomes redundant once spike trains are deterministic and that removing it substantially improves fidelity. With membrane decoding, margin regularisation and narrow low-timestep networks, both 45\,nm arithmetic-energy conventions exceed $5\times$ across four mutually disjoint holdout groups (20 independent seeds), while all adapted single-point conversion baselines remain near chance. We report the accompanying accuracy--energy frontier explicitly, including a negative scaling result, rather than claiming a simultaneous fidelity target. Energy figures are theoretical op-count estimates, not hardware measurements.
+\end{abstract}
+\input{sections/1_intro}
+\input{sections/2_related}
+\input{sections/3_method}
+\input{sections/4_experiments}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../figures/pareto.pdf}
+\caption{Accuracy--energy frontier over the validation working-point grid. Dashed and dotted lines mark $5\times$ energy and $1.5$\,pp loss; points in the lower-right quadrant are the admissible high-energy-advantage region.}
+\label{fig:pareto}
+\end{figure}
+\begin{figure}[b]
+\centering
+\includegraphics[width=\linewidth]{../figures/loss_T.pdf}
+\caption{Conversion loss versus timesteps with five-seed error bars. Low $T$ is required for the energy advantage but increases loss.}
+\label{fig:lossT}
+\end{figure}
+\input{sections/5_discussion}
+\input{sections/6_conclusion}
+{\small
+\bibliographystyle{ieeenat_fullname}
+\bibliography{references}
+}
+\end{document}

@@ -1,0 +1,67 @@
+\section{Experiments and Results}
+\label{sec:experiments}
+
+\subsection{Datasets and protocol}
+\label{ssec:data}
+
+We use the official SuperPixel MNIST and CIFAR10 graph benchmarks~\cite{dwivedi2023}, which ship SLIC superpixels as nodes and an 8-NN Gaussian-weighted adjacency as edges; MNIST graphs have 40--75 nodes, CIFAR10 graphs 85--150. Official splits are 55k/5k/10k and 45k/5k/10k graphs. All experiments use a two-layer GCN, fixed $A$ with symmetric normalisation, linear sum pooling $R$, and a frozen evaluation protocol: five frozen seeds per holdout group, $T\in\{1,2,4,8,16\}$, and working points selected on validation only. Four mutually disjoint holdout groups (seeds 0--4, 5--9, 10--14, 15--19) provide \TotalSeeds\ independent test seeds; no test split is reused for selection. We report mean, standard deviation and 95\% confidence intervals. CUDA sparse reduction is non-deterministic, so single-seed best values are never reported.
+
+\subsection{Baselines}
+\label{ssec:baselines}
+
+All conversion methods are adapted to the \emph{same} superpixel-graph backbone, teacher, threshold, calibration data and $T$ grid: naive rate conversion, QCFS quantised activation~\cite{bu2022qcfs}, FTBC forward bias~\cite{wu2024ftbc}, TPP two-phase probabilistic neurons~\cite{bojkovic2025tpp}, and parallel conversion~\cite{hao2025parallel}. A directly trained spiking GCN with surrogate gradients is the technique-family control. DCGS, AdaFire, PASCAL, CS-QCFS, One-Spike SNN and Adaptive Fission are literature context~\cite{huang2025dcgs,wang2025adafire,ramesh2025pascal,yang2025csqcfs,hwang2025onespike,jiang2025fission}; they are not used to carry the main comparison because their official code or training protocol does not transfer without redesign. The ANN teacher is the upper bound for conversion loss.
+
+\subsection{Main results}
+\label{ssec:main}
+
+Table~\ref{tab:main} reports the third, entirely untouched holdout group (seeds 10--14) with a unified float64 forward pass. Both energy conventions exceed $5\times$ for every one of the ten runs; the smallest single-seed conservative ratio is \MinCons. Conversion loss is \CIFARLoss$\pm$\CIFARLossStd\,pp on CIFAR10 and \MNISTLoss$\pm$\MNISTLossStd\,pp on MNIST. Teacher accuracy is \CIFARAnn\% and \MNISTAnn\%, i.e.\ well above the 20\% admissibility floor (twice the 10-class chance rate) but not competitive as an absolute classifier.
+
+\begin{table}[t]
+\centering
+\caption{Five-seed results on untouched holdout seeds 10--14. Energy is a 45\,nm theoretical arithmetic estimate under two conventions; loss is conversion loss in percentage points (lower is better). Every one of the ten individual conservative ratios exceeds 5.464$\times$.}
+\label{tab:main}
+\input{tables/tab_main}
+\end{table}
+
+The first two holdout groups (seeds 0--4 and 5--9) independently reproduce the energy result with conservative ratios of \EarlierConsA\ and \EarlierConsB, and the fourth group (seeds 15--19) does so again at \FourthCons. Across all four groups the energy claim holds for \TotalSeeds\ distinct seeds without a single exception. The fourth group additionally shows that increasing the training set from 2,000 to 3,000 graphs and the epoch budget from 800 to 1,000 raises teacher accuracy slightly but \emph{worsens} conversion loss to \EIGHTEENMNISTLoss\,pp (MNIST) and \EIGHTEENCIFARLoss\,pp (CIFAR10). Longer training sharpens margins that the low-$T$ quantiser amplifies rather than stabilising them.
+
+\subsection{Comparison with conversion baselines}
+\label{ssec:comparison}
+
+Table~\ref{tab:baselines} summarises the five-seed full-scale comparison. Every single-point conversion baseline stays near chance on both datasets, while our converted network leads the strongest baseline by \MarginMNIST\,pp (MNIST, $T{=}4$) and \MarginCIFAR\,pp (CIFAR10, $T{=}4$). This is not an accuracy-SOTA claim: it is a statement that graph message passing exposes a conversion failure mode that methods calibrated for row-stochastic convolutions do not address.
+
+\begin{table}[t]
+\centering
+\caption{Five-seed top-1 (\%) at $T{=}4$ and $T{=}8$ for all adapted conversion baselines. Chance is 10\%.}
+\label{tab:baselines}
+\input{tables/tab_baselines}
+\end{table}
+
+\subsection{Ablations}
+\label{ssec:ablations}
+
+Table~\ref{tab:ablations} isolates each component. Removing the redundant $\beta^\star$ lowers the $T{=}8$ conversion loss from \BetaLossVoneM\ to \BetaLossVtwoM\,pp on MNIST and from \BetaLossVoneC\ to \BetaLossVtwoC\,pp on CIFAR10. Replacing the membrane readout with spike counting collapses accuracy to \CountAcc\% versus \MembraneAcc\% ($T{=}8$), confirming that the $1/T$ grid and unit-clipping ceiling dominate the error. Randomising the second phase (TPP-style) degrades accuracy by \TPPGain\,pp. Each ablation moves in the direction predicted by~\eqref{eq:identity}.
+
+\begin{table}[t]
+\centering
+\caption{Component ablations at $T{=}8$ (five seeds). Values are top-1 (\%) or conversion loss (pp).}
+\label{tab:ablations}
+\input{tables/tab_ablations}
+\end{table}
+
+\subsection{Identity verification and numerical precision}
+\label{ssec:verify}
+
+Table~\ref{tab:identity} reports the float64 residual over all timesteps. The residual stays between \IdentityMin\ and \IdentityMax, i.e.\ at machine precision, while the float32 forward pass differs from its float64 recomputation by $\FloatGap$. The two spike trains are bit-identical (L1 difference zero), so the earlier $10^{-7}$-level residual was entirely an accumulation artefact. This check is performed on the same forward pass that produces the accuracy and energy numbers.
+
+\begin{table}[t]
+\centering
+\caption{Maximum $|(\Bh-B)-R A(E_1W_2)|$ in float64 across timesteps and holdout seeds.}
+\label{tab:identity}
+\input{tables/tab_identity}
+\end{table}
+
+\subsection{Accuracy--energy frontier}
+\label{ssec:frontier}
+
+Figure~\ref{fig:pareto} plots conversion loss against the conservative energy ratio over the full working-point grid. The frontier is monotone: points above $5\times$ in both conventions are concentrated at $T\in\{2,3,4\}$ with 10--26 surviving hidden units, and their conversion loss is higher than that of wider, longer-timestep points. The frontier itself is therefore the object of study. CIFAR10 attains \CIFARLoss\,pp at \CIFAREc\texttimes\ conservative; its 95\% CI lower bound is \CIFARLower\,pp. MNIST remains the harder case at \MNISTLoss\,pp. Figure~\ref{fig:lossT} shows the loss--latency curve with confidence bands over all five timesteps.

@@ -1,0 +1,1192 @@
+[
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\activation_histogram.py",
+    "published_path": "research/visual-graphs/takeover_20261112/activation_histogram.py",
+    "source_sha256": "59e7fb79a6655d9060c630da289211e74f8714c8a10086a92de708f5a3fea9b3",
+    "published_sha256": "59e7fb79a6655d9060c630da289211e74f8714c8a10086a92de708f5a3fea9b3",
+    "bytes": 2380
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-base-fulltrain-protocol-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-base-fulltrain-protocol-v1.md",
+    "source_sha256": "889460ef7305e1742a206cbacf288aded04fa69d605e767d5f0af588176f940c",
+    "published_sha256": "889460ef7305e1742a206cbacf288aded04fa69d605e767d5f0af588176f940c",
+    "bytes": 5593
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-base-representation-review-v2.md",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-base-representation-review-v2.md",
+    "source_sha256": "d64d17c0f52c24a911adedcc0f3d9d8a8be4cb748ffb042fb2fae79010349d7a",
+    "published_sha256": "d64d17c0f52c24a911adedcc0f3d9d8a8be4cb748ffb042fb2fae79010349d7a",
+    "bytes": 5305
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-cal-and-fidelity-artifact-audit-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-cal-and-fidelity-artifact-audit-v1.md",
+    "source_sha256": "78bd00575098827e5bdd5a4ae0f6228e309dc9a75ddb6919061da2f4422f7246",
+    "published_sha256": "78bd00575098827e5bdd5a4ae0f6228e309dc9a75ddb6919061da2f4422f7246",
+    "bytes": 5513
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-incremental-prior-art-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-incremental-prior-art-v1.md",
+    "source_sha256": "07c48c4323dd9dba129a742a82dec4d0e23fe7209844ce8733c02f9d124c579d",
+    "published_sha256": "07c48c4323dd9dba129a742a82dec4d0e23fe7209844ce8733c02f9d124c579d",
+    "bytes": 10660
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-mode-cost-boundary-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-mode-cost-boundary-v1.md",
+    "source_sha256": "1bd3a9663b633a5b730a26e1e4d3169d3dd894c51dede387ea92c5c1b34491a2",
+    "published_sha256": "1bd3a9663b633a5b730a26e1e4d3169d3dd894c51dede387ea92c5c1b34491a2",
+    "bytes": 13225
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-screen-decision-clarification-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-screen-decision-clarification-v1.md",
+    "source_sha256": "46fb08193bcf947c23f22698cbeb1f5f661880eb3be452154f0af9d8d1882e95",
+    "published_sha256": "46fb08193bcf947c23f22698cbeb1f5f661880eb3be452154f0af9d8d1882e95",
+    "bytes": 1324
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-six-profile-audit-v1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-six-profile-audit-v1.json",
+    "source_sha256": "4282adeb4b6615d6cde1e733ae7a747b9fb282ce36b4930ae68f3cbad8957855",
+    "published_sha256": "4282adeb4b6615d6cde1e733ae7a747b9fb282ce36b4930ae68f3cbad8957855",
+    "bytes": 18821
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-six-profile-audit-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-six-profile-audit-v1.md",
+    "source_sha256": "34e3b33190c93da25a56ea1ef85d0d18c8e4bd377a4ad5b44e83eb710e88e276",
+    "published_sha256": "34e3b33190c93da25a56ea1ef85d0d18c8e4bd377a4ad5b44e83eb710e88e276",
+    "bytes": 3997
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine-training-code-review-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/affine-training-code-review-v1.md",
+    "source_sha256": "a0abd9a703cf4ed30cb0d5103e973ade124989446757ce91c407f8cf6a79b24e",
+    "published_sha256": "a0abd9a703cf4ed30cb0d5103e973ade124989446757ce91c407f8cf6a79b24e",
+    "bytes": 5422
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\audit_affine_profiles_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/audit_affine_profiles_v1.py",
+    "source_sha256": "85a04933a4845d816d7eec864ca0bcd2acd894863252f5897577ccc6df81c74f",
+    "published_sha256": "85a04933a4845d816d7eec864ca0bcd2acd894863252f5897577ccc6df81c74f",
+    "bytes": 30064
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\audit_shared_affine_profiles_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/audit_shared_affine_profiles_v1.py",
+    "source_sha256": "04b6dc32b7c97c80ad99f0dff7e104d4c28030d1325b495d7836e0acd777b38d",
+    "published_sha256": "04b6dc32b7c97c80ad99f0dff7e104d4c28030d1325b495d7836e0acd777b38d",
+    "bytes": 15281
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\centered-residual-proof-review-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/centered-residual-proof-review-v1.md",
+    "source_sha256": "cd8bb6665cf73f120b39894857b49693c27327c5cbaf1a45edd7083e24e5c4ee",
+    "published_sha256": "cd8bb6665cf73f120b39894857b49693c27327c5cbaf1a45edd7083e24e5c4ee",
+    "bytes": 9621
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_centered_derivation_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_centered_derivation_v1.py",
+    "source_sha256": "db6c4144e92a35307337019b2c202a2e24099558199b5bf5d4462c621e95df84",
+    "published_sha256": "db6c4144e92a35307337019b2c202a2e24099558199b5bf5d4462c621e95df84",
+    "bytes": 4798
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_dcgs_fixed_seed_eval_v2.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_dcgs_fixed_seed_eval_v2.py",
+    "source_sha256": "1359e2572a81e0f62bbec0c9158ae66a28aed0007dea963abc1afbb999f70b78",
+    "published_sha256": "1359e2572a81e0f62bbec0c9158ae66a28aed0007dea963abc1afbb999f70b78",
+    "bytes": 3941
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_dcgs_fixed_seed_eval_v3.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_dcgs_fixed_seed_eval_v3.py",
+    "source_sha256": "d428ff79535aa24a662e24d6747eec80e8ed9096fbcb748e7bfbc14cb5247494",
+    "published_sha256": "d428ff79535aa24a662e24d6747eec80e8ed9096fbcb748e7bfbc14cb5247494",
+    "bytes": 8818
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_gated_affine_base_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_gated_affine_base_v1.py",
+    "source_sha256": "291a662d0a277052c4fc7cda8f995d0d2ac6da4debc8ad9109a31196d9fad17b",
+    "published_sha256": "291a662d0a277052c4fc7cda8f995d0d2ac6da4debc8ad9109a31196d9fad17b",
+    "bytes": 20478
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_gated_affine_cal_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_gated_affine_cal_v1.py",
+    "source_sha256": "58c7a514d56babb2ac5ae6f32da2d8d3e716f81e1911dc0a74defac8bb965887",
+    "published_sha256": "58c7a514d56babb2ac5ae6f32da2d8d3e716f81e1911dc0a74defac8bb965887",
+    "bytes": 4655
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_gated_affine_profile_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_gated_affine_profile_v1.py",
+    "source_sha256": "0453b0c743f49948e4b6dcd2e3b52e0387f7b1318e3a089f13652fcde9b55e1d",
+    "published_sha256": "0453b0c743f49948e4b6dcd2e3b52e0387f7b1318e3a089f13652fcde9b55e1d",
+    "bytes": 4018
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_gated_affine_shared_profile_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_gated_affine_shared_profile_v1.py",
+    "source_sha256": "96bd029173da057293b6eee093bd9b3d6a810c3ca1f9d282dd94598f54a94905",
+    "published_sha256": "96bd029173da057293b6eee093bd9b3d6a810c3ca1f9d282dd94598f54a94905",
+    "bytes": 3693
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_gated_diff_seed_eval_v3.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_gated_diff_seed_eval_v3.py",
+    "source_sha256": "64b97c8cd4ceb7e20a463c41c9fa58e9da4a2c2fd04944fe598785a1223b7f9d",
+    "published_sha256": "64b97c8cd4ceb7e20a463c41c9fa58e9da4a2c2fd04944fe598785a1223b7f9d",
+    "bytes": 3626
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_gated_teacher_seed_v2.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_gated_teacher_seed_v2.py",
+    "source_sha256": "91e815540225a7d6eb97da23288a34e9e78ca169d376e107c03b1e3072e8bc43",
+    "published_sha256": "91e815540225a7d6eb97da23288a34e9e78ca169d376e107c03b1e3072e8bc43",
+    "bytes": 6716
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\check_stable_gate_bound_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/check_stable_gate_bound_v1.py",
+    "source_sha256": "6a9ddd3ef94bd8d4bc705f3dcde367ef599b8343ff5d216c15b2548456b80d4d",
+    "published_sha256": "6a9ddd3ef94bd8d4bc705f3dcde367ef599b8343ff5d216c15b2548456b80d4d",
+    "bytes": 9524
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\conversion-staging-note.md",
+    "published_path": "research/visual-graphs/takeover_20261112/conversion-staging-note.md",
+    "source_sha256": "fc275fc5bec019ed8b5210eef1480d4be29f1459115386c535a1b476983cde54",
+    "published_sha256": "fc275fc5bec019ed8b5210eef1480d4be29f1459115386c535a1b476983cde54",
+    "bytes": 1760
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc-fixed-full-endpoint-summary-v3.md",
+    "published_path": "research/visual-graphs/takeover_20261112/dc-fixed-full-endpoint-summary-v3.md",
+    "source_sha256": "bb6edca58281ce63766bf81e9c017f92ff43072ad35d8598aadbbe1a958cffe5",
+    "published_sha256": "bb6edca58281ce63766bf81e9c017f92ff43072ad35d8598aadbbe1a958cffe5",
+    "bytes": 4865
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc-fixed-fulltest-protocol-v3.md",
+    "published_path": "research/visual-graphs/takeover_20261112/dc-fixed-fulltest-protocol-v3.md",
+    "source_sha256": "102ac3fcd9cfdef16f259bb77f391249554ce4a34fcaf62677adb8690dd1bfd4",
+    "published_sha256": "102ac3fcd9cfdef16f259bb77f391249554ce4a34fcaf62677adb8690dd1bfd4",
+    "bytes": 3577
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dcgs-threshold-procedure-source-note-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/dcgs-threshold-procedure-source-note-v1.md",
+    "source_sha256": "d37f9cb23363f535bcd5364e0a9bf965ba1917b104f3acbe1586aa36a212cb51",
+    "published_sha256": "d37f9cb23363f535bcd5364e0a9bf965ba1917b104f3acbe1586aa36a212cb51",
+    "bytes": 1908
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dcgs_fixed_residual_gcn_event_forward_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/dcgs_fixed_residual_gcn_event_forward_v1.py",
+    "source_sha256": "a031ebdbc816cbde28af3f919284b08e5ba087e271415b1bedec37306c9bc541",
+    "published_sha256": "a031ebdbc816cbde28af3f919284b08e5ba087e271415b1bedec37306c9bc541",
+    "bytes": 33145
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dcgs_fixed_seed_eval_v2.py",
+    "published_path": "research/visual-graphs/takeover_20261112/dcgs_fixed_seed_eval_v2.py",
+    "source_sha256": "530f897e72f12e736c41ee84f73ae37e17176c6cd9dde2317f04e02ff1c270d0",
+    "published_sha256": "530f897e72f12e736c41ee84f73ae37e17176c6cd9dde2317f04e02ff1c270d0",
+    "bytes": 34933
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dcgs_fixed_seed_eval_v3.py",
+    "published_path": "research/visual-graphs/takeover_20261112/dcgs_fixed_seed_eval_v3.py",
+    "source_sha256": "964858c87d1f013a81a05a7d27dacfea8e836bf31a2437b2ab0cc4f05fc4ca23",
+    "published_sha256": "964858c87d1f013a81a05a7d27dacfea8e836bf31a2437b2ab0cc4f05fc4ca23",
+    "bytes": 17683
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dcgs_mth_diff_source_equivalence_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/dcgs_mth_diff_source_equivalence_v1.py",
+    "source_sha256": "8f26a03a35647d7d58f016dc59651491cd439067dd4b1a982f6996048bc47d43",
+    "published_sha256": "8f26a03a35647d7d58f016dc59651491cd439067dd4b1a982f6996048bc47d43",
+    "bytes": 15081
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\fixed-gcn-test-seed-completion-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/fixed-gcn-test-seed-completion-v1.md",
+    "source_sha256": "2414525bb96a522af9e1418e1640d3fe0c29dbdafdb137cce5620875f4ad9d0d",
+    "published_sha256": "2414525bb96a522af9e1418e1640d3fe0c29dbdafdb137cce5620875f4ad9d0d",
+    "bytes": 1389
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\fixed-gcn-test-three-seed-summary-v1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/fixed-gcn-test-three-seed-summary-v1.json",
+    "source_sha256": "1f585d2d90d3574be129442fd9082b024527c8ea095e0a9158dd5a9e646e5ee8",
+    "published_sha256": "1f585d2d90d3574be129442fd9082b024527c8ea095e0a9158dd5a9e646e5ee8",
+    "bytes": 7845
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\fixed-gcn-test-three-seed-summary-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/fixed-gcn-test-three-seed-summary-v1.md",
+    "source_sha256": "b89a6ffd6a2633b12c2ad16295ffd7786ccac71eb5fc60d08abd544b7064face",
+    "published_sha256": "b89a6ffd6a2633b12c2ad16295ffd7786ccac71eb5fc60d08abd544b7064face",
+    "bytes": 1740
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\fold_teacher_bn.py",
+    "published_path": "research/visual-graphs/takeover_20261112/fold_teacher_bn.py",
+    "source_sha256": "ed2b84ae9c3bc7fe470e6f0f1fec7c2e5a58eb8ac7c49753920e850b7dbde799",
+    "published_sha256": "ed2b84ae9c3bc7fe470e6f0f1fec7c2e5a58eb8ac7c49753920e850b7dbde799",
+    "bytes": 969
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full-conversion-protocol-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/full-conversion-protocol-v1.md",
+    "source_sha256": "89aca045040fe95f9f70327433353ad199314241c3eaf65fdabe2002285d0c32",
+    "published_sha256": "89aca045040fe95f9f70327433353ad199314241c3eaf65fdabe2002285d0c32",
+    "bytes": 2435
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_calibrate.py",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_calibrate.py",
+    "source_sha256": "3aca80acb75bf3b49048d2a8fa6b105a9e46c2d2c4bb0649b455bb7a4b3b0b57",
+    "published_sha256": "3aca80acb75bf3b49048d2a8fa6b105a9e46c2d2c4bb0649b455bb7a4b3b0b57",
+    "bytes": 9116
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_conversion.py",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_conversion.py",
+    "source_sha256": "d7eeb807e670d725ed3444f677763130de176ad20a4b6f433cb02cfe119ac175",
+    "published_sha256": "d7eeb807e670d725ed3444f677763130de176ad20a4b6f433cb02cfe119ac175",
+    "bytes": 2837
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_gcn.py",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_gcn.py",
+    "source_sha256": "d211e9a4860678318939bf28294c52721a564d53e4ba16b972887be189072fe4",
+    "published_sha256": "d211e9a4860678318939bf28294c52721a564d53e4ba16b972887be189072fe4",
+    "bytes": 9465
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_test.py",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_test.py",
+    "source_sha256": "5b4ba6125764ee223a1b6409ed8cff8c047a0f18b7c6b9935d9295a26ed77335",
+    "published_sha256": "5b4ba6125764ee223a1b6409ed8cff8c047a0f18b7c6b9935d9295a26ed77335",
+    "bytes": 3353
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-differential-dense-cost-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-differential-dense-cost-v1.md",
+    "source_sha256": "fd9ad15e17567ae0dd2e9b1b60fe0e4196fcdf7edd4fbc59ed71c38223831084",
+    "published_sha256": "fd9ad15e17567ae0dd2e9b1b60fe0e4196fcdf7edd4fbc59ed71c38223831084",
+    "bytes": 2233
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-differential-hybrid-design-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-differential-hybrid-design-v1.md",
+    "source_sha256": "e83db4e1fc82d87ee40401a9a2346da8dc254d8a4cda728dd7d10335adad1d19",
+    "published_sha256": "e83db4e1fc82d87ee40401a9a2346da8dc254d8a4cda728dd7d10335adad1d19",
+    "bytes": 2712
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-dual-arithmetic-screen-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-dual-arithmetic-screen-v1.md",
+    "source_sha256": "6f855be11b8d862804c2c9ce1687df9f6d752212c6823cdc9a705a5cc0fd3f07",
+    "published_sha256": "6f855be11b8d862804c2c9ce1687df9f6d752212c6823cdc9a705a5cc0fd3f07",
+    "bytes": 7093
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-frozen-gate-calibration-validation-protocol.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-frozen-gate-calibration-validation-protocol.md",
+    "source_sha256": "21c83ed2517625d3ce65d36943d64894e3987779a39d4508a1fb0ae72d8c5a78",
+    "published_sha256": "21c83ed2517625d3ce65d36943d64894e3987779a39d4508a1fb0ae72d8c5a78",
+    "bytes": 4559
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-frozen-gate-prototype-protocol.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-frozen-gate-prototype-protocol.md",
+    "source_sha256": "545c92896cfaa8f186d0087dcc9a6db9d9f1bd1c78da56d5e7e08498d0baa40c",
+    "published_sha256": "545c92896cfaa8f186d0087dcc9a6db9d9f1bd1c78da56d5e7e08498d0baa40c",
+    "bytes": 3035
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-result-to-claim-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-result-to-claim-v1.md",
+    "source_sha256": "039fd5c1077415274200e0b04a0dc7d2e4f6f103d7b29138ffeb70a5e0785959",
+    "published_sha256": "039fd5c1077415274200e0b04a0dc7d2e4f6f103d7b29138ffeb70a5e0785959",
+    "bytes": 6184
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-teacher-seed-protocol-v2.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-teacher-seed-protocol-v2.md",
+    "source_sha256": "56dbe5751debc828bd353d3867fc5f624613ecb0e590ffc43ec9663722538f1b",
+    "published_sha256": "56dbe5751debc828bd353d3867fc5f624613ecb0e590ffc43ec9663722538f1b",
+    "bytes": 3918
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-test-protocol-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-test-protocol-v1.md",
+    "source_sha256": "7d5a6c5cb6b2d4b5e1a6e1f0a3dc4eb72dc4e266512afb7e0d1567d060aed933",
+    "published_sha256": "7d5a6c5cb6b2d4b5e1a6e1f0a3dc4eb72dc4e266512afb7e0d1567d060aed933",
+    "bytes": 829
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-three-teacher-seed-summary-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-three-teacher-seed-summary-v1.md",
+    "source_sha256": "620cce48c5e3a76a7f7ff7b9967ba9b268d329112140af4e974321fd805e5dda",
+    "published_sha256": "620cce48c5e3a76a7f7ff7b9967ba9b268d329112140af4e974321fd805e5dda",
+    "bytes": 5172
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated-two-teacher-seed-summary-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated-two-teacher-seed-summary-v1.md",
+    "source_sha256": "fbdac119f06f6da309367876e3b3c660cc010f71fd0b0badecf2fa4d99c6505c",
+    "published_sha256": "fbdac119f06f6da309367876e3b3c660cc010f71fd0b0badecf2fa4d99c6505c",
+    "bytes": 4395
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_affine_base_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_affine_base_v1.py",
+    "source_sha256": "6bc3e771212293bf68507c2f062ee90188621280bf1d97adc3f60a9eaaf3467b",
+    "published_sha256": "6bc3e771212293bf68507c2f062ee90188621280bf1d97adc3f60a9eaaf3467b",
+    "bytes": 21513
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_affine_cal_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_affine_cal_v1.py",
+    "source_sha256": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "published_sha256": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "bytes": 14107
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_affine_profile_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_affine_profile_v1.py",
+    "source_sha256": "5f7df5881f3d890fa9d2f9dcc1189ecabd66659c70e6a2abafbf93a7a1c7c30e",
+    "published_sha256": "5f7df5881f3d890fa9d2f9dcc1189ecabd66659c70e6a2abafbf93a7a1c7c30e",
+    "bytes": 9173
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_affine_shared_profile_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_affine_shared_profile_v1.py",
+    "source_sha256": "d6644580c7a57bef7285facc83db4f58fd0bba7d110268097fde750ed4bce2a8",
+    "published_sha256": "d6644580c7a57bef7285facc83db4f58fd0bba7d110268097fde750ed4bce2a8",
+    "bytes": 11265
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_causal_control_v2.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_causal_control_v2.py",
+    "source_sha256": "a8965425c5fb71217485a9820a8fd66e12d072a3382bd1cd6355ca1e40abbad1",
+    "published_sha256": "a8965425c5fb71217485a9820a8fd66e12d072a3382bd1cd6355ca1e40abbad1",
+    "bytes": 7679
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_causal_hybrid.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_causal_hybrid.py",
+    "source_sha256": "1833199458f3d7482bb7d98ac783746f6fe780127db0f570635016548978fd0a",
+    "published_sha256": "1833199458f3d7482bb7d98ac783746f6fe780127db0f570635016548978fd0a",
+    "bytes": 7556
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_diff_eval_v2.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_diff_eval_v2.py",
+    "source_sha256": "efb1a351471a729ffc1bd58e05034ab58faa7a33100b0d8ddc78b6821b2cdc97",
+    "published_sha256": "efb1a351471a729ffc1bd58e05034ab58faa7a33100b0d8ddc78b6821b2cdc97",
+    "bytes": 7887
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_diff_fullval_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_diff_fullval_v1.py",
+    "source_sha256": "bd21b383f95535d6f9e6456591372b2968cf3cd9af529c36207685da73cd28d3",
+    "published_sha256": "bd21b383f95535d6f9e6456591372b2968cf3cd9af529c36207685da73cd28d3",
+    "bytes": 6878
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_diff_seed_eval_v3.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_diff_seed_eval_v3.py",
+    "source_sha256": "6cfa72f41b72e3154697470daa99d04870f57dc3a48931144a071649fc81ae84",
+    "published_sha256": "6cfa72f41b72e3154697470daa99d04870f57dc3a48931144a071649fc81ae84",
+    "bytes": 8318
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_diff_seed_eval_v4.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_diff_seed_eval_v4.py",
+    "source_sha256": "70a09edd1ef6c33ff2a3297a874a0cbefbcc10309fdb54a778e3732269f13328",
+    "published_sha256": "70a09edd1ef6c33ff2a3297a874a0cbefbcc10309fdb54a778e3732269f13328",
+    "bytes": 8354
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_differential_hybrid_v1.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_differential_hybrid_v1.py",
+    "source_sha256": "66a8a3060a3888cc2ffe4e7daa452992758c9288f4463cd1fb28d5f0a14a7a1e",
+    "published_sha256": "66a8a3060a3888cc2ffe4e7daa452992758c9288f4463cd1fb28d5f0a14a7a1e",
+    "bytes": 7357
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_frozen_gate_calibrate.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_frozen_gate_calibrate.py",
+    "source_sha256": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "published_sha256": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "bytes": 12210
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_frozen_gate_prototype.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_frozen_gate_prototype.py",
+    "source_sha256": "9fb56d1d940b36e78db5d04879d0586f57b0db95de7d95ef009d99290701ae88",
+    "published_sha256": "9fb56d1d940b36e78db5d04879d0586f57b0db95de7d95ef009d99290701ae88",
+    "bytes": 7018
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_frozen_gate_validate.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_frozen_gate_validate.py",
+    "source_sha256": "fa580fc290a33a0ee4f9ae4885b839bb4e0573898e7da68e2aab253b9ccee7ea",
+    "published_sha256": "fa580fc290a33a0ee4f9ae4885b839bb4e0573898e7da68e2aab253b9ccee7ea",
+    "bytes": 10489
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_teacher_model.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_teacher_model.py",
+    "source_sha256": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "published_sha256": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "bytes": 6187
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_teacher_seed_test_v2.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_teacher_seed_test_v2.py",
+    "source_sha256": "0549bb867c6c30840c6159a5f8f3aee074ded2f4d9f9b13c3e4a5de81efd5e82",
+    "published_sha256": "0549bb867c6c30840c6159a5f8f3aee074ded2f4d9f9b13c3e4a5de81efd5e82",
+    "bytes": 3538
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_teacher_seed_train_v2.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_teacher_seed_train_v2.py",
+    "source_sha256": "b7ee53fce7ce5bf954ba9b4fd00b8b68c9d4ffa78e5f291872ced11c1ab90fc2",
+    "published_sha256": "b7ee53fce7ce5bf954ba9b4fd00b8b68c9d4ffa78e5f291872ced11c1ab90fc2",
+    "bytes": 14900
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_teacher_test.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_teacher_test.py",
+    "source_sha256": "c2033b08fce31b961ca9024533895acf8f1e0c747730d9ce8cc2196d3751ddb0",
+    "published_sha256": "c2033b08fce31b961ca9024533895acf8f1e0c747730d9ce8cc2196d3751ddb0",
+    "bytes": 3324
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_teacher_train.py",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_teacher_train.py",
+    "source_sha256": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "published_sha256": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "bytes": 11665
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gated_teacher_train_protocol_v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/gated_teacher_train_protocol_v1.md",
+    "source_sha256": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "published_sha256": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "bytes": 4081
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\PAUSE_SNAPSHOT_20261113.md",
+    "published_path": "research/visual-graphs/takeover_20261112/PAUSE_SNAPSHOT_20261113.md",
+    "source_sha256": "e811a5778366393e3ae9f4f9bda84d262aa31ab820b75a1a2504b20fb62be1ef",
+    "published_sha256": "e811a5778366393e3ae9f4f9bda84d262aa31ab820b75a1a2504b20fb62be1ef",
+    "bytes": 2018
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_mlp_readout.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_mlp_readout.py",
+    "source_sha256": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "published_sha256": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "bytes": 726
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\gated_cifar.json",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/gated_cifar.json",
+    "source_sha256": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "published_sha256": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "bytes": 741
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\gated_layer.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/gated_layer.py",
+    "source_sha256": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "published_sha256": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "bytes": 8488
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\gated_net.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/gated_net.py",
+    "source_sha256": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+    "published_sha256": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+    "bytes": 2366
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\stable-normalized-gate-bound-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/stable-normalized-gate-bound-v1.md",
+    "source_sha256": "9afba10e5e3f028a0b09b01b3d0b5ae112dc86e09f53a531ed416f5250cd2c27",
+    "published_sha256": "9afba10e5e3f028a0b09b01b3d0b5ae112dc86e09f53a531ed416f5250cd2c27",
+    "bytes": 8314
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\stable_gate_bound_check_v1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/stable_gate_bound_check_v1.json",
+    "source_sha256": "1ca5d8020d56b73999e79cc8c2a533c323392f5728c42285b064733f118dc60d",
+    "published_sha256": "1ca5d8020d56b73999e79cc8c2a533c323392f5728c42285b064733f118dc60d",
+    "bytes": 1938
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\teacher-full-protocol-v1.md",
+    "published_path": "research/visual-graphs/takeover_20261112/teacher-full-protocol-v1.md",
+    "source_sha256": "3bae91d92ee4a5b50587d5e356937e0e131d31313669858ec5a24c7866f0e6b9",
+    "published_sha256": "3bae91d92ee4a5b50587d5e356937e0e131d31313669858ec5a24c7866f0e6b9",
+    "bytes": 3088
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\test_gated_frozen_gate_pipeline.py",
+    "published_path": "research/visual-graphs/takeover_20261112/test_gated_frozen_gate_pipeline.py",
+    "source_sha256": "634772fac98cf5bb3c753c5122dc9c46a05953732c3a2fd95ee04f92f1613a90",
+    "published_sha256": "634772fac98cf5bb3c753c5122dc9c46a05953732c3a2fd95ee04f92f1613a90",
+    "bytes": 4483
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\test_gated_frozen_gate_prototype.py",
+    "published_path": "research/visual-graphs/takeover_20261112/test_gated_frozen_gate_prototype.py",
+    "source_sha256": "23d2592740083bfa07d684462a6db71947926eb002a85bedfc1b37bc8e3f9d5f",
+    "published_sha256": "23d2592740083bfa07d684462a6db71947926eb002a85bedfc1b37bc8e3f9d5f",
+    "bytes": 3618
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\DERIVATION_PACKAGE.md",
+    "published_path": "research/visual-graphs/DERIVATION_PACKAGE.md",
+    "source_sha256": "b422a3e994eb136220fadcabc736963889cd8c2f774d8c72507e1f931508a6fa",
+    "published_sha256": "b422a3e994eb136220fadcabc736963889cd8c2f774d8c72507e1f931508a6fa",
+    "bytes": 7623
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\DERIVATION_PACKAGE_v2.md",
+    "published_path": "research/visual-graphs/DERIVATION_PACKAGE_v2.md",
+    "source_sha256": "f87c0bb18979966889536905361e299afd95907172819ddc535ecd58c2a776db",
+    "published_sha256": "f87c0bb18979966889536905361e299afd95907172819ddc535ecd58c2a776db",
+    "bytes": 7066
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_gcn_cifar.json",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_gcn_cifar.json",
+    "source_sha256": "b80f6414eec0c8c68d33ec9bec517472ca4f4af5b3d36008435d4e7f29330522",
+    "published_sha256": "b80f6414eec0c8c68d33ec9bec517472ca4f4af5b3d36008435d4e7f29330522",
+    "bytes": 739
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_gcn_layer.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_gcn_layer.py",
+    "source_sha256": "3b3f1b44b59037c1b4364ed03cb5847f0d329d24d87bfdd42dac7b7e1f6198b2",
+    "published_sha256": "3b3f1b44b59037c1b4364ed03cb5847f0d329d24d87bfdd42dac7b7e1f6198b2",
+    "bytes": 2624
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_gcn_mnist.json",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_gcn_mnist.json",
+    "source_sha256": "b2ee5707707377af4136db05210e6e1d406fc5c92358ec0674a453ea8aeebbe0",
+    "published_sha256": "b2ee5707707377af4136db05210e6e1d406fc5c92358ec0674a453ea8aeebbe0",
+    "bytes": 737
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_gcn_net.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_gcn_net.py",
+    "source_sha256": "1347a6a0f3e7c6665b6b6dc9e79d96c428c3e7580d487a81fa0621d215377b7f",
+    "published_sha256": "1347a6a0f3e7c6665b6b6dc9e79d96c428c3e7580d487a81fa0621d215377b7f",
+    "bytes": 2079
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_main.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_main.py",
+    "source_sha256": "2a997be87fea8f0713da593552508246e88fa264d1557b955e7b2d7580143873",
+    "published_sha256": "2a997be87fea8f0713da593552508246e88fa264d1557b955e7b2d7580143873",
+    "bytes": 18585
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_mlp_readout.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_mlp_readout.py",
+    "source_sha256": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "published_sha256": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "bytes": 726
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_superpixels.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_superpixels.py",
+    "source_sha256": "76086eddbda4905895eea13312aafc81695f608ef37c6ea367438aa744e99813",
+    "published_sha256": "76086eddbda4905895eea13312aafc81695f608ef37c6ea367438aa744e99813",
+    "bytes": 13741
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\benchmark_training.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/benchmark_training.py",
+    "source_sha256": "afb0b2cbf9c9a8a1aa40391ac6aadfae48c31123250b6cb0ad9f74c4be557a1d",
+    "published_sha256": "afb0b2cbf9c9a8a1aa40391ac6aadfae48c31123250b6cb0ad9f74c4be557a1d",
+    "bytes": 3634
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\gated_cifar.json",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/gated_cifar.json",
+    "source_sha256": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "published_sha256": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "bytes": 741
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\gated_layer.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/gated_layer.py",
+    "source_sha256": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "published_sha256": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "bytes": 8488
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\public_baselines\\gated_net.py",
+    "published_path": "research/visual-graphs/takeover_20261112/public_baselines/gated_net.py",
+    "source_sha256": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+    "published_sha256": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+    "bytes": 2366
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed41_full\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed41_full/metadata.json",
+    "source_sha256": "d38f420f0b54fdb7a514366804436653fcbe0d939b850884b2c309c6e5a71ba7",
+    "published_sha256": "d38f420f0b54fdb7a514366804436653fcbe0d939b850884b2c309c6e5a71ba7",
+    "bytes": 1349
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed41_full\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed41_full/done.json",
+    "source_sha256": "fe7e47e6adbd6e56b8fc2501745bdafbcf90f30b5560417daeb586f170efe020",
+    "published_sha256": "fe7e47e6adbd6e56b8fc2501745bdafbcf90f30b5560417daeb586f170efe020",
+    "bytes": 100
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed41_full\\teacher_full_test.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed41_full/teacher_full_test.json",
+    "source_sha256": "289b252faf5905fb1eae98d4203ca29226de4d5b5e762ce343d0ddb988f20800",
+    "published_sha256": "289b252faf5905fb1eae98d4203ca29226de4d5b5e762ce343d0ddb988f20800",
+    "bytes": 519
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed42_full\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed42_full/metadata.json",
+    "source_sha256": "581406a142ccbe54d8f5a88b4dd3890872be1fdbe76ad7d363145ce6f475bfbb",
+    "published_sha256": "581406a142ccbe54d8f5a88b4dd3890872be1fdbe76ad7d363145ce6f475bfbb",
+    "bytes": 1349
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed42_full\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed42_full/done.json",
+    "source_sha256": "062801242908a03d4a629fb326a52ac1a1ddeff882b1cfe85c2fcaf2dd961859",
+    "published_sha256": "062801242908a03d4a629fb326a52ac1a1ddeff882b1cfe85c2fcaf2dd961859",
+    "bytes": 100
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed42_full\\teacher_full_test.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed42_full/teacher_full_test.json",
+    "source_sha256": "1d806d71ce8d5767814b5c2eec3d84adb3a82ce534c29b6b91c8b2bdc784225d",
+    "published_sha256": "1d806d71ce8d5767814b5c2eec3d84adb3a82ce534c29b6b91c8b2bdc784225d",
+    "bytes": 521
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed43_full\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed43_full/metadata.json",
+    "source_sha256": "6c78641c2d31731f77f82fbfae3ecf5a634a2e4f7acfd456940ea93ea9be24a3",
+    "published_sha256": "6c78641c2d31731f77f82fbfae3ecf5a634a2e4f7acfd456940ea93ea9be24a3",
+    "bytes": 1349
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed43_full\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed43_full/done.json",
+    "source_sha256": "b524a922600d00818f9acae2bf48ce67d1839a313a3ac3a6930a51f5d36965ce",
+    "published_sha256": "b524a922600d00818f9acae2bf48ce67d1839a313a3ac3a6930a51f5d36965ce",
+    "bytes": 99
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed43_full\\teacher_full_test.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/MNIST_seed43_full/teacher_full_test.json",
+    "source_sha256": "f7cb90e4fce5d67d55299624ca2bf5a023f007a60246c8486c02d4ea4c97d3ef",
+    "published_sha256": "f7cb90e4fce5d67d55299624ca2bf5a023f007a60246c8486c02d4ea4c97d3ef",
+    "bytes": 521
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed41_full\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed41_full/metadata.json",
+    "source_sha256": "c5882b4da46672abc26843005d01b72dac09a92e5b4a6a305b6aece2b2485a24",
+    "published_sha256": "c5882b4da46672abc26843005d01b72dac09a92e5b4a6a305b6aece2b2485a24",
+    "bytes": 1351
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed41_full\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed41_full/done.json",
+    "source_sha256": "6a95eb071bf6bf02b83d7ed2179ac35edf8e6a09d144e41df24703d8cad2fdf1",
+    "published_sha256": "6a95eb071bf6bf02b83d7ed2179ac35edf8e6a09d144e41df24703d8cad2fdf1",
+    "bytes": 100
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed41_full\\teacher_full_test.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed41_full/teacher_full_test.json",
+    "source_sha256": "ffc7f260bcfc15b8e19bb1fde1b6633013909ac4289031a66176f8c9ccc4a9f3",
+    "published_sha256": "ffc7f260bcfc15b8e19bb1fde1b6633013909ac4289031a66176f8c9ccc4a9f3",
+    "bytes": 525
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed42_full\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed42_full/metadata.json",
+    "source_sha256": "081d92ca225a9bc26c0dc1cfb1149efaa797e4254d782587f662eed4cb6af825",
+    "published_sha256": "081d92ca225a9bc26c0dc1cfb1149efaa797e4254d782587f662eed4cb6af825",
+    "bytes": 1351
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed42_full\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed42_full/done.json",
+    "source_sha256": "c8cff10880492179df3bab66bc01232b33c25a32bd76b8bf7709c14d5997634f",
+    "published_sha256": "c8cff10880492179df3bab66bc01232b33c25a32bd76b8bf7709c14d5997634f",
+    "bytes": 100
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed42_full\\teacher_full_test.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed42_full/teacher_full_test.json",
+    "source_sha256": "c00c2223bad7ef878606727432fff85d7b71008b6a2909e1df01df2a3c8b4ea2",
+    "published_sha256": "c00c2223bad7ef878606727432fff85d7b71008b6a2909e1df01df2a3c8b4ea2",
+    "bytes": 524
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed43_full\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed43_full/metadata.json",
+    "source_sha256": "ec5c251c4013d6bf5105af8a72ebea5c056dcc83ecadb68bd58966cc63bee847",
+    "published_sha256": "ec5c251c4013d6bf5105af8a72ebea5c056dcc83ecadb68bd58966cc63bee847",
+    "bytes": 1351
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed43_full\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed43_full/done.json",
+    "source_sha256": "9643ddf784e47d05ebce31da11f4f40eebc8ea47124f4016f18332821d5b53d5",
+    "published_sha256": "9643ddf784e47d05ebce31da11f4f40eebc8ea47124f4016f18332821d5b53d5",
+    "bytes": 99
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\CIFAR10_seed43_full\\teacher_full_test.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/CIFAR10_seed43_full/teacher_full_test.json",
+    "source_sha256": "c270aa2e76537b6f9e9df1f02ae0df587fe343af26fa21111c943b1c23c6b87d",
+    "published_sha256": "c270aa2e76537b6f9e9df1f02ae0df587fe343af26fa21111c943b1c23c6b87d",
+    "bytes": 525
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed41_full_v1\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed41_full_v1/metadata.json",
+    "source_sha256": "b49aafa95a91f65da40c388e91a88e89ed4d9d807e8b1e5e2978b2d32f4f3acf",
+    "published_sha256": "b49aafa95a91f65da40c388e91a88e89ed4d9d807e8b1e5e2978b2d32f4f3acf",
+    "bytes": 3060
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed41_full_v1\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed41_full_v1/done.json",
+    "source_sha256": "c726dcf196370763c6ada1ef72532fb9f41ebdfa959babfaaa1a67393ff8ec71",
+    "published_sha256": "c726dcf196370763c6ada1ef72532fb9f41ebdfa959babfaaa1a67393ff8ec71",
+    "bytes": 390
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed41_full_v1\\gtest_v1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed41_full_v1/gtest_v1.json",
+    "source_sha256": "d141002c7092a2b7670ff182011f654515d532aadd6361b0b37be9e70b164b96",
+    "published_sha256": "d141002c7092a2b7670ff182011f654515d532aadd6361b0b37be9e70b164b96",
+    "bytes": 710
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed42_full_v2\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed42_full_v2/metadata.json",
+    "source_sha256": "d429b80f1617b7562fa383f13f86e8cd5f9ce001032307591b71af9f646d1a52",
+    "published_sha256": "d429b80f1617b7562fa383f13f86e8cd5f9ce001032307591b71af9f646d1a52",
+    "bytes": 5072
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed42_full_v2\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed42_full_v2/done.json",
+    "source_sha256": "6239331afa80276c9a6abd84041d60ad63ec6c5dd0625cabb727ef02ae9a1cdc",
+    "published_sha256": "6239331afa80276c9a6abd84041d60ad63ec6c5dd0625cabb727ef02ae9a1cdc",
+    "bytes": 485
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed42_full_v2\\gtest_v2.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed42_full_v2/gtest_v2.json",
+    "source_sha256": "2911c4512fae481b9661385acc43324fb200cf5158b73cd453ea0a573373d4dd",
+    "published_sha256": "2911c4512fae481b9661385acc43324fb200cf5158b73cd453ea0a573373d4dd",
+    "bytes": 1391
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed43_full_v2\\metadata.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed43_full_v2/metadata.json",
+    "source_sha256": "f2d59c04048539067ef2d588931797e7ef19ce32d4b0e897880ca7b3d4fa75e2",
+    "published_sha256": "f2d59c04048539067ef2d588931797e7ef19ce32d4b0e897880ca7b3d4fa75e2",
+    "bytes": 5072
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed43_full_v2\\done.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed43_full_v2/done.json",
+    "source_sha256": "1253c31dc5a269ff86b219da17d1e6a4b2cf082729ef44606a871c085dfc98f3",
+    "published_sha256": "1253c31dc5a269ff86b219da17d1e6a4b2cf082729ef44606a871c085dfc98f3",
+    "bytes": 486
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed43_full_v2\\gtest_v2.json",
+    "published_path": "research/visual-graphs/takeover_20261112/full_teacher_runs/gated_cifar10_seed43_full_v2/gtest_v2.json",
+    "source_sha256": "df50c4f269dfa4bedb73a3067656c83af081e5e8a14a3f67bc0ed09de5bc2e9f",
+    "published_sha256": "df50c4f269dfa4bedb73a3067656c83af081e5e8a14a3f67bc0ed09de5bc2e9f",
+    "bytes": 1392
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_mn_test1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/dc_mn_test1.json",
+    "source_sha256": "6dd6a1fee847ae795afd31802f81b396b0e654e6b68acb13a35e200f88b0bfd9",
+    "published_sha256": "6dd6a1fee847ae795afd31802f81b396b0e654e6b68acb13a35e200f88b0bfd9",
+    "bytes": 24991
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_cf_test1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/dc_cf_test1.json",
+    "source_sha256": "c54791b81c3c62c6ed1571d68ec591764e458671817d08237052d5a7f0810f52",
+    "published_sha256": "c54791b81c3c62c6ed1571d68ec591764e458671817d08237052d5a7f0810f52",
+    "bytes": 25034
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gd_test1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/gd_test1.json",
+    "source_sha256": "48595b52ad54791d7b1f9dc6ab5d20af0a8ca037e070c63a670f953579642678",
+    "published_sha256": "48595b52ad54791d7b1f9dc6ab5d20af0a8ca037e070c63a670f953579642678",
+    "bytes": 5491
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\g42test.json",
+    "published_path": "research/visual-graphs/takeover_20261112/g42test.json",
+    "source_sha256": "13b4c62f98d9a347d6e0b541dc669d0612f6338ce15cabe116bf85361d69e4bc",
+    "published_sha256": "13b4c62f98d9a347d6e0b541dc669d0612f6338ce15cabe116bf85361d69e4bc",
+    "bytes": 5724
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\g43test.json",
+    "published_path": "research/visual-graphs/takeover_20261112/g43test.json",
+    "source_sha256": "a99f3227808db454d0ebb18f2f2be226af8522f4687beead40c43f3731f62a94",
+    "published_sha256": "a99f3227808db454d0ebb18f2f2be226af8522f4687beead40c43f3731f62a94",
+    "bytes": 5731
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M42\\dc_test_v3.json",
+    "published_path": "research/visual-graphs/takeover_20261112/rep/M42/dc_test_v3.json",
+    "source_sha256": "6e2fcef830b832abdc5d37c00e05687fad3a1bb19ac7b800e58cae95efa3f3bf",
+    "published_sha256": "6e2fcef830b832abdc5d37c00e05687fad3a1bb19ac7b800e58cae95efa3f3bf",
+    "bytes": 24952
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M43\\dc_test_v3.json",
+    "published_path": "research/visual-graphs/takeover_20261112/rep/M43/dc_test_v3.json",
+    "source_sha256": "68e8927ef3e64d23b12872a97b5d085611e183fabea87c8d9f8275b16843d7a6",
+    "published_sha256": "68e8927ef3e64d23b12872a97b5d085611e183fabea87c8d9f8275b16843d7a6",
+    "bytes": 24976
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C42\\dc_test_v3.json",
+    "published_path": "research/visual-graphs/takeover_20261112/rep/C42/dc_test_v3.json",
+    "source_sha256": "8362fa156f0984ca1a0cf72fa23a6d9ee974482b0f27522d5872a79f0ff88094",
+    "published_sha256": "8362fa156f0984ca1a0cf72fa23a6d9ee974482b0f27522d5872a79f0ff88094",
+    "bytes": 24978
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C43\\dc_test_v3.json",
+    "published_path": "research/visual-graphs/takeover_20261112/rep/C43/dc_test_v3.json",
+    "source_sha256": "eca551d0ae70f96b873844ba64b3caf325347511b71bc083ec448c667459d3de",
+    "published_sha256": "eca551d0ae70f96b873844ba64b3caf325347511b71bc083ec448c667459d3de",
+    "bytes": 24986
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_centered_s1_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_centered_s1_tr1.json",
+    "source_sha256": "7b5ae70b31a17c9f0308a682c84f05471d34ac94a325cf3ed9b156c6bc1e59af",
+    "published_sha256": "7b5ae70b31a17c9f0308a682c84f05471d34ac94a325cf3ed9b156c6bc1e59af",
+    "bytes": 47602
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_centered_s8_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_centered_s8_tr1.json",
+    "source_sha256": "4ee03b1be19af59c10f684f8a8cd36ec61d523f5865aa711720cabfbb0eac368",
+    "published_sha256": "4ee03b1be19af59c10f684f8a8cd36ec61d523f5865aa711720cabfbb0eac368",
+    "bytes": 46224
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_centered_shared_s1_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_centered_shared_s1_tr1.json",
+    "source_sha256": "259ba716027d16dbaf7e314f30274d4ae65d0d69a95e294a8a88b11da70b4b81",
+    "published_sha256": "259ba716027d16dbaf7e314f30274d4ae65d0d69a95e294a8a88b11da70b4b81",
+    "bytes": 55919
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_centered_shared_s8_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_centered_shared_s8_tr1.json",
+    "source_sha256": "97a45c785e4cc6a96101d6aed488aefd4165f2560959a128f1dc3929433b9443",
+    "published_sha256": "97a45c785e4cc6a96101d6aed488aefd4165f2560959a128f1dc3929433b9443",
+    "bytes": 54575
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_first_analog_s1_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_first_analog_s1_tr1.json",
+    "source_sha256": "eeac398bada5745a12d224abb931cced2f5a2717021579dad4226296785bd0e1",
+    "published_sha256": "eeac398bada5745a12d224abb931cced2f5a2717021579dad4226296785bd0e1",
+    "bytes": 49076
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_first_analog_s8_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_first_analog_s8_tr1.json",
+    "source_sha256": "20d818f320b66d57d544279ac284bdb050521554eeee51e2db34a6b2d109841d",
+    "published_sha256": "20d818f320b66d57d544279ac284bdb050521554eeee51e2db34a6b2d109841d",
+    "bytes": 47118
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_first_analog_shared_s1_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_first_analog_shared_s1_tr1.json",
+    "source_sha256": "1c6007634a28b29b7978c24b32057cffc88eb1a5a55a129182eb6d0b72b43e38",
+    "published_sha256": "1c6007634a28b29b7978c24b32057cffc88eb1a5a55a129182eb6d0b72b43e38",
+    "bytes": 57216
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_first_analog_shared_s8_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_first_analog_shared_s8_tr1.json",
+    "source_sha256": "bfba9c0073cc4be5e858a85ddb51f083c0b0b85bb29f42a8757261b59b7cdddc",
+    "published_sha256": "bfba9c0073cc4be5e858a85ddb51f083c0b0b85bb29f42a8757261b59b7cdddc",
+    "bytes": 55297
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_generic_s1_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_generic_s1_tr1.json",
+    "source_sha256": "c868dafd87087a2c8d9ccdc0e7598738d83edf09b96937c7aae4c8e35c44c3d6",
+    "published_sha256": "c868dafd87087a2c8d9ccdc0e7598738d83edf09b96937c7aae4c8e35c44c3d6",
+    "bytes": 58110
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_generic_s8_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_generic_s8_tr1.json",
+    "source_sha256": "333a9c67d9c7cbafba2459f4cf5869c4e77b03fe52a665028355b5d5f9d7cef3",
+    "published_sha256": "333a9c67d9c7cbafba2459f4cf5869c4e77b03fe52a665028355b5d5f9d7cef3",
+    "bytes": 55331
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_centered_shared_s1_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_centered_shared_s1_tr1.json",
+    "source_sha256": "259ba716027d16dbaf7e314f30274d4ae65d0d69a95e294a8a88b11da70b4b81",
+    "published_sha256": "259ba716027d16dbaf7e314f30274d4ae65d0d69a95e294a8a88b11da70b4b81",
+    "bytes": 55919
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_centered_shared_s8_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_centered_shared_s8_tr1.json",
+    "source_sha256": "97a45c785e4cc6a96101d6aed488aefd4165f2560959a128f1dc3929433b9443",
+    "published_sha256": "97a45c785e4cc6a96101d6aed488aefd4165f2560959a128f1dc3929433b9443",
+    "bytes": 54575
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_first_analog_shared_s1_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_first_analog_shared_s1_tr1.json",
+    "source_sha256": "1c6007634a28b29b7978c24b32057cffc88eb1a5a55a129182eb6d0b72b43e38",
+    "published_sha256": "1c6007634a28b29b7978c24b32057cffc88eb1a5a55a129182eb6d0b72b43e38",
+    "bytes": 57216
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\affine_first_analog_shared_s8_tr1.json",
+    "published_path": "research/visual-graphs/takeover_20261112/affine_first_analog_shared_s8_tr1.json",
+    "source_sha256": "bfba9c0073cc4be5e858a85ddb51f083c0b0b85bb29f42a8757261b59b7cdddc",
+    "published_sha256": "bfba9c0073cc4be5e858a85ddb51f083c0b0b85bb29f42a8757261b59b7cdddc",
+    "bytes": 55297
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\figures_v5\\teacher_fidelity_three_seeds_v2.png",
+    "published_path": "figures/teacher_fidelity.png",
+    "source_sha256": "df7475015159600d6c3775935f6c31b107da41bfba0d134ffe5b720ae0de50e2",
+    "published_sha256": "df7475015159600d6c3775935f6c31b107da41bfba0d134ffe5b720ae0de50e2",
+    "bytes": 175257
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\figures_v5\\teacher_fidelity_three_seeds_v2.json",
+    "published_path": "results/teacher_fidelity_plot_data.json",
+    "source_sha256": "f57fed7b09b0950b5864ae364b012a4f4c876ec3f218627606a3566ab208a25a",
+    "published_sha256": "f57fed7b09b0950b5864ae364b012a4f4c876ec3f218627606a3566ab208a25a",
+    "bytes": 4622
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\cvpr.sty",
+    "published_path": "paper/historical-draft/cvpr.sty",
+    "source_sha256": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
+    "published_sha256": "ae8e51adc7270b118833b2092310ca1151a19fab0c09b1ab35a485ac4004ac0f",
+    "bytes": 17883
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\ieeenat_fullname.bst",
+    "published_path": "paper/historical-draft/ieeenat_fullname.bst",
+    "source_sha256": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc",
+    "published_sha256": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc",
+    "bytes": 26901
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\main.pdf",
+    "published_path": "paper/historical-draft/main.pdf",
+    "source_sha256": "1604a2f9956e1a0da19c4d5f4527ea66446299e03e54edf52bb4f48d8a8080e8",
+    "published_sha256": "1604a2f9956e1a0da19c4d5f4527ea66446299e03e54edf52bb4f48d8a8080e8",
+    "bytes": 254208
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\main.tex",
+    "published_path": "paper/historical-draft/main.tex",
+    "source_sha256": "ed3ac8947980c006a1d043693997144a009fdb349ad622f74901ffddd8e6f458",
+    "published_sha256": "ed3ac8947980c006a1d043693997144a009fdb349ad622f74901ffddd8e6f458",
+    "bytes": 2905
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\numbers.tex",
+    "published_path": "paper/historical-draft/numbers.tex",
+    "source_sha256": "ad512157d270cb41e4cdca69496adbd88fb469a49b3c403ea1c8d3e44fbc3508",
+    "published_sha256": "ad512157d270cb41e4cdca69496adbd88fb469a49b3c403ea1c8d3e44fbc3508",
+    "bytes": 1189
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\preamble.tex",
+    "published_path": "paper/historical-draft/preamble.tex",
+    "source_sha256": "080e0bae5ff30626292192ee2b4d1afca432ed2d2c939486c1bb37856166f8c1",
+    "published_sha256": "080e0bae5ff30626292192ee2b4d1afca432ed2d2c939486c1bb37856166f8c1",
+    "bytes": 1894
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\references.bib",
+    "published_path": "paper/historical-draft/references.bib",
+    "source_sha256": "7b3f202dcd06f8a9ac4f0dd013a67ce102bbc12562c2dbe1990407cf0fd3c1ae",
+    "published_sha256": "7b3f202dcd06f8a9ac4f0dd013a67ce102bbc12562c2dbe1990407cf0fd3c1ae",
+    "bytes": 10077
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\sections\\1_intro.tex",
+    "published_path": "paper/historical-draft/sections/1_intro.tex",
+    "source_sha256": "eac3296adbd11c755b42231d29a8ecad622f0fbba52ddb8a0f9da8efade0b785",
+    "published_sha256": "eac3296adbd11c755b42231d29a8ecad622f0fbba52ddb8a0f9da8efade0b785",
+    "bytes": 4870
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\sections\\2_related.tex",
+    "published_path": "paper/historical-draft/sections/2_related.tex",
+    "source_sha256": "106b16b83b60a5fe7f5de90f721d8a7c33ae89e9ef4ce7acb8b6c1cac95e78cb",
+    "published_sha256": "106b16b83b60a5fe7f5de90f721d8a7c33ae89e9ef4ce7acb8b6c1cac95e78cb",
+    "bytes": 3853
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\sections\\3_method.tex",
+    "published_path": "paper/historical-draft/sections/3_method.tex",
+    "source_sha256": "a31bef94be65ecfc0e5d72b662664700958c8664473e1f2ec196d7a6b147d0f1",
+    "published_sha256": "a31bef94be65ecfc0e5d72b662664700958c8664473e1f2ec196d7a6b147d0f1",
+    "bytes": 5667
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\sections\\4_experiments.tex",
+    "published_path": "paper/historical-draft/sections/4_experiments.tex",
+    "source_sha256": "a47061f5795f4b65a328a594dc988e8434ca9d2e59f17e5fac320cd6a2330a0f",
+    "published_sha256": "a47061f5795f4b65a328a594dc988e8434ca9d2e59f17e5fac320cd6a2330a0f",
+    "bytes": 6555
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\sections\\5_discussion.tex",
+    "published_path": "paper/historical-draft/sections/5_discussion.tex",
+    "source_sha256": "20be3a081bc4fc1ec4a9d70476cdbc90eca4e64276dde1d2d454d961f47f47fe",
+    "published_sha256": "20be3a081bc4fc1ec4a9d70476cdbc90eca4e64276dde1d2d454d961f47f47fe",
+    "bytes": 3069
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\sections\\6_conclusion.tex",
+    "published_path": "paper/historical-draft/sections/6_conclusion.tex",
+    "source_sha256": "97b259f9e1560f48640b8a2b01a77719c00dcf73c73c41bb55cf50ffbccf2595",
+    "published_sha256": "97b259f9e1560f48640b8a2b01a77719c00dcf73c73c41bb55cf50ffbccf2595",
+    "bytes": 1488
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\tables\\tab_ablations.tex",
+    "published_path": "paper/historical-draft/tables/tab_ablations.tex",
+    "source_sha256": "0dbdc8dbb219edb48facbdab5bd69cb2a47ce8577db8409c9f9ee394d16adfac",
+    "published_sha256": "0dbdc8dbb219edb48facbdab5bd69cb2a47ce8577db8409c9f9ee394d16adfac",
+    "bytes": 344
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\tables\\tab_baselines.tex",
+    "published_path": "paper/historical-draft/tables/tab_baselines.tex",
+    "source_sha256": "5d77a68eab1192236ed3a63a6db883982244c3a80ac2cba88f7fdf9531abdb5b",
+    "published_sha256": "5d77a68eab1192236ed3a63a6db883982244c3a80ac2cba88f7fdf9531abdb5b",
+    "bytes": 369
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\tables\\tab_identity.tex",
+    "published_path": "paper/historical-draft/tables/tab_identity.tex",
+    "source_sha256": "57ddca3300c7d60920d0b903f7a0016a21614e05f885f88f2911deff373e0325",
+    "published_sha256": "57ddca3300c7d60920d0b903f7a0016a21614e05f885f88f2911deff373e0325",
+    "bytes": 314
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\revised\\tables\\tab_main.tex",
+    "published_path": "paper/historical-draft/tables/tab_main.tex",
+    "source_sha256": "f32099cb18acf23d786834274a3c98d9d8a444b0dbce7dba849d7097b3ad88d5",
+    "published_sha256": "f32099cb18acf23d786834274a3c98d9d8a444b0dbce7dba849d7097b3ad88d5",
+    "bytes": 330
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\figures\\framework.pdf",
+    "published_path": "paper/figures/framework.pdf",
+    "source_sha256": "d81cd6e5dbed4a63821b3bd61b15b7328503dc33b88bd871060b568aaf462ebe",
+    "published_sha256": "d81cd6e5dbed4a63821b3bd61b15b7328503dc33b88bd871060b568aaf462ebe",
+    "bytes": 24759
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\figures\\loss_T.pdf",
+    "published_path": "paper/figures/loss_T.pdf",
+    "source_sha256": "cc6d2a7e315139ba193f87d80ade7aaf0a3bb2cd4ee88da76e1c0fb78f22e863",
+    "published_sha256": "cc6d2a7e315139ba193f87d80ade7aaf0a3bb2cd4ee88da76e1c0fb78f22e863",
+    "bytes": 16699
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\tex\\f-submit-v1-run-20261111-105500-layout-prose\\figures\\pareto.pdf",
+    "published_path": "paper/figures/pareto.pdf",
+    "source_sha256": "e7356253c69c92fff8b118217e5e59079b258de6b42cb50265960f5bdce82357",
+    "published_sha256": "e7356253c69c92fff8b118217e5e59079b258de6b42cb50265960f5bdce82357",
+    "bytes": 16218
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\reference-truth-audit-v6.md",
+    "published_path": "paper/reference-audit/reference-truth-audit-v6.md",
+    "source_sha256": "fae88abfd08c3a299b000ef6d7ff8f0a30c273b9b640d063a5c30ec0152af005",
+    "published_sha256": "fae88abfd08c3a299b000ef6d7ff8f0a30c273b9b640d063a5c30ec0152af005",
+    "bytes": 17744
+  },
+  {
+    "source_relative": "auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\references-corrections-v6.bib",
+    "published_path": "paper/reference-audit/references-corrections-v6.bib",
+    "source_sha256": "a976ea263a612562852d5b9a5bd7424ecd858d3c7a8d4164c4ac064378eb4e52",
+    "published_sha256": "a976ea263a612562852d5b9a5bd7424ecd858d3c7a8d4164c4ac064378eb4e52",
+    "bytes": 5934
+  },
+  {
+    "source_relative": "auto-paper\\20261028-171500\\Spiking-GNN-Conversion\\f-research-v1-run-20261028-174053-gnn-snn-conv\\protocols\\snn_gnn_experiment.py",
+    "published_path": "research/early-graph-conversion/protocols/snn_gnn_experiment.py",
+    "source_sha256": "c4e1ec1ce93f3817f5b72dcd7e1bdce20b49690d1ad5bdbad3514d9ebd8df22b",
+    "published_sha256": "c4e1ec1ce93f3817f5b72dcd7e1bdce20b49690d1ad5bdbad3514d9ebd8df22b",
+    "bytes": 22034
+  },
+  {
+    "source_relative": "auto-paper\\20261028-171500\\Spiking-GNN-Conversion\\f-research-v1-run-20261028-174053-gnn-snn-conv\\results\\consolidated_results.json",
+    "published_path": "research/early-graph-conversion/results/consolidated_results.json",
+    "source_sha256": "ef4a53adf6268a081a18c10d19c694feeaaf4e82f6b5bd7683fb0ef8e2190780",
+    "published_sha256": "ef4a53adf6268a081a18c10d19c694feeaaf4e82f6b5bd7683fb0ef8e2190780",
+    "bytes": 7799
+  },
+  {
+    "source_relative": "auto-paper\\20261028-171500\\Spiking-GNN-Conversion\\f-research-v1-run-20261028-174053-gnn-snn-conv\\audits\\d1-experiment-audit.md",
+    "published_path": "research/early-graph-conversion/audits/d1-experiment-audit.md",
+    "source_sha256": "7df686c3e1a3a3a17a190735c79f8348f25559d074a4c20f3fb0cd55a6f9b3ed",
+    "published_sha256": "7df686c3e1a3a3a17a190735c79f8348f25559d074a4c20f3fb0cd55a6f9b3ed",
+    "bytes": 13640
+  }
+]

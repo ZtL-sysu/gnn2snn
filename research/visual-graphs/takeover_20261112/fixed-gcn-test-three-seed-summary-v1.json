@@ -1,0 +1,171 @@
+{
+  "status": "complete",
+  "scope": "descriptive_exposed_full_test",
+  "rows": [
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "teacher_accuracy_percent": 90.94,
+      "T1": {
+        "accuracy_percent": 74.46000000000001,
+        "teacher_agreement_percent": 76.75,
+        "mse": 10.288715379605875
+      },
+      "T2": {
+        "accuracy_percent": 90.14999999999999,
+        "teacher_agreement_percent": 96.38,
+        "mse": 0.6839285733180905
+      },
+      "T4": {
+        "accuracy_percent": 90.94,
+        "teacher_agreement_percent": 99.75,
+        "mse": 0.0031417361836607637
+      },
+      "T8": {
+        "accuracy_percent": 90.93,
+        "teacher_agreement_percent": 99.98,
+        "mse": 0.00022418896854233406
+      }
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "T1": {
+        "accuracy_percent": 70.91,
+        "teacher_agreement_percent": 72.92999999999999,
+        "mse": 12.730669364660443
+      },
+      "T2": {
+        "accuracy_percent": 90.64999999999999,
+        "teacher_agreement_percent": 96.67,
+        "mse": 0.8023941390884799
+      },
+      "T4": {
+        "accuracy_percent": 91.34,
+        "teacher_agreement_percent": 99.72999999999999,
+        "mse": 0.0036200672862912587
+      },
+      "T8": {
+        "accuracy_percent": 91.31,
+        "teacher_agreement_percent": 99.89,
+        "mse": 0.0002245297158834353
+      }
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "teacher_accuracy_percent": 90.81,
+      "T1": {
+        "accuracy_percent": 68.93,
+        "teacher_agreement_percent": 70.69,
+        "mse": 11.484668396403489
+      },
+      "T2": {
+        "accuracy_percent": 89.67,
+        "teacher_agreement_percent": 96.03,
+        "mse": 0.8121453075905569
+      },
+      "T4": {
+        "accuracy_percent": 90.86,
+        "teacher_agreement_percent": 99.64,
+        "mse": 0.003774587289493452
+      },
+      "T8": {
+        "accuracy_percent": 90.81,
+        "teacher_agreement_percent": 99.91,
+        "mse": 0.00023710923180029326
+      }
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "teacher_accuracy_percent": 54.87,
+      "T1": {
+        "accuracy_percent": 45.5,
+        "teacher_agreement_percent": 62.93,
+        "mse": 1.5862533101255698
+      },
+      "T2": {
+        "accuracy_percent": 53.87,
+        "teacher_agreement_percent": 90.25,
+        "mse": 0.10597270146217877
+      },
+      "T4": {
+        "accuracy_percent": 54.879999999999995,
+        "teacher_agreement_percent": 99.53,
+        "mse": 0.000680248225079618
+      },
+      "T8": {
+        "accuracy_percent": 54.93,
+        "teacher_agreement_percent": 99.79,
+        "mse": 4.603607035934027e-05
+      }
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "teacher_accuracy_percent": 54.94,
+      "T1": {
+        "accuracy_percent": 47.910000000000004,
+        "teacher_agreement_percent": 66.28,
+        "mse": 1.3019112647077205
+      },
+      "T2": {
+        "accuracy_percent": 53.99,
+        "teacher_agreement_percent": 91.4,
+        "mse": 0.08314861887677326
+      },
+      "T4": {
+        "accuracy_percent": 54.86,
+        "teacher_agreement_percent": 99.48,
+        "mse": 0.0005241613458868855
+      },
+      "T8": {
+        "accuracy_percent": 54.949999999999996,
+        "teacher_agreement_percent": 99.86,
+        "mse": 3.661500933986524e-05
+      }
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "T1": {
+        "accuracy_percent": 47.010000000000005,
+        "teacher_agreement_percent": 65.16,
+        "mse": 1.8087588877292957
+      },
+      "T2": {
+        "accuracy_percent": 54.33,
+        "teacher_agreement_percent": 90.64,
+        "mse": 0.1192713063043613
+      },
+      "T4": {
+        "accuracy_percent": 55.010000000000005,
+        "teacher_agreement_percent": 99.28,
+        "mse": 0.0010210631116794333
+      },
+      "T8": {
+        "accuracy_percent": 55.02,
+        "teacher_agreement_percent": 99.89,
+        "mse": 6.219422590920437e-05
+      }
+    }
+  ],
+  "input_sha256": {
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_mn_test1.json": "6dd6a1fee847ae795afd31802f81b396b0e654e6b68acb13a35e200f88b0bfd9",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_mn_test1.npz": "99ef284445ac8dbaf2f8a3213f94ef98cc0023e666c8598dc0c74b8aa28c81ac",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M42\\dc_test_v3.json": "6e2fcef830b832abdc5d37c00e05687fad3a1bb19ac7b800e58cae95efa3f3bf",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M42\\dc_test_v3.npz": "cc0641ee35895b55901164d1f96e68a70909113a251ea2907073a7b663f3a245",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M43\\dc_test_v3.json": "68e8927ef3e64d23b12872a97b5d085611e183fabea87c8d9f8275b16843d7a6",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M43\\dc_test_v3.npz": "78d632ea4424143dd7e94ea7d28a816d1be2f6165cf343080ff27a4ea7550d9c",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_cf_test1.json": "c54791b81c3c62c6ed1571d68ec591764e458671817d08237052d5a7f0810f52",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_cf_test1.npz": "0c9d0abd93309c946f1da0a5b73bd2e5d68a0d22d2163feef646b04f951ad4a0",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C42\\dc_test_v3.json": "8362fa156f0984ca1a0cf72fa23a6d9ee974482b0f27522d5872a79f0ff88094",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C42\\dc_test_v3.npz": "670c6dbbc6a336b5598ac9f4f86d6389f9c0684b7d69a963f4b54859b3503e90",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C43\\dc_test_v3.json": "eca551d0ae70f96b873844ba64b3caf325347511b71bc083ec448c667459d3de",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C43\\dc_test_v3.npz": "caa24468e94a1d27c1e8d5830828bb773476970178562d1cf698c6f205c0f5bf"
+  },
+  "script_sha256": "cec37048c6403366bc2b2fa017de26e4362357eaa44bc9cbe4206c3a326b1372"
+}

@@ -1,0 +1,62 @@
+{
+  "boundary_checks": 24,
+  "check": "normalized_sigmoid_gate_tv_and_message_bound",
+  "empty_eps_zero": "undefined unless caller separately defines aggregate as zero; checked as guarded out-of-scope case",
+  "epsilon_cases": [
+    "zero with nonempty incoming set",
+    "1e-300 dummy mass",
+    "random 1e-300..1e5"
+  ],
+  "failure_count": 0,
+  "failures": [],
+  "float_dtype": "numpy.float64",
+  "logit_cases": [
+    "eta grid 0..40",
+    "random logits in [-650,650]",
+    "tiny and near-saturated sigmoid gates"
+  ],
+  "message_cases": [
+    "signed",
+    "perturbed signed",
+    "dummy message zero",
+    "empty neighbor with positive epsilon"
+  ],
+  "random_cases": 20000,
+  "recurrence_scope": {
+    "applies_to": [
+      "same incoming edge set",
+      "positive sigmoid gates",
+      "fixed positive epsilon or nonempty set at epsilon=0",
+      "eval-mode fixed weights/BN",
+      "identity raw residual skips",
+      "real-arithmetic error envelopes"
+    ],
+    "local_decoder_error": "kappa bounds decoder minus its own converted raw target; consumer-input envelope is delta_raw+abs(kappa)",
+    "message_range": "converted B(h) messages plus zero dummy; no teacher hidden state required",
+    "not_certified": [
+      "floating-point sigmoid/underflow/accumulation",
+      "source neuron threshold decisions",
+      "readout-head class margin",
+      "runtime or energy"
+    ]
+  },
+  "runtime": {
+    "device": "cpu",
+    "gpu_used": false,
+    "numpy": "2.4.4",
+    "official_data_loaded": false,
+    "python": "3.13.13"
+  },
+  "script_sha256": "6a9ddd3ef94bd8d4bc705f3dcde367ef599b8343ff5d216c15b2548456b80d4d",
+  "seed": 20261113,
+  "status": "pass",
+  "total_defined_cases": 20024,
+  "worst_message_margin": {
+    "case": "empty_positive_eps_eta_40",
+    "value": 0.0
+  },
+  "worst_tv_margin": {
+    "case": "empty_positive_eps_eta_0",
+    "value": 0.0
+  }
+}

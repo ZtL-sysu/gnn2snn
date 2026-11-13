@@ -1,0 +1,515 @@
+{
+  "status": "complete",
+  "scope": "six frozen label-free CIFAR10 seed41 training-only profiles",
+  "ground_truth_accuracy_or_labels_used": false,
+  "calibration_sha256": "1618e3b46f75646ab051229b0d954815b5e28bf1729cbbf2042e4d596766a511",
+  "expected_coverage": {
+    "graphs": 45000,
+    "batches": 352,
+    "final_batch_graphs": 72,
+    "nodes": 5294119,
+    "directed_edges": 42352952,
+    "prefixes": [
+      1,
+      2,
+      4
+    ]
+  },
+  "profiles": [
+    {
+      "mode": "generic",
+      "scale": 1,
+      "site_count": 8,
+      "actual_source_warmup_calls": 2816,
+      "actual_active_calls": 11264,
+      "diagnostic_head_calls": 1056,
+      "normal_endpoint_head_calls": 352,
+      "profiles": {
+        "1": {
+          "teacher_class_agreement": 0.5043333333333333,
+          "logit_mse": 9.524662408845133,
+          "teacher_to_candidate_kl": 1.359070606336743,
+          "prospective_projection_adds": 1221830889930,
+          "metric_sums": {
+            "agree": 22695,
+            "squared_error": 4286098.08398031,
+            "kl_sum": 61158.17728515343,
+            "graphs": 45000
+          }
+        },
+        "2": {
+          "teacher_class_agreement": 0.8968222222222222,
+          "logit_mse": 0.6272199342761274,
+          "teacher_to_candidate_kl": 0.07837199570202909,
+          "prospective_projection_adds": 2382262847370,
+          "metric_sums": {
+            "agree": 40357,
+            "squared_error": 282248.97042425734,
+            "kl_sum": 3526.739806591309,
+            "graphs": 45000
+          }
+        },
+        "4": {
+          "teacher_class_agreement": 0.9931555555555556,
+          "logit_mse": 0.0027857488414157333,
+          "teacher_to_candidate_kl": 0.0003346341988040284,
+          "prospective_projection_adds": 4144486996790,
+          "metric_sums": {
+            "agree": 44692,
+            "squared_error": 1253.58697863708,
+            "kl_sum": 15.058538946181278,
+            "graphs": 45000
+          }
+        }
+      },
+      "profile_sha256": "c868dafd87087a2c8d9ccdc0e7598738d83edf09b96937c7aae4c8e35c44c3d6",
+      "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be"
+    },
+    {
+      "mode": "generic",
+      "scale": 8,
+      "site_count": 8,
+      "actual_source_warmup_calls": 2816,
+      "actual_active_calls": 11264,
+      "diagnostic_head_calls": 1056,
+      "normal_endpoint_head_calls": 352,
+      "profiles": {
+        "1": {
+          "teacher_class_agreement": 0.5010222222222223,
+          "logit_mse": 9.658836659183013,
+          "teacher_to_candidate_kl": 1.3919235663872143,
+          "prospective_projection_adds": 1072157740080,
+          "metric_sums": {
+            "agree": 22546,
+            "squared_error": 4346476.496632356,
+            "kl_sum": 62636.56048742464,
+            "graphs": 45000
+          }
+        },
+        "2": {
+          "teacher_class_agreement": 0.9033111111111111,
+          "logit_mse": 0.5679611730092539,
+          "teacher_to_candidate_kl": 0.0712755196891524,
+          "prospective_projection_adds": 1967197191470,
+          "metric_sums": {
+            "agree": 40649,
+            "squared_error": 255582.52785416425,
+            "kl_sum": 3207.398386011858,
+            "graphs": 45000
+          }
+        },
+        "4": {
+          "teacher_class_agreement": 0.9787777777777777,
+          "logit_mse": 0.031596961109953775,
+          "teacher_to_candidate_kl": 0.003825545668584266,
+          "prospective_projection_adds": 2823253578740,
+          "metric_sums": {
+            "agree": 44045,
+            "squared_error": 14218.632499479198,
+            "kl_sum": 172.14955508629197,
+            "graphs": 45000
+          }
+        }
+      },
+      "profile_sha256": "333a9c67d9c7cbafba2459f4cf5869c4e77b03fe52a665028355b5d5f9d7cef3",
+      "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be"
+    },
+    {
+      "mode": "first_analog",
+      "scale": 1,
+      "site_count": 6,
+      "actual_source_warmup_calls": 2112,
+      "actual_active_calls": 8448,
+      "diagnostic_head_calls": 1056,
+      "normal_endpoint_head_calls": 352,
+      "profiles": {
+        "1": {
+          "teacher_class_agreement": 0.8280888888888889,
+          "logit_mse": 1.4273362783073817,
+          "teacher_to_candidate_kl": 0.19348833602239981,
+          "prospective_projection_adds": 910964813850,
+          "metric_sums": {
+            "agree": 37264,
+            "squared_error": 642301.3252383218,
+            "kl_sum": 8706.975121007992,
+            "graphs": 45000
+          }
+        },
+        "2": {
+          "teacher_class_agreement": 0.9680444444444445,
+          "logit_mse": 0.07138577959400033,
+          "teacher_to_candidate_kl": 0.008726357373011789,
+          "prospective_projection_adds": 1749326014100,
+          "metric_sums": {
+            "agree": 43562,
+            "squared_error": 32123.60081730015,
+            "kl_sum": 392.6860817855305,
+            "graphs": 45000
+          }
+        },
+        "4": {
+          "teacher_class_agreement": 0.9974888888888889,
+          "logit_mse": 0.0005775533775472713,
+          "teacher_to_candidate_kl": 6.212273680160868e-05,
+          "prospective_projection_adds": 2750670384490,
+          "metric_sums": {
+            "agree": 44887,
+            "squared_error": 259.8990198962721,
+            "kl_sum": 2.7955231560723908,
+            "graphs": 45000
+          }
+        }
+      },
+      "profile_sha256": "eeac398bada5745a12d224abb931cced2f5a2717021579dad4226296785bd0e1",
+      "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be"
+    },
+    {
+      "mode": "first_analog",
+      "scale": 8,
+      "site_count": 6,
+      "actual_source_warmup_calls": 2112,
+      "actual_active_calls": 8448,
+      "diagnostic_head_calls": 1056,
+      "normal_endpoint_head_calls": 352,
+      "profiles": {
+        "1": {
+          "teacher_class_agreement": 0.8185777777777777,
+          "logit_mse": 1.5519099516850139,
+          "teacher_to_candidate_kl": 0.2137110493300025,
+          "prospective_projection_adds": 763425954690,
+          "metric_sums": {
+            "agree": 36836,
+            "squared_error": 698359.4782582562,
+            "kl_sum": 9616.997219850113,
+            "graphs": 45000
+          }
+        },
+        "2": {
+          "teacher_class_agreement": 0.9556888888888889,
+          "logit_mse": 0.1179035411186722,
+          "teacher_to_candidate_kl": 0.015181697782434661,
+          "prospective_projection_adds": 1318300803610,
+          "metric_sums": {
+            "agree": 43006,
+            "squared_error": 53056.59350340249,
+            "kl_sum": 683.1764002095598,
+            "graphs": 45000
+          }
+        },
+        "4": {
+          "teacher_class_agreement": 0.9848222222222223,
+          "logit_mse": 0.015796733925747507,
+          "teacher_to_candidate_kl": 0.0019404222418231273,
+          "prospective_projection_adds": 1764528777060,
+          "metric_sums": {
+            "agree": 44317,
+            "squared_error": 7108.530266586377,
+            "kl_sum": 87.31900088204073,
+            "graphs": 45000
+          }
+        }
+      },
+      "profile_sha256": "20d818f320b66d57d544279ac284bdb050521554eeee51e2db34a6b2d109841d",
+      "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be"
+    },
+    {
+      "mode": "centered",
+      "scale": 1,
+      "site_count": 6,
+      "actual_source_warmup_calls": 2112,
+      "actual_active_calls": 8448,
+      "diagnostic_head_calls": 1056,
+      "normal_endpoint_head_calls": 352,
+      "profiles": {
+        "1": {
+          "teacher_class_agreement": 0.8384,
+          "logit_mse": 1.3385489483163404,
+          "teacher_to_candidate_kl": 0.17893455077522585,
+          "prospective_projection_adds": 665113351420,
+          "metric_sums": {
+            "agree": 37728,
+            "squared_error": 602347.0267423532,
+            "kl_sum": 8052.054784885164,
+            "graphs": 45000
+          }
+        },
+        "2": {
+          "teacher_class_agreement": 0.9682,
+          "logit_mse": 0.06732678974128103,
+          "teacher_to_candidate_kl": 0.008127816914689357,
+          "prospective_projection_adds": 1294074700240,
+          "metric_sums": {
+            "agree": 43569,
+            "squared_error": 30297.055383576466,
+            "kl_sum": 365.751761161021,
+            "graphs": 45000
+          }
+        },
+        "4": {
+          "teacher_class_agreement": 0.9975111111111111,
+          "logit_mse": 0.00045137709645904863,
+          "teacher_to_candidate_kl": 4.823451974814978e-05,
+          "prospective_projection_adds": 2087346292710,
+          "metric_sums": {
+            "agree": 44888,
+            "squared_error": 203.11969340657188,
+            "kl_sum": 2.17055338866674,
+            "graphs": 45000
+          }
+        }
+      },
+      "profile_sha256": "7b5ae70b31a17c9f0308a682c84f05471d34ac94a325cf3ed9b156c6bc1e59af",
+      "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be"
+    },
+    {
+      "mode": "centered",
+      "scale": 8,
+      "site_count": 6,
+      "actual_source_warmup_calls": 2112,
+      "actual_active_calls": 8448,
+      "diagnostic_head_calls": 1056,
+      "normal_endpoint_head_calls": 352,
+      "profiles": {
+        "1": {
+          "teacher_class_agreement": 0.8325111111111111,
+          "logit_mse": 1.457131746364776,
+          "teacher_to_candidate_kl": 0.1919061537837919,
+          "prospective_projection_adds": 594269624830,
+          "metric_sums": {
+            "agree": 37463,
+            "squared_error": 655709.2858641492,
+            "kl_sum": 8635.776920270635,
+            "graphs": 45000
+          }
+        },
+        "2": {
+          "teacher_class_agreement": 0.9619111111111112,
+          "logit_mse": 0.09711155786837125,
+          "teacher_to_candidate_kl": 0.011772570941007553,
+          "prospective_projection_adds": 1024486000230,
+          "metric_sums": {
+            "agree": 43286,
+            "squared_error": 43700.20104076706,
+            "kl_sum": 529.7656923453399,
+            "graphs": 45000
+          }
+        },
+        "4": {
+          "teacher_class_agreement": 0.9878444444444444,
+          "logit_mse": 0.010736159648340642,
+          "teacher_to_candidate_kl": 0.001345386272476972,
+          "prospective_projection_adds": 1355761013810,
+          "metric_sums": {
+            "agree": 44453,
+            "squared_error": 4831.271841753289,
+            "kl_sum": 60.54238226146374,
+            "graphs": 45000
+          }
+        }
+      },
+      "profile_sha256": "4ee03b1be19af59c10f684f8a8cd36ec61d523f5865aa711720cabfbb0eac368",
+      "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be"
+    }
+  ],
+  "conditional_controls": {
+    "1": {
+      "prefixes": {
+        "1": {
+          "agreement_non_degrade": true,
+          "mse_non_degrade": true,
+          "projection_adds_non_increase": true,
+          "strict_fidelity_improvement": true,
+          "first_analog": {
+            "teacher_class_agreement": 0.8280888888888889,
+            "logit_mse": 1.4273362783073817,
+            "teacher_to_candidate_kl": 0.19348833602239981,
+            "prospective_projection_adds": 910964813850,
+            "metric_sums": {
+              "agree": 37264,
+              "squared_error": 642301.3252383218,
+              "kl_sum": 8706.975121007992,
+              "graphs": 45000
+            }
+          },
+          "centered": {
+            "teacher_class_agreement": 0.8384,
+            "logit_mse": 1.3385489483163404,
+            "teacher_to_candidate_kl": 0.17893455077522585,
+            "prospective_projection_adds": 665113351420,
+            "metric_sums": {
+              "agree": 37728,
+              "squared_error": 602347.0267423532,
+              "kl_sum": 8052.054784885164,
+              "graphs": 45000
+            }
+          }
+        },
+        "2": {
+          "agreement_non_degrade": true,
+          "mse_non_degrade": true,
+          "projection_adds_non_increase": true,
+          "strict_fidelity_improvement": true,
+          "first_analog": {
+            "teacher_class_agreement": 0.9680444444444445,
+            "logit_mse": 0.07138577959400033,
+            "teacher_to_candidate_kl": 0.008726357373011789,
+            "prospective_projection_adds": 1749326014100,
+            "metric_sums": {
+              "agree": 43562,
+              "squared_error": 32123.60081730015,
+              "kl_sum": 392.6860817855305,
+              "graphs": 45000
+            }
+          },
+          "centered": {
+            "teacher_class_agreement": 0.9682,
+            "logit_mse": 0.06732678974128103,
+            "teacher_to_candidate_kl": 0.008127816914689357,
+            "prospective_projection_adds": 1294074700240,
+            "metric_sums": {
+              "agree": 43569,
+              "squared_error": 30297.055383576466,
+              "kl_sum": 365.751761161021,
+              "graphs": 45000
+            }
+          }
+        },
+        "4": {
+          "agreement_non_degrade": true,
+          "mse_non_degrade": true,
+          "projection_adds_non_increase": true,
+          "strict_fidelity_improvement": true,
+          "first_analog": {
+            "teacher_class_agreement": 0.9974888888888889,
+            "logit_mse": 0.0005775533775472713,
+            "teacher_to_candidate_kl": 6.212273680160868e-05,
+            "prospective_projection_adds": 2750670384490,
+            "metric_sums": {
+              "agree": 44887,
+              "squared_error": 259.8990198962721,
+              "kl_sum": 2.7955231560723908,
+              "graphs": 45000
+            }
+          },
+          "centered": {
+            "teacher_class_agreement": 0.9975111111111111,
+            "logit_mse": 0.00045137709645904863,
+            "teacher_to_candidate_kl": 4.823451974814978e-05,
+            "prospective_projection_adds": 2087346292710,
+            "metric_sums": {
+              "agree": 44888,
+              "squared_error": 203.11969340657188,
+              "kl_sum": 2.17055338866674,
+              "graphs": 45000
+            }
+          }
+        }
+      },
+      "all_prefixes_fidelity_non_degrade": true,
+      "at_least_one_strict_fidelity_improvement": true,
+      "all_prefixes_projection_adds_non_increase": true,
+      "shared_threshold_controls_trigger": true
+    },
+    "8": {
+      "prefixes": {
+        "1": {
+          "agreement_non_degrade": true,
+          "mse_non_degrade": true,
+          "projection_adds_non_increase": true,
+          "strict_fidelity_improvement": true,
+          "first_analog": {
+            "teacher_class_agreement": 0.8185777777777777,
+            "logit_mse": 1.5519099516850139,
+            "teacher_to_candidate_kl": 0.2137110493300025,
+            "prospective_projection_adds": 763425954690,
+            "metric_sums": {
+              "agree": 36836,
+              "squared_error": 698359.4782582562,
+              "kl_sum": 9616.997219850113,
+              "graphs": 45000
+            }
+          },
+          "centered": {
+            "teacher_class_agreement": 0.8325111111111111,
+            "logit_mse": 1.457131746364776,
+            "teacher_to_candidate_kl": 0.1919061537837919,
+            "prospective_projection_adds": 594269624830,
+            "metric_sums": {
+              "agree": 37463,
+              "squared_error": 655709.2858641492,
+              "kl_sum": 8635.776920270635,
+              "graphs": 45000
+            }
+          }
+        },
+        "2": {
+          "agreement_non_degrade": true,
+          "mse_non_degrade": true,
+          "projection_adds_non_increase": true,
+          "strict_fidelity_improvement": true,
+          "first_analog": {
+            "teacher_class_agreement": 0.9556888888888889,
+            "logit_mse": 0.1179035411186722,
+            "teacher_to_candidate_kl": 0.015181697782434661,
+            "prospective_projection_adds": 1318300803610,
+            "metric_sums": {
+              "agree": 43006,
+              "squared_error": 53056.59350340249,
+              "kl_sum": 683.1764002095598,
+              "graphs": 45000
+            }
+          },
+          "centered": {
+            "teacher_class_agreement": 0.9619111111111112,
+            "logit_mse": 0.09711155786837125,
+            "teacher_to_candidate_kl": 0.011772570941007553,
+            "prospective_projection_adds": 1024486000230,
+            "metric_sums": {
+              "agree": 43286,
+              "squared_error": 43700.20104076706,
+              "kl_sum": 529.7656923453399,
+              "graphs": 45000
+            }
+          }
+        },
+        "4": {
+          "agreement_non_degrade": true,
+          "mse_non_degrade": true,
+          "projection_adds_non_increase": true,
+          "strict_fidelity_improvement": true,
+          "first_analog": {
+            "teacher_class_agreement": 0.9848222222222223,
+            "logit_mse": 0.015796733925747507,
+            "teacher_to_candidate_kl": 0.0019404222418231273,
+            "prospective_projection_adds": 1764528777060,
+            "metric_sums": {
+              "agree": 44317,
+              "squared_error": 7108.530266586377,
+              "kl_sum": 87.31900088204073,
+              "graphs": 45000
+            }
+          },
+          "centered": {
+            "teacher_class_agreement": 0.9878444444444444,
+            "logit_mse": 0.010736159648340642,
+            "teacher_to_candidate_kl": 0.001345386272476972,
+            "prospective_projection_adds": 1355761013810,
+            "metric_sums": {
+              "agree": 44453,
+              "squared_error": 4831.271841753289,
+              "kl_sum": 60.54238226146374,
+              "graphs": 45000
+            }
+          }
+        }
+      },
+      "all_prefixes_fidelity_non_degrade": true,
+      "at_least_one_strict_fidelity_improvement": true,
+      "all_prefixes_projection_adds_non_increase": true,
+      "shared_threshold_controls_trigger": true
+    },
+    "overall_shared_threshold_controls_trigger": true,
+    "decision_rule": "At one same scale, centered must have agreement >= and MSE <= first_analog at every T1/T2/T4, at least one strict fidelity improvement over the three prefixes, and projection ADDs <= at every prefix."
+  },
+  "qualification": "Teacher-fidelity diagnostics and projected linear ADD counts only; no validation/test, accuracy, novelty, energy or latency claim."
+}

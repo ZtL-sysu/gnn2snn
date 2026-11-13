@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "dataset": "CIFAR10",
+  "seed": 42,
+  "split": "all official test; historically exposed",
+  "graphs": 10000,
+  "checkpoint_sha256": "0ad3f3146f94bf73f5f398ef44a1fbc46f0c5924332c4d8fca3d711d0fbff1b6",
+  "checkpoint_epoch": 55,
+  "teacher_metadata_sha256": "d429b80f1617b7562fa383f13f86e8cd5f9ce001032307591b71af9f646d1a52",
+  "teacher_done_sha256": "6239331afa80276c9a6abd84041d60ad63ec6c5dd0625cabb727ef02ae9a1cdc",
+  "accuracy": 0.6839,
+  "script_sha256": "0549bb867c6c30840c6159a5f8f3aee074ded2f4d9f9b13c3e4a5de81efd5e82",
+  "protocol_sha256": "56dbe5751debc828bd353d3867fc5f624613ecb0e590ffc43ec9663722538f1b",
+  "processed_data_sha256": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "device": "cuda",
+  "elapsed_sec": 3.093062700005248,
+  "qualification": "teacher only; PyG public-architecture adaptation; prior project test exposure",
+  "prediction_sha256": "c3c45402d2043f6ec4d067bc67cb88fc20e5eb7691a14956b300dae4dd922c8c"
+}

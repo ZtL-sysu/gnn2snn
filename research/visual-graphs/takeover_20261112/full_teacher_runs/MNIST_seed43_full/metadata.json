@@ -1,0 +1,31 @@
+{
+  "dataset": "MNIST",
+  "seed": 43,
+  "scope": "full_official_train_val",
+  "official_counts": {
+    "train": 55000,
+    "val": 5000
+  },
+  "train_indices": "all official train indices in randomized order each epoch",
+  "val_indices": "all official val indices",
+  "input_dim": 3,
+  "parameters": 101365,
+  "original_repo_commit": "b6c407712fa576e9699555e1e035d1e327ccae6c",
+  "script_sha256": "d211e9a4860678318939bf28294c52721a564d53e4ba16b972887be189072fe4",
+  "protocol_sha256": "3bae91d92ee4a5b50587d5e356937e0e131d31313669858ec5a24c7866f0e6b9",
+  "processed_files_sha256": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "2b6859a37db81e7d3f9d9e0cfcd24da457ccdd48b75aa5aa435b912b978b82a9",
+    "train_data.pt": "86973549d04871c955771d041d1b2f83b703d03480a1236ca1799fd37f93cbc3",
+    "val_data.pt": "390ab8f8d21eed78dc256e064df5d9f59d552ba2e61fb84f14005be45a7e1e0a"
+  },
+  "device": "NVIDIA GeForce RTX 3060",
+  "torch": "2.11.0+cu128",
+  "pyg": "2.8.0.post1",
+  "numpy": "2.4.4",
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]",
+  "epochs_cap": 200,
+  "batch_size": 128,
+  "max_hours": 12.0
+}

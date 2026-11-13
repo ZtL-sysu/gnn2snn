@@ -1,0 +1,13 @@
+{
+  "status": "finished",
+  "best_val_accuracy": 0.7074,
+  "official_counts": {
+    "train": 45000,
+    "val": 5000
+  },
+  "epochs_completed": 96,
+  "best_checkpoint_sha256": "9d194020ba105c31fc8956fbfc3f3c7556fd50f120f4bb4341eb883189ed8861",
+  "last_checkpoint_sha256": "08d355461cf329fb7f538cdd419640400cc58d4185e83b9fef1fb4f53991c8c8",
+  "source_manifest_sha256": "bd34dfae190068c2d2c0d8e696119667df9a7286db0a3c3487fb6949dbe92609",
+  "elapsed_sec": 1916.8466101000085
+}

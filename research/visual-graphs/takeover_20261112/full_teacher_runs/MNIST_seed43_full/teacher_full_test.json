@@ -1,0 +1,13 @@
+{
+  "dataset": "MNIST",
+  "seed": 43,
+  "split": "full official test, historically exposed",
+  "graphs": 10000,
+  "checkpoint_epoch": 99,
+  "checkpoint_sha256": "cf1649d8ce0371a1deced093c35a9d0cfa1a54a715b6633e4cb857e315fe28a5",
+  "accuracy": 0.9081,
+  "prediction_artifact_sha256": "f573c7647c869727bc51bc6f17b8d97e4d3b16178a07ac6fb2880acc0f45694e",
+  "device": "cuda",
+  "elapsed_sec": 2.089373099966906,
+  "qualification": "Teacher selected on full validation, but prior project test exposure remains."
+}

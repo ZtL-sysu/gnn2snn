@@ -1,0 +1,347 @@
+{
+  "cora": {
+    "ann": 0.8046,
+    "medium_thr": 0.7746,
+    "strong_thr": 0.7896,
+    "medium_met_T16": {
+      "naive": true,
+      "ftbc": true,
+      "oracle": true
+    },
+    "strong_met_T8": {
+      "naive": false,
+      "ftbc": true,
+      "oracle": true
+    },
+    "modes": {
+      "naive": {
+        "1": {
+          "mean": 0.1372,
+          "std": 0.0132,
+          "count_mean": 0.1322,
+          "spikes": 2162.8
+        },
+        "2": {
+          "mean": 0.1688,
+          "std": 0.0141,
+          "count_mean": 0.1706,
+          "spikes": 7377.8
+        },
+        "4": {
+          "mean": 0.6238,
+          "std": 0.0539,
+          "count_mean": 0.3646,
+          "spikes": 25558.2
+        },
+        "8": {
+          "mean": 0.777,
+          "std": 0.0238,
+          "count_mean": 0.726,
+          "spikes": 65621.6
+        },
+        "16": {
+          "mean": 0.801,
+          "std": 0.0124,
+          "count_mean": 0.784,
+          "spikes": 146888.6
+        }
+      },
+      "ftbc": {
+        "1": {
+          "mean": 0.2136,
+          "std": 0.0293,
+          "count_mean": 0.1962,
+          "spikes": 2386.4
+        },
+        "2": {
+          "mean": 0.7288,
+          "std": 0.0468,
+          "count_mean": 0.4608,
+          "spikes": 17522.0
+        },
+        "4": {
+          "mean": 0.7944,
+          "std": 0.006,
+          "count_mean": 0.6626,
+          "spikes": 40137.6
+        },
+        "8": {
+          "mean": 0.8016,
+          "std": 0.0089,
+          "count_mean": 0.7718,
+          "spikes": 82673.8
+        },
+        "16": {
+          "mean": 0.8038,
+          "std": 0.0072,
+          "count_mean": 0.79,
+          "spikes": 164900.0
+        }
+      },
+      "oracle": {
+        "1": {
+          "mean": 0.8046,
+          "std": 0.0086,
+          "count_mean": 0.6204,
+          "spikes": 8908.5
+        },
+        "2": {
+          "mean": 0.8046,
+          "std": 0.0086,
+          "count_mean": 0.7504,
+          "spikes": 18907.4
+        },
+        "4": {
+          "mean": 0.8046,
+          "std": 0.0086,
+          "count_mean": 0.7768,
+          "spikes": 39156.7
+        },
+        "8": {
+          "mean": 0.8046,
+          "std": 0.0086,
+          "count_mean": 0.7838,
+          "spikes": 79795.6
+        },
+        "16": {
+          "mean": 0.8046,
+          "std": 0.0086,
+          "count_mean": 0.7862,
+          "spikes": 161153.7
+        }
+      }
+    },
+    "readout": "membrane",
+    "bias": "analytic beta*=1/(2T)"
+  },
+  "citeseer": {
+    "ann": 0.7016,
+    "medium_thr": 0.6716,
+    "strong_thr": 0.6866,
+    "medium_met_T16": {
+      "naive": true,
+      "ftbc": true,
+      "oracle": true
+    },
+    "strong_met_T8": {
+      "naive": false,
+      "ftbc": true,
+      "oracle": true
+    },
+    "modes": {
+      "naive": {
+        "1": {
+          "mean": 0.1564,
+          "std": 0.0406,
+          "count_mean": 0.1354,
+          "spikes": 1996.2
+        },
+        "2": {
+          "mean": 0.168,
+          "std": 0.0481,
+          "count_mean": 0.1456,
+          "spikes": 5910.2
+        },
+        "4": {
+          "mean": 0.4534,
+          "std": 0.0545,
+          "count_mean": 0.3062,
+          "spikes": 21089.2
+        },
+        "8": {
+          "mean": 0.6492,
+          "std": 0.042,
+          "count_mean": 0.5694,
+          "spikes": 59615.4
+        },
+        "16": {
+          "mean": 0.6886,
+          "std": 0.027,
+          "count_mean": 0.6702,
+          "spikes": 135217.2
+        }
+      },
+      "ftbc": {
+        "1": {
+          "mean": 0.1782,
+          "std": 0.0456,
+          "count_mean": 0.1366,
+          "spikes": 1934.2
+        },
+        "2": {
+          "mean": 0.5376,
+          "std": 0.0427,
+          "count_mean": 0.3276,
+          "spikes": 12947.0
+        },
+        "4": {
+          "mean": 0.689,
+          "std": 0.0102,
+          "count_mean": 0.5146,
+          "spikes": 36651.4
+        },
+        "8": {
+          "mean": 0.6872,
+          "std": 0.0106,
+          "count_mean": 0.663,
+          "spikes": 76020.6
+        },
+        "16": {
+          "mean": 0.6998,
+          "std": 0.011,
+          "count_mean": 0.6968,
+          "spikes": 150970.6
+        }
+      },
+      "oracle": {
+        "1": {
+          "mean": 0.7016,
+          "std": 0.0069,
+          "count_mean": 0.3828,
+          "spikes": 6866.4
+        },
+        "2": {
+          "mean": 0.7016,
+          "std": 0.0069,
+          "count_mean": 0.5848,
+          "spikes": 15768.7
+        },
+        "4": {
+          "mean": 0.7016,
+          "std": 0.0069,
+          "count_mean": 0.6588,
+          "spikes": 34199.4
+        },
+        "8": {
+          "mean": 0.7016,
+          "std": 0.0069,
+          "count_mean": 0.6764,
+          "spikes": 71408.3
+        },
+        "16": {
+          "mean": 0.7016,
+          "std": 0.0069,
+          "count_mean": 0.6844,
+          "spikes": 146025.0
+        }
+      }
+    },
+    "readout": "membrane",
+    "bias": "analytic beta*=1/(2T)"
+  },
+  "pubmed": {
+    "ann": 0.775,
+    "medium_thr": 0.745,
+    "strong_thr": 0.76,
+    "medium_met_T16": {
+      "naive": true,
+      "ftbc": true,
+      "oracle": true
+    },
+    "strong_met_T8": {
+      "naive": false,
+      "ftbc": true,
+      "oracle": true
+    },
+    "modes": {
+      "naive": {
+        "1": {
+          "mean": 0.413,
+          "std": 0.0046,
+          "count_mean": 0.18,
+          "spikes": 13.6
+        },
+        "2": {
+          "mean": 0.5158,
+          "std": 0.081,
+          "count_mean": 0.3828,
+          "spikes": 12515.2
+        },
+        "4": {
+          "mean": 0.693,
+          "std": 0.0695,
+          "count_mean": 0.6682,
+          "spikes": 104291.4
+        },
+        "8": {
+          "mean": 0.7574,
+          "std": 0.0297,
+          "count_mean": 0.7522,
+          "spikes": 326630.6
+        },
+        "16": {
+          "mean": 0.7716,
+          "std": 0.0162,
+          "count_mean": 0.7696,
+          "spikes": 773855.8
+        }
+      },
+      "ftbc": {
+        "1": {
+          "mean": 0.5806,
+          "std": 0.0513,
+          "count_mean": 0.255,
+          "spikes": 5444.0
+        },
+        "2": {
+          "mean": 0.7316,
+          "std": 0.043,
+          "count_mean": 0.7048,
+          "spikes": 74316.4
+        },
+        "4": {
+          "mean": 0.7746,
+          "std": 0.011,
+          "count_mean": 0.7608,
+          "spikes": 201412.8
+        },
+        "8": {
+          "mean": 0.7728,
+          "std": 0.0164,
+          "count_mean": 0.7676,
+          "spikes": 428494.8
+        },
+        "16": {
+          "mean": 0.7756,
+          "std": 0.0201,
+          "count_mean": 0.7764,
+          "spikes": 874955.8
+        }
+      },
+      "oracle": {
+        "1": {
+          "mean": 0.775,
+          "std": 0.0183,
+          "count_mean": 0.3552,
+          "spikes": 44328.4
+        },
+        "2": {
+          "mean": 0.775,
+          "std": 0.0183,
+          "count_mean": 0.7172,
+          "spikes": 99617.6
+        },
+        "4": {
+          "mean": 0.775,
+          "std": 0.0183,
+          "count_mean": 0.7626,
+          "spikes": 210863.2
+        },
+        "8": {
+          "mean": 0.775,
+          "std": 0.0183,
+          "count_mean": 0.7692,
+          "spikes": 433763.4
+        },
+        "16": {
+          "mean": 0.775,
+          "std": 0.0183,
+          "count_mean": 0.772,
+          "spikes": 879840.5
+        }
+      }
+    },
+    "readout": "membrane",
+    "bias": "analytic beta*=1/(2T)"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "CIFAR10",
+  "seed": 41,
+  "split": "full official test, historically exposed",
+  "graphs": 10000,
+  "checkpoint_epoch": 113,
+  "checkpoint_sha256": "bb35ddc12bc3251473cbe26768dcb51ae4e12e9f3cf814a3e0e94fbe2572f01e",
+  "accuracy": 0.5487,
+  "prediction_artifact_sha256": "504efab8c4dde646b9de7c1681d5cf3a633d922b6beecaeae64e3dd4f582d1d3",
+  "device": "cuda",
+  "elapsed_sec": 2.2224866999313235,
+  "qualification": "Teacher selected on full validation, but prior project test exposure remains."
+}

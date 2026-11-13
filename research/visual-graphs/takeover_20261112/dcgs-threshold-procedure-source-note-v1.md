@@ -1,0 +1,9 @@
+# DCGS threshold procedure: pinned-source details
+
+Root read pinned commit5e0e4c73f1d0e8e17d81befa24ff947deec1f4be, main.py lines123–145 and converter/threshold_getter.py lines161–345. This note does not change existing results or authorize held-out calibration.
+
+The author entry point defaults threshold_level=layer and threshold_mode=99.9%. In percentile mode the hook averages per-batch quantiles with row-count weights; it is not the same statistic as our full-population two-pass histogram quantile. In var mode the hook accumulates pre-activation mean/variance, starts scale at1, and calls calculate_better100times. MTH conversion sets the effective iteration n to args.time*2**num_thresholds, not merely args.time; the default num_thresholds is8. NaN final scales revert to the starting1; this fallback must be recorded if the source algorithm is used. The original get_threshold branch names test_loader. Our project policy must still use training-only calibration and disclose that adaptation; do not copy held-out calibration just to claim literal script identity.
+
+Existing source-unit graph adapters use actual pinned MTH neurons with different calibration, operator placement and manual graph adaptation. Nearteacher endpoints do not imply full author-procedure reproduction. A faithful threshold-iteration baseline would need actual pre-ReLU input moments on complete train graphs, source calls at each declared T, verified broadcast shape/site mapping and explicit all-data budget. No such baseline has yet been implemented here. A changed threshold statistic must not be silently substituted into existing frozen endpoint metadata.
+
+Related primary [paper and author code link](https://proceedings.mlr.press/v267/huang25i.html), [pinned threshold implementation](https://github.com/h-z-h-cell/ANN-to-SNN-DCGS/blob/5e0e4c73f1d0e8e17d81befa24ff947deec1f4be/converter/threshold_getter.py).

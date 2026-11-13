@@ -1,0 +1,2 @@
+# Rights
+This public research snapshot does not grant one blanket license over all manuscripts, project code or third-party dependencies. Original rights remain with their respective authors. External datasets and dependencies are reacquired from their official sources; the included checkpoints and prediction arrays are project research artifacts. Historical drafts and AI-assisted notes are not proof of publication, peer-review acceptance, or paper coauthorship.

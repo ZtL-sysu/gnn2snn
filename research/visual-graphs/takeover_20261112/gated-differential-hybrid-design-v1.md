@@ -1,0 +1,13 @@
+# Dynamic-gate differential hybrid diagnostic
+
+Mode: local mechanism repair under the authorized visual GNN-to-SNN research scope. This is a diagnostic baseline adaptation, with novelty unestablished. It does not replace the binding low-T/strong-teacher target or permit writing-stage advancement.
+
+Problem: causal IF repeatedly integrates currents calculated from changing prefix-rate node states. Early errors alter gates and propagate across depth. Holding each layer's input for a serial window works much better, but six windows have different time semantics.
+
+Alternatives: (1) half-initialize the existing prefix-rate IF as a minimal control; (2) encode each changing nonlinear block current as a differential event and use the unchanged DCGS MTH_diff node; (3) fit initial voltages by BPTT. Option2 directly tests whether changing-current encoding, rather than teacher weakness, causes collapse. Option1 remains required to isolate standard initialization. Option3 already underperformed the strong fixed-operator comparator.
+
+For active tick t, reconstruct upstream node states from prior source events. Compute the actual gated block current a_t from those states and the graph, using the analog edge controller. Feed x_t=t(a_t-a_(t-1)), a_0=0, into MTH_diff. Decode node branch r_t=sum_(s<=t) spike_s/s, then add the current upstream residual. Edge logits, sigmoid, target normalization, edge ReLU/residual remain analog and recomputed each tick. Two MLP ReLUs use the same event encoding. Final classifier operates on the terminal reconstructed state. All six source units receive one zero latch call, then exactly T active calls. No teacher hidden states, output logits, or labels enter the simulation.
+
+Linearity makes this agree with W*event input for a fixed affine map; nonlinear gates require a new current calculation. This construction uses established differential-coding algebra, not a new contribution by itself. It tests feasibility on the strong dynamic-gate teacher, while explicitly accepting dense analog controller costs. No energy or sparse implementation advantage is assumed.
+
+Acceptance before full validation: exact-ReLU event replacement must recover teacher logits at every tick on a tiny graph with BN and residuals, and must work when teacher.forward is disabled; t-difference encoding must reconstruct signed changing currents, including abrupt drops; source-unit T and warmup must match source; actual MTH trajectories must be finite and input labels absent. Full validation uses all5000 official graphs, existing train-only thresholds, T1/2/4/8, preserved predictions and source hashes. Fulltest follows only after review; no architecture or validation subset selection.

@@ -1,0 +1,142 @@
+{
+  "status": "complete",
+  "panels": [
+    {
+      "panel": "MNIST: fixed GCN",
+      "T": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "per_teacher_conversion": [
+        [
+          74.46000000000001,
+          90.14999999999999,
+          90.94,
+          90.93
+        ],
+        [
+          70.91,
+          90.64999999999999,
+          91.34,
+          91.31
+        ],
+        [
+          68.93,
+          89.67,
+          90.86,
+          90.81
+        ]
+      ],
+      "ann": [
+        90.94,
+        91.32000000000001,
+        90.81
+      ],
+      "mean": [
+        71.43333333333334,
+        90.15666666666665,
+        91.04666666666667,
+        91.01666666666667
+      ],
+      "sample_sd": [
+        2.801898166124769,
+        0.49003401242498296,
+        0.2571640202931481,
+        0.26102362600602447
+      ]
+    },
+    {
+      "panel": "CIFAR10: fixed GCN",
+      "T": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "per_teacher_conversion": [
+        [
+          45.5,
+          53.87,
+          54.879999999999995,
+          54.93
+        ],
+        [
+          47.910000000000004,
+          53.99,
+          54.86,
+          54.949999999999996
+        ],
+        [
+          47.010000000000005,
+          54.33,
+          55.010000000000005,
+          55.02
+        ]
+      ],
+      "ann": [
+        54.87,
+        54.94,
+        55.010000000000005
+      ],
+      "mean": [
+        46.80666666666667,
+        54.06333333333333,
+        54.916666666666664,
+        54.96666666666667
+      ],
+      "sample_sd": [
+        1.2177985602444021,
+        0.23860706890897687,
+        0.08144527815247493,
+        0.04725815626252871
+      ]
+    },
+    {
+      "panel": "CIFAR10: GatedGCN",
+      "T": [
+        4,
+        8
+      ],
+      "per_teacher_conversion": [
+        [
+          69.1,
+          69.16
+        ],
+        [
+          68.44,
+          68.38
+        ],
+        [
+          68.71000000000001,
+          68.73
+        ]
+      ],
+      "ann": [
+        69.19999999999999,
+        68.39,
+        68.72
+      ],
+      "mean": [
+        68.75,
+        68.75666666666666
+      ],
+      "sample_sd": [
+        0.3318132004607387,
+        0.3906831623366095
+      ]
+    }
+  ],
+  "input_sha256": {
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\fixed-gcn-test-three-seed-summary-v1.json": "1f585d2d90d3574be129442fd9082b024527c8ea095e0a9158dd5a9e646e5ee8",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gd_test1.json": "48595b52ad54791d7b1f9dc6ab5d20af0a8ca037e070c63a670f953579642678",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gd_test1.npz": "19e039d0a42c2fb7949b572811ed59b3bfe075f616587a61aba77cbd5cc37ec1",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\g42test.json": "13b4c62f98d9a347d6e0b541dc669d0612f6338ce15cabe116bf85361d69e4bc",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\g42test.npz": "4e141c1222880449f6c358c7d9b8ed8e550eeaa0f5398175c7a7f6f6b4fe2e77",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\g43test.json": "a99f3227808db454d0ebb18f2f2be226af8522f4687beead40c43f3731f62a94",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\g43test.npz": "22e9deddcab17a56c5aacc6e0941594f6decfeb8175077297488c8a5a8289f4d"
+  },
+  "script_sha256": "d781cc33d8faf2303d245952ddf7483d0e7fb359ea070275d9a499d98479a50b",
+  "qualification": "complete historically exposed 10k test examples; teacher seeds41/42/43; descriptive SD, not CI; separate architectures; no new-method or energy claim"
+}

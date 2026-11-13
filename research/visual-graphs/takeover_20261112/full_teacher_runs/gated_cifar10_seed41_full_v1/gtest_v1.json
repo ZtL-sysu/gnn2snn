@@ -1,0 +1,15 @@
+{
+  "dataset": "CIFAR10",
+  "seed": 41,
+  "split": "full official test, historically exposed",
+  "graphs": 10000,
+  "checkpoint_epoch": 34,
+  "checkpoint_sha256": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+  "accuracy": 0.692,
+  "prediction_sha256": "734ad8e8aff8a5bb1c046ac063357cdc8467b73661a3cc1a452e89ab9b85a913",
+  "script_sha256": "c2033b08fce31b961ca9024533895acf8f1e0c747730d9ce8cc2196d3751ddb0",
+  "protocol_sha256": "7d5a6c5cb6b2d4b5e1a6e1f0a3dc4eb72dc4e266512afb7e0d1567d060aed933",
+  "device": "NVIDIA GeForce RTX 3060",
+  "elapsed_sec": 3.1872432000236586,
+  "qualification": "PyG GatedGCN adaptation; prior scientific test exposure; teacher result only"
+}

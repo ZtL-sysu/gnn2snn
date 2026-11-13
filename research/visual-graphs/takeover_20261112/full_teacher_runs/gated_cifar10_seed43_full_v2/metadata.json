@@ -1,0 +1,98 @@
+{
+  "dataset": "CIFAR10",
+  "seed": 43,
+  "teacher_seed": 43,
+  "teacher_seed_role": "teacher parameter initialization and training-order RNG",
+  "student_seed_reference": 41,
+  "student_seed_role": "separate student experiment seed; not changed or consumed by this teacher run",
+  "rng_seeds": {
+    "python": 43,
+    "numpy": 43,
+    "torch_cpu": 43,
+    "torch_cuda_all": 43,
+    "train_order": 43,
+    "train_order_mechanism": "DataLoader shuffle uses seeded Torch RNG; num_workers=0"
+  },
+  "scope": "all_official_pyg_train_and_val",
+  "official_counts": {
+    "train": 45000,
+    "val": 5000
+  },
+  "train_indices": "all official train indices, shuffled each epoch",
+  "val_indices": "all official validation indices, deterministic order",
+  "split_source": "PyG GNNBenchmarkDataset CIFAR10 train/val; test split is never loaded",
+  "model": {
+    "class": "GatedTeacher",
+    "node_dim": 5,
+    "edge_dim": 1,
+    "hidden_dim": 70,
+    "out_dim": 70,
+    "layers": 4,
+    "n_classes": 10,
+    "readout": "mean",
+    "residual": true,
+    "batch_norm": true,
+    "dropout": 0.0,
+    "parameters": 104357
+  },
+  "optimization": {
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "scheduler": "ReduceLROnPlateau",
+    "scheduler_mode": "min_val_loss",
+    "factor": 0.5,
+    "patience": 10,
+    "min_lr": 1e-05,
+    "epochs_cap": 200,
+    "wall_time_hours_cap": 12.0,
+    "batch_size": 128,
+    "stopping": "stop when learning rate <= min_lr, epoch cap reached, or wall-time cap reached"
+  },
+  "provenance": {
+    "adaptation_statement": "PyG data/operator adaptation of public GatedGCN configuration; not a reproduction of original DGL pipeline",
+    "public_architecture_commit": "b6c407712fa576e9699555e1e035d1e327ccae6c",
+    "public_edge_definition": "scalar affinity from color/coordinate RBF similarity and per-node top-k graph construction",
+    "pyg_edge_semantics": "uses stored edge_attr as provided; does not reconstruct public DGL affinity edges",
+    "public_cifar_node_inputs": "mean pixel channels concatenated with 2D coordinates",
+    "source_manifest": {
+      "files": {
+        "gated_teacher_seed_train_v2.py": "b7ee53fce7ce5bf954ba9b4fd00b8b68c9d4ffa78e5f291872ced11c1ab90fc2",
+        "gated-teacher-seed-protocol-v2.md": "56dbe5751debc828bd353d3867fc5f624613ecb0e590ffc43ec9663722538f1b",
+        "gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+        "gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+        "gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+        "public_baselines/gated_net.py": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+        "public_baselines/gated_layer.py": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+        "public_baselines/benchmark_mlp_readout.py": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+        "public_baselines/gated_cifar.json": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7"
+      },
+      "manifest_sha256": "bd34dfae190068c2d2c0d8e696119667df9a7286db0a3c3487fb6949dbe92609"
+    },
+    "source_sha256": {
+      "gated_teacher_seed_train_v2.py": "b7ee53fce7ce5bf954ba9b4fd00b8b68c9d4ffa78e5f291872ced11c1ab90fc2",
+      "gated-teacher-seed-protocol-v2.md": "56dbe5751debc828bd353d3867fc5f624613ecb0e590ffc43ec9663722538f1b",
+      "gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+      "gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+      "gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+      "public_baselines/gated_net.py": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+      "public_baselines/gated_layer.py": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+      "public_baselines/benchmark_mlp_readout.py": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+      "public_baselines/gated_cifar.json": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7"
+    },
+    "processed_data_sha256": {
+      "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+      "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+      "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+      "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+      "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+    }
+  },
+  "runtime": {
+    "device": "NVIDIA GeForce RTX 3060",
+    "torch": "2.11.0+cu128",
+    "pyg": "2.8.0.post1",
+    "numpy": "2.4.4",
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]"
+  }
+}

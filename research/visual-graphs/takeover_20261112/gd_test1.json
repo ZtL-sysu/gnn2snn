@@ -1,0 +1,132 @@
+{
+  "status": "complete",
+  "dataset": "CIFAR10",
+  "split": "all official test",
+  "graphs": 10000,
+  "prior_validation_exposure": true,
+  "test_loaded": true,
+  "prior_test_exposure": true,
+  "teacher_test_archive_sha256": "734ad8e8aff8a5bb1c046ac063357cdc8467b73661a3cc1a452e89ab9b85a913",
+  "teacher_accuracy": 0.692,
+  "checkpoint_sha256": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+  "calibration_sha256": "b28485ddfa8ef259ca048f3272662fedc1e4f519b0324cfa514ccf82b2cf8a9e",
+  "teacher_epoch": 34,
+  "source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+  "author_source_provenance": {
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "worktree_clean_except_ignored_bytecode": true,
+    "untracked_bytecode_entries": 10,
+    "source_file": "neurons/relu_neuron.py",
+    "source_file_sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+    "source_head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161",
+    "source_worktree_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161"
+  },
+  "source_sha256": {
+    "gated_diff_eval_v2.py": "efb1a351471a729ffc1bd58e05034ab58faa7a33100b0d8ddc78b6821b2cdc97",
+    "gated_diff_fullval_v1.py": "bd21b383f95535d6f9e6456591372b2968cf3cd9af529c36207685da73cd28d3",
+    "gated_differential_hybrid_v1.py": "66a8a3060a3888cc2ffe4e7daa452992758c9288f4463cd1fb28d5f0a14a7a1e",
+    "gated_causal_control_v2.py": "a8965425c5fb71217485a9820a8fd66e12d072a3382bd1cd6355ca1e40abbad1",
+    "gated_causal_hybrid.py": "1833199458f3d7482bb7d98ac783746f6fe780127db0f570635016548978fd0a",
+    "gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "dcgs_fixed_residual_gcn_event_forward_v1.py": "a031ebdbc816cbde28af3f919284b08e5ba087e271415b1bedec37306c9bc541",
+    "gated-differential-hybrid-design-v1.md": "e83db4e1fc82d87ee40401a9a2346da8dc254d8a4cda728dd7d10335adad1d19"
+  },
+  "processed_data_sha256": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]",
+    "device": "cuda"
+  },
+  "elapsed_sec": 80.56916680000722,
+  "rows": [
+    {
+      "method": "dc_T4",
+      "accuracy": 0.691,
+      "teacher_agreement": 0.997,
+      "logit_mse": 0.0009379885741509497,
+      "nonzero_scalar_events": 570025379,
+      "event_type": "signed graded eight levels"
+    },
+    {
+      "method": "dc_T8",
+      "accuracy": 0.6916,
+      "teacher_agreement": 0.999,
+      "logit_mse": 6.592684803763404e-05,
+      "nonzero_scalar_events": 715030786,
+      "event_type": "signed graded eight levels"
+    },
+    {
+      "method": "zero_mean_T4",
+      "accuracy": 0.0979,
+      "teacher_agreement": 0.1098,
+      "logit_mse": 35.23736572265625,
+      "nonzero_scalar_events": 127945208,
+      "event_type": "binary positive IF"
+    },
+    {
+      "method": "zero_terminal_T4",
+      "accuracy": 0.0979,
+      "teacher_agreement": 0.1098,
+      "logit_mse": 35.17021560668945,
+      "nonzero_scalar_events": 127945208,
+      "event_type": "binary positive IF"
+    },
+    {
+      "method": "half_mean_T4",
+      "accuracy": 0.2278,
+      "teacher_agreement": 0.2484,
+      "logit_mse": 36.39860916137695,
+      "nonzero_scalar_events": 190813027,
+      "event_type": "binary positive IF"
+    },
+    {
+      "method": "half_terminal_T4",
+      "accuracy": 0.234,
+      "teacher_agreement": 0.2534,
+      "logit_mse": 30.33000946044922,
+      "nonzero_scalar_events": 190813027,
+      "event_type": "binary positive IF"
+    },
+    {
+      "method": "zero_mean_T8",
+      "accuracy": 0.1002,
+      "teacher_agreement": 0.1037,
+      "logit_mse": 33.32102966308594,
+      "nonzero_scalar_events": 292031665,
+      "event_type": "binary positive IF"
+    },
+    {
+      "method": "zero_terminal_T8",
+      "accuracy": 0.1,
+      "teacher_agreement": 0.1035,
+      "logit_mse": 32.6997184753418,
+      "nonzero_scalar_events": 292031665,
+      "event_type": "binary positive IF"
+    },
+    {
+      "method": "half_mean_T8",
+      "accuracy": 0.2366,
+      "teacher_agreement": 0.2577,
+      "logit_mse": 30.208444595336914,
+      "nonzero_scalar_events": 353301535,
+      "event_type": "binary positive IF"
+    },
+    {
+      "method": "half_terminal_T8",
+      "accuracy": 0.2591,
+      "teacher_agreement": 0.2813,
+      "logit_mse": 24.296457290649414,
+      "nonzero_scalar_events": 353301535,
+      "event_type": "binary positive IF"
+    }
+  ],
+  "scope": "project nonlinear-current differential encoding; analog edges and dense affine computations each tick; source signed graded node units; no teacher hidden-state oracle",
+  "time": "same-tick sequential traversal of six activation sites; six source zero latch calls plus six*T active DC calls; no hardware-latency or energy claim",
+  "predictions_sha256": "19e039d0a42c2fb7949b572811ed59b3bfe075f616587a61aba77cbd5cc37ec1"
+}

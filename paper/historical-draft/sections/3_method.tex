@@ -1,0 +1,65 @@
+\section{Method}
+\label{sec:method}
+
+\subsection{Graph-structured visual classification setup}
+\label{ssec:setup}
+
+Each image is a graph $g$ with $n_g$ superpixel nodes, node features $X_g$, an 8-NN weighted adjacency, and a class label. For a batch of $G$ graphs we form a block-diagonal sparse adjacency $A\in\mathbb{R}^{N\times N}$, $N=\sum_g n_g$, and a fixed linear pooling matrix $R\in\mathbb{R}^{G\times N}$ whose $g$-th row averages the nodes of graph $g$. A two-layer GCN produces graph logits
+\begin{equation}
+B = R\big(A\,(\operatorname{ReLU}(B_1) W_2)\big) + b_2,\quad
+B_1 = A (X W_1) + b_1 .
+\label{eq:ann}
+\end{equation}
+$A$ is symmetrically normalised and non-negative; $R$ is fixed and linear. These two properties are the only structural assumptions of our analysis.
+
+\subsection{Exact conversion identity}
+\label{ssec:identity}
+
+Hidden units are deterministic integrate-and-fire neurons with threshold $\theta$ and subtractive reset. Layer~1 receives a constant per-step current $B_1+\beta$; layer~2 integrates the instantaneous messages
+\begin{equation}
+\operatorname{inst}_t = R\big(A (s_t W_2)\big) + b_2,\qquad
+\Bh = \frac{1}{T}\sum_{t=1}^{T} \operatorname{inst}_t .
+\label{eq:convert}
+\end{equation}
+Writing $c_1=\sum_t s_t = T\,\mathrm{rate}_1$ and $E_1=\mathrm{rate}_1-\operatorname{ReLU}(B_1)$, linearity of $R A (\cdot) W_2$ gives, without approximation,
+\begin{equation}
+\Bh - B = R A (E_1 W_2).
+\label{eq:identity}
+\end{equation}
+Equation~\eqref{eq:identity} is the graph-level analogue of the node-level identity and holds for any fixed non-negative linear $A$ and linear $R$; the pooling operator does not add an error term. We verify it on the \emph{same} forward pass used for all reported numbers: with a fully float64 implementation the maximum residual is \IdentityMax. A float32 sparse matmul in $A(XW_1)$ introduces a $3.7\times10^{-7}$ discrepancy between the fp32 current and its fp64 recomputation, which is why a mixed-precision check falsely suggests a $2\times10^{-7}$ residual. The identity is exact; the earlier residual was numerical.
+
+\subsection{Two-phase spiking and bias redundancy}
+\label{ssec:twophase}
+
+For a target count $n=\mathrm{round}(\operatorname{ReLU}(B_1+\beta)T/\theta)$ clipped to $[0,T]$, the deterministic two-phase schedule
+\begin{equation}
+s[t] = \mathrm{round}\!\left(\tfrac{t n}{T}\right) - \mathrm{round}\!\left(\tfrac{(t-1)n}{T}\right),\quad t=1,\dots,T
+\label{eq:dtp}
+\end{equation}
+telescopes to $\sum_t s[t]=n$ exactly, with zero conditional variance and at most one spike per step. Because the rate is already realised exactly, the systematic floor-quantisation error that $\beta^\star=\theta/(2T)$ was designed to cancel~\cite{deng2021,wu2024ftbc} no longer exists. Adding it shifts the target count and double-corrects the current. We therefore set $\beta=0$ in the main arm and retain $\beta^\star$ as an explicit ablation. Section~\ref{ssec:ablations} quantifies the cost of this redundancy.
+
+\subsection{Readout, margin, and network width}
+\label{ssec:components}
+
+Instead of counting output spikes, we decode $\operatorname{argmax}\Bh$, i.e.\ the accumulated instantaneous current. Since $\mathrm{mem}=\theta\,\mathrm{count}+u=\sum_t \operatorname{inst}_t$ holds exactly, this decoder is free of spikes and removes both the $1/T$ decision grid and the unit-clipping ceiling~\cite{dualphase2024}.
+
+To reduce the required timestep we increase the ANN logit margin. With $\Delta = B_{y} - \max_{c\ne y} B_c$ and a hinge penalty $\lambda\,\mathbb{E}[\operatorname{ReLU}(1-\Delta)]$, the margin-recovery bound~\cite{deng2021} predicts $T = O(\|a_n\|_2\|DW\|_2/\Delta)$: a larger $\Delta$ permits a smaller $T$. We train with a unit mask that holds all but $k$ hidden units at zero, so spike count scales with the surviving width; the mask is derived from training-set activation magnitude and is fixed before conversion. Working points $(\lambda, k, \theta, T)$ are selected only on validation splits.
+
+\subsection{Theoretical arithmetic energy}
+\label{ssec:energy}
+
+We count ANN MACs as $EF + NFH + EH + NHC + NC$ for $N$ nodes, $E$ non-zero edges, $F$ input features, $H$ hidden units and $C$ classes. With hidden spike count $S$ and mean degree $\bar d = E/N$, the primary SNN convention charges
+$\mathrm{AC} = S (H + \bar d C)$;
+the conservative convention additionally charges real-valued propagation as $\mathrm{MAC}=T E C$:
+\begin{align}
+\mathcal{R}_{\mathrm{prim}} &= \frac{\mathrm{MAC}_{\mathrm{ANN}}\cdot\MACPJ}{\mathrm{AC}\cdot\ACPJ},
+\label{eq:energy}\\
+\mathcal{R}_{\mathrm{cons}} &= \frac{\mathrm{MAC}_{\mathrm{ANN}}\cdot\MACPJ}{S H\cdot\ACPJ + T E C\cdot\MACPJ}.
+\notag
+\end{align}
+Both ratios use the 45\,nm constants~\cite{horowitz2014}; both are \emph{op-count estimates}, not hardware measurements. We exclude degenerate zero-spike networks from any energy claim: a network emitting no spikes has vanishing ACs but chance-level accuracy. Likewise, a working point is admissible only if its teacher exceeds twice the chance rate.
+
+\subsection{Applicability and falsification}
+\label{ssec:scope}
+
+The analysis requires fixed, non-negative, linear $A$ and linear $R$. Dynamic graphs, per-sample attention and nonlinear pooling break the factorisation in~\eqref{eq:identity}; we report such variants as failure boundaries rather than silently adapting them. The mechanism is falsified by any of: a non-zero identity residual in float64, a gain from re-introducing $\beta^\star$, a spike-counting decoder matching the membrane decoder, or an energy advantage that disappears under the conservative convention.
