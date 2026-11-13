@@ -55,7 +55,7 @@
 
 ## 7 明确不能下的结论
 
-- **同步成功**：仅当 push 完成后用 `git ls-remote` 核对远端 SHA 等于本地 HEAD 才成立；本文件写就时尚未 push。
+- **同步成功（仅此含义）**：R4b 检查点已 push 到自己的 agent 分支，`git ls-remote origin refs/heads/agent/visual-conversion/20261113-wb-resume` 返回 `5ece63c582f6639e177f94fd64434d279e427d97`，与本地 HEAD 一致。这只证明产物已同步，不证明任何科学结论。
 - **科学验收通过**：不成立。P4 仍 `running`；S2 仍 FAIL（缺 ANN 行、历史六站点 DC-adapt 汇总、shared-theta 附加对照）；S3 仍 FAIL（双门槛 NOT EVALUABLE）；S4/S5/S7/S8 仍 FAIL；S6 待验证。无 Story 判定、无新测试集推理、无论文、无引用核查、无独立 CCFA 评审。
 - 本轮无 GPU 作业、无失败作业；连败计数仍为 0。
 
