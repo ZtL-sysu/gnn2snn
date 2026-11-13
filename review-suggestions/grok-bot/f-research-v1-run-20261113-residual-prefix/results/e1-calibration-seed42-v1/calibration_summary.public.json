@@ -1,0 +1,20 @@
+{
+  "status": "complete",
+  "seed": 42,
+  "graphs": 45000,
+  "affine_calibration": "repo/review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-calibration-seed42-v1/affine_cal_seed42_v1.json",
+  "affine_sha256": "07bc86293fd719c683c2f8f74f5763bb35e261796f28ec9e74807f5448bcd81b",
+  "six_site_calibration": "repo/review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-calibration-seed42-v1/gcal_seed42_v1.json",
+  "six_site_sha256": "9da8ad79fb76fe3e13f0df5fff0b72f54e5ad1bb87bc500858219188f9ca98da",
+  "checkpoint_sha256": "0ad3f3146f94bf73f5f398ef44a1fbc46f0c5924332c4d8fca3d711d0fbff1b6",
+  "affine_sites": 14,
+  "six_sites": 6,
+  "elapsed_sec": 89.49410280003212,
+  "publication_note": {
+    "scope": "de-identified public copy; only absolute local path strings/keys replaced",
+    "numeric_and_hash_values": "unchanged",
+    "source_artifact": "calibration_summary.json",
+    "source_artifact_sha256": "6d50722629d60047e1f35055d978ccb39c86b9beeb302162d0950554fdb256b3",
+    "deidentify_tool": "deidentify_v2.py"
+  }
+}

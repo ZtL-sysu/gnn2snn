@@ -1,0 +1,33 @@
+START 2026-11-13T17:32:38Z seed43 calibration
+{"stage": "six_site_start", "seed": 43, "graphs": 45000}
+{"stage": "six_site_done", "elapsed_sec": 31.598196899984032}
+{"stage": "affine_start", "seed": 43, "graphs": 45000}
+{"progress": "affine_cal", "pass": 1, "graphs": 6400, "batches": 50}
+{"progress": "affine_cal", "pass": 1, "graphs": 12800, "batches": 100}
+{"progress": "affine_cal", "pass": 1, "graphs": 19200, "batches": 150}
+{"progress": "affine_cal", "pass": 1, "graphs": 25600, "batches": 200}
+{"progress": "affine_cal", "pass": 1, "graphs": 32000, "batches": 250}
+{"progress": "affine_cal", "pass": 1, "graphs": 38400, "batches": 300}
+{"progress": "affine_cal", "pass": 1, "graphs": 44800, "batches": 350}
+{"progress": "affine_cal", "pass": 2, "graphs": 6400, "batches": 50}
+{"progress": "affine_cal", "pass": 2, "graphs": 12800, "batches": 100}
+{"progress": "affine_cal", "pass": 2, "graphs": 19200, "batches": 150}
+{"progress": "affine_cal", "pass": 2, "graphs": 25600, "batches": 200}
+{"progress": "affine_cal", "pass": 2, "graphs": 32000, "batches": 250}
+{"progress": "affine_cal", "pass": 2, "graphs": 38400, "batches": 300}
+{"progress": "affine_cal", "pass": 2, "graphs": 44800, "batches": 350}
+{"stage": "affine_done", "elapsed_sec": 55.875068000052124}
+{
+  "status": "complete",
+  "seed": 43,
+  "graphs": 45000,
+  "affine_calibration": "C:\\code\\gnn2snn-wb-resume\\review-suggestions\\grok-bot\\f-research-v1-run-20261113-residual-prefix\\results\\e1-calibration-seed43-v1\\affine_cal_seed43_v1.json",
+  "affine_sha256": "339dd7929a08f6f57bb4ab3ca73e9f1eb27c155421260e815c0ab4a8bd5db21a",
+  "six_site_calibration": "C:\\code\\gnn2snn-wb-resume\\review-suggestions\\grok-bot\\f-research-v1-run-20261113-residual-prefix\\results\\e1-calibration-seed43-v1\\gcal_seed43_v1.json",
+  "six_site_sha256": "a3405ed1ee32a1d07f27ae67682447e95ac14223073be5d3d1aabc0081f21a87",
+  "checkpoint_sha256": "9d194020ba105c31fc8956fbfc3f3c7556fd50f120f4bb4341eb883189ed8861",
+  "affine_sites": 14,
+  "six_sites": 6,
+  "elapsed_sec": 89.04044919996522
+}
+EXIT=0 2026-11-13T17:34:18Z

@@ -1,0 +1,23 @@
+{
+  "P4_status": "running",
+  "check": "frozen_input_gate_r4b_v1",
+  "contract_version": "v4",
+  "errors": [],
+  "frozen_items_verified": 12,
+  "hashes": {
+    "CURRENT_SCOPE.md": "e4439c00264a841e3ec7f08f197c17ba0398645bbe304fe5825acdd27f785ba9",
+    "PROTOCOL-E1-head-addendum-v1.md": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+    "PROTOCOL-v3.md": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "affine_cal1.json": "1618e3b46f75646ab051229b0d954815b5e28bf1729cbbf2042e4d596766a511",
+    "best.pt": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+    "dcgs_pinned_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "gcal_v1.json": "b28485ddfa8ef259ca048f3272662fedc1e4f519b0324cfa514ccf82b2cf8a9e",
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "note": "hash-only gate; no scientific result and no remote-sync claim",
+  "status": "PASS"
+}

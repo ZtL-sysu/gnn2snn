@@ -1,0 +1,159 @@
+START 2026-11-13T17:39:35Z E1 seed42 full validation (6 rows x 4 T)
+{"resource_probe": {"first_batch_graphs": 128, "elapsed_sec": 18.025607499992475, "peak_allocated_bytes": 2978876928, "scope": "resource feasibility only; not a latency benchmark"}}
+{"graphs": 1280, "elapsed_sec": 177.9821458000224}
+{"graphs": 2560, "elapsed_sec": 355.3813902999973}
+{"graphs": 3840, "elapsed_sec": 532.2457280999515}
+{"graphs": 5000, "elapsed_sec": 696.256335199927}
+{
+  "status": "complete",
+  "seed": 42,
+  "graphs": 5000,
+  "teacher_accuracy": 0.703,
+  "rows": [
+    {
+      "mode": "centered",
+      "T": 1,
+      "accuracy": 0.645,
+      "teacher_agreement": 0.7676
+    },
+    {
+      "mode": "centered",
+      "T": 2,
+      "accuracy": 0.6958,
+      "teacher_agreement": 0.954
+    },
+    {
+      "mode": "centered",
+      "T": 4,
+      "accuracy": 0.7032,
+      "teacher_agreement": 0.9958
+    },
+    {
+      "mode": "centered",
+      "T": 8,
+      "accuracy": 0.703,
+      "teacher_agreement": 0.9992
+    },
+    {
+      "mode": "first_analog",
+      "T": 1,
+      "accuracy": 0.6568,
+      "teacher_agreement": 0.7766
+    },
+    {
+      "mode": "first_analog",
+      "T": 2,
+      "accuracy": 0.696,
+      "teacher_agreement": 0.9488
+    },
+    {
+      "mode": "first_analog",
+      "T": 4,
+      "accuracy": 0.7032,
+      "teacher_agreement": 0.9956
+    },
+    {
+      "mode": "first_analog",
+      "T": 8,
+      "accuracy": 0.7032,
+      "teacher_agreement": 0.9984
+    },
+    {
+      "mode": "generic",
+      "T": 1,
+      "accuracy": 0.4774,
+      "teacher_agreement": 0.5356
+    },
+    {
+      "mode": "generic",
+      "T": 2,
+      "accuracy": 0.677,
+      "teacher_agreement": 0.8618
+    },
+    {
+      "mode": "generic",
+      "T": 4,
+      "accuracy": 0.7032,
+      "teacher_agreement": 0.9888
+    },
+    {
+      "mode": "generic",
+      "T": 8,
+      "accuracy": 0.703,
+      "teacher_agreement": 0.9972
+    },
+    {
+      "mode": "dc_adapt_analog_head",
+      "T": 1,
+      "accuracy": 0.6666,
+      "teacher_agreement": 0.8112
+    },
+    {
+      "mode": "dc_adapt_analog_head",
+      "T": 2,
+      "accuracy": 0.7,
+      "teacher_agreement": 0.9574
+    },
+    {
+      "mode": "dc_adapt_analog_head",
+      "T": 4,
+      "accuracy": 0.7028,
+      "teacher_agreement": 0.9972
+    },
+    {
+      "mode": "dc_adapt_analog_head",
+      "T": 8,
+      "accuracy": 0.7034,
+      "teacher_agreement": 0.9988
+    },
+    {
+      "mode": "per_consumer",
+      "T": 1,
+      "accuracy": 0.4774,
+      "teacher_agreement": 0.5356
+    },
+    {
+      "mode": "per_consumer",
+      "T": 2,
+      "accuracy": 0.677,
+      "teacher_agreement": 0.8618
+    },
+    {
+      "mode": "per_consumer",
+      "T": 4,
+      "accuracy": 0.7032,
+      "teacher_agreement": 0.9888
+    },
+    {
+      "mode": "per_consumer",
+      "T": 8,
+      "accuracy": 0.703,
+      "teacher_agreement": 0.9972
+    },
+    {
+      "mode": "cse_only",
+      "T": 1,
+      "accuracy": 0.4774,
+      "teacher_agreement": 0.5356
+    },
+    {
+      "mode": "cse_only",
+      "T": 2,
+      "accuracy": 0.677,
+      "teacher_agreement": 0.8618
+    },
+    {
+      "mode": "cse_only",
+      "T": 4,
+      "accuracy": 0.7032,
+      "teacher_agreement": 0.9888
+    },
+    {
+      "mode": "cse_only",
+      "T": 8,
+      "accuracy": 0.703,
+      "teacher_agreement": 0.9972
+    }
+  ]
+}
+EXIT=0 2026-11-13T17:51:23Z

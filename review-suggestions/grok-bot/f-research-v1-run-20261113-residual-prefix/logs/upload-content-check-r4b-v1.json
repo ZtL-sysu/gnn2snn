@@ -1,0 +1,41 @@
+{
+  "check": "upload_content_preflight_r4b_v1",
+  "files_checked": 80,
+  "largest_single_file_bytes": 9376575,
+  "max_allowed_bytes": 52428800,
+  "note": "content/format check only; no scientific or remote-sync claim",
+  "npz_checked": 48,
+  "npz_schema_example": {
+    "dtype_kinds": {
+      "indices": "i",
+      "labels": "i",
+      "logits": "f",
+      "teacher_logits": "f"
+    },
+    "keys": [
+      "indices",
+      "labels",
+      "logits",
+      "teacher_logits"
+    ],
+    "shapes": {
+      "indices": [
+        5000
+      ],
+      "labels": [
+        5000
+      ],
+      "logits": [
+        5000,
+        10
+      ],
+      "teacher_logits": [
+        5000,
+        10
+      ]
+    }
+  },
+  "problems": {},
+  "status": "PASS",
+  "total_bytes": 43677508
+}
