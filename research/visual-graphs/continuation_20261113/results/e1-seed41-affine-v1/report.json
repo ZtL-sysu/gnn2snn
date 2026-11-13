@@ -1,0 +1,478 @@
+{
+  "status": "complete",
+  "dataset": "CIFAR10",
+  "split": "all official validation",
+  "graphs": 5000,
+  "seed": 41,
+  "threshold_scale": 1,
+  "historical_validation_exposure": true,
+  "historical_test_exposure": true,
+  "test_inference_performed": false,
+  "modes": [
+    "centered",
+    "first_analog",
+    "generic"
+  ],
+  "timesteps": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "calibration_sha256_start": "1618e3b46f75646ab051229b0d954815b5e28bf1729cbbf2042e4d596766a511",
+  "calibration_sha256_end": "1618e3b46f75646ab051229b0d954815b5e28bf1729cbbf2042e4d596766a511",
+  "checkpoint_sha256_start": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+  "checkpoint_sha256_end": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+  "data_sha256_start": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "data_sha256_end": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "calibration_bound_inputs_sha256": {
+    "repo:\\research\\visual-graphs\\takeover_20261112\\gated_affine_cal_v1.py": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\check_gated_affine_cal_v1.py": "58c7a514d56babb2ac5ae6f32da2d8d3e716f81e1911dc0a74defac8bb965887",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\activation_histogram.py": "59e7fb79a6655d9060c630da289211e74f8714c8a10086a92de708f5a3fea9b3",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\gated_frozen_gate_calibrate.py": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\affine-base-fulltrain-protocol-v1.md": "889460ef7305e1742a206cbacf288aded04fa69d605e767d5f0af588176f940c",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed41_full_v1\\metadata.json": "b49aafa95a91f65da40c388e91a88e89ed4d9d807e8b1e5e2978b2d32f4f3acf",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed41_full_v1\\done.json": "c726dcf196370763c6ada1ef72532fb9f41ebdfa959babfaaa1a67393ff8ec71",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\full_teacher_runs\\gated_cifar10_seed41_full_v1\\best.pt": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\public_baselines\\benchmark_mlp_readout.py": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\public_baselines\\gated_cifar.json": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\public_baselines\\gated_layer.py": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "repo:\\research\\visual-graphs\\takeover_20261112\\public_baselines\\gated_net.py": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+    "local:legacy-workspace\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\data\\pyg_bench\\CIFAR10\\processed\\pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "local:legacy-workspace\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\data\\pyg_bench\\CIFAR10\\processed\\pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "local:legacy-workspace\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\data\\pyg_bench\\CIFAR10\\processed\\train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060"
+  },
+  "source_sha256_start": {
+    "evaluator": "a8cb17c5096a75ea218dcd2bf8db62d266629b3b7681a880a820bc41b80b0cd2",
+    "frozen_protocol": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "head_matching_addendum": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+    "canonical_baseline": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+    "affine_helper": "6bc3e771212293bf68507c2f062ee90188621280bf1d97adc3f60a9eaaf3467b",
+    "calibration_helper": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "teacher_helper": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "author_relu_source": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+    "author_line_source": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f",
+    "calibration_bound:gated_affine_cal_v1.py": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "calibration_bound:check_gated_affine_cal_v1.py": "58c7a514d56babb2ac5ae6f32da2d8d3e716f81e1911dc0a74defac8bb965887",
+    "calibration_bound:activation_histogram.py": "59e7fb79a6655d9060c630da289211e74f8714c8a10086a92de708f5a3fea9b3",
+    "calibration_bound:gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "calibration_bound:gated_frozen_gate_calibrate.py": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "calibration_bound:affine-base-fulltrain-protocol-v1.md": "889460ef7305e1742a206cbacf288aded04fa69d605e767d5f0af588176f940c",
+    "calibration_bound:metadata.json": "b49aafa95a91f65da40c388e91a88e89ed4d9d807e8b1e5e2978b2d32f4f3acf",
+    "calibration_bound:done.json": "c726dcf196370763c6ada1ef72532fb9f41ebdfa959babfaaa1a67393ff8ec71",
+    "calibration_bound:gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "calibration_bound:gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "calibration_bound:benchmark_mlp_readout.py": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "calibration_bound:gated_cifar.json": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "calibration_bound:gated_layer.py": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "calibration_bound:gated_net.py": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+    "teacher_source:gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "teacher_source:gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "teacher_source:gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "teacher_source:benchmark_mlp_readout.py": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "teacher_source:gated_cifar.json": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "teacher_source:gated_layer.py": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "teacher_source:gated_net.py": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e"
+  },
+  "source_sha256_end": {
+    "evaluator": "a8cb17c5096a75ea218dcd2bf8db62d266629b3b7681a880a820bc41b80b0cd2",
+    "frozen_protocol": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "head_matching_addendum": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+    "canonical_baseline": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+    "affine_helper": "6bc3e771212293bf68507c2f062ee90188621280bf1d97adc3f60a9eaaf3467b",
+    "calibration_helper": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "teacher_helper": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "author_relu_source": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+    "author_line_source": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f",
+    "calibration_bound:gated_affine_cal_v1.py": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "calibration_bound:check_gated_affine_cal_v1.py": "58c7a514d56babb2ac5ae6f32da2d8d3e716f81e1911dc0a74defac8bb965887",
+    "calibration_bound:activation_histogram.py": "59e7fb79a6655d9060c630da289211e74f8714c8a10086a92de708f5a3fea9b3",
+    "calibration_bound:gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "calibration_bound:gated_frozen_gate_calibrate.py": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "calibration_bound:affine-base-fulltrain-protocol-v1.md": "889460ef7305e1742a206cbacf288aded04fa69d605e767d5f0af588176f940c",
+    "calibration_bound:metadata.json": "b49aafa95a91f65da40c388e91a88e89ed4d9d807e8b1e5e2978b2d32f4f3acf",
+    "calibration_bound:done.json": "c726dcf196370763c6ada1ef72532fb9f41ebdfa959babfaaa1a67393ff8ec71",
+    "calibration_bound:gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "calibration_bound:gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "calibration_bound:benchmark_mlp_readout.py": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "calibration_bound:gated_cifar.json": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "calibration_bound:gated_layer.py": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "calibration_bound:gated_net.py": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e",
+    "teacher_source:gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "teacher_source:gated_teacher_train.py": "79ea8ba293d920f6b4530f4dfb9f71b962f43c6a8aeb0b7910d8c547f5fcccc7",
+    "teacher_source:gated_teacher_train_protocol_v1.md": "b1abb7000f51c619e946f25d9a8cd26910c8eb0013d2e58eb21b11e541705121",
+    "teacher_source:benchmark_mlp_readout.py": "0a0fc71d781fa2370f16d96230dbf1090d39540804506a1862dbe0d30734f9ec",
+    "teacher_source:gated_cifar.json": "a20b4b49281d4e04aca6afc3d9dff60154608552ad92e0b1d69948f775e149a7",
+    "teacher_source:gated_layer.py": "808bcf68464d5f515eac73b89c763da1e5c5b852e808e00a98b1cf679ac26572",
+    "teacher_source:gated_net.py": "b7815573d30a7fd552aa0651c94b480734d64fecad0335d0555340afce7d779e"
+  },
+  "author_source_provenance": {
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "author_repo": "DCGS_REPO",
+    "worktree_clean_except_ignored_bytecode": true,
+    "source_files": {
+      "relu_neuron": {
+        "path": "neurons/relu_neuron.py",
+        "sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+        "head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161",
+        "worktree_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161"
+      },
+      "line_neuron": {
+        "path": "neurons/line_neuron.py",
+        "sha256": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f",
+        "head_blob_oid": "1ab72bf65f22b2a74b4073e29735ef5bb9cd82ea",
+        "worktree_blob_oid": "1ab72bf65f22b2a74b4073e29735ef5bb9cd82ea"
+      }
+    },
+    "loaded_classes": {
+      "MTH_diff": "DCGS_REPO\\neurons\\relu_neuron.py",
+      "MTH_diff_line": "DCGS_REPO\\neurons\\line_neuron.py"
+    }
+  },
+  "runtime": {
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "deterministic_algorithms": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "elapsed_sec": 353.0688916000072,
+  "resource_probe": {
+    "first_batch_graphs": 128,
+    "elapsed_sec": 9.285186900058761,
+    "peak_allocated_bytes": 2545697280,
+    "scope": "resource feasibility only; not a latency benchmark"
+  },
+  "teacher_accuracy": 0.7066,
+  "rows": [
+    {
+      "mode": "centered",
+      "T": 1,
+      "accuracy": 0.6718,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.8206,
+      "logit_mse": 1.309040191539878,
+      "teacher_to_output_kl": 0.19049592542055302,
+      "per_site_nonzero_scalar_events": {
+        "layer1.node": 18514488,
+        "layer1.edge": 179361108,
+        "layer2.node": 30252336,
+        "layer2.edge": 250439064,
+        "layer3.node": 35663001,
+        "layer3.edge": 287550762
+      }
+    },
+    {
+      "mode": "centered",
+      "T": 2,
+      "accuracy": 0.7076,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.9594,
+      "logit_mse": 0.06775804328666274,
+      "teacher_to_output_kl": 0.009914871380814216,
+      "per_site_nonzero_scalar_events": {
+        "layer1.node": 35770052,
+        "layer1.edge": 342218996,
+        "layer2.node": 59575087,
+        "layer2.edge": 484886596,
+        "layer3.node": 70758145,
+        "layer3.edge": 561363717
+      }
+    },
+    {
+      "mode": "centered",
+      "T": 4,
+      "accuracy": 0.7066,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.9968,
+      "logit_mse": 0.00035937867526061304,
+      "teacher_to_output_kl": 4.887884562075637e-05,
+      "per_site_nonzero_scalar_events": {
+        "layer1.node": 55893914,
+        "layer1.edge": 513439945,
+        "layer2.node": 99393101,
+        "layer2.edge": 758678160,
+        "layer3.node": 124121328,
+        "layer3.edge": 921810490
+      }
+    },
+    {
+      "mode": "centered",
+      "T": 8,
+      "accuracy": 0.707,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.999,
+      "logit_mse": 3.9816275686993124e-05,
+      "teacher_to_output_kl": 5.709561253078458e-06,
+      "per_site_nonzero_scalar_events": {
+        "layer1.node": 62699334,
+        "layer1.edge": 576189423,
+        "layer2.node": 116050294,
+        "layer2.edge": 859958419,
+        "layer3.node": 153772167,
+        "layer3.edge": 1061293907
+      }
+    },
+    {
+      "mode": "first_analog",
+      "T": 1,
+      "accuracy": 0.671,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.8196,
+      "logit_mse": 1.3919005196315466,
+      "teacher_to_output_kl": 0.1928677344307447,
+      "per_site_nonzero_scalar_events": {
+        "layer1.node": 40272236,
+        "layer1.edge": 320736712,
+        "layer2.node": 40053180,
+        "layer2.edge": 320064562,
+        "layer3.node": 40136029,
+        "layer3.edge": 322606724
+      }
+    },
+    {
+      "mode": "first_analog",
+      "T": 2,
+      "accuracy": 0.7034,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.9568,
+      "logit_mse": 0.07075017619137046,
+      "teacher_to_output_kl": 0.01005039659954528,
+      "per_site_nonzero_scalar_events": {
+        "layer1.node": 76808782,
+        "layer1.edge": 612844036,
+        "layer2.node": 77144155,
+        "layer2.edge": 610304664,
+        "layer3.node": 78327908,
+        "layer3.edge": 623084366
+      }
+    },
+    {
+      "mode": "first_analog",
+      "T": 4,
+      "accuracy": 0.7068,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.997,
+      "logit_mse": 0.0004743325886123718,
+      "teacher_to_output_kl": 6.152394722627146e-05,
+      "per_site_nonzero_scalar_events": {
+        "layer1.node": 115952513,
+        "layer1.edge": 899072039,
+        "layer2.node": 124663419,
+        "layer2.edge": 944160616,
+        "layer3.node": 135499991,
+        "layer3.edge": 1016503587
+      }
+    },
+    {
+      "mode": "first_analog",
+      "T": 8,
+      "accuracy": 0.7072,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.9992,
+      "logit_mse": 6.174072589426724e-05,
+      "teacher_to_output_kl": 8.106083061482119e-06,
+      "per_site_nonzero_scalar_events": {
+        "layer1.node": 130302704,
+        "layer1.edge": 1016470841,
+        "layer2.node": 148618883,
+        "layer2.edge": 1080988254,
+        "layer3.node": 172008287,
+        "layer3.edge": 1185985653
+      }
+    },
+    {
+      "mode": "generic",
+      "T": 1,
+      "accuracy": 0.4498,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.4978,
+      "logit_mse": 9.511488506811036,
+      "teacher_to_output_kl": 1.3552448114233169,
+      "per_site_nonzero_scalar_events": {
+        "layer0.node": 40979307,
+        "layer0.edge": 329029609,
+        "layer1.node": 40299690,
+        "layer1.edge": 320905343,
+        "layer2.node": 40109666,
+        "layer2.edge": 320122691,
+        "layer3.node": 40188976,
+        "layer3.edge": 322062783
+      }
+    },
+    {
+      "mode": "generic",
+      "T": 2,
+      "accuracy": 0.6796,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.871,
+      "logit_mse": 0.6167177478119663,
+      "teacher_to_output_kl": 0.08705153330509074,
+      "per_site_nonzero_scalar_events": {
+        "layer0.node": 80571974,
+        "layer0.edge": 622202256,
+        "layer1.node": 78276814,
+        "layer1.edge": 628892589,
+        "layer2.node": 78746489,
+        "layer2.edge": 625657132,
+        "layer3.node": 79620623,
+        "layer3.edge": 633788187
+      }
+    },
+    {
+      "mode": "generic",
+      "T": 4,
+      "accuracy": 0.7074,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.9912,
+      "logit_mse": 0.0027245493210063727,
+      "teacher_to_output_kl": 0.0003714204751063652,
+      "per_site_nonzero_scalar_events": {
+        "layer0.node": 134338856,
+        "layer0.edge": 1000348968,
+        "layer1.node": 131149338,
+        "layer1.edge": 1067939072,
+        "layer2.node": 140691095,
+        "layer2.edge": 1119571609,
+        "layer3.node": 148643303,
+        "layer3.edge": 1167888746
+      }
+    },
+    {
+      "mode": "generic",
+      "T": 8,
+      "accuracy": 0.7066,
+      "teacher_accuracy": 0.7066,
+      "teacher_agreement": 0.9986,
+      "logit_mse": 0.00010480433716244717,
+      "teacher_to_output_kl": 1.4551822154502764e-05,
+      "per_site_nonzero_scalar_events": {
+        "layer0.node": 151098024,
+        "layer0.edge": 1132842351,
+        "layer1.node": 154312237,
+        "layer1.edge": 1284566777,
+        "layer2.node": 178269958,
+        "layer2.edge": 1368276700,
+        "layer3.node": 202516854,
+        "layer3.edge": 1466990863
+      }
+    }
+  ],
+  "operation_ledger": {
+    "scope": "partial observed reference counters; dense arithmetic, memory traffic, hardware latency and energy remain unmeasured",
+    "per_method": {
+      "centered_T1": {
+        "source_warmup_calls": 240,
+        "source_active_unit_calls": 240,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 160
+      },
+      "centered_T2": {
+        "source_warmup_calls": 240,
+        "source_active_unit_calls": 480,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 320
+      },
+      "centered_T4": {
+        "source_warmup_calls": 240,
+        "source_active_unit_calls": 960,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 640
+      },
+      "centered_T8": {
+        "source_warmup_calls": 240,
+        "source_active_unit_calls": 1920,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 1280
+      },
+      "first_analog_T1": {
+        "source_warmup_calls": 240,
+        "source_active_unit_calls": 240,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 160
+      },
+      "first_analog_T2": {
+        "source_warmup_calls": 240,
+        "source_active_unit_calls": 480,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 320
+      },
+      "first_analog_T4": {
+        "source_warmup_calls": 240,
+        "source_active_unit_calls": 960,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 640
+      },
+      "first_analog_T8": {
+        "source_warmup_calls": 240,
+        "source_active_unit_calls": 1920,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 1280
+      },
+      "generic_T1": {
+        "source_warmup_calls": 320,
+        "source_active_unit_calls": 320,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 160
+      },
+      "generic_T2": {
+        "source_warmup_calls": 320,
+        "source_active_unit_calls": 640,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 320
+      },
+      "generic_T4": {
+        "source_warmup_calls": 320,
+        "source_active_unit_calls": 1280,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 640
+      },
+      "generic_T8": {
+        "source_warmup_calls": 320,
+        "source_active_unit_calls": 2560,
+        "analog_head_calls": 40,
+        "graph_layer_evaluations": 1280
+      }
+    },
+    "dense_mac_or_flop_count": null,
+    "memory_traffic_bytes": null,
+    "hardware_latency_or_energy": null
+  },
+  "alias_and_scope": {
+    "generic": "the immutable helper's generic shared-input encoder mode (all four layers receive coded inputs); no separate per-consumer CSE-only implementation is present.",
+    "per_consumer_extension": "A/B/D/E/C require independent encoders at each consumer and a separately reviewed forward implementation; no costs or results are imputed here.",
+    "dc_comparator_fairness": "The historical DC adaptation codes four graph node-branch ReLUs plus two MLP hidden ReLUs, while these affine modes keep the same MLP head analog. It is not a matched-head comparator. A valid DC-adapt-analog-head control must code only the four gated sites and use this same analog MLP head; that adapter is outside this evaluator and must be added before cross-family accuracy/fidelity comparisons."
+  },
+  "interpretation": "Dense feasibility reference with the same analog GatedTeacher MLP readout; this is not an event-cache backend or cost-efficiency result.",
+  "prediction_archives_sha256": {
+    "centered_T1": "f2706e1264caf9b65feeb8181327cf5c3ac95c41c854700385bbf6604a821480",
+    "centered_T2": "7a68b9ce69598b896fccf499de6feb8bd23a3462329954d4c6535c681abf16db",
+    "centered_T4": "4dda1a32b9fc24ee9c5ada3ab191d93e2383fa3a8d382f48bd13622169d340d7",
+    "centered_T8": "bb425bf3cd920f1e96e551c789207879fe704f5aaef3107f6b11ac4fc6fe1217",
+    "first_analog_T1": "9e563ca4b367e7a83d748ea6067025e15a8d3c83206b4238e6fc68462c92f034",
+    "first_analog_T2": "8a69a18cec8ef333d04a31a0a1250cb011172a664d64ede6836a9f6286686c7a",
+    "first_analog_T4": "44f95ba0a4f29e7803d614c06d32798f8f6bbdf100947f9d40b81c1bef541c25",
+    "first_analog_T8": "488bb6d6a8e96b2118bf9a61afa30937df2d0f8b8323a7f76919518d7226bbf1",
+    "generic_T1": "94603b8cddb9927f6f26d233b9b83c60eff2b98d2504f612a1f0ae4d866adc25",
+    "generic_T2": "517eac0b98aa20f9d1bef9c646be5584840e833840972c4f88fc38eacd18994e",
+    "generic_T4": "1a52b862802a75a5d01bac6fdee925f2ce5b663439e7bc87efe7b3f1c68b32f5",
+    "generic_T8": "3f05bec84a95c6f713724bfba376d7d1fe725abcc0e88f132ae4c8a53c49079d"
+  }
+}

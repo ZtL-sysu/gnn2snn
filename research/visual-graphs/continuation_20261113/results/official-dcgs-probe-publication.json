@@ -1,0 +1,5 @@
+{
+  "original_local_sha256": "4fae95d6d43a96f1e61d3a1c38cc0a923b97663ab6522e414b5b9fd5ea9c584e",
+  "public_sha256": "7172e0e229c86fd798c3117d3040527aee63447511f428af196c32bbcfea779e",
+  "change": "Author checkout and loaded-class absolute identity paths replaced by DCGS_REPO; actual API outcomes unchanged; originals retained local."
+}

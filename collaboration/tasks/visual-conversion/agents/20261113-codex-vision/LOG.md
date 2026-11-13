@@ -6,3 +6,5 @@
 - Publication: first compact checkpoint withexisting9teacherZIP reused; onlykeycode, successfulpredictionarrays/metrics and failure summaries. No data caches/repeatedfailedpayloads. Goalremainsactive; currentpaper independent≥7notachieved.
 
 - 2026-11-13T12:45:48.6217631Z 远端核验完成：科学检查点 ba66d9a3c10d7d3532176949b61575c48245a56e 与本地提交一致；main仍为f19a2f2。原库按字节保留CRLF，检查时显式识别CR行末；仅公开评阅副本去除多余Markdown空格，原始科学文件未修改。
+
+- 2026-11-13T13:45:38.838092+00:00 全5000图首组候选验证完成，12个逐样本档案/指标/哈希已复算。centered T4/T8=70.66/70.70%，只对当前seed与已测对照作描述；E1整体与完整成本未通过。官方DCGS真实API探测得到输入/元信息/FX错误，薄适配器可执行但未证明保真；空白入场评阅fa1403b未采信，本轮主智能体接手准入。

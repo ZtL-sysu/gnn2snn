@@ -1,0 +1,104 @@
+{
+  "status": "pass",
+  "scope": "primary-agent numeric recomputation from full5000 NPZs and comparison with JSON; not an independent scientific review or E1 overall pass",
+  "rows": [
+    {
+      "mode": "centered",
+      "T": 1,
+      "accuracy": 0.6718,
+      "agreement": 0.8206,
+      "mse": 1.309040191539878,
+      "nonzero_events": 801780759
+    },
+    {
+      "mode": "centered",
+      "T": 2,
+      "accuracy": 0.7076,
+      "agreement": 0.9594,
+      "mse": 0.06775804328666274,
+      "nonzero_events": 1554572593
+    },
+    {
+      "mode": "centered",
+      "T": 4,
+      "accuracy": 0.7066,
+      "agreement": 0.9968,
+      "mse": 0.00035937867526061304,
+      "nonzero_events": 2473336938
+    },
+    {
+      "mode": "centered",
+      "T": 8,
+      "accuracy": 0.707,
+      "agreement": 0.999,
+      "mse": 3.9816275686993124e-05,
+      "nonzero_events": 2829963544
+    },
+    {
+      "mode": "first_analog",
+      "T": 1,
+      "accuracy": 0.671,
+      "agreement": 0.8196,
+      "mse": 1.3919005196315466,
+      "nonzero_events": 1083869443
+    },
+    {
+      "mode": "first_analog",
+      "T": 2,
+      "accuracy": 0.7034,
+      "agreement": 0.9568,
+      "mse": 0.07075017619137046,
+      "nonzero_events": 2078513911
+    },
+    {
+      "mode": "first_analog",
+      "T": 4,
+      "accuracy": 0.7068,
+      "agreement": 0.997,
+      "mse": 0.0004743325886123718,
+      "nonzero_events": 3235852165
+    },
+    {
+      "mode": "first_analog",
+      "T": 8,
+      "accuracy": 0.7072,
+      "agreement": 0.9992,
+      "mse": 6.174072589426724e-05,
+      "nonzero_events": 3734374622
+    },
+    {
+      "mode": "generic",
+      "T": 1,
+      "accuracy": 0.4498,
+      "agreement": 0.4978,
+      "mse": 9.511488506811036,
+      "nonzero_events": 1453698065
+    },
+    {
+      "mode": "generic",
+      "T": 2,
+      "accuracy": 0.6796,
+      "agreement": 0.871,
+      "mse": 0.6167177478119663,
+      "nonzero_events": 2827756064
+    },
+    {
+      "mode": "generic",
+      "T": 4,
+      "accuracy": 0.7074,
+      "agreement": 0.9912,
+      "mse": 0.0027245493210063727,
+      "nonzero_events": 4910570987
+    },
+    {
+      "mode": "generic",
+      "T": 8,
+      "accuracy": 0.7066,
+      "agreement": 0.9986,
+      "mse": 0.00010480433716244717,
+      "nonzero_events": 5938873764
+    }
+  ],
+  "source_unchanged": true,
+  "data_unchanged": true
+}

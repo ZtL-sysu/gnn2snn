@@ -2,6 +2,8 @@
 
 本目录是精简工作快照；历史大证据包和旧目录不搬移、不重复上传。先读 CURRENT_SCOPE.md、PROTOCOL-v3.md、PROTOCOL-E1-head-addendum-v1.md；协作入口位于仓库 collaboration/。
 
+最新候选测量：[seed41完整验证表](results/e1-seed41-affine-v1/SUMMARY.md)。三模式×四T均保存全部5000图输出；centered T4/T8=70.66%/70.70%。E1整体、三种子与完整成本仍未完成，暂不宣称方法优势。
+
 已测：CIFAR10 GatedGCN seed41，官方完整5000验证图，ANN70.66%、DC4=70.72%、DC8=70.66%。当前固定环境完整重复的全部预测数组逐位一致；历史T8差1张预测且前后均错误，绝不称逐样本历史复现。results/e0_seed41_val.json保留指标和source/model/cal/data哈希；inputs/canonical-baseline-val.npz保存逐样本数组。数值差异、未通过的旧验收及scope限制均保留。
 
 复现依赖：先展开仓库 artifacts/verified-evidence.zip（tools/restore_evidence.py）；设置 GNN2SNN_ROOT 为仓库根、GNN2SNN_DATA_ROOT 为官方PyG数据根、DCGS_REPO 为钉死的作者仓库。使用本机Conda dyg-cold。作者commit5e0e4c73f1d0e8e17d81befa24ff947deec1f4be。
@@ -26,4 +28,4 @@ conda run -n dyg-cold python code/eval_teacher.py --teacher-dir $teacher --calib
 
 代码仍是稠密参考执行；部分事件计数不是完整成本/墙钟/节能证明。CSE-only是generic的明确别名；per-consumer实际使用各消费者独立源状态。旧DC含两层分类头编码，公平比较另需四层图分支编码+相同模拟分类头对照。未完成的对照/多seed/E2–E6不得记作完成。
 
-PUBLICATION_INDEX.json 区分本地原始SHA与公开副本SHA；路径去标识只用于公开副本，绝不修改旧科学源或哈希来冒充原始证据。
+PUBLICATION_INDEX.json 记录首个检查点ba66d9a的本地原始SHA与公开副本SHA；后续代码版本以对应提交和最新checkpoint manifest为准。路径去标识只用于公开副本，绝不修改旧科学源或哈希来冒充原始证据。

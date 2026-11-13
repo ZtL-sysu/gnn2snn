@@ -199,6 +199,7 @@ def evaluate(args):
     np.random.seed(41)
     device = torch.device(args.device)
     if device.type == "cuda" and not torch.cuda.is_available(): raise RuntimeError("CUDA unavailable")
+    if device.type=='cuda':torch.cuda.reset_peak_memory_stats(device)
     state = torch.load(checkpoint, map_location=device, weights_only=False)
     if state.get("metadata") != metadata: raise RuntimeError("Checkpoint metadata differs from run metadata")
     model = teacher_helper.build_teacher(state, device).eval()
@@ -214,6 +215,7 @@ def evaluate(args):
                     "analog_head_calls": 0, "graph_layer_evaluations": 0} for key in method_keys}
     label_parts, teacher_parts, indices = [], [], []
     graphs, start_time = 0, time.monotonic()
+    resource_probe=None
     for batch_no, batch in enumerate(model_loader):
         label_batch = next(label_iter)
         n = int(batch.num_graphs)
@@ -236,6 +238,14 @@ def evaluate(args):
             ledger[key]["analog_head_calls"] += int(result["head_calls"])
             ledger[key]["graph_layer_evaluations"] += len(model.layers) * int(timestep)
         graphs += n
+        if batch_no==0:
+            if device.type=='cuda':torch.cuda.synchronize(device)
+            resource_probe={'first_batch_graphs':n,'elapsed_sec':time.monotonic()-start_time,
+                'peak_allocated_bytes':int(torch.cuda.max_memory_allocated(device)) if device.type=='cuda' else None,
+                'scope':'resource feasibility only; not a latency benchmark'}
+            print(json.dumps({'resource_probe':resource_probe}),flush=True)
+            if resource_probe['elapsed_sec']*40>80*3600:
+                raise RuntimeError('Projected fixed validation grid exceeds declared E1 compute ceiling')
         if batch_no % 10 == 9 or graphs == EXPECTED_VAL:
             print(json.dumps({"graphs": graphs, "elapsed_sec": time.monotonic()-start_time}), flush=True)
     labels = np.concatenate(label_parts)
@@ -282,6 +292,7 @@ def evaluate(args):
                           "cudnn_benchmark": torch.backends.cudnn.benchmark,
                           "cublas_workspace_config": os.environ["CUBLAS_WORKSPACE_CONFIG"]},
               "elapsed_sec": time.monotonic()-start_time,
+              "resource_probe":resource_probe,
               "teacher_accuracy": float(np.mean(teacher.argmax(1) == labels)),
               "rows": rows, "operation_ledger": {
                   "scope": "partial observed reference counters; dense arithmetic, memory traffic, hardware latency and energy remain unmeasured",

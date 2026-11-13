@@ -1,0 +1,292 @@
+{
+  "scope": "synthetic architecture/API compatibility only; no official graphs or calibration",
+  "official_data_loaded": false,
+  "device": "cpu",
+  "pinned_author": {
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "author_repo": "DCGS_REPO",
+    "worktree_clean_except_ignored_bytecode": true,
+    "source_files": {
+      "relu_neuron": {
+        "path": "neurons/relu_neuron.py",
+        "sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+        "head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161",
+        "worktree_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161"
+      },
+      "line_neuron": {
+        "path": "neurons/line_neuron.py",
+        "sha256": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f",
+        "head_blob_oid": "1ab72bf65f22b2a74b4073e29735ef5bb9cd82ea",
+        "worktree_blob_oid": "1ab72bf65f22b2a74b4073e29735ef5bb9cd82ea"
+      }
+    },
+    "loaded_classes": {
+      "MTH_diff": "DCGS_REPO/neurons/relu_neuron.py",
+      "MTH_diff_line": "DCGS_REPO/neurons/line_neuron.py"
+    }
+  },
+  "steps": [
+    {
+      "step": "author_converter_direct_without_threshold_hooks",
+      "status": "executed",
+      "result": {
+        "registered_relu_modules": 0,
+        "converted_source_modules": 0,
+        "interpretation": "zero converted modules is not a successful conversion"
+      }
+    },
+    {
+      "step": "author_threshold_getter_native_pyg_loader",
+      "status": "error",
+      "error_type": "ValueError",
+      "message": "too many values to unpack (expected 2)",
+      "frames": [
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 41,
+          "function": "attempt"
+        },
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 54,
+          "function": "<lambda>"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1779,
+          "function": "_wrapped_call_impl"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1790,
+          "function": "_call_impl"
+        },
+        {
+          "file": "DCGS_REPO\\converter\\threshold_getter.py",
+          "line": 30,
+          "function": "forward"
+        }
+      ]
+    },
+    {
+      "step": "author_threshold_getter_tuple_adapter",
+      "status": "error",
+      "error_type": "AttributeError",
+      "message": "'ThreHook' object has no attribute 'in_features'",
+      "frames": [
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 41,
+          "function": "attempt"
+        },
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 58,
+          "function": "calibrate_adapter"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1779,
+          "function": "_wrapped_call_impl"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1790,
+          "function": "_call_impl"
+        },
+        {
+          "file": "DCGS_REPO\\converter\\threshold_getter.py",
+          "line": 37,
+          "function": "forward"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1779,
+          "function": "_wrapped_call_impl"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1790,
+          "function": "_call_impl"
+        },
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\takeover_20261112\\gated_teacher_model.py",
+          "line": 91,
+          "function": "forward"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1968,
+          "function": "__getattr__"
+        }
+      ]
+    },
+    {
+      "step": "author_threshold_getter_tuple_and_metadata_adapter",
+      "status": "executed",
+      "result": {
+        "hooked_modules": 15,
+        "calibration_scope": "two synthetic unlabeled graphs only; not usable experimental thresholds"
+      }
+    },
+    {
+      "step": "author_generic_converter_and_temporal_forward",
+      "status": "error",
+      "error_type": "TypeError",
+      "message": "zeros_like(): argument 'input' (position 1) must be Tensor, not DataBatch",
+      "frames": [
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 41,
+          "function": "attempt"
+        },
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 78,
+          "function": "convert_and_forward"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1779,
+          "function": "_wrapped_call_impl"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1790,
+          "function": "_call_impl"
+        },
+        {
+          "file": "DCGS_REPO\\forwards\\__init__.py",
+          "line": 154,
+          "function": "forward_snn_diff_rate_s"
+        }
+      ]
+    },
+    {
+      "step": "author_generic_with_tensor_payload_adapter",
+      "status": "executed",
+      "result": {
+        "output_shape": [
+          4,
+          2,
+          10
+        ],
+        "finite": true,
+        "converted_source_modules": 15,
+        "scope": "fixed synthetic topology/edge attributes, Tensor node payload; no fidelity or dynamic-graph claim"
+      }
+    },
+    {
+      "step": "author_converter_fx_fusion",
+      "status": "error",
+      "error_type": "AttributeError",
+      "message": "'Sequential' object has no attribute 'in_features'",
+      "frames": [
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 41,
+          "function": "attempt"
+        },
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 97,
+          "function": "<lambda>"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1779,
+          "function": "_wrapped_call_impl"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1790,
+          "function": "_call_impl"
+        },
+        {
+          "file": "DCGS_REPO\\converter\\converter.py",
+          "line": 22,
+          "function": "forward"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\fx\\_symbolic_trace.py",
+          "line": 1377,
+          "function": "symbolic_trace"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\fx\\_symbolic_trace.py",
+          "line": 890,
+          "function": "trace"
+        },
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\takeover_20261112\\gated_teacher_model.py",
+          "line": 91,
+          "function": "forward"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\fx\\_symbolic_trace.py",
+          "line": 851,
+          "function": "module_getattr_wrapper"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\nn\\modules\\module.py",
+          "line": 1968,
+          "function": "__getattr__"
+        }
+      ]
+    },
+    {
+      "step": "author_fx_path_after_explicit_metadata_adapter",
+      "status": "error",
+      "error_type": "TraceError",
+      "message": "symbolically traced variables cannot be used as inputs to control flow",
+      "frames": [
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 41,
+          "function": "attempt"
+        },
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\continuation_20261113\\code\\probe_official_dcgs.py",
+          "line": 102,
+          "function": "fx_after_metadata"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\fx\\_symbolic_trace.py",
+          "line": 1377,
+          "function": "symbolic_trace"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\fx\\_symbolic_trace.py",
+          "line": 890,
+          "function": "trace"
+        },
+        {
+          "file": "REPO_ROOT\\research\\visual-graphs\\takeover_20261112\\gated_teacher_model.py",
+          "line": 91,
+          "function": "forward"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\fx\\proxy.py",
+          "line": 725,
+          "function": "__bool__"
+        },
+        {
+          "file": "LOCAL_HOME\\miniconda3\\envs\\dyg-cold\\Lib\\site-packages\\torch\\fx\\proxy.py",
+          "line": 474,
+          "function": "to_bool"
+        }
+      ]
+    }
+  ],
+  "runtime_adapter": "ThreHook forwards read-only in_features/out_features metadata; pinned source bytes unchanged",
+  "generic_converted_source_modules": 15,
+  "author_files_sha256": {
+    "converter/converter.py": "f23980d39741c5775d24ea827d64462b6be4eb432ffdbaf8541c09aaa10c62f8",
+    "converter/threshold_getter.py": "06542ad3e600f3cb49b2cabe1193c35327ee6e36030729f6363bb85af64951ce",
+    "forwards/__init__.py": "fc9649eb4673f00ba548fa9694e739fd2fb7e1052a2456426db3915d4ba877ab",
+    "forwards/encoder.py": "e6c767aaabb678ed4d3fb4f5c9193c55abf9739f641095705e94f198f08010f9",
+    "forwards/decoder.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "project_model_sha256": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+  "limitations": "No full-train threshold iteration, no official validation, no fidelity numbers. API failure is not a universal graph-conversion impossibility."
+}
