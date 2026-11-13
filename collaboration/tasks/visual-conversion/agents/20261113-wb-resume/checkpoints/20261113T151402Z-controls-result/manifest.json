@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-wb-resume",
+  "created_at_utc": "2026-11-13T15:19:28.734104+00:00",
+  "status": "in_progress",
+  "input_git_head": "2538571a0060f29c40bbd075dcc3d0a8ed878b99",
+  "protocol": {
+    "path": "collaboration/tasks/visual-conversion/TASK.md",
+    "sha256": "7b156284abbc3119233f9d87da9071bdf2656a672603a293e5a0a276bc6f977f",
+    "bytes": 1778
+  },
+  "artifacts": [
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/checkpoints/20261113T151402Z-controls-result/CHECKPOINT.md",
+      "sha256": "ac872cbbd991cc4d4497f3c330988a5bb00328badc08b64cbfd0738da2589494",
+      "bytes": 3768
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/checkpoints/20261113T151402Z-controls-result/METRICS.csv",
+      "sha256": "8760288e82481eb24cb4c68052ab3ceebf62e09709df8fe141a2f167d801ea83",
+      "bytes": 14845
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/report.public.json",
+      "sha256": "6d633bfca0ff6a49d794223bd5df0bad194c1a1dbde35dba5a14642c5da62b73",
+      "bytes": 26849
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/HANDOFF.md",
+      "sha256": "b13dd6c9ef282050fdce10db8b9cc00c256839f6654272e1ae9fe6ffadb5f94e",
+      "bytes": 6694
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/LOG.md",
+      "sha256": "4d1db4d844595e5b1ec87dfe2371ee5a7c68426b2ce394ac4ca76c2e2999814c",
+      "bytes": 2496
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/GOAL_LEDGER.md",
+      "sha256": "8350040c4c355274bef60482b625bc2cc3ab31624afe8da4f26a82cc7871cbbb",
+      "bytes": 10227
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/pipeline-state.md",
+      "sha256": "9eb1b6751750ba3734b7cf40f3c1a14c4c43d16db2e08b39197397ae177e3df4",
+      "bytes": 3065
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/deidentify_report_v1.py",
+      "sha256": "f2656775bf0108305305a2265fbc133766f5e0a3b8820986b5075187db0134ef",
+      "bytes": 2840
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/make_metrics_v1.py",
+      "sha256": "91d02556d60710d694dcd9de3a03e22c491ee8fbe99b63b2643d9b638bab3301",
+      "bytes": 1985
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e1_seed41_controls_v1.log",
+      "sha256": "ba3ffee1127d3a0c3d670bcbfd96d9953bddbb972a622ddf08276e176e6f2845",
+      "bytes": 1977
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/PROTOCOL-v3.md",
+      "sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+      "bytes": 4321
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/dc_adapt_analog_head_T1.npz",
+      "sha256": "f96ad657894ceb0fcf51689cd769084cae3554d5f05ff4d7c2bc8a23e5e7e9ed",
+      "bytes": 378539
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/per_consumer_T1.npz",
+      "sha256": "94603b8cddb9927f6f26d233b9b83c60eff2b98d2504f612a1f0ae4d866adc25",
+      "bytes": 377382
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/cse_only_T1.npz",
+      "sha256": "94603b8cddb9927f6f26d233b9b83c60eff2b98d2504f612a1f0ae4d866adc25",
+      "bytes": 377382
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/dc_adapt_analog_head_T2.npz",
+      "sha256": "0d3ade4e4ce410ff63ef2cf121185c003373b8bef124ea7a9cc5a2d728083f6b",
+      "bytes": 378680
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/per_consumer_T2.npz",
+      "sha256": "517eac0b98aa20f9d1bef9c646be5584840e833840972c4f88fc38eacd18994e",
+      "bytes": 378524
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/cse_only_T2.npz",
+      "sha256": "517eac0b98aa20f9d1bef9c646be5584840e833840972c4f88fc38eacd18994e",
+      "bytes": 378524
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/dc_adapt_analog_head_T4.npz",
+      "sha256": "8b7e23155e54c8c4cf6b5253cd472e7596f353e156f902c0e6747a3f52a44bfc",
+      "bytes": 378683
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/per_consumer_T4.npz",
+      "sha256": "1a52b862802a75a5d01bac6fdee925f2ce5b663439e7bc87efe7b3f1c68b32f5",
+      "bytes": 378683
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/cse_only_T4.npz",
+      "sha256": "1a52b862802a75a5d01bac6fdee925f2ce5b663439e7bc87efe7b3f1c68b32f5",
+      "bytes": 378683
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/dc_adapt_analog_head_T8.npz",
+      "sha256": "7f6ad30254c8e19dc42068e581e3025142dd0ab99bda60b69a792ed66f2b51ef",
+      "bytes": 378676
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/per_consumer_T8.npz",
+      "sha256": "3f05bec84a95c6f713724bfba376d7d1fe725abcc0e88f132ae4c8a53c49079d",
+      "bytes": 378662
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-seed41-controls-v1/cse_only_T8.npz",
+      "sha256": "3f05bec84a95c6f713724bfba376d7d1fe725abcc0e88f132ae4c8a53c49079d",
+      "bytes": 378662
+    }
+  ]
+}

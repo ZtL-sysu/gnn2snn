@@ -39,3 +39,11 @@ None. No official-data GPU inference was started this round. No remote GPU job, 
 - Frozen dual-calibration binding verified: affine_cal1.json (18 bound inputs rehashed) + gcal_v1.json (six sites) + teacher best.pt d26df76d… . Synthetic tests 4 passed; PRECHECK OK.
 - **Live job**: official full-5000 seed41 validation of `dc_adapt_analog_head`, `per_consumer`, `cse_only` × T1/2/4/8 on local RTX 3060, started 2026-11-13T15:08:08Z. Tool job handle `tzmLS9`, local Python PID 33240, first-batch probe 9.071 s / 2.98 GiB peak. Output `results/e1-seed41-controls-v1/` under the run root; log `logs/e1_seed41_controls_v1.log`. Not yet complete at this checkpoint; no result is claimed.
 - Next: verify the finished run (per-sample NPZ, report hashes, canonical teacher check), publish the resulting evidence or a truthful failure summary as the next checkpoint, then seeds 42/43 and complete cost accounting.
+
+## R3 update — 2026-11-13T15:14:02Z
+
+- Job `tzmLS9` finished exit 0 after 5m54s: full official 5000-graph validation, 12 control rows, teacher accuracy 0.7066, all source/data/calibration/author hashes unchanged before and after. No test inference.
+- Results (accuracy T1/T2/T4/T8): `dc_adapt_analog_head` 68.26/70.78/70.66/70.68%; `per_consumer` 44.98/67.96/70.74/70.66%; `cse_only` identical to per_consumer. Cross-run bitwise comparison against the earlier independent `generic_T{1,2,4,8}.npz` is True for all four T, confirming the frozen trajectory and the documented alias semantics.
+- Evidence: `results/e1-seed41-controls-v1/` (report.json + 12 per-sample NPZ, 4.4 MiB), `logs/e1_seed41_controls_v1.log`, checkpoint `20261113T151402Z-controls-result/CHECKPOINT.md` + `METRICS.csv` (36 fixed-column rows).
+- **E1 is NOT passed**: seeds 42/43 (require their own frozen full-train label-free calibrations), shared-theta controls, historical six-site DC-adapt row aggregation, complete known-operation cost and matched wall-clock are all still missing. The .3pp-plus-cost criterion is not evaluable. No Story decision, no paper, no independent review.
+- Live jobs: none. Next entry: generate frozen calibrations for teachers 42/43, rerun the unchanged grid, then complete cost accounting and E2/E4/E6.

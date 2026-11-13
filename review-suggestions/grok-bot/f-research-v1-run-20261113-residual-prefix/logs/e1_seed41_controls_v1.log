@@ -1,0 +1,84 @@
+{"resource_probe": {"first_batch_graphs": 128, "elapsed_sec": 9.07116309995763, "peak_allocated_bytes": 2978871808, "scope": "resource feasibility only; not a latency benchmark"}}
+{"graphs": 1280, "elapsed_sec": 88.2054128999589}
+{"graphs": 2560, "elapsed_sec": 175.8499279000098}
+{"graphs": 3840, "elapsed_sec": 263.45064960001037}
+{"graphs": 5000, "elapsed_sec": 345.0432647999842}
+{
+  "status": "complete",
+  "graphs": 5000,
+  "teacher_accuracy": 0.7066,
+  "rows": [
+    {
+      "mode": "dc_adapt_analog_head",
+      "T": 1,
+      "accuracy": 0.6826,
+      "teacher_agreement": 0.8494
+    },
+    {
+      "mode": "dc_adapt_analog_head",
+      "T": 2,
+      "accuracy": 0.7078,
+      "teacher_agreement": 0.9654
+    },
+    {
+      "mode": "dc_adapt_analog_head",
+      "T": 4,
+      "accuracy": 0.7066,
+      "teacher_agreement": 0.9974
+    },
+    {
+      "mode": "dc_adapt_analog_head",
+      "T": 8,
+      "accuracy": 0.7068,
+      "teacher_agreement": 0.9994
+    },
+    {
+      "mode": "per_consumer",
+      "T": 1,
+      "accuracy": 0.4498,
+      "teacher_agreement": 0.4978
+    },
+    {
+      "mode": "per_consumer",
+      "T": 2,
+      "accuracy": 0.6796,
+      "teacher_agreement": 0.871
+    },
+    {
+      "mode": "per_consumer",
+      "T": 4,
+      "accuracy": 0.7074,
+      "teacher_agreement": 0.9912
+    },
+    {
+      "mode": "per_consumer",
+      "T": 8,
+      "accuracy": 0.7066,
+      "teacher_agreement": 0.9986
+    },
+    {
+      "mode": "cse_only",
+      "T": 1,
+      "accuracy": 0.4498,
+      "teacher_agreement": 0.4978
+    },
+    {
+      "mode": "cse_only",
+      "T": 2,
+      "accuracy": 0.6796,
+      "teacher_agreement": 0.871
+    },
+    {
+      "mode": "cse_only",
+      "T": 4,
+      "accuracy": 0.7074,
+      "teacher_agreement": 0.9912
+    },
+    {
+      "mode": "cse_only",
+      "T": 8,
+      "accuracy": 0.7066,
+      "teacher_agreement": 0.9986
+    }
+  ]
+}
