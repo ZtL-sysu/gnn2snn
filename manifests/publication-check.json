@@ -1,8 +1,8 @@
 {
   "status": "pass",
   "scope": "compact curated publication, research remains paused",
-  "files": 393,
-  "repository_bytes": 83466045,
+  "files": 183,
+  "repository_bytes": 42287842,
   "python_files_syntax_checked": 53,
   "teacher_checkpoints": 9,
   "evidence_files_roundtrip_verified": 37,
@@ -11,5 +11,6 @@
   "corrupt_zip_rejected": true,
   "credential_pattern_findings": [],
   "large_snapshots_raw_chats_failed_experiment_payloads_included": false,
-  "limitations": "known-pattern credential scan; historical manuscript remains a draft; archive validation is not a scientific method/review pass"
+  "limitations": "known-pattern credential scan; historical manuscript remains a draft; archive validation is not a scientific method/review pass",
+  "count_scope": "Git-tracked publication files; excludes local .git object storage"
 }
