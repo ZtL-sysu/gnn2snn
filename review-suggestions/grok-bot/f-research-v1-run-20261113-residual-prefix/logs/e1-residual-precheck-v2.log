@@ -1,0 +1,97 @@
+{
+  "41": {
+    "frozen_files_verified": 6,
+    "processed_files_verified": 5,
+    "teacher_accuracy": 0.7066,
+    "affine_sites": 14,
+    "six_sites": [
+      "gated_0",
+      "gated_1",
+      "gated_2",
+      "gated_3",
+      "mlp_0",
+      "mlp_1"
+    ],
+    "six_widths": [
+      70,
+      70,
+      70,
+      70,
+      35,
+      17
+    ],
+    "shared_theta_vector_count": 6,
+    "shared_theta_channelwise_max_equivalent": true
+  },
+  "42": {
+    "frozen_files_verified": 6,
+    "processed_files_verified": 5,
+    "teacher_accuracy": 0.703,
+    "affine_sites": 14,
+    "six_sites": [
+      "gated_0",
+      "gated_1",
+      "gated_2",
+      "gated_3",
+      "mlp_0",
+      "mlp_1"
+    ],
+    "six_widths": [
+      70,
+      70,
+      70,
+      70,
+      35,
+      17
+    ],
+    "shared_theta_vector_count": 6,
+    "shared_theta_channelwise_max_equivalent": true
+  },
+  "43": {
+    "frozen_files_verified": 6,
+    "processed_files_verified": 5,
+    "teacher_accuracy": 0.7074,
+    "affine_sites": 14,
+    "six_sites": [
+      "gated_0",
+      "gated_1",
+      "gated_2",
+      "gated_3",
+      "mlp_0",
+      "mlp_1"
+    ],
+    "six_widths": [
+      70,
+      70,
+      70,
+      70,
+      35,
+      17
+    ],
+    "shared_theta_vector_count": 6,
+    "shared_theta_channelwise_max_equivalent": true
+  },
+  "author_provenance": {
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "affine_base_source_files": {
+      "relu_neuron": {
+        "path": "neurons/relu_neuron.py",
+        "sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851"
+      },
+      "line_neuron": {
+        "path": "neurons/line_neuron.py",
+        "sha256": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f"
+      }
+    },
+    "e0_source_file": {
+      "path": "neurons/relu_neuron.py",
+      "sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+      "head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161"
+    },
+    "worktree_clean_except_ignored_bytecode": true,
+    "e0_e1_class_identity": true
+  },
+  "status": "PASS",
+  "check": "e1_residual_precheck_v1",
+  "note": "hash/structure/threshold binding only; no validation pass, no scientific result"
+}

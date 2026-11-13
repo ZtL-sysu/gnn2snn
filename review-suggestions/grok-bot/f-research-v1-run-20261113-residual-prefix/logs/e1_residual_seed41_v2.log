@@ -1,0 +1,83 @@
+{"resource_probe": {"first_batch_graphs": 128, "elapsed_sec": 6.629738199990243, "peak_allocated_bytes": 2545699328, "scope": "resource feasibility only; not a latency benchmark"}}
+{"graphs": 1280, "elapsed_sec": 64.1853320999071}
+{"graphs": 2560, "elapsed_sec": 128.01967899990268}
+{"graphs": 3840, "elapsed_sec": 191.64702629996464}
+{"graphs": 5000, "elapsed_sec": 250.64182589994743}
+{
+  "status": "complete",
+  "seed": 41,
+  "graphs": 5000,
+  "teacher_accuracy": 0.7066,
+  "canonical_dc_adapt_reproduction": {
+    "T4": {
+      "bitwise_equal_to_E0_canonical": true,
+      "max_abs_difference": 0.0
+    },
+    "T8": {
+      "bitwise_equal_to_E0_canonical": true,
+      "max_abs_difference": 0.0
+    }
+  },
+  "rows": [
+    {
+      "mode": "dc_adapt_six_site",
+      "T": 1,
+      "accuracy": 0.623
+    },
+    {
+      "mode": "dc_adapt_six_site",
+      "T": 2,
+      "accuracy": 0.6988
+    },
+    {
+      "mode": "dc_adapt_six_site",
+      "T": 4,
+      "accuracy": 0.7072
+    },
+    {
+      "mode": "dc_adapt_six_site",
+      "T": 8,
+      "accuracy": 0.7066
+    },
+    {
+      "mode": "first_analog_shared_theta",
+      "T": 1,
+      "accuracy": 0.6594
+    },
+    {
+      "mode": "first_analog_shared_theta",
+      "T": 2,
+      "accuracy": 0.7036
+    },
+    {
+      "mode": "first_analog_shared_theta",
+      "T": 4,
+      "accuracy": 0.7064
+    },
+    {
+      "mode": "first_analog_shared_theta",
+      "T": 8,
+      "accuracy": 0.7068
+    },
+    {
+      "mode": "centered_shared_theta",
+      "T": 1,
+      "accuracy": 0.6698
+    },
+    {
+      "mode": "centered_shared_theta",
+      "T": 2,
+      "accuracy": 0.7092
+    },
+    {
+      "mode": "centered_shared_theta",
+      "T": 4,
+      "accuracy": 0.7064
+    },
+    {
+      "mode": "centered_shared_theta",
+      "T": 8,
+      "accuracy": 0.7066
+    }
+  ]
+}

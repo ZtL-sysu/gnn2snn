@@ -1,0 +1,34 @@
+{
+  "check": "verify_e1_residual_v1",
+  "note": "independent recheck of published artifacts only; no scientific acceptance claim",
+  "per_seed": {
+    "41": {
+      "accuracy_recomputable": true,
+      "canonical_indices_labels_bitwise": true,
+      "npz_hashes_verified": 12,
+      "rows_verified": 12,
+      "seed41_teacher_canonical_bitwise": true,
+      "shared_theta_equals_frozen_mode_T4": {
+        "centered_shared_theta": false,
+        "first_analog_shared_theta": false
+      }
+    },
+    "42": {
+      "accuracy_recomputable": true,
+      "canonical_indices_labels_bitwise": true,
+      "npz_hashes_verified": 12,
+      "rows_verified": 12,
+      "seed41_teacher_canonical_bitwise": false,
+      "shared_theta_equals_frozen_mode_T4": {}
+    },
+    "43": {
+      "accuracy_recomputable": true,
+      "canonical_indices_labels_bitwise": true,
+      "npz_hashes_verified": 12,
+      "rows_verified": 12,
+      "seed41_teacher_canonical_bitwise": false,
+      "shared_theta_equals_frozen_mode_T4": {}
+    }
+  },
+  "status": "PASS"
+}

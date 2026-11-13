@@ -1,0 +1,310 @@
+{
+  "canonical_baseline_sha256": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+  "coverage": 5000,
+  "criterion": {
+    "reason": "ANN is an upper reference only; complete cost and matched wall-clock evidence still missing",
+    "verdict": "NOT EVALUABLE / E1 NOT PASSED"
+  },
+  "dataset": "CIFAR10",
+  "method": "ANN",
+  "missing_required_rows_remaining": [
+    "historical_six_site_DC_adapt",
+    "shared_theta_controls",
+    "complete_known_operation_cost",
+    "matched_wall_clock_latency"
+  ],
+  "no_gpu_job": true,
+  "no_new_teacher_forward": true,
+  "per_seed": {
+    "41": {
+      "canonical_indices_labels_bitwise": true,
+      "frozen_val_accuracy": 0.7066,
+      "recomputed_accuracy": 0.7066,
+      "rows_written": 4,
+      "source_npz_count": 24,
+      "source_npz_sha256": {
+        "centered_T1.npz": "f2706e1264caf9b65feeb8181327cf5c3ac95c41c854700385bbf6604a821480",
+        "centered_T2.npz": "7a68b9ce69598b896fccf499de6feb8bd23a3462329954d4c6535c681abf16db",
+        "centered_T4.npz": "4dda1a32b9fc24ee9c5ada3ab191d93e2383fa3a8d382f48bd13622169d340d7",
+        "centered_T8.npz": "bb425bf3cd920f1e96e551c789207879fe704f5aaef3107f6b11ac4fc6fe1217",
+        "cse_only_T1.npz": "94603b8cddb9927f6f26d233b9b83c60eff2b98d2504f612a1f0ae4d866adc25",
+        "cse_only_T2.npz": "517eac0b98aa20f9d1bef9c646be5584840e833840972c4f88fc38eacd18994e",
+        "cse_only_T4.npz": "1a52b862802a75a5d01bac6fdee925f2ce5b663439e7bc87efe7b3f1c68b32f5",
+        "cse_only_T8.npz": "3f05bec84a95c6f713724bfba376d7d1fe725abcc0e88f132ae4c8a53c49079d",
+        "dc_adapt_analog_head_T1.npz": "f96ad657894ceb0fcf51689cd769084cae3554d5f05ff4d7c2bc8a23e5e7e9ed",
+        "dc_adapt_analog_head_T2.npz": "0d3ade4e4ce410ff63ef2cf121185c003373b8bef124ea7a9cc5a2d728083f6b",
+        "dc_adapt_analog_head_T4.npz": "8b7e23155e54c8c4cf6b5253cd472e7596f353e156f902c0e6747a3f52a44bfc",
+        "dc_adapt_analog_head_T8.npz": "7f6ad30254c8e19dc42068e581e3025142dd0ab99bda60b69a792ed66f2b51ef",
+        "first_analog_T1.npz": "9e563ca4b367e7a83d748ea6067025e15a8d3c83206b4238e6fc68462c92f034",
+        "first_analog_T2.npz": "8a69a18cec8ef333d04a31a0a1250cb011172a664d64ede6836a9f6286686c7a",
+        "first_analog_T4.npz": "44f95ba0a4f29e7803d614c06d32798f8f6bbdf100947f9d40b81c1bef541c25",
+        "first_analog_T8.npz": "488bb6d6a8e96b2118bf9a61afa30937df2d0f8b8323a7f76919518d7226bbf1",
+        "generic_T1.npz": "94603b8cddb9927f6f26d233b9b83c60eff2b98d2504f612a1f0ae4d866adc25",
+        "generic_T2.npz": "517eac0b98aa20f9d1bef9c646be5584840e833840972c4f88fc38eacd18994e",
+        "generic_T4.npz": "1a52b862802a75a5d01bac6fdee925f2ce5b663439e7bc87efe7b3f1c68b32f5",
+        "generic_T8.npz": "3f05bec84a95c6f713724bfba376d7d1fe725abcc0e88f132ae4c8a53c49079d",
+        "per_consumer_T1.npz": "94603b8cddb9927f6f26d233b9b83c60eff2b98d2504f612a1f0ae4d866adc25",
+        "per_consumer_T2.npz": "517eac0b98aa20f9d1bef9c646be5584840e833840972c4f88fc38eacd18994e",
+        "per_consumer_T4.npz": "1a52b862802a75a5d01bac6fdee925f2ce5b663439e7bc87efe7b3f1c68b32f5",
+        "per_consumer_T8.npz": "3f05bec84a95c6f713724bfba376d7d1fe725abcc0e88f132ae4c8a53c49079d"
+      },
+      "teacher_logits_differ_from_seed41": false,
+      "teacher_logits_identical_across_all_source_npz": true
+    },
+    "42": {
+      "canonical_indices_labels_bitwise": true,
+      "frozen_val_accuracy": 0.703,
+      "recomputed_accuracy": 0.703,
+      "rows_written": 4,
+      "source_npz_count": 24,
+      "source_npz_sha256": {
+        "centered_T1.npz": "e9ee298374a3ccda38bf3d423a5dc0f199085e6b59812638a4b87c9e8383494e",
+        "centered_T2.npz": "3906cfd95da5dfcbe0361ad56bf4eaa9fc8f57781e887ee321a5b9cf4e122527",
+        "centered_T4.npz": "f4c6967b97134ed474d499906def2a54a41286edfb001306fb26161f1bc6c0f4",
+        "centered_T8.npz": "3bca997e557ecf4e9ec43ece30a6f52fb86b03dbea35bac76425b23038ce81d1",
+        "cse_only_T1.npz": "ae7c4cda4352cfdc6c1d1a7011d250628906db6dcdf4aee42ab85aa70bb4e928",
+        "cse_only_T2.npz": "6642a40f3285688ddd7c110877c6805c441faec1bd1d88228b7ccb97bf2cd177",
+        "cse_only_T4.npz": "aef690324c7b6ff47ce9caed302a8ecd8ebdf5e6c36ec3bc9ca8113b96eeb4bc",
+        "cse_only_T8.npz": "d4c9755e9856b7a37ab5ea9a0e14d9f4b8907e3cb8e9eca7d9909ff99298e32a",
+        "dc_adapt_analog_head_T1.npz": "7eb6d5fc6088feceeb045dfca4176a17cef6d21c8fd4084b5bd1b67c10140b12",
+        "dc_adapt_analog_head_T2.npz": "3910f119987da465b7e57d6afb59aca253ab180411d3a7a6e70209cb98fdd094",
+        "dc_adapt_analog_head_T4.npz": "2cc287420fc0677dce53238f2c665f30e5a7186e897af92551d4cdd2d3554dd3",
+        "dc_adapt_analog_head_T8.npz": "f55ecbcc8d19b9b10393317158de06cf7fce9c1c2f0a04e08e1c24e1af31756f",
+        "first_analog_T1.npz": "4c3e2df12bf122e0bf1afd58323f5c701e875ddb72fec5f19c04b32d41dacff8",
+        "first_analog_T2.npz": "718714b355c10aff9147287544398a057f0ad2b180c5e473787085a49e0ddd84",
+        "first_analog_T4.npz": "2f4d2675fcefa54935959df3d5d94a768fdef1dcfed3e38366ad467ed73b6b8c",
+        "first_analog_T8.npz": "35ad020cbfb3eb2ba4b97c736cf64d620785e3a3ff302a36f2bf21bddd783f64",
+        "generic_T1.npz": "ae7c4cda4352cfdc6c1d1a7011d250628906db6dcdf4aee42ab85aa70bb4e928",
+        "generic_T2.npz": "6642a40f3285688ddd7c110877c6805c441faec1bd1d88228b7ccb97bf2cd177",
+        "generic_T4.npz": "aef690324c7b6ff47ce9caed302a8ecd8ebdf5e6c36ec3bc9ca8113b96eeb4bc",
+        "generic_T8.npz": "d4c9755e9856b7a37ab5ea9a0e14d9f4b8907e3cb8e9eca7d9909ff99298e32a",
+        "per_consumer_T1.npz": "ae7c4cda4352cfdc6c1d1a7011d250628906db6dcdf4aee42ab85aa70bb4e928",
+        "per_consumer_T2.npz": "6642a40f3285688ddd7c110877c6805c441faec1bd1d88228b7ccb97bf2cd177",
+        "per_consumer_T4.npz": "aef690324c7b6ff47ce9caed302a8ecd8ebdf5e6c36ec3bc9ca8113b96eeb4bc",
+        "per_consumer_T8.npz": "d4c9755e9856b7a37ab5ea9a0e14d9f4b8907e3cb8e9eca7d9909ff99298e32a"
+      },
+      "teacher_logits_differ_from_seed41": true,
+      "teacher_logits_identical_across_all_source_npz": true
+    },
+    "43": {
+      "canonical_indices_labels_bitwise": true,
+      "frozen_val_accuracy": 0.7074,
+      "recomputed_accuracy": 0.7074,
+      "rows_written": 4,
+      "source_npz_count": 24,
+      "source_npz_sha256": {
+        "centered_T1.npz": "8c5e4e067b2a894b90b065ecf4fa085036b98bae7bae581284a399c87f0d9d52",
+        "centered_T2.npz": "623de3c528882a8ee51fe579ca5444463f4875a6cab0105385a1cc42a0c7bb19",
+        "centered_T4.npz": "2dd27013cb4577710f0331cef0cb605febbe87db4c88a0de75a9ece038516bff",
+        "centered_T8.npz": "b04f0c0bf29100ed6d9ba80b186f367aa00293541750879542e2b6250d490bb4",
+        "cse_only_T1.npz": "a01c5a1eb544f9e30ba454910b3502364c2d03ba06d24dfd51d14abdbd1a4b66",
+        "cse_only_T2.npz": "158f3250ac7d0c0545b184df4545cd2fd06a5e438b14628f7f44dff8c8c49010",
+        "cse_only_T4.npz": "e5ca3b37432b614f9bcbc400fbb863eaf1c3bd5a43fae976853591761633cf75",
+        "cse_only_T8.npz": "7376b1fd3bdc31812595e47aa697e4585cbee377c44c754f6b1c3cc65cb86edb",
+        "dc_adapt_analog_head_T1.npz": "f9c93c4ad295a378cbe3937b0057b97230b3571e8d646e3b9f3028446a74d04d",
+        "dc_adapt_analog_head_T2.npz": "b02d2cf6ee923dffc7b9f28ab3bd8ea688fc46d197a1f5ac87f33fd9c7a51cdb",
+        "dc_adapt_analog_head_T4.npz": "a3dcf54a2260c6332b392cc9252c8c99cbb90beb4a15b22935f0a6ca03b8e135",
+        "dc_adapt_analog_head_T8.npz": "1d6b1c7d09f044ae1b6f1e43a5e3f4794504e318122f678292bc20ce52b8b016",
+        "first_analog_T1.npz": "5d805f9742cd5bf7e2484b1d1407d36acae34e3f0b7ebca7f3e9c7cf812de8cd",
+        "first_analog_T2.npz": "95e01dbe32e3b64bbdbfc87cabdeac885a67c4e1fe4790b2170c2879511c70bd",
+        "first_analog_T4.npz": "c51e7508c3823f7ff8fca04d509d498a3be50d344a1338df79336c9cb32b0a9e",
+        "first_analog_T8.npz": "64a6d39078147f732fa92d85da645523011fa8e4a61038b3e0ccabceba9c38fe",
+        "generic_T1.npz": "a01c5a1eb544f9e30ba454910b3502364c2d03ba06d24dfd51d14abdbd1a4b66",
+        "generic_T2.npz": "158f3250ac7d0c0545b184df4545cd2fd06a5e438b14628f7f44dff8c8c49010",
+        "generic_T4.npz": "e5ca3b37432b614f9bcbc400fbb863eaf1c3bd5a43fae976853591761633cf75",
+        "generic_T8.npz": "7376b1fd3bdc31812595e47aa697e4585cbee377c44c754f6b1c3cc65cb86edb",
+        "per_consumer_T1.npz": "a01c5a1eb544f9e30ba454910b3502364c2d03ba06d24dfd51d14abdbd1a4b66",
+        "per_consumer_T2.npz": "158f3250ac7d0c0545b184df4545cd2fd06a5e438b14628f7f44dff8c8c49010",
+        "per_consumer_T4.npz": "e5ca3b37432b614f9bcbc400fbb863eaf1c3bd5a43fae976853591761633cf75",
+        "per_consumer_T8.npz": "7376b1fd3bdc31812595e47aa697e4585cbee377c44c754f6b1c3cc65cb86edb"
+      },
+      "teacher_logits_differ_from_seed41": true,
+      "teacher_logits_identical_across_all_source_npz": true
+    }
+  },
+  "protocol_sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+  "role": "upper reference; NOT a conversion control and NOT the E1 accuracy comparator",
+  "rows": [
+    {
+      "T": 1,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.7066,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 5.026599218273405e-16
+      },
+      "npz": "ann_seed41_T1.npz",
+      "npz_sha256": "c89829b42c0cb68ac865b60ff37fbce1db5808fb2e71e47a15cc64a6c470a40b",
+      "seed": 41,
+      "timestep_independent": true
+    },
+    {
+      "T": 2,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.7066,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 5.026599218273405e-16
+      },
+      "npz": "ann_seed41_T2.npz",
+      "npz_sha256": "c89829b42c0cb68ac865b60ff37fbce1db5808fb2e71e47a15cc64a6c470a40b",
+      "seed": 41,
+      "timestep_independent": true
+    },
+    {
+      "T": 4,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.7066,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 5.026599218273405e-16
+      },
+      "npz": "ann_seed41_T4.npz",
+      "npz_sha256": "c89829b42c0cb68ac865b60ff37fbce1db5808fb2e71e47a15cc64a6c470a40b",
+      "seed": 41,
+      "timestep_independent": true
+    },
+    {
+      "T": 8,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.7066,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 5.026599218273405e-16
+      },
+      "npz": "ann_seed41_T8.npz",
+      "npz_sha256": "c89829b42c0cb68ac865b60ff37fbce1db5808fb2e71e47a15cc64a6c470a40b",
+      "seed": 41,
+      "timestep_independent": true
+    },
+    {
+      "T": 1,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.703,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 1.2022347469931674e-14
+      },
+      "npz": "ann_seed42_T1.npz",
+      "npz_sha256": "15e21304a53832938832db4948a88c37d0c21a1b7425d1ae7e10d95d8a6ce607",
+      "seed": 42,
+      "timestep_independent": true
+    },
+    {
+      "T": 2,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.703,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 1.2022347469931674e-14
+      },
+      "npz": "ann_seed42_T2.npz",
+      "npz_sha256": "15e21304a53832938832db4948a88c37d0c21a1b7425d1ae7e10d95d8a6ce607",
+      "seed": 42,
+      "timestep_independent": true
+    },
+    {
+      "T": 4,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.703,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 1.2022347469931674e-14
+      },
+      "npz": "ann_seed42_T4.npz",
+      "npz_sha256": "15e21304a53832938832db4948a88c37d0c21a1b7425d1ae7e10d95d8a6ce607",
+      "seed": 42,
+      "timestep_independent": true
+    },
+    {
+      "T": 8,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.703,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 1.2022347469931674e-14
+      },
+      "npz": "ann_seed42_T8.npz",
+      "npz_sha256": "15e21304a53832938832db4948a88c37d0c21a1b7425d1ae7e10d95d8a6ce607",
+      "seed": 42,
+      "timestep_independent": true
+    },
+    {
+      "T": 1,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.7074,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 2.0039379806478565e-16
+      },
+      "npz": "ann_seed43_T1.npz",
+      "npz_sha256": "228af50edc38bf43c0acd8b711424203de2d70fd0035a47bd445b9b76eef5b86",
+      "seed": 43,
+      "timestep_independent": true
+    },
+    {
+      "T": 2,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.7074,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 2.0039379806478565e-16
+      },
+      "npz": "ann_seed43_T2.npz",
+      "npz_sha256": "228af50edc38bf43c0acd8b711424203de2d70fd0035a47bd445b9b76eef5b86",
+      "seed": 43,
+      "timestep_independent": true
+    },
+    {
+      "T": 4,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.7074,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 2.0039379806478565e-16
+      },
+      "npz": "ann_seed43_T4.npz",
+      "npz_sha256": "228af50edc38bf43c0acd8b711424203de2d70fd0035a47bd445b9b76eef5b86",
+      "seed": 43,
+      "timestep_independent": true
+    },
+    {
+      "T": 8,
+      "logits_equal_teacher_logits": true,
+      "metrics": {
+        "accuracy": 0.7074,
+        "logit_mse": 0.0,
+        "teacher_agreement": 1.0,
+        "teacher_to_output_kl": 2.0039379806478565e-16
+      },
+      "npz": "ann_seed43_T8.npz",
+      "npz_sha256": "228af50edc38bf43c0acd8b711424203de2d70fd0035a47bd445b9b76eef5b86",
+      "seed": 43,
+      "timestep_independent": true
+    }
+  ],
+  "seeds": [
+    41,
+    42,
+    43
+  ],
+  "split": "all official validation",
+  "status": "measured_upper_reference_row_only_not_E1_acceptance",
+  "timesteps": [
+    1,
+    2,
+    4,
+    8
+  ]
+}

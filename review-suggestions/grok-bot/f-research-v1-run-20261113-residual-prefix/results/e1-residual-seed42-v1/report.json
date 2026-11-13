@@ -1,0 +1,445 @@
+{
+  "affine_calibration_sha256": "07bc86293fd719c683c2f8f74f5763bb35e261796f28ec9e74807f5448bcd81b",
+  "alias_and_scope": {
+    "dc_adapt_six_site": "E0 historical converter; analog edge controller each tick; six graded source sites including two MLP readout sites; NOT the four-site analog-head control",
+    "shared_theta_controls": "additional controls only; neither replaces the strongest matched conversion control nor counts as an independent method win"
+  },
+  "author_source_provenance": {
+    "affine_base_source_files": {
+      "line_neuron": {
+        "path": "neurons/line_neuron.py",
+        "sha256": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f"
+      },
+      "relu_neuron": {
+        "path": "neurons/relu_neuron.py",
+        "sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851"
+      }
+    },
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "e0_e1_class_identity": true,
+    "e0_source_file": {
+      "head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161",
+      "path": "neurons/relu_neuron.py",
+      "sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851"
+    },
+    "worktree_clean_except_ignored_bytecode": true
+  },
+  "canonical_baseline_sha256": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+  "canonical_dc_adapt_reproduction": {},
+  "checkpoint_sha256": "0ad3f3146f94bf73f5f398ef44a1fbc46f0c5924332c4d8fca3d711d0fbff1b6",
+  "data_sha256_end": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "data_sha256_start": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "04d71270557759c939b783d33cf69303834388d287a92b17792d9da24f3725d9",
+    "train_data.pt": "b0755438ef38d1fe3f69d75ef61acc06d9334c2f35e490d4816886db163ee060",
+    "val_data.pt": "e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce"
+  },
+  "dataset": "CIFAR10",
+  "elapsed_sec": 252.325492199976,
+  "external_author_source_sha256_end": {
+    "e0_line_neuron": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f",
+    "e0_relu_neuron": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851"
+  },
+  "external_author_source_sha256_start": {
+    "e0_line_neuron": "90798215e6e521ee458e04fc4a96fb81d1180ec5de724a8f5f052d75d4be5d7f",
+    "e0_relu_neuron": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851"
+  },
+  "frozen_expected_teacher_accuracy": 0.703,
+  "graphs": 5000,
+  "historical_test_exposure": true,
+  "historical_validation_exposure": true,
+  "limitations": [
+    "No complete known-operation cost, matched wall-clock latency or energy evidence; the E1 method-advantage criterion remains NOT EVALUABLE.",
+    "No Story decision, no new test inference, no paper, no citation audit, no independent review.",
+    "Accuracy is descriptive; no three-seed significance or confidence interval is claimed."
+  ],
+  "modes": [
+    "dc_adapt_six_site",
+    "first_analog_shared_theta",
+    "centered_shared_theta"
+  ],
+  "operation_ledger": {
+    "dense_mac_or_flop_count": null,
+    "hardware_latency_or_energy": null,
+    "memory_traffic_bytes": null,
+    "per_method": {
+      "centered_shared_theta_T1": {
+        "analog_gate_evaluations": 160,
+        "head_calls": 40,
+        "source_active_unit_calls": 240,
+        "source_warmup_calls": 240
+      },
+      "centered_shared_theta_T2": {
+        "analog_gate_evaluations": 320,
+        "head_calls": 40,
+        "source_active_unit_calls": 480,
+        "source_warmup_calls": 240
+      },
+      "centered_shared_theta_T4": {
+        "analog_gate_evaluations": 640,
+        "head_calls": 40,
+        "source_active_unit_calls": 960,
+        "source_warmup_calls": 240
+      },
+      "centered_shared_theta_T8": {
+        "analog_gate_evaluations": 1280,
+        "head_calls": 40,
+        "source_active_unit_calls": 1920,
+        "source_warmup_calls": 240
+      },
+      "dc_adapt_six_site_T1": {
+        "analog_gate_evaluations": 160,
+        "head_calls": 40,
+        "source_active_unit_calls": 240,
+        "source_warmup_calls": 240
+      },
+      "dc_adapt_six_site_T2": {
+        "analog_gate_evaluations": 320,
+        "head_calls": 80,
+        "source_active_unit_calls": 480,
+        "source_warmup_calls": 240
+      },
+      "dc_adapt_six_site_T4": {
+        "analog_gate_evaluations": 640,
+        "head_calls": 160,
+        "source_active_unit_calls": 960,
+        "source_warmup_calls": 240
+      },
+      "dc_adapt_six_site_T8": {
+        "analog_gate_evaluations": 1280,
+        "head_calls": 320,
+        "source_active_unit_calls": 1920,
+        "source_warmup_calls": 240
+      },
+      "first_analog_shared_theta_T1": {
+        "analog_gate_evaluations": 160,
+        "head_calls": 40,
+        "source_active_unit_calls": 240,
+        "source_warmup_calls": 240
+      },
+      "first_analog_shared_theta_T2": {
+        "analog_gate_evaluations": 320,
+        "head_calls": 40,
+        "source_active_unit_calls": 480,
+        "source_warmup_calls": 240
+      },
+      "first_analog_shared_theta_T4": {
+        "analog_gate_evaluations": 640,
+        "head_calls": 40,
+        "source_active_unit_calls": 960,
+        "source_warmup_calls": 240
+      },
+      "first_analog_shared_theta_T8": {
+        "analog_gate_evaluations": 1280,
+        "head_calls": 40,
+        "source_active_unit_calls": 1920,
+        "source_warmup_calls": 240
+      }
+    },
+    "scope": "partial observed reference counters only; dense arithmetic, memory traffic, hardware latency and energy are NOT measured"
+  },
+  "prediction_archives_sha256": {
+    "centered_shared_theta_T1": "32e190251578f2320889f09dd97450514d4935d76efe2020a0aeb5dece0fdb60",
+    "centered_shared_theta_T2": "dd2f0ddc8dbdb4222fa2dd6fd060f69a7f3236ef96d58ceb243761e91c804372",
+    "centered_shared_theta_T4": "e17f2178ae1f3068a38decb45e75c62badab77ebae35a00816d6d12b7a1650b6",
+    "centered_shared_theta_T8": "1a65abde4de71561dac4719fb3c969eb8964b402929e5c19ebf4889724e33b4c",
+    "dc_adapt_six_site_T1": "886841352a6c1ad461a102fd9b6ef3fd403fbdc8557ca1725f50394e849b1d97",
+    "dc_adapt_six_site_T2": "634e4a5bf61567ee9e8f3f945af2d41d23fedf2b7991b017898e3f97c1c246bd",
+    "dc_adapt_six_site_T4": "141ab96508b1faafe5ca36fea01c240da19d837b59083fc4e71f239619cfb22d",
+    "dc_adapt_six_site_T8": "dab02ba973f5d77212c0c115286170959b5e36c88c79f303c1e5b4281298e700",
+    "first_analog_shared_theta_T1": "a43f08acdebb1d18c10db5b8698986b905168dd0b31a758ac2251d1dd3f5e11b",
+    "first_analog_shared_theta_T2": "d059b2f3bdf70af2614271e643a5959fe20f846277d5be9375b9a3704de792b0",
+    "first_analog_shared_theta_T4": "1add8b1c24e53dadb2c79e0e5927daded3b756733dcc5d86947d376545ae9443",
+    "first_analog_shared_theta_T8": "7e267ff6fdf45b071ff09da5d38f62f2a186cc1e006289d6319051e1514b15f0"
+  },
+  "resource_probe": {
+    "elapsed_sec": 6.636493299971335,
+    "first_batch_graphs": 128,
+    "peak_allocated_bytes": 2545699328,
+    "scope": "resource feasibility only; not a latency benchmark"
+  },
+  "rows": [
+    {
+      "T": 1,
+      "accuracy": 0.6098,
+      "logit_mse": 6.449506969283454,
+      "mode": "dc_adapt_six_site",
+      "per_site_nonzero_scalar_events": {
+        "site_0": 18664341,
+        "site_1": 19606586,
+        "site_2": 20222669,
+        "site_3": 20645824,
+        "site_4": 123550,
+        "site_5": 65808
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.7066,
+      "teacher_to_output_kl": 0.5873942829477655
+    },
+    {
+      "T": 2,
+      "accuracy": 0.6956,
+      "logit_mse": 0.4083859304617959,
+      "mode": "dc_adapt_six_site",
+      "per_site_nonzero_scalar_events": {
+        "site_0": 36041480,
+        "site_1": 39651213,
+        "site_2": 42045144,
+        "site_3": 44198759,
+        "site_4": 245833,
+        "site_5": 131483
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.9196,
+      "teacher_to_output_kl": 0.04069037130954641
+    },
+    {
+      "T": 4,
+      "accuracy": 0.7034,
+      "logit_mse": 0.0036691947039825096,
+      "mode": "dc_adapt_six_site",
+      "per_site_nonzero_scalar_events": {
+        "site_0": 56251487,
+        "site_1": 69564892,
+        "site_2": 77448547,
+        "site_3": 82852124,
+        "site_4": 452201,
+        "site_5": 247076
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.995,
+      "teacher_to_output_kl": 0.0003174141949370642
+    },
+    {
+      "T": 8,
+      "accuracy": 0.7032,
+      "logit_mse": 0.0005931834807931763,
+      "mode": "dc_adapt_six_site",
+      "per_site_nonzero_scalar_events": {
+        "site_0": 63111211,
+        "site_1": 82959648,
+        "site_2": 101453616,
+        "site_3": 116318307,
+        "site_4": 545301,
+        "site_5": 308506
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.9988,
+      "teacher_to_output_kl": 4.803213789753404e-05
+    },
+    {
+      "T": 1,
+      "accuracy": 0.6488,
+      "logit_mse": 3.314875687286107,
+      "mode": "first_analog_shared_theta",
+      "per_site_nonzero_scalar_events": {
+        "layer1.edge": 324455712,
+        "layer1.node": 40428679,
+        "layer2.edge": 323288579,
+        "layer2.node": 40201815,
+        "layer3.edge": 323862804,
+        "layer3.node": 40238048
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.772,
+      "teacher_to_output_kl": 0.39238492054754387
+    },
+    {
+      "T": 2,
+      "accuracy": 0.6998,
+      "logit_mse": 0.1830887374913996,
+      "mode": "first_analog_shared_theta",
+      "per_site_nonzero_scalar_events": {
+        "layer1.edge": 611226370,
+        "layer1.node": 77128630,
+        "layer2.edge": 615420962,
+        "layer2.node": 77405196,
+        "layer3.edge": 626389652,
+        "layer3.node": 78491746
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.9508,
+      "teacher_to_output_kl": 0.02172582029936773
+    },
+    {
+      "T": 4,
+      "accuracy": 0.7032,
+      "logit_mse": 0.001958451629409442,
+      "mode": "first_analog_shared_theta",
+      "per_site_nonzero_scalar_events": {
+        "layer1.edge": 891094564,
+        "layer1.node": 115103651,
+        "layer2.edge": 957445459,
+        "layer2.node": 123803574,
+        "layer3.edge": 1036823605,
+        "layer3.node": 135453447
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.9958,
+      "teacher_to_output_kl": 0.00019829111420818551
+    },
+    {
+      "T": 8,
+      "accuracy": 0.7032,
+      "logit_mse": 0.00035583160832392197,
+      "mode": "first_analog_shared_theta",
+      "per_site_nonzero_scalar_events": {
+        "layer1.edge": 1003926867,
+        "layer1.node": 129124794,
+        "layer2.edge": 1105397783,
+        "layer2.node": 147506413,
+        "layer3.edge": 1223272889,
+        "layer3.node": 173428175
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.9994,
+      "teacher_to_output_kl": 2.3735190319676426e-05
+    },
+    {
+      "T": 1,
+      "accuracy": 0.6462,
+      "logit_mse": 3.059897716005661,
+      "mode": "centered_shared_theta",
+      "per_site_nonzero_scalar_events": {
+        "layer1.edge": 174792258,
+        "layer1.node": 18658033,
+        "layer2.edge": 248583245,
+        "layer2.node": 30309667,
+        "layer3.edge": 287781357,
+        "layer3.node": 35783251
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.7764,
+      "teacher_to_output_kl": 0.37050263125384675
+    },
+    {
+      "T": 2,
+      "accuracy": 0.7018,
+      "logit_mse": 0.17150525215862014,
+      "mode": "centered_shared_theta",
+      "per_site_nonzero_scalar_events": {
+        "layer1.edge": 334613591,
+        "layer1.node": 36001685,
+        "layer2.edge": 483706650,
+        "layer2.node": 59597202,
+        "layer3.edge": 563866608,
+        "layer3.node": 70977627
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.9486,
+      "teacher_to_output_kl": 0.02014356607827816
+    },
+    {
+      "T": 4,
+      "accuracy": 0.7038,
+      "logit_mse": 0.0018838030074506116,
+      "mode": "centered_shared_theta",
+      "per_site_nonzero_scalar_events": {
+        "layer1.edge": 505637246,
+        "layer1.node": 56014515,
+        "layer2.edge": 771350000,
+        "layer2.node": 98933607,
+        "layer3.edge": 941098622,
+        "layer3.node": 124516894
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.9974,
+      "teacher_to_output_kl": 0.00017330278341894266
+    },
+    {
+      "T": 8,
+      "accuracy": 0.703,
+      "logit_mse": 0.0003548404597753817,
+      "mode": "centered_shared_theta",
+      "per_site_nonzero_scalar_events": {
+        "layer1.edge": 566952549,
+        "layer1.node": 62835719,
+        "layer2.edge": 878872551,
+        "layer2.node": 115735614,
+        "layer3.edge": 1092316275,
+        "layer3.node": 155477228
+      },
+      "teacher_accuracy": 0.703,
+      "teacher_agreement": 0.9996,
+      "teacher_to_output_kl": 1.6446462709069768e-05
+    }
+  ],
+  "run": "e1_residual_v1",
+  "runtime": {
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "deterministic_algorithms": true,
+    "device": "cuda",
+    "manual_seed": 42,
+    "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]",
+    "teacher_logits_bitwise_double_forward": true,
+    "torch": "2.11.0+cu128"
+  },
+  "seed": 42,
+  "shared_theta_binding": {
+    "fixed_before_validation": true,
+    "frozen_helper": "gated_affine_shared_profile_v1.shared_thresholds",
+    "independent_recomputation_bitwise_equal": true,
+    "rule": "elementwise max(raw_abs first_analog, branch_cumsum centered) per channel, scale 1",
+    "vectors": 6,
+    "vectors_sha256": "8dfa0d64659e14a253a08cf5629ebb75bfcbf3d9bde89ae3f8f4bace00c908dc",
+    "width": 70
+  },
+  "six_site_calibration_sha256": "9da8ad79fb76fe3e13f0df5fff0b72f54e5ad1bb87bc500858219188f9ca98da",
+  "source_sha256_end": {
+    "research/visual-graphs/continuation_20261113/PROTOCOL-E1-head-addendum-v1.md": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+    "research/visual-graphs/continuation_20261113/PROTOCOL-v3.md": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "research/visual-graphs/continuation_20261113/code/e1_residual_v1.py": "e97501ce2517c479ae46f3e1c792804cc45402bffa0073bf1a9e7f3b6887f742",
+    "research/visual-graphs/continuation_20261113/code/eval_affine_validation.py": "a8cb17c5096a75ea218dcd2bf8db62d266629b3b7681a880a820bc41b80b0cd2",
+    "research/visual-graphs/takeover_20261112/dcgs_fixed_residual_gcn_event_forward_v1.py": "a031ebdbc816cbde28af3f919284b08e5ba087e271415b1bedec37306c9bc541",
+    "research/visual-graphs/takeover_20261112/gated_affine_base_v1.py": "6bc3e771212293bf68507c2f062ee90188621280bf1d97adc3f60a9eaaf3467b",
+    "research/visual-graphs/takeover_20261112/gated_affine_cal_v1.py": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "research/visual-graphs/takeover_20261112/gated_affine_shared_profile_v1.py": "d6644580c7a57bef7285facc83db4f58fd0bba7d110268097fde750ed4bce2a8",
+    "research/visual-graphs/takeover_20261112/gated_differential_hybrid_v1.py": "66a8a3060a3888cc2ffe4e7daa452992758c9288f4463cd1fb28d5f0a14a7a1e",
+    "research/visual-graphs/takeover_20261112/gated_frozen_gate_calibrate.py": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "research/visual-graphs/takeover_20261112/gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/inputs/canonical-baseline-val.npz": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+    "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-calibration-seed42-v1/affine_cal_seed42_v1.json": "07bc86293fd719c683c2f8f74f5763bb35e261796f28ec9e74807f5448bcd81b",
+    "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-calibration-seed42-v1/gcal_seed42_v1.json": "9da8ad79fb76fe3e13f0df5fff0b72f54e5ad1bb87bc500858219188f9ca98da"
+  },
+  "source_sha256_start": {
+    "research/visual-graphs/continuation_20261113/PROTOCOL-E1-head-addendum-v1.md": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+    "research/visual-graphs/continuation_20261113/PROTOCOL-v3.md": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "research/visual-graphs/continuation_20261113/code/e1_residual_v1.py": "e97501ce2517c479ae46f3e1c792804cc45402bffa0073bf1a9e7f3b6887f742",
+    "research/visual-graphs/continuation_20261113/code/eval_affine_validation.py": "a8cb17c5096a75ea218dcd2bf8db62d266629b3b7681a880a820bc41b80b0cd2",
+    "research/visual-graphs/takeover_20261112/dcgs_fixed_residual_gcn_event_forward_v1.py": "a031ebdbc816cbde28af3f919284b08e5ba087e271415b1bedec37306c9bc541",
+    "research/visual-graphs/takeover_20261112/gated_affine_base_v1.py": "6bc3e771212293bf68507c2f062ee90188621280bf1d97adc3f60a9eaaf3467b",
+    "research/visual-graphs/takeover_20261112/gated_affine_cal_v1.py": "0fb4f431b142dca0829e8ca57f2a12199f80af89a839863d5ad0001eb4ac1b39",
+    "research/visual-graphs/takeover_20261112/gated_affine_shared_profile_v1.py": "d6644580c7a57bef7285facc83db4f58fd0bba7d110268097fde750ed4bce2a8",
+    "research/visual-graphs/takeover_20261112/gated_differential_hybrid_v1.py": "66a8a3060a3888cc2ffe4e7daa452992758c9288f4463cd1fb28d5f0a14a7a1e",
+    "research/visual-graphs/takeover_20261112/gated_frozen_gate_calibrate.py": "90cfd78e4c34fe1fc25cd022b9710f684a104413ccdba4732f386f330dda3fbe",
+    "research/visual-graphs/takeover_20261112/gated_teacher_model.py": "636abd287cc745ed8964ca5adb8be603352e3857e3b1df8389b71d5040c0bda7",
+    "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/inputs/canonical-baseline-val.npz": "7c0727a2902bb2c05a0ec4930734b0bfa05e0905c4b86a6c976155a0c702fcc3",
+    "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-calibration-seed42-v1/affine_cal_seed42_v1.json": "07bc86293fd719c683c2f8f74f5763bb35e261796f28ec9e74807f5448bcd81b",
+    "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e1-calibration-seed42-v1/gcal_seed42_v1.json": "9da8ad79fb76fe3e13f0df5fff0b72f54e5ad1bb87bc500858219188f9ca98da"
+  },
+  "split": "all official validation",
+  "status": "complete",
+  "teacher_accuracy": 0.703,
+  "test_inference_performed": false,
+  "threshold_binding": {
+    "centered_shared_theta": "same six shared-theta vectors, nonnegative MTH_diff cumulative residual coordinates",
+    "dc_adapt_six_site": "six frozen full-train ReLU-site vectors gated_0..3, mlp_0, mlp_1",
+    "first_analog_shared_theta": "same six shared-theta vectors, signed MTH_diff_line raw coordinates, exact first analog layer"
+  },
+  "threshold_scale": 1,
+  "timesteps": [
+    1,
+    2,
+    4,
+    8
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "check": "preserved_failure_evidence_v1",
+  "scope": "R5 CLI default-resolution failure and source-ledger defect; de-identified public record",
+  "failure_count": 3,
+  "affected_seeds": [41, 42, 43],
+  "failure_type": "AttributeError: 'NoneType' object has no attribute 'resolve'",
+  "failure_location": "e1_residual_v1.py run(), data_root/author_repo default resolution",
+  "command_shape": "python -X utf8 <script> run --seed <seed> --output-dir <results>/e1-residual-seed<seed>-v1",
+  "observed": "Three sequential conda-run invocations exited non-zero immediately before any GPU work. No partial output directories were created.",
+  "raw_logs_retained_locally": [
+    "logs/e1_residual_seed41_v1.cli-default-failure.log",
+    "logs/e1_residual_seed42_v1.cli-default-failure.log",
+    "logs/e1_residual_seed43_v1.cli-default-failure.log"
+  ],
+  "raw_logs_not_uploaded_reason": "raw tracebacks contain local identity paths and are excluded by the upload content check",
+  "second_defect_found_before_relaunch": {
+    "type": "ValueError from rel() on pinned DCGS source files outside the repository root",
+    "location": "e1_residual_v1.py run(), ROOT-relative source ledger construction",
+    "resolution": "external pinned DCGS source files are now bound with de-identified short keys plus start/end SHA-256, and their full provenance (relative paths, hashes, head blob oid, pinned commit, E0/E1 class identity) is re-checked at the end of every run and by verify()",
+    "effect": "would have aborted the relaunch before any GPU work; fixed before the v2 launch"
+  },
+  "remediation": "run()/smoke()/verify() now fall back to GNN2SNN_DATA_ROOT and DCGS_REPO; frozen gate precheck re-run PASS; relaunch v2 produced all three seeds with exit code 0",
+  "note": "failure evidence is retained, not silently discarded; this record contains no local paths, usernames or credentials"
+}

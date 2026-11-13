@@ -1,0 +1,25 @@
+{
+  "status": "descriptive_only_not_E1_acceptance",
+  "n_metric_rows": 560,
+  "n_summary_rows": 40,
+  "per_sample_archives": 120,
+  "verdict": "NOT EVALUABLE / E1 NOT PASSED",
+  "T4": {
+    "centered_mean": 0.7052666666666667,
+    "strongest_matched_control": "centered_shared_theta",
+    "strongest_control_mean": 0.7059333333333333,
+    "gap_pp": 0.06666666666665932,
+    "within_0.3pp_accuracy_only": true
+  },
+  "T8": {
+    "centered_mean": 0.7056666666666667,
+    "strongest_matched_control": "dc_adapt_six_site",
+    "strongest_control_mean": 0.7061333333333334,
+    "gap_pp": 0.04666666666667263,
+    "within_0.3pp_accuracy_only": true
+  },
+  "missing_required_rows": [
+    "complete_known_operation_cost",
+    "matched_wall_clock_latency"
+  ]
+}
