@@ -25,3 +25,11 @@
 成本至少分开：首层模拟工作、base构建、投影、source/decoder、1/t、graded bank、gate sigmoid、乘积、归一化、图scatter、残差、BN、head、pool、存储与搬运。node BN可在条件下折A/B；edge BN的z同时供sigmoid gate，不能简单折CDE后宣称免费。最终不用的edge输出可以两侧公平prune。数学算术代理不等于3060或神经形态芯片实测能量。
 
 详细记录：`correction-ledger.md`、`historical-track-repair-plan-v2.md`、`baseline-fidelity-audit-v1.md`、`gated-dual-arithmetic-screen-v1.md`、`affine-mode-cost-boundary-v1.md`。
+
+## 后续重放与未完成任务（11月13日）
+
+- E0新增的历史logit严格检查失败：T4有2836/50000个元素越界，最大差0.152349；T8历史类别有1/5000漂移。聚合指标复现和当前同环境确定性完整重放通过，不能替代历史逐位轨迹复现。旧失败保持失败，协议修订理由另存。
+- 一份声称完成的独立入场评阅实际只有1字节，已拒收。清单通过不证明内容有效，也不计作最终独立论文评审。
+- 官方DCGS API探针暴露PyG输入、functional ReLU和FX适配障碍；小型合成适配可以执行，不等于完整官方转换或忠实基线已完成。不据此断言图任务不能转换。
+- 匹配分类头和独立consumer代码通过合成检查；完整官方对照尚未跑齐。首组候选完成验证仍不足以判E1通过，稠密执行下事件量不能充当已执行稀疏成本。
+- 用户暂停时中断尚在编写的对照子任务，未完成产物不认证、不追加大包。未来恢复须重新检查真实文件与进程。

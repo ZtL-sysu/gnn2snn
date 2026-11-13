@@ -1,5 +1,7 @@
 # Task: visual-conversion
 
+Status: **paused by user**。当前仅精简归档；不继续实验或未完成的对照实现。恢复须用户指示，原验收标准保持不变。入口：docs/ARCHIVE_INDEX.md。
+
 - Owner: 20261113-codex-vision（当前续接者；默认分支整合者仍为用户）。
 - Input revision: main f19a2f2177363b3c6164c2f6e2aaa67847dea777。
 - Protocol: research/visual-graphs/continuation_20261113/PROTOCOL-v3.md，SHA256 8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543；另含分类头匹配补充及CURRENT_SCOPE。

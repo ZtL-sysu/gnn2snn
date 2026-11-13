@@ -20,6 +20,7 @@ GNN→SNN视觉图转换研究的精简归档：关键代码、已验证结果�
 
 ## 阅读入口
 
+- [精简成果归档入口（含最新验证结果）](docs/ARCHIVE_INDEX.md)
 - [研究总览与证据状态](docs/OVERVIEW.md)
 - [WorkBuddy→Codex研究历史](docs/RESEARCH_HISTORY.md)
 - [理论与方法](docs/METHODS.md)

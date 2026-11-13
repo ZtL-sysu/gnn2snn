@@ -2,10 +2,10 @@
 
 - Updated: 2026-11-13T11:53:04.151754+00:00
 - Branch: agent/visual-conversion/20261113-codex-vision
-- Work status: in_progress
+- Work status: paused by user; archive only. Latest entry: docs/ARCHIVE_INDEX.md. Do not execute the historical Resume instructions without a user request.
 - Protocol: research/visual-graphs/continuation_20261113/PROTOCOL-v3.md SHA256 8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543
 - Latest checkpoint: checkpoints/20261113T133140Z-e1-seed41/CHECKPOINT.md
-- Sync: scientific checkpoint ba66d9a3c10d7d3532176949b61575c48245a56e verified on origin/agent/visual-conversion/20261113-codex-vision. Main remains f19a2f2177363b3c6164c2f6e2aaa67847dea777; no merge.
+- Sync: scientific checkpoint e9541860648110004115d7c86ceaaba11b84b70b verified on origin/agent/visual-conversion/20261113-codex-vision. Main remains f19a2f2177363b3c6164c2f6e2aaa67847dea777; no merge. The archive-only follow-up is located through Git history.
 
 Established: full5000 seed41 ANN70.66/DC470.72/DC870.66; deterministic complete arrays repeat bitwise; historicalT8oneclassdiff and oldstrictfailures disclosed. Counter/independentencoder/headmatching synthetic checks passed. See checkpoint metrics/evidence; seed41 full5000 candidate validation now complete for three affine modes/all fourT; see results/e1-seed41-affine-v1/.
 

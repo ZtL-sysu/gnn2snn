@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-codex-vision",
+  "created_at_utc": "2026-11-13T14:08:17.827235+00:00",
+  "status": "completed",
+  "input_git_head": "e9541860648110004115d7c86ceaaba11b84b70b",
+  "protocol": {
+    "path": "research/visual-graphs/continuation_20261113/PROTOCOL-v3.md",
+    "sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "bytes": 4321
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "9da3c6b16444dd5346758c2eea5e029a87f526b2c71c5a2595cd9caa0c693a88",
+      "bytes": 2182
+    },
+    {
+      "path": "docs/ARCHIVE_INDEX.md",
+      "sha256": "7f05a14ac66644be48df4f7b8bd397858de9fdacb438f269eeaa6695bc424826",
+      "bytes": 2980
+    },
+    {
+      "path": "docs/STATUS.md",
+      "sha256": "cf3681a8c0e051c4f94e303f8b9cdbe7e565552832f39bcb9d1c91e63413667d",
+      "bytes": 1598
+    },
+    {
+      "path": "docs/RESEARCH_HISTORY.md",
+      "sha256": "f177bac8ab48de9ae0114048ac53f95de4a5f17fa0581ef2bcdafc80963ec0da",
+      "bytes": 5257
+    },
+    {
+      "path": "docs/RESEARCH_LOG.md",
+      "sha256": "1c0ed35c552b231062d97ec715546cfa0696eba35a4900f1c8c0b8ff187c7f89",
+      "bytes": 4597
+    },
+    {
+      "path": "collaboration/PROJECT.md",
+      "sha256": "c0ce2561fad829ee25c98ed3b96ef232f5c741e885476864f3084b47a3b25844",
+      "bytes": 1445
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/TASK.md",
+      "sha256": "7b156284abbc3119233f9d87da9071bdf2656a672603a293e5a0a276bc6f977f",
+      "bytes": 1778
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-codex-vision/HANDOFF.md",
+      "sha256": "2f87984a52942ece517890e34983d2432ef1b7153c48ace4ae7f786c7a20b4e8",
+      "bytes": 2604
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-codex-vision/LOG.md",
+      "sha256": "db4c32ef31cf4ac7e4b2789d6c83ca4cf11b873b7a686a8d5528a44f553b60fa",
+      "bytes": 2112
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/CURRENT_SCOPE.md",
+      "sha256": "e4439c00264a841e3ec7f08f197c17ba0398645bbe304fe5825acdd27f785ba9",
+      "bytes": 1605
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-codex-vision/checkpoints/20261113-archive-pause/CHECKPOINT.md",
+      "sha256": "3583057a0bb471ba2db24c77ac1231229cf94a5d2ddd6a83184e4aac76eb479d",
+      "bytes": 923
+    }
+  ]
+}
