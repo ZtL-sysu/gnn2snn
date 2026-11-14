@@ -1,0 +1,55 @@
+{
+  "check": "e5_latency_serial_driver_environment_interruption_v2",
+  "recorded_at_utc": "2026-11-14T03:11:00+00:00",
+  "classification": "environment_session_boundary_termination_not_a_scientific_failure",
+  "authority": "origin/agent/visual-conversion/20261113-wb-resume @ 7bd7558f041d135a70d573b5b884ae63068c87c6 (R6d write-back); checkpoint checkpoints/20261114T014200Z-r6d-resume-serial-driver/CHECKPOINT.md section 8",
+  "interrupted_job": {
+    "handle": "v10FQp",
+    "driver": "research/visual-graphs/continuation_20261113/code/gpu_queue_driver_v1.py",
+    "driver_pid": 5776,
+    "latency_pid": 11560,
+    "started_utc": "2026-11-14T01:40:39+00:00",
+    "command": "e3_e5_v1.py latency --device cuda --batches 40 --warmup 1 --repeats 3 --resume",
+    "driver_log": "logs/gpu_queue_driver_v1.driver.log",
+    "step_log": "logs/gpu_queue_driver_v1/01_e5_latency_resume.log",
+    "incremental_evidence": "results/e3-e5-v1/e5_latency_v1.partial.jsonl"
+  },
+  "observed_facts": [
+    "Wake-up at 2026-11-14T03:00:55Z (+0800 11:00:55): git fetch --all --prune OK; local HEAD == remote HEAD == 7bd7558f041d135a70d573b5b884ae63068c87c6.",
+    "nvidia-smi showed 0 % utilisation / 955 MiB / 12 W, display (C+G) processes only; the RTX 3060 had been idle for about 75 minutes.",
+    "PowerShell Get-CimInstance Win32_Process broad full-CommandLine match for e3_e5_v1.py|e5_falsifier_v1.py|gpu_queue_driver_v1.py|conda-script.py returned zero compute processes (only the query command itself appeared, as expected).",
+    "The driver log contains DRIVER_START and STEP_START at 01:40:39Z but no STEP_END, no traceback and no DRIVER_END; gpu_queue_driver_v1.status.jsonl does not exist, so step 01 never completed.",
+    "The step-01 log ends after config 9 (first_analog T8) and the incremental JSONL holds exactly 9 of 37 configurations, last written 2026-11-14T01:46Z (+0800 09:46).",
+    "results/e3-e5-v1/e5_latency_v1.json, e3_e5_criterion_v1.json and results/e5-falsifier-v1/e5_gate_bound_v1.json do not exist; aggregate never ran."
+  ],
+  "evidence_validity": {
+    "nine_incremental_rows": "VALID",
+    "reason": "Rows 1-7 come from the single clean post-concurrency job TsI47h; rows 8-9 come from the R6d single serial driver v10FQp. Both used the reviewed e3_e5_v1.py with frozen thresholds built outside timed loops, the full 5000 official validation graphs in fixed order, 1 warmup and 3 repeats. They are NOT the quarantined concurrency-incident numbers.",
+    "distinct_from": "logs/e3e5-latency-concurrency-incident-v1/ whose wall-clock values remain VOID and must never be cited",
+    "disposition": "kept as the --resume starting point; the resumed job re-validates graphs_per_repeat and len(repeat_wall_seconds) for every row before skipping it",
+    "new_rows_this_round": "rows 10 onward are measured after the R7 restart from the same unchanged --resume command; the live partial JSONL keeps growing, and this checkpoint's METRICS.csv is a labelled snapshot at publication time (see CHECKPOINT.md section 4)"
+  },
+  "archived_snapshot": {
+    "interrupted-20261114T0302Z.driver.log": "ad7bf13ed570c7b39fa01a03a88daa11110d22327b5a16950d7684f1aad255ef",
+    "interrupted-20261114T0302Z.step01.log": "6f67a8e88315e4ae1cf6d68f93ad34edfb7d45e9cfbbc0e6f0596638acfbc3f0",
+    "interrupted-20261114T0302Z.partial.jsonl": "8730a3f69c18c6f64f81d05008168512336ba55a88bc6566fe8e8dc70c137bd2",
+    "sha256sums_file": "SHA256SUMS.txt"
+  },
+  "root_cause_and_repair": {
+    "root_cause": "R6c TsI47h and R6d v10FQp were both launched as automation-session background processes and were killed at the session boundary, leaving the GPU idle for ~82 and ~75 minutes. This is the third consecutive environment termination.",
+    "repair": "Launch the identical four-step serial driver through a NO-TRIGGER Windows scheduled task so its process tree belongs to the Task Scheduler service (svchost.exe -k netsvcs -p -s Schedule) instead of the automation session.",
+    "launcher": "research/visual-graphs/continuation_20261113/code/gpu_queue_launcher_v1.py",
+    "task_name": "GNN2SNN-E5-Driver-R7",
+    "triggers": 0,
+    "multiple_instances": "IgnoreNew",
+    "started_utc": "2026-11-14T03:08:04+00:00",
+    "launcher_pid": 32844,
+    "driver_pid": 23620,
+    "latency_pid": 29800,
+    "parent_of_launcher_pid": 1820,
+    "parent_process": "C:\\WINDOWS\\system32\\svchost.exe -k netsvcs -p -s Schedule",
+    "invariant": "--batches 40 --warmup 1 --repeats 3 --resume unchanged; no shortened batches, no reduced repeats, no seed or T selection; exactly one e3_e5_v1.py latency process",
+    "measured_gpu": "88-92 % / 5155-5157 MiB / 110.67-118.39 W"
+  },
+  "no_result_claim": "No E1 acceptance, no complete latency conclusion, no cost or energy claim is made from this interruption record. E1 remains NOT EVALUABLE / E1 NOT PASSED; P4 remains running."
+}

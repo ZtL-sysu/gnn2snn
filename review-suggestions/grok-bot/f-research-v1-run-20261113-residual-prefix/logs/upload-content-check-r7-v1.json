@@ -1,0 +1,12 @@
+{
+  "check": "upload_content_preflight_r4b_v1",
+  "files_checked": 12,
+  "largest_single_file_bytes": 41070,
+  "max_allowed_bytes": 52428800,
+  "note": "content/format check only; no scientific or remote-sync claim",
+  "npz_checked": 0,
+  "npz_schema_example": null,
+  "problems": {},
+  "status": "PASS",
+  "total_bytes": 135262
+}

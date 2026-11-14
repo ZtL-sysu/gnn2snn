@@ -1,0 +1,2 @@
+2026-11-14T01:40:39+00:00 DRIVER_START pid=5776 python=<HOME>\miniconda3\envs\dyg-cold\python.exe steps=4
+2026-11-14T01:40:39+00:00 STEP_START 01_e5_latency_resume cmd=utf8 C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e3_e5_v1.py latency --device cuda --batches 40 --warmup 1 --repeats 3 --resume

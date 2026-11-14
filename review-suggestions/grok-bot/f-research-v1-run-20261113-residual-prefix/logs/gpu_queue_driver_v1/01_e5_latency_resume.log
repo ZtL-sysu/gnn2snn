@@ -2,3 +2,9 @@
 === 01_e5_latency_resume START 2026-11-14T01:40:39+00:00 ===
 CMD: <HOME>\miniconda3\envs\dyg-cold\python.exe -X utf8 C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e3_e5_v1.py latency --device cuda --batches 40 --warmup 1 --repeats 3 --resume
 {"resumed_completed_configs": 7, "configs_in_this_run": 37}
+{"config": 9, "of": 37, "mode": "first_analog", "T": 8, "median_ms_per_graph": 10.5284, "elapsed_sec": 320.9}
+
+=== 01_e5_latency_resume START 2026-11-14T03:08:04+00:00 ===
+CMD: <HOME>\miniconda3\envs\dyg-cold\python.exe -X utf8 C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e3_e5_v1.py latency --device cuda --batches 40 --warmup 1 --repeats 3 --resume
+{"resumed_completed_configs": 9, "configs_in_this_run": 37}
+{"config": 17, "of": 37, "mode": "dc_adapt_analog_head", "T": 8, "median_ms_per_graph": 2.89, "elapsed_sec": 638.5}

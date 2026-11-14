@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-wb-resume",
+  "created_at_utc": "2026-11-14T03:16:21.579696+00:00",
+  "status": "in_progress",
+  "input_git_head": "7bd7558f041d135a70d573b5b884ae63068c87c6",
+  "protocol": {
+    "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/PROTOCOL-v3.md",
+    "sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "bytes": 4321
+  },
+  "artifacts": [
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/gpu_queue_launcher_v1.py",
+      "sha256": "83cc157092a54fe15cd7350a1058a3122978d5ab66cdabacd984cc973c16ce17",
+      "bytes": 2357
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v2/interrupted-20261114T0302Z.driver.log",
+      "sha256": "ad7bf13ed570c7b39fa01a03a88daa11110d22327b5a16950d7684f1aad255ef",
+      "bytes": 330
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v2/interrupted-20261114T0302Z.step01.log",
+      "sha256": "6f67a8e88315e4ae1cf6d68f93ad34edfb7d45e9cfbbc0e6f0596638acfbc3f0",
+      "bytes": 448
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v2/interrupted-20261114T0302Z.partial.jsonl",
+      "sha256": "8730a3f69c18c6f64f81d05008168512336ba55a88bc6566fe8e8dc70c137bd2",
+      "bytes": 2512
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v2/SHA256SUMS.txt",
+      "sha256": "69a40c6efb9c82789331d00e5aef1f3d474fc2b7aa8caf770c24d722c04eec7c",
+      "bytes": 315
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v2/INTERRUPTED.json",
+      "sha256": "8b1dcfb5547f84ffca3d453cb42b7c58e8c7b06d9d7dbe9330db5fc4162ab0ab",
+      "bytes": 4858
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/checkpoints/20261114T031100Z-r7-task-scheduler-driver/METRICS.csv",
+      "sha256": "f17349a5ffc57fd80d38eeee03d50579b828d3e44289d3b85640198d6183013c",
+      "bytes": 8860
+    }
+  ]
+}
