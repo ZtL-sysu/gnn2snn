@@ -1,0 +1,11 @@
+{
+  "optimizer": "none",
+  "iterations": 0,
+  "levels_per_channel": 8,
+  "learned_scalars": 0,
+  "calibration_seconds": 0.00025090016424655914,
+  "inference_levels": 8,
+  "extra_codebook_bytes": 4672,
+  "teacher_frozen": true,
+  "test_loaded": false
+}

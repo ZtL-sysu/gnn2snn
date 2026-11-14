@@ -1,0 +1,1492 @@
+{
+  "steps": 146,
+  "optimizer": "hard_coordinate_grid",
+  "diagnostic": {
+    "trace": [
+      {
+        "channel": 0,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 1,
+        "accepted": true,
+        "objective_delta": -7.866128726163879e-07
+      },
+      {
+        "channel": 2,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 3,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 4,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 5,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 6,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 7,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 8,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 9,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 10,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 11,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 12,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 13,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 14,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 15,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 16,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 17,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 18,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 19,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 20,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 21,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 22,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 23,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 24,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 25,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 26,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 27,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 28,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 29,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 30,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 31,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 32,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 33,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 34,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 35,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 36,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 37,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 38,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 39,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 40,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 41,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 42,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 43,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 44,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 45,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 46,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 47,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 48,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 49,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 50,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 51,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 52,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 53,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 54,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 55,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 56,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 57,
+        "accepted": true,
+        "objective_delta": -4.798015197593486e-06
+      },
+      {
+        "channel": 58,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 59,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 60,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 61,
+        "accepted": true,
+        "objective_delta": -2.7215082809561864e-07
+      },
+      {
+        "channel": 62,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 63,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 64,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 65,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 66,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 67,
+        "accepted": true,
+        "objective_delta": -7.590506356791593e-07
+      },
+      {
+        "channel": 68,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 69,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 70,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 71,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 72,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 73,
+        "accepted": true,
+        "objective_delta": -4.233177151036216e-07
+      },
+      {
+        "channel": 74,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 75,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 76,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 77,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 78,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 79,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 80,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 81,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 82,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 83,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 84,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 85,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 86,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 87,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 88,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 89,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 90,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 91,
+        "accepted": true,
+        "objective_delta": -4.3644649849738926e-07
+      },
+      {
+        "channel": 92,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 93,
+        "accepted": true,
+        "objective_delta": -6.681079867121298e-07
+      },
+      {
+        "channel": 94,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 95,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 96,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 97,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 98,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 99,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 100,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 101,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 102,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 103,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 104,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 105,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 106,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 107,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 108,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 109,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 110,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 111,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 112,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 113,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 114,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 115,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 116,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 117,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 118,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 119,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 120,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 121,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 122,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 123,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 124,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 125,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 126,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 127,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 128,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 129,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 130,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 131,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 132,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 133,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 134,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 135,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 136,
+        "accepted": true,
+        "objective_delta": -4.2155079427175224e-08
+      },
+      {
+        "channel": 137,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 138,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 139,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 140,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 141,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 142,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 143,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 144,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 145,
+        "accepted": false,
+        "objective_delta": 0.0
+      }
+    ],
+    "grid_points": 33,
+    "coordinate_updates": 146,
+    "accepted_updates": 8,
+    "objective_candidate_evaluations": 4818,
+    "qualification": "diagnostic; exceeds 64 Adam update budget; no validation selection"
+  },
+  "trainable_parameters": 146,
+  "trace": [
+    {
+      "channel": 0,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 1,
+      "accepted": true,
+      "objective_delta": -7.866128726163879e-07
+    },
+    {
+      "channel": 2,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 3,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 4,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 5,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 6,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 7,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 8,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 9,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 10,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 11,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 12,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 13,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 14,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 15,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 16,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 17,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 18,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 19,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 20,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 21,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 22,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 23,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 24,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 25,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 26,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 27,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 28,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 29,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 30,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 31,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 32,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 33,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 34,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 35,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 36,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 37,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 38,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 39,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 40,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 41,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 42,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 43,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 44,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 45,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 46,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 47,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 48,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 49,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 50,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 51,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 52,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 53,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 54,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 55,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 56,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 57,
+      "accepted": true,
+      "objective_delta": -4.798015197593486e-06
+    },
+    {
+      "channel": 58,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 59,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 60,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 61,
+      "accepted": true,
+      "objective_delta": -2.7215082809561864e-07
+    },
+    {
+      "channel": 62,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 63,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 64,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 65,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 66,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 67,
+      "accepted": true,
+      "objective_delta": -7.590506356791593e-07
+    },
+    {
+      "channel": 68,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 69,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 70,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 71,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 72,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 73,
+      "accepted": true,
+      "objective_delta": -4.233177151036216e-07
+    },
+    {
+      "channel": 74,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 75,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 76,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 77,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 78,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 79,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 80,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 81,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 82,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 83,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 84,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 85,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 86,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 87,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 88,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 89,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 90,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 91,
+      "accepted": true,
+      "objective_delta": -4.3644649849738926e-07
+    },
+    {
+      "channel": 92,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 93,
+      "accepted": true,
+      "objective_delta": -6.681079867121298e-07
+    },
+    {
+      "channel": 94,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 95,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 96,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 97,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 98,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 99,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 100,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 101,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 102,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 103,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 104,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 105,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 106,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 107,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 108,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 109,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 110,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 111,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 112,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 113,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 114,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 115,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 116,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 117,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 118,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 119,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 120,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 121,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 122,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 123,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 124,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 125,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 126,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 127,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 128,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 129,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 130,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 131,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 132,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 133,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 134,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 135,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 136,
+      "accepted": true,
+      "objective_delta": -4.2155079427175224e-08
+    },
+    {
+      "channel": 137,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 138,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 139,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 140,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 141,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 142,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 143,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 144,
+      "accepted": false,
+      "objective_delta": 0.0
+    },
+    {
+      "channel": 145,
+      "accepted": false,
+      "objective_delta": 0.0
+    }
+  ],
+  "initial_hard_train": {
+    "local": 0.04040563851594925,
+    "message": 0.002933299634605646,
+    "total": 0.02166946977376938
+  },
+  "final_hard_train": {
+    "local": 0.04051082953810692,
+    "message": 0.00281173805706203,
+    "total": 0.02166128344833851
+  },
+  "optimizer_steps": [],
+  "teacher_unchanged": true,
+  "first_batch_site_changed_fraction": 0.004133100621402264,
+  "offset_bound_fraction": 0.0,
+  "calibration_seconds": 0.49809010000899434,
+  "peak_allocated_bytes": 137716224
+}

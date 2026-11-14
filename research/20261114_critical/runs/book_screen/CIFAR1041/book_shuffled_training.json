@@ -1,0 +1,31 @@
+{
+  "optimizer": "weighted_Lloyd",
+  "iterations": 16,
+  "objective_history": [
+    0.005608055740594864,
+    0.0037867564242333174,
+    0.0032291244715452194,
+    0.0029577482491731644,
+    0.002787034958600998,
+    0.0026592251379042864,
+    0.002554175676777959,
+    0.002462462056428194,
+    0.002379893558099866,
+    0.0023040424566715956,
+    0.002233476610854268,
+    0.0021684649400413036,
+    0.0021075343247503042,
+    0.002050480805337429,
+    0.001997067593038082,
+    0.0019465264631435275,
+    0.001899095717817545
+  ],
+  "levels_per_channel": 8,
+  "learned_scalars": 1168,
+  "qualification": "fixed alphabet size, higher storage than membrane offsets; message weight is diagonal proxy only, omits cross terms",
+  "calibration_seconds": 0.3399086999706924,
+  "inference_levels": 8,
+  "extra_codebook_bytes": 4672,
+  "teacher_frozen": true,
+  "test_loaded": false
+}

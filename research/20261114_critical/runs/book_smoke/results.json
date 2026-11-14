@@ -1,0 +1,134 @@
+[
+  {
+    "method": "baseline",
+    "T": 1,
+    "accuracy_percent": 65.625,
+    "teacher_agreement_percent": 75.0,
+    "logit_mse": 7.169976234436035,
+    "cross_entropy": 0.8934339880943298,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.03107060003094375
+  },
+  {
+    "method": "baseline",
+    "T": 2,
+    "accuracy_percent": 84.375,
+    "teacher_agreement_percent": 96.875,
+    "logit_mse": 0.5592514276504517,
+    "cross_entropy": 0.54758620262146,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.03733739978633821
+  },
+  {
+    "method": "book_nearest",
+    "T": 1,
+    "accuracy_percent": 68.75,
+    "teacher_agreement_percent": 78.125,
+    "logit_mse": 7.418868064880371,
+    "cross_entropy": 1.0738263130187988,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.02748359995894134
+  },
+  {
+    "method": "book_nearest",
+    "T": 2,
+    "accuracy_percent": 84.375,
+    "teacher_agreement_percent": 96.875,
+    "logit_mse": 0.5771591067314148,
+    "cross_entropy": 0.5098009705543518,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.03724580002017319
+  },
+  {
+    "method": "book_local",
+    "T": 1,
+    "accuracy_percent": 75.0,
+    "teacher_agreement_percent": 84.375,
+    "logit_mse": 7.368475437164307,
+    "cross_entropy": 0.6278910040855408,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.027234800159931183
+  },
+  {
+    "method": "book_local",
+    "T": 2,
+    "accuracy_percent": 84.375,
+    "teacher_agreement_percent": 96.875,
+    "logit_mse": 0.3491036593914032,
+    "cross_entropy": 0.5088074207305908,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.039063100004568696
+  },
+  {
+    "method": "book_message",
+    "T": 1,
+    "accuracy_percent": 78.125,
+    "teacher_agreement_percent": 81.25,
+    "logit_mse": 7.279247283935547,
+    "cross_entropy": 0.6861907839775085,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.02641829987987876
+  },
+  {
+    "method": "book_message",
+    "T": 2,
+    "accuracy_percent": 84.375,
+    "teacher_agreement_percent": 96.875,
+    "logit_mse": 0.3780542314052582,
+    "cross_entropy": 0.4795212149620056,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.04199719987809658
+  },
+  {
+    "method": "book_shuffled",
+    "T": 1,
+    "accuracy_percent": 78.125,
+    "teacher_agreement_percent": 87.5,
+    "logit_mse": 7.518845558166504,
+    "cross_entropy": 0.6985475420951843,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.027422399958595634
+  },
+  {
+    "method": "book_shuffled",
+    "T": 2,
+    "accuracy_percent": 84.375,
+    "teacher_agreement_percent": 96.875,
+    "logit_mse": 0.4044724106788635,
+    "cross_entropy": 0.44819146394729614,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.03729819995351136
+  },
+  {
+    "method": "book_identity",
+    "T": 1,
+    "accuracy_percent": 75.0,
+    "teacher_agreement_percent": 84.375,
+    "logit_mse": 7.368475437164307,
+    "cross_entropy": 0.6278910040855408,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.027536200126633048
+  },
+  {
+    "method": "book_identity",
+    "T": 2,
+    "accuracy_percent": 84.375,
+    "teacher_agreement_percent": 96.875,
+    "logit_mse": 0.3491036593914032,
+    "cross_entropy": 0.5088074207305908,
+    "teacher_accuracy_percent": 87.5,
+    "val_graphs": 32,
+    "diagnostic_eval_seconds": 0.039457800099626184
+  }
+]

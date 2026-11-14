@@ -1,0 +1,9 @@
+phase,dataset,source,seconds,rows
+screen,CIFAR10,runs\screen\CIFAR1041,46.46725849993527,14
+screen,MNIST,runs\screen\MNIST41,36.94959749979898,14
+optimizer_check,CIFAR10,runs\optimizer_check\CIFAR1041,46.86844630003907,14
+optimizer_check,MNIST,runs\optimizer_check\MNIST41,37.719227800145745,14
+hard_probe,CIFAR10,runs\hard_probe\CIFAR1041,15.962200700072572,5
+hard_probe,MNIST,runs\hard_probe\MNIST41,11.824328599963337,5
+book_screen,CIFAR10,runs\book_screen\CIFAR1041,11.682296499842778,12
+book_screen,MNIST,runs\book_screen\MNIST41,9.391821700148284,12

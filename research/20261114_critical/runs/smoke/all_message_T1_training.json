@@ -1,0 +1,43 @@
+{
+  "steps": 2,
+  "trainable_parameters": 693,
+  "trace": [
+    {
+      "step": 1,
+      "local": 0.12954631447792053,
+      "message": 0.0026092929765582085,
+      "total": 0.0660778060555458,
+      "gradient_norm": 0.3890073001384735
+    },
+    {
+      "step": 2,
+      "local": 0.11709311604499817,
+      "message": 0.0025755364913493395,
+      "total": 0.059834327548742294,
+      "gradient_norm": 0.22350193560123444
+    }
+  ],
+  "initial_hard_train": {
+    "local": 0.12954631447792053,
+    "message": 0.0026092929765582085,
+    "total": 0.0660778060555458
+  },
+  "final_hard_train": {
+    "local": 0.11523814499378204,
+    "message": 0.0025497106835246086,
+    "total": 0.058893926441669464
+  },
+  "optimizer_steps": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "teacher_unchanged": true,
+  "first_batch_site_changed_fraction": 0.008204328827559948,
+  "offset_bound_fraction": 0.0,
+  "calibration_seconds": 0.0479330001398921,
+  "peak_allocated_bytes": 191218176
+}
