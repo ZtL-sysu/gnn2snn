@@ -1,0 +1,9 @@
+{
+  "check": "e5_falsifier_precheck_v1",
+  "frozen_files_verified": 6,
+  "note": "hash/structure gate only; no GPU, no scientific result",
+  "pinned_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+  "processed_files_verified": 5,
+  "shared_theta_vectors": 6,
+  "status": "PASS"
+}

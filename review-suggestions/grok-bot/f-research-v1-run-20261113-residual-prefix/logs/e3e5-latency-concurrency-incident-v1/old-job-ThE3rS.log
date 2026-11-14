@@ -1,0 +1,2 @@
+{"config": 1, "of": 37, "mode": "ANN", "T": 0, "median_ms_per_graph": 0.1781, "elapsed_sec": 3.6}
+{"config": 9, "of": 37, "mode": "first_analog", "T": 8, "median_ms_per_graph": 27.8056, "elapsed_sec": 1140.2}

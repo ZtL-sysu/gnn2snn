@@ -1,0 +1,25 @@
+{
+  "check": "e3e5_latency_concurrency_incident_v1",
+  "status": "contaminated_evidence_quarantined_and_single_clean_job_restarted",
+  "scientific_claim": "none; all wall-clock numbers produced by the two concurrent jobs are DISCARDED as evidence",
+  "what_happened": [
+    "Job A (ThE3rS, PID 27348) was started 2026-11-13T23:37:13Z with the pre-review e3_e5_v1.py: latency --device cuda --batches 40 --repeats 3 --warmup 1. Its log reached config 9/37 at elapsed 1140.2 s.",
+    "Job B (jvgzz3, PID 15052) was started 2026-11-13T23:51:27Z with the reviewed e3_e5_v1.py: latency --device cuda --batches 40 --warmup 1 --repeats 3 --resume. It wrote 3 incremental config records.",
+    "Both jobs ran on the SAME local RTX 3060 from 23:51Z onward, violating the single-GPU-single-job constraint and contaminating matched wall-clock timing by GPU contention.",
+    "A too-narrow liveness filter at the start of the B session reported 0 python/conda processes while PID 27348 was in fact alive; the broader CommandLine query later exposed both job chains. The liveness-check limitation is recorded here, not hidden."
+  ],
+  "why_both_are_discarded": [
+    "GPU contention makes median wall-clock non-matched and therefore unusable as E3/E5 latency evidence.",
+    "Job A additionally used the pre-review script that constructed frozen threshold tensors INSIDE every timed forward, adding mode-dependent non-forward overhead to the measurement.",
+    "Neither job produced e5_latency_v1.json; no latency number is treated as a result."
+  ],
+  "preserved_files": {
+    "old-job-ThE3rS.log": "42e772686313acfb947525d260d8e70215f4adfaa445cb5aa43bf7b3a351bc67",
+    "new-job-jvgzz3.driver.log": "3033a31f4e3b04a64434dd839bdfe70b7539bcb0b034afe36602571fe3bd07f0",
+    "contaminated.partial.jsonl": "7bd200bd0d80925c6307022e631be2a38355c9506e9380dbe24ebd16e2701bb0"
+  },
+  "sha256sums_file": "SHA256SUMS.txt",
+  "resolution": "Quarantine the three artifacts here; terminate both job chains; verify GPU idle and zero e3_e5_v1.py processes; relaunch ONE clean job with the reviewed script, unchanged --batches 40 --warmup 1 --repeats 3, plus --resume for heartbeat-safe incremental evidence; publish the new job handle in GPU_QUEUE.md so no heartbeat restarts a duplicate.",
+  "constraints_unchanged": "no shortened batches, no reduced repeats, no dropped timesteps, no threshold/scale/seed change, no protocol or frozen-hash edit",
+  "deidentified": true
+}

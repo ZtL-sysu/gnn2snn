@@ -22,7 +22,7 @@
       "setup_embedding_mac": "350*N + 70*E once per (mode,T) sweep (5->70 node + 1->70 edge embeddings)",
       "sigmoid": "T*L*E*d scalar sigmoids (declared, priced as MUL-equivalent; real hardware cost unresolved)",
       "source_per_active_call_per_element": "1 SUB + 1 MUL (t*(raw-prev)) + 1 DIV (event/t) + 1 ADD (decoded accumulate) + 2 state read/write traffic",
-      "storage": "declared FP32 bank/state bytes = coded_layers*5*d^2*8*4 + source state tensors; DECLARED, not measured memory traffic",
+      "storage": "declared FP32 bank/state bytes = n_sites*d^2*8*4 (one d x d pre-scaled bank per coded site per source level) + 2*sum_s(elements_s)*4 (two persistent state tensors per site); DECLARED, not measured memory traffic",
       "traffic": "declared scalar state read/write counts and accumulator touches; DECLARED, not measured memory traffic"
     },
     "pJ_proxy": {
@@ -100,18 +100,115 @@
   "protocol_sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
   "representative_batch_check": {
     "batch": 0,
-    "declared_controller_add_one_layer": 35745220,
-    "declared_projection_mac_one_layer": 883117200,
+    "declared_controller_add_four_layers": 142980880,
+    "declared_projection_mac_four_layers": 3532468800,
     "edges": 120152,
     "formula_matches_batch_shapes": true,
+    "frozen_head_weight_shapes": [
+      [
+        35,
+        70
+      ],
+      [
+        17,
+        35
+      ],
+      [
+        10,
+        17
+      ]
+    ],
+    "frozen_projection_weight_shapes": {
+      "layers.0.A": [
+        70,
+        70
+      ],
+      "layers.0.B": [
+        70,
+        70
+      ],
+      "layers.0.C": [
+        70,
+        70
+      ],
+      "layers.0.D": [
+        70,
+        70
+      ],
+      "layers.0.E": [
+        70,
+        70
+      ],
+      "layers.1.A": [
+        70,
+        70
+      ],
+      "layers.1.B": [
+        70,
+        70
+      ],
+      "layers.1.C": [
+        70,
+        70
+      ],
+      "layers.1.D": [
+        70,
+        70
+      ],
+      "layers.1.E": [
+        70,
+        70
+      ],
+      "layers.2.A": [
+        70,
+        70
+      ],
+      "layers.2.B": [
+        70,
+        70
+      ],
+      "layers.2.C": [
+        70,
+        70
+      ],
+      "layers.2.D": [
+        70,
+        70
+      ],
+      "layers.2.E": [
+        70,
+        70
+      ],
+      "layers.3.A": [
+        70,
+        70
+      ],
+      "layers.3.B": [
+        70,
+        70
+      ],
+      "layers.3.C": [
+        70,
+        70
+      ],
+      "layers.3.D": [
+        70,
+        70
+      ],
+      "layers.3.E": [
+        70,
+        70
+      ]
+    },
     "graphs": 128,
-    "manual_check": "per-layer A/B/D/E on N (MAC=4*N*d^2), C on E (MAC=E*d^2), z two E*d ADD, numerator+denominator 2*E*d ADD, denominator+eps N*d ADD, A(h)+message N*d ADD; dense projection count matches the declared formula at this batch's real N/E",
+    "manual_check": "A/B/D/E weights (70x70) applied to n0 nodes and C (70x70) to e0 edges, summed over the four frozen layers; controller ADDs traced to z composition, two index_add_ reductions, denominator+eps and A(h)+message residual. Weights are the frozen seed-41 checkpoint.",
     "nodes": 15019,
     "source_lines_inspected": [
-      "research/visual-graphs/continuation_20261113/../takeover_20261112/gated_affine_base_v1.py::_graph_layer",
       "research/visual-graphs/continuation_20261113/../takeover_20261112/gated_teacher_model.py::GatedGCNLayer.forward",
-      "research/visual-graphs/continuation_20261113/../takeover_20261112/gated_teacher_model.py::MLPReadout.forward"
-    ]
+      "research/visual-graphs/continuation_20261113/../takeover_20261112/gated_teacher_model.py::MLPReadout.forward",
+      "research/visual-graphs/continuation_20261113/../takeover_20261112/gated_affine_base_v1.py::_graph_layer"
+    ],
+    "weight_derived_projection_mac_four_layers": 3532468800
   },
   "rows": [
     {

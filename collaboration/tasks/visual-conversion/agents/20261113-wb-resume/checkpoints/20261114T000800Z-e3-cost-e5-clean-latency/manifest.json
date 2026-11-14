@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-wb-resume",
+  "created_at_utc": "2026-11-14T00:09:57.805199+00:00",
+  "status": "in_progress",
+  "input_git_head": "62eddfa3dcb89bca5f06d2838bba6d06a5630cc3",
+  "protocol": {
+    "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/PROTOCOL-v3.md",
+    "sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "bytes": 4321
+  },
+  "artifacts": [
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/e3_e5_v1.py",
+      "sha256": "274d9c15c39681f6dbf1c083f59337243449c729bea7d9fe3f37246f42dd7b7e",
+      "bytes": 47735
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/e5_falsifier_v1.py",
+      "sha256": "33215e362ab65021b0dd7ef8dbe477b5a704e704838fa35c2deaed93a1bbb587",
+      "bytes": 27739
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e3-e5-v1/e3_cost_ledger_v1.json",
+      "sha256": "bc80660a008be853cc9abdbaa20ad5cc09463e8ba10218dc10df8e4ff45d656c",
+      "bytes": 397659
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e3-e5-v1/cost_METRICS.csv",
+      "sha256": "1b0d6fc137abdd55c268da59d5990fad0110e4019f9ca67c7bab5ac4bdbe95c8",
+      "bytes": 79290
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e3e5-precheck-v1.json",
+      "sha256": "c9b8ae772d96cfa2d8f8f46b2bcccef7b5671d35bea58d1bc9d6d3a4123e5bcf",
+      "bytes": 1683
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-precheck-v1.json",
+      "sha256": "48aa82f007d280b42fb06675597254159062f9f1b2ed7c2f243ea5e049378046",
+      "bytes": 294
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e3e5-cost-draft-superseded-v1/SUPERSEDED.json",
+      "sha256": "69878a6d3bc59e49374bc81fefc5470941f60b90ba618d0948a4954f46e53389",
+      "bytes": 1089
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e3e5-cost-draft-superseded-v1/SHA256SUMS.txt",
+      "sha256": "e5c57b3c264183c93bdfb7a7386eb262ec08b7c0f3b7eb997aaf37f3bfe99368",
+      "bytes": 348
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e3e5-latency-concurrency-incident-v1/INCIDENT.json",
+      "sha256": "6ab4656bc754a2a969ce264ac194831ff6f7c8ab0c97a76e123ee8dda3050a76",
+      "bytes": 2446
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e3e5-latency-concurrency-incident-v1/SHA256SUMS.txt",
+      "sha256": "452a34b0f9b366805133a24bdd1f1b9905219191c918c64d7538f41deabf3555",
+      "bytes": 609
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e3e5-latency-concurrency-incident-v1/old-job-ThE3rS.log",
+      "sha256": "42e772686313acfb947525d260d8e70215f4adfaa445cb5aa43bf7b3a351bc67",
+      "bytes": 211
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e3e5-latency-concurrency-incident-v1/new-job-jvgzz3.driver.log",
+      "sha256": "3033a31f4e3b04a64434dd839bdfe70b7539bcb0b034afe36602571fe3bd07f0",
+      "bytes": 95
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e3e5-latency-concurrency-incident-v1/contaminated.partial.jsonl",
+      "sha256": "7bd200bd0d80925c6307022e631be2a38355c9506e9380dbe24ebd16e2701bb0",
+      "bytes": 1108
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/checkpoints/20261114T000800Z-e3-cost-e5-clean-latency/CHECKPOINT.md",
+      "sha256": "c6b3aa75003672cd497470132250a7f596b9bf105b202c0787399e02b0220915",
+      "bytes": 9683
+    },
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/checkpoints/20261114T000800Z-e3-cost-e5-clean-latency/metrics.csv",
+      "sha256": "1b0d6fc137abdd55c268da59d5990fad0110e4019f9ca67c7bab5ac4bdbe95c8",
+      "bytes": 79290
+    }
+  ]
+}

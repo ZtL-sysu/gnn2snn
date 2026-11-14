@@ -271,7 +271,7 @@ ACCOUNTING_MODEL = {
         "decoder_one_over_t": "1 DIV per element per active source call, explicitly counted (NOT assumed free power-of-two shift)",
         "head": "(head_calls/P) * [B*3215 MAC + B*(35+17) ReLU] once per endpoint; dc_adapt_six_site evaluates the head every tick",
         "pooling": "(head_calls/P) * [N*d ADD + B*d DIV]",
-        "storage": "declared FP32 bank/state bytes = coded_layers*5*d^2*8*4 + source state tensors; DECLARED, not measured memory traffic",
+        "storage": "declared FP32 bank/state bytes = n_sites*d^2*8*4 (one d x d pre-scaled bank per coded site per source level) + 2*sum_s(elements_s)*4 (two persistent state tensors per site); DECLARED, not measured memory traffic",
         "traffic": "declared scalar state read/write counts and accumulator touches; DECLARED, not measured memory traffic",
         "final_unused_edge_pruned": "subtract T*(E*d) for each of: final-layer edge BN MUL, BN ADD, ReLU, residual ADD. Applied IDENTICALLY to every row including ANN (fair pruning).",
     },
@@ -412,7 +412,7 @@ def build_ann_cost() -> dict:
     residual -= prune
     add = g_add + scatter + norm_add + bn_add + relu + residual + N * D
     mul = products + sigmoid + norm_div + bn_mul + B * D
-    mac = EMB_MACS + L * (4 * N * D * D + E * D * D) + B * HEAD_MACS + B * (W_HEAD[1] + W_HEAD[2]) * 0
+    mac = EMB_MACS + L * (4 * N * D * D + E * D * D) + B * HEAD_MACS
     # ReLU in head priced as ADD-equivalent (declared).
     add += B * (W_HEAD[1] + W_HEAD[2])
     conv = {"AC": {"ADD": int(add), "MUL": int(mul), "MAC": int(mac),
@@ -447,30 +447,63 @@ def cost() -> None:
            ]}
     metric_rows = []
 
-    # Representative batch manual check (batch 0, 128 graphs, fixed order).
+    # Representative batch manual check: derive the dense projection MAC
+    # INDEPENDENTLY from the frozen teacher weight shapes and the real batch-0
+    # N/E, instead of restating the declared formula twice.
+    import torch
     from torch_geometric.datasets import GNNBenchmarkDataset
+    if str(CODE) not in sys.path:
+        sys.path.insert(0, str(CODE))
+    import e1_residual_v1 as R
+    state = torch.load(R.BINDINGS[41]["teacher"] / "best.pt",
+                       map_location="cpu", weights_only=False)
+    sd = state["model"]
+    proj = {f"layers.{i}.{name}": tuple(int(x) for x in sd[f"layers.{i}.{name}.weight"].shape)
+            for i in range(L) for name in ("A", "B", "C", "D", "E")}
+    head = [tuple(int(x) for x in sd[f"MLP_layer.FC_layers.{j}.weight"].shape)
+            for j in range(3)]
+    require(all(v == (D, D) for v in proj.values()) and len(proj) == L * 5,
+            "frozen projection weight shape drift")
+    require(head == [(35, D), (17, 35), (10, 17)], "frozen head width drift")
+    require(sum(a * b for a, b in head) == HEAD_MACS, "frozen head MAC differs from declared")
+
     ds = GNNBenchmarkDataset(root=str(default_data_root()), name="CIFAR10", split="val")
     b0 = [ds[i] for i in range(128)]
     n0 = sum(int(g.num_nodes) for g in b0)
     e0 = sum(int(g.edge_index.shape[1]) for g in b0)
-    manual_layer_mac = 4 * n0 * D * D + e0 * D * D
-    manual_layer_add = 2 * e0 * D + 2 * e0 * D + n0 * D + n0 * D
+    weight_derived_layer_mac = 0
+    for i in range(L):
+        for name in ("A", "B", "D", "E"):
+            o, inn = proj[f"layers.{i}.{name}"]
+            weight_derived_layer_mac += n0 * o * inn
+        o, inn = proj[f"layers.{i}.C"]
+        weight_derived_layer_mac += e0 * o * inn
+    declared_layer_mac = L * (4 * n0 * D * D + e0 * D * D)
+    # Controller ADDs read line-by-line from GatedGCNLayer.forward.
+    gate_add, scatter_add = 2 * e0 * D, 2 * e0 * D
+    normalization_add, message_residual_add = n0 * D, n0 * D
+    manual_layer_add = L * (gate_add + scatter_add + normalization_add + message_residual_add)
     out["representative_batch_check"] = {
         "batch": 0, "graphs": len(b0), "nodes": n0, "edges": e0,
-        "declared_projection_mac_one_layer": manual_layer_mac,
-        "declared_controller_add_one_layer": manual_layer_add,
+        "frozen_projection_weight_shapes": {k: list(v) for k, v in sorted(proj.items())},
+        "frozen_head_weight_shapes": [list(v) for v in head],
+        "weight_derived_projection_mac_four_layers": weight_derived_layer_mac,
+        "declared_projection_mac_four_layers": declared_layer_mac,
+        "declared_controller_add_four_layers": manual_layer_add,
         "source_lines_inspected": [
-            f"{SR}/../takeover_20261112/gated_affine_base_v1.py::_graph_layer",
             f"{SR}/../takeover_20261112/gated_teacher_model.py::GatedGCNLayer.forward",
             f"{SR}/../takeover_20261112/gated_teacher_model.py::MLPReadout.forward",
+            f"{SR}/../takeover_20261112/gated_affine_base_v1.py::_graph_layer",
         ],
-        "manual_check": "per-layer A/B/D/E on N (MAC=4*N*d^2), C on E (MAC=E*d^2), "
-                        "z two E*d ADD, numerator+denominator 2*E*d ADD, "
-                        "denominator+eps N*d ADD, A(h)+message N*d ADD; "
-                        "dense projection count matches the declared formula at this batch's real N/E",
-        "formula_matches_batch_shapes": bool(manual_layer_mac == 4 * n0 * D * D + e0 * D * D
-                                             and manual_layer_add == 4 * e0 * D + 2 * n0 * D),
+        "manual_check": "A/B/D/E weights (70x70) applied to n0 nodes and C (70x70) to e0 "
+                        "edges, summed over the four frozen layers; controller ADDs traced "
+                        "to z composition, two index_add_ reductions, denominator+eps and "
+                        "A(h)+message residual. Weights are the frozen seed-41 checkpoint.",
+        "formula_matches_batch_shapes": bool(weight_derived_layer_mac == declared_layer_mac
+                                             and manual_layer_add == L * (4 * e0 * D + 2 * n0 * D)),
     }
+    require(out["representative_batch_check"]["formula_matches_batch_shapes"],
+            "representative batch manual check failed")
 
     ann = build_ann_cost()
     out["ann_upper_reference"] = ann
@@ -527,12 +560,14 @@ def latency(args) -> None:
     if str(CODE) not in sys.path:
         sys.path.insert(0, str(CODE))
     import e1_residual_v1 as R
-    import eval_e1_multiseed_v1 as MS
+    # load_modules() inserts both CODE and the frozen takeover_20261112 SOURCE
+    # dir into sys.path; matched_controls imports gated_causal_hybrid from
+    # SOURCE, so it MUST be imported afterwards.
+    mods = R.load_modules(author_repo)
     import matched_controls as controls
     import eval_affine_validation as base
 
-    binding = R.verify_bindings(41, data_root, R.load_modules(author_repo))
-    mods = R.load_modules(author_repo)
+    binding = R.verify_bindings(41, data_root, mods)
     _base, affine, cal, hybrid, author, shared, teacher_helper = mods
     ap = R.author_provenance(author_repo, mods)
     MTH_diff, MTH_diff_line = ap["MTH_diff"], ap["MTH_diff_line"]
@@ -570,7 +605,8 @@ def latency(args) -> None:
                       for v in binding["shared_theta_vectors"]]
     six_ct = six_doc["calibration"]["channel_thresholds"]
 
-    def thresholds(mode):
+    def build_thresholds(mode):
+        """Identical frozen mapping to eval_e1_multiseed_v1.thresholds_for."""
         dt = batches[0].x.dtype
         if mode in ("centered", "first_analog", "generic"):
             return [t.to(device=device, dtype=dt) for t in cal.profile_thresholds(affine_doc, mode, 1)]
@@ -582,11 +618,17 @@ def latency(args) -> None:
             return [torch.as_tensor(six_ct[s], dtype=dt, device=device) for s in R.SIX_SITES]
         return [v.clone() for v in shared_vectors]
 
+    # Threshold construction is frozen calibration lookup, NOT forward work.
+    # Build it once outside every timed loop so it cannot bias the matched
+    # wall-clock differently across modes; then prove it stayed immutable.
+    TH = {m: build_thresholds(m) for m in ALL_MODES if m != "ANN"}
+    TH_REF = {m: [t.clone() for t in ts] for m, ts in TH.items()}
+
     @torch.no_grad()
     def forward(mode, T, batch):
         if mode == "ANN":
             return model(batch)
-        th = thresholds(mode)
+        th = TH[mode]
         if mode == "dc_adapt_six_site":
             logits, _diag = hybrid.differential_hybrid_forward(model, batch, th, T, MTH_diff)
             return logits
@@ -607,11 +649,36 @@ def latency(args) -> None:
     require(not hasattr(b0, "y") or b0.y is None, "labels leaked into converter input")
 
     configs = [("ANN", 0)] + [(m, t) for m in ALL_MODES if m != "ANN" for t in TIMESTEPS]
-    reps = args.repeats
-    warmup = args.warmup
+    if args.limit:
+        configs = configs[:args.limit]
+    reps, warmup = args.repeats, args.warmup
+    graphs = sum(int(b.num_graphs) for b in batches)
+    # Heartbeat-safe incremental evidence: one JSON line per completed config.
+    part_path = OUT / "e5_latency_v1.partial.jsonl"
+    if not args.dry_run and part_path.is_file() and not args.resume:
+        raise RuntimeError("partial latency evidence exists; use --resume or archive it")
+    completed = {}
+    if args.resume and part_path.is_file():
+        config_set = set(configs)
+        for line in part_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            rec = json.loads(line)
+            key = (rec["mode"], rec["T"])
+            if key in config_set:
+                completed[key] = rec
+        print(json.dumps({"resumed_completed_configs": len(completed),
+                          "configs_in_this_run": len(configs)}), flush=True)
     results = []
     t_start = time.monotonic()
     for ci, (mode, T) in enumerate(configs):
+        if (mode, T) in completed:
+            rec = completed[(mode, T)]
+            require(rec["graphs_per_repeat"] == graphs and
+                    len(rec["repeat_wall_seconds"]) == reps,
+                    "partial latency record does not match this run's settings")
+            results.append(rec)
+            continue
         # warm-up passes (untimed), identical for every configuration
         for _ in range(warmup):
             for b in batches:
@@ -626,37 +693,54 @@ def latency(args) -> None:
             if device.type == "cuda":
                 torch.cuda.synchronize(device)
             times.append(time.monotonic() - t0)
-        graphs = sum(int(b.num_graphs) for b in batches)
         med = statistics.median(times)
-        results.append({"mode": mode, "T": T, "graphs_per_repeat": graphs,
-                        "repeat_wall_seconds": [round(x, 6) for x in times],
-                        "median_wall_seconds": med,
-                        "median_ms_per_graph": med * 1000.0 / graphs,
-                        "min_ms_per_graph": min(times) * 1000.0 / graphs,
-                        "max_ms_per_graph": max(times) * 1000.0 / graphs})
+        rec = {"mode": mode, "T": T, "graphs_per_repeat": graphs,
+               "repeat_wall_seconds": [round(x, 6) for x in times],
+               "median_wall_seconds": med,
+               "median_ms_per_graph": med * 1000.0 / graphs,
+               "min_ms_per_graph": min(times) * 1000.0 / graphs,
+               "max_ms_per_graph": max(times) * 1000.0 / graphs}
+        results.append(rec)
+        if not args.dry_run:
+            OUT.mkdir(parents=True, exist_ok=True)
+            with part_path.open("a", encoding="utf-8") as pf:
+                pf.write(json.dumps(rec, sort_keys=True, allow_nan=False) + "\n")
         if ci % 8 == 0 or ci == len(configs) - 1:
             print(json.dumps({"config": ci + 1, "of": len(configs), "mode": mode,
                               "T": T, "median_ms_per_graph": round(med * 1000.0 / graphs, 4),
                               "elapsed_sec": round(time.monotonic() - t_start, 1)}), flush=True)
 
+    # Frozen thresholds must not have been mutated in place by any converter.
+    require(all(torch.equal(a, b) for m in TH for a, b in zip(TH[m], TH_REF[m])),
+            "frozen threshold tensor mutated during latency job")
     data_start = base.processed_hashes(data_root)
     require(data_start == binding["metadata"]["provenance"]["processed_data_sha256"],
             "processed data changed during latency job")
     require(ap["safe"]["commit"] == DCGS_COMMIT, "pinned DCGS commit drift")
 
+    if args.dry_run:
+        print(json.dumps({"dry_run": True, "configs": len(results), "graphs": graphs,
+                          "total_job_seconds": round(time.monotonic() - t_start, 1),
+                          "note": "no output written; timing probe only"}, indent=2))
+        return
+
     report = {
         "status": "measured_matched_wall_clock_dense_prototype_not_hardware_latency",
         "check": "e5_latency_v1",
         "scope": "same local RTX 3060, batch 128, fixed sequential validation order, "
-                 "identical warmup and 3 repeats, median wall-clock per graph; "
+                 f"identical warmup and {reps} repeats, median wall-clock per graph; "
+                 "frozen thresholds constructed ONCE outside all timed loops; "
                  "dense PyTorch prototype only, NOT neuromorphic hardware latency",
         "device": str(device), "gpu_name": torch.cuda.get_device_name(device) if device.type == "cuda" else "cpu",
         "torch": torch.__version__, "python": sys.version,
         "deterministic_algorithms": torch.are_deterministic_algorithms_enabled(),
         "cudnn_benchmark": torch.backends.cudnn.benchmark,
         "teacher_seed": 41, "batches_used": args.batches,
-        "graphs_per_repeat": sum(int(b.num_graphs) for b in batches),
+        "graphs_per_repeat": graphs,
         "warmup_passes": warmup, "repeats": reps, "configs": len(configs),
+        "resumed_from_partial": bool(args.resume and completed),
+        "resumed_configs": len(completed),
+        "total_timed_span_seconds_this_process": time.monotonic() - t_start,
         "total_job_seconds": time.monotonic() - t_start,
         "representative_batch_manual_check": {
             "batch": 0, "graphs": int(b0.num_graphs), "nodes": int(b0.num_nodes),
@@ -680,7 +764,7 @@ def latency(args) -> None:
     metric_rows = []
     for r in results:
         metric_rows.append(dict(zip(CSV_COLUMNS, (
-            TASK, AGENT, RUN_ID, "CIFAR10", "val", f"{args.batches * 128}_fixed_prefix_val",
+            TASK, AGENT, RUN_ID, "CIFAR10", "val", f"{graphs}_fixed_prefix_val",
             r["mode"], 41, "", r["T"] or "", "median_matched_wall_clock_ms_per_graph",
             r["median_ms_per_graph"], "ms_per_graph",
             f"{RR}/results/e3-e5-v1/e5_latency_v1.json", PROTOCOL_SHA, "measured"))))
@@ -790,6 +874,12 @@ def main() -> None:
     lp.add_argument("--batches", type=int, default=4)
     lp.add_argument("--repeats", type=int, default=3)
     lp.add_argument("--warmup", type=int, default=1)
+    lp.add_argument("--limit", type=int, default=0,
+                    help="run only the first N configs (timing probe; 0 = all)")
+    lp.add_argument("--dry-run", action="store_true",
+                    help="time the forwards but write no output files")
+    lp.add_argument("--resume", action="store_true",
+                    help="resume from e5_latency_v1.partial.jsonl (heartbeat-safe)")
     a = p.parse_args()
     if a.cmd == "latency":
         latency(a)
