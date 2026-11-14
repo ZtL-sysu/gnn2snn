@@ -1,0 +1,299 @@
+{
+  "scope": "label-free saved-training-indices reevaluation; no validation or test split loaded",
+  "dataset": "MNIST",
+  "teacher_seed": 41,
+  "teacher_checkpoint_sha256": "b123168cbc8b8476d1fa2b65c934bb66ff4c67bb9a2cc33b1e5cd047176a9dd1",
+  "calibration_sha256": "895bdefa787953884b832116ef6f6e82f43d56047d885d8721a3eeda57ec1d4e",
+  "core_sha256": "e25a56f29465659df6ef60a5d3a9d0773bdc5b0006715107b4b6eadff9532afd",
+  "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+  "author_source_provenance": {
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "worktree_clean_except_ignored_bytecode": true,
+    "untracked_bytecode_entries": 5,
+    "source_file": "neurons/relu_neuron.py",
+    "source_file_sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+    "source_head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161",
+    "source_worktree_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161"
+  },
+  "train_indices_count": 512,
+  "train_indices_sha256": "7cf6ce1ada65d9b07d3dd24484c6463e02f3f8da11e4c213a052da3c24265800",
+  "batch_size": 32,
+  "batch_count": 16,
+  "device": "NVIDIA GeForce RTX 3060",
+  "torch": "2.11.0+cu128",
+  "deterministic_algorithms": true,
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "test_loaded": false,
+  "parameter_files": [
+    {
+      "file": "graph_T1_parameters.npz",
+      "sha256": "fc7cafbbdee7d1773d9d6dfd2dfaa8576a82c2964dc319c3cc03dbf28f0d12b9"
+    },
+    {
+      "file": "graph_T2_parameters.npz",
+      "sha256": "adca7998991972c7f700d7e984736ae5f24a8e72d8834a1858e3ba85df196359"
+    },
+    {
+      "file": "mix_T1_parameters.npz",
+      "sha256": "47b17a3ce52904329e0eb83434227197669ad84164714bce0c71dd85eb782402"
+    },
+    {
+      "file": "mix_T2_parameters.npz",
+      "sha256": "1b96ea4082b41725bfda0aa5601df87c30f4e99b556fca1f2abfb82ca15dcb89"
+    },
+    {
+      "file": "node_T1_parameters.npz",
+      "sha256": "db622c58ea0cf2e6c8822b44bdbac39998bb7f57b8ae74bb27101a4fa9bc9751"
+    },
+    {
+      "file": "node_T2_parameters.npz",
+      "sha256": "f597539a8509fbc980649dc2105565f732881c79c4275aa1f5f65e53a1e80ca0"
+    },
+    {
+      "file": "output_T1_parameters.npz",
+      "sha256": "0c3a01e847398f83d73441fa7bb16b20fe3678e6bc9b324713cb1ebed0460bff"
+    },
+    {
+      "file": "output_T2_parameters.npz",
+      "sha256": "454fcd759a9bc92aacd765bcb8584c9898e4b75916cf38c8e4bcfa62109e0339"
+    },
+    {
+      "file": "shuffled_T1_parameters.npz",
+      "sha256": "c7639102af803630283cb260aefd91e3b5e12a6ac789ff6b18d4dca336ceb5a5"
+    },
+    {
+      "file": "shuffled_T2_parameters.npz",
+      "sha256": "4fe991ed5c5d75c11adf51d6233869e0d2a52c6705186b70abfa0a2c35de4d3b"
+    }
+  ],
+  "results": [
+    {
+      "method": "baseline",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 10.18264627456665,
+      "graph_logit_mse_normalized_batch_mean": 0.17180519178509712,
+      "node_mse_normalized_equal_site_batch_mean": 0.11977742701613654,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.04043732467107475,
+        0.05080430814996362,
+        0.09530990710482001,
+        0.24900857731699944,
+        0.13342090416699648,
+        0.149683540686965
+      ],
+      "teacher_agreement_percent": 80.46875,
+      "output_bias_applied": false
+    },
+    {
+      "method": "baseline",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.6854378849267959,
+      "graph_logit_mse_normalized_batch_mean": 0.01147203688742593,
+      "node_mse_normalized_equal_site_batch_mean": 0.0077129487387234495,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0014405917245312594,
+        0.002031126045039855,
+        0.00513847719412297,
+        0.017368037486448884,
+        0.008777662995271385,
+        0.011521796986926347
+      ],
+      "teacher_agreement_percent": 97.0703125,
+      "output_bias_applied": false
+    },
+    {
+      "method": "graph",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 8.02657995223999,
+      "graph_logit_mse_normalized_batch_mean": 0.13506383821368217,
+      "node_mse_normalized_equal_site_batch_mean": 0.12240514601580799,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.043601117795333266,
+        0.058226316468790174,
+        0.11113369185477495,
+        0.27796275168657303,
+        0.11681386828422546,
+        0.12669313000515103
+      ],
+      "teacher_agreement_percent": 84.1796875,
+      "output_bias_applied": false
+    },
+    {
+      "method": "graph",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.9663261771202087,
+      "graph_logit_mse_normalized_batch_mean": 0.016358010994736105,
+      "node_mse_normalized_equal_site_batch_mean": 0.013511552548152395,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0017375197348883376,
+        0.0029071332974126562,
+        0.009370783809572458,
+        0.033823461504653096,
+        0.015722630952950567,
+        0.017507785989437252
+      ],
+      "teacher_agreement_percent": 97.4609375,
+      "output_bias_applied": false
+    },
+    {
+      "method": "mix",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 7.752850413322449,
+      "graph_logit_mse_normalized_batch_mean": 0.12967446353286505,
+      "node_mse_normalized_equal_site_batch_mean": 0.10841197951231152,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.043002251302823424,
+        0.05479074455797672,
+        0.09588616760447621,
+        0.2242569588124752,
+        0.11170639516785741,
+        0.12082935962826014
+      ],
+      "teacher_agreement_percent": 81.4453125,
+      "output_bias_applied": false
+    },
+    {
+      "method": "mix",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.7195558667182922,
+      "graph_logit_mse_normalized_batch_mean": 0.012124439468607306,
+      "node_mse_normalized_equal_site_batch_mean": 0.009209071122313617,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0016236864830716513,
+        0.0024181941844290122,
+        0.006612801109440625,
+        0.02142549678683281,
+        0.010879712936002761,
+        0.012294535234104842
+      ],
+      "teacher_agreement_percent": 97.4609375,
+      "output_bias_applied": false
+    },
+    {
+      "method": "node",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 8.322684144973755,
+      "graph_logit_mse_normalized_batch_mean": 0.139670685864985,
+      "node_mse_normalized_equal_site_batch_mean": 0.10339262464549392,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.04214970418252051,
+        0.05193748464807868,
+        0.08788422774523497,
+        0.2039534030482173,
+        0.11203363398090005,
+        0.12239729426801205
+      ],
+      "teacher_agreement_percent": 83.0078125,
+      "output_bias_applied": false
+    },
+    {
+      "method": "node",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.6605854511260987,
+      "graph_logit_mse_normalized_batch_mean": 0.011154422187246382,
+      "node_mse_normalized_equal_site_batch_mean": 0.007650990201606571,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0014976626844145358,
+        0.0020870739390375093,
+        0.005266864172881469,
+        0.01708001096267253,
+        0.008731608337257057,
+        0.01124272111337632
+      ],
+      "teacher_agreement_percent": 97.4609375,
+      "output_bias_applied": false
+    },
+    {
+      "method": "output",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 9.604082918167114,
+      "graph_logit_mse_normalized_batch_mean": 0.16200477443635464,
+      "node_mse_normalized_equal_site_batch_mean": 0.11977742701613654,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.04043732467107475,
+        0.05080430814996362,
+        0.09530990710482001,
+        0.24900857731699944,
+        0.13342090416699648,
+        0.149683540686965
+      ],
+      "teacher_agreement_percent": 81.25,
+      "output_bias_applied": true
+    },
+    {
+      "method": "output",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.6494873434305191,
+      "graph_logit_mse_normalized_batch_mean": 0.010879467474296689,
+      "node_mse_normalized_equal_site_batch_mean": 0.0077129487387234495,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0014405917245312594,
+        0.002031126045039855,
+        0.00513847719412297,
+        0.017368037486448884,
+        0.008777662995271385,
+        0.011521796986926347
+      ],
+      "teacher_agreement_percent": 96.875,
+      "output_bias_applied": true
+    },
+    {
+      "method": "shuffled",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 39.26538734436035,
+      "graph_logit_mse_normalized_batch_mean": 0.6563984639942646,
+      "node_mse_normalized_equal_site_batch_mean": 0.6270261730533093,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.06619238713756204,
+        0.11840766854584217,
+        0.5912692882120609,
+        1.3903528898954391,
+        0.971962571144104,
+        0.6239722333848476
+      ],
+      "teacher_agreement_percent": 18.1640625,
+      "output_bias_applied": false
+    },
+    {
+      "method": "shuffled",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 36.12223606109619,
+      "graph_logit_mse_normalized_batch_mean": 0.6063514910638332,
+      "node_mse_normalized_equal_site_batch_mean": 0.5388651763690481,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.01492492010584101,
+        0.049123280914500356,
+        0.3893456794321537,
+        1.2941734716296196,
+        0.9196094013750553,
+        0.5660143047571182
+      ],
+      "teacher_agreement_percent": 22.0703125,
+      "output_bias_applied": false
+    }
+  ]
+}

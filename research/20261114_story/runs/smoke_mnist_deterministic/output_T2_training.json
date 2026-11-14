@@ -1,0 +1,10 @@
+{
+  "steps": 2,
+  "trainable_parameters": 10,
+  "loss": [
+    0.012182372622191906,
+    0.00880065280944109
+  ],
+  "calibration_seconds": 0.04668979998677969,
+  "peak_allocated_bytes": 182552064
+}

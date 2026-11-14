@@ -1,0 +1,52 @@
+{
+  "analysis_directory": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\analysis\\confirmation",
+  "input_files": {
+    "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\analysis\\confirmation\\aggregate.csv": "1b81196b56f1768942531084fd4b6fb60224a25a4cbcb7628fbd6442d2a266c1",
+    "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\analysis\\confirmation\\per_seed.csv": "74ec54d9333207fefc917c561d717f876474541fc99dc33b987e4d94c694681a"
+  },
+  "cost_inputs": [
+    {
+      "path": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\costs\\cost_CIFAR1041.json",
+      "sha256": "03556a6cbfccfbb3dbc45c7c8fcb8516fa0bee0647f2fe8d0079a75246ccbef7"
+    },
+    {
+      "path": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\costs\\cost_CIFAR1042.json",
+      "sha256": "2392639d3ef14f01a9caeeae29201b7f202aeeb2fb2c1737a7afe7acb17d992f"
+    },
+    {
+      "path": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\costs\\cost_CIFAR1043.json",
+      "sha256": "692e0b64abf1bf943124a6064509ac16c5a83af9bb297c0c5fd628977e1d44ed"
+    },
+    {
+      "path": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\costs\\cost_MNIST41.json",
+      "sha256": "b719577267b3b07acd32e4c537338e89091709ca1f543341dbfea548e490060c"
+    },
+    {
+      "path": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\costs\\cost_MNIST42.json",
+      "sha256": "23b3c9fb78ef76435c52d2779db6de3a0a65bc23d141454f163e06e1e3bf21b3"
+    },
+    {
+      "path": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\costs\\cost_MNIST43.json",
+      "sha256": "3bedd207eeffd252837488d2fdd09b889e3af2629926dad97cf92d078a18b401"
+    }
+  ],
+  "runner_versions": [
+    "3e246a5159b7fac3caaab5f805d1523446676c902485c583d6818da1a525b74f",
+    "cdc9b10ade6aaa057e98e10d34048bd3d321fd0843c8dcf7547ca5b3bfd874ea"
+  ],
+  "figure_files": [
+    "accuracy_curves.pdf",
+    "latency.pdf",
+    "paired_objective.pdf",
+    "accuracy_curves.png",
+    "latency.png",
+    "paired_objective.png"
+  ],
+  "plot_qualification": "historically exposed validation, descriptive teacher-seed variability; diagnostic latency only",
+  "raw_latency_repeats_preserved_in_source_json": true,
+  "software": {
+    "python": "3.13.13",
+    "numpy": "2.4.4",
+    "matplotlib": "3.11.1"
+  }
+}

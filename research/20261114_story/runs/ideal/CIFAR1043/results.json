@@ -1,0 +1,296 @@
+[
+  {
+    "condition": "baseline",
+    "ideal_sites": [],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 47.68,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 63.94,
+    "logit_mse": 1.790456862799648,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.9513224363327026
+  },
+  {
+    "condition": "site0",
+    "ideal_sites": [
+      "gcn_0"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 50.519999999999996,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 71.0,
+    "logit_mse": 1.0696317682785768,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.6424803733825684
+  },
+  {
+    "condition": "site1",
+    "ideal_sites": [
+      "gcn_1"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 48.06,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 66.08000000000001,
+    "logit_mse": 1.6523911400117586,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.8686419725418091
+  },
+  {
+    "condition": "site2",
+    "ideal_sites": [
+      "gcn_2"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 49.02,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 66.12,
+    "logit_mse": 1.5871815603944426,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.8137624263763428
+  },
+  {
+    "condition": "site3",
+    "ideal_sites": [
+      "gcn_3"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 47.12,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 63.519999999999996,
+    "logit_mse": 1.769559545556992,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.929770827293396
+  },
+  {
+    "condition": "site4",
+    "ideal_sites": [
+      "mlp_0"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 49.24,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 66.03999999999999,
+    "logit_mse": 1.5116929327035613,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.8611235618591309
+  },
+  {
+    "condition": "site5",
+    "ideal_sites": [
+      "mlp_1"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 49.38,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 66.10000000000001,
+    "logit_mse": 1.4855440528985333,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.8598082065582275
+  },
+  {
+    "condition": "nodes0_3",
+    "ideal_sites": [
+      "gcn_0",
+      "gcn_1",
+      "gcn_2",
+      "gcn_3"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 52.78,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 79.54,
+    "logit_mse": 0.6903474594657653,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.3076719045639038
+  },
+  {
+    "condition": "head4_5",
+    "ideal_sites": [
+      "mlp_0",
+      "mlp_1"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 50.32,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 68.96,
+    "logit_mse": 1.196996882321121,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.7478827834129333
+  },
+  {
+    "condition": "all6",
+    "ideal_sites": [
+      "gcn_0",
+      "gcn_1",
+      "gcn_2",
+      "gcn_3",
+      "mlp_0",
+      "mlp_1"
+    ],
+    "T": 1,
+    "graphs": 5000,
+    "accuracy_percent": 56.92,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 100.0,
+    "logit_mse": 0.0,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": 0.0
+  },
+  {
+    "condition": "baseline",
+    "ideal_sites": [],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 56.48,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 90.8,
+    "logit_mse": 0.1208613338011949,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.08423450589179993
+  },
+  {
+    "condition": "site0",
+    "ideal_sites": [
+      "gcn_0"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 56.36,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 93.0,
+    "logit_mse": 0.06425564579445937,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.05513369292020798
+  },
+  {
+    "condition": "site1",
+    "ideal_sites": [
+      "gcn_1"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 56.620000000000005,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 91.10000000000001,
+    "logit_mse": 0.09931540629089144,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.06844908744096756
+  },
+  {
+    "condition": "site2",
+    "ideal_sites": [
+      "gcn_2"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 56.24,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 91.4,
+    "logit_mse": 0.10306728619301918,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.06312870234251022
+  },
+  {
+    "condition": "site3",
+    "ideal_sites": [
+      "gcn_3"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 55.84,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 90.60000000000001,
+    "logit_mse": 0.11451569788047541,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.07486933469772339
+  },
+  {
+    "condition": "site4",
+    "ideal_sites": [
+      "mlp_0"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 55.800000000000004,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 92.56,
+    "logit_mse": 0.07264118664007446,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.05371791869401932
+  },
+  {
+    "condition": "site5",
+    "ideal_sites": [
+      "mlp_1"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 56.49999999999999,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 92.14,
+    "logit_mse": 0.07798623505419675,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.055683813989162445
+  },
+  {
+    "condition": "nodes0_3",
+    "ideal_sites": [
+      "gcn_0",
+      "gcn_1",
+      "gcn_2",
+      "gcn_3"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 56.76,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 94.86,
+    "logit_mse": 0.032842556702658815,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.025891780853271484
+  },
+  {
+    "condition": "head4_5",
+    "ideal_sites": [
+      "mlp_0",
+      "mlp_1"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 56.52,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 94.88,
+    "logit_mse": 0.036395869598660036,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": -0.027994977310299873
+  },
+  {
+    "condition": "all6",
+    "ideal_sites": [
+      "gcn_0",
+      "gcn_1",
+      "gcn_2",
+      "gcn_3",
+      "mlp_0",
+      "mlp_1"
+    ],
+    "T": 2,
+    "graphs": 5000,
+    "accuracy_percent": 56.92,
+    "teacher_accuracy_percent": 56.92,
+    "teacher_agreement_percent": 100.0,
+    "logit_mse": 0.0,
+    "teacher_margin_mean": 1.590289831161499,
+    "margin_shift_mean": 0.0
+  }
+]

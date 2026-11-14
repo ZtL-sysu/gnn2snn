@@ -1,0 +1,134 @@
+[
+  {
+    "method": "baseline",
+    "T": 1,
+    "accuracy_percent": 69.7265625,
+    "teacher_agreement_percent": 73.2421875,
+    "logit_mse": 10.145907402038574,
+    "cross_entropy": 1.017311692237854,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.4369480999885127
+  },
+  {
+    "method": "node",
+    "T": 1,
+    "accuracy_percent": 75.0,
+    "teacher_agreement_percent": 78.125,
+    "logit_mse": 8.20908260345459,
+    "cross_entropy": 0.9072620272636414,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.4249737000791356
+  },
+  {
+    "method": "graph",
+    "T": 1,
+    "accuracy_percent": 75.78125,
+    "teacher_agreement_percent": 80.078125,
+    "logit_mse": 7.983949184417725,
+    "cross_entropy": 0.9240242838859558,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.43379399995319545
+  },
+  {
+    "method": "mix",
+    "T": 1,
+    "accuracy_percent": 76.7578125,
+    "teacher_agreement_percent": 80.6640625,
+    "logit_mse": 7.778290748596191,
+    "cross_entropy": 0.8084628582000732,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.4282257000450045
+  },
+  {
+    "method": "shuffled",
+    "T": 1,
+    "accuracy_percent": 37.6953125,
+    "teacher_agreement_percent": 38.8671875,
+    "logit_mse": 26.558889389038086,
+    "cross_entropy": 3.0799214839935303,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.4158960999920964
+  },
+  {
+    "method": "output",
+    "T": 1,
+    "accuracy_percent": 70.1171875,
+    "teacher_agreement_percent": 73.4375,
+    "logit_mse": 10.053207397460938,
+    "cross_entropy": 1.008795142173767,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.4272189000621438
+  },
+  {
+    "method": "baseline",
+    "T": 2,
+    "accuracy_percent": 90.234375,
+    "teacher_agreement_percent": 95.8984375,
+    "logit_mse": 0.6650205254554749,
+    "cross_entropy": 0.30091869831085205,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.5955610000528395
+  },
+  {
+    "method": "node",
+    "T": 2,
+    "accuracy_percent": 89.2578125,
+    "teacher_agreement_percent": 96.2890625,
+    "logit_mse": 0.5907109975814819,
+    "cross_entropy": 0.3102056086063385,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.5818633999442682
+  },
+  {
+    "method": "graph",
+    "T": 2,
+    "accuracy_percent": 90.0390625,
+    "teacher_agreement_percent": 96.09375,
+    "logit_mse": 0.5840347409248352,
+    "cross_entropy": 0.2851090729236603,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.5821156000019982
+  },
+  {
+    "method": "mix",
+    "T": 2,
+    "accuracy_percent": 89.6484375,
+    "teacher_agreement_percent": 96.484375,
+    "logit_mse": 0.5901631116867065,
+    "cross_entropy": 0.294424831867218,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.5917765999911353
+  },
+  {
+    "method": "shuffled",
+    "T": 2,
+    "accuracy_percent": 48.2421875,
+    "teacher_agreement_percent": 50.78125,
+    "logit_mse": 19.533483505249023,
+    "cross_entropy": 2.329256534576416,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.5990061999764293
+  },
+  {
+    "method": "output",
+    "T": 2,
+    "accuracy_percent": 90.4296875,
+    "teacher_agreement_percent": 96.09375,
+    "logit_mse": 0.647661566734314,
+    "cross_entropy": 0.29979902505874634,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.5892748999176547
+  }
+]

@@ -1,0 +1,36 @@
+Processed 320/5000 official validation graphs
+Processed 640/5000 official validation graphs
+Processed 960/5000 official validation graphs
+Processed 1280/5000 official validation graphs
+Processed 1600/5000 official validation graphs
+Processed 1920/5000 official validation graphs
+Processed 2240/5000 official validation graphs
+Processed 2560/5000 official validation graphs
+Processed 2880/5000 official validation graphs
+Processed 3200/5000 official validation graphs
+Processed 3520/5000 official validation graphs
+Processed 3840/5000 official validation graphs
+Processed 4160/5000 official validation graphs
+Processed 4480/5000 official validation graphs
+Processed 4800/5000 official validation graphs
+{"condition": "baseline", "ideal_sites": [], "T": 1, "graphs": 5000, "accuracy_percent": 75.0, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 76.53999999999999, "logit_mse": 10.227565909422513, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -3.5164639949798584}
+{"condition": "site0", "ideal_sites": ["gcn_0"], "T": 1, "graphs": 5000, "accuracy_percent": 84.7, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 87.48, "logit_mse": 6.236741587923622, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -2.0689594745635986}
+{"condition": "site1", "ideal_sites": ["gcn_1"], "T": 1, "graphs": 5000, "accuracy_percent": 79.86, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 81.88, "logit_mse": 8.17364309545031, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -2.8459904193878174}
+{"condition": "site2", "ideal_sites": ["gcn_2"], "T": 1, "graphs": 5000, "accuracy_percent": 75.3, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 76.9, "logit_mse": 10.156680388476293, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -3.459787130355835}
+{"condition": "site3", "ideal_sites": ["gcn_3"], "T": 1, "graphs": 5000, "accuracy_percent": 75.14, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 76.62, "logit_mse": 10.244532543339364, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -3.427607536315918}
+{"condition": "site4", "ideal_sites": ["mlp_0"], "T": 1, "graphs": 5000, "accuracy_percent": 75.88000000000001, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 77.44, "logit_mse": 9.277171304725002, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -3.266465902328491}
+{"condition": "site5", "ideal_sites": ["mlp_1"], "T": 1, "graphs": 5000, "accuracy_percent": 76.08, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 77.86, "logit_mse": 8.81199011942501, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -3.206634283065796}
+{"condition": "nodes0_3", "ideal_sites": ["gcn_0", "gcn_1", "gcn_2", "gcn_3"], "T": 1, "graphs": 5000, "accuracy_percent": 90.12, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 94.92, "logit_mse": 2.858912502462662, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.9836092591285706}
+{"condition": "head4_5", "ideal_sites": ["mlp_0", "mlp_1"], "T": 1, "graphs": 5000, "accuracy_percent": 77.0, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 79.03999999999999, "logit_mse": 7.845791254902384, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -2.900033712387085}
+{"condition": "all6", "ideal_sites": ["gcn_0", "gcn_1", "gcn_2", "gcn_3", "mlp_0", "mlp_1"], "T": 1, "graphs": 5000, "accuracy_percent": 92.38, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 100.0, "logit_mse": 0.0, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": 0.0}
+{"condition": "baseline", "ideal_sites": [], "T": 2, "graphs": 5000, "accuracy_percent": 91.32000000000001, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 96.39999999999999, "logit_mse": 0.6790975973479796, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.36383745074272156}
+{"condition": "site0", "ideal_sites": ["gcn_0"], "T": 2, "graphs": 5000, "accuracy_percent": 91.97999999999999, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 97.8, "logit_mse": 0.3325064043209105, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.15881741046905518}
+{"condition": "site1", "ideal_sites": ["gcn_1"], "T": 2, "graphs": 5000, "accuracy_percent": 91.56, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 97.08, "logit_mse": 0.4854827911893632, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.2563002407550812}
+{"condition": "site2", "ideal_sites": ["gcn_2"], "T": 2, "graphs": 5000, "accuracy_percent": 91.3, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 96.7, "logit_mse": 0.6096634257188037, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.3157869279384613}
+{"condition": "site3", "ideal_sites": ["gcn_3"], "T": 2, "graphs": 5000, "accuracy_percent": 91.12, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 96.56, "logit_mse": 0.6435412530655517, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.3090190291404724}
+{"condition": "site4", "ideal_sites": ["mlp_0"], "T": 2, "graphs": 5000, "accuracy_percent": 91.67999999999999, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 96.8, "logit_mse": 0.5090039579003299, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.27356263995170593}
+{"condition": "site5", "ideal_sites": ["mlp_1"], "T": 2, "graphs": 5000, "accuracy_percent": 91.64, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 96.98, "logit_mse": 0.4390830251572907, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.26764366030693054}
+{"condition": "nodes0_3", "ideal_sites": ["gcn_0", "gcn_1", "gcn_2", "gcn_3"], "T": 2, "graphs": 5000, "accuracy_percent": 91.96, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 98.7, "logit_mse": 0.117991932327124, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.05346914008259773}
+{"condition": "head4_5", "ideal_sites": ["mlp_0", "mlp_1"], "T": 2, "graphs": 5000, "accuracy_percent": 91.86, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 97.44, "logit_mse": 0.2933743773608978, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": -0.18837082386016846}
+{"condition": "all6", "ideal_sites": ["gcn_0", "gcn_1", "gcn_2", "gcn_3", "mlp_0", "mlp_1"], "T": 2, "graphs": 5000, "accuracy_percent": 92.38, "teacher_accuracy_percent": 92.38, "teacher_agreement_percent": 100.0, "logit_mse": 0.0, "teacher_margin_mean": 6.57961893081665, "margin_shift_mean": 0.0}
+{"status": "complete", "output": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_story\\runs\\ideal\\MNIST41", "conditions": 20, "seconds": 57.373534700018354}
