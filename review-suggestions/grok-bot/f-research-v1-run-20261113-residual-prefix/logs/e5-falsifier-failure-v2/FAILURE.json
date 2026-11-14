@@ -1,0 +1,40 @@
+{
+  "check": "e5_falsifier_v2_gpu_failure_v1",
+  "recorded_at_utc": "2026-11-14T04:13:08+00:00",
+  "classification": "implementation_defect_report_serialization_not_a_scientific_failure",
+  "authority": "R7b serial driver GNN2SNN-E5-Falsifier-V2, logs/gpu_queue_driver_v2.status.jsonl",
+  "failed_steps": [
+    {
+      "step": "01_e5_falsifier_v2_run",
+      "rc": 1,
+      "elapsed_seconds": 536.8
+    },
+    {
+      "step": "02_e5_falsifier_v2_verify",
+      "rc": 1,
+      "elapsed_seconds": 2.4
+    }
+  ],
+  "error": {
+    "exception": "AttributeError: 'Acc' object has no attribute 'items'",
+    "location": "e5_falsifier_v2.py:471 dump_acc -> {k: {s: v.as_dict() for s, v in sub.items()} for k, sub in a.items()}",
+    "trigger": "run() builds gate_bound with dump_acc(accum[str(T)]['raw_vs_decoded'])",
+    "root_cause": "new_accum() builds {kind: {subset: Acc}}; the caller already passes ONE {subset: Acc} layer, but dump_acc() unpacked a SECOND nested layer, calling .items() on an Acc object.",
+    "why_precheck_missed_it": "precheck is a hash/structure gate with no GPU forward and no report serialization; the defect is only reachable after the full 40-batch measurement completes.",
+    "timing": "All 40 batches completed (527.8 s of real GPU measurement); the crash happened while SERIALISING the report, before any report was written."
+  },
+  "preserved_evidence": {
+    "raw_logs_local_only": "run-20261114T0413Z.log, verify-20261114T0413Z.log (driver-scrubbed but kept local); their SHA-256 are in SHA256SUMS.txt",
+    "uploaded_public_copies": "*.public.log \u2014 home/repo absolute prefixes replaced by <HOME>/<REPO>; error text, line numbers and tensor sizes unchanged; mapped in PUBLIC_LOG_MAP.json",
+    "run-20261114T0413Z.public.log": "a22e316f9941ef6b172707c7bfc9dbc19104681f1b0b535b500bbee94b3320a4",
+    "verify-20261114T0413Z.public.log": "15e3ac807098e12c6572cd61009061e99866fc3e5c4b3848263b2bd70f9d7460"
+  },
+  "disposition": {
+    "failed_numbers": "NONE \u2014 the run crashed during report serialization before writing any file; no gate-bound, error or falsifier value was produced and none is cited. The 527.8 s of GPU measurement produced no persisted scientific output.",
+    "v1_and_v2_bytes": "UNCHANGED \u2014 e5_falsifier_v1.py is bound by the published R6c 15-artifact manifest; e5_falsifier_v2.py is bound by the R7b2 12-artifact manifest. Neither file is edited or deleted.",
+    "repair": "New file e5_falsifier_v3.py: dump_acc() serialises one {subset: Acc} layer and defensively tolerates the two-layer shape. No scientific parameter changed (TIMESTEPS, TOL_ABS, TOL_REL, both protocol hashes, DCGS commit, CSV columns, batches=40, device=cuda, subset definitions, bound formula and report schema are byte-identical in declared values).",
+    "regression": "test_e5_falsifier_v3.py reproduces BOTH historical defects (the v1 RuntimeError and the v2 AttributeError), verifies all three Acc.add call shapes, the exact report-building comprehensions and parameter identity across v1/v2/v3; all PASS. smoke_e5_falsifier_v3.py executes the full run -> report -> verify path on CPU with a throwaway output directory; PASS (fidelity_max_abs_diff 0.0, 120 metric rows, canonical report untouched).",
+    "rerun": "gpu_queue_driver_v3.py via no-trigger scheduled task GNN2SNN-GPU-Queue-V3, single job, same --device cuda --batches 40, then verify."
+  },
+  "no_result_claim": "No E5 mechanism evidence is claimed from the failed v1 or v2 runs. E1 remains E1 NOT PASSED; P4 remains running."
+}

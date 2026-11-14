@@ -1,0 +1,23 @@
+
+=== 01_e5_falsifier_v2_run START 2026-11-14T04:04:08+00:00 ===
+CMD: <HOME>\miniconda3\envs\dyg-cold\python.exe -X utf8 <REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py run --device cuda --batches 40
+{"batch": 1, "of": 40, "elapsed_sec": 13.7}
+{"batch": 9, "of": 40, "elapsed_sec": 121.5}
+{"batch": 17, "of": 40, "elapsed_sec": 229.2}
+{"batch": 25, "of": 40, "elapsed_sec": 336.7}
+{"batch": 33, "of": 40, "elapsed_sec": 444.3}
+{"batch": 40, "of": 40, "elapsed_sec": 527.8}
+Traceback (most recent call last):
+  File "<REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py", line 585, in <module>
+    main()
+    ~~~~^^
+  File "<REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py", line 579, in main
+    run(a)
+    ~~~^^^
+  File "<REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py", line 496, in run
+    "gate_bound": {str(T): dump_acc(accum[str(T)]["raw_vs_decoded"]) for T in TIMESTEPS},
+                           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py", line 471, in dump_acc
+    return {k: {s: v.as_dict() for s, v in sub.items()} for k, sub in a.items()}
+                                           ^^^^^^^^^
+AttributeError: 'Acc' object has no attribute 'items'

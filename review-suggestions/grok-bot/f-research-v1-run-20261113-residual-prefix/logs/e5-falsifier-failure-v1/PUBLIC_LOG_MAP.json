@@ -1,0 +1,25 @@
+{
+  "check": "e5_falsifier_failure_public_log_map_v1",
+  "items": {
+    "run-20261114T0356Z.log": {
+      "deidentified": true,
+      "public_file": "run-20261114T0356Z.public.log",
+      "public_sha256": "943cdc0a074d955b62678564bab9542f091859b19ea1b2f75c67a662c097899e",
+      "raw_sha256": "053f9e5bd01618ee96b8065c167f5e345f4c8676f3a6f3d0c3126fdfe976f5fa"
+    },
+    "run-retry-20261114T0356Z.log": {
+      "deidentified": true,
+      "public_file": "run-retry-20261114T0356Z.public.log",
+      "public_sha256": "a1e80a4af46a8aa5ad826aece44e0de490fbbfa0b61126c4fbe6eae9bfd7d627",
+      "raw_sha256": "8b5a88cb1d09a640a5d343da3a6a6bc0d94c36285bf9a1f8f14678a767dc4765"
+    },
+    "verify-20261114T0356Z.log": {
+      "deidentified": false,
+      "public_file": "verify-20261114T0356Z.public.log",
+      "public_sha256": "e906fcd2764cbdcc5066652f886da278c7b0ef307edfa370992f8c3b43c4b259",
+      "raw_sha256": "b6932db375a67bcb31c1a62116e5344e1c568d4d16e3800211b8022f24146c84"
+    }
+  },
+  "public_logs": "uploaded; home prefix replaced by <HOME>; error text unchanged",
+  "raw_logs": "kept local only (contain local identity path); hashes in SHA256SUMS.txt"
+}

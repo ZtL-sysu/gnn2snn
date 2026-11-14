@@ -1,0 +1,33 @@
+{
+  "check": "e5_falsifier_v1_gpu_failure_v1",
+  "recorded_at_utc": "2026-11-14T04:00:00+00:00",
+  "classification": "implementation_defect_masked_tensor_tolerance_not_a_scientific_failure",
+  "authority": "R7 serial driver GNN2SNN-E5-Driver-R7, logs/gpu_queue_driver_v1.status.jsonl",
+  "failed_steps": [
+    {"step": "03_e5_falsifier_run", "rc": 1, "elapsed_seconds": 8.7},
+    {"step": "03b_e5_falsifier_run_retry", "rc": 1, "elapsed_seconds": 8.7},
+    {"step": "04_e5_falsifier_verify", "rc": 1, "elapsed_seconds": 2.3}
+  ],
+  "error": {
+    "exception": "RuntimeError: The size of tensor a (9278) must match the size of tensor b (15019) at non-singleton dimension 0",
+    "location": "e5_falsifier_v1.py:159 Acc.add -> excess = (a - (b + tol)).clamp(min=0)",
+    "trigger": "A['degree_low'].add(actual1, bound1, tol1, mask=deg_low, ...)",
+    "root_cause": "Acc.add() slices `actual` and `bound` with the boolean node mask, but `tol = TOL_ABS + TOL_REL * bound` is a full-length (n_nodes, C) tensor derived from the unmasked bound. It was not sliced, so b[mask] (9278, C) + tol (15019, C) fails to broadcast. 15019 is the node count of the representative batch; 9278 is the low-degree subset size.",
+    "why_precheck_missed_it": "precheck is a hash/structure gate with no GPU forward; the defect is only reachable on a real batch with degree subsets, first exercised by the GPU run."
+  },
+  "preserved_evidence": {
+    "raw_logs_local_only": "run-20261114T0356Z.log, run-retry-20261114T0356Z.log, verify-20261114T0356Z.log (raw tracebacks contain the local Python install path and are NOT uploaded); their SHA-256 are in SHA256SUMS.txt",
+    "uploaded_public_copies": "*.public.log — home prefix replaced by <HOME>, error text / line numbers / tensor sizes unchanged; mapped in PUBLIC_LOG_MAP.json",
+    "run-20261114T0356Z.public.log": "943cdc0a074d955b62678564bab9542f091859b19ea1b2f75c67a662c097899e",
+    "run-retry-20261114T0356Z.public.log": "a1e80a4af46a8aa5ad826aece44e0de490fbbfa0b61126c4fbe6eae9bfd7d627",
+    "verify-20261114T0356Z.public.log": "e906fcd2764cbdcc5066652f886da278c7b0ef307edfa370992f8c3b43c4b259"
+  },
+  "disposition": {
+    "failed_numbers": "NONE — the run crashed during the first subset accumulation before writing any report; no gate-bound, error or falsifier value was produced and none is cited.",
+    "v1_bytes": "UNCHANGED — e5_falsifier_v1.py is bound by the published R6c 15-artifact manifest, which still verifies PASS. It is never edited or deleted.",
+    "repair": "New file e5_falsifier_v2.py: one guarded line slices a tensor-valued tolerance with the same mask when tol.shape == actual.shape. No scientific parameter changed (TIMESTEPS, TOL_ABS, TOL_REL, both protocol hashes, DCGS commit, CSV columns, batches=40, device=cuda, report schema all identical).",
+    "regression": "test_e5_falsifier_v2.py reproduces the exact v1 RuntimeError and verifies v2 masked/unmasked/scalar-tolerance call shapes plus parameter identity; all PASS.",
+    "rerun": "gpu_queue_driver_v2.py via no-trigger scheduled task GNN2SNN-E5-Falsifier-V2, single job, same --device cuda --batches 40."
+  },
+  "no_result_claim": "No E5 mechanism evidence is claimed from the failed v1 run. E1 remains E1 NOT PASSED; P4 remains running."
+}

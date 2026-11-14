@@ -1,0 +1,16 @@
+
+=== 02_e5_falsifier_v2_verify START 2026-11-14T04:13:05+00:00 ===
+CMD: <HOME>\miniconda3\envs\dyg-cold\python.exe -X utf8 <REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py verify
+Traceback (most recent call last):
+  File "<REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py", line 585, in <module>
+    main()
+    ~~~~^^
+  File "<REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py", line 581, in main
+    {"precheck": precheck, "verify": verify}[a.cmd]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "<REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py", line 553, in verify
+    require(p.is_file(), "missing gate-bound report")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>\research\visual-graphs\continuation_20261113\code\e5_falsifier_v2.py", line 81, in require
+    raise RuntimeError(msg)
+RuntimeError: missing gate-bound report

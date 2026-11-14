@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "note": "Appendable serial GPU queue. Driver re-reads this file between steps; only immutable, prechecked, real-GPU jobs may be appended. Never edit or remove executed step names.",
+  "steps": [
+    {
+      "name": "01_e5_falsifier_v3_run",
+      "argv": ["e5_falsifier_v3.py", "run", "--device", "cuda", "--batches", "40"],
+      "retry_argv": ["e5_falsifier_v3.py", "run", "--device", "cuda", "--batches", "40"],
+      "expected_artifact": "results/e5-falsifier-v1/e5_gate_bound_v1.json",
+      "estimated_seconds": 540,
+      "depends_on": "frozen_input_gate_PASS; v3 precheck PASS; CPU end-to-end smoke PASS; v1/v2 failure evidence archived"
+    },
+    {
+      "name": "02_e5_falsifier_v3_verify",
+      "argv": ["e5_falsifier_v3.py", "verify"],
+      "retry_argv": null,
+      "expected_artifact": "results/e5-falsifier-v1/verify output",
+      "estimated_seconds": 5,
+      "depends_on": "01_e5_falsifier_v3_run"
+    }
+  ]
+}

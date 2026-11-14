@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-wb-resume",
+  "created_at_utc": "2026-11-14T05:55:18.477161+00:00",
+  "status": "in_progress",
+  "input_git_head": "6b1fb4a8d521ebef4ba1d956623224ae7d346c8d",
+  "protocol": {
+    "path": "collaboration/tasks/visual-conversion/TASK.md",
+    "sha256": "7b156284abbc3119233f9d87da9071bdf2656a672603a293e5a0a276bc6f977f",
+    "bytes": 1778
+  },
+  "artifacts": [
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/checkpoints/20261114T055500Z-r7b-sync-supplement/CHECKPOINT.md",
+      "sha256": "9b8bdf835c92e3de7186952c6a449fb05e0d7c512e5b1868987f943bc25ffebf",
+      "bytes": 3458
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v2/FAILURE.json",
+      "sha256": "dd1b0e766718884dc9e5bd3937644e51d32bc16734c7b4291c128267c47fadbd",
+      "bytes": 3573
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v2/PUBLIC_LOG_MAP.json",
+      "sha256": "074fee2ad2a4097437e3c7dc49dd9411431704572407ab4932dbed56ebe7ce38",
+      "bytes": 895
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v2/run-20261114T0413Z.public.log",
+      "sha256": "a22e316f9941ef6b172707c7bfc9dbc19104681f1b0b535b500bbee94b3320a4",
+      "bytes": 1372
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v2/verify-20261114T0413Z.public.log",
+      "sha256": "15e3ac807098e12c6572cd61009061e99866fc3e5c4b3848263b2bd70f9d7460",
+      "bytes": 987
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v2/SHA256SUMS.txt",
+      "sha256": "4ffc101fdf587de39f9dda0b7bff4767e8f296f0d115daba541c56700b2bddda",
+      "bytes": 380
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/e5_falsifier_v3.py",
+      "sha256": "0b12ace767533712e28a56b11adf45adaf0dbc92b87d73dc8e7543183b593306",
+      "bytes": 30203
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/test_e5_falsifier_v3.py",
+      "sha256": "251f9f1b938f2fa9fae6af2f1cbc7ed1a1659884ec789de137e28413f85a22ac",
+      "bytes": 5191
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/smoke_e5_falsifier_v3.py",
+      "sha256": "f93417df509fc41c9cd195677e75ebd6d73f647cf84e3d0e4bcdb07d3720418f",
+      "bytes": 2878
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/gpu_queue_driver_v3.py",
+      "sha256": "962f7dc58740f4863ed39415999c82e027956620993f5cc553d29c4431b5e479",
+      "bytes": 7560
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/gpu_queue_launcher_v3.py",
+      "sha256": "242022e5d6209291f5408652848255d5e329977510a9ec5f9aa9dfc3e8199548",
+      "bytes": 1588
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/gpu_queue_v3.json",
+      "sha256": "b29d093bf1f6402c03018999b126ae93c7be0fe58a9a1a0f5635035b9da878d0",
+      "bytes": 958
+    }
+  ]
+}

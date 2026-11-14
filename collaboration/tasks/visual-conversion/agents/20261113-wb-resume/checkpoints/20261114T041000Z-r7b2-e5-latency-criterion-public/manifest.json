@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-wb-resume",
+  "created_at_utc": "2026-11-14T04:12:00.035921+00:00",
+  "status": "in_progress",
+  "input_git_head": "6b1fb4a8d521ebef4ba1d956623224ae7d346c8d",
+  "protocol": {
+    "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/PROTOCOL-v3.md",
+    "sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "bytes": 4321
+  },
+  "artifacts": [
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e3-e5-v1/e5_latency_v1.json",
+      "sha256": "6887d2badef62c369053f2f5ef2ba96505bc1c840228d562c604cf5e265ce669",
+      "bytes": 15975
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e3-e5-v1/latency_METRICS.csv",
+      "sha256": "57d69407bf8eb0c05da9374ba66dd113826b3d95fd3879785cb8c2d6cfe36512",
+      "bytes": 13183
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e3-e5-v1/e3_e5_criterion_v1.json",
+      "sha256": "a474c1f09d05211072fc5d3b4e4659c2ea6c1890d318cd2c21177607abcb391b",
+      "bytes": 4270
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v1/run-20261114T0356Z.public.log",
+      "sha256": "943cdc0a074d955b62678564bab9542f091859b19ea1b2f75c67a662c097899e",
+      "bytes": 1932
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v1/run-retry-20261114T0356Z.public.log",
+      "sha256": "a1e80a4af46a8aa5ad826aece44e0de490fbbfa0b61126c4fbe6eae9bfd7d627",
+      "bytes": 1939
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v1/verify-20261114T0356Z.public.log",
+      "sha256": "e906fcd2764cbdcc5066652f886da278c7b0ef307edfa370992f8c3b43c4b259",
+      "bytes": 1063
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v1/PUBLIC_LOG_MAP.json",
+      "sha256": "2c80efdf6a5aa7f554d0ba31f87e84a62ea90c675e5166016db6f41a48275606",
+      "bytes": 1186
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-falsifier-failure-v1/FAILURE.json",
+      "sha256": "6f5e9b357824fff8cf19e05adf57edbb4d8064a4375455f042fea331534e64bf",
+      "bytes": 3268
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/e5_falsifier_v2.py",
+      "sha256": "96460c875c191425e42eec5bb1b0e2e27af84a6ab2124aaecf90b0825cb130cd",
+      "bytes": 28982
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/test_e5_falsifier_v2.py",
+      "sha256": "1872beb05a258fc5c6ea932edcb1026cf197e5b49b246240e3ae5858baad840a",
+      "bytes": 3323
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/gpu_queue_driver_v2.py",
+      "sha256": "c985484bbc41d65553849b998b8e712953dfc5db2269bd1f7cb48d0d69b36a89",
+      "bytes": 4551
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/gpu_queue_launcher_v2.py",
+      "sha256": "f4f404f2f498167875310a611a275aee8143d811aafd48fcce884fcaaa995a5a",
+      "bytes": 1596
+    }
+  ]
+}

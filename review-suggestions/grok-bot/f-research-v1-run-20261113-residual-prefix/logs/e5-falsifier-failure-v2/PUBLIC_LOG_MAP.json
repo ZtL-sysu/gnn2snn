@@ -1,0 +1,19 @@
+{
+  "check": "e5_falsifier_v2_failure_public_log_map_v1",
+  "items": {
+    "run-20261114T0413Z.log": {
+      "deidentified": true,
+      "public_file": "run-20261114T0413Z.public.log",
+      "public_sha256": "a22e316f9941ef6b172707c7bfc9dbc19104681f1b0b535b500bbee94b3320a4",
+      "raw_sha256": "4c3e3eeed6ebd3eca0d60a207548ba50a1522eeed7ce283adae42d99a5d929ab"
+    },
+    "verify-20261114T0413Z.log": {
+      "deidentified": true,
+      "public_file": "verify-20261114T0413Z.public.log",
+      "public_sha256": "15e3ac807098e12c6572cd61009061e99866fc3e5c4b3848263b2bd70f9d7460",
+      "raw_sha256": "a841a3e2f3d68f5d37c884ae08e2329044765a7f9a765c737d85578cc32fd17e"
+    }
+  },
+  "public_logs": "uploaded; home/repo absolute prefixes replaced by <HOME>/<REPO>; error text, line numbers and tensor sizes unchanged",
+  "raw_logs": "kept local only; hashes in SHA256SUMS.txt"
+}

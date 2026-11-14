@@ -1,0 +1,28 @@
+
+=== 03b_e5_falsifier_run_retry START 2026-11-14T03:56:31+00:00 ===
+CMD: <HOME>\miniconda3\envs\dyg-cold\python.exe -X utf8 C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e5_falsifier_v1.py run --device cuda --batches 40
+Traceback (most recent call last):
+  File "C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e5_falsifier_v1.py", line 565, in <module>
+    main()
+    ~~~~^^
+  File "C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e5_falsifier_v1.py", line 559, in main
+    run(a)
+    ~~~^^^
+  File "C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e5_falsifier_v1.py", line 417, in run
+    instrumented_centered(model, batch, thresholds, T, MTH_diff,
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          MTH_diff_line, affine, collect=True,
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          deg_low=deg_low, sharp_low_graph=sharp_low_graph,
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          accum=acc)
+                          ^^^^^^^^^^
+  File "<HOME>\miniconda3\envs\dyg-cold\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e5_falsifier_v1.py", line 259, in instrumented_centered
+    A["degree_low"].add(actual1, bound1, tol1, mask=deg_low, layer_err=layer_err)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e5_falsifier_v1.py", line 159, in add
+    excess = (a - (b + tol)).clamp(min=0)
+                   ~~^~~~~
+RuntimeError: The size of tensor a (9278) must match the size of tensor b (15019) at non-singleton dimension 0
