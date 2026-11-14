@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "pipeline": "f-research-v1",
+  "contract_version": "v1",
+  "contract": [
+    {
+      "path": "execution-contract-v1.md",
+      "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+    },
+    {
+      "path": "inputs/user-guidance.md",
+      "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+    }
+  ],
+  "history": [
+    {
+      "action": "pass",
+      "stage": "P0",
+      "reason": "migration, checked guidance and containment; no historical passed flags inferred"
+    }
+  ],
+  "stages": [
+    {
+      "id": "P0",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "P0_ACCEPTANCE.md",
+          "sha256": "20666b3065e080b6ccc6ac620d61212f36e559b11d082c309f8a76905e6b1369"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P1",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P1A",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P1B",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P2",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P3",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P3A",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P4",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P5",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P5A",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P6",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P7",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P8",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P9",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P10",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P11",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P12",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P13",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P14",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P15",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P16",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P17",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P18",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P19",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P20",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P21",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    }
+  ]
+}

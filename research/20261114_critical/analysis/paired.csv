@@ -85,3 +85,15 @@ book_screen,MNIST,2,book_message,book_local,0.390625,-0.375,1.15625,512,explorat
 book_screen,MNIST,2,book_message,book_shuffled,0.0,-1.0838161902493315,1.0838161902493315,512,exploratory one teacher; not seed-level CI or external confirmation
 book_screen,MNIST,2,book_message,book_identity,0.390625,-0.5473760789901275,1.3286260789901276,512,exploratory one teacher; not seed-level CI or external confirmation
 book_screen,MNIST,2,book_message,book_nearest,0.78125,-1.2452526187670876,2.8077526187670876,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,CIFAR10,1,book_message,book_local,-1.3671875,-4.357624156915861,1.6232491569158611,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,CIFAR10,1,book_message,book_shuffled,-1.171875,-4.138288216051453,1.794538216051453,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,CIFAR10,1,book_message,book_identity,-3.125,-6.178497040784908,-0.07150295921509242,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,CIFAR10,2,book_message,book_local,-0.9765625,-2.965858766891358,1.0127337668913579,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,CIFAR10,2,book_message,book_shuffled,-2.34375,-4.501835629220477,-0.1856643707795227,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,CIFAR10,2,book_message,book_identity,-2.34375,-4.501835629220477,-0.1856643707795227,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,MNIST,1,book_message,book_local,-1.171875,-3.9332061706707964,1.5894561706707964,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,MNIST,1,book_message,book_shuffled,0.1953125,-2.5411368416099163,2.9317618416099163,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,MNIST,1,book_message,book_identity,0.390625,-2.0326249963343828,2.8138749963343828,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,MNIST,2,book_message,book_local,0.390625,-0.9363411543805762,1.7175911543805762,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,MNIST,2,book_message,book_shuffled,0.5859375,-0.7947280853353982,1.9666030853353982,512,exploratory one teacher; not seed-level CI or external confirmation
+full_book_screen,MNIST,2,book_message,book_identity,0.0,-1.3273983205390394,1.3273983205390394,512,exploratory one teacher; not seed-level CI or external confirmation

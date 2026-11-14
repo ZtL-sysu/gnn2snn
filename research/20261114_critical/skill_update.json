@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/ZtL-sysu/f-skills",
+  "commit": "c0637ddc948775944a17bf2de0af31ad8aff094e",
+  "installed_skills": 9,
+  "verified_source_files": 286,
+  "backup": "C:/Users/xhf/.codex/skill-backups/f-skills-20261114-200054",
+  "tests": {
+    "total": 57,
+    "passed": 55,
+    "failed": 2,
+    "conditions": "PYTHONUTF8=1, subprocess-only init.defaultBranch=main",
+    "failures": [
+      "test_00_minimal_tree_and_no_legacy: Windows path separators",
+      "test_multi_file_lint_skips_code_and_marks_declaration_candidates: Windows path separators"
+    ]
+  },
+  "global_git_configuration_changed": false,
+  "policy": "keep source version unmodified; new skills available on next turn; current applicable docs read manually"
+}

@@ -1,0 +1,7049 @@
+{
+  "optimizer": "weighted_Lloyd",
+  "iterations": 16,
+  "objective_history": [
+    0.005537803750485182,
+    0.0037444878835231066,
+    0.0031942601781338453,
+    0.0029261610470712185,
+    0.0027574016712605953,
+    0.0026310139801353216,
+    0.0025270278565585613,
+    0.002436285838484764,
+    0.0023545834701508284,
+    0.002279498614370823,
+    0.002209694357588887,
+    0.0021453662775456905,
+    0.00208506197668612,
+    0.0020285730715841055,
+    0.0019757170230150223,
+    0.0019257166422903538,
+    0.0018787734443321824
+  ],
+  "levels_per_channel": 8,
+  "learned_scalars": 1168,
+  "qualification": "fixed alphabet size, higher storage than membrane offsets; message weight is diagonal proxy only, omits cross terms",
+  "full_hard_refinement": {
+    "initial_objective": 0.007661630865186453,
+    "final_objective": 0.007134618703275919,
+    "coordinate_budget": 1168,
+    "candidates_per_coordinate": 3,
+    "trace": [
+      {
+        "channel": 0,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.880854476141394e-07
+      },
+      {
+        "channel": 0,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.2192744470194157e-07
+      },
+      {
+        "channel": 0,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.1469178313491284e-07
+      },
+      {
+        "channel": 0,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -5.457848715195723e-07
+      },
+      {
+        "channel": 0,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.359534386821906e-07
+      },
+      {
+        "channel": 0,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.7159967430634424e-07
+      },
+      {
+        "channel": 0,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.3424255485006142e-07
+      },
+      {
+        "channel": 0,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.304896788516089e-08
+      },
+      {
+        "channel": 1,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.5418183920701267e-06
+      },
+      {
+        "channel": 1,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.0447636213939404e-06
+      },
+      {
+        "channel": 1,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -8.369227657567535e-07
+      },
+      {
+        "channel": 1,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.17793988971971e-07
+      },
+      {
+        "channel": 1,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.875327246940287e-07
+      },
+      {
+        "channel": 1,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.6821317078429274e-07
+      },
+      {
+        "channel": 1,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.7084995818095194e-07
+      },
+      {
+        "channel": 1,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.287082499056851e-08
+      },
+      {
+        "channel": 2,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.0293892955814954e-06
+      },
+      {
+        "channel": 2,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.447029885388474e-07
+      },
+      {
+        "channel": 2,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.60682104580701e-08
+      },
+      {
+        "channel": 2,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.0366937292237708e-07
+      },
+      {
+        "channel": 2,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.660157391204848e-08
+      },
+      {
+        "channel": 2,
+        "level": 5,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 2,
+        "level": 6,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 2,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.9927397509889033e-09
+      },
+      {
+        "channel": 3,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.142177438850922e-06
+      },
+      {
+        "channel": 3,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.945427912796731e-07
+      },
+      {
+        "channel": 3,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.4782073094465886e-06
+      },
+      {
+        "channel": 3,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.4799099972151453e-06
+      },
+      {
+        "channel": 3,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -9.274597800867923e-07
+      },
+      {
+        "channel": 3,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -8.916940714698285e-07
+      },
+      {
+        "channel": 3,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.845541414193576e-07
+      },
+      {
+        "channel": 3,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.466433161567693e-07
+      },
+      {
+        "channel": 4,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.468129984365078e-07
+      },
+      {
+        "channel": 4,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.393268457330123e-07
+      },
+      {
+        "channel": 4,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.095526489640179e-07
+      },
+      {
+        "channel": 4,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.1448922161180235e-07
+      },
+      {
+        "channel": 4,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.135382087293692e-07
+      },
+      {
+        "channel": 4,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.730915784037279e-07
+      },
+      {
+        "channel": 4,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.0253768323309487e-07
+      },
+      {
+        "channel": 4,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.5268492248310395e-08
+      },
+      {
+        "channel": 5,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.9030672976659844e-07
+      },
+      {
+        "channel": 5,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.5434923739121587e-07
+      },
+      {
+        "channel": 5,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.1304352887673303e-07
+      },
+      {
+        "channel": 5,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.5689723770483397e-07
+      },
+      {
+        "channel": 5,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.6952761800203007e-07
+      },
+      {
+        "channel": 5,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.8511440202928497e-07
+      },
+      {
+        "channel": 5,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.03037360444614e-08
+      },
+      {
+        "channel": 5,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.18350971642667e-08
+      },
+      {
+        "channel": 6,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -9.866672456837478e-08
+      },
+      {
+        "channel": 6,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.439330491048167e-08
+      },
+      {
+        "channel": 6,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.736292626399518e-07
+      },
+      {
+        "channel": 6,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.8808415208914084e-07
+      },
+      {
+        "channel": 6,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.084538775510737e-07
+      },
+      {
+        "channel": 6,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.6326162583245605e-07
+      },
+      {
+        "channel": 6,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.9118597549550032e-07
+      },
+      {
+        "channel": 6,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.0661723826597154e-08
+      },
+      {
+        "channel": 7,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.717286507613608e-07
+      },
+      {
+        "channel": 7,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.22756715529249e-07
+      },
+      {
+        "channel": 7,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.152432661110652e-07
+      },
+      {
+        "channel": 7,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.126342668721918e-07
+      },
+      {
+        "channel": 7,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.356160954761435e-07
+      },
+      {
+        "channel": 7,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.870580940201762e-07
+      },
+      {
+        "channel": 7,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.647273618094914e-07
+      },
+      {
+        "channel": 7,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.365515131141365e-08
+      },
+      {
+        "channel": 8,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.92396630136227e-08
+      },
+      {
+        "channel": 8,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.4994621955775074e-07
+      },
+      {
+        "channel": 8,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.586746058521385e-07
+      },
+      {
+        "channel": 8,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -5.388868657973944e-07
+      },
+      {
+        "channel": 8,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.0213692525649094e-07
+      },
+      {
+        "channel": 8,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.3058422609901754e-07
+      },
+      {
+        "channel": 8,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -7.149971281705803e-08
+      },
+      {
+        "channel": 8,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.1090022173098077e-08
+      },
+      {
+        "channel": 9,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.456840266200743e-07
+      },
+      {
+        "channel": 9,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.6939222291512124e-07
+      },
+      {
+        "channel": 9,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.8644419697011472e-07
+      },
+      {
+        "channel": 9,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.801365776074817e-07
+      },
+      {
+        "channel": 9,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.857157994640147e-07
+      },
+      {
+        "channel": 9,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.425206560019433e-07
+      },
+      {
+        "channel": 9,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.575875026257563e-08
+      },
+      {
+        "channel": 9,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.628539519378137e-08
+      },
+      {
+        "channel": 10,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.651153062695812e-07
+      },
+      {
+        "channel": 10,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.095032176745008e-07
+      },
+      {
+        "channel": 10,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.519416390598053e-07
+      },
+      {
+        "channel": 10,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.1596013033995405e-07
+      },
+      {
+        "channel": 10,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.848878466465976e-07
+      },
+      {
+        "channel": 10,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.5360019745003228e-07
+      },
+      {
+        "channel": 10,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.836612235858411e-08
+      },
+      {
+        "channel": 10,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.2484687061942168e-08
+      },
+      {
+        "channel": 11,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.896273253507388e-07
+      },
+      {
+        "channel": 11,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.1521734083762567e-07
+      },
+      {
+        "channel": 11,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.624162280222663e-07
+      },
+      {
+        "channel": 11,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.3383975644719612e-07
+      },
+      {
+        "channel": 11,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.6467880925574718e-07
+      },
+      {
+        "channel": 11,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -8.036229104391168e-08
+      },
+      {
+        "channel": 11,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.5183814023630475e-08
+      },
+      {
+        "channel": 11,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0354957780123186e-08
+      },
+      {
+        "channel": 12,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.1319725672365166e-06
+      },
+      {
+        "channel": 12,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.221450803423068e-07
+      },
+      {
+        "channel": 12,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.3533751775394194e-07
+      },
+      {
+        "channel": 12,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.2661415382808627e-07
+      },
+      {
+        "channel": 12,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -7.078184438569224e-08
+      },
+      {
+        "channel": 12,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.351195042635482e-10
+      },
+      {
+        "channel": 12,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -5.552968751487697e-09
+      },
+      {
+        "channel": 12,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.024426264985891e-10
+      },
+      {
+        "channel": 13,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.341102564671019e-07
+      },
+      {
+        "channel": 13,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.215258684325818e-07
+      },
+      {
+        "channel": 13,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.479418862501916e-07
+      },
+      {
+        "channel": 13,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.7369562733147177e-07
+      },
+      {
+        "channel": 13,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.330417257529916e-07
+      },
+      {
+        "channel": 13,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.328553764778917e-07
+      },
+      {
+        "channel": 13,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.3054129510692292e-07
+      },
+      {
+        "channel": 13,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.5806806408800185e-08
+      },
+      {
+        "channel": 14,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.2982529657156192e-08
+      },
+      {
+        "channel": 14,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.085759591239025e-10
+      },
+      {
+        "channel": 14,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.489177781088813e-09
+      },
+      {
+        "channel": 14,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.0473427397860178e-08
+      },
+      {
+        "channel": 14,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -9.339686357634491e-09
+      },
+      {
+        "channel": 14,
+        "level": 5,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 14,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.118998392892536e-10
+      },
+      {
+        "channel": 14,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -9.10862385516964e-10
+      },
+      {
+        "channel": 15,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.821626641340117e-08
+      },
+      {
+        "channel": 15,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -7.746920260842671e-08
+      },
+      {
+        "channel": 15,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.8236402133406955e-07
+      },
+      {
+        "channel": 15,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.933307865139795e-07
+      },
+      {
+        "channel": 15,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.0073267731058877e-06
+      },
+      {
+        "channel": 15,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.041670417289424e-07
+      },
+      {
+        "channel": 15,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.628592596920498e-07
+      },
+      {
+        "channel": 15,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.1842152503049874e-07
+      },
+      {
+        "channel": 16,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.408014113252648e-08
+      },
+      {
+        "channel": 16,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.1685885681345098e-07
+      },
+      {
+        "channel": 16,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.5631717903706885e-07
+      },
+      {
+        "channel": 16,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.6836360689230787e-07
+      },
+      {
+        "channel": 16,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.443404696350626e-07
+      },
+      {
+        "channel": 16,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.6048628026510414e-07
+      },
+      {
+        "channel": 16,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.963910940768983e-08
+      },
+      {
+        "channel": 16,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.7766827887253385e-08
+      },
+      {
+        "channel": 17,
+        "level": 0,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 17,
+        "level": 1,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 17,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.7167678834084654e-07
+      },
+      {
+        "channel": 17,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.910223031449277e-07
+      },
+      {
+        "channel": 17,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.51819977595369e-07
+      },
+      {
+        "channel": 17,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.6732669766715844e-07
+      },
+      {
+        "channel": 17,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.2045452990605554e-07
+      },
+      {
+        "channel": 17,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.017722936097925e-08
+      },
+      {
+        "channel": 18,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -9.1774126076416e-08
+      },
+      {
+        "channel": 18,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.5407104569931107e-07
+      },
+      {
+        "channel": 18,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.337291308800559e-07
+      },
+      {
+        "channel": 18,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.0252736615257163e-07
+      },
+      {
+        "channel": 18,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -7.098761756196836e-08
+      },
+      {
+        "channel": 18,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.153709364298265e-08
+      },
+      {
+        "channel": 18,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.6280350340357472e-08
+      },
+      {
+        "channel": 18,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.887593358342656e-09
+      },
+      {
+        "channel": 19,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.014128702081507e-05
+      },
+      {
+        "channel": 19,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.105581865587737e-06
+      },
+      {
+        "channel": 19,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.427497065582429e-06
+      },
+      {
+        "channel": 19,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.0080109404952964e-06
+      },
+      {
+        "channel": 19,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -7.627501759088773e-07
+      },
+      {
+        "channel": 19,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.2365775837206456e-07
+      },
+      {
+        "channel": 19,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.611716413663089e-07
+      },
+      {
+        "channel": 19,
+        "level": 7,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 20,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.911591252541257e-07
+      },
+      {
+        "channel": 20,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.1072383421815175e-07
+      },
+      {
+        "channel": 20,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6420895576629846e-07
+      },
+      {
+        "channel": 20,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.4103463286119222e-07
+      },
+      {
+        "channel": 20,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.812006982821913e-07
+      },
+      {
+        "channel": 20,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.006082979733037e-07
+      },
+      {
+        "channel": 20,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.0471074318729734e-07
+      },
+      {
+        "channel": 20,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.556287791501745e-08
+      },
+      {
+        "channel": 21,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.301942115285783e-06
+      },
+      {
+        "channel": 21,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.7141346688731574e-06
+      },
+      {
+        "channel": 21,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6341821265086764e-06
+      },
+      {
+        "channel": 21,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.152117079072923e-06
+      },
+      {
+        "channel": 21,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -7.890329811743868e-07
+      },
+      {
+        "channel": 21,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.21541835496464e-07
+      },
+      {
+        "channel": 21,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.43675060573878e-07
+      },
+      {
+        "channel": 21,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.150567344320734e-08
+      },
+      {
+        "channel": 22,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.231332641462359e-07
+      },
+      {
+        "channel": 22,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.245671678087092e-07
+      },
+      {
+        "channel": 22,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -8.548267373953422e-07
+      },
+      {
+        "channel": 22,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.91281877354777e-07
+      },
+      {
+        "channel": 22,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.730531367793446e-07
+      },
+      {
+        "channel": 22,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.597467355120898e-07
+      },
+      {
+        "channel": 22,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.2669723875878844e-07
+      },
+      {
+        "channel": 22,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -8.0777176947322e-08
+      },
+      {
+        "channel": 23,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.295329179309192e-06
+      },
+      {
+        "channel": 23,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.4791289686399978e-06
+      },
+      {
+        "channel": 23,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.2535142559499945e-06
+      },
+      {
+        "channel": 23,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.78212074944895e-07
+      },
+      {
+        "channel": 23,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.9425984255103685e-08
+      },
+      {
+        "channel": 23,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.2677594440901885e-07
+      },
+      {
+        "channel": 23,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.087260213556874e-07
+      },
+      {
+        "channel": 23,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.334935717522967e-07
+      },
+      {
+        "channel": 24,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.569051957834745e-06
+      },
+      {
+        "channel": 24,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -7.410188800349715e-07
+      },
+      {
+        "channel": 24,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.039182155996969e-07
+      },
+      {
+        "channel": 24,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.354197239488713e-07
+      },
+      {
+        "channel": 24,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.178629862712114e-07
+      },
+      {
+        "channel": 24,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.1800706778994936e-07
+      },
+      {
+        "channel": 24,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.0023274771574506e-07
+      },
+      {
+        "channel": 24,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -9.950750268217234e-08
+      },
+      {
+        "channel": 25,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.752088050783641e-07
+      },
+      {
+        "channel": 25,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -7.269377277907552e-08
+      },
+      {
+        "channel": 25,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.4105692969224037e-07
+      },
+      {
+        "channel": 25,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.910998884748551e-07
+      },
+      {
+        "channel": 25,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.023932428433909e-07
+      },
+      {
+        "channel": 25,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.263989126229717e-07
+      },
+      {
+        "channel": 25,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.483504886185983e-07
+      },
+      {
+        "channel": 25,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -8.445981336535624e-08
+      },
+      {
+        "channel": 26,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.6096723243208544e-07
+      },
+      {
+        "channel": 26,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.3414097566055716e-07
+      },
+      {
+        "channel": 26,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.588275265225093e-07
+      },
+      {
+        "channel": 26,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.1834889568926883e-07
+      },
+      {
+        "channel": 26,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.039172895569209e-07
+      },
+      {
+        "channel": 26,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.0989869281274878e-07
+      },
+      {
+        "channel": 26,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.814746704250865e-08
+      },
+      {
+        "channel": 26,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.3477921001481263e-08
+      },
+      {
+        "channel": 27,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.615421976770449e-07
+      },
+      {
+        "channel": 27,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.7816263664371945e-07
+      },
+      {
+        "channel": 27,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.1504299379794247e-07
+      },
+      {
+        "channel": 27,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.1505074581918961e-07
+      },
+      {
+        "channel": 27,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.703142384547391e-08
+      },
+      {
+        "channel": 27,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.817050663381451e-08
+      },
+      {
+        "channel": 27,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.2057744075709707e-08
+      },
+      {
+        "channel": 27,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.936428599222609e-09
+      },
+      {
+        "channel": 28,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.079998340486782e-06
+      },
+      {
+        "channel": 28,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.7517802411457524e-06
+      },
+      {
+        "channel": 28,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.7914746877067955e-06
+      },
+      {
+        "channel": 28,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.6673856180204893e-06
+      },
+      {
+        "channel": 28,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.145117481537454e-07
+      },
+      {
+        "channel": 28,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.251934463653015e-06
+      },
+      {
+        "channel": 28,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -5.411058623394638e-07
+      },
+      {
+        "channel": 28,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.7207013058850862e-07
+      },
+      {
+        "channel": 29,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.0298034182105766e-08
+      },
+      {
+        "channel": 29,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.0815023898658183e-07
+      },
+      {
+        "channel": 29,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.0571498282606626e-07
+      },
+      {
+        "channel": 29,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.836053679151519e-07
+      },
+      {
+        "channel": 29,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.2718642134786933e-07
+      },
+      {
+        "channel": 29,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.9539784779663023e-07
+      },
+      {
+        "channel": 29,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.372915730575187e-07
+      },
+      {
+        "channel": 29,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0956065921163827e-07
+      },
+      {
+        "channel": 30,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.112938207370462e-06
+      },
+      {
+        "channel": 30,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.696712719327479e-07
+      },
+      {
+        "channel": 30,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.211383833942818e-07
+      },
+      {
+        "channel": 30,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.430462183790951e-07
+      },
+      {
+        "channel": 30,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.500969907894614e-07
+      },
+      {
+        "channel": 30,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.7922590106754797e-07
+      },
+      {
+        "channel": 30,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.6526311696907214e-07
+      },
+      {
+        "channel": 30,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.61899627832463e-08
+      },
+      {
+        "channel": 31,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.288078052170022e-08
+      },
+      {
+        "channel": 31,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.665959707494949e-08
+      },
+      {
+        "channel": 31,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.558082539711904e-07
+      },
+      {
+        "channel": 31,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.9829285469750175e-07
+      },
+      {
+        "channel": 31,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.837926444954064e-07
+      },
+      {
+        "channel": 31,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.4838798279015464e-07
+      },
+      {
+        "channel": 31,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.254942354009472e-08
+      },
+      {
+        "channel": 31,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.60908289312556e-08
+      },
+      {
+        "channel": 32,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.780602461731178e-07
+      },
+      {
+        "channel": 32,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.248238832995412e-07
+      },
+      {
+        "channel": 32,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.1328883071400924e-07
+      },
+      {
+        "channel": 32,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.526736342493678e-07
+      },
+      {
+        "channel": 32,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.134803586770431e-07
+      },
+      {
+        "channel": 32,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.9189132533247175e-07
+      },
+      {
+        "channel": 32,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.7824730491611263e-07
+      },
+      {
+        "channel": 32,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.706187084480007e-08
+      },
+      {
+        "channel": 33,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.908530521177454e-06
+      },
+      {
+        "channel": 33,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.030555361277948e-07
+      },
+      {
+        "channel": 33,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.082986273104325e-06
+      },
+      {
+        "channel": 33,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.983974228409352e-07
+      },
+      {
+        "channel": 33,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.234696800471283e-07
+      },
+      {
+        "channel": 33,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.968187035572555e-07
+      },
+      {
+        "channel": 33,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.0222665025594324e-07
+      },
+      {
+        "channel": 33,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.9709974097281702e-08
+      },
+      {
+        "channel": 34,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.0246783094535203e-07
+      },
+      {
+        "channel": 34,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.2603305183110933e-07
+      },
+      {
+        "channel": 34,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6691438986526919e-07
+      },
+      {
+        "channel": 34,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.538382091188396e-07
+      },
+      {
+        "channel": 34,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.0698855962564267e-07
+      },
+      {
+        "channel": 34,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.4311244456166605e-07
+      },
+      {
+        "channel": 34,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -5.99164238224148e-08
+      },
+      {
+        "channel": 34,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.3837191776010513e-08
+      },
+      {
+        "channel": 35,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.9646705090868863e-09
+      },
+      {
+        "channel": 35,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.0781899106859782e-07
+      },
+      {
+        "channel": 35,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.0117553017607861e-07
+      },
+      {
+        "channel": 35,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.495025341886503e-07
+      },
+      {
+        "channel": 35,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.884153988385151e-07
+      },
+      {
+        "channel": 35,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.0068019068730791e-07
+      },
+      {
+        "channel": 35,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.4450584728820104e-07
+      },
+      {
+        "channel": 35,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.701465172729513e-08
+      },
+      {
+        "channel": 36,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.264225132530555e-07
+      },
+      {
+        "channel": 36,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.79126895117588e-08
+      },
+      {
+        "channel": 36,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -9.485334828696068e-08
+      },
+      {
+        "channel": 36,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.99670232254357e-08
+      },
+      {
+        "channel": 36,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.2362971208167437e-07
+      },
+      {
+        "channel": 36,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.6149135717569152e-07
+      },
+      {
+        "channel": 36,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.6265800201485945e-08
+      },
+      {
+        "channel": 36,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.212612753600297e-08
+      },
+      {
+        "channel": 37,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.783209525769053e-07
+      },
+      {
+        "channel": 37,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.987140525576251e-07
+      },
+      {
+        "channel": 37,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.242462748356047e-07
+      },
+      {
+        "channel": 37,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -5.194508503336692e-07
+      },
+      {
+        "channel": 37,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.944910306723614e-07
+      },
+      {
+        "channel": 37,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.1038289926545986e-07
+      },
+      {
+        "channel": 37,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -6.366377647282206e-08
+      },
+      {
+        "channel": 37,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.4674076115616117e-08
+      },
+      {
+        "channel": 38,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.4599118237110815e-08
+      },
+      {
+        "channel": 38,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.3404168441866204e-07
+      },
+      {
+        "channel": 38,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6308375450080348e-07
+      },
+      {
+        "channel": 38,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.8333198542895843e-07
+      },
+      {
+        "channel": 38,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.699155743357551e-07
+      },
+      {
+        "channel": 38,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.1206892597547267e-07
+      },
+      {
+        "channel": 38,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.2636760970963223e-07
+      },
+      {
+        "channel": 38,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.837046946841838e-08
+      },
+      {
+        "channel": 39,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.707943273591809e-08
+      },
+      {
+        "channel": 39,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -8.305651277851211e-08
+      },
+      {
+        "channel": 39,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.7624893189349677e-07
+      },
+      {
+        "channel": 39,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.638166509110306e-07
+      },
+      {
+        "channel": 39,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.7637238158840773e-07
+      },
+      {
+        "channel": 39,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.0172323783308457e-07
+      },
+      {
+        "channel": 39,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -5.624594479058942e-08
+      },
+      {
+        "channel": 39,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.8152935155058003e-08
+      },
+      {
+        "channel": 40,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -9.922435992848477e-07
+      },
+      {
+        "channel": 40,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.30850717395515e-07
+      },
+      {
+        "channel": 40,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -9.657696864451282e-07
+      },
+      {
+        "channel": 40,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.2306143162277294e-06
+      },
+      {
+        "channel": 40,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.6297174170176731e-06
+      },
+      {
+        "channel": 40,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.295682750424021e-06
+      },
+      {
+        "channel": 40,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -6.73467070555489e-07
+      },
+      {
+        "channel": 40,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.5453215357629233e-07
+      },
+      {
+        "channel": 41,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.4801258859952213e-06
+      },
+      {
+        "channel": 41,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.462955858907662e-07
+      },
+      {
+        "channel": 41,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.3539170140575152e-06
+      },
+      {
+        "channel": 41,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.1358170013409108e-06
+      },
+      {
+        "channel": 41,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.947671191577683e-07
+      },
+      {
+        "channel": 41,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.487063449687412e-07
+      },
+      {
+        "channel": 41,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.7415646880181157e-07
+      },
+      {
+        "channel": 41,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0157360463836085e-07
+      },
+      {
+        "channel": 42,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.333611976406246e-06
+      },
+      {
+        "channel": 42,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.447204560165119e-07
+      },
+      {
+        "channel": 42,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.7412103754140844e-07
+      },
+      {
+        "channel": 42,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.237583652866306e-07
+      },
+      {
+        "channel": 42,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.0420267194131156e-07
+      },
+      {
+        "channel": 42,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.648010083954432e-07
+      },
+      {
+        "channel": 42,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -8.417119090609049e-08
+      },
+      {
+        "channel": 42,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.1880075346844023e-08
+      },
+      {
+        "channel": 43,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.992321614352477e-07
+      },
+      {
+        "channel": 43,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.5562125567121257e-08
+      },
+      {
+        "channel": 43,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.1134450517147343e-07
+      },
+      {
+        "channel": 43,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.5199415770439373e-07
+      },
+      {
+        "channel": 43,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.288017017486709e-07
+      },
+      {
+        "channel": 43,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -9.391896327315408e-08
+      },
+      {
+        "channel": 43,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.948834586571138e-08
+      },
+      {
+        "channel": 43,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.518471831081115e-08
+      },
+      {
+        "channel": 44,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.968677736385871e-07
+      },
+      {
+        "channel": 44,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.2416816136683337e-07
+      },
+      {
+        "channel": 44,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.4494417516507383e-07
+      },
+      {
+        "channel": 44,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.610716809518635e-07
+      },
+      {
+        "channel": 44,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.3838088004122255e-07
+      },
+      {
+        "channel": 44,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.2439111780367966e-07
+      },
+      {
+        "channel": 44,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.7663501239439938e-07
+      },
+      {
+        "channel": 44,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.090788756158872e-08
+      },
+      {
+        "channel": 45,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.1652026898900658e-07
+      },
+      {
+        "channel": 45,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.9473461065899755e-07
+      },
+      {
+        "channel": 45,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.256429176370148e-07
+      },
+      {
+        "channel": 45,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.101796200004173e-07
+      },
+      {
+        "channel": 45,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.59700197300117e-07
+      },
+      {
+        "channel": 45,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.999260798082105e-07
+      },
+      {
+        "channel": 45,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.6755755893882451e-07
+      },
+      {
+        "channel": 45,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.786393041442352e-08
+      },
+      {
+        "channel": 46,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.737598888164939e-07
+      },
+      {
+        "channel": 46,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.4775840163092653e-07
+      },
+      {
+        "channel": 46,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.461964403570164e-07
+      },
+      {
+        "channel": 46,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.0258013389830012e-06
+      },
+      {
+        "channel": 46,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -7.311588774427946e-07
+      },
+      {
+        "channel": 46,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.6094163508314523e-07
+      },
+      {
+        "channel": 46,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.152482068140671e-07
+      },
+      {
+        "channel": 46,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.6069494058210694e-08
+      },
+      {
+        "channel": 47,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.55852898539888e-07
+      },
+      {
+        "channel": 47,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -8.401497098020627e-08
+      },
+      {
+        "channel": 47,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.441361945353492e-07
+      },
+      {
+        "channel": 47,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.6722011625679443e-07
+      },
+      {
+        "channel": 47,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.6173653345249477e-07
+      },
+      {
+        "channel": 47,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.790256357660837e-07
+      },
+      {
+        "channel": 47,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.956746018549893e-07
+      },
+      {
+        "channel": 47,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -8.959925423823734e-08
+      },
+      {
+        "channel": 48,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -9.182882365621481e-08
+      },
+      {
+        "channel": 48,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.706661348383932e-07
+      },
+      {
+        "channel": 48,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.878830400732113e-07
+      },
+      {
+        "channel": 48,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.0203605660972244e-07
+      },
+      {
+        "channel": 48,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.2694592871630448e-07
+      },
+      {
+        "channel": 48,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.2593091014423408e-07
+      },
+      {
+        "channel": 48,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -7.530587708970415e-08
+      },
+      {
+        "channel": 48,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.754168366119302e-08
+      },
+      {
+        "channel": 49,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.871580237406306e-06
+      },
+      {
+        "channel": 49,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.58766067418037e-06
+      },
+      {
+        "channel": 49,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.8414194755678182e-06
+      },
+      {
+        "channel": 49,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.244535590369196e-07
+      },
+      {
+        "channel": 49,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.213547175728309e-07
+      },
+      {
+        "channel": 49,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.998236704523151e-07
+      },
+      {
+        "channel": 49,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.324110705056228e-07
+      },
+      {
+        "channel": 49,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.988709261828262e-08
+      },
+      {
+        "channel": 50,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.9020731087948661e-06
+      },
+      {
+        "channel": 50,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.6823487385408953e-06
+      },
+      {
+        "channel": 50,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6545081962249242e-06
+      },
+      {
+        "channel": 50,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.3280459825182334e-06
+      },
+      {
+        "channel": 50,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -9.311166309089458e-07
+      },
+      {
+        "channel": 50,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.217428563104477e-07
+      },
+      {
+        "channel": 50,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.923464137438714e-07
+      },
+      {
+        "channel": 50,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -9.666185007972672e-08
+      },
+      {
+        "channel": 51,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.328179497610108e-08
+      },
+      {
+        "channel": 51,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.0759674157488917e-07
+      },
+      {
+        "channel": 51,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.162484520340513e-07
+      },
+      {
+        "channel": 51,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.175530818883999e-07
+      },
+      {
+        "channel": 51,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.8190120221770485e-07
+      },
+      {
+        "channel": 51,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.077506451314548e-07
+      },
+      {
+        "channel": 51,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.2268068871890137e-07
+      },
+      {
+        "channel": 51,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.6202718923259454e-08
+      },
+      {
+        "channel": 52,
+        "level": 0,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 52,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.366854457453883e-07
+      },
+      {
+        "channel": 52,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.454013489725185e-07
+      },
+      {
+        "channel": 52,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.876579176496307e-06
+      },
+      {
+        "channel": 52,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.6628365503711393e-06
+      },
+      {
+        "channel": 52,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.528304551356996e-06
+      },
+      {
+        "channel": 52,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -8.32603518574615e-07
+      },
+      {
+        "channel": 52,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.0381931398769666e-07
+      },
+      {
+        "channel": 53,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.377496232635167e-07
+      },
+      {
+        "channel": 53,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.582647826126049e-07
+      },
+      {
+        "channel": 53,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.424377723604266e-07
+      },
+      {
+        "channel": 53,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.408126190151961e-07
+      },
+      {
+        "channel": 53,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.744796745446365e-07
+      },
+      {
+        "channel": 53,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.8984346183970047e-07
+      },
+      {
+        "channel": 53,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -7.152878112037797e-08
+      },
+      {
+        "channel": 53,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.237752821405593e-08
+      },
+      {
+        "channel": 54,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.2943193534483726e-07
+      },
+      {
+        "channel": 54,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.245395987505617e-07
+      },
+      {
+        "channel": 54,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.8934081203478854e-07
+      },
+      {
+        "channel": 54,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.065742468308599e-07
+      },
+      {
+        "channel": 54,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.47529657776613e-07
+      },
+      {
+        "channel": 54,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.569048547229613e-07
+      },
+      {
+        "channel": 54,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.6075951236871333e-07
+      },
+      {
+        "channel": 54,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.741743708791546e-08
+      },
+      {
+        "channel": 55,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.543031645378505e-07
+      },
+      {
+        "channel": 55,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.12659903254098e-07
+      },
+      {
+        "channel": 55,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.211225015955279e-07
+      },
+      {
+        "channel": 55,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.1102683212557167e-07
+      },
+      {
+        "channel": 55,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.3324906806010404e-07
+      },
+      {
+        "channel": 55,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.204491582029732e-07
+      },
+      {
+        "channel": 55,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.850416080946161e-08
+      },
+      {
+        "channel": 55,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.2102394641999581e-08
+      },
+      {
+        "channel": 56,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.5808881787270366e-07
+      },
+      {
+        "channel": 56,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.0465146260685287e-07
+      },
+      {
+        "channel": 56,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.570819325839693e-07
+      },
+      {
+        "channel": 56,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.192824907382601e-07
+      },
+      {
+        "channel": 56,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.742497475897835e-07
+      },
+      {
+        "channel": 56,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.888232527060609e-07
+      },
+      {
+        "channel": 56,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.4848745283634344e-07
+      },
+      {
+        "channel": 56,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.939300251611712e-08
+      },
+      {
+        "channel": 57,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.454533831856679e-07
+      },
+      {
+        "channel": 57,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.554105714760226e-07
+      },
+      {
+        "channel": 57,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.3034495200136007e-07
+      },
+      {
+        "channel": 57,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.281562245798341e-07
+      },
+      {
+        "channel": 57,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.861833709426719e-07
+      },
+      {
+        "channel": 57,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.1144022238340767e-07
+      },
+      {
+        "channel": 57,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.803880233022028e-08
+      },
+      {
+        "channel": 57,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.3955592237380188e-08
+      },
+      {
+        "channel": 58,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.4921739572600927e-07
+      },
+      {
+        "channel": 58,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.977101409371244e-07
+      },
+      {
+        "channel": 58,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.5195333819283405e-07
+      },
+      {
+        "channel": 58,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.270964725743397e-07
+      },
+      {
+        "channel": 58,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.749749014214103e-08
+      },
+      {
+        "channel": 58,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.483430598474115e-09
+      },
+      {
+        "channel": 58,
+        "level": 6,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 58,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.8170408228334054e-09
+      },
+      {
+        "channel": 59,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.4242635393866294e-08
+      },
+      {
+        "channel": 59,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -7.816228730916919e-08
+      },
+      {
+        "channel": 59,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.192534212663304e-08
+      },
+      {
+        "channel": 59,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.083523883011367e-07
+      },
+      {
+        "channel": 59,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.184957328514429e-07
+      },
+      {
+        "channel": 59,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.05125342442625e-07
+      },
+      {
+        "channel": 59,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.5466621284285793e-07
+      },
+      {
+        "channel": 59,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -8.912388693715911e-08
+      },
+      {
+        "channel": 60,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.655235130712754e-08
+      },
+      {
+        "channel": 60,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.7121167767727457e-07
+      },
+      {
+        "channel": 60,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.5672510989570583e-07
+      },
+      {
+        "channel": 60,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.297297995341069e-07
+      },
+      {
+        "channel": 60,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -7.633171890120138e-07
+      },
+      {
+        "channel": 60,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.784594693774125e-07
+      },
+      {
+        "channel": 60,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.1194591088024026e-07
+      },
+      {
+        "channel": 60,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.394827150619676e-08
+      },
+      {
+        "channel": 61,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.812882619693482e-09
+      },
+      {
+        "channel": 61,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.693327029935972e-09
+      },
+      {
+        "channel": 61,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.587785605915997e-08
+      },
+      {
+        "channel": 61,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.16696194508404e-08
+      },
+      {
+        "channel": 61,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.4292771766122314e-07
+      },
+      {
+        "channel": 61,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.292684417985583e-08
+      },
+      {
+        "channel": 61,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.1542895467518974e-08
+      },
+      {
+        "channel": 61,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -9.705288128714074e-09
+      },
+      {
+        "channel": 62,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.8979511651195935e-07
+      },
+      {
+        "channel": 62,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.443453119369224e-07
+      },
+      {
+        "channel": 62,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.897832693335658e-07
+      },
+      {
+        "channel": 62,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.564368047496828e-07
+      },
+      {
+        "channel": 62,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.668180508815567e-07
+      },
+      {
+        "channel": 62,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.4049060104734963e-07
+      },
+      {
+        "channel": 62,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.7777665561879985e-07
+      },
+      {
+        "channel": 62,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.263568591042713e-08
+      },
+      {
+        "channel": 63,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.7687833298605256e-08
+      },
+      {
+        "channel": 63,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.3601686532638269e-07
+      },
+      {
+        "channel": 63,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.064889592176769e-07
+      },
+      {
+        "channel": 63,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.078893986545154e-07
+      },
+      {
+        "channel": 63,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.78446168017399e-07
+      },
+      {
+        "channel": 63,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.993707196059404e-07
+      },
+      {
+        "channel": 63,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.6351280862636486e-07
+      },
+      {
+        "channel": 63,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.430971666304686e-08
+      },
+      {
+        "channel": 64,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.065012373961508e-07
+      },
+      {
+        "channel": 64,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.2251430209507816e-07
+      },
+      {
+        "channel": 64,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.831279968835588e-07
+      },
+      {
+        "channel": 64,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.7769916616525734e-07
+      },
+      {
+        "channel": 64,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.446378056854883e-07
+      },
+      {
+        "channel": 64,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.0134094686218305e-07
+      },
+      {
+        "channel": 64,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.0207492096014903e-07
+      },
+      {
+        "channel": 64,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.421065552013715e-08
+      },
+      {
+        "channel": 65,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.5483782362935017e-06
+      },
+      {
+        "channel": 65,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.463181196319056e-07
+      },
+      {
+        "channel": 65,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.2202024158323184e-07
+      },
+      {
+        "channel": 65,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.2189674098171963e-07
+      },
+      {
+        "channel": 65,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.6005438396859972e-07
+      },
+      {
+        "channel": 65,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.185071134088503e-08
+      },
+      {
+        "channel": 65,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.723394925714274e-08
+      },
+      {
+        "channel": 65,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.6439486216768273e-08
+      },
+      {
+        "channel": 66,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.5918731100537116e-07
+      },
+      {
+        "channel": 66,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.712751089959056e-07
+      },
+      {
+        "channel": 66,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.076553417078685e-06
+      },
+      {
+        "channel": 66,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.5058171811688226e-06
+      },
+      {
+        "channel": 66,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.2427890396793373e-06
+      },
+      {
+        "channel": 66,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.748601890649297e-07
+      },
+      {
+        "channel": 66,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.450750227784738e-07
+      },
+      {
+        "channel": 66,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.3470359760958672e-07
+      },
+      {
+        "channel": 67,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.4014849486775347e-07
+      },
+      {
+        "channel": 67,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.977382560613421e-10
+      },
+      {
+        "channel": 67,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.76545815533791e-08
+      },
+      {
+        "channel": 67,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.1610848932596127e-07
+      },
+      {
+        "channel": 67,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.7739182567311218e-07
+      },
+      {
+        "channel": 67,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -9.945009793455029e-08
+      },
+      {
+        "channel": 67,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.7849283646428376e-08
+      },
+      {
+        "channel": 67,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.2663052828543186e-08
+      },
+      {
+        "channel": 68,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.1629749678832013e-06
+      },
+      {
+        "channel": 68,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.0560030356573407e-07
+      },
+      {
+        "channel": 68,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.349064278765582e-07
+      },
+      {
+        "channel": 68,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.308043106808327e-07
+      },
+      {
+        "channel": 68,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -7.935372536849172e-07
+      },
+      {
+        "channel": 68,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.5713946406067407e-07
+      },
+      {
+        "channel": 68,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.587901235528989e-07
+      },
+      {
+        "channel": 68,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.3641143204476975e-08
+      },
+      {
+        "channel": 69,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.2076435496055637e-06
+      },
+      {
+        "channel": 69,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.588769968449924e-07
+      },
+      {
+        "channel": 69,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -8.161916298377037e-07
+      },
+      {
+        "channel": 69,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.861898438932258e-07
+      },
+      {
+        "channel": 69,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.446919087466085e-07
+      },
+      {
+        "channel": 69,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.7247559703246225e-07
+      },
+      {
+        "channel": 69,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.1795219140585687e-07
+      },
+      {
+        "channel": 69,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.760242226595437e-08
+      },
+      {
+        "channel": 70,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.8898373355114018e-06
+      },
+      {
+        "channel": 70,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.3158152089308714e-06
+      },
+      {
+        "channel": 70,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.1646046687019407e-06
+      },
+      {
+        "channel": 70,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.5028890629764646e-06
+      },
+      {
+        "channel": 70,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.6931086292970576e-06
+      },
+      {
+        "channel": 70,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -8.4530131516658e-07
+      },
+      {
+        "channel": 70,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.685599381242355e-07
+      },
+      {
+        "channel": 70,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.4950509214249905e-07
+      },
+      {
+        "channel": 71,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.910638378736621e-07
+      },
+      {
+        "channel": 71,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.694621912269213e-07
+      },
+      {
+        "channel": 71,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.376007266022498e-07
+      },
+      {
+        "channel": 71,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.782274901226629e-07
+      },
+      {
+        "channel": 71,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.257577519543702e-07
+      },
+      {
+        "channel": 71,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.044721038098942e-07
+      },
+      {
+        "channel": 71,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.935056701540816e-07
+      },
+      {
+        "channel": 71,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.264969698577261e-08
+      },
+      {
+        "channel": 72,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.7624570318730548e-06
+      },
+      {
+        "channel": 72,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.2943573892698623e-06
+      },
+      {
+        "channel": 72,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.300583335250849e-06
+      },
+      {
+        "channel": 72,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.809722658043029e-07
+      },
+      {
+        "channel": 72,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.307470693580399e-07
+      },
+      {
+        "channel": 72,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.7321240736455366e-07
+      },
+      {
+        "channel": 72,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.5149490195653925e-07
+      },
+      {
+        "channel": 72,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.1024990455061925e-08
+      },
+      {
+        "channel": 73,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.408711700738422e-08
+      },
+      {
+        "channel": 73,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.464457224959915e-07
+      },
+      {
+        "channel": 73,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.977291716088075e-07
+      },
+      {
+        "channel": 73,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.494528532930417e-06
+      },
+      {
+        "channel": 73,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.0857688721443992e-06
+      },
+      {
+        "channel": 73,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.674238193227211e-07
+      },
+      {
+        "channel": 73,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.2563084434732446e-07
+      },
+      {
+        "channel": 73,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.021671636181054e-07
+      },
+      {
+        "channel": 74,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.544995046984468e-09
+      },
+      {
+        "channel": 74,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.901202750786979e-08
+      },
+      {
+        "channel": 74,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.679263909679321e-08
+      },
+      {
+        "channel": 74,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.9891987790288113e-07
+      },
+      {
+        "channel": 74,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.3959696332221938e-07
+      },
+      {
+        "channel": 74,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.0449686271840619e-07
+      },
+      {
+        "channel": 74,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -6.114927941780479e-08
+      },
+      {
+        "channel": 74,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.8714811034215018e-08
+      },
+      {
+        "channel": 75,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.535815373354126e-07
+      },
+      {
+        "channel": 75,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.587324949374306e-07
+      },
+      {
+        "channel": 75,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.565893393897568e-07
+      },
+      {
+        "channel": 75,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.1720517768007994e-07
+      },
+      {
+        "channel": 75,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.2898190366049676e-07
+      },
+      {
+        "channel": 75,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.567894685194915e-07
+      },
+      {
+        "channel": 75,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.25942345020303e-08
+      },
+      {
+        "channel": 75,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.6932093888376585e-08
+      },
+      {
+        "channel": 76,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -8.143096238200087e-06
+      },
+      {
+        "channel": 76,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.000227595999604e-06
+      },
+      {
+        "channel": 76,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.3462064291379647e-06
+      },
+      {
+        "channel": 76,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.6781632439233363e-06
+      },
+      {
+        "channel": 76,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.206864681080333e-06
+      },
+      {
+        "channel": 76,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.892047513749276e-07
+      },
+      {
+        "channel": 76,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.721217408132361e-07
+      },
+      {
+        "channel": 76,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.8543164514994714e-07
+      },
+      {
+        "channel": 77,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.3481397900250158e-06
+      },
+      {
+        "channel": 77,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -8.112075420285692e-07
+      },
+      {
+        "channel": 77,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.325147422903683e-06
+      },
+      {
+        "channel": 77,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.6730276684029377e-06
+      },
+      {
+        "channel": 77,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.2183141961941146e-06
+      },
+      {
+        "channel": 77,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -7.588939183733601e-07
+      },
+      {
+        "channel": 77,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.4403257131998544e-07
+      },
+      {
+        "channel": 77,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.376710940803605e-07
+      },
+      {
+        "channel": 78,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.4367153653438436e-06
+      },
+      {
+        "channel": 78,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.768464224180207e-07
+      },
+      {
+        "channel": 78,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.945159836708626e-07
+      },
+      {
+        "channel": 78,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.068728902799194e-07
+      },
+      {
+        "channel": 78,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.624460530067154e-07
+      },
+      {
+        "channel": 78,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.4372269535888336e-07
+      },
+      {
+        "channel": 78,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.342085149910417e-08
+      },
+      {
+        "channel": 78,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.897440757962613e-08
+      },
+      {
+        "channel": 79,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.0360627129557543e-06
+      },
+      {
+        "channel": 79,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.55021960180602e-07
+      },
+      {
+        "channel": 79,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6326009699696442e-06
+      },
+      {
+        "channel": 79,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.4805013961449731e-06
+      },
+      {
+        "channel": 79,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.803938271739753e-07
+      },
+      {
+        "channel": 79,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.163516334505402e-07
+      },
+      {
+        "channel": 79,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.849538643407868e-07
+      },
+      {
+        "channel": 79,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.3756458372427005e-07
+      },
+      {
+        "channel": 80,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.9248863714647086e-08
+      },
+      {
+        "channel": 80,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.3161280776330386e-07
+      },
+      {
+        "channel": 80,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.2446754144311853e-07
+      },
+      {
+        "channel": 80,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.5764916244952474e-07
+      },
+      {
+        "channel": 80,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.597430667743538e-07
+      },
+      {
+        "channel": 80,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -9.97108742240016e-08
+      },
+      {
+        "channel": 80,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.4716408353906445e-08
+      },
+      {
+        "channel": 80,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.5478416770520198e-08
+      },
+      {
+        "channel": 81,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.2639421786152525e-06
+      },
+      {
+        "channel": 81,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.692538138646341e-07
+      },
+      {
+        "channel": 81,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.346210514289851e-07
+      },
+      {
+        "channel": 81,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.44258386475849e-07
+      },
+      {
+        "channel": 81,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.572202444956929e-07
+      },
+      {
+        "channel": 81,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.5054084201437945e-07
+      },
+      {
+        "channel": 81,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.160172923344362e-08
+      },
+      {
+        "channel": 81,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.71784523167662e-08
+      },
+      {
+        "channel": 82,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.7345217858965043e-06
+      },
+      {
+        "channel": 82,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.5311546778539196e-06
+      },
+      {
+        "channel": 82,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.191110070270952e-06
+      },
+      {
+        "channel": 82,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.6027179299271666e-06
+      },
+      {
+        "channel": 82,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.3722653875447577e-06
+      },
+      {
+        "channel": 82,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.896879654050281e-07
+      },
+      {
+        "channel": 82,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.889902361857821e-07
+      },
+      {
+        "channel": 82,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0428835395259739e-07
+      },
+      {
+        "channel": 83,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.955899157721433e-08
+      },
+      {
+        "channel": 83,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.073475957014125e-07
+      },
+      {
+        "channel": 83,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.5864097235862573e-07
+      },
+      {
+        "channel": 83,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.1978706027093722e-07
+      },
+      {
+        "channel": 83,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.3400324405665742e-07
+      },
+      {
+        "channel": 83,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.258309070972246e-08
+      },
+      {
+        "channel": 83,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.035207558037655e-08
+      },
+      {
+        "channel": 83,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.020010381187376e-09
+      },
+      {
+        "channel": 84,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.9736927470148657e-07
+      },
+      {
+        "channel": 84,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.3924043779952626e-07
+      },
+      {
+        "channel": 84,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.375382107151381e-07
+      },
+      {
+        "channel": 84,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.034590747574839e-07
+      },
+      {
+        "channel": 84,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.4656148411850154e-07
+      },
+      {
+        "channel": 84,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.5895730598458613e-07
+      },
+      {
+        "channel": 84,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.291812830269919e-08
+      },
+      {
+        "channel": 84,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.2419172296395118e-08
+      },
+      {
+        "channel": 85,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.613873893002165e-08
+      },
+      {
+        "channel": 85,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.00647116091568e-08
+      },
+      {
+        "channel": 85,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -8.113119065455976e-08
+      },
+      {
+        "channel": 85,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.222905023558269e-08
+      },
+      {
+        "channel": 85,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.468916945503224e-08
+      },
+      {
+        "channel": 85,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.984497875033412e-08
+      },
+      {
+        "channel": 85,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.284734758807645e-09
+      },
+      {
+        "channel": 85,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.8022197895438694e-09
+      },
+      {
+        "channel": 86,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -9.824753277598575e-08
+      },
+      {
+        "channel": 86,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.534114772994144e-07
+      },
+      {
+        "channel": 86,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.4204405235650484e-07
+      },
+      {
+        "channel": 86,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.598434889478085e-07
+      },
+      {
+        "channel": 86,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.8124185885426414e-07
+      },
+      {
+        "channel": 86,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.1206900296656386e-07
+      },
+      {
+        "channel": 86,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -5.983396533792984e-08
+      },
+      {
+        "channel": 86,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.4884983023932818e-08
+      },
+      {
+        "channel": 87,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.392383808251907e-07
+      },
+      {
+        "channel": 87,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.8830796477686818e-07
+      },
+      {
+        "channel": 87,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.030843913620629e-07
+      },
+      {
+        "channel": 87,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.931135381662898e-07
+      },
+      {
+        "channel": 87,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.355086448664224e-07
+      },
+      {
+        "channel": 87,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.7432245158488513e-07
+      },
+      {
+        "channel": 87,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.1346833161951508e-07
+      },
+      {
+        "channel": 87,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.360182532219369e-08
+      },
+      {
+        "channel": 88,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.0690208063788305e-07
+      },
+      {
+        "channel": 88,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.0454555738069757e-07
+      },
+      {
+        "channel": 88,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.034331138631387e-07
+      },
+      {
+        "channel": 88,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.4152742500737077e-07
+      },
+      {
+        "channel": 88,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.3055948733817786e-07
+      },
+      {
+        "channel": 88,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.3453300457276782e-07
+      },
+      {
+        "channel": 88,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.1978108684998e-08
+      },
+      {
+        "channel": 88,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0560569307926926e-08
+      },
+      {
+        "channel": 89,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -8.925194379116874e-07
+      },
+      {
+        "channel": 89,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -8.525771590939257e-07
+      },
+      {
+        "channel": 89,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.753005550308444e-07
+      },
+      {
+        "channel": 89,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.113285841522156e-07
+      },
+      {
+        "channel": 89,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.297324711747933e-07
+      },
+      {
+        "channel": 89,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.952656465524342e-07
+      },
+      {
+        "channel": 89,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.37626886448561e-07
+      },
+      {
+        "channel": 89,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.3487493788488791e-07
+      },
+      {
+        "channel": 90,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.8167758020790643e-07
+      },
+      {
+        "channel": 90,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.811986850152607e-07
+      },
+      {
+        "channel": 90,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.549661293320241e-07
+      },
+      {
+        "channel": 90,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.464571361495473e-07
+      },
+      {
+        "channel": 90,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.342328511735104e-07
+      },
+      {
+        "channel": 90,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.0012348045383987e-07
+      },
+      {
+        "channel": 90,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.6909757028524837e-08
+      },
+      {
+        "channel": 90,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.6687366982969252e-08
+      },
+      {
+        "channel": 91,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.026247779620462e-07
+      },
+      {
+        "channel": 91,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -7.329284699153504e-07
+      },
+      {
+        "channel": 91,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.98525320533372e-07
+      },
+      {
+        "channel": 91,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -5.653454309140216e-07
+      },
+      {
+        "channel": 91,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.282580619019427e-07
+      },
+      {
+        "channel": 91,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.774788754322799e-07
+      },
+      {
+        "channel": 91,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.598811536496214e-07
+      },
+      {
+        "channel": 91,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.298096101251758e-08
+      },
+      {
+        "channel": 92,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -9.412631243321812e-07
+      },
+      {
+        "channel": 92,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.311325826871325e-07
+      },
+      {
+        "channel": 92,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.938770873901376e-07
+      },
+      {
+        "channel": 92,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.523464672776754e-07
+      },
+      {
+        "channel": 92,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.611145077935362e-07
+      },
+      {
+        "channel": 92,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.4500709255571564e-07
+      },
+      {
+        "channel": 92,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -7.242542920948836e-08
+      },
+      {
+        "channel": 92,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.342405273722761e-08
+      },
+      {
+        "channel": 93,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.803088853895133e-08
+      },
+      {
+        "channel": 93,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.455737444506667e-07
+      },
+      {
+        "channel": 93,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.615091088704503e-07
+      },
+      {
+        "channel": 93,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.945680984747014e-07
+      },
+      {
+        "channel": 93,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.7651489037671126e-07
+      },
+      {
+        "channel": 93,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.4286359234793053e-07
+      },
+      {
+        "channel": 93,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.1399478694329446e-07
+      },
+      {
+        "channel": 93,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.0889155172862957e-08
+      },
+      {
+        "channel": 94,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.3012974022785784e-06
+      },
+      {
+        "channel": 94,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.354757253277057e-07
+      },
+      {
+        "channel": 94,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.614584092152654e-07
+      },
+      {
+        "channel": 94,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -5.179076083550171e-07
+      },
+      {
+        "channel": 94,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.200300966454961e-07
+      },
+      {
+        "channel": 94,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.9013289665490447e-07
+      },
+      {
+        "channel": 94,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.503802025126788e-07
+      },
+      {
+        "channel": 94,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -9.432008596377273e-08
+      },
+      {
+        "channel": 95,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.571978244413913e-08
+      },
+      {
+        "channel": 95,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.5266256525592325e-07
+      },
+      {
+        "channel": 95,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6624026955014415e-07
+      },
+      {
+        "channel": 95,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.805017433298417e-07
+      },
+      {
+        "channel": 95,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.764072123933147e-07
+      },
+      {
+        "channel": 95,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -9.026331326822401e-08
+      },
+      {
+        "channel": 95,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -5.308930894898367e-08
+      },
+      {
+        "channel": 95,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -9.70879376893663e-09
+      },
+      {
+        "channel": 96,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -7.842528759738343e-08
+      },
+      {
+        "channel": 96,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.2661668569744506e-07
+      },
+      {
+        "channel": 96,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.988457468854904e-07
+      },
+      {
+        "channel": 96,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.292470508626138e-07
+      },
+      {
+        "channel": 96,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.196767566914787e-07
+      },
+      {
+        "channel": 96,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.988316959497752e-07
+      },
+      {
+        "channel": 96,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.786205755000992e-07
+      },
+      {
+        "channel": 96,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0056128019186872e-07
+      },
+      {
+        "channel": 97,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.178080874022271e-07
+      },
+      {
+        "channel": 97,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.364662787447742e-07
+      },
+      {
+        "channel": 97,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.3600930489919847e-06
+      },
+      {
+        "channel": 97,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.3863434560335008e-06
+      },
+      {
+        "channel": 97,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.830450855777599e-06
+      },
+      {
+        "channel": 97,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -8.930458648137574e-07
+      },
+      {
+        "channel": 97,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.9517985328529903e-07
+      },
+      {
+        "channel": 97,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0554821727737362e-07
+      },
+      {
+        "channel": 98,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -8.178448069884325e-07
+      },
+      {
+        "channel": 98,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.0910907728175516e-07
+      },
+      {
+        "channel": 98,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -8.121285759443708e-07
+      },
+      {
+        "channel": 98,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.665536708780564e-07
+      },
+      {
+        "channel": 98,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.179237743708654e-07
+      },
+      {
+        "channel": 98,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.4720494568318827e-07
+      },
+      {
+        "channel": 98,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.3417432853657374e-07
+      },
+      {
+        "channel": 98,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.4590976244762714e-08
+      },
+      {
+        "channel": 99,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.946680640685372e-06
+      },
+      {
+        "channel": 99,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.7669652834229055e-06
+      },
+      {
+        "channel": 99,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6711817352188518e-06
+      },
+      {
+        "channel": 99,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.5921473277558107e-06
+      },
+      {
+        "channel": 99,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.1350895192663302e-06
+      },
+      {
+        "channel": 99,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -8.368221529053699e-07
+      },
+      {
+        "channel": 99,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.885775186063256e-07
+      },
+      {
+        "channel": 99,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.2187176423594792e-07
+      },
+      {
+        "channel": 100,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.4451525102194864e-06
+      },
+      {
+        "channel": 100,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.5346732854814036e-06
+      },
+      {
+        "channel": 100,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.6977387531369459e-06
+      },
+      {
+        "channel": 100,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.362150896966341e-06
+      },
+      {
+        "channel": 100,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.013851816533133e-07
+      },
+      {
+        "channel": 100,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.347132064845937e-07
+      },
+      {
+        "channel": 100,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.288651046455925e-07
+      },
+      {
+        "channel": 100,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.558213610536768e-08
+      },
+      {
+        "channel": 101,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.187611355315312e-06
+      },
+      {
+        "channel": 101,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.1052405827504117e-06
+      },
+      {
+        "channel": 101,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -9.835664513957454e-07
+      },
+      {
+        "channel": 101,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.867906788305845e-07
+      },
+      {
+        "channel": 101,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.653545258610393e-07
+      },
+      {
+        "channel": 101,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.7656773227136e-07
+      },
+      {
+        "channel": 101,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.6589194729021983e-07
+      },
+      {
+        "channel": 101,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.546955440469901e-08
+      },
+      {
+        "channel": 102,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.0222669288850739e-07
+      },
+      {
+        "channel": 102,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.1155587742450734e-07
+      },
+      {
+        "channel": 102,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.3091322987056628e-07
+      },
+      {
+        "channel": 102,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -5.817186661261076e-07
+      },
+      {
+        "channel": 102,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.286111672830884e-07
+      },
+      {
+        "channel": 102,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.1069589567778166e-07
+      },
+      {
+        "channel": 102,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.6608490227554285e-07
+      },
+      {
+        "channel": 102,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.783226697531063e-08
+      },
+      {
+        "channel": 103,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.858489895312232e-06
+      },
+      {
+        "channel": 103,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -8.126752959469741e-07
+      },
+      {
+        "channel": 103,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -9.807179139897926e-07
+      },
+      {
+        "channel": 103,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.20793991604296e-07
+      },
+      {
+        "channel": 103,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.586638849308656e-07
+      },
+      {
+        "channel": 103,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.1054698840525816e-07
+      },
+      {
+        "channel": 103,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.3433430840213987e-07
+      },
+      {
+        "channel": 103,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.2637858048947237e-07
+      },
+      {
+        "channel": 104,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.7268862961827836e-07
+      },
+      {
+        "channel": 104,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.4871145026518207e-07
+      },
+      {
+        "channel": 104,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.7637350424593023e-07
+      },
+      {
+        "channel": 104,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.501567794548464e-07
+      },
+      {
+        "channel": 104,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.1829038726318686e-07
+      },
+      {
+        "channel": 104,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -7.720770156538492e-08
+      },
+      {
+        "channel": 104,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.724896029983938e-08
+      },
+      {
+        "channel": 104,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.6176504276427295e-09
+      },
+      {
+        "channel": 105,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.0549445050855866e-06
+      },
+      {
+        "channel": 105,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.7455735701332742e-07
+      },
+      {
+        "channel": 105,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.1916891884975485e-07
+      },
+      {
+        "channel": 105,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.368521390711976e-07
+      },
+      {
+        "channel": 105,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.656773006037838e-07
+      },
+      {
+        "channel": 105,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.878701283430928e-07
+      },
+      {
+        "channel": 105,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.161453107253692e-08
+      },
+      {
+        "channel": 105,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.1897428698357544e-08
+      },
+      {
+        "channel": 106,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.0125456029186353e-08
+      },
+      {
+        "channel": 106,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -8.451007715848391e-08
+      },
+      {
+        "channel": 106,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.2684253647421428e-07
+      },
+      {
+        "channel": 106,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.1932639526767161e-07
+      },
+      {
+        "channel": 106,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.1597540350294366e-07
+      },
+      {
+        "channel": 106,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.0425527818824776e-07
+      },
+      {
+        "channel": 106,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.3775433056225665e-08
+      },
+      {
+        "channel": 106,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.685253322620156e-09
+      },
+      {
+        "channel": 107,
+        "level": 0,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 107,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.7703358657381614e-08
+      },
+      {
+        "channel": 107,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.9618479402415687e-07
+      },
+      {
+        "channel": 107,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.134869406399957e-07
+      },
+      {
+        "channel": 107,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.0425693517390755e-06
+      },
+      {
+        "channel": 107,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -7.846412017897819e-07
+      },
+      {
+        "channel": 107,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.53362224814191e-07
+      },
+      {
+        "channel": 107,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.2302712093514856e-07
+      },
+      {
+        "channel": 108,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.1181128911630367e-07
+      },
+      {
+        "channel": 108,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.437436646436254e-07
+      },
+      {
+        "channel": 108,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.646300340027665e-07
+      },
+      {
+        "channel": 108,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.580373448945465e-07
+      },
+      {
+        "channel": 108,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -9.124985353992088e-07
+      },
+      {
+        "channel": 108,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -7.861469271119859e-07
+      },
+      {
+        "channel": 108,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.946094804836321e-07
+      },
+      {
+        "channel": 108,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.5319990609441447e-07
+      },
+      {
+        "channel": 109,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.775709617708344e-07
+      },
+      {
+        "channel": 109,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.5794550967693795e-07
+      },
+      {
+        "channel": 109,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.417134794541198e-07
+      },
+      {
+        "channel": 109,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.271959591686027e-07
+      },
+      {
+        "channel": 109,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.843108397129981e-07
+      },
+      {
+        "channel": 109,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.1158845104073407e-07
+      },
+      {
+        "channel": 109,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.0843420145411073e-07
+      },
+      {
+        "channel": 109,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -8.207512536273498e-08
+      },
+      {
+        "channel": 110,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.218568273652636e-07
+      },
+      {
+        "channel": 110,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.6655122787342407e-07
+      },
+      {
+        "channel": 110,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.945098564552609e-07
+      },
+      {
+        "channel": 110,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -5.348626928025624e-07
+      },
+      {
+        "channel": 110,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.529565558186732e-07
+      },
+      {
+        "channel": 110,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.3862932014017133e-07
+      },
+      {
+        "channel": 110,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.6516897005658393e-07
+      },
+      {
+        "channel": 110,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.44924247947165e-08
+      },
+      {
+        "channel": 111,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.907316674187314e-08
+      },
+      {
+        "channel": 111,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.072818585309506e-08
+      },
+      {
+        "channel": 111,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.73657049535359e-08
+      },
+      {
+        "channel": 111,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.313289766992966e-07
+      },
+      {
+        "channel": 111,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.079739769873413e-07
+      },
+      {
+        "channel": 111,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.219611303644342e-07
+      },
+      {
+        "channel": 111,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -7.301137827653292e-08
+      },
+      {
+        "channel": 111,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.913916023558841e-10
+      },
+      {
+        "channel": 112,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.4770778256643098e-06
+      },
+      {
+        "channel": 112,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.887141818064265e-06
+      },
+      {
+        "channel": 112,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.627823394301231e-06
+      },
+      {
+        "channel": 112,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.291174612561008e-06
+      },
+      {
+        "channel": 112,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.066900250014442e-07
+      },
+      {
+        "channel": 112,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.6721174840058666e-07
+      },
+      {
+        "channel": 112,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.0427107472187345e-07
+      },
+      {
+        "channel": 112,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.648691280337516e-08
+      },
+      {
+        "channel": 113,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.2376839322314481e-06
+      },
+      {
+        "channel": 113,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.871853202028433e-07
+      },
+      {
+        "channel": 113,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.661985819140682e-07
+      },
+      {
+        "channel": 113,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.106181326184014e-07
+      },
+      {
+        "channel": 113,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.186697649151029e-07
+      },
+      {
+        "channel": 113,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.5095598605039413e-07
+      },
+      {
+        "channel": 113,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.434478917872184e-07
+      },
+      {
+        "channel": 113,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.996358171638349e-08
+      },
+      {
+        "channel": 114,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -9.241641123480804e-07
+      },
+      {
+        "channel": 114,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.380854769195139e-06
+      },
+      {
+        "channel": 114,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.5103719306353014e-06
+      },
+      {
+        "channel": 114,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.1151706758028013e-06
+      },
+      {
+        "channel": 114,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -8.426272870565299e-07
+      },
+      {
+        "channel": 114,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -6.325713002297562e-07
+      },
+      {
+        "channel": 114,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.985613889450178e-07
+      },
+      {
+        "channel": 114,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0554224161296588e-07
+      },
+      {
+        "channel": 115,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.4935693570805597e-07
+      },
+      {
+        "channel": 115,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -4.1924454308173154e-07
+      },
+      {
+        "channel": 115,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.244198402782786e-07
+      },
+      {
+        "channel": 115,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -5.563354079640703e-07
+      },
+      {
+        "channel": 115,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.013332611270016e-07
+      },
+      {
+        "channel": 115,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.8763724913005717e-07
+      },
+      {
+        "channel": 115,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.2469337207221542e-07
+      },
+      {
+        "channel": 115,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.439503259983212e-08
+      },
+      {
+        "channel": 116,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.217458465267555e-07
+      },
+      {
+        "channel": 116,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.661471114606684e-07
+      },
+      {
+        "channel": 116,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.1806540928537288e-07
+      },
+      {
+        "channel": 116,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.750750571882236e-07
+      },
+      {
+        "channel": 116,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.4277482541256177e-07
+      },
+      {
+        "channel": 116,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.327717254502204e-07
+      },
+      {
+        "channel": 116,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.0959580976077632e-07
+      },
+      {
+        "channel": 116,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.953241917680316e-08
+      },
+      {
+        "channel": 117,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.3004584076270476e-08
+      },
+      {
+        "channel": 117,
+        "level": 1,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 117,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.849630575951778e-08
+      },
+      {
+        "channel": 117,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.217532444452445e-08
+      },
+      {
+        "channel": 117,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.418239723553597e-08
+      },
+      {
+        "channel": 117,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.28417621378685e-08
+      },
+      {
+        "channel": 117,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.7925633361292057e-08
+      },
+      {
+        "channel": 117,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.793634295590209e-09
+      },
+      {
+        "channel": 118,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.1048543910874287e-06
+      },
+      {
+        "channel": 118,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.358086572319735e-07
+      },
+      {
+        "channel": 118,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.0124156233359827e-06
+      },
+      {
+        "channel": 118,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.161841489913058e-07
+      },
+      {
+        "channel": 118,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.711762807753985e-07
+      },
+      {
+        "channel": 118,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.9173053778540634e-07
+      },
+      {
+        "channel": 118,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.0123634669744206e-07
+      },
+      {
+        "channel": 118,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.119279305494274e-08
+      },
+      {
+        "channel": 119,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.6997343733655725e-08
+      },
+      {
+        "channel": 119,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.437163335704099e-08
+      },
+      {
+        "channel": 119,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -9.432778114160101e-08
+      },
+      {
+        "channel": 119,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.3704973273197538e-07
+      },
+      {
+        "channel": 119,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.869205897899519e-07
+      },
+      {
+        "channel": 119,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.727523392171861e-07
+      },
+      {
+        "channel": 119,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.2200099774872797e-07
+      },
+      {
+        "channel": 119,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.100509608586435e-08
+      },
+      {
+        "channel": 120,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.314835220815439e-07
+      },
+      {
+        "channel": 120,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.824092118520639e-07
+      },
+      {
+        "channel": 120,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.45102506571493e-07
+      },
+      {
+        "channel": 120,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.14319322569645e-07
+      },
+      {
+        "channel": 120,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.9163583431236475e-07
+      },
+      {
+        "channel": 120,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.0801023364592766e-07
+      },
+      {
+        "channel": 120,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -7.943061319792832e-08
+      },
+      {
+        "channel": 120,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.4495146416493299e-08
+      },
+      {
+        "channel": 121,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.7991709455600358e-07
+      },
+      {
+        "channel": 121,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.182336362148817e-07
+      },
+      {
+        "channel": 121,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.268609134465805e-07
+      },
+      {
+        "channel": 121,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.4392593306620256e-07
+      },
+      {
+        "channel": 121,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.7014277748094173e-07
+      },
+      {
+        "channel": 121,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.066579440906935e-07
+      },
+      {
+        "channel": 121,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.894437624780039e-08
+      },
+      {
+        "channel": 121,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.4048753150273114e-08
+      },
+      {
+        "channel": 122,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.9459969280433143e-07
+      },
+      {
+        "channel": 122,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -6.625008097671525e-08
+      },
+      {
+        "channel": 122,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.4315394259465393e-07
+      },
+      {
+        "channel": 122,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.1109465226109023e-07
+      },
+      {
+        "channel": 122,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.458048354332277e-07
+      },
+      {
+        "channel": 122,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.0847993198458425e-07
+      },
+      {
+        "channel": 122,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.1331735549902078e-07
+      },
+      {
+        "channel": 122,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.7734659013844976e-08
+      },
+      {
+        "channel": 123,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.947131285211071e-07
+      },
+      {
+        "channel": 123,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -8.618590072728693e-07
+      },
+      {
+        "channel": 123,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.600826623071043e-07
+      },
+      {
+        "channel": 123,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.959574996770243e-07
+      },
+      {
+        "channel": 123,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.5590577479306376e-07
+      },
+      {
+        "channel": 123,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.2678091227135155e-07
+      },
+      {
+        "channel": 123,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.1729805038385166e-07
+      },
+      {
+        "channel": 123,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.3673839655866686e-08
+      },
+      {
+        "channel": 124,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -8.829929356579669e-07
+      },
+      {
+        "channel": 124,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.180762059353583e-07
+      },
+      {
+        "channel": 124,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.862104555693804e-07
+      },
+      {
+        "channel": 124,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -7.138279443097417e-07
+      },
+      {
+        "channel": 124,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.896465609112056e-07
+      },
+      {
+        "channel": 124,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.3319747672067024e-07
+      },
+      {
+        "channel": 124,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.5864006286392396e-07
+      },
+      {
+        "channel": 124,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.507978346168784e-08
+      },
+      {
+        "channel": 125,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.0534506006697484e-07
+      },
+      {
+        "channel": 125,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.4850819241019053e-07
+      },
+      {
+        "channel": 125,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.9464661704660102e-07
+      },
+      {
+        "channel": 125,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.509713549959997e-08
+      },
+      {
+        "channel": 125,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.4449678903692984e-07
+      },
+      {
+        "channel": 125,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.747747688796153e-07
+      },
+      {
+        "channel": 125,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -4.439597844907439e-08
+      },
+      {
+        "channel": 125,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.87510317775741e-08
+      },
+      {
+        "channel": 126,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.0897857072886836e-07
+      },
+      {
+        "channel": 126,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.9644146454520524e-07
+      },
+      {
+        "channel": 126,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.526620500655554e-07
+      },
+      {
+        "channel": 126,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.200464616133104e-07
+      },
+      {
+        "channel": 126,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.504208052618196e-07
+      },
+      {
+        "channel": 126,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.1548655126935046e-07
+      },
+      {
+        "channel": 126,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.0335840983088929e-07
+      },
+      {
+        "channel": 126,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.8941551256120874e-08
+      },
+      {
+        "channel": 127,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.469417262953357e-07
+      },
+      {
+        "channel": 127,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.4519931685063057e-07
+      },
+      {
+        "channel": 127,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.371711727595539e-07
+      },
+      {
+        "channel": 127,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.718793379903218e-07
+      },
+      {
+        "channel": 127,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.640625211824954e-07
+      },
+      {
+        "channel": 127,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.7730474155541742e-07
+      },
+      {
+        "channel": 127,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -8.334848899949066e-08
+      },
+      {
+        "channel": 127,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.4416903105238816e-08
+      },
+      {
+        "channel": 128,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.4773061824134857e-08
+      },
+      {
+        "channel": 128,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.639448043988523e-08
+      },
+      {
+        "channel": 128,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.7067953090618175e-08
+      },
+      {
+        "channel": 128,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.068552238502889e-08
+      },
+      {
+        "channel": 128,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.468413195013454e-08
+      },
+      {
+        "channel": 128,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.986014990824515e-08
+      },
+      {
+        "channel": 128,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.508931646299061e-08
+      },
+      {
+        "channel": 128,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.7788127354710923e-09
+      },
+      {
+        "channel": 129,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.7943528380092175e-07
+      },
+      {
+        "channel": 129,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.300561269905302e-07
+      },
+      {
+        "channel": 129,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -5.792599040432833e-07
+      },
+      {
+        "channel": 129,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -6.744041911588283e-07
+      },
+      {
+        "channel": 129,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.568259323103121e-07
+      },
+      {
+        "channel": 129,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.8773828237026464e-07
+      },
+      {
+        "channel": 129,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.0083771801182593e-07
+      },
+      {
+        "channel": 129,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.691277410984185e-08
+      },
+      {
+        "channel": 130,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.3632541762120809e-09
+      },
+      {
+        "channel": 130,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.5566327249416645e-07
+      },
+      {
+        "channel": 130,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.0508064103050856e-07
+      },
+      {
+        "channel": 130,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.8710635408278904e-07
+      },
+      {
+        "channel": 130,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.593850467746961e-07
+      },
+      {
+        "channel": 130,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.6421464010818454e-07
+      },
+      {
+        "channel": 130,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.0742642331251773e-07
+      },
+      {
+        "channel": 130,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.1676317629726327e-08
+      },
+      {
+        "channel": 131,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.375131095775032e-08
+      },
+      {
+        "channel": 131,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.3527562714443775e-07
+      },
+      {
+        "channel": 131,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.106033202333492e-07
+      },
+      {
+        "channel": 131,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.6234748651841073e-07
+      },
+      {
+        "channel": 131,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -3.9933803464009543e-07
+      },
+      {
+        "channel": 131,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -2.4805416387607693e-07
+      },
+      {
+        "channel": 131,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.2047756570154888e-07
+      },
+      {
+        "channel": 131,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.9945874164004636e-08
+      },
+      {
+        "channel": 132,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.3473081139636633e-07
+      },
+      {
+        "channel": 132,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.8531845569214056e-07
+      },
+      {
+        "channel": 132,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.806934619708045e-07
+      },
+      {
+        "channel": 132,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.2193435711415077e-07
+      },
+      {
+        "channel": 132,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.3646163665725908e-07
+      },
+      {
+        "channel": 132,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.1455307458163588e-07
+      },
+      {
+        "channel": 132,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.3352869860104875e-08
+      },
+      {
+        "channel": 132,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.979984590316235e-09
+      },
+      {
+        "channel": 133,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -3.1494661811848346e-07
+      },
+      {
+        "channel": 133,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -7.087628546287306e-07
+      },
+      {
+        "channel": 133,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.1063521014875732e-06
+      },
+      {
+        "channel": 133,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.1538969602042926e-06
+      },
+      {
+        "channel": 133,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -7.107191777322441e-07
+      },
+      {
+        "channel": 133,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -5.719882665289333e-07
+      },
+      {
+        "channel": 133,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.932004576905456e-07
+      },
+      {
+        "channel": 133,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.1343270968118304e-08
+      },
+      {
+        "channel": 134,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.9329902417885023e-07
+      },
+      {
+        "channel": 134,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -8.986060606730462e-08
+      },
+      {
+        "channel": 134,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.384946971138561e-08
+      },
+      {
+        "channel": 134,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.769611739950051e-07
+      },
+      {
+        "channel": 134,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.964291698186571e-07
+      },
+      {
+        "channel": 134,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.3912615770550474e-07
+      },
+      {
+        "channel": 134,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.203734663287833e-09
+      },
+      {
+        "channel": 134,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.0099153148817095e-09
+      },
+      {
+        "channel": 135,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.9470834899948386e-07
+      },
+      {
+        "channel": 135,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.418243525426078e-07
+      },
+      {
+        "channel": 135,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.1073531658876163e-07
+      },
+      {
+        "channel": 135,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -3.11915584916278e-07
+      },
+      {
+        "channel": 135,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.9890730957049527e-07
+      },
+      {
+        "channel": 135,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.7993640710756154e-07
+      },
+      {
+        "channel": 135,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.664136513265476e-08
+      },
+      {
+        "channel": 135,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.3840628077541623e-08
+      },
+      {
+        "channel": 136,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.2654002641029365e-07
+      },
+      {
+        "channel": 136,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -2.49367076321505e-07
+      },
+      {
+        "channel": 136,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.1762621454636246e-07
+      },
+      {
+        "channel": 136,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.575801545390277e-07
+      },
+      {
+        "channel": 136,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.0856749927133933e-07
+      },
+      {
+        "channel": 136,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.6681940451235278e-07
+      },
+      {
+        "channel": 136,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -9.003280609931608e-08
+      },
+      {
+        "channel": 136,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -4.145415033462996e-08
+      },
+      {
+        "channel": 137,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.0268799996993039e-06
+      },
+      {
+        "channel": 137,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -7.365291025962506e-07
+      },
+      {
+        "channel": 137,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -6.069440132705495e-07
+      },
+      {
+        "channel": 137,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.92273159125034e-07
+      },
+      {
+        "channel": 137,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -2.820087274812977e-07
+      },
+      {
+        "channel": 137,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.79697821067748e-07
+      },
+      {
+        "channel": 137,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -5.1411149115665467e-08
+      },
+      {
+        "channel": 137,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -1.0871858080463426e-08
+      },
+      {
+        "channel": 138,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -8.135424423016957e-08
+      },
+      {
+        "channel": 138,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -1.1469295202459762e-07
+      },
+      {
+        "channel": 138,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.5187295332452777e-07
+      },
+      {
+        "channel": 138,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.6906750488487887e-07
+      },
+      {
+        "channel": 138,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.2617506683909596e-07
+      },
+      {
+        "channel": 138,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.1744295846938257e-07
+      },
+      {
+        "channel": 138,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.381967772497774e-08
+      },
+      {
+        "channel": 138,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -7.001759172453603e-09
+      },
+      {
+        "channel": 139,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -5.09031508499902e-07
+      },
+      {
+        "channel": 139,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.416541171143763e-07
+      },
+      {
+        "channel": 139,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.4804277270741295e-07
+      },
+      {
+        "channel": 139,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.3282040356443758e-07
+      },
+      {
+        "channel": 139,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.203018898531809e-08
+      },
+      {
+        "channel": 139,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.194757607933752e-08
+      },
+      {
+        "channel": 139,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -3.0524383021202084e-08
+      },
+      {
+        "channel": 139,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -2.7419327253142e-08
+      },
+      {
+        "channel": 140,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -2.0651661998272175e-06
+      },
+      {
+        "channel": 140,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -9.476616469328292e-07
+      },
+      {
+        "channel": 140,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -7.197664331215492e-07
+      },
+      {
+        "channel": 140,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -9.256484645447927e-07
+      },
+      {
+        "channel": 140,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.05781963258778e-07
+      },
+      {
+        "channel": 140,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.8617512864693708e-07
+      },
+      {
+        "channel": 140,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.217227350025496e-07
+      },
+      {
+        "channel": 140,
+        "level": 7,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 141,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -8.93241235644382e-07
+      },
+      {
+        "channel": 141,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.3852080605356605e-07
+      },
+      {
+        "channel": 141,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.68792973656673e-07
+      },
+      {
+        "channel": 141,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.580914042482618e-07
+      },
+      {
+        "channel": 141,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -1.3693787082047493e-07
+      },
+      {
+        "channel": 141,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -8.977927734576951e-08
+      },
+      {
+        "channel": 141,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -5.984718853824234e-08
+      },
+      {
+        "channel": 141,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -3.6739280062647595e-08
+      },
+      {
+        "channel": 142,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.0165880932363507e-07
+      },
+      {
+        "channel": 142,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.3645937946857885e-07
+      },
+      {
+        "channel": 142,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -2.0961691404863814e-07
+      },
+      {
+        "channel": 142,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -2.3748376065668708e-07
+      },
+      {
+        "channel": 142,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -4.3224429191468516e-07
+      },
+      {
+        "channel": 142,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -1.7592343226624507e-07
+      },
+      {
+        "channel": 142,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.2162324480868847e-07
+      },
+      {
+        "channel": 142,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -5.243492040563069e-08
+      },
+      {
+        "channel": 143,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -6.297278787315008e-07
+      },
+      {
+        "channel": 143,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -3.958228944611619e-07
+      },
+      {
+        "channel": 143,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -4.4393107145879185e-07
+      },
+      {
+        "channel": 143,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -8.452270776615478e-07
+      },
+      {
+        "channel": 143,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -6.083479888729926e-07
+      },
+      {
+        "channel": 143,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.4136356791568687e-07
+      },
+      {
+        "channel": 143,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.6943027364723093e-07
+      },
+      {
+        "channel": 143,
+        "level": 7,
+        "accepted": false,
+        "objective_delta": 0.0
+      },
+      {
+        "channel": 144,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -1.5242551398841897e-07
+      },
+      {
+        "channel": 144,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -7.392759471258614e-08
+      },
+      {
+        "channel": 144,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -3.3282609024354315e-07
+      },
+      {
+        "channel": 144,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -4.646758497983683e-07
+      },
+      {
+        "channel": 144,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -5.019879836254404e-07
+      },
+      {
+        "channel": 144,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -3.7966168520142674e-07
+      },
+      {
+        "channel": 144,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -2.0212365825500456e-07
+      },
+      {
+        "channel": 144,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -6.188126633333013e-08
+      },
+      {
+        "channel": 145,
+        "level": 0,
+        "accepted": true,
+        "objective_delta": -4.1395020389245474e-07
+      },
+      {
+        "channel": 145,
+        "level": 1,
+        "accepted": true,
+        "objective_delta": -5.985718871670542e-07
+      },
+      {
+        "channel": 145,
+        "level": 2,
+        "accepted": true,
+        "objective_delta": -1.1069017773479572e-06
+      },
+      {
+        "channel": 145,
+        "level": 3,
+        "accepted": true,
+        "objective_delta": -1.1008669389411807e-06
+      },
+      {
+        "channel": 145,
+        "level": 4,
+        "accepted": true,
+        "objective_delta": -9.841768360274727e-07
+      },
+      {
+        "channel": 145,
+        "level": 5,
+        "accepted": true,
+        "objective_delta": -4.776669015882362e-07
+      },
+      {
+        "channel": 145,
+        "level": 6,
+        "accepted": true,
+        "objective_delta": -1.5596522473515506e-07
+      },
+      {
+        "channel": 145,
+        "level": 7,
+        "accepted": true,
+        "objective_delta": -8.69204512810029e-08
+      }
+    ],
+    "accepted": 1156,
+    "optimizer": "one hard coordinate sweep with incumbent retention"
+  },
+  "calibration_seconds": 6.736961300019175,
+  "inference_levels": 8,
+  "extra_codebook_bytes": 4672,
+  "teacher_frozen": true,
+  "test_loaded": false
+}

@@ -7,3 +7,5 @@ hard_probe,CIFAR10,runs\hard_probe\CIFAR1041,15.962200700072572,5
 hard_probe,MNIST,runs\hard_probe\MNIST41,11.824328599963337,5
 book_screen,CIFAR10,runs\book_screen\CIFAR1041,11.682296499842778,12
 book_screen,MNIST,runs\book_screen\MNIST41,9.391821700148284,12
+full_book_screen,CIFAR10,runs\full_book_screen\CIFAR1041,35.04669969994575,10
+full_book_screen,MNIST,runs\full_book_screen\MNIST41,27.692289300030097,10

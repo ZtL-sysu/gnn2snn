@@ -11,7 +11,7 @@ def write(path,rows):
 
 def main():
     rows=[];paired=[];runs=[]
-    for phase in ['screen','optimizer_check','hard_probe','book_screen']:
+    for phase in ['screen','optimizer_check','hard_probe','book_screen','full_book_screen']:
         for path in sorted((ROOT/'runs'/phase).glob('*')):
             if not (path/'DONE.json').exists():continue
             meta=json.loads((path/'metadata.json').read_text());done=json.loads((path/'DONE.json').read_text())
@@ -24,12 +24,15 @@ def main():
                 assert abs(acc-result['accuracy_percent'])<1e-10
                 arrays[tag]=a
                 trainfile=path/(tag+'_training.json')
-                if phase=='book_screen':trainfile=path/(result['method']+'_training.json')
+                if phase in ['book_screen','full_book_screen']:trainfile=path/(result['method']+'_training.json')
                 tr=json.loads(trainfile.read_text()) if trainfile.exists() else {}
-                if tr and phase=='book_screen':
+                if tr and phase in ['book_screen','full_book_screen']:
                     assert tr['teacher_frozen'] and not tr['test_loaded']
                     h=tr.get('objective_history',[])
                     assert all(y<=x+1e-5 for x,y in zip(h,h[1:]))
+                    if phase=='full_book_screen':
+                        r=tr['full_hard_refinement']
+                        assert r['final_objective']<=r['initial_objective']+1e-5
                 elif tr:
                     assert tr['teacher_unchanged']
                     if phase!='hard_probe':assert tr['optimizer_steps']==[64]*(1 if result['method'].startswith('first_') else 6)
@@ -41,8 +44,8 @@ def main():
                     calibration_seconds=tr.get('calibration_seconds',0),initial_hard_loss=tr.get('initial_hard_train',{}).get('total',''),
                     final_hard_loss=tr.get('final_hard_train',{}).get('total',''),source=str(path.relative_to(ROOT)/f'{tag}.npz'),source_sha256=sha(path/f'{tag}.npz')))
             for t in meta['T']:
-                for m in (['book_message'] if phase=='book_screen' else ['first_message','all_message']):
-                    for control in (['book_local','book_shuffled','book_identity','book_nearest'] if phase=='book_screen' else ['all_local','first_local','first_shuffled','first_identity']):
+                for m in (['book_message'] if phase in ['book_screen','full_book_screen'] else ['first_message','all_message']):
+                    for control in (['book_local','book_shuffled','book_identity','book_nearest'] if phase in ['book_screen','full_book_screen'] else ['all_local','first_local','first_shuffled','first_identity']):
                         x=arrays.get(f'{m}_T{t}');y=arrays.get(f'{control}_T{t}')
                         if x is None or y is None:continue
                         assert np.array_equal(x['labels'],y['labels']) and np.array_equal(x['indices'],y['indices'])
