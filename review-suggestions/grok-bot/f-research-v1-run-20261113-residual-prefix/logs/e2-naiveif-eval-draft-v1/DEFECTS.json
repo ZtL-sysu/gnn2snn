@@ -1,0 +1,56 @@
+{
+  "check": "e2_naiveif_eval_v1_draft_static_review",
+  "artifact": "logs/e2-naiveif-eval-draft-v1/e2_naiveif_eval_v1.draft.py",
+  "draft_sha256": "2d26d9479023fcb44d859f4840d8ef33d7dde6b3d5ebf62519e3a55462ded9b0",
+  "draft_was_published": false,
+  "draft_bound_by_any_manifest": false,
+  "classification": "tooling defects found by static review before first execution; no scientific result was produced or lost",
+  "review_context": "The draft was written at the end of the previous session but never compiled, prechecked, smoked or queued. Frozen-input gate PASS (12 items, contract v4, P4 running) and pinned DCGS 5e0e4c73f1d0e8e17d81befa24ff947deec1f4be were re-verified before this review.",
+  "defects": [
+    {
+      "id": 1,
+      "severity": "fidelity",
+      "description": "naiveif_forward reimplemented GatedGCNLayer by calling layer.A(h), layer.B(h), layer.C(e), layer.D(h)[src], layer.E(h)[dst] directly, bypassing the author's GatedGCNLayer.forward(edge_index, h, e) which also owns bn_node_e, dropout, global_mean_pool and the MLP head's own F.relu calls. A hand-rewritten forward cannot be claimed faithful to the frozen teacher.",
+      "repair": "Register forward hooks on the exact ten stage-1 capture sites (bn_node_h, bn_node_e, FC_layers[0], FC_layers[1]) and call the author's model(batch) unchanged. The author's F.relu is an identity on the returned non-negative spike train. A no-op-hook bitwise fidelity check against the uninstrumented forward is now mandatory."
+    },
+    {
+      "id": 2,
+      "severity": "crash",
+      "description": "LabelFreeDataset strips y from every converter batch, but the label fallback used ds[bi*BATCH_SIZE].y.numpy().reshape(1), producing ONE label for a whole 128-graph batch; concatenation would never match the logits length.",
+      "repair": "Read labels from the ORIGINAL dataset through a separate DataLoader in the same fixed order, and require bitwise equality with canonical-baseline-val.npz labels before any model pass."
+    },
+    {
+      "id": 3,
+      "severity": "evidence-contamination",
+      "description": "--limit smoke wrote into the canonical OUT/seedN directory; the later full-split run would be refused by the existing-dir guard, or a smoke report could be mistaken for evidence.",
+      "repair": "--limit now writes to logs/e2_naiveif_eval_smoke_v1/seedN and is labelled smoke_probe_not_evidence; verify refuses anything but full-split canonical reports."
+    },
+    {
+      "id": 4,
+      "severity": "reporting",
+      "description": "coverage.graphs used the vacuous expression sum(len(o['indices'][0]) for o in []) or sum(len(x) for x in ...), which silently depended on a loop variable and was not an explicit graph counter.",
+      "repair": "Use an explicit total_graphs counter accumulated per batch and require it to equal 5000 on a full run."
+    }
+  ],
+  "unchanged_scientific_parameters": {
+    "seeds": [41, 42, 43],
+    "timesteps": [1, 2, 4, 8],
+    "validation_graphs": 5000,
+    "batch_size": 128,
+    "order": "fixed sequential, label-free converter input",
+    "threshold_source": "all 45000 official train graphs, per-channel max positive pre-activation, label-free",
+    "if_reset": "subtractive",
+    "protocol_sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "head_addendum_sha256": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6"
+  },
+  "added_hard_gates": [
+    "canonical-baseline-val.npz SHA-256 re-verified",
+    "canonical indices and labels bitwise equal before any GPU pass",
+    "seed41 teacher logits bitwise equal to canonical reference on first batch",
+    "no-op-hook instrumented forward bitwise equal to uninstrumented frozen forward",
+    "all ten IF sites touched at every T",
+    "processed data hashes checked before and after",
+    "NPZ schema, indices and labels rechecked bitwise in verify"
+  ],
+  "note": "Raw draft bytes are preserved here with SHA-256. The repaired script is e2_naiveif_eval_v1.py. No published checkpoint, manifest or immutable artifact was edited."
+}

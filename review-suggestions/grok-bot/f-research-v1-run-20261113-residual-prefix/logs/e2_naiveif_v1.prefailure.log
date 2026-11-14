@@ -1,0 +1,13 @@
+2026-11-14T05:53Z e2_naiveif_v1.py first precheck invocation failed:
+TypeError: precheck() takes 0 positional arguments but 1 was given
+(main() dispatches every subcommand with the parsed Namespace).
+A CPU 2-batch smoke calibration in the same run PASSED (10 sites, 256 graphs),
+so the model hooks and frozen bindings were already confirmed valid.
+Two additional defects were fixed BEFORE any GPU run without editing any
+published artifact: (1) --limit smoke probes wrote to the canonical report
+path and would have blocked the later full-split calibration; smoke now writes
+only to logs/. (2) the processed-data hash was compared against a nested
+metadata key that does not exist in verify_bindings' return; it now uses the
+returned data_hashes field.
+Fix: precheck/verify accept the Namespace. Raw failure evidence retained.
+Classification: tooling defect, not a GPU or scientific failure.

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-wb-resume",
+  "created_at_utc": "2026-11-14T06:25:25.514000+00:00",
+  "status": "in_progress",
+  "input_git_head": "0b472b8cbc1b9170362a23845691222340e5427e",
+  "protocol": {
+    "path": "collaboration/tasks/visual-conversion/TASK.md",
+    "sha256": "7b156284abbc3119233f9d87da9071bdf2656a672603a293e5a0a276bc6f977f",
+    "bytes": 1778
+  },
+  "artifacts": [
+    {
+      "path": "collaboration/tasks/visual-conversion/agents/20261113-wb-resume/checkpoints/20261114T062300Z-r8-e5-mechanism-e2-naiveif/CHECKPOINT.md",
+      "sha256": "60a0cf97e6a3b5743c7ff2feb8d2b6cba5f9e6c0baf9cf1e61f0aabac9e55c00",
+      "bytes": 11481
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e5-falsifier-v1/e5_gate_bound_v1.json",
+      "sha256": "1fb6b4339ff5e722f2b27815a5a8653040ca8e7a113950f798af7e0516dca422",
+      "bytes": 14465
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e5-falsifier-v1/falsifier_METRICS.csv",
+      "sha256": "cdf5f56d5ac82c0cf41a2ed3371f70c3e639f706de2b9f8ab3e9ec3d9ac116af",
+      "bytes": 42238
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-v1/naiveif_calibration_seed41_v1.json",
+      "sha256": "5fd0966cb8380050e0e21a41ea97ea6279d3843ef19b556f9a2456ae27774eb1",
+      "bytes": 20442
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-v1/naiveif_calibration_seed42_v1.json",
+      "sha256": "d21eb8ab2e60e057e44574e81777d366d7e123e0ece678f069dcad5d75c93094",
+      "bytes": 20492
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-v1/naiveif_calibration_seed43_v1.json",
+      "sha256": "fcf7892aeba9432e8d5909602b353bb272b849dbb3e5f6becfdc6be90c6e1c73",
+      "bytes": 20484
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/e2_naiveif_v1.py",
+      "sha256": "1e32ef644820b5ae417f4b683be1a549b046e11d7eff316db46fe27145d2d874",
+      "bytes": 14519
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/e2_naiveif_eval_v1.py",
+      "sha256": "d824cf67836a00765bf0a5384ca0cfdae3d80604307013177ca59e70df562e68",
+      "bytes": 24867
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/e5_falsifier_repro_v1.py",
+      "sha256": "8031b3be6ae98965b1deab0deae15cb65e2b3cedeec986788aa424c8bb20895d",
+      "bytes": 4454
+    },
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/smoke_e5_falsifier_repro_v1.py",
+      "sha256": "ac01ce2eab431fc1625c98cb4201e3fda6029df4b315c34b709d16cb3cbd308b",
+      "bytes": 2109
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed41/naiveif_report_v1.json",
+      "sha256": "e90ccb4a2288e2cfe475de13088233504db2dae8e947ba581f521ba1eeb6d778",
+      "bytes": 3186
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed41/naiveif_METRICS.csv",
+      "sha256": "0dc904e3a28d3b6cb27ce32be4e2b1cbd87a8cd0173d00c7f030a6e8dbd98b88",
+      "bytes": 5674
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed41/naiveif_seed41_T1_v1.npz",
+      "sha256": "f241b0bca28d4a7ccc5b3bfd96ef2d38514eb821d623b7256fbadc792cd76c11",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed41/naiveif_seed41_T2_v1.npz",
+      "sha256": "f6beadb273718f3d6f49682ef13008248a6ee87e67574274e87fb7e9eeaea9ad",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed41/naiveif_seed41_T4_v1.npz",
+      "sha256": "881e042b4b7ff6bb93820a64e4996bb9d52cfe0adb9aa119eb389c6bff345590",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed41/naiveif_seed41_T8_v1.npz",
+      "sha256": "515a68a60e9b8d68e9c4ada8bd8d9e3c8d12470cf072f7bfdba46878fa554d59",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed42/naiveif_report_v1.json",
+      "sha256": "aa581a2a73cab91c2e9832e2de7f006f9c4d79997d521ae8f146fa54138f5439",
+      "bytes": 3187
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed42/naiveif_METRICS.csv",
+      "sha256": "805657870aecc5ed9328d206c68a5db9676e35c7366cb3a0a14330b973be7da7",
+      "bytes": 5675
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed42/naiveif_seed42_T1_v1.npz",
+      "sha256": "493503f0ab6746bd442be78974a6d8b0c63224234a26ee71ae6acb08557ea5dc",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed42/naiveif_seed42_T2_v1.npz",
+      "sha256": "778097b8cf4f8e8bc85697d1680de8d182a282d65f96093c2d228738cb6815ac",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed42/naiveif_seed42_T4_v1.npz",
+      "sha256": "7eae20074513913cf7088fa7ccf58f1c38d527ac737baaa607dbb5ac7354197e",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed42/naiveif_seed42_T8_v1.npz",
+      "sha256": "736fafc8423c0510317c50a68f701d27016c3321ae2707e9cb54c34e760f1731",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed43/naiveif_report_v1.json",
+      "sha256": "6ef24c95dfba68c60e1bea14ba22535d55ebb11b5e6bf7b8f4afac8ff55b85f9",
+      "bytes": 3187
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed43/naiveif_METRICS.csv",
+      "sha256": "abca1b794f8dfbf7a95e1c06784bbd8dfbdf9fa7e8f65548e36a3cc571d3111a",
+      "bytes": 5675
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed43/naiveif_seed43_T1_v1.npz",
+      "sha256": "3dc21bf0abfc2a9798471aebb0f5192ff7951015c1b8713fd0b6565aeb5a407e",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed43/naiveif_seed43_T2_v1.npz",
+      "sha256": "dbe7ee5f114501732b45a23a6b0cea3100f26e7235fdf7618a0f10f2ba9f844a",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed43/naiveif_seed43_T4_v1.npz",
+      "sha256": "abd81af56d4adfb5020ebbb4cb135f17263dae8dabfaa6df122779cc9e809123",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/results/e2-naiveif-eval-v1/seed43/naiveif_seed43_T8_v1.npz",
+      "sha256": "b768f922fb22ce140695657bb67cba74a05f302c76141164dbb2ec2194db9197",
+      "bytes": 481016
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e2-naiveif-eval-draft-v1/DEFECTS.json",
+      "sha256": "6cf489268866bc79fd043af923a163cc083bce4799227e5bf037088022b21519",
+      "bytes": 4061
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e2-naiveif-eval-draft-v1/e2_naiveif_eval_v1.draft.py",
+      "sha256": "2d26d9479023fcb44d859f4840d8ef33d7dde6b3d5ebf62519e3a55462ded9b0",
+      "bytes": 19115
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e2-naiveif-eval-draft-v1/SHA256SUMS.txt",
+      "sha256": "002ddfdc551173b0bcaae1546fc0f9077251b7469db4bcc3f280287a6c15bc5c",
+      "bytes": 221
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e2_naiveif_v1.prefailure.log",
+      "sha256": "b48f83a0877df20d495e2d33528c015755872545c02a706b31eaedb6b5a584de",
+      "bytes": 892
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5_falsifier_repro_smoke_v1.inline-failure.log",
+      "sha256": "5d99cecdfa321374fe5fd9fd3d83e035dbdeaba1334bdf54b28b8629b6f5f305",
+      "bytes": 842
+    }
+  ]
+}

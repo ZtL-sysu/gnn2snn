@@ -1,0 +1,14 @@
+2026-11-14T06:20Z inline CPU smoke invocation failed before executing any Python body:
+SyntaxError: unterminated string literal (detected at line 4)
+Cause: a Git-Bash single-quoted `python -c` heredoc attempted to convert POSIX
+paths with `.replace('/','\\')`; the backslash escaped the closing quote.
+
+Impact: NO scientific file was created, modified or deleted.
+Canonical results/e5-falsifier-v1/e5_gate_bound_v1.json SHA-256 was
+1fb6b4339ff5e722f2b27815a5a8653040ca8e7a113950f798af7e0516dca422
+both before and after the failed invocation.
+
+Repair: replaced the inline heredoc with a real, compiled script
+research/visual-graphs/continuation_20261113/code/smoke_e5_falsifier_repro_v1.py
+which uses Path arithmetic and performs an explicit canonical-hash guard.
+Classification: tooling/shell-quoting defect, not a GPU or scientific failure.

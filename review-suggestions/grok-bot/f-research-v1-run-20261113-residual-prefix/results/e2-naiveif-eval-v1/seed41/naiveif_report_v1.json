@@ -1,0 +1,81 @@
+{
+  "canonical_index_label_bitwise": true,
+  "check": "e2_naiveif_full_validation_eval_v1",
+  "checkpoint_sha256": "d26df76d724872edc91ea11055d114935ea173282a8ef049d1b85cc1f5598b40",
+  "coverage": {
+    "batch_size": 128,
+    "expected_graphs": 5000,
+    "full_split": true,
+    "graphs": 5000,
+    "order": "fixed sequential, label-free converter input",
+    "timesteps": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "created_at_utc": "2026-11-14T06:18:03+00:00",
+  "dataset": "CIFAR10",
+  "dcgs_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+  "deterministic_algorithms": true,
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 3060",
+  "head_addendum_sha256": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+  "if_neuron": {
+    "input": "constant pre/_threshold each tick",
+    "membrane": "persistent across ticks",
+    "output_scale": "spike_count * per_channel_threshold",
+    "reset": "subtractive",
+    "spikes": "floor(v.clamp(min=0)), integer bursts allowed"
+  },
+  "instrumented_vs_frozen_max_abs_diff": 0.0,
+  "limitations": [
+    "NaiveIF deliberately does NOT adapt sigmoid gates, BN, residual or pooling; degradation is a measured result, not an assumption.",
+    "Dense PyTorch prototype; no event-driven backend, no hardware energy or latency claim.",
+    "Thresholds come only from the 45000 official train graphs, never from validation/test.",
+    "No event-count-as-energy, no accuracy-only method-advantage claim, no Story decision."
+  ],
+  "method": "NaiveIF (data-normalised IF, NO operator-specific adaptation)",
+  "metrics": {
+    "1": {
+      "accuracy": 0.0972,
+      "logit_mse": 34.880008697509766,
+      "teacher_agreement": 0.1114,
+      "teacher_to_output_kl": 1.740849256515503
+    },
+    "2": {
+      "accuracy": 0.0972,
+      "logit_mse": 34.79922866821289,
+      "teacher_agreement": 0.1114,
+      "teacher_to_output_kl": 1.7415359020233154
+    },
+    "4": {
+      "accuracy": 0.111,
+      "logit_mse": 33.56507873535156,
+      "teacher_agreement": 0.1182,
+      "teacher_to_output_kl": 3.1345012187957764
+    },
+    "8": {
+      "accuracy": 0.168,
+      "logit_mse": 33.782535552978516,
+      "teacher_agreement": 0.189,
+      "teacher_to_output_kl": 4.633513450622559
+    }
+  },
+  "npz_sha256": {
+    "naiveif_seed41_T1_v1.npz": "f241b0bca28d4a7ccc5b3bfd96ef2d38514eb821d623b7256fbadc792cd76c11",
+    "naiveif_seed41_T2_v1.npz": "f6beadb273718f3d6f49682ef13008248a6ee87e67574274e87fb7e9eeaea9ad",
+    "naiveif_seed41_T4_v1.npz": "881e042b4b7ff6bb93820a64e4996bb9d52cfe0adb9aa119eb389c6bff345590",
+    "naiveif_seed41_T8_v1.npz": "515a68a60e9b8d68e9c4ada8bd8d9e3c8d12470cf072f7bfdba46878fa554d59"
+  },
+  "protocol_sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+  "seed41_canonical_teacher_bitwise": true,
+  "split": "val",
+  "stage1_calibration_sha256": "5fd0966cb8380050e0e21a41ea97ea6279d3843ef19b556f9a2456ae27774eb1",
+  "status": "real_naiveif_measurement_no_accuracy_or_energy_claim",
+  "teacher_seed": 41,
+  "torch": "2.11.0+cu128",
+  "total_job_seconds": 19.4,
+  "zero_threshold_floor": 1e-06
+}

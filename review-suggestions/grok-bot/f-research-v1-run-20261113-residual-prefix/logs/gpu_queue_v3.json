@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "note": "Appendable serial GPU queue. Driver re-reads this file between steps; only immutable, prechecked, real-GPU jobs may be appended. Never edit or remove executed step names.",
+  "note": "Appendable serial GPU queue. Driver re-reads this file between steps; only immutable, prechecked, real-GPU jobs may be appended. Never edit or remove executed step names. This is a LIVE file and must never be bound by an immutable SHA-256 manifest.",
   "steps": [
     {
       "name": "01_e5_falsifier_v3_run",
@@ -8,7 +8,8 @@
       "retry_argv": ["e5_falsifier_v3.py", "run", "--device", "cuda", "--batches", "40"],
       "expected_artifact": "results/e5-falsifier-v1/e5_gate_bound_v1.json",
       "estimated_seconds": 540,
-      "depends_on": "frozen_input_gate_PASS; v3 precheck PASS; CPU end-to-end smoke PASS; v1/v2 failure evidence archived"
+      "depends_on": "frozen_input_gate_PASS; v3 precheck PASS; CPU end-to-end smoke PASS; v1/v2 failure evidence archived",
+      "status": "DONE rc=0 2026-11-14T05:51:02Z, 536.3 s real GPU"
     },
     {
       "name": "02_e5_falsifier_v3_verify",
@@ -16,7 +17,114 @@
       "retry_argv": null,
       "expected_artifact": "results/e5-falsifier-v1/verify output",
       "estimated_seconds": 5,
-      "depends_on": "01_e5_falsifier_v3_run"
+      "depends_on": "01_e5_falsifier_v3_run",
+      "status": "DONE rc=0 2026-11-14T05:51:04Z"
+    },
+    {
+      "name": "03_e2_naiveif_precheck",
+      "argv": ["e2_naiveif_v1.py", "precheck"],
+      "retry_argv": null,
+      "estimated_seconds": 20,
+      "depends_on": "frozen_input_gate_PASS; py_compile PASS; CPU 2-batch smoke PASS (10 sites, 256 graphs)",
+      "status": "DONE rc=0 2026-11-14T06:00:58Z"
+    },
+    {
+      "name": "04_e2_naiveif_calibrate_seed41",
+      "argv": ["e2_naiveif_v1.py", "calibrate", "--device", "cuda", "--seed", "41"],
+      "retry_argv": ["e2_naiveif_v1.py", "calibrate", "--device", "cuda", "--seed", "41"],
+      "expected_artifact": "results/e2-naiveif-v1/naiveif_calibration_seed41_v1.json",
+      "estimated_seconds": 900,
+      "depends_on": "03_e2_naiveif_precheck; all 45000 official train graphs, label-free, fixed order, batch128",
+      "status": "DONE rc=0 2026-11-14T06:01:24Z (26.1 s real GPU, 45000/45000 graphs)"
+    },
+    {
+      "name": "05_e2_naiveif_calibrate_seed42",
+      "argv": ["e2_naiveif_v1.py", "calibrate", "--device", "cuda", "--seed", "42"],
+      "retry_argv": ["e2_naiveif_v1.py", "calibrate", "--device", "cuda", "--seed", "42"],
+      "expected_artifact": "results/e2-naiveif-v1/naiveif_calibration_seed42_v1.json",
+      "estimated_seconds": 900,
+      "depends_on": "04_e2_naiveif_calibrate_seed41",
+      "status": "DONE rc=0 2026-11-14T06:01:50Z (26.1 s real GPU, 45000/45000 graphs)"
+    },
+    {
+      "name": "06_e2_naiveif_calibrate_seed43",
+      "argv": ["e2_naiveif_v1.py", "calibrate", "--device", "cuda", "--seed", "43"],
+      "retry_argv": ["e2_naiveif_v1.py", "calibrate", "--device", "cuda", "--seed", "43"],
+      "expected_artifact": "results/e2-naiveif-v1/naiveif_calibration_seed43_v1.json",
+      "estimated_seconds": 900,
+      "depends_on": "05_e2_naiveif_calibrate_seed42",
+      "status": "DONE rc=0 2026-11-14T06:13:42Z (25.8 s real GPU, 45000/45000 graphs; first attempt at 06:01:50Z was killed by the 4th environment interruption, no partial report was written)"
+    },
+    {
+      "name": "07_e2_naiveif_verify",
+      "argv": ["e2_naiveif_v1.py", "verify"],
+      "retry_argv": null,
+      "estimated_seconds": 5,
+      "depends_on": "04/05/06 full-split calibration reports",
+      "status": "DONE rc=0 2026-11-14T06:13:42Z (3/3 reports, SHA-256 recorded)"
+    },
+    {
+      "name": "08_e2_naiveif_eval_precheck",
+      "argv": ["e2_naiveif_eval_v1.py", "precheck"],
+      "retry_argv": null,
+      "estimated_seconds": 20,
+      "depends_on": "07_e2_naiveif_verify; repaired stage-2 script py_compile PASS; CPU 2-batch smoke PASS with instrumented-vs-frozen max_abs_diff=0.0; canonical baseline SHA verified",
+      "status": "queued 2026-11-14T06:17Z"
+    },
+    {
+      "name": "09_e2_naiveif_eval_seed41",
+      "argv": ["e2_naiveif_eval_v1.py", "run", "--device", "cuda", "--seed", "41"],
+      "retry_argv": ["e2_naiveif_eval_v1.py", "run", "--device", "cuda", "--seed", "41"],
+      "expected_artifact": "results/e2-naiveif-eval-v1/seed41/naiveif_report_v1.json + 4 NPZ + naiveif_METRICS.csv",
+      "estimated_seconds": 600,
+      "depends_on": "08_e2_naiveif_eval_precheck; all 5000 official val graphs, T in {1,2,4,8}, batch128, label-free converter input, seed41 canonical teacher bitwise gate"
+    },
+    {
+      "name": "10_e2_naiveif_eval_seed42",
+      "argv": ["e2_naiveif_eval_v1.py", "run", "--device", "cuda", "--seed", "42"],
+      "retry_argv": ["e2_naiveif_eval_v1.py", "run", "--device", "cuda", "--seed", "42"],
+      "expected_artifact": "results/e2-naiveif-eval-v1/seed42/naiveif_report_v1.json + 4 NPZ + naiveif_METRICS.csv",
+      "estimated_seconds": 600,
+      "depends_on": "09_e2_naiveif_eval_seed41"
+    },
+    {
+      "name": "11_e2_naiveif_eval_seed43",
+      "argv": ["e2_naiveif_eval_v1.py", "run", "--device", "cuda", "--seed", "43"],
+      "retry_argv": ["e2_naiveif_eval_v1.py", "run", "--device", "cuda", "--seed", "43"],
+      "expected_artifact": "results/e2-naiveif-eval-v1/seed43/naiveif_report_v1.json + 4 NPZ + naiveif_METRICS.csv",
+      "estimated_seconds": 600,
+      "depends_on": "10_e2_naiveif_eval_seed42"
+    },
+    {
+      "name": "12_e2_naiveif_eval_verify",
+      "argv": ["e2_naiveif_eval_v1.py", "verify"],
+      "retry_argv": null,
+      "estimated_seconds": 20,
+      "depends_on": "09/10/11 full-split reports; NPZ SHA-256, canonical indices/labels bitwise, 16 metric rows per seed",
+      "status": "DONE rc=0 2026-11-14T06:19:06Z (3/3 reports, 12 NPZ, canonical indices/labels bitwise)"
+    },
+    {
+      "name": "13_e5_falsifier_repro_run",
+      "argv": ["e5_falsifier_repro_v1.py", "run", "--device", "cuda", "--batches", "40"],
+      "retry_argv": ["e5_falsifier_repro_v1.py", "run", "--device", "cuda", "--batches", "40"],
+      "expected_artifact": "results/e5-falsifier-repro-v1/e5_gate_bound_v1.json + falsifier_METRICS.csv",
+      "estimated_seconds": 540,
+      "depends_on": "12_e2_naiveif_eval_verify; read-only wrapper py_compile PASS; CPU 1-batch OUT-redirect smoke; bound v3 script NEVER edited; canonical report hash guard",
+      "note": "independent deterministic reproducibility rerun, NOT new scientific evidence; canonical results/e5-falsifier-v1/ is never overwritten"
+    },
+    {
+      "name": "14_e5_falsifier_repro_verify",
+      "argv": ["e5_falsifier_repro_v1.py", "verify"],
+      "retry_argv": null,
+      "estimated_seconds": 10,
+      "depends_on": "13_e5_falsifier_repro_run"
+    },
+    {
+      "name": "15_e5_falsifier_repro_compare",
+      "argv": ["e5_falsifier_repro_v1.py", "compare"],
+      "retry_argv": null,
+      "estimated_seconds": 10,
+      "depends_on": "14_e5_falsifier_repro_verify; requires numeric report equality excluding timestamps and byte-identical fixed-column CSV"
     }
   ]
 }

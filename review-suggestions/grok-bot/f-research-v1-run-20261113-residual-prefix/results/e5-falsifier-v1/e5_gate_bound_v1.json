@@ -1,0 +1,438 @@
+{
+  "bound_statement": "|m(z',b')-m(z,b)| <= max_i|b_i'-b_i| + R(b')tanh(eta/2); eta is the per-target-channel max incoming |z'-z|, R(b') is the converted message range with the zero dummy item",
+  "check": "e5_gate_bound_v1",
+  "coverage": {
+    "batches": 40,
+    "bound_collected_at": "final tick of each T",
+    "graphs": 5000,
+    "layers_per_T": 4,
+    "split": "official validation, fixed sequential order, label-free",
+    "timesteps": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "device": "cuda",
+  "falsifier_verdicts": {
+    "fresh_vs_stale_gates": {
+      "interpretation": "if reusing tick-1 gates produces zero logit change, fresh gate recomputation is falsified for this trajectory",
+      "per_T_gate_refresh_falsified": {
+        "1": true,
+        "2": false,
+        "4": false,
+        "8": false
+      }
+    },
+    "raw_vs_decoded_skip": {
+      "interpretation": "if substituting decoded skips produces zero logit change, the raw-skip distinction is falsified for this trajectory",
+      "per_T_distinction_falsified": {
+        "1": false,
+        "2": false,
+        "4": false,
+        "8": false
+      }
+    }
+  },
+  "fidelity_check": {
+    "checked_pairs": 160,
+    "frozen_vs_instrumented_max_abs_diff": 0.0,
+    "note": "counterfactual implementation is faithful only if this passes",
+    "threshold": 0.0001
+  },
+  "fresh_vs_stale_bound": {
+    "1": {
+      "all": {
+        "bound_violations": 0,
+        "elements": 164618720,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "degree_high": {
+        "bound_violations": 0,
+        "elements": 62938120,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "degree_low": {
+        "bound_violations": 0,
+        "elements": 101680600,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "sharpness_high": {
+        "bound_violations": 0,
+        "elements": 0,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "sharpness_low": {
+        "bound_violations": 0,
+        "elements": 0,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      }
+    },
+    "2": {
+      "all": {
+        "bound_violations": 0,
+        "elements": 164618720,
+        "max_actual": 11.223008155822754,
+        "max_bound": 19.655336380004883,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "degree_high": {
+        "bound_violations": 0,
+        "elements": 62938120,
+        "max_actual": 11.223008155822754,
+        "max_bound": 19.655336380004883,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "degree_low": {
+        "bound_violations": 0,
+        "elements": 101680600,
+        "max_actual": 10.654458045959473,
+        "max_bound": 19.638042449951172,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "sharpness_high": {
+        "bound_violations": 0,
+        "elements": 0,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "sharpness_low": {
+        "bound_violations": 0,
+        "elements": 0,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      }
+    },
+    "4": {
+      "all": {
+        "bound_violations": 0,
+        "elements": 164618720,
+        "max_actual": 12.062945365905762,
+        "max_bound": 23.187978744506836,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "degree_high": {
+        "bound_violations": 0,
+        "elements": 62938120,
+        "max_actual": 12.062945365905762,
+        "max_bound": 23.187978744506836,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "degree_low": {
+        "bound_violations": 0,
+        "elements": 101680600,
+        "max_actual": 11.162322044372559,
+        "max_bound": 23.1842098236084,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "sharpness_high": {
+        "bound_violations": 0,
+        "elements": 0,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "sharpness_low": {
+        "bound_violations": 0,
+        "elements": 0,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      }
+    },
+    "8": {
+      "all": {
+        "bound_violations": 0,
+        "elements": 164618720,
+        "max_actual": 13.130149841308594,
+        "max_bound": 24.525726318359375,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "degree_high": {
+        "bound_violations": 0,
+        "elements": 62938120,
+        "max_actual": 13.130149841308594,
+        "max_bound": 24.525726318359375,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "degree_low": {
+        "bound_violations": 0,
+        "elements": 101680600,
+        "max_actual": 11.460128784179688,
+        "max_bound": 24.519542694091797,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "sharpness_high": {
+        "bound_violations": 0,
+        "elements": 0,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      },
+      "sharpness_low": {
+        "bound_violations": 0,
+        "elements": 0,
+        "max_actual": 0.0,
+        "max_bound": 0.0,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 0.0
+      }
+    }
+  },
+  "gate_bound": {
+    "1": {
+      "all": {
+        "bound_violations": 0,
+        "elements": 164618720,
+        "max_actual": 9.970817565917969,
+        "max_bound": 21.237749099731445,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 10.096563339233398
+      },
+      "degree_high": {
+        "bound_violations": 0,
+        "elements": 62938120,
+        "max_actual": 9.970817565917969,
+        "max_bound": 21.23769187927246,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 10.096563339233398
+      },
+      "degree_low": {
+        "bound_violations": 0,
+        "elements": 101680600,
+        "max_actual": 8.889115333557129,
+        "max_bound": 21.237749099731445,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 10.096563339233398
+      },
+      "sharpness_high": {
+        "bound_violations": 0,
+        "elements": 10000,
+        "max_actual": 9.970817565917969,
+        "max_bound": 21.237749099731445,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 10.096563339233398
+      },
+      "sharpness_low": {
+        "bound_violations": 0,
+        "elements": 10000,
+        "max_actual": 7.532162666320801,
+        "max_bound": 21.17697525024414,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 10.096563339233398
+      }
+    },
+    "2": {
+      "all": {
+        "bound_violations": 0,
+        "elements": 164618720,
+        "max_actual": 8.644933700561523,
+        "max_bound": 20.739730834960938,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 8.663389205932617
+      },
+      "degree_high": {
+        "bound_violations": 0,
+        "elements": 62938120,
+        "max_actual": 8.406181335449219,
+        "max_bound": 20.675872802734375,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 8.663389205932617
+      },
+      "degree_low": {
+        "bound_violations": 0,
+        "elements": 101680600,
+        "max_actual": 8.644933700561523,
+        "max_bound": 20.739730834960938,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 8.663389205932617
+      },
+      "sharpness_high": {
+        "bound_violations": 0,
+        "elements": 10000,
+        "max_actual": 8.644933700561523,
+        "max_bound": 20.739730834960938,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 8.663389205932617
+      },
+      "sharpness_low": {
+        "bound_violations": 0,
+        "elements": 10000,
+        "max_actual": 7.544674873352051,
+        "max_bound": 14.08537483215332,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 8.663389205932617
+      }
+    },
+    "4": {
+      "all": {
+        "bound_violations": 0,
+        "elements": 164618720,
+        "max_actual": 4.755433082580566,
+        "max_bound": 15.359225273132324,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 4.718531131744385
+      },
+      "degree_high": {
+        "bound_violations": 0,
+        "elements": 62938120,
+        "max_actual": 4.755433082580566,
+        "max_bound": 15.330401420593262,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 4.718531131744385
+      },
+      "degree_low": {
+        "bound_violations": 0,
+        "elements": 101680600,
+        "max_actual": 4.511714458465576,
+        "max_bound": 15.359225273132324,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 4.718531131744385
+      },
+      "sharpness_high": {
+        "bound_violations": 0,
+        "elements": 10000,
+        "max_actual": 4.755433082580566,
+        "max_bound": 15.359225273132324,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 4.718531131744385
+      },
+      "sharpness_low": {
+        "bound_violations": 0,
+        "elements": 10000,
+        "max_actual": 3.546860694885254,
+        "max_bound": 12.508041381835938,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 4.718531131744385
+      }
+    },
+    "8": {
+      "all": {
+        "bound_violations": 0,
+        "elements": 164618720,
+        "max_actual": 1.2708587646484375,
+        "max_bound": 8.49682331085205,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 1.2711315155029297
+      },
+      "degree_high": {
+        "bound_violations": 0,
+        "elements": 62938120,
+        "max_actual": 1.2708587646484375,
+        "max_bound": 8.49682331085205,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 1.2711315155029297
+      },
+      "degree_low": {
+        "bound_violations": 0,
+        "elements": 101680600,
+        "max_actual": 0.7813879251480103,
+        "max_bound": 8.168676376342773,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 1.2711315155029297
+      },
+      "sharpness_high": {
+        "bound_violations": 0,
+        "elements": 10000,
+        "max_actual": 0.5428600311279297,
+        "max_bound": 3.975145101547241,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 1.2711315155029297
+      },
+      "sharpness_low": {
+        "bound_violations": 0,
+        "elements": 10000,
+        "max_actual": 1.2708587646484375,
+        "max_bound": 8.49682331085205,
+        "max_excess_over_bound": 0.0,
+        "max_pre_bn_layer_error": 1.2711315155029297
+      }
+    }
+  },
+  "gpu_name": "NVIDIA GeForce RTX 3060",
+  "head_addendum_sha256": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+  "limitations": [
+    "The bound is a LOCAL real-arithmetic message bound, not a floating-point certificate, accuracy guarantee, logit certificate, efficiency or novelty result.",
+    "Bounds computed with absolute-value propagation are loose; loose is reported as loose.",
+    "Logit errors are measured, not bounded; a final logit certificate would need pooling/head weight-norm propagation and a class-margin condition.",
+    "Counterfactual switches are diagnostics, not new conversion methods and not baselines.",
+    "No new test inference, no threshold/seed/scale tuning, no event-count-as-energy claim."
+  ],
+  "measured_errors_and_falsifiers": {
+    "1": {
+      "decoded_skip_logit_max_abs_change": 20.31224822998047,
+      "graphs": 5000,
+      "raw_vs_decoded_input_max_abs_difference": 27.714767456054688,
+      "stale_gate_logit_max_abs_change": 0.0,
+      "teacher_logit_max_abs_error": 7.186777591705322
+    },
+    "2": {
+      "decoded_skip_logit_max_abs_change": 19.144853591918945,
+      "graphs": 5000,
+      "raw_vs_decoded_input_max_abs_difference": 27.714767456054688,
+      "stale_gate_logit_max_abs_change": 4.353013515472412,
+      "teacher_logit_max_abs_error": 1.6158041954040527
+    },
+    "4": {
+      "decoded_skip_logit_max_abs_change": 19.132686614990234,
+      "graphs": 5000,
+      "raw_vs_decoded_input_max_abs_difference": 27.714767456054688,
+      "stale_gate_logit_max_abs_change": 4.868807792663574,
+      "teacher_logit_max_abs_error": 0.427095890045166
+    },
+    "8": {
+      "decoded_skip_logit_max_abs_change": 19.130413055419922,
+      "graphs": 5000,
+      "raw_vs_decoded_input_max_abs_difference": 27.714767456054688,
+      "stale_gate_logit_max_abs_change": 4.845473289489746,
+      "teacher_logit_max_abs_error": 0.04485654830932617
+    }
+  },
+  "mode": "centered",
+  "protocol_sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+  "status": "real_data_gate_bound_and_falsifiers_no_accuracy_or_energy_claim",
+  "subsets": {
+    "degree": "node in-degree median split (low = <= median)",
+    "sharpness": "teacher top-1 minus top-2 logit margin median split (low = <= median); margin is label-free"
+  },
+  "teacher_seed": 41,
+  "tolerance": {
+    "absolute": 0.0001,
+    "reason": "float32 scatter/index_add accumulation; declared, not loosened silently",
+    "relative_to_bound": 0.001
+  },
+  "torch": "2.11.0+cu128",
+  "total_job_seconds": 528.289141499903
+}
