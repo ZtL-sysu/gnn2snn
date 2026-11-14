@@ -4,7 +4,10 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
 \setlength{\columnsep}{0.65cm}
-\title{Calibration Objectives and Computation in Strong-Teacher GNN-to-SNN Conversion}
+\setcounter{dbltopnumber}{3}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\title{Fidelity, Calibration, and Cost in Low-Timestep GCN-to-SNN Conversion}
 \author{Anonymous authors}
 \date{14 November 2026}
 \begin{document}
@@ -56,9 +59,9 @@ Equal Frobenius norms of $E$ can therefore yield unequal graph errors through di
 
 For the nonlinear network, define a local conversion discrepancy $q_\ell$ relative to applying the analog branch to the decoded incoming state. Its residual error obeys
 \begin{align}
- \Delta H_{\ell+1}={}&\Delta H_\ell+q_\ell\\
- &+\sigma(A(H_\ell+\Delta H_\ell)W_\ell+b_\ell)
-       -\sigma(AH_\ell W_\ell+b_\ell),\nonumber
+ \Delta H_{\ell+1}={}&\Delta H_\ell+q_\ell\nonumber\\
+ &+\sigma(A(H_\ell+\Delta H_\ell)W_\ell+b_\ell)\nonumber\\
+ &-\sigma(AH_\ell W_\ell+b_\ell),
 \end{align}
 where $\sigma$ is ReLU. This decomposition exposes both propagated and newly introduced discrepancy. It supplies a useful accounting framework without identifying the dominant source empirically.
 
@@ -78,8 +81,15 @@ Hard threshold selection is used in every forward pass. During calibration, the 
 
 The correspondence counterfactual cyclically shifts teacher graph targets within each batch. It preserves the target multiset while breaking target/sample pairing. Its effect measures correspondence sensitivity; a topology-specific explanation additionally requires a graph-structure intervention.
 
+\subsection{An ideal ReLU diagnostic}
+To distinguish where quantization matters, we remove it at selected sites while preserving the incoming converted signal. At an ideal site, accumulate decoded current $u_t=u_{t-1}+c_t/t$ and emit
+\begin{equation}
+ d_t=t[\operatorname{ReLU}(u_t)-\operatorname{ReLU}(u_{t-1})].
+\end{equation}
+Its weighted prefix sum is exactly $\operatorname{ReLU}(u_T)$ in real arithmetic. The intervention requires no teacher hidden state. All offsets remain zero, and all other sites retain the original quantizer. We evaluate each of six sites individually, all four node sites, both readout sites, and all sites. The empty mask recovers the conversion baseline; the all-site mask recovers the folded teacher. These continuous-valued ideal events diagnose conditional error sources rather than define an executable low-cost spiking method. Group effects can interact and restore different numbers of nonlinearities, so they are not interpreted as additive or as budget-matched algorithms.
+
 \section{Experimental Setup}
-Official superpixel splits contain 55,000/5,000/10,000 MNIST and 45,000/5,000/10,000 CIFAR10 train/validation/test graphs. Complete graphs and official split identities are preserved. Each method uses the same 512 randomly indexed training graphs, batches of 32, and 64 Adam updates in the same order. Teacher training seeds are 41, 42 and 43; calibration starts deterministically at zero. Thresholds are fixed from the existing full-training histogram calibration.
+Official superpixel splits contain 55,000/5,000/10,000 MNIST and 45,000/5,000/10,000 CIFAR10 train/validation/test graphs. Complete graphs and official split identities are preserved. Optimized conditions share the same 512 randomly indexed training graphs, batches of 32, and 64 Adam updates in the same order. The uncalibrated condition retains zero offsets. Teacher training seeds are 41, 42 and 43; calibration starts deterministically at zero. Thresholds are fixed from the existing full-training histogram calibration.
 
 An initial seed-41 screen used learning rate $10^{-2}$ on 512 validation graphs. Its graph calibration increased hard training MSE at $T=2$. One tenfold reduction to $10^{-3}$ was then checked, and that setting was frozen for all three teachers and $T\in\{1,2,4,8\}$. The initial failure remains part of the results. The full validation analysis additionally reports the 4,488 graphs outside the current screening subset. Both official validation and test splits had historical project exposure; reported endpoints are descriptive, with that exposure retained in their interpretation.
 
@@ -93,12 +103,12 @@ All new inference uses deterministic CUDA algorithms and a fixed cuBLAS workspac
 \section{Discussion}
 Objective choice changes what the calibration procedure is encouraged to preserve, but the hard event dynamics, surrogate derivative and optimization budget mediate that choice. A graph-logit loss can improve a decision without minimizing every local error, and lower reconstruction error can coexist with a classification loss when samples cross different margins. The matched results should therefore be interpreted jointly through accuracy, agreement and reconstruction error rather than a single objective value.
 
-Numerical determinism is especially relevant at event thresholds. In an early real-data CUDA equivalence check, source/core output discrepancies changed between repeated evaluations. Deterministic execution restored bitwise equality at all checked prefixes. This observation is consistent with small aggregation-order perturbations crossing discrete thresholds. It motivates controlling numerical execution before attributing differences to a calibration mechanism.
+Numerical determinism is especially relevant at event thresholds. Source/core output discrepancies changed between repeated CUDA evaluations, whereas deterministic execution restored bitwise equality at all checked prefixes. This observation is consistent with small aggregation-order perturbations crossing discrete thresholds. Controlling numerical execution is therefore part of the comparison protocol.
 
 Fidelity and runtime describe different properties. The current dense graph projections and edge reductions execute even when many events are zero. Signed event selection, membrane updates and time-prefix iteration add work. A lower event count alone consequently gives neither a measured GPU speedup nor a hardware energy result.
 
 \section{Limitations}
-The controlled method comparison covers two superpixel tasks with one fixed GCN family and three teacher training seeds. Historically exposed validation/test endpoints and a post-screen learning-rate correction limit confirmatory inference. The surrogate optimizer evaluates one bounded implementation of potential calibration, not all possible graph-aware objectives or optimizers. The output-bias control has a smaller parameter budget. Target shuffling tests correspondence rather than graph structure, and marginal error correlations do not establish a causal bottleneck. GatedGCN results provide contextual teacher/conversion endpoints, not evidence that the proposed calibration generalizes to dynamic gates. Runtime measurements cover a diagnostic PyTorch implementation and cached batches; the arithmetic ledger is partial and physical energy is unmeasured.
+The controlled method comparison covers two superpixel tasks with one fixed GCN family and three teacher training seeds. Historically exposed validation/test endpoints and a post-screen learning-rate correction limit confirmatory inference. The surrogate optimizer evaluates one bounded implementation of potential calibration. Complete source-faithful calibration families and external confirmation remain open. The output-bias control has a smaller parameter budget. Target shuffling tests correspondence rather than graph structure. Ideal-site effects are conditional on this architecture and do not isolate topology-specific amplification or identify an executable quantized replacement. GatedGCN results provide contextual teacher/conversion endpoints rather than evidence of calibration transfer to dynamic gates. Runtime measurements cover a diagnostic PyTorch implementation and cached batches; the arithmetic ledger is partial and physical energy is unmeasured.
 
 \section{Conclusion}
 \input{conclusion_results.tex}

@@ -1,0 +1,41 @@
+\input{result_tables.tex}
+
+\subsection{Fidelity and objective choice}
+
+Tables~\ref{tab:validation}--\ref{tab:test} retain all six conditions. At $T=1$, local reconstruction improves mean test accuracy from 71.44\% to 78.50\% on MNIST and from 46.80\% to 49.92\% on CIFAR10.
+
+The additional effect of the graph objective is much smaller. Graph-minus-local test differences at $T=1/2$ are +0.20/+0.18 percentage points on MNIST and -0.18/+0.19 on CIFAR10.
+
+On full validation, the corresponding means are $-0.10/-0.13$ and $-0.27/+0.43$ points. Excluding the 512 current-screen graphs reduces the CIFAR10 $T=2$ mean to $+0.33$ points; its three-seed interval spans zero. The fixed mixture also lacks a consistent advantage across tasks and splits. Its strongest short-prefix test gain over local calibration is $+0.45$ points on MNIST $T=1$, compared with $-0.10$ on full validation. These outcomes fall short of the screening criterion of a stable, practically meaningful gain in multiple settings.
+
+By $T=4/8$, uncalibrated conversion is already close to teacher accuracy. The small remaining changes should be read alongside teacher agreement and reconstruction error rather than ranked as reliable improvements.
+
+\begin{figure*}[t]\centering\includegraphics[width=\textwidth]{../figures/accuracy_curves.pdf}\caption{Full validation fidelity across three teacher seeds. Error bars are sample SD. Teacher reference bands use the corresponding validation mean and SD. All optimized conditions use the frozen smaller-step configuration.}\label{fig:accuracy}\end{figure*}
+
+\begin{figure*}[t]\centering\includegraphics[width=\textwidth]{../figures/paired_objective.pdf}\caption{Graph-minus-local accuracy differences on full validation and the 4,488 examples outside the current screen. Small markers show each teacher seed; intervals use the paired three-seed $t$ distribution with two degrees of freedom. Both subsets have historical exposure.}\label{fig:paired}\end{figure*}
+
+\subsection{Error association and conditional location}
+
+On the screen-excluded examples, graph-logit MSE is more correlated with flips than the four-node-site error aggregate in all twelve task/seed/low-prefix cells. Including the two MLP sites raises the local proxy correlation, while the output proxy remains stronger on average. Teacher margin is more predictive still: mean flip-ranking AUC for negative margin is 0.77/0.96 on MNIST $T=1/2$ and 0.73/0.90 on CIFAR10, compared with 0.67/0.61 and 0.59/0.59 for graph-logit MSE. These are marginal associations on the same graphs.
+
+The ideal interventions identify a different question: which quantizers conditionally cause the observed discrepancy? At $T=1$, restoring all four node sites closes 80.4\%/45.2\% of the MNIST/CIFAR10 disagreement gaps, versus 8.8\%/14.9\% when restoring only the two readout sites.
+
+The first node site alone closes about 54.1\%/23.5\%, and gives the largest individual-site accuracy recovery in both tasks. This supports an important upstream quantization effect in this architecture rather than a dominant readout-only explanation. At $T=2$, node and readout group effects are closer on CIFAR10. Restoring all sites reproduces the folded teacher exactly in these runs. These continuous-valued interventions restore different numbers of sites and can interact; their effects are conditional rather than additive.
+
+\input{ideal_table.tex}
+
+\subsection{Calibration and software cost}
+
+Local and graph conditions share their inference computation and differ only in fitted initial states. Their measured times are nearly coincident (Figure~\ref{fig:latency}). The one-tick baseline core averages 0.366/0.493 ms per graph on MNIST/CIFAR10, versus 0.152/0.157 for the teachers.
+
+The conversion core at $T=8$ averages 2.407/3.451 ms per graph. These are means of three per-seed batch medians divided by 32, with raw repeated timings retained. The diagnostic core returns site activations as well as logits, so these ratios describe its actual implementation rather than a best-achievable backend bound.
+
+The three-seed mean times of the 64-update local/graph calibration loops are about 1.1--2.6 seconds per low-prefix condition, excluding shared data loading, checks and target preparation. Dense graph projections and edge reductions run at every tick regardless of zero-event counts. The arithmetic ledger records those projections and reductions as a partial lower bound; it excludes neuron-state arithmetic and memory traffic and therefore cannot serve as a complete energy estimate. Physical energy remains unmeasured.
+
+\begin{figure*}[p]\centering\includegraphics[width=\textwidth]{../figures/latency.pdf}\caption{Synchronized diagnostic-core runtime on a fixed cached batch of 32 graphs. Points summarize three teacher-seed medians; error bars show their sample SD. Each condition has ten warmups and thirty randomized interleaved repeats. Data transfer is excluded.}\label{fig:latency}\end{figure*}
+
+\subsection{Failure conditions}
+
+The initial $10^{-2}$ step size increased MNIST $T=2$ hard training logit MSE from 0.685 to 0.966; the single smaller-step correction improved optimization but did not produce a stable graph-objective advantage. Shuffling targets substantially degrades fidelity at every tested prefix, establishing target-correspondence sensitivity. That result is compatible with ordinary distillation and does not identify a topology-specific mechanism. The unchanged original screen, all per-seed endpoints and individual-site interventions accompany the summaries.
+
+\input{per_seed_table.tex}

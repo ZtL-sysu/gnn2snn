@@ -13,4 +13,15 @@ The default historical asset root is the local `C:/code/phd-snn/auto-paper/20261
 
 Historical seed41 stores calibration beside its teacher; seed42/43 records are under `takeover_20261112/rep/M42|M43|C42|C43/cal.json`. The resolver supports both audited layouts. Calibration JSON contains original absolute provenance paths, while the new executor verifies actual relocated checkpoint, code and data hashes. The archive audit scripts retain local historical paths; raw new result summaries are reproducible from published prediction arrays without loading weights or datasets.
 
+The frozen test evaluator preserves absolute path binding in its input confirmation metadata. On another machine, regenerate the confirmation with the desired `--assets` path before running that evaluator. Recomputing all published statistics and tables from the saved prediction arrays requires no such path binding and no GPU.
+
 `runs/smoke*` are engineering checks, never scientific samples. Failed runs retain a failure record and raw log. Use separate parent directories for each calibration budget and sample-count protocol; do not mix a smoke run with the scientific screen or aggregate different configurations.
+
+## Completed evidence and regeneration
+
+- `REPORT.md` answers the nine research decisions; `paper/main.pdf` is the complete evidence-limited manuscript, with all seed-level test endpoints.
+- `runs/confirmation` and `runs/frozen_test` contain six complete runs each, 24 conditions per run. `TEST_FREEZE.json` binds all fitted inputs before the new test inference. `runs/ideal` contains six validation-only, continuous-valued ideal-site diagnostics with 20 conditions each.
+- `analysis/confirmation`, `analysis/frozen_test` and `analysis/ideal` hold independent recomputations from raw arrays. `analysis/mechanism_v2` adds both MLP sites to the original four-node summaries; the earlier summary is retained. `costs` preserves every synchronized timing repetition and event count.
+- `experiment_matrix.csv`, `claims_to_evidence.csv`, and `ARTIFACTS_SHA256.csv` index measured records and exact files. Calibration sample/step fields describe additional fitted offsets; baseline/oracle use zero additional fitting, and frozen-test execution never optimizes.
+
+With `dyg-cold` active, recompute each summary using the correspondingly named `summarize_*.py` script and a **new** output directory. `write_result_tables.py` and `finalize_documents.py` regenerate manuscript tables/text from validated CSVs. `latexmk -pdf -interaction=nonstopmode -halt-on-error -cd research/20261114_story/paper/main.tex` builds the PDF. `plot_results.py` generates all three data figures and their source hashes. No manuscript quantity is an invented placeholder.

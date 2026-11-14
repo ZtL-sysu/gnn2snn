@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-14T08:56:23.631593+00:00",
+  "frozen_input_hashes_verified": 142,
+  "artifact_hashes_verified": 1263,
+  "byte_identical_recomputed_csvs": {
+    "analysis\\confirmation\\aggregate.csv": "1b81196b56f1768942531084fd4b6fb60224a25a4cbcb7628fbd6442d2a266c1",
+    "analysis\\confirmation\\cost_calibration.csv": "bc2a709ddc9edab41ed314bfadafe53626bf0464d125831080344ee4c7e28877",
+    "analysis\\confirmation\\per_seed.csv": "74ec54d9333207fefc917c561d717f876474541fc99dc33b987e4d94c694681a",
+    "analysis\\frozen_test\\aggregate.csv": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c",
+    "analysis\\frozen_test\\per_seed.csv": "88ec735e28561bd41d052fba45fe1c700f9bf46f3f01800943d9cf3de6160b96",
+    "analysis\\ideal\\aggregate.csv": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20",
+    "analysis\\ideal\\per_seed.csv": "495fbd73c4dd3da908c7a5e832f66e40cf97277e1cb14df24d6c879d0efe30f6"
+  },
+  "pdf_sha256": "2e0a636d1631dac21813c3f58d49df2db8ece5954edff15728aae741572bbe61",
+  "pdf_pages": 7,
+  "bibliography_entries": 7,
+  "pdf_overfull_boxes": 0,
+  "unresolved_references": 0,
+  "full_confirmation_runs": 6,
+  "full_frozen_test_runs": 6,
+  "ideal_site_runs": 6,
+  "scientific_status": "route C; no stable general graph-objective advantage; manuscript not submission-ready",
+  "visual_review": "all seven PDF pages and three figure PNGs inspected in this session"
+}

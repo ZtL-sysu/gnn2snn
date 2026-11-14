@@ -1,0 +1,89 @@
+{
+  "status": "complete",
+  "dataset": "MNIST",
+  "seed": 41,
+  "split": "full official test, historically exposed",
+  "graphs": 10000,
+  "batch_size": 128,
+  "T": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "methods": [
+    "baseline",
+    "node",
+    "graph",
+    "mix",
+    "output",
+    "shuffled"
+  ],
+  "checkpoint_sha256": "b123168cbc8b8476d1fa2b65c934bb66ff4c67bb9a2cc33b1e5cd047176a9dd1",
+  "calibration_sha256": "895bdefa787953884b832116ef6f6e82f43d56047d885d8721a3eeda57ec1d4e",
+  "teacher_reference_sha256": "477f0d952afff6d55e4b62da7432b17df11dae24d41bcb197382aebf0bb8f995",
+  "confirmation_metadata_sha256": "4ca9d378a7d308bfbd70c054e85988d08140a25d6cbb1d6a9d941f1092c1740c",
+  "confirmation_DONE_sha256": "10d8d605a430ec8f52213a79f6e5f156e217ac07dc6f063f18305d68815d0cb2",
+  "confirmation_results_sha256": "305f6a346b8a144405a19cde613fef993e5b8a02df352b998d3f18d1db034694",
+  "calibration_config": {
+    "steps": 64,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "batch_size": 32,
+    "offset_bound": 0.5
+  },
+  "parameter_sha256": {
+    "graph_T1": "d9227360d24ef0fc1c604c93ba2c29639de77b821321ecb0100366a48797ab0c",
+    "graph_T2": "d505618a5fa6b151edd359da6859145151f54c2fedd9a40bfb949affe6022782",
+    "graph_T4": "3925f06045bf7e0ca08d5c1d34bd75414d8b59501eb5b4362198e589e761ed00",
+    "graph_T8": "3b00ee873751a9d8768a5f9ffde24bcc5ea68a142afc17dc825f22c5d97f4334",
+    "mix_T1": "9cc79b22dfffe96e197b65dec37a6f2a970da2d609b64018b4d1dcdaee4efc25",
+    "mix_T2": "7f3484d0590a17a75675d19d65e61d86ff6c62241acc1288b8556506ffe5a252",
+    "mix_T4": "62dc66677ab81f31430207ce216ed628bf8fe0c4e4ad156e90961415f106c842",
+    "mix_T8": "4692b0c8b78b617fc1fcf28bbe4e0168a46c9a2dfea52b3cc251bb06e50ce42a",
+    "node_T1": "1e5ac7735483a9aaeb2fe8fbf217088a58751ec404af0dc242b665e77fa44dce",
+    "node_T2": "432ed980e3ba282793fa30cc6df9bea46d0a60418cd67652eba474a69f05fa8d",
+    "node_T4": "948a1f29a8ba2f3b9a3c1992c3d1ac3020a42ad1d653a02ef54db4795aa85d71",
+    "node_T8": "b5c9b67d8f1b6fd75c2c6c2bbb84cbb644d72b7d080400db17d5f2136fbd494f",
+    "output_T1": "f1c546cd0b0846e72799a650bd48e51adea77a5269a4d65b5b759d9b2e80222a",
+    "output_T2": "3f6daa7dea3a05682ce6a082ca78e84a62358de704fb7842f33f3c522604bc36",
+    "output_T4": "8b1fb3fdab2607ddfe362ca0e19418887ecf8d16407db94cb2d65defd3588627",
+    "output_T8": "5a842ea9d07bc7bb8e07f27974096cf6891864278e8333f69f60b3ccb9b5f1e6",
+    "shuffled_T1": "27aec6465c74a4f838652a48e991872f12baaf535f7f289832dbf136b01bd750",
+    "shuffled_T2": "cbce73e7fcfdf4ff19f03692c0b21ffb2fba57337d7c193386ed66ecc3a4c5ef",
+    "shuffled_T4": "1b80f39f79e9bef6ed0bd9b40bdcdf58f0aa6c42627fa73057579bc9181bfcb1",
+    "shuffled_T8": "4c2bc5a82c0db88d7e1ea5b747dcf747e15a5b878c8954feb3b405107f848338"
+  },
+  "core_sha256": "e25a56f29465659df6ef60a5d3a9d0773bdc5b0006715107b4b6eadff9532afd",
+  "dependency_sha256": {
+    "full_teacher_gcn.py": "d211e9a4860678318939bf28294c52721a564d53e4ba16b972887be189072fe4",
+    "fold_teacher_bn.py": "ed2b84ae9c3bc7fe470e6f0f1fec7c2e5a58eb8ac7c49753920e850b7dbde799",
+    "dcgs_fixed_seed_eval_v2.py": "530f897e72f12e736c41ee84f73ae37e17176c6cd9dde2317f04e02ff1c270d0"
+  },
+  "source_snapshots": {
+    "run_screen.py": "cdc9b10ade6aaa057e98e10d34048bd3d321fd0843c8dcf7547ca5b3bfd874ea",
+    "calibration_core.py": "e25a56f29465659df6ef60a5d3a9d0773bdc5b0006715107b4b6eadff9532afd",
+    "full_teacher_gcn.py": "d211e9a4860678318939bf28294c52721a564d53e4ba16b972887be189072fe4",
+    "fold_teacher_bn.py": "ed2b84ae9c3bc7fe470e6f0f1fec7c2e5a58eb8ac7c49753920e850b7dbde799",
+    "dcgs_fixed_seed_eval_v2.py": "530f897e72f12e736c41ee84f73ae37e17176c6cd9dde2317f04e02ff1c270d0",
+    "evaluate_frozen_test.py": "41539f0d663138ce69e7264fe1b061fb08f2f131360143c8af70c2153e5c74a6"
+  },
+  "processed_data_sha256": {
+    "pre_filter.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "pre_transform.pt": "fe7c8f11dba2284d2e9fcdc06d2333ee1a9f381570e210c4188fe6290f392192",
+    "test_data.pt": "2b6859a37db81e7d3f9d9e0cfcd24da457ccdd48b75aa5aa435b912b978b82a9",
+    "train_data.pt": "86973549d04871c955771d041d1b2f83b703d03480a1236ca1799fd37f93cbc3",
+    "val_data.pt": "390ab8f8d21eed78dc256e064df5d9f59d552ba2e61fb84f14005be45a7e1e0a"
+  },
+  "device": "NVIDIA GeForce RTX 3060",
+  "torch": "2.11.0+cu128",
+  "deterministic_algorithms": true,
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "test_loaded": true,
+  "training_or_optimization": false,
+  "teacher_fold_max_abs_difference": 5.7220458984375e-05,
+  "teacher_fold_prediction_differences": 0,
+  "teacher_original_max_abs_difference_vs_archive": 7.62939453125e-05,
+  "teacher_original_prediction_differences_vs_archive": 0,
+  "qualification": "frozen full-test endpoint; test and validation data historically exposed; descriptive only"
+}

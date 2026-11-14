@@ -39,6 +39,10 @@ def main():
                 local=a['node_mse'][mask,:4]
                 signals={f'node_site_{i}_mse':local[:,i] for i in range(4)}
                 signals['node_relative_mse']=np.mean(local/np.maximum(local.mean(0),1e-12),axis=1)
+                all_local=a['node_mse'][mask]
+                for i in [4,5]:
+                    signals[f'head_site_{i-4}_mse']=all_local[:,i]
+                signals['local_six_relative_mse']=np.mean(all_local/np.maximum(all_local.mean(0),1e-12),axis=1)
                 signals['graph_logit_mse']=a['graph_mse'][mask]
                 signals['negative_teacher_margin']=-a['margin'][mask]
                 rho={}
@@ -66,7 +70,7 @@ def main():
     write_csv(args.output/'graph_vs_node_association.csv',paired)
     note='''# Mechanism diagnostics
 
-Baseline T1/T2 only. Each row is a saved graph prediction, with the teacher's top-one class used to define margin and prediction flip. The final graph-logit MSE is an output-space discrepancy, not an isolated propagation/readout projection. The node aggregate averages four site MSE values after dividing each by its across-graph mean; raw site values are also reported. Correlations and AUC are marginal descriptive associations. Shared teacher margins, graph difficulty and class can confound them. This comparison cannot establish a graph-specific causal bottleneck.
+Baseline T1/T2 only. Each row is a saved graph prediction, with the teacher's top-one class used to define margin and prediction flip. The final graph-logit MSE is an output-space discrepancy, not an isolated propagation/readout projection. The node aggregate averages four site MSE values after dividing each by its across-graph mean; the six-site aggregate additionally includes the two graph-level MLP sites. Raw values from all six sites are also reported. This diagnostic normalization differs from the batchwise teacher-activation normalization in the training objective. Correlations and AUC are marginal descriptive associations. Shared teacher margins, graph difficulty and class can confound them. This comparison cannot establish a graph-specific causal bottleneck.
 
 Graph groups use data-dependent quartile boundaries of graph size, degree, degree variance and teacher margin. Duplicate boundaries are removed, so low-variation variables may produce fewer than four groups. Quantile boundaries and actual counts are saved. Full validation and the 4488 examples outside the current screen are kept separate; both have historical exposure. The small number of teacher seeds limits generalization.
 '''

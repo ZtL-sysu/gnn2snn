@@ -52,16 +52,6 @@ def close(actual, expected, what, atol=2e-5):
         raise ValueError(f"recomputed {what} differs from evaluator result: {actual} vs {expected}")
 
 
-def sample_summary(values):
-    array = np.asarray(values, dtype=np.float64)
-    if array.shape != (3,) or not np.isfinite(array).all():
-        raise ValueError("aggregate requires exactly three finite teacher-seed values")
-    mean = float(array.mean())
-    sd = float(array.std(ddof=1))
-    half = T95_DF2 * sd / math.sqrt(3.0)
-    return mean, sd, mean - half, mean + half
-
-
 def recompute(logits, teacher, labels):
     pred = logits.argmax(axis=1)
     teacher_pred = teacher.argmax(axis=1)
@@ -119,6 +109,9 @@ def read_run(run_dir):
             raise ValueError(f"missing/nonfinite teacher reference guard {field} in {run_dir}")
 
     # Sidecar integrity: test evaluator verifies hashes before loading the test split.
+    source_hashes = meta.get("source_snapshots")
+    if not isinstance(source_hashes, dict):
+        raise ValueError(f"missing source snapshot manifest in {run_dir}")
     for field in ("checkpoint_sha256", "calibration_sha256", "teacher_reference_sha256",
                   "confirmation_metadata_sha256", "confirmation_DONE_sha256",
                   "confirmation_results_sha256", "core_sha256"):
@@ -254,14 +247,6 @@ def read_run(run_dir):
         "common_source_hashes": {k: v for k, v in source_hashes.items() if k != "run_screen.py"},
         "train_indices": train_indices,
     }
-
-
-def write_csv(path, rows):
-    if not rows:
-        raise ValueError(f"no rows for {path.name}")
-    with Path(path).open("x", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0]), extrasaction="raise")
-        writer.writeheader(); writer.writerows(rows)
 
 
 def main():

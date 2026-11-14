@@ -1,0 +1,9 @@
+\begin{table*}[t]\centering\footnotesize
+\begin{tabular}{llrrrrr}\toprule
+Task & $T$ & Baseline & First node (1) & All node (4) & Readout (2) & All sites (6) \\ \midrule
+MNIST & 1 & 71.99 $\pm$ 3.04 & 84.88 $\pm$ 1.50 & 90.14 $\pm$ 0.25 & 74.17 $\pm$ 2.67 & 92.18 $\pm$ 0.20 \\
+MNIST & 2 & 91.00 $\pm$ 0.29 & 91.71 $\pm$ 0.23 & 91.95 $\pm$ 0.21 & 91.49 $\pm$ 0.44 & 92.18 $\pm$ 0.20 \\
+CIFAR10 & 1 & 47.59 $\pm$ 1.26 & 51.12 $\pm$ 1.14 & 52.97 $\pm$ 0.33 & 50.19 $\pm$ 1.25 & 56.15 $\pm$ 0.69 \\
+CIFAR10 & 2 & 55.63 $\pm$ 0.87 & 55.78 $\pm$ 0.90 & 55.95 $\pm$ 0.75 & 55.87 $\pm$ 0.74 & 56.15 $\pm$ 0.69 \\
+\bottomrule\end{tabular}
+\caption{Ideal-site validation accuracy (percent), mean $\pm$ sample SD over three teachers. Parentheses give numbers of restored nonlinearities. These are continuous-valued diagnostic interventions with zero fitted offsets, not deployable spiking competitors or budget-matched algorithms. All six ideal sites recover the teacher.}\label{tab:ideal}\end{table*}

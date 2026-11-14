@@ -19,7 +19,7 @@ def fmt(row,metric='accuracy_percent'):
 
 def table(rows,scope,caption,label):
     index={(r['dataset'],r['method'],int(r['T'])):r for r in rows if r['scope']==scope}
-    lines=[r'\begin{table*}[t]',r'\centering\scriptsize',r'\begin{tabular}{llrrrrrr}',r'\toprule',
+    lines=[r'\begin{table*}[t]',r'\centering\footnotesize',r'\begin{tabular}{llrrrrrr}',r'\toprule',
            'Task & $T$ & '+' & '.join(LABELS[m] for m in METHODS)+r' \\',r'\midrule']
     for dataset in ['MNIST','CIFAR10']:
         for t in [1,2,4,8]:

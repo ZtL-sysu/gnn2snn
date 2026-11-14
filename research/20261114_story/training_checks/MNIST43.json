@@ -1,0 +1,567 @@
+{
+  "scope": "label-free saved-training-indices reevaluation; no validation or test split loaded",
+  "dataset": "MNIST",
+  "teacher_seed": 43,
+  "teacher_checkpoint_sha256": "cf1649d8ce0371a1deced093c35a9d0cfa1a54a715b6633e4cb857e315fe28a5",
+  "calibration_sha256": "b668766883fdab9e612b92085c4af27d082522946381546478114158d478547d",
+  "core_sha256": "e25a56f29465659df6ef60a5d3a9d0773bdc5b0006715107b4b6eadff9532afd",
+  "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+  "author_source_provenance": {
+    "commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+    "worktree_clean_except_ignored_bytecode": true,
+    "untracked_bytecode_entries": 5,
+    "source_file": "neurons/relu_neuron.py",
+    "source_file_sha256": "ae9018fb5d75d97d606f4f1e40075a5341fe166ab90772aecdebceb7dcc89851",
+    "source_head_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161",
+    "source_worktree_blob_oid": "fbe6c9d425464fe7595c69fea550f4a97260a161"
+  },
+  "train_indices_count": 512,
+  "train_indices_sha256": "7cf6ce1ada65d9b07d3dd24484c6463e02f3f8da11e4c213a052da3c24265800",
+  "batch_size": 32,
+  "batch_count": 16,
+  "device": "NVIDIA GeForce RTX 3060",
+  "torch": "2.11.0+cu128",
+  "deterministic_algorithms": true,
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "test_loaded": false,
+  "parameter_files": [
+    {
+      "file": "graph_T1_parameters.npz",
+      "sha256": "0fb8f60843d432fb5222252b8e8159385ebfc36841759da54ed72358be093b9d"
+    },
+    {
+      "file": "graph_T2_parameters.npz",
+      "sha256": "157244a2f1c956de193797e3896df3f69d6b07cc9eb29e14c32cdb8dfd3a6004"
+    },
+    {
+      "file": "graph_T4_parameters.npz",
+      "sha256": "e46f4709b118d0a0c0b30b021042a5c3c251aef274d4ecacf9e41fb239823751"
+    },
+    {
+      "file": "graph_T8_parameters.npz",
+      "sha256": "0cba7453db78b169bec534ab57eec2ea5d4f7fd55de03b53e89a19c9977d527d"
+    },
+    {
+      "file": "mix_T1_parameters.npz",
+      "sha256": "2cb3e0b79bc8bbc2ae5243363f4de0c06c31ba08e8ef0faf32df6716f6a80034"
+    },
+    {
+      "file": "mix_T2_parameters.npz",
+      "sha256": "e10f7f87ac9c095c5fced731334f30403e9835f8470c3ce445fca6a6437776df"
+    },
+    {
+      "file": "mix_T4_parameters.npz",
+      "sha256": "b76fa702c63e53c670658bb8b823a561dcf847a9ba4549f0d9b2190d29f22be8"
+    },
+    {
+      "file": "mix_T8_parameters.npz",
+      "sha256": "bfdd424601b0731f1a1c5a2230c5c00d3573809aad7d907fa447dec467007e65"
+    },
+    {
+      "file": "node_T1_parameters.npz",
+      "sha256": "10cde520a1d0a36c320fb7da074c3bd53de9861513716e8dde8a469f361bf17a"
+    },
+    {
+      "file": "node_T2_parameters.npz",
+      "sha256": "ff75e9b876d4120fe9cb7418de5f028d3cd85eacf4c3dd28554a8ecc186cee9c"
+    },
+    {
+      "file": "node_T4_parameters.npz",
+      "sha256": "dd62dda90b3e1db3d5ed1bccf134025f0160514cb122c20ebec23efc6dc84b4a"
+    },
+    {
+      "file": "node_T8_parameters.npz",
+      "sha256": "d0c52dba92e7f7dfd3b1d74bca3561f87cb16e258bc5d12544472bd23db387d3"
+    },
+    {
+      "file": "output_T1_parameters.npz",
+      "sha256": "cf6df1043c7b9bcede9ef58b81897cb94e9ec0ba68041acf73a5d3020364fa30"
+    },
+    {
+      "file": "output_T2_parameters.npz",
+      "sha256": "6829f6b74c506b7214286abf34ab5d2c8e46dc8983d5da7d0154b3153c9e4111"
+    },
+    {
+      "file": "output_T4_parameters.npz",
+      "sha256": "dbf5a37983a5dcc3cdeeba2aed2013b132b7ae651d7ff12ceed63ec145971010"
+    },
+    {
+      "file": "output_T8_parameters.npz",
+      "sha256": "e084e91bd8d20349c491f19f4b4b102bade46b711c9b1a9f92021ad6bc3ae5d3"
+    },
+    {
+      "file": "shuffled_T1_parameters.npz",
+      "sha256": "4b1b336830fba33aaffb0cf5fd92c1827e4baf1723bde00a23fbfa5944cdf303"
+    },
+    {
+      "file": "shuffled_T2_parameters.npz",
+      "sha256": "efc81f366457b980d4f0c5386e4e5749f4715353ddde793d2a01de883fd8c78c"
+    },
+    {
+      "file": "shuffled_T4_parameters.npz",
+      "sha256": "4f62641455f7c2371efe246898d4699c5365a4d13de125142c6f75f61c058b47"
+    },
+    {
+      "file": "shuffled_T8_parameters.npz",
+      "sha256": "189c770ed74331dd845136c096bb717bef8c54c6cb80dab8e2da1c5d7cbdee3d"
+    }
+  ],
+  "results": [
+    {
+      "method": "baseline",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 11.360066986083984,
+      "graph_logit_mse_normalized_batch_mean": 0.2509599607437849,
+      "node_mse_normalized_equal_site_batch_mean": 0.14492162794340402,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.040916329715400934,
+        0.05141863250173628,
+        0.10758554935455322,
+        0.3045883812010288,
+        0.17764577362686396,
+        0.1873751012608409
+      ],
+      "teacher_agreement_percent": 70.703125,
+      "output_bias_applied": false
+    },
+    {
+      "method": "baseline",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.808576375246048,
+      "graph_logit_mse_normalized_batch_mean": 0.01786049478687346,
+      "node_mse_normalized_equal_site_batch_mean": 0.009455324428320939,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0014685083224321716,
+        0.0020594209054252133,
+        0.005837910401169211,
+        0.02144551055971533,
+        0.01127483369782567,
+        0.014645762683358043
+      ],
+      "teacher_agreement_percent": 96.2890625,
+      "output_bias_applied": false
+    },
+    {
+      "method": "baseline",
+      "T": 4,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.003917893581092358,
+      "graph_logit_mse_normalized_batch_mean": 8.633197649032809e-05,
+      "node_mse_normalized_equal_site_batch_mean": 4.063609065478128e-05,
+      "node_mse_normalized_by_site_batch_mean": [
+        4.127018883082201e-06,
+        6.228959449572358e-06,
+        2.0657386812672485e-05,
+        9.494237292528851e-05,
+        4.7047210500750225e-05,
+        7.08135953573219e-05
+      ],
+      "teacher_agreement_percent": 99.4140625,
+      "output_bias_applied": false
+    },
+    {
+      "method": "baseline",
+      "T": 8,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.0002405500039458275,
+      "graph_logit_mse_normalized_batch_mean": 5.323823870639899e-06,
+      "node_mse_normalized_equal_site_batch_mean": 2.5828475092026792e-06,
+      "node_mse_normalized_by_site_batch_mean": [
+        6.804546579530779e-07,
+        8.558837905070504e-07,
+        1.80764079260598e-06,
+        5.72654568031794e-06,
+        2.9102487246746023e-06,
+        3.5163114091574244e-06
+      ],
+      "teacher_agreement_percent": 99.609375,
+      "output_bias_applied": false
+    },
+    {
+      "method": "graph",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 8.300194931030273,
+      "graph_logit_mse_normalized_batch_mean": 0.18293529096990824,
+      "node_mse_normalized_equal_site_batch_mean": 0.12217655626591295,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.04132541408762336,
+        0.051755501655861735,
+        0.10247534234076738,
+        0.28224190697073936,
+        0.12343189725652337,
+        0.1318292752839625
+      ],
+      "teacher_agreement_percent": 75.78125,
+      "output_bias_applied": false
+    },
+    {
+      "method": "graph",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.6944449573755265,
+      "graph_logit_mse_normalized_batch_mean": 0.015356305055320263,
+      "node_mse_normalized_equal_site_batch_mean": 0.008838223471684614,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0014881868482916616,
+        0.0020892429747618735,
+        0.0059421510668471456,
+        0.021348957321606576,
+        0.009878129931166768,
+        0.01228267268743366
+      ],
+      "teacher_agreement_percent": 94.3359375,
+      "output_bias_applied": false
+    },
+    {
+      "method": "graph",
+      "T": 4,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.0048252125037834045,
+      "graph_logit_mse_normalized_batch_mean": 0.00010657679058567737,
+      "node_mse_normalized_equal_site_batch_mean": 5.04890621755294e-05,
+      "node_mse_normalized_by_site_batch_mean": [
+        4.426510344046619e-06,
+        7.105379864924544e-06,
+        2.4838762101353495e-05,
+        0.00011336568331898889,
+        5.966331400486524e-05,
+        9.35347234189976e-05
+      ],
+      "teacher_agreement_percent": 99.21875,
+      "output_bias_applied": false
+    },
+    {
+      "method": "graph",
+      "T": 8,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.0005069101258413866,
+      "graph_logit_mse_normalized_batch_mean": 1.1266077478921943e-05,
+      "node_mse_normalized_equal_site_batch_mean": 9.048631848547945e-06,
+      "node_mse_normalized_by_site_batch_mean": [
+        8.682524814673798e-07,
+        1.5614317518952703e-06,
+        5.608178781812967e-06,
+        2.0982290152460337e-05,
+        1.0613747065235657e-05,
+        1.4657890858416067e-05
+      ],
+      "teacher_agreement_percent": 99.8046875,
+      "output_bias_applied": false
+    },
+    {
+      "method": "mix",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 8.191452884674073,
+      "graph_logit_mse_normalized_batch_mean": 0.1808490278199315,
+      "node_mse_normalized_equal_site_batch_mean": 0.11604897076419245,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.04131428711116314,
+        0.051355832954868674,
+        0.09888476692140102,
+        0.2591163218021393,
+        0.11852043494582176,
+        0.12710218084976077
+      ],
+      "teacher_agreement_percent": 79.6875,
+      "output_bias_applied": false
+    },
+    {
+      "method": "mix",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.6847730159759522,
+      "graph_logit_mse_normalized_batch_mean": 0.015127894759643823,
+      "node_mse_normalized_equal_site_batch_mean": 0.008753461420080082,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0014862388270557858,
+        0.0020830263383686543,
+        0.005844443687237799,
+        0.020840661716647446,
+        0.009925873193424195,
+        0.012340524757746607
+      ],
+      "teacher_agreement_percent": 96.2890625,
+      "output_bias_applied": false
+    },
+    {
+      "method": "mix",
+      "T": 4,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.0040411922731436786,
+      "graph_logit_mse_normalized_batch_mean": 8.894273196347058e-05,
+      "node_mse_normalized_equal_site_batch_mean": 4.5149133157451615e-05,
+      "node_mse_normalized_by_site_batch_mean": [
+        4.37710826872717e-06,
+        6.870540829595484e-06,
+        2.3885669065748516e-05,
+        0.0001074469646482612,
+        5.11177231601323e-05,
+        7.719679297224502e-05
+      ],
+      "teacher_agreement_percent": 99.21875,
+      "output_bias_applied": false
+    },
+    {
+      "method": "mix",
+      "T": 8,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.0004143442667555064,
+      "graph_logit_mse_normalized_batch_mean": 9.191748858938809e-06,
+      "node_mse_normalized_equal_site_batch_mean": 5.773012198062588e-06,
+      "node_mse_normalized_by_site_batch_mean": [
+        7.868753186812683e-07,
+        1.2020809805335375e-06,
+        3.522175347825396e-06,
+        1.3512947475646797e-05,
+        6.8330495821555814e-06,
+        8.780944483532949e-06
+      ],
+      "teacher_agreement_percent": 99.609375,
+      "output_bias_applied": false
+    },
+    {
+      "method": "node",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 8.304494762420655,
+      "graph_logit_mse_normalized_batch_mean": 0.1834118152037263,
+      "node_mse_normalized_equal_site_batch_mean": 0.11164025085357328,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.04150142357684672,
+        0.051316862693056464,
+        0.09551205998286605,
+        0.23838906548917294,
+        0.11633889190852642,
+        0.1267832014709711
+      ],
+      "teacher_agreement_percent": 80.2734375,
+      "output_bias_applied": false
+    },
+    {
+      "method": "node",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.6516539186239243,
+      "graph_logit_mse_normalized_batch_mean": 0.014382609282620251,
+      "node_mse_normalized_equal_site_batch_mean": 0.008432942908257246,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0014828396961092949,
+        0.0020577589166350663,
+        0.005697438842616975,
+        0.02001942612696439,
+        0.00959152600262314,
+        0.011748667864594609
+      ],
+      "teacher_agreement_percent": 95.703125,
+      "output_bias_applied": false
+    },
+    {
+      "method": "node",
+      "T": 4,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.003917821240611375,
+      "graph_logit_mse_normalized_batch_mean": 8.653412351122824e-05,
+      "node_mse_normalized_equal_site_batch_mean": 4.1323565748522625e-05,
+      "node_mse_normalized_by_site_batch_mean": [
+        4.217759709490565e-06,
+        6.38463964719449e-06,
+        2.1423256043817673e-05,
+        9.759859358382528e-05,
+        4.822520963898569e-05,
+        7.009193586782203e-05
+      ],
+      "teacher_agreement_percent": 99.8046875,
+      "output_bias_applied": false
+    },
+    {
+      "method": "node",
+      "T": 8,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.00030848539900034665,
+      "graph_logit_mse_normalized_batch_mean": 6.857582803831974e-06,
+      "node_mse_normalized_equal_site_batch_mean": 3.2896366590762227e-06,
+      "node_mse_normalized_by_site_batch_mean": [
+        7.171957783214111e-07,
+        9.243060752339716e-07,
+        2.2108426520617286e-06,
+        7.454444869381405e-06,
+        4.0748445826466195e-06,
+        4.356185996812201e-06
+      ],
+      "teacher_agreement_percent": 99.609375,
+      "output_bias_applied": false
+    },
+    {
+      "method": "output",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 11.243257427215577,
+      "graph_logit_mse_normalized_batch_mean": 0.24839452747255564,
+      "node_mse_normalized_equal_site_batch_mean": 0.14492162794340402,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.040916329715400934,
+        0.05141863250173628,
+        0.10758554935455322,
+        0.3045883812010288,
+        0.17764577362686396,
+        0.1873751012608409
+      ],
+      "teacher_agreement_percent": 71.09375,
+      "output_bias_applied": true
+    },
+    {
+      "method": "output",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.791123452782631,
+      "graph_logit_mse_normalized_batch_mean": 0.017477632442023605,
+      "node_mse_normalized_equal_site_batch_mean": 0.009455324428320939,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0014685083224321716,
+        0.0020594209054252133,
+        0.005837910401169211,
+        0.02144551055971533,
+        0.01127483369782567,
+        0.014645762683358043
+      ],
+      "teacher_agreement_percent": 96.09375,
+      "output_bias_applied": true
+    },
+    {
+      "method": "output",
+      "T": 4,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.003829212416894734,
+      "graph_logit_mse_normalized_batch_mean": 8.43423504193197e-05,
+      "node_mse_normalized_equal_site_batch_mean": 4.063609065478128e-05,
+      "node_mse_normalized_by_site_batch_mean": [
+        4.127018883082201e-06,
+        6.228959449572358e-06,
+        2.0657386812672485e-05,
+        9.494237292528851e-05,
+        4.7047210500750225e-05,
+        7.08135953573219e-05
+      ],
+      "teacher_agreement_percent": 99.21875,
+      "output_bias_applied": true
+    },
+    {
+      "method": "output",
+      "T": 8,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 0.0002379934347118251,
+      "graph_logit_mse_normalized_batch_mean": 5.2628649314101494e-06,
+      "node_mse_normalized_equal_site_batch_mean": 2.5828475092026792e-06,
+      "node_mse_normalized_by_site_batch_mean": [
+        6.804546579530779e-07,
+        8.558837905070504e-07,
+        1.80764079260598e-06,
+        5.72654568031794e-06,
+        2.9102487246746023e-06,
+        3.5163114091574244e-06
+      ],
+      "teacher_agreement_percent": 99.609375,
+      "output_bias_applied": true
+    },
+    {
+      "method": "shuffled",
+      "T": 1,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 24.1245361328125,
+      "graph_logit_mse_normalized_batch_mean": 0.5313671268522739,
+      "node_mse_normalized_equal_site_batch_mean": 0.29731999667516595,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.04222162067890167,
+        0.058536026859655976,
+        0.17671668995171785,
+        0.6292687244713306,
+        0.47477321326732635,
+        0.40240370482206345
+      ],
+      "teacher_agreement_percent": 40.625,
+      "output_bias_applied": false
+    },
+    {
+      "method": "shuffled",
+      "T": 2,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 18.928201961517335,
+      "graph_logit_mse_normalized_batch_mean": 0.4166802894324064,
+      "node_mse_normalized_equal_site_batch_mean": 0.19705628563679056,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.002384287436143495,
+        0.006075078184949234,
+        0.05373859847895801,
+        0.40833895467221737,
+        0.4137042220681906,
+        0.2980965729802847
+      ],
+      "teacher_agreement_percent": 45.703125,
+      "output_bias_applied": false
+    },
+    {
+      "method": "shuffled",
+      "T": 4,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 13.04604959487915,
+      "graph_logit_mse_normalized_batch_mean": 0.28704875614494085,
+      "node_mse_normalized_equal_site_batch_mean": 0.1279902011495627,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.0004525636395555921,
+        0.0017812783698900603,
+        0.02209566778037697,
+        0.21878906898200512,
+        0.2972839307039976,
+        0.22753869742155075
+      ],
+      "teacher_agreement_percent": 57.8125,
+      "output_bias_applied": false
+    },
+    {
+      "method": "shuffled",
+      "T": 8,
+      "graphs": 512,
+      "batches": 16,
+      "graph_logit_mse_unnormalized": 8.30077896118164,
+      "graph_logit_mse_normalized_batch_mean": 0.18289628718048334,
+      "node_mse_normalized_equal_site_batch_mean": 0.07633237041742784,
+      "node_mse_normalized_by_site_batch_mean": [
+        0.00016547315135539975,
+        0.0006939625345694367,
+        0.00887437054188922,
+        0.09597666095942259,
+        0.18123685009777546,
+        0.1710469052195549
+      ],
+      "teacher_agreement_percent": 71.09375,
+      "output_bias_applied": false
+    }
+  ]
+}
