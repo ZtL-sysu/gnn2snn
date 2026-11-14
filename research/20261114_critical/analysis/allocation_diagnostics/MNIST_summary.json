@@ -1,0 +1,1406 @@
+{
+  "dataset": "MNIST",
+  "seed": 41,
+  "input_run": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_critical\\runs\\allocation\\MNIST41",
+  "metadata_sha256": "bd39cb6ff1ad1d9b6a3b37c5a03a610438db988abf33b9f8ef5560a71b6d0d98",
+  "source_snapshots_verified": true,
+  "checkpoint_sha256": "b123168cbc8b8476d1fa2b65c934bb66ff4c67bb9a2cc33b1e5cd047176a9dd1",
+  "calibration_sha256": "895bdefa787953884b832116ef6f6e82f43d56047d885d8721a3eeda57ec1d4e",
+  "base_parameters_sha256": "1e5ac7735483a9aaeb2fe8fbf217088a58751ec404af0dc242b665e77fa44dce",
+  "validation_indices_sha256": "1b659f84528c9b65e6665be17643534a6db8170ad92daab77e0b827251ddb1aa",
+  "graphs": 512,
+  "graph_message_operator": "actual normalized graph message_operator for every policy",
+  "message_error_reference": "frozen teacher first-site message A(relu(current)); graphwise mean squared error and normalized by reference message mean-square",
+  "allocation_count_checks": {
+    "random": {
+      "selected_nodes": {
+        "recomputed": 9207,
+        "recorded": 9207,
+        "match": true
+      },
+      "max_opportunity_slots": {
+        "recomputed": 1344222,
+        "recorded": 1344222,
+        "match": true
+      },
+      "extra_nonzero_events": {
+        "recomputed": 562585,
+        "recorded": 562585,
+        "match": true
+      },
+      "extra_edge_deliveries": {
+        "recomputed": 4500680,
+        "recorded": 4500680,
+        "match": true
+      }
+    },
+    "local": {
+      "selected_nodes": {
+        "recomputed": 9207,
+        "recorded": 9207,
+        "match": true
+      },
+      "max_opportunity_slots": {
+        "recomputed": 1344222,
+        "recorded": 1344222,
+        "match": true
+      },
+      "extra_nonzero_events": {
+        "recomputed": 610926,
+        "recorded": 610926,
+        "match": true
+      },
+      "extra_edge_deliveries": {
+        "recomputed": 4887408,
+        "recorded": 4887408,
+        "match": true
+      }
+    },
+    "identity": {
+      "selected_nodes": {
+        "recomputed": 9207,
+        "recorded": 9207,
+        "match": true
+      },
+      "max_opportunity_slots": {
+        "recomputed": 1344222,
+        "recorded": 1344222,
+        "match": true
+      },
+      "extra_nonzero_events": {
+        "recomputed": 608911,
+        "recorded": 608911,
+        "match": true
+      },
+      "extra_edge_deliveries": {
+        "recomputed": 4871288,
+        "recorded": 4871288,
+        "match": true
+      }
+    },
+    "shuffled": {
+      "selected_nodes": {
+        "recomputed": 9207,
+        "recorded": 9207,
+        "match": true
+      },
+      "max_opportunity_slots": {
+        "recomputed": 1344222,
+        "recorded": 1344222,
+        "match": true
+      },
+      "extra_nonzero_events": {
+        "recomputed": 609872,
+        "recorded": 609872,
+        "match": true
+      },
+      "extra_edge_deliveries": {
+        "recomputed": 4878976,
+        "recorded": 4878976,
+        "match": true
+      }
+    },
+    "message": {
+      "selected_nodes": {
+        "recomputed": 9207,
+        "recorded": 9207,
+        "match": true
+      },
+      "max_opportunity_slots": {
+        "recomputed": 1344222,
+        "recorded": 1344222,
+        "match": true
+      },
+      "extra_nonzero_events": {
+        "recomputed": 612232,
+        "recorded": 612232,
+        "match": true
+      },
+      "extra_edge_deliveries": {
+        "recomputed": 4897856,
+        "recorded": 4897856,
+        "match": true
+      }
+    }
+  },
+  "policy_event_counts": {
+    "random": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 562585,
+      "extra_edge_deliveries": 4500680
+    },
+    "local": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 610926,
+      "extra_edge_deliveries": 4887408
+    },
+    "identity": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 608911,
+      "extra_edge_deliveries": 4871288
+    },
+    "shuffled": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 609872,
+      "extra_edge_deliveries": 4878976
+    },
+    "message": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 612232,
+      "extra_edge_deliveries": 4897856
+    }
+  },
+  "timing": {
+    "device": "NVIDIA GeForce RTX 3060",
+    "device_properties": "_CudaDeviceProperties(name='NVIDIA GeForce RTX 3060', major=8, minor=6, total_memory=12287MB, multi_processor_count=28, uuid=12c68e3a-a15e-65d0-656b-3231d776ddcb, pci_bus_id=1, pci_device_id=0, pci_domain_id=0, L2_cache_size=2MB)",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "batch_graphs": 32,
+    "warmups": 5,
+    "measured_repeats": 20,
+    "synchronized_host_wall_time": true,
+    "interleave_seed": 20261118,
+    "no_teacher_forward_in_timed_block": true,
+    "instrumentation_present": true,
+    "energy_claim": false,
+    "results": {
+      "baseline": {
+        "warmup_repeats": 5,
+        "measured_repeats": 20,
+        "raw_wall_ms": [
+          11.868400033563375,
+          11.922599980607629,
+          11.792299803346395,
+          11.915799928829074,
+          11.74510014243424,
+          11.697200126945972,
+          11.707399971783161,
+          11.697800131514668,
+          11.684699915349483,
+          11.756799882277846,
+          12.051300145685673,
+          11.8452999740839,
+          18.268899992108345,
+          12.099700048565865,
+          11.681899894028902,
+          11.737100081518292,
+          11.797900078818202,
+          11.788300005719066,
+          11.841699946671724,
+          11.771799996495247
+        ],
+        "median_wall_ms": 11.79029990453273,
+        "mean_wall_ms": 12.133600004017353,
+        "p90_wall_ms": 12.056140135973692,
+        "median_ms_per_graph": 0.36844687201664783
+      },
+      "random": {
+        "warmup_repeats": 5,
+        "measured_repeats": 20,
+        "raw_wall_ms": [
+          19.757299916818738,
+          19.34850006364286,
+          23.598600178956985,
+          29.10050004720688,
+          19.297500140964985,
+          19.462200114503503,
+          19.427099963650107,
+          19.420200027525425,
+          19.547399831935763,
+          19.20909993350506,
+          19.479499896988273,
+          19.43949982523918,
+          19.54639982432127,
+          19.382900092750788,
+          19.4087999407202,
+          19.476399989798665,
+          19.279300002381206,
+          34.01460009627044,
+          26.771199889481068,
+          19.904799992218614
+        ],
+        "median_wall_ms": 19.469300052151084,
+        "mean_wall_ms": 21.243589988444,
+        "p90_wall_ms": 27.004129905253652,
+        "median_ms_per_graph": 0.6084156266297214
+      },
+      "local": {
+        "warmup_repeats": 5,
+        "measured_repeats": 20,
+        "raw_wall_ms": [
+          21.137499948963523,
+          21.681000012904406,
+          21.396399941295385,
+          21.089599933475256,
+          21.33350004442036,
+          21.305999951437116,
+          21.675199968740344,
+          21.335399942472577,
+          21.229199832305312,
+          21.481200121343136,
+          21.49680000729859,
+          29.589900048449636,
+          37.692700047045946,
+          37.37640008330345,
+          21.341499872505665,
+          21.493500098586082,
+          21.320899948477745,
+          21.221299888566136,
+          21.280499873682857,
+          21.416000090539455
+        ],
+        "median_wall_ms": 21.368949906900525,
+        "mean_wall_ms": 23.39472498279065,
+        "p90_wall_ms": 30.368550051935028,
+        "median_ms_per_graph": 0.6677796845906414
+      },
+      "identity": {
+        "warmup_repeats": 5,
+        "measured_repeats": 20,
+        "raw_wall_ms": [
+          23.719500051811337,
+          22.6284998934716,
+          22.645700024440885,
+          22.831900045275688,
+          22.996299900114536,
+          22.823400096967816,
+          23.06829998269677,
+          23.36520003154874,
+          23.01250002346933,
+          22.872600005939603,
+          23.019300075247884,
+          22.906600032001734,
+          22.840999998152256,
+          22.770100040361285,
+          37.63849986717105,
+          23.342299973592162,
+          22.999499924480915,
+          22.861200151965022,
+          22.94109994545579,
+          23.1415000744164
+        ],
+        "median_wall_ms": 22.968699922785163,
+        "mean_wall_ms": 23.72125000692904,
+        "p90_wall_ms": 23.400630033575,
+        "median_ms_per_graph": 0.7177718725870363
+      },
+      "shuffled": {
+        "warmup_repeats": 5,
+        "measured_repeats": 20,
+        "raw_wall_ms": [
+          29.046199982985854,
+          29.982399893924594,
+          29.116000048816204,
+          30.484799994155765,
+          30.20969987846911,
+          29.366999864578247,
+          29.391600051894784,
+          29.765699990093708,
+          29.09020008519292,
+          29.549899976700544,
+          29.56519997678697,
+          29.614799888804555,
+          29.660100117325783,
+          29.888000106438994,
+          30.19039984792471,
+          29.21549999155104,
+          29.307099990546703,
+          29.789100168272853,
+          39.02840008959174,
+          29.420299921184778
+        ],
+        "median_wall_ms": 29.589999932795763,
+        "mean_wall_ms": 30.084119993261993,
+        "p90_wall_ms": 30.237209890037775,
+        "median_ms_per_graph": 0.9246874978998676
+      },
+      "message": {
+        "warmup_repeats": 5,
+        "measured_repeats": 20,
+        "raw_wall_ms": [
+          27.119499864056706,
+          26.830599876120687,
+          26.699500158429146,
+          26.882000034675002,
+          27.02490007504821,
+          26.445399969816208,
+          26.64619986899197,
+          26.653300039470196,
+          26.842900086194277,
+          27.759599965065718,
+          26.523799868300557,
+          26.46750002168119,
+          26.643600082024932,
+          26.48400003090501,
+          26.61300008185208,
+          26.69840003363788,
+          27.22340007312596,
+          47.47899994254112,
+          42.5222001504153,
+          26.288900058716536
+        ],
+        "median_wall_ms": 26.698950096033514,
+        "mean_wall_ms": 28.592385014053434,
+        "p90_wall_ms": 29.235859983600697,
+        "median_ms_per_graph": 0.8343421905010473
+      }
+    },
+    "randomized_schedule": [
+      {
+        "policy": "identity",
+        "occurrence": 1,
+        "phase": "warmup",
+        "wall_ms": 26.08649991452694,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 1,
+        "phase": "warmup",
+        "wall_ms": 30.447499826550484,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 2,
+        "phase": "warmup",
+        "wall_ms": 29.816900147125125,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 1,
+        "phase": "warmup",
+        "wall_ms": 11.878899997100234,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 2,
+        "phase": "warmup",
+        "wall_ms": 11.848900001496077,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 2,
+        "phase": "warmup",
+        "wall_ms": 23.70010013692081,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 1,
+        "phase": "warmup",
+        "wall_ms": 19.499599933624268,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 1,
+        "phase": "warmup",
+        "wall_ms": 21.304299822077155,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 2,
+        "phase": "warmup",
+        "wall_ms": 20.920800045132637,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 3,
+        "phase": "warmup",
+        "wall_ms": 23.441500030457973,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 1,
+        "phase": "warmup",
+        "wall_ms": 29.50619999319315,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 3,
+        "phase": "warmup",
+        "wall_ms": 26.912400033324957,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 3,
+        "phase": "warmup",
+        "wall_ms": 12.765200110152364,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 4,
+        "phase": "warmup",
+        "wall_ms": 26.66119998320937,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 2,
+        "phase": "warmup",
+        "wall_ms": 29.40659993328154,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 3,
+        "phase": "warmup",
+        "wall_ms": 19.41960002295673,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 2,
+        "phase": "warmup",
+        "wall_ms": 21.353800082579255,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 5,
+        "phase": "warmup",
+        "wall_ms": 26.667899917811155,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 3,
+        "phase": "warmup",
+        "wall_ms": 29.37620016746223,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 4,
+        "phase": "warmup",
+        "wall_ms": 23.05230009369552,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 4,
+        "phase": "warmup",
+        "wall_ms": 28.99080002680421,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 5,
+        "phase": "warmup",
+        "wall_ms": 29.573900159448385,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 4,
+        "phase": "warmup",
+        "wall_ms": 19.46959993802011,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 6,
+        "phase": "measured",
+        "wall_ms": 29.046199982985854,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 6,
+        "phase": "measured",
+        "wall_ms": 27.119499864056706,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 7,
+        "phase": "measured",
+        "wall_ms": 26.830599876120687,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 7,
+        "phase": "measured",
+        "wall_ms": 29.982399893924594,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 8,
+        "phase": "measured",
+        "wall_ms": 29.116000048816204,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 9,
+        "phase": "measured",
+        "wall_ms": 30.484799994155765,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 5,
+        "phase": "warmup",
+        "wall_ms": 19.749399973079562,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 6,
+        "phase": "measured",
+        "wall_ms": 19.757299916818738,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 4,
+        "phase": "warmup",
+        "wall_ms": 11.740200221538544,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 8,
+        "phase": "measured",
+        "wall_ms": 26.699500158429146,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 5,
+        "phase": "warmup",
+        "wall_ms": 12.291100108996034,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 5,
+        "phase": "warmup",
+        "wall_ms": 22.897599963471293,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 3,
+        "phase": "warmup",
+        "wall_ms": 21.342499880120158,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 6,
+        "phase": "measured",
+        "wall_ms": 11.868400033563375,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 7,
+        "phase": "measured",
+        "wall_ms": 19.34850006364286,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 8,
+        "phase": "measured",
+        "wall_ms": 23.598600178956985,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 9,
+        "phase": "measured",
+        "wall_ms": 29.10050004720688,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 4,
+        "phase": "warmup",
+        "wall_ms": 23.94440001808107,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 7,
+        "phase": "measured",
+        "wall_ms": 11.922599980607629,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 10,
+        "phase": "measured",
+        "wall_ms": 30.20969987846911,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 9,
+        "phase": "measured",
+        "wall_ms": 26.882000034675002,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 6,
+        "phase": "measured",
+        "wall_ms": 23.719500051811337,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 5,
+        "phase": "warmup",
+        "wall_ms": 21.462799981236458,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 6,
+        "phase": "measured",
+        "wall_ms": 21.137499948963523,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 10,
+        "phase": "measured",
+        "wall_ms": 27.02490007504821,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 8,
+        "phase": "measured",
+        "wall_ms": 11.792299803346395,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 10,
+        "phase": "measured",
+        "wall_ms": 19.297500140964985,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 7,
+        "phase": "measured",
+        "wall_ms": 21.681000012904406,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 9,
+        "phase": "measured",
+        "wall_ms": 11.915799928829074,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 11,
+        "phase": "measured",
+        "wall_ms": 29.366999864578247,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 12,
+        "phase": "measured",
+        "wall_ms": 29.391600051894784,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 11,
+        "phase": "measured",
+        "wall_ms": 19.462200114503503,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 8,
+        "phase": "measured",
+        "wall_ms": 21.396399941295385,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 7,
+        "phase": "measured",
+        "wall_ms": 22.6284998934716,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 8,
+        "phase": "measured",
+        "wall_ms": 22.645700024440885,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 12,
+        "phase": "measured",
+        "wall_ms": 19.427099963650107,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 10,
+        "phase": "measured",
+        "wall_ms": 11.74510014243424,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 9,
+        "phase": "measured",
+        "wall_ms": 22.831900045275688,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 13,
+        "phase": "measured",
+        "wall_ms": 29.765699990093708,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 11,
+        "phase": "measured",
+        "wall_ms": 11.697200126945972,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 13,
+        "phase": "measured",
+        "wall_ms": 19.420200027525425,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 14,
+        "phase": "measured",
+        "wall_ms": 29.09020008519292,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 11,
+        "phase": "measured",
+        "wall_ms": 26.445399969816208,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 9,
+        "phase": "measured",
+        "wall_ms": 21.089599933475256,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 12,
+        "phase": "measured",
+        "wall_ms": 26.64619986899197,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 10,
+        "phase": "measured",
+        "wall_ms": 22.996299900114536,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 11,
+        "phase": "measured",
+        "wall_ms": 22.823400096967816,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 12,
+        "phase": "measured",
+        "wall_ms": 11.707399971783161,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 10,
+        "phase": "measured",
+        "wall_ms": 21.33350004442036,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 13,
+        "phase": "measured",
+        "wall_ms": 26.653300039470196,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 15,
+        "phase": "measured",
+        "wall_ms": 29.549899976700544,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 14,
+        "phase": "measured",
+        "wall_ms": 26.842900086194277,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 14,
+        "phase": "measured",
+        "wall_ms": 19.547399831935763,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 16,
+        "phase": "measured",
+        "wall_ms": 29.56519997678697,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 15,
+        "phase": "measured",
+        "wall_ms": 27.759599965065718,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 17,
+        "phase": "measured",
+        "wall_ms": 29.614799888804555,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 16,
+        "phase": "measured",
+        "wall_ms": 26.523799868300557,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 11,
+        "phase": "measured",
+        "wall_ms": 21.305999951437116,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 17,
+        "phase": "measured",
+        "wall_ms": 26.46750002168119,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 15,
+        "phase": "measured",
+        "wall_ms": 19.20909993350506,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 12,
+        "phase": "measured",
+        "wall_ms": 21.675199968740344,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 16,
+        "phase": "measured",
+        "wall_ms": 19.479499896988273,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 13,
+        "phase": "measured",
+        "wall_ms": 11.697800131514668,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 18,
+        "phase": "measured",
+        "wall_ms": 26.643600082024932,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 12,
+        "phase": "measured",
+        "wall_ms": 23.06829998269677,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 13,
+        "phase": "measured",
+        "wall_ms": 23.36520003154874,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 17,
+        "phase": "measured",
+        "wall_ms": 19.43949982523918,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 13,
+        "phase": "measured",
+        "wall_ms": 21.335399942472577,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 18,
+        "phase": "measured",
+        "wall_ms": 29.660100117325783,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 14,
+        "phase": "measured",
+        "wall_ms": 23.01250002346933,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 15,
+        "phase": "measured",
+        "wall_ms": 22.872600005939603,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 19,
+        "phase": "measured",
+        "wall_ms": 29.888000106438994,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 19,
+        "phase": "measured",
+        "wall_ms": 26.48400003090501,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 16,
+        "phase": "measured",
+        "wall_ms": 23.019300075247884,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 17,
+        "phase": "measured",
+        "wall_ms": 22.906600032001734,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 18,
+        "phase": "measured",
+        "wall_ms": 19.54639982432127,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 19,
+        "phase": "measured",
+        "wall_ms": 19.382900092750788,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 20,
+        "phase": "measured",
+        "wall_ms": 30.19039984792471,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 14,
+        "phase": "measured",
+        "wall_ms": 11.684699915349483,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 15,
+        "phase": "measured",
+        "wall_ms": 11.756799882277846,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 20,
+        "phase": "measured",
+        "wall_ms": 19.4087999407202,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 18,
+        "phase": "measured",
+        "wall_ms": 22.840999998152256,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 20,
+        "phase": "measured",
+        "wall_ms": 26.61300008185208,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 21,
+        "phase": "measured",
+        "wall_ms": 19.476399989798665,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 14,
+        "phase": "measured",
+        "wall_ms": 21.229199832305312,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 21,
+        "phase": "measured",
+        "wall_ms": 29.21549999155104,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 21,
+        "phase": "measured",
+        "wall_ms": 26.69840003363788,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 19,
+        "phase": "measured",
+        "wall_ms": 22.770100040361285,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 22,
+        "phase": "measured",
+        "wall_ms": 19.279300002381206,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 15,
+        "phase": "measured",
+        "wall_ms": 21.481200121343136,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 22,
+        "phase": "measured",
+        "wall_ms": 29.307099990546703,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 16,
+        "phase": "measured",
+        "wall_ms": 12.051300145685673,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 16,
+        "phase": "measured",
+        "wall_ms": 21.49680000729859,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 23,
+        "phase": "measured",
+        "wall_ms": 29.789100168272853,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 24,
+        "phase": "measured",
+        "wall_ms": 39.02840008959174,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 17,
+        "phase": "measured",
+        "wall_ms": 11.8452999740839,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 22,
+        "phase": "measured",
+        "wall_ms": 27.22340007312596,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 17,
+        "phase": "measured",
+        "wall_ms": 29.589900048449636,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 18,
+        "phase": "measured",
+        "wall_ms": 37.692700047045946,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 23,
+        "phase": "measured",
+        "wall_ms": 47.47899994254112,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 23,
+        "phase": "measured",
+        "wall_ms": 34.01460009627044,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 19,
+        "phase": "measured",
+        "wall_ms": 37.37640008330345,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 24,
+        "phase": "measured",
+        "wall_ms": 26.771199889481068,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 18,
+        "phase": "measured",
+        "wall_ms": 18.268899992108345,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 20,
+        "phase": "measured",
+        "wall_ms": 37.63849986717105,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 24,
+        "phase": "measured",
+        "wall_ms": 42.5222001504153,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 19,
+        "phase": "measured",
+        "wall_ms": 12.099700048565865,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 21,
+        "phase": "measured",
+        "wall_ms": 23.342299973592162,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 20,
+        "phase": "measured",
+        "wall_ms": 21.341499872505665,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 21,
+        "phase": "measured",
+        "wall_ms": 21.493500098586082,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 20,
+        "phase": "measured",
+        "wall_ms": 11.681899894028902,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 22,
+        "phase": "measured",
+        "wall_ms": 22.999499924480915,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 21,
+        "phase": "measured",
+        "wall_ms": 11.737100081518292,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 22,
+        "phase": "measured",
+        "wall_ms": 21.320899948477745,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 22,
+        "phase": "measured",
+        "wall_ms": 11.797900078818202,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 23,
+        "phase": "measured",
+        "wall_ms": 21.221299888566136,
+        "graph_count": 32
+      },
+      {
+        "policy": "random",
+        "occurrence": 25,
+        "phase": "measured",
+        "wall_ms": 19.904799992218614,
+        "graph_count": 32
+      },
+      {
+        "policy": "shuffled",
+        "occurrence": 25,
+        "phase": "measured",
+        "wall_ms": 29.420299921184778,
+        "graph_count": 32
+      },
+      {
+        "policy": "message",
+        "occurrence": 25,
+        "phase": "measured",
+        "wall_ms": 26.288900058716536,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 23,
+        "phase": "measured",
+        "wall_ms": 22.861200151965022,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 24,
+        "phase": "measured",
+        "wall_ms": 22.94109994545579,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 24,
+        "phase": "measured",
+        "wall_ms": 21.280499873682857,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 23,
+        "phase": "measured",
+        "wall_ms": 11.788300005719066,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 24,
+        "phase": "measured",
+        "wall_ms": 11.841699946671724,
+        "graph_count": 32
+      },
+      {
+        "policy": "baseline",
+        "occurrence": 25,
+        "phase": "measured",
+        "wall_ms": 11.771799996495247,
+        "graph_count": 32
+      },
+      {
+        "policy": "identity",
+        "occurrence": 25,
+        "phase": "measured",
+        "wall_ms": 23.1415000744164,
+        "graph_count": 32
+      },
+      {
+        "policy": "local",
+        "occurrence": 25,
+        "phase": "measured",
+        "wall_ms": 21.416000090539455,
+        "graph_count": 32
+      }
+    ]
+  }
+}

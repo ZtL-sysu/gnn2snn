@@ -1,3 +1,3 @@
 # Updated workflow migration
 
-P0 passed from actual guidance/contract/containment evidence. P1 and every subsequent gate pending; no full manuscript/delivery acceptance claimed. Research screens completed before this installation retain their own immutable evidence and will be reaccepted only where applicable.
+P0–P4 accepted in order from real evidence. P4 accepts finite experiment execution, not efficacy: allocation gate failed. P5 onward pending. Route-D correction, scientific review, manuscript-facing packet acceptance and actual writing execution are outstanding. Old110 + new32 =142 exploratory endpoints, no new method multi-seed confirmation.

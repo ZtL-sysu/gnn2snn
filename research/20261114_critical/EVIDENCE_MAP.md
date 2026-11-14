@@ -24,4 +24,6 @@
 
 当前两条主要方法候选均未满足跨任务、强匹配对照和创新性的联合要求。没有已确认的三项新方法贡献；可保留的三项研究产物是首位置可实现性审查、硬优化对照和字母表容量诊断，尚不能替代算法贡献。
 
+后续固定机会预算补偿：`analysis/rescue_endpoints.csv`、`rescue_paired.csv`及`allocation_mechanism_cost.csv`。实际图消息MSE降低优于局部选择，但分类未通过两任务强基线/非图控制/T2联合门槛，计时增加。适合Mechanism和Efficiency，不支持成功结构算法主结果。源分位数对照为GCN适配，原ImageNet配置不直接承担方法优越性基线，详见SOURCE_BASELINE_AUDIT与P3_BASELINE_REVIEW。
+
 旧弱教师、口径不齐的历史SOTA表不进入主结果；只保留来源可核验、口径一致部分。旧论文完整内容和新文献仍需本轮系统审查。当前仅候选结构，无已证实新算法贡献。

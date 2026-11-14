@@ -1,0 +1,206 @@
+[
+  {
+    "method": "baseline",
+    "T": 1,
+    "accuracy_percent": 75.0,
+    "teacher_agreement_percent": 78.125,
+    "logit_mse": 8.20908260345459,
+    "cross_entropy": 0.9072620272636414,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.44387770001776516,
+    "allocation": {
+      "selected_nodes": 0,
+      "max_opportunity_slots": 0,
+      "extra_nonzero_events": 0,
+      "extra_edge_deliveries": 0
+    }
+  },
+  {
+    "method": "baseline",
+    "T": 2,
+    "accuracy_percent": 89.2578125,
+    "teacher_agreement_percent": 93.9453125,
+    "logit_mse": 0.9355853199958801,
+    "cross_entropy": 0.31074655055999756,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.6367902001366019,
+    "allocation": {
+      "selected_nodes": 0,
+      "max_opportunity_slots": 0,
+      "extra_nonzero_events": 0,
+      "extra_edge_deliveries": 0
+    }
+  },
+  {
+    "method": "random",
+    "T": 1,
+    "accuracy_percent": 76.3671875,
+    "teacher_agreement_percent": 80.078125,
+    "logit_mse": 7.70001220703125,
+    "cross_entropy": 0.807670533657074,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.5689636000897735,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 562585,
+      "extra_edge_deliveries": 4500680
+    }
+  },
+  {
+    "method": "random",
+    "T": 2,
+    "accuracy_percent": 89.6484375,
+    "teacher_agreement_percent": 94.53125,
+    "logit_mse": 0.8683819770812988,
+    "cross_entropy": 0.29382288455963135,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.7214021000545472,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 562585,
+      "extra_edge_deliveries": 4500680
+    }
+  },
+  {
+    "method": "local",
+    "T": 1,
+    "accuracy_percent": 77.1484375,
+    "teacher_agreement_percent": 81.25,
+    "logit_mse": 7.361928462982178,
+    "cross_entropy": 0.7480714917182922,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.621654599905014,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 610926,
+      "extra_edge_deliveries": 4887408
+    }
+  },
+  {
+    "method": "local",
+    "T": 2,
+    "accuracy_percent": 89.6484375,
+    "teacher_agreement_percent": 94.140625,
+    "logit_mse": 0.8563536405563354,
+    "cross_entropy": 0.3086327314376831,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.8102960998658091,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 610926,
+      "extra_edge_deliveries": 4887408
+    }
+  },
+  {
+    "method": "identity",
+    "T": 1,
+    "accuracy_percent": 76.7578125,
+    "teacher_agreement_percent": 82.03125,
+    "logit_mse": 7.3415703773498535,
+    "cross_entropy": 0.7819843888282776,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.630030500004068,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 608911,
+      "extra_edge_deliveries": 4871288
+    }
+  },
+  {
+    "method": "identity",
+    "T": 2,
+    "accuracy_percent": 89.453125,
+    "teacher_agreement_percent": 94.140625,
+    "logit_mse": 0.888098418712616,
+    "cross_entropy": 0.30714625120162964,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.7850619000382721,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 608911,
+      "extra_edge_deliveries": 4871288
+    }
+  },
+  {
+    "method": "shuffled",
+    "T": 1,
+    "accuracy_percent": 79.296875,
+    "teacher_agreement_percent": 83.0078125,
+    "logit_mse": 7.131979942321777,
+    "cross_entropy": 0.7040428519248962,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.7729571000672877,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 609872,
+      "extra_edge_deliveries": 4878976
+    }
+  },
+  {
+    "method": "shuffled",
+    "T": 2,
+    "accuracy_percent": 89.453125,
+    "teacher_agreement_percent": 94.921875,
+    "logit_mse": 0.8593095541000366,
+    "cross_entropy": 0.30033689737319946,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.9206623998470604,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 609872,
+      "extra_edge_deliveries": 4878976
+    }
+  },
+  {
+    "method": "message",
+    "T": 1,
+    "accuracy_percent": 79.4921875,
+    "teacher_agreement_percent": 83.59375,
+    "logit_mse": 7.156515598297119,
+    "cross_entropy": 0.691045880317688,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.7098354999907315,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 612232,
+      "extra_edge_deliveries": 4897856
+    }
+  },
+  {
+    "method": "message",
+    "T": 2,
+    "accuracy_percent": 88.671875,
+    "teacher_agreement_percent": 96.09375,
+    "logit_mse": 0.8676007986068726,
+    "cross_entropy": 0.3022388219833374,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.8644204000011086,
+    "allocation": {
+      "selected_nodes": 9207,
+      "max_opportunity_slots": 1344222,
+      "extra_nonzero_events": 612232,
+      "extra_edge_deliveries": 4897856
+    }
+  }
+]

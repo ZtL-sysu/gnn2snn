@@ -1,0 +1,10 @@
+{
+  "modules": {
+    "autoresearchclaw": false,
+    "researchclaw": false,
+    "torch": true,
+    "torch_geometric": true
+  },
+  "external_execution_invoked": false,
+  "writing_stage_status": "pending; engine unavailable is not permission to claim execution"
+}

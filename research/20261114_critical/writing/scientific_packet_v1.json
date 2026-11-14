@@ -1,0 +1,2989 @@
+{
+  "schema_version": 1,
+  "brief": {
+    "question": "Does critical-site sensitivity translate into realizable, graph-specific improvements in low-timestep GCN-to-SNN conversion?",
+    "answer": "The tested strong-teacher setting separates ideal sensitivity from practical calibration. Message objectives and fixed-budget residual selection do not establish robust structural advantage over matched local and counterfactual controls.",
+    "audience": "Researchers designing conversion and graph quantization methods who need to distinguish realizability, target mismatch and event-budget effects.",
+    "domain_bridge": "Graph propagation makes quantization errors directional. Actual next-message perturbations and within-graph operator controls test whether exploiting that direction yields classification gains beyond local reconstruction.",
+    "priorities": {
+      "main": [
+        "sensitivity versus realizability",
+        "matched structure contribution tests"
+      ],
+      "supporting": [
+        "strong-teacher fidelity",
+        "local calibration gains"
+      ],
+      "diagnostic": [
+        "surrogate and hard optimization",
+        "alphabet capacity",
+        "event budget and dense runtime"
+      ]
+    },
+    "terminology": {
+      "T": "active ticks",
+      "event": "signed graded scalar amplitude",
+      "ideal recovery": "continuous causal diagnostic",
+      "opportunity budget": "upper bound on extra per-channel events, not equal actual energy"
+    },
+    "paragraph_plan": [],
+    "qualification_placement": [],
+    "section_jobs": {
+      "Introduction": "Present low-prefix graph conversion and sensitivity-realizability question.",
+      "Related Work": "Separate known calibration, coding, graph quantization and adaptive budgets from this empirical test.",
+      "Method": "Define teachers, exact event dynamics, loss comparisons, ideal diagnostic and bounded allocation.",
+      "Experiments and Results": "Organize comparisons by scientific question with their own matched scopes and uncertainty.",
+      "Discussion": "Explain practical capacity and proxy limitations and hardware implications.",
+      "Conclusion": "State evidence-scaled empirical answer and remaining method gap."
+    },
+    "author_constraints": {
+      "edit_scope": [
+        "structural",
+        "scientific prose"
+      ],
+      "protected_sections": [],
+      "protected_artifacts": [],
+      "declaration_mode": "author-managed",
+      "allow_new_experiments": false,
+      "editing_round_budget": 3
+    },
+    "journal_requirements": {
+      "source": "no target venue specified",
+      "length": "content-led; no invented submission page limit",
+      "explicit_author_requirements": [
+        "do not claim successful method without evidence",
+        "preserve negative results",
+        "distinguish old and new work"
+      ]
+    }
+  },
+  "facts": [
+    {
+      "id": "design",
+      "kind": "setup",
+      "statement": "Frozen four-layer residual GCNs classify MNIST and CIFAR10 superpixel graphs. Four node branches and two readout activations use signed eight-level differential events. Subsequent studies preserve teacher weights.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "allocation_core.py",
+          "sha256": "aa30ad04e7bfe995dcc920490357c1c1519d4bad4151640de2061e6088e59774"
+        }
+      ]
+    },
+    {
+      "id": "selection",
+      "kind": "setup",
+      "statement": "New comparisons use 512 training calibration graphs and 512 validation graphs from fixed indices. Both official validation and test sets have historical exposure. New methods are selected without loading test; these are exploratory comparisons, not independent external confirmation.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "RESCUE_PROTOCOL.md",
+          "sha256": "dcaae65bc0f69315f7580e6042d5410ec86184b1c474138d8da77a41b243ff89"
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "kind": "method",
+      "statement": "The allocation candidate supplements only the first site at its first tick with signed quantized residual events for ceil(n/4) nodes per graph. Local, feature-only, permuted and actual-message policies share candidates and opportunity budgets. Actual nonzero event counts can differ.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "allocation.py",
+          "sha256": "ae05fa585949032e2c862d23e2c0388e82599baf2081e90de753a0ff63001a77"
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "kind": "method",
+      "statement": "For a fixed folded graph convolution, first-site error E changes the next preactivation by A E W transpose. Residual identity and later nonlinearities remain separate. This linear identity motivates a proxy, not a novel theorem or an exact final-classification model.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "objective.py",
+          "sha256": "49f90155b78067992ae4ab21af2e6d9a95fd39f2e13402016e498a8ff9b4cf60"
+        }
+      ]
+    },
+    {
+      "id": "historical_MNIST_baseline_T1",
+      "kind": "result",
+      "statement": "MNIST historical baseline T1 accuracy is 71.4367% ± 2.8010% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, baseline, T1",
+      "metric": "accuracy",
+      "value": 71.43666666666667,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 2.8009700700531126,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "teacher_MNIST",
+      "kind": "result",
+      "statement": "MNIST ANN teacher accuracy averages 91.0233% with sample SD 0.2650%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "MNIST ANN teacher",
+      "metric": "accuracy",
+      "value": 91.02333333333333,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.26501572280401636,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs; descriptive teacher quality"
+    },
+    {
+      "id": "historical_MNIST_baseline_T2",
+      "kind": "result",
+      "statement": "MNIST historical baseline T2 accuracy is 90.1567% ± 0.4850% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, baseline, T2",
+      "metric": "accuracy",
+      "value": 90.15666666666668,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.48500859098920374,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_baseline_T4",
+      "kind": "result",
+      "statement": "MNIST historical baseline T4 accuracy is 91.0400% ± 0.2551% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, baseline, T4",
+      "metric": "accuracy",
+      "value": 91.04,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.25514701644346305,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_baseline_T8",
+      "kind": "result",
+      "statement": "MNIST historical baseline T8 accuracy is 91.0133% ± 0.2554% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, baseline, T8",
+      "metric": "accuracy",
+      "value": 91.01333333333334,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.25540817005987,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_node_T1",
+      "kind": "result",
+      "statement": "MNIST historical node T1 accuracy is 78.5000% ± 2.1001% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, node, T1",
+      "metric": "accuracy",
+      "value": 78.5,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 2.1000714273566996,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_node_T2",
+      "kind": "result",
+      "statement": "MNIST historical node T2 accuracy is 90.0800% ± 0.2615% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, node, T2",
+      "metric": "accuracy",
+      "value": 90.08,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.26153393661244545,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_node_T4",
+      "kind": "result",
+      "statement": "MNIST historical node T4 accuracy is 91.0033% ± 0.2836% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, node, T4",
+      "metric": "accuracy",
+      "value": 91.00333333333333,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.28360771028540727,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_node_T8",
+      "kind": "result",
+      "statement": "MNIST historical node T8 accuracy is 91.0233% ± 0.2483% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, node, T8",
+      "metric": "accuracy",
+      "value": 91.02333333333333,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.24826061575153405,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_graph_T1",
+      "kind": "result",
+      "statement": "MNIST historical graph T1 accuracy is 78.7033% ± 2.1851% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, graph, T1",
+      "metric": "accuracy",
+      "value": 78.70333333333333,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 2.1850934381241784,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_graph_T2",
+      "kind": "result",
+      "statement": "MNIST historical graph T2 accuracy is 90.2567% ± 0.3478% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, graph, T2",
+      "metric": "accuracy",
+      "value": 90.25666666666666,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.34775470281985854,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_graph_T4",
+      "kind": "result",
+      "statement": "MNIST historical graph T4 accuracy is 91.0100% ± 0.2835% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, graph, T4",
+      "metric": "accuracy",
+      "value": 91.00999999999999,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.2835489375751537,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_MNIST_graph_T8",
+      "kind": "result",
+      "statement": "MNIST historical graph T8 accuracy is 91.0300% ± 0.2740% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "MNIST, graph, T8",
+      "metric": "accuracy",
+      "value": 91.03000000000002,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.2740437921208923,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_baseline_T1",
+      "kind": "result",
+      "statement": "CIFAR10 historical baseline T1 accuracy is 46.7967% ± 1.2240% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, baseline, T1",
+      "metric": "accuracy",
+      "value": 46.79666666666666,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 1.2240234202552405,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "teacher_CIFAR10",
+      "kind": "result",
+      "statement": "CIFAR10 ANN teacher accuracy averages 54.9400% with sample SD 0.0700%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "CIFAR10 ANN teacher",
+      "metric": "accuracy",
+      "value": 54.94,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.07000000000000384,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs; descriptive teacher quality"
+    },
+    {
+      "id": "historical_CIFAR10_baseline_T2",
+      "kind": "result",
+      "statement": "CIFAR10 historical baseline T2 accuracy is 54.0700% ± 0.2427% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, baseline, T2",
+      "metric": "accuracy",
+      "value": 54.07,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.24269322199023094,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_baseline_T4",
+      "kind": "result",
+      "statement": "CIFAR10 historical baseline T4 accuracy is 54.9067% ± 0.0643% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, baseline, T4",
+      "metric": "accuracy",
+      "value": 54.906666666666666,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.06429100507328574,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_baseline_T8",
+      "kind": "result",
+      "statement": "CIFAR10 historical baseline T8 accuracy is 54.9600% ± 0.0361% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, baseline, T8",
+      "metric": "accuracy",
+      "value": 54.96,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.036055512754644546,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_node_T1",
+      "kind": "result",
+      "statement": "CIFAR10 historical node T1 accuracy is 49.9233% ± 0.1380% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, node, T1",
+      "metric": "accuracy",
+      "value": 49.92333333333334,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.13796134724383596,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_node_T2",
+      "kind": "result",
+      "statement": "CIFAR10 historical node T2 accuracy is 54.1767% ± 0.1447% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, node, T2",
+      "metric": "accuracy",
+      "value": 54.17666666666667,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.14468356276140049,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_node_T4",
+      "kind": "result",
+      "statement": "CIFAR10 historical node T4 accuracy is 54.9600% ± 0.0889% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, node, T4",
+      "metric": "accuracy",
+      "value": 54.96,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.0888819441731582,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_node_T8",
+      "kind": "result",
+      "statement": "CIFAR10 historical node T8 accuracy is 54.9500% ± 0.0819% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, node, T8",
+      "metric": "accuracy",
+      "value": 54.949999999999996,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.081853527718726,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_graph_T1",
+      "kind": "result",
+      "statement": "CIFAR10 historical graph T1 accuracy is 49.7467% ± 0.6825% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, graph, T1",
+      "metric": "accuracy",
+      "value": 49.74666666666667,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.6825198409814431,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_graph_T2",
+      "kind": "result",
+      "statement": "CIFAR10 historical graph T2 accuracy is 54.3700% ± 0.2623% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, graph, T2",
+      "metric": "accuracy",
+      "value": 54.370000000000005,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.26229754097207825,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_graph_T4",
+      "kind": "result",
+      "statement": "CIFAR10 historical graph T4 accuracy is 54.9667% ± 0.0503% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, graph, T4",
+      "metric": "accuracy",
+      "value": 54.96666666666667,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.05033222956847248,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "historical_CIFAR10_graph_T8",
+      "kind": "result",
+      "statement": "CIFAR10 historical graph T8 accuracy is 54.9700% ± 0.1100% sample SD across three teacher seeds.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\frozen_test.csv",
+          "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c"
+        }
+      ],
+      "model": "four-layer GCN teachers 41/42/43",
+      "condition": "CIFAR10, graph, T8",
+      "metric": "accuracy",
+      "value": 54.97,
+      "unit": "percent",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.10999999999999943,
+        "n_seeds": 3
+      },
+      "measurement_scope": "10000 historically exposed official test graphs, descriptive; not new method selection"
+    },
+    {
+      "id": "ideal_MNIST_site0",
+      "kind": "result",
+      "statement": "Ideal continuous recovery at site0 closes 54.08% of the teacher-prediction disagreement gap on MNIST at T1.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "MNIST T1 ideal site0",
+      "metric": "teacher_disagreement_gap_closed",
+      "value": 0.5408245354402307,
+      "unit": "fraction",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.07492149444113516,
+        "n_seeds": 3
+      },
+      "measurement_scope": "5000 historically exposed validation graphs; conditional continuous diagnostic, unequal group sizes, non-additive, not deployable SNN"
+    },
+    {
+      "id": "ideal_MNIST_nodes0_3",
+      "kind": "result",
+      "statement": "Ideal continuous recovery at nodes0_3 closes 80.42% of the teacher-prediction disagreement gap on MNIST at T1.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "MNIST T1 ideal nodes0_3",
+      "metric": "teacher_disagreement_gap_closed",
+      "value": 0.8042461220547099,
+      "unit": "fraction",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.018489861317963225,
+        "n_seeds": 3
+      },
+      "measurement_scope": "5000 historically exposed validation graphs; conditional continuous diagnostic, unequal group sizes, non-additive, not deployable SNN"
+    },
+    {
+      "id": "ideal_MNIST_head4_5",
+      "kind": "result",
+      "statement": "Ideal continuous recovery at head4_5 closes 8.82% of the teacher-prediction disagreement gap on MNIST at T1.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "MNIST T1 ideal head4_5",
+      "metric": "teacher_disagreement_gap_closed",
+      "value": 0.08819198131353174,
+      "unit": "fraction",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.018714552017158635,
+        "n_seeds": 3
+      },
+      "measurement_scope": "5000 historically exposed validation graphs; conditional continuous diagnostic, unequal group sizes, non-additive, not deployable SNN"
+    },
+    {
+      "id": "ideal_MNIST_all6",
+      "kind": "result",
+      "statement": "Ideal continuous recovery at all6 closes 100.00% of the teacher-prediction disagreement gap on MNIST at T1.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "MNIST T1 ideal all6",
+      "metric": "teacher_disagreement_gap_closed",
+      "value": 1.0,
+      "unit": "fraction",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.0,
+        "n_seeds": 3
+      },
+      "measurement_scope": "5000 historically exposed validation graphs; conditional continuous diagnostic, unequal group sizes, non-additive, not deployable SNN"
+    },
+    {
+      "id": "ideal_CIFAR10_site0",
+      "kind": "result",
+      "statement": "Ideal continuous recovery at site0 closes 23.54% of the teacher-prediction disagreement gap on CIFAR10 at T1.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "CIFAR10 T1 ideal site0",
+      "metric": "teacher_disagreement_gap_closed",
+      "value": 0.23541274906807952,
+      "unit": "fraction",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.04320987119552087,
+        "n_seeds": 3
+      },
+      "measurement_scope": "5000 historically exposed validation graphs; conditional continuous diagnostic, unequal group sizes, non-additive, not deployable SNN"
+    },
+    {
+      "id": "ideal_CIFAR10_nodes0_3",
+      "kind": "result",
+      "statement": "Ideal continuous recovery at nodes0_3 closes 45.18% of the teacher-prediction disagreement gap on CIFAR10 at T1.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "CIFAR10 T1 ideal nodes0_3",
+      "metric": "teacher_disagreement_gap_closed",
+      "value": 0.45176418437746907,
+      "unit": "fraction",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.01710884727801968,
+        "n_seeds": 3
+      },
+      "measurement_scope": "5000 historically exposed validation graphs; conditional continuous diagnostic, unequal group sizes, non-additive, not deployable SNN"
+    },
+    {
+      "id": "ideal_CIFAR10_head4_5",
+      "kind": "result",
+      "statement": "Ideal continuous recovery at head4_5 closes 14.91% of the teacher-prediction disagreement gap on CIFAR10 at T1.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "CIFAR10 T1 ideal head4_5",
+      "metric": "teacher_disagreement_gap_closed",
+      "value": 0.14912876172770123,
+      "unit": "fraction",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.008588620582683613,
+        "n_seeds": 3
+      },
+      "measurement_scope": "5000 historically exposed validation graphs; conditional continuous diagnostic, unequal group sizes, non-additive, not deployable SNN"
+    },
+    {
+      "id": "ideal_CIFAR10_all6",
+      "kind": "result",
+      "statement": "Ideal continuous recovery at all6 closes 100.00% of the teacher-prediction disagreement gap on CIFAR10 at T1.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "inputs\\historical\\ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ],
+      "model": "GCN teachers41/42/43",
+      "condition": "CIFAR10 T1 ideal all6",
+      "metric": "teacher_disagreement_gap_closed",
+      "value": 1.0,
+      "unit": "fraction",
+      "aggregation": "three-teacher mean",
+      "uncertainty": {
+        "sample_sd": 0.0,
+        "n_seeds": 3
+      },
+      "measurement_scope": "5000 historically exposed validation graphs; conditional continuous diagnostic, unequal group sizes, non-additive, not deployable SNN"
+    },
+    {
+      "id": "initial_0",
+      "kind": "result",
+      "statement": "CIFAR10 screen baseline T1 accuracy is 45.1172%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, screen, baseline, T1",
+      "metric": "accuracy",
+      "value": 45.1171875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_1",
+      "kind": "result",
+      "statement": "CIFAR10 screen first_local T1 accuracy is 45.5078%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, screen, first_local, T1",
+      "metric": "accuracy",
+      "value": 45.5078125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_2",
+      "kind": "result",
+      "statement": "CIFAR10 screen first_message T1 accuracy is 43.9453%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, screen, first_message, T1",
+      "metric": "accuracy",
+      "value": 43.9453125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_3",
+      "kind": "result",
+      "statement": "CIFAR10 screen first_shuffled T1 accuracy is 45.5078%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, screen, first_shuffled, T1",
+      "metric": "accuracy",
+      "value": 45.5078125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_4",
+      "kind": "result",
+      "statement": "CIFAR10 screen first_identity T1 accuracy is 45.3125%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, screen, first_identity, T1",
+      "metric": "accuracy",
+      "value": 45.3125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_5",
+      "kind": "result",
+      "statement": "CIFAR10 screen all_local T1 accuracy is 47.8516%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, screen, all_local, T1",
+      "metric": "accuracy",
+      "value": 47.8515625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_6",
+      "kind": "result",
+      "statement": "CIFAR10 screen all_message T1 accuracy is 48.8281%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, screen, all_message, T1",
+      "metric": "accuracy",
+      "value": 48.828125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_14",
+      "kind": "result",
+      "statement": "MNIST screen baseline T1 accuracy is 69.7266%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, screen, baseline, T1",
+      "metric": "accuracy",
+      "value": 69.7265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_15",
+      "kind": "result",
+      "statement": "MNIST screen first_local T1 accuracy is 73.6328%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, screen, first_local, T1",
+      "metric": "accuracy",
+      "value": 73.6328125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_16",
+      "kind": "result",
+      "statement": "MNIST screen first_message T1 accuracy is 73.8281%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, screen, first_message, T1",
+      "metric": "accuracy",
+      "value": 73.828125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_17",
+      "kind": "result",
+      "statement": "MNIST screen first_shuffled T1 accuracy is 72.6562%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, screen, first_shuffled, T1",
+      "metric": "accuracy",
+      "value": 72.65625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_18",
+      "kind": "result",
+      "statement": "MNIST screen first_identity T1 accuracy is 73.6328%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, screen, first_identity, T1",
+      "metric": "accuracy",
+      "value": 73.6328125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_19",
+      "kind": "result",
+      "statement": "MNIST screen all_local T1 accuracy is 75.0000%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, screen, all_local, T1",
+      "metric": "accuracy",
+      "value": 75.0,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_20",
+      "kind": "result",
+      "statement": "MNIST screen all_message T1 accuracy is 74.4141%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, screen, all_message, T1",
+      "metric": "accuracy",
+      "value": 74.4140625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_28",
+      "kind": "result",
+      "statement": "CIFAR10 optimizer_check baseline T1 accuracy is 45.1172%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, optimizer_check, baseline, T1",
+      "metric": "accuracy",
+      "value": 45.1171875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_29",
+      "kind": "result",
+      "statement": "CIFAR10 optimizer_check first_local T1 accuracy is 46.6797%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, optimizer_check, first_local, T1",
+      "metric": "accuracy",
+      "value": 46.6796875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_30",
+      "kind": "result",
+      "statement": "CIFAR10 optimizer_check first_message T1 accuracy is 45.7031%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, optimizer_check, first_message, T1",
+      "metric": "accuracy",
+      "value": 45.703125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_31",
+      "kind": "result",
+      "statement": "CIFAR10 optimizer_check first_shuffled T1 accuracy is 46.8750%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, optimizer_check, first_shuffled, T1",
+      "metric": "accuracy",
+      "value": 46.875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_32",
+      "kind": "result",
+      "statement": "CIFAR10 optimizer_check first_identity T1 accuracy is 45.3125%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, optimizer_check, first_identity, T1",
+      "metric": "accuracy",
+      "value": 45.3125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_33",
+      "kind": "result",
+      "statement": "CIFAR10 optimizer_check all_local T1 accuracy is 49.4141%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, optimizer_check, all_local, T1",
+      "metric": "accuracy",
+      "value": 49.4140625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_34",
+      "kind": "result",
+      "statement": "CIFAR10 optimizer_check all_message T1 accuracy is 48.8281%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, optimizer_check, all_message, T1",
+      "metric": "accuracy",
+      "value": 48.828125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_42",
+      "kind": "result",
+      "statement": "MNIST optimizer_check baseline T1 accuracy is 69.7266%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, optimizer_check, baseline, T1",
+      "metric": "accuracy",
+      "value": 69.7265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_43",
+      "kind": "result",
+      "statement": "MNIST optimizer_check first_local T1 accuracy is 75.5859%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, optimizer_check, first_local, T1",
+      "metric": "accuracy",
+      "value": 75.5859375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_44",
+      "kind": "result",
+      "statement": "MNIST optimizer_check first_message T1 accuracy is 75.3906%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, optimizer_check, first_message, T1",
+      "metric": "accuracy",
+      "value": 75.390625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_45",
+      "kind": "result",
+      "statement": "MNIST optimizer_check first_shuffled T1 accuracy is 76.1719%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, optimizer_check, first_shuffled, T1",
+      "metric": "accuracy",
+      "value": 76.171875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_46",
+      "kind": "result",
+      "statement": "MNIST optimizer_check first_identity T1 accuracy is 73.6328%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, optimizer_check, first_identity, T1",
+      "metric": "accuracy",
+      "value": 73.6328125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_47",
+      "kind": "result",
+      "statement": "MNIST optimizer_check all_local T1 accuracy is 78.1250%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, optimizer_check, all_local, T1",
+      "metric": "accuracy",
+      "value": 78.125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_48",
+      "kind": "result",
+      "statement": "MNIST optimizer_check all_message T1 accuracy is 76.9531%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, optimizer_check, all_message, T1",
+      "metric": "accuracy",
+      "value": 76.953125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_56",
+      "kind": "result",
+      "statement": "CIFAR10 hard_probe baseline T1 accuracy is 45.1172%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, hard_probe, baseline, T1",
+      "metric": "accuracy",
+      "value": 45.1171875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_57",
+      "kind": "result",
+      "statement": "CIFAR10 hard_probe first_local T1 accuracy is 45.1172%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, hard_probe, first_local, T1",
+      "metric": "accuracy",
+      "value": 45.1171875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_58",
+      "kind": "result",
+      "statement": "CIFAR10 hard_probe first_message T1 accuracy is 44.9219%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, hard_probe, first_message, T1",
+      "metric": "accuracy",
+      "value": 44.921875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_59",
+      "kind": "result",
+      "statement": "CIFAR10 hard_probe first_shuffled T1 accuracy is 45.7031%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, hard_probe, first_shuffled, T1",
+      "metric": "accuracy",
+      "value": 45.703125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_60",
+      "kind": "result",
+      "statement": "CIFAR10 hard_probe first_identity T1 accuracy is 47.4609%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, hard_probe, first_identity, T1",
+      "metric": "accuracy",
+      "value": 47.4609375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_61",
+      "kind": "result",
+      "statement": "MNIST hard_probe baseline T1 accuracy is 69.7266%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, hard_probe, baseline, T1",
+      "metric": "accuracy",
+      "value": 69.7265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_62",
+      "kind": "result",
+      "statement": "MNIST hard_probe first_local T1 accuracy is 69.7266%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, hard_probe, first_local, T1",
+      "metric": "accuracy",
+      "value": 69.7265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_63",
+      "kind": "result",
+      "statement": "MNIST hard_probe first_message T1 accuracy is 70.7031%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, hard_probe, first_message, T1",
+      "metric": "accuracy",
+      "value": 70.703125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_64",
+      "kind": "result",
+      "statement": "MNIST hard_probe first_shuffled T1 accuracy is 70.8984%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, hard_probe, first_shuffled, T1",
+      "metric": "accuracy",
+      "value": 70.8984375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_65",
+      "kind": "result",
+      "statement": "MNIST hard_probe first_identity T1 accuracy is 73.2422%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, hard_probe, first_identity, T1",
+      "metric": "accuracy",
+      "value": 73.2421875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_66",
+      "kind": "result",
+      "statement": "CIFAR10 book_screen baseline T1 accuracy is 45.1172%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, book_screen, baseline, T1",
+      "metric": "accuracy",
+      "value": 45.1171875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_68",
+      "kind": "result",
+      "statement": "CIFAR10 book_screen book_nearest T1 accuracy is 44.9219%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, book_screen, book_nearest, T1",
+      "metric": "accuracy",
+      "value": 44.921875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_70",
+      "kind": "result",
+      "statement": "CIFAR10 book_screen book_local T1 accuracy is 48.4375%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, book_screen, book_local, T1",
+      "metric": "accuracy",
+      "value": 48.4375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_72",
+      "kind": "result",
+      "statement": "CIFAR10 book_screen book_message T1 accuracy is 47.4609%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, book_screen, book_message, T1",
+      "metric": "accuracy",
+      "value": 47.4609375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_74",
+      "kind": "result",
+      "statement": "CIFAR10 book_screen book_shuffled T1 accuracy is 47.8516%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, book_screen, book_shuffled, T1",
+      "metric": "accuracy",
+      "value": 47.8515625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_76",
+      "kind": "result",
+      "statement": "CIFAR10 book_screen book_identity T1 accuracy is 48.2422%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, book_screen, book_identity, T1",
+      "metric": "accuracy",
+      "value": 48.2421875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_78",
+      "kind": "result",
+      "statement": "MNIST book_screen baseline T1 accuracy is 69.7266%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, book_screen, baseline, T1",
+      "metric": "accuracy",
+      "value": 69.7265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_80",
+      "kind": "result",
+      "statement": "MNIST book_screen book_nearest T1 accuracy is 71.0938%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, book_screen, book_nearest, T1",
+      "metric": "accuracy",
+      "value": 71.09375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_82",
+      "kind": "result",
+      "statement": "MNIST book_screen book_local T1 accuracy is 82.2266%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, book_screen, book_local, T1",
+      "metric": "accuracy",
+      "value": 82.2265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_84",
+      "kind": "result",
+      "statement": "MNIST book_screen book_message T1 accuracy is 82.2266%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, book_screen, book_message, T1",
+      "metric": "accuracy",
+      "value": 82.2265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_86",
+      "kind": "result",
+      "statement": "MNIST book_screen book_shuffled T1 accuracy is 82.0312%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, book_screen, book_shuffled, T1",
+      "metric": "accuracy",
+      "value": 82.03125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_88",
+      "kind": "result",
+      "statement": "MNIST book_screen book_identity T1 accuracy is 82.0312%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, book_screen, book_identity, T1",
+      "metric": "accuracy",
+      "value": 82.03125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_90",
+      "kind": "result",
+      "statement": "CIFAR10 full_book_screen baseline T1 accuracy is 45.1172%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, full_book_screen, baseline, T1",
+      "metric": "accuracy",
+      "value": 45.1171875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_92",
+      "kind": "result",
+      "statement": "CIFAR10 full_book_screen book_local T1 accuracy is 47.4609%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, full_book_screen, book_local, T1",
+      "metric": "accuracy",
+      "value": 47.4609375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_94",
+      "kind": "result",
+      "statement": "CIFAR10 full_book_screen book_message T1 accuracy is 46.0938%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, full_book_screen, book_message, T1",
+      "metric": "accuracy",
+      "value": 46.09375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_96",
+      "kind": "result",
+      "statement": "CIFAR10 full_book_screen book_shuffled T1 accuracy is 47.2656%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, full_book_screen, book_shuffled, T1",
+      "metric": "accuracy",
+      "value": 47.265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_98",
+      "kind": "result",
+      "statement": "CIFAR10 full_book_screen book_identity T1 accuracy is 49.2188%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, full_book_screen, book_identity, T1",
+      "metric": "accuracy",
+      "value": 49.21875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_100",
+      "kind": "result",
+      "statement": "MNIST full_book_screen baseline T1 accuracy is 69.7266%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, full_book_screen, baseline, T1",
+      "metric": "accuracy",
+      "value": 69.7265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_102",
+      "kind": "result",
+      "statement": "MNIST full_book_screen book_local T1 accuracy is 83.2031%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, full_book_screen, book_local, T1",
+      "metric": "accuracy",
+      "value": 83.203125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_104",
+      "kind": "result",
+      "statement": "MNIST full_book_screen book_message T1 accuracy is 82.0312%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, full_book_screen, book_message, T1",
+      "metric": "accuracy",
+      "value": 82.03125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_106",
+      "kind": "result",
+      "statement": "MNIST full_book_screen book_shuffled T1 accuracy is 81.8359%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, full_book_screen, book_shuffled, T1",
+      "metric": "accuracy",
+      "value": 81.8359375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "initial_108",
+      "kind": "result",
+      "statement": "MNIST full_book_screen book_identity T1 accuracy is 81.6406%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\endpoints.csv",
+          "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, full_book_screen, book_identity, T1",
+      "metric": "accuracy",
+      "value": 81.640625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_0",
+      "kind": "result",
+      "statement": "CIFAR10 percentile_v2 author_cfg T1 accuracy is 22.4609%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, percentile_v2, author_cfg, T1",
+      "metric": "accuracy",
+      "value": 22.4609375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_2",
+      "kind": "result",
+      "statement": "CIFAR10 percentile_v2 matched8 T1 accuracy is 46.2891%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, percentile_v2, matched8, T1",
+      "metric": "accuracy",
+      "value": 46.2890625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_4",
+      "kind": "result",
+      "statement": "MNIST percentile_v2 author_cfg T1 accuracy is 23.4375%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, percentile_v2, author_cfg, T1",
+      "metric": "accuracy",
+      "value": 23.4375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_6",
+      "kind": "result",
+      "statement": "MNIST percentile_v2 matched8 T1 accuracy is 71.8750%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, percentile_v2, matched8, T1",
+      "metric": "accuracy",
+      "value": 71.875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_8",
+      "kind": "result",
+      "statement": "CIFAR10 allocation baseline T1 accuracy is 47.8516%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, allocation, baseline, T1",
+      "metric": "accuracy",
+      "value": 47.8515625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_10",
+      "kind": "result",
+      "statement": "CIFAR10 allocation random T1 accuracy is 48.2422%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, allocation, random, T1",
+      "metric": "accuracy",
+      "value": 48.2421875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_12",
+      "kind": "result",
+      "statement": "CIFAR10 allocation local T1 accuracy is 48.6328%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, allocation, local, T1",
+      "metric": "accuracy",
+      "value": 48.6328125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_14",
+      "kind": "result",
+      "statement": "CIFAR10 allocation identity T1 accuracy is 49.2188%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, allocation, identity, T1",
+      "metric": "accuracy",
+      "value": 49.21875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_16",
+      "kind": "result",
+      "statement": "CIFAR10 allocation shuffled T1 accuracy is 47.2656%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, allocation, shuffled, T1",
+      "metric": "accuracy",
+      "value": 47.265625,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_18",
+      "kind": "result",
+      "statement": "CIFAR10 allocation message T1 accuracy is 49.2188%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, allocation, message, T1",
+      "metric": "accuracy",
+      "value": 49.21875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_20",
+      "kind": "result",
+      "statement": "MNIST allocation baseline T1 accuracy is 75.0000%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, allocation, baseline, T1",
+      "metric": "accuracy",
+      "value": 75.0,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_22",
+      "kind": "result",
+      "statement": "MNIST allocation random T1 accuracy is 76.3672%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, allocation, random, T1",
+      "metric": "accuracy",
+      "value": 76.3671875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_24",
+      "kind": "result",
+      "statement": "MNIST allocation local T1 accuracy is 77.1484%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, allocation, local, T1",
+      "metric": "accuracy",
+      "value": 77.1484375,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_26",
+      "kind": "result",
+      "statement": "MNIST allocation identity T1 accuracy is 76.7578%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, allocation, identity, T1",
+      "metric": "accuracy",
+      "value": 76.7578125,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_28",
+      "kind": "result",
+      "statement": "MNIST allocation shuffled T1 accuracy is 79.2969%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, allocation, shuffled, T1",
+      "metric": "accuracy",
+      "value": 79.296875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "rescue_30",
+      "kind": "result",
+      "statement": "MNIST allocation message T1 accuracy is 79.4922%.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_endpoints.csv",
+          "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, allocation, message, T1",
+      "metric": "accuracy",
+      "value": 79.4921875,
+      "unit": "percent",
+      "aggregation": "one frozen teacher over 512 validation graphs",
+      "uncertainty": "no teacher-seed confidence interval; exploratory",
+      "measurement_scope": "historically exposed validation512; different parameter/event/optimizer budgets must be distinguished"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_1_baseline",
+      "kind": "result",
+      "statement": "Actual-message allocation minus baseline on CIFAR10 T1 is +1.3672 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T1, message vs baseline",
+      "metric": "paired_accuracy_difference",
+      "value": 1.3671875,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -1.9931735620764042,
+        "descriptive_normal_high": 4.727548562076404
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_1_local",
+      "kind": "result",
+      "statement": "Actual-message allocation minus local on CIFAR10 T1 is +0.5859 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T1, message vs local",
+      "metric": "paired_accuracy_difference",
+      "value": 0.5859375,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -2.356938352027629,
+        "descriptive_normal_high": 3.528813352027629
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_1_identity",
+      "kind": "result",
+      "statement": "Actual-message allocation minus identity on CIFAR10 T1 is +0.0000 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T1, message vs identity",
+      "metric": "paired_accuracy_difference",
+      "value": 0.0,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -2.9182644025666473,
+        "descriptive_normal_high": 2.9182644025666473
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_1_shuffled",
+      "kind": "result",
+      "statement": "Actual-message allocation minus shuffled on CIFAR10 T1 is +1.9531 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T1, message vs shuffled",
+      "metric": "paired_accuracy_difference",
+      "value": 1.953125,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -0.960221694238514,
+        "descriptive_normal_high": 4.8664716942385144
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_1_strong_local_lr01",
+      "kind": "result",
+      "statement": "Actual-message allocation minus strong_local_lr01 on CIFAR10 T1 is -0.1953 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T1, message vs strong_local_lr01",
+      "metric": "paired_accuracy_difference",
+      "value": -0.1953125,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -3.643952920893718,
+        "descriptive_normal_high": 3.253327920893718
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_2_baseline",
+      "kind": "result",
+      "statement": "Actual-message allocation minus baseline on CIFAR10 T2 is -0.5859 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T2, message vs baseline",
+      "metric": "paired_accuracy_difference",
+      "value": -0.5859375,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -2.5011982550668916,
+        "descriptive_normal_high": 1.3293232550668916
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_2_local",
+      "kind": "result",
+      "statement": "Actual-message allocation minus local on CIFAR10 T2 is +0.9766 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T2, message vs local",
+      "metric": "paired_accuracy_difference",
+      "value": 0.9765625,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -0.6010869286309852,
+        "descriptive_normal_high": 2.554211928630985
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_2_identity",
+      "kind": "result",
+      "statement": "Actual-message allocation minus identity on CIFAR10 T2 is +0.1953 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T2, message vs identity",
+      "metric": "paired_accuracy_difference",
+      "value": 0.1953125,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -1.4748745740162745,
+        "descriptive_normal_high": 1.8654995740162745
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_CIFAR10_2_shuffled",
+      "kind": "result",
+      "statement": "Actual-message allocation minus shuffled on CIFAR10 T2 is +0.5859 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10, T2, message vs shuffled",
+      "metric": "paired_accuracy_difference",
+      "value": 0.5859375,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -0.8972691080257265,
+        "descriptive_normal_high": 2.0691441080257267
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_1_baseline",
+      "kind": "result",
+      "statement": "Actual-message allocation minus baseline on MNIST T1 is +4.4922 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T1, message vs baseline",
+      "metric": "paired_accuracy_difference",
+      "value": 4.4921875,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": 1.1086929054592636,
+        "descriptive_normal_high": 7.875682094540736
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_1_local",
+      "kind": "result",
+      "statement": "Actual-message allocation minus local on MNIST T1 is +2.3438 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T1, message vs local",
+      "metric": "paired_accuracy_difference",
+      "value": 2.34375,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -0.24719273730228375,
+        "descriptive_normal_high": 4.934692737302283
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_1_identity",
+      "kind": "result",
+      "statement": "Actual-message allocation minus identity on MNIST T1 is +2.7344 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T1, message vs identity",
+      "metric": "paired_accuracy_difference",
+      "value": 2.734375,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -0.224294009611115,
+        "descriptive_normal_high": 5.693044009611115
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_1_shuffled",
+      "kind": "result",
+      "statement": "Actual-message allocation minus shuffled on MNIST T1 is +0.1953 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T1, message vs shuffled",
+      "metric": "paired_accuracy_difference",
+      "value": 0.1953125,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -2.4316298731924646,
+        "descriptive_normal_high": 2.8222548731924646
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_1_strong_local_lr01",
+      "kind": "result",
+      "statement": "Actual-message allocation minus strong_local_lr01 on MNIST T1 is +1.3672 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T1, message vs strong_local_lr01",
+      "metric": "paired_accuracy_difference",
+      "value": 1.3671875,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -1.9046159324201044,
+        "descriptive_normal_high": 4.638990932420104
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_2_baseline",
+      "kind": "result",
+      "statement": "Actual-message allocation minus baseline on MNIST T2 is -0.5859 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T2, message vs baseline",
+      "metric": "paired_accuracy_difference",
+      "value": -0.5859375,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -2.255437607581449,
+        "descriptive_normal_high": 1.0835626075814488
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_2_local",
+      "kind": "result",
+      "statement": "Actual-message allocation minus local on MNIST T2 is -0.9766 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T2, message vs local",
+      "metric": "paired_accuracy_difference",
+      "value": -0.9765625,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -2.4582214810405194,
+        "descriptive_normal_high": 0.5050964810405194
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_2_identity",
+      "kind": "result",
+      "statement": "Actual-message allocation minus identity on MNIST T2 is -0.7812 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T2, message vs identity",
+      "metric": "paired_accuracy_difference",
+      "value": -0.78125,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -2.3125,
+        "descriptive_normal_high": 0.75
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "allocation_delta_MNIST_2_shuffled",
+      "kind": "result",
+      "statement": "Actual-message allocation minus shuffled on MNIST T2 is -0.7812 accuracy percentage points.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\rescue_paired.csv",
+          "sha256": "43b4e6c4a695939b88da43e63ae3463426e0f98bdd97c0adbb7e03546cca67aa"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST, T2, message vs shuffled",
+      "metric": "paired_accuracy_difference",
+      "value": -0.78125,
+      "unit": "percentage points",
+      "aggregation": "paired 512-graph mean difference",
+      "uncertainty": {
+        "descriptive_normal_low": -2.3125,
+        "descriptive_normal_high": 0.75
+      },
+      "measurement_scope": "one teacher, exploratory; interval concerns graph sampling only, not seed variability, multiplicity or external generalization"
+    },
+    {
+      "id": "runtime_MNIST_local",
+      "kind": "result",
+      "statement": "MNIST T1 local allocation has median synchronized diagnostic runtime 0.6678 ms per graph.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\allocation_mechanism_cost.csv",
+          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+        }
+      ],
+      "model": "GCN teacher41 converted implementation",
+      "condition": "MNIST T1 local, cached batch32",
+      "metric": "synchronized_host_runtime",
+      "value": 0.6677796845906414,
+      "unit": "ms/graph",
+      "aggregation": "median of20 randomized-interleaved repeats after5 warmups",
+      "uncertainty": "repeat variation retained in raw records; no population CI",
+      "measurement_scope": "RTX3060 diagnostic implementation, includes policy instrumentation, excludes teacher forward and data transfer; not energy or optimized deployment bound"
+    },
+    {
+      "id": "messageMSE_MNIST_local",
+      "kind": "result",
+      "statement": "MNIST local allocation has mean normalized actual next-message MSE 0.001378 after correction.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\allocation_mechanism_cost.csv",
+          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST T1 local",
+      "metric": "normalized_next_message_MSE",
+      "value": 0.0013784238835796714,
+      "unit": "dimensionless",
+      "aggregation": "mean over512 validation graphs",
+      "uncertainty": "one teacher, no seed-level interval",
+      "measurement_scope": "actual normalized A E W_next transpose, all policies measured under true operator"
+    },
+    {
+      "id": "runtime_MNIST_message",
+      "kind": "result",
+      "statement": "MNIST T1 message allocation has median synchronized diagnostic runtime 0.8343 ms per graph.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\allocation_mechanism_cost.csv",
+          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+        }
+      ],
+      "model": "GCN teacher41 converted implementation",
+      "condition": "MNIST T1 message, cached batch32",
+      "metric": "synchronized_host_runtime",
+      "value": 0.8343421905010473,
+      "unit": "ms/graph",
+      "aggregation": "median of20 randomized-interleaved repeats after5 warmups",
+      "uncertainty": "repeat variation retained in raw records; no population CI",
+      "measurement_scope": "RTX3060 diagnostic implementation, includes policy instrumentation, excludes teacher forward and data transfer; not energy or optimized deployment bound"
+    },
+    {
+      "id": "messageMSE_MNIST_message",
+      "kind": "result",
+      "statement": "MNIST message allocation has mean normalized actual next-message MSE 0.001280 after correction.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\allocation_mechanism_cost.csv",
+          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "MNIST T1 message",
+      "metric": "normalized_next_message_MSE",
+      "value": 0.001280117779970169,
+      "unit": "dimensionless",
+      "aggregation": "mean over512 validation graphs",
+      "uncertainty": "one teacher, no seed-level interval",
+      "measurement_scope": "actual normalized A E W_next transpose, all policies measured under true operator"
+    },
+    {
+      "id": "runtime_CIFAR10_local",
+      "kind": "result",
+      "statement": "CIFAR10 T1 local allocation has median synchronized diagnostic runtime 0.8063 ms per graph.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\allocation_mechanism_cost.csv",
+          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+        }
+      ],
+      "model": "GCN teacher41 converted implementation",
+      "condition": "CIFAR10 T1 local, cached batch32",
+      "metric": "synchronized_host_runtime",
+      "value": 0.8062999986577779,
+      "unit": "ms/graph",
+      "aggregation": "median of20 randomized-interleaved repeats after5 warmups",
+      "uncertainty": "repeat variation retained in raw records; no population CI",
+      "measurement_scope": "RTX3060 diagnostic implementation, includes policy instrumentation, excludes teacher forward and data transfer; not energy or optimized deployment bound"
+    },
+    {
+      "id": "messageMSE_CIFAR10_local",
+      "kind": "result",
+      "statement": "CIFAR10 local allocation has mean normalized actual next-message MSE 0.002018 after correction.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\allocation_mechanism_cost.csv",
+          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10 T1 local",
+      "metric": "normalized_next_message_MSE",
+      "value": 0.002018191386014223,
+      "unit": "dimensionless",
+      "aggregation": "mean over512 validation graphs",
+      "uncertainty": "one teacher, no seed-level interval",
+      "measurement_scope": "actual normalized A E W_next transpose, all policies measured under true operator"
+    },
+    {
+      "id": "runtime_CIFAR10_message",
+      "kind": "result",
+      "statement": "CIFAR10 T1 message allocation has median synchronized diagnostic runtime 0.9914 ms per graph.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\allocation_mechanism_cost.csv",
+          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+        }
+      ],
+      "model": "GCN teacher41 converted implementation",
+      "condition": "CIFAR10 T1 message, cached batch32",
+      "metric": "synchronized_host_runtime",
+      "value": 0.9913890644384082,
+      "unit": "ms/graph",
+      "aggregation": "median of20 randomized-interleaved repeats after5 warmups",
+      "uncertainty": "repeat variation retained in raw records; no population CI",
+      "measurement_scope": "RTX3060 diagnostic implementation, includes policy instrumentation, excludes teacher forward and data transfer; not energy or optimized deployment bound"
+    },
+    {
+      "id": "messageMSE_CIFAR10_message",
+      "kind": "result",
+      "statement": "CIFAR10 message allocation has mean normalized actual next-message MSE 0.001717 after correction.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "analysis\\allocation_mechanism_cost.csv",
+          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+        }
+      ],
+      "model": "GCN teacher41",
+      "condition": "CIFAR10 T1 message",
+      "metric": "normalized_next_message_MSE",
+      "value": 0.0017168200574815273,
+      "unit": "dimensionless",
+      "aggregation": "mean over512 validation graphs",
+      "uncertainty": "one teacher, no seed-level interval",
+      "measurement_scope": "actual normalized A E W_next transpose, all policies measured under true operator"
+    }
+  ],
+  "internal": {
+    "state": "prepared scientific packet, not accepted P6/ARC execution; diagnostic cost facts audited; bibliography and final scientific content to be reviewed separately"
+  }
+}

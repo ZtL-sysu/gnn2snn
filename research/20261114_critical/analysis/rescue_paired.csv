@@ -1,0 +1,23 @@
+dataset,T,method,control,delta_pp,paired_normal_low,paired_normal_high,qualification
+CIFAR10,1,message,baseline,1.3671875,-1.9931735620764042,4.727548562076404,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,1,message,local,0.5859375,-2.356938352027629,3.528813352027629,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,1,message,random,0.9765625,-2.428224367055063,4.381349367055063,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,1,message,identity,0.0,-2.9182644025666473,2.9182644025666473,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,1,message,shuffled,1.953125,-0.960221694238514,4.8664716942385144,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,1,message,strong_local_lr01,-0.1953125,-3.643952920893718,3.253327920893718,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,2,message,baseline,-0.5859375,-2.5011982550668916,1.3293232550668916,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,2,message,local,0.9765625,-0.6010869286309852,2.554211928630985,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,2,message,random,-1.5625,-3.511674944002915,0.3866749440029149,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,2,message,identity,0.1953125,-1.4748745740162745,1.8654995740162745,exploratory one teacher; no multiplicity correction or external confirmation
+CIFAR10,2,message,shuffled,0.5859375,-0.8972691080257265,2.0691441080257267,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,1,message,baseline,4.4921875,1.1086929054592636,7.875682094540736,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,1,message,local,2.34375,-0.24719273730228375,4.934692737302283,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,1,message,random,3.125,-0.16014323826076238,6.410143238260762,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,1,message,identity,2.734375,-0.224294009611115,5.693044009611115,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,1,message,shuffled,0.1953125,-2.4316298731924646,2.8222548731924646,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,1,message,strong_local_lr01,1.3671875,-1.9046159324201044,4.638990932420104,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,2,message,baseline,-0.5859375,-2.255437607581449,1.0835626075814488,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,2,message,local,-0.9765625,-2.4582214810405194,0.5050964810405194,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,2,message,random,-0.9765625,-2.6446878259936195,0.6915628259936193,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,2,message,identity,-0.78125,-2.3125,0.75,exploratory one teacher; no multiplicity correction or external confirmation
+MNIST,2,message,shuffled,-0.78125,-2.3125,0.75,exploratory one teacher; no multiplicity correction or external confirmation

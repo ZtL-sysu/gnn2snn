@@ -1,0 +1,14 @@
+[
+  {
+    "condition": "author_cfg",
+    "T": 1,
+    "num_thresholds": 4,
+    "accuracy_percent": 23.4375,
+    "teacher_agreement_percent": 23.6328125,
+    "logit_mse": 56.89655303955078,
+    "cross_entropy": 6.108451843261719,
+    "teacher_accuracy_percent": 91.2109375,
+    "val_graphs": 512,
+    "diagnostic_eval_seconds": 0.3162682999391109
+  }
+]

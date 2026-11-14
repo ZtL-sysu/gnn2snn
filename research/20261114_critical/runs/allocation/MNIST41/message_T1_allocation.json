@@ -1,0 +1,130 @@
+[
+  {
+    "selected_nodes": 573,
+    "max_opportunity_slots": 83658,
+    "extra_nonzero_events": 37221,
+    "extra_edge_deliveries": 297768,
+    "first_residual_mse_before": 0.00798951555043459,
+    "first_residual_mse_after": 0.0047995708882808685
+  },
+  {
+    "selected_nodes": 586,
+    "max_opportunity_slots": 85556,
+    "extra_nonzero_events": 39064,
+    "extra_edge_deliveries": 312512,
+    "first_residual_mse_before": 0.00769277848303318,
+    "first_residual_mse_after": 0.004670236259698868
+  },
+  {
+    "selected_nodes": 587,
+    "max_opportunity_slots": 85702,
+    "extra_nonzero_events": 39194,
+    "extra_edge_deliveries": 313552,
+    "first_residual_mse_before": 0.007731135934591293,
+    "first_residual_mse_after": 0.0047564213164150715
+  },
+  {
+    "selected_nodes": 581,
+    "max_opportunity_slots": 84826,
+    "extra_nonzero_events": 38312,
+    "extra_edge_deliveries": 306496,
+    "first_residual_mse_before": 0.007914785295724869,
+    "first_residual_mse_after": 0.004775775596499443
+  },
+  {
+    "selected_nodes": 585,
+    "max_opportunity_slots": 85410,
+    "extra_nonzero_events": 39334,
+    "extra_edge_deliveries": 314672,
+    "first_residual_mse_before": 0.0075431219302117825,
+    "first_residual_mse_after": 0.004683267325162888
+  },
+  {
+    "selected_nodes": 590,
+    "max_opportunity_slots": 86140,
+    "extra_nonzero_events": 39444,
+    "extra_edge_deliveries": 315552,
+    "first_residual_mse_before": 0.007955757901072502,
+    "first_residual_mse_after": 0.004813918843865395
+  },
+  {
+    "selected_nodes": 568,
+    "max_opportunity_slots": 82928,
+    "extra_nonzero_events": 36949,
+    "extra_edge_deliveries": 295592,
+    "first_residual_mse_before": 0.008146627806127071,
+    "first_residual_mse_after": 0.004806831944733858
+  },
+  {
+    "selected_nodes": 581,
+    "max_opportunity_slots": 84826,
+    "extra_nonzero_events": 38501,
+    "extra_edge_deliveries": 308008,
+    "first_residual_mse_before": 0.007962589152157307,
+    "first_residual_mse_after": 0.00487603759393096
+  },
+  {
+    "selected_nodes": 562,
+    "max_opportunity_slots": 82052,
+    "extra_nonzero_events": 37416,
+    "extra_edge_deliveries": 299328,
+    "first_residual_mse_before": 0.0077483393251895905,
+    "first_residual_mse_after": 0.004686920437961817
+  },
+  {
+    "selected_nodes": 567,
+    "max_opportunity_slots": 82782,
+    "extra_nonzero_events": 37365,
+    "extra_edge_deliveries": 298920,
+    "first_residual_mse_before": 0.008028081618249416,
+    "first_residual_mse_after": 0.004803725052624941
+  },
+  {
+    "selected_nodes": 571,
+    "max_opportunity_slots": 83366,
+    "extra_nonzero_events": 38105,
+    "extra_edge_deliveries": 304840,
+    "first_residual_mse_before": 0.007866169326007366,
+    "first_residual_mse_after": 0.004759375471621752
+  },
+  {
+    "selected_nodes": 575,
+    "max_opportunity_slots": 83950,
+    "extra_nonzero_events": 38755,
+    "extra_edge_deliveries": 310040,
+    "first_residual_mse_before": 0.007422412279993296,
+    "first_residual_mse_after": 0.004576202481985092
+  },
+  {
+    "selected_nodes": 564,
+    "max_opportunity_slots": 82344,
+    "extra_nonzero_events": 37417,
+    "extra_edge_deliveries": 299336,
+    "first_residual_mse_before": 0.007899819873273373,
+    "first_residual_mse_after": 0.004816216882318258
+  },
+  {
+    "selected_nodes": 568,
+    "max_opportunity_slots": 82928,
+    "extra_nonzero_events": 38214,
+    "extra_edge_deliveries": 305712,
+    "first_residual_mse_before": 0.007534158416092396,
+    "first_residual_mse_after": 0.0046519325114786625
+  },
+  {
+    "selected_nodes": 581,
+    "max_opportunity_slots": 84826,
+    "extra_nonzero_events": 38847,
+    "extra_edge_deliveries": 310776,
+    "first_residual_mse_before": 0.007704941090196371,
+    "first_residual_mse_after": 0.0046766274608671665
+  },
+  {
+    "selected_nodes": 568,
+    "max_opportunity_slots": 82928,
+    "extra_nonzero_events": 38094,
+    "extra_edge_deliveries": 304752,
+    "first_residual_mse_before": 0.0076956539414823055,
+    "first_residual_mse_after": 0.004727955441921949
+  }
+]

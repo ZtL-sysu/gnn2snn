@@ -1,0 +1,26 @@
+{
+  "gates": [
+    {
+      "dataset": "CIFAR10",
+      "local_delta_T1": 0.5859375,
+      "strong_local_delta_T1": -0.1953125,
+      "identity_delta_T1": 0.0,
+      "shuffled_delta_T1": 1.953125,
+      "same_base_delta_T2": -0.5859375,
+      "pass": false
+    },
+    {
+      "dataset": "MNIST",
+      "local_delta_T1": 2.34375,
+      "strong_local_delta_T1": 1.3671875,
+      "identity_delta_T1": 2.734375,
+      "shuffled_delta_T1": 0.1953125,
+      "same_base_delta_T2": -0.5859375,
+      "pass": false
+    }
+  ],
+  "continue_multi_teacher": false,
+  "scope": "fixed quarter-node opportunity budget; current first-tick residual selector only",
+  "criterion": "cross-task T1 local and strong baseline >=.5pp; true graph beats identity/shuffle; T2 regression <=.5pp",
+  "next": "do not expand this selector if failed; complete mechanism/cost/novelty synthesis and conditional route decision"
+}

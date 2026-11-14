@@ -1,0 +1,20 @@
+# P1A/P1B finite allocation rescue
+
+Review execution: same-agent-role-pass, not independent review. Source converter audit was independently delegated and is separately attributed in SOURCE_BASELINE_AUDIT.md. This note does not claim independent scientific acceptance.
+
+## Claim–evidence and feasibility lock (P1A)
+Planned C1: with the same graph-wise extra event opportunity budget, actual message-aware node selection improves accuracy over local, random, feature-only and permuted-operator selection. Mechanism: exact one-node immediate preactivation error reduction uses current residual, signed candidate correction and actual next operator; no surrogate optimization or teacher retraining. It is only an immediate proxy, so classification gains require empirical evidence.
+
+Minimum/expected-strong screen: positive paired T1 differences on both tasks, with ≥.5pp versus local and strong calibrated baseline as a practical gate; true graph must also exceed feature/permuted controls. This is a selection gate, not significance. Failure: absent cross-task direction, no independent graph contribution, or T2 regression >.5pp. If passed, three teacher seeds and full validation with per-seed differences and intervals are mandatory before any stable claim. T4/T8, source percentile, cost accounting and external validity remain downstream requirements.
+
+Memory/runtime: RTX3060, batch32, fixed512 val, two teachers only; first small-batch smoke then <10min expected. Two temporary node×channel projections plus sparse edge reductions; no training gradients. Cap 12 policy-prefix endpoints per dataset, one budget1/4, one correction scale1/4, one random seed; no hyperparameter search. Unchanged previous experiments are not repeated. Code route: fork frozen event core with a single first-tick first-site interception; no previous source mutation. Baseline source audit supplies canonical percentile family, to run before candidate screen.
+
+All planned main claims are executable and have falsifiers/control paths. Pass for this bounded diagnostic, not for a method-paper main claim or a broad novelty claim.
+
+## Adversarial idea review (P1B)
+Field risk: A²Q, Degree-Quant and AdaFire already cover graph quantization and sensitivity budgets. Rescue survives only as input-specific exact-message residual allocation under frozen weights; no first-ever claim. Method risk: independently scored candidates have nonadditive message interactions; raw total message changes must be reported. Evidence risk: two datasets share superpixel modality and one teacher per screen; never call it stable or external. Efficiency risk: extra dense scoring can dominate, and scalar event counts are not physical energy. Deployment risk: ReLU of the current first preactivation is an extra analog operation; must be explicit, so it is not an all-spiking hardware claim.
+
+Repair conditions: implementation tests prove exact score for a single correction and correct state feedback; all policies share corrections/budget/base parameters; report actual nonzero events and counting limitations. If gains arise only from extra events, remove structural contribution. If failure persists, stop this candidate rather than tune budget fractions. Novelty confidence: low/moderate and bounded by reviewed cluster, not a numerical acceptance probability. Current paper readiness remains low regardless of execution feasibility.
+
+## Planned-claim integrity audit (P1B)
+No measured candidate gain, multi-seed statistic, energy saving or general theorem is asserted here. Prior110 rows remain separate evidence. Exposed validation is explicitly exploratory; test not loaded. Parameter snapshots from previous all_local .001 are frozen reusable inputs; no test-driven selection. Scores target the actual fixed folded operator; dynamic Gated propagation is outside the identity. Concern-to-action mapping is the preceding paragraph; unresolved broad novelty/comparator/external breadth blocks publication claims, not this finite hypothesis test.

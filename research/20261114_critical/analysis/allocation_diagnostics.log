@@ -1,0 +1,5 @@
+Allocation structure and synchronized runtime diagnostic; no retraining.
+MNIST: 512 val graphs; all totals exact for five policies. Median ms/graph: baseline 0.3684, random 0.6084, local 0.6678, identity 0.7178, shuffled 0.9247, message 0.8343
+CIFAR10: 512 val graphs; all totals exact for five policies. Median ms/graph: baseline 0.4965, random 0.7451, local 0.8063, identity 0.8627, shuffled 1.0745, message 0.9914
+Complete. Timings include diagnostic policy-selection instrumentation; no energy inference.
+Run history: initial attempts aborted on a leaf-parameter load guard, then exposed one-event count drift in an exploratory run without matching the completed run deterministic setup. An incomplete MNIST NPZ from that attempt was removed before final rerun; the deterministic rerun passed exact T1 count checks. A weighted CUDA bincount attempt was rejected under deterministic algorithms and replaced by per-graph slice reductions.

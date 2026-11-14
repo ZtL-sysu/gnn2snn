@@ -1,0 +1,17 @@
+{
+  "source_root": "C:/code/AutoResearchClaw",
+  "source_commit": "84dad0a",
+  "network_invoked": false,
+  "paid_probe": false,
+  "import_success": true,
+  "stages": {
+    "PAPER_OUTLINE": 16,
+    "PAPER_DRAFT": 17,
+    "PEER_REVIEW": 18,
+    "PAPER_REVISION": 19,
+    "QUALITY_GATE": 20,
+    "EXPORT_PUBLISH": 22,
+    "CITATION_VERIFY": 23
+  },
+  "context_isolation": "not yet verified: native writing adapter required before executing stages"
+}

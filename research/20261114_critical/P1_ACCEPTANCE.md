@@ -1,0 +1,9 @@
+# P1 guidance extraction and authorized finite rescue
+
+The complete user guidance is versioned at inputs/user-guidance.md. It explicitly authorizes conditional route A/B/C/D, bounded redesign, no teacher retraining, no test selection, and stage-wise GitHub delivery. It does not require fabricated positive results. Original 48h resource ceiling is a ceiling, not a target to consume.
+
+Story: strong-teacher fidelity → low-prefix gap → position sensitivity → realizability and objective limits → only evidence-supported new allocation. Primary metric accuracy percentage points against matched all-site and local policies; secondary agreement, reconstruction, actual events, dense latency and fitting cost. Data: existing official MNIST/CIFAR10 superpixels, fixed train512/val512 first. Exposed historical endpoints remain descriptive. Candidate success/failure and expansion rules are in RESCUE_PROTOCOL.md; baselines include pre-existing local calibration and source-linked channel percentile adaptation. Prior 110 endpoints are reusable negative evidence, not proposed-method wins.
+
+The recommended user outline maps to six numbered main sections: Introduction; Related Work; Method (problem/preliminaries/design); Experiments and Results (motivation/setup/main/ablations/cost); Discussion (limitations); Conclusion. Only supported claims may enter an eventual paper. No venue or fixed page budget is invented. Figure/table selection follows scientific need; a framework diagram is appropriate only if a verified method survives. Citation scope and close-work risks are in RELATED_WORK.md and LITERATURE_DEEP_REVIEW.md.
+
+P1 pass means the research question is executable, not that it is novel or successful. Mechanism feasibility, matched controls and adversarial scientific concerns are checked separately at P1A/P1B. Earlier results are imported as immutable evidence and are not retrained to populate stage records.
