@@ -1,0 +1,27 @@
+{
+  "stage": 18,
+  "status": "done",
+  "artifacts": [
+    "reviews.md"
+  ],
+  "actual_arc_executor": "researchclaw.pipeline.stage_impls._review_publish._execute_peer_review",
+  "executor_source_sha256": "8fad56dfaf795a3cb9a0da0ce3a8cb42eefcd7a2704c38c28b1e062ed56a331d",
+  "client_source_sha256": "dfbbeb34f01944b355d4a72f1cd60aa44725b64faeaf9cfff34a531d0aa143d6",
+  "production": true,
+  "calls": [
+    {
+      "stage": 18,
+      "call": 1,
+      "approved_request_sha256": "278ffc7286f316022fd835afdf9d91cccc2f697d140b3fa2df85187845ac2991",
+      "emitted_request_sha256": "0d2be2efe9861d56e08e611b83efabe19ef6f361ec181c6f0896770d559ab8ba",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "9ea30ceaae375376d02754bdb3e076fef85059a0c378dc70567ca8455748df9d",
+      "response_sha256": "a02c47a2beba3057d6fdb58ccd1ed7234d04ea903e0d5eb16b47e12c6f4bd393"
+    }
+  ],
+  "mode": "native file exchange"
+}

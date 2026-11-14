@@ -1,0 +1,7 @@
+# P19 selective academic polish
+
+Primary diagnosed four concrete defects: a rhetorical question in the opening, adjacent repeated background sentences, an editorial disambiguation in Results, and a repeated negative-method disclaimer in Conclusion. Four local edits address these defects; the remaining prose is retained. No informal voice, promotional novelty, broad paraphrase, new number or extra limitation is added.
+
+The installed ml-paper-writing, paper-refine, paper-polish-workflow and humanizer advice is resolved through four clean writing-adapter inputs under the shared formal academic profile. This is one primary same-agent-role-pass after worker quota exhaustion, not four independent/model-generated reviews. Interactive checkpoint advice does not override the user's autonomous execution instruction. The primary supplied one separate manuscript/notes response; notes do not enter paper prose.
+
+Numeric token sequence, displayed equations and in-text citation sequence are exactly equal before/after. Main six-section order, negative findings, conditional interpretation, teacher/split/selection exposure, budget definitions and runtime boundaries remain unchanged. Whole-paper continuity still connects sensitivity to realizability, matched controls and cost; Results reports observations and Discussion interprets them. Accepted snapshot: manuscript_p19.md. Final TeX/PDF must be regenerated at P20.

@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "brief": {
+    "question": "Does critical-site sensitivity translate into realizable, graph-specific improvements in low-timestep GCN-to-SNN conversion?",
+    "answer": "The tested strong-teacher setting separates ideal sensitivity from practical calibration. Message objectives and fixed-budget residual selection do not establish robust structural advantage over matched local and counterfactual controls.",
+    "audience": "Researchers designing conversion and graph quantization methods who need to distinguish realizability, target mismatch and event-budget effects.",
+    "domain_bridge": "Graph propagation makes quantization errors directional. Actual next-message perturbations and within-graph operator controls test whether exploiting that direction yields classification gains beyond local reconstruction.",
+    "priorities": {
+      "main": [
+        "sensitivity versus realizability",
+        "matched structure contribution tests"
+      ],
+      "supporting": [
+        "strong-teacher fidelity",
+        "local calibration gains"
+      ],
+      "diagnostic": [
+        "surrogate and hard optimization",
+        "alphabet capacity",
+        "event budget and dense runtime"
+      ]
+    },
+    "terminology": {
+      "T": "active ticks",
+      "event": "signed graded scalar amplitude",
+      "ideal recovery": "continuous causal diagnostic",
+      "opportunity budget": "upper bound on extra per-channel events, not equal actual energy"
+    },
+    "paragraph_plan": [],
+    "qualification_placement": [],
+    "section_jobs": {
+      "Introduction": "Present low-prefix graph conversion and sensitivity-realizability question.",
+      "Related Work": "Separate known calibration, coding, graph quantization and adaptive budgets from this empirical test.",
+      "Method": "Define teachers, exact event dynamics, loss comparisons, ideal diagnostic and bounded allocation.",
+      "Experiments and Results": "Organize comparisons by scientific question with their own matched scopes and uncertainty.",
+      "Discussion": "Explain practical capacity and proxy limitations and hardware implications.",
+      "Conclusion": "State evidence-scaled empirical answer and remaining method gap."
+    },
+    "author_constraints": {
+      "edit_scope": [
+        "structural",
+        "scientific prose"
+      ],
+      "protected_sections": [],
+      "protected_artifacts": [],
+      "declaration_mode": "author-managed",
+      "allow_new_experiments": false,
+      "editing_round_budget": 3
+    },
+    "journal_requirements": {
+      "source": "no target venue specified",
+      "length": "content-led; no invented submission page limit",
+      "explicit_author_requirements": [
+        "do not claim successful method without evidence",
+        "preserve negative results",
+        "distinguish old and new work"
+      ]
+    }
+  },
+  "facts": [
+    {
+      "id": "design",
+      "kind": "method",
+      "statement": "Frozen four-layer residual GCNs classify MNIST and CIFAR10 superpixel graphs. Four node branches and two readout activations use signed eight-level differential events. Subsequent studies preserve teacher weights.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "allocation_core.py",
+          "sha256": "aa30ad04e7bfe995dcc920490357c1c1519d4bad4151640de2061e6088e59774"
+        }
+      ]
+    },
+    {
+      "id": "selection",
+      "kind": "disclosure",
+      "statement": "New comparisons use 512 training calibration graphs and 512 validation graphs from fixed indices. Both official validation and test sets have historical exposure. New methods are selected without loading test; these are exploratory comparisons, not independent external confirmation.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "RESCUE_PROTOCOL.md",
+          "sha256": "dcaae65bc0f69315f7580e6042d5410ec86184b1c474138d8da77a41b243ff89"
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "kind": "method",
+      "statement": "For a fixed folded graph convolution, first-site error E changes the next preactivation by A E W transpose. Residual identity and later nonlinearities remain separate. This linear identity motivates a proxy, not a novel theorem or an exact final-classification model.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "objective.py",
+          "sha256": "49f90155b78067992ae4ab21af2e6d9a95fd39f2e13402016e498a8ff9b4cf60"
+        }
+      ]
+    },
+    {
+      "id": "ref_li2021",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Layerwise ANN-to-SNN calibration uses pretrained ANN information to reduce activation mismatch.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Li, Yuhang and Deng, Shikuang and Dong, Xin and Gong, Ruihao and Gu, Shi",
+      "citation": {
+        "key": "li2021",
+        "authors": "Li, Yuhang and Deng, Shikuang and Dong, Xin and Gong, Ruihao and Gu, Shi",
+        "title": "A Free Lunch From ANN: Towards Efficient, Accurate Spiking Neural Networks Calibration",
+        "year": "2021",
+        "url": "https://proceedings.mlr.press/v139/li21d.html"
+      }
+    },
+    {
+      "id": "ref_bojkovic2024",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Activation-distribution information can guide threshold and initial-potential initialization.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Bojkovic, Velibor and Anumasa, Srinivas and De Masi, Giulia and Gu, Bin and Xiong, Huan",
+      "citation": {
+        "key": "bojkovic2024",
+        "authors": "Bojkovic, Velibor and Anumasa, Srinivas and De Masi, Giulia and Gu, Bin and Xiong, Huan",
+        "title": "Data Driven Threshold and Potential Initialization for Spiking Neural Networks",
+        "year": "2024",
+        "url": "https://proceedings.mlr.press/v238/bojkovic24a.html"
+      }
+    },
+    {
+      "id": "ref_huang2025",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Differential coding transmits changes in represented activation with time-dependent decoding.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Huang, Zihan and Fang, Wei and Bu, Tong and Xue, Peng and Hao, Zecheng and Liu, Wenxuan and Tang, Yuanhong and Yu, Zhaofei and Huang, Tiejun",
+      "citation": {
+        "key": "huang2025",
+        "authors": "Huang, Zihan and Fang, Wei and Bu, Tong and Xue, Peng and Hao, Zecheng and Liu, Wenxuan and Tang, Yuanhong and Yu, Zhaofei and Huang, Tiejun",
+        "title": "Differential Coding for Training-Free {ANN}-to-{SNN} Conversion",
+        "year": "2025",
+        "url": "https://proceedings.mlr.press/v267/huang25i.html"
+      }
+    },
+    {
+      "id": "ref_bojkovic2025",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Temporal misalignment is a recognized conversion error source and can be mitigated with probabilistic neurons.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Bojkovic, Velibor and Wu, Xiaofeng and Gu, Bin",
+      "citation": {
+        "key": "bojkovic2025",
+        "authors": "Bojkovic, Velibor and Wu, Xiaofeng and Gu, Bin",
+        "title": "Temporal Misalignment in {ANN}-{SNN} Conversion and its Mitigation via Probabilistic Spiking Neurons",
+        "year": "2025",
+        "url": "https://proceedings.mlr.press/v267/bojkovic25a.html"
+      }
+    },
+    {
+      "id": "ref_dwivedi2023",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Benchmarking Graph Neural Networks provides graph classification architectures and superpixel tasks used as teacher-design context.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Vijay Prakash Dwivedi and Chaitanya K. Joshi and Anh Tuan Luu and Thomas Laurent and Yoshua Bengio and Xavier Bresson",
+      "citation": {
+        "key": "dwivedi2023",
+        "authors": "Vijay Prakash Dwivedi and Chaitanya K. Joshi and Anh Tuan Luu and Thomas Laurent and Yoshua Bengio and Xavier Bresson",
+        "title": "Benchmarking Graph Neural Networks",
+        "year": "2023",
+        "url": "https://jmlr.org/papers/v24/22-0567.html"
+      }
+    },
+    {
+      "id": "ref_fas2025",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Coarse-to-fine calibration has been studied in ANN-to-SNN conversion for language models.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Long Chen and Xiaotian Song and Andy Song and BaDong Chen and Jiancheng Lv and Yanan Sun",
+      "citation": {
+        "key": "fas2025",
+        "authors": "Long Chen and Xiaotian Song and Andy Song and BaDong Chen and Jiancheng Lv and Yanan Sun",
+        "title": "FAS: Fast ANN-SNN Conversion for Spiking Large Language Models",
+        "year": "2025",
+        "url": "https://arxiv.org/abs/2502.04405"
+      }
+    },
+    {
+      "id": "ref_onespike2024",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Single-spike phase coding with threshold shifts and base manipulation includes GCN conversion.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Sangwoo Hwang and Jaeha Kung",
+      "citation": {
+        "key": "onespike2024",
+        "authors": "Sangwoo Hwang and Jaeha Kung",
+        "title": "One-Spike SNN: Single-Spike Phase Coding with Base Manipulation for ANN-to-SNN Conversion Loss Minimization",
+        "year": "2024",
+        "url": "https://arxiv.org/abs/2403.08786"
+      }
+    },
+    {
+      "id": "ref_a2q2023",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Aggregation-aware graph quantization learns node precision and step sizes, with graph-level generalization.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Zhu, Zeyu and Li, Fanrong and Mo, Zitao and Hu, Qinghao and Li, Gang and Liu, Zejian and Liang, Xiaoyao and Cheng, Jian",
+      "citation": {
+        "key": "a2q2023",
+        "authors": "Zhu, Zeyu and Li, Fanrong and Mo, Zitao and Hu, Qinghao and Li, Gang and Liu, Zejian and Liang, Xiaoyao and Cheng, Jian",
+        "title": "{A$^2$Q}: Aggregation-Aware Quantization for Graph Neural Networks",
+        "year": "2023",
+        "url": "https://openreview.net/forum?id=7L2mgi0TNEP"
+      }
+    },
+    {
+      "id": "ref_degreequant2021",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Degree-Quant uses graph-sensitive protective masking during quantization-aware training.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Tailor, Shyam A. and Fernandez-Marques, Javier and Lane, Nicholas D.",
+      "citation": {
+        "key": "degreequant2021",
+        "authors": "Tailor, Shyam A. and Fernandez-Marques, Javier and Lane, Nicholas D.",
+        "title": "{Degree-Quant}: Quantization-Aware Training for Graph Neural Networks",
+        "year": "2021",
+        "url": "https://openreview.net/forum?id=NSBrFgJAHg"
+      }
+    },
+    {
+      "id": "ref_adafire2024",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Adaptive calibration searches layer firing patterns and sensitivity-dependent compression and input-dependent timesteps.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Wang, Ziqing and Fang, Yuetong and Cao, Jiahang and Ren, Hongwei and Xu, Renjing",
+      "citation": {
+        "key": "adafire2024",
+        "authors": "Wang, Ziqing and Fang, Yuetong and Cao, Jiahang and Ren, Hongwei and Xu, Renjing",
+        "title": "Adaptive Calibration: A Unified Conversion Framework of Spiking Neural Networks",
+        "year": "2025",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/32150"
+      }
+    },
+    {
+      "id": "ref_atif2023",
+      "kind": "reference",
+      "status": "author_reported",
+      "statement": "Trainable uniform and nonuniform neuron quantization has been studied for low-timestep SNNs.",
+      "evidence": [
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        }
+      ],
+      "attribution": "Castagnetti, Andrea and Pegatoquet, Alain and Miramond, Beno{\\^i}t",
+      "citation": {
+        "key": "atif2023",
+        "authors": "Castagnetti, Andrea and Pegatoquet, Alain and Miramond, Beno{\\^i}t",
+        "title": "Trainable quantization for Speedy Spiking Neural Networks",
+        "year": "2023",
+        "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1154241/full"
+      }
+    },
+    {
+      "id": "exact_objectives",
+      "kind": "method",
+      "status": "observed_verified",
+      "statement": "Local loss is first-site normalized MSE for first_local and mean of six normalized site MSEs for all_local. First_message =0.5*(first-local + first-site normalized actual next-message error). All_message=0.5*(six-site local mean + the SAME first-site normalized actual next-message error); it fits693 offsets but does not add message objectives at later sites.",
+      "evidence": [
+        {
+          "path": "objective.py",
+          "sha256": "49f90155b78067992ae4ab21af2e6d9a95fd39f2e13402016e498a8ff9b4cf60"
+        }
+      ]
+    },
+    {
+      "id": "precise_statistics",
+      "kind": "method",
+      "status": "observed_verified",
+      "statement": "For n=512 paired graphs define d_i=correct_actual_i-correct_control_i in {-1,0,1}; delta_pp=100 mean(d), descriptive95%normal interval delta_pp +/-1.96*100*sampleSD(d)/sqrt(n). Many candidates/settings use the same subset for exploration and expansion selection; intervals do not account for that selection, multiplicity, seed variation or independent generalization.",
+      "evidence": [
+        {
+          "path": "summarize_rescue.py",
+          "sha256": "946868c2fa8e0d29e3a9dc254b310766f3122e79ca86d7d44fbdb668e7dafe90"
+        }
+      ]
+    },
+    {
+      "id": "recovery_gap",
+      "kind": "method",
+      "status": "observed_verified",
+      "statement": "Set u_0=0. Per teacher, disagreement closure is 1-d_intervention/d_base, where d is fraction of predictions disagreeing with that teacher on the same graphs. Report mean and sampleSD across3teachers. Conditional continuous effects are nonadditive; no teacher hidden-state overwrite.",
+      "evidence": [
+        {
+          "path": "inputs/historical/ideal_site_diagnostic.py",
+          "sha256": "3540d516a189bc1763070e964a92449d4b1940b90e31f233258e6caeb3e1ead5"
+        },
+        {
+          "path": "inputs/historical/ideal.csv",
+          "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20"
+        }
+      ]
+    },
+    {
+      "id": "fit_loop_cost",
+      "kind": "method",
+      "status": "observed_verified",
+      "statement": "T1 Adam .001 screen local/message first/all-site fits have recorded fit-loop times1.1214 to1.7101seconds on RTX3060, one observation per condition,64updates on cached32graph batches. These exclude teacher-target caching,threshold estimation and setup, include ordinary fit-loop instrumentation/gradient checks, and are not repeated speed benchmarks or total calibration cost.",
+      "evidence": [
+        {
+          "path": "run_critical.py",
+          "sha256": "645d9a623c721acf9345b64f23c11b162879d77907a1bfdc6e50f3171ae20500"
+        },
+        {
+          "path": "runs/screen/MNIST41/first_local_T1_training.json",
+          "sha256": "65c08c58947809a0cf1850b149ed1e4c2411d4726f95692338608de25b30dc8c"
+        },
+        {
+          "path": "runs/screen/MNIST41/first_message_T1_training.json",
+          "sha256": "b23f54e044f5367e24ae437f23bda6e08dd0ab7673ced0ec6b14231a3b0e9b87"
+        },
+        {
+          "path": "runs/screen/MNIST41/all_local_T1_training.json",
+          "sha256": "157c2c0d2260898748b52b0e32aaa795735ead227853f606bb319fbd3a92dc4d"
+        },
+        {
+          "path": "runs/screen/MNIST41/all_message_T1_training.json",
+          "sha256": "0f19ba491bd6dee560cde2ee57c22ce96a54a8a9a01e33195345bec7eff56ad6"
+        },
+        {
+          "path": "runs/screen/CIFAR1041/first_local_T1_training.json",
+          "sha256": "1a5292e7043880dbd1a1b777e89c301c380949f0665a08438f47b9dd18c0abab"
+        },
+        {
+          "path": "runs/screen/CIFAR1041/first_message_T1_training.json",
+          "sha256": "4ba57db33aa211c2aef9efab31a4fa59b2a8ee497e162601d4bc106f9785f552"
+        },
+        {
+          "path": "runs/screen/CIFAR1041/all_local_T1_training.json",
+          "sha256": "6efdcd3f339d06a69158c465d3fba081365f1d25f728137ac4c53afa51ccdca7"
+        },
+        {
+          "path": "runs/screen/CIFAR1041/all_message_T1_training.json",
+          "sha256": "c0d995c87820cd208ca0eacd599f0800bfbaf5f6656e222977062436d4107337"
+        }
+      ]
+    },
+    {
+      "id": "permutation_rule",
+      "kind": "method",
+      "status": "observed_verified",
+      "statement": "Within-graph permutations use a CPU generator initialized with seed20261116, advanced graph-by-graph for each fixed batch. Identity permutation for graphsize>1 is rolled. The same batch/graph order shares P across arms; P^-1 A P relabels the operator against fixed features, without altering the task graph or labels.",
+      "evidence": [
+        {
+          "path": "objective.py",
+          "sha256": "49f90155b78067992ae4ab21af2e6d9a95fd39f2e13402016e498a8ff9b4cf60"
+        }
+      ]
+    }
+  ],
+  "internal": {
+    "state": "prepared scientific packet, not accepted P6/ARC execution; diagnostic cost facts audited; bibliography and final scientific content to be reviewed separately"
+  }
+}

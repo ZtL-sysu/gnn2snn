@@ -1,0 +1,26 @@
+{
+  "stage": 16,
+  "status": "done",
+  "artifacts": [
+    "outline.md"
+  ],
+  "actual_arc_executor": "researchclaw.pipeline.stage_impls._paper_writing._execute_paper_outline",
+  "executor_source_sha256": "aa1a84ff85691fed8a6691d0ab1839e5b6e449347840458ed10535432b559321",
+  "client_source_sha256": "9337b6a1c6bb515167cebce94e11ffa5c7069ae919550f5ccc0bb37b1656f049",
+  "production": true,
+  "calls": [
+    {
+      "stage": 16,
+      "call": 1,
+      "approved_request_sha256": "9e6d9949f0c9d2389707bfaa0d83034e04fb26b9dc5af7e0c36c30952d6e6e93",
+      "emitted_request_sha256": "ca5ea1f98915b170c6c1ab072be211139c8675fa66779e45e4be7d15c9958412",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "745ac3fdd3ba9ed12ee63e25d87e5c9e85a346469f54e09ae3bd83351b7a1c9e",
+      "response_sha256": "3417bb431fb4e3c71c849890707b4d23199b5af07a788d9a83dcc5ec37311b07"
+    }
+  ]
+}

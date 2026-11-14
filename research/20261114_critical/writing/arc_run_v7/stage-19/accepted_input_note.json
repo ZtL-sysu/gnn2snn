@@ -1,0 +1,5 @@
+{
+  "native_response_preserved": "../native-exchange-19/call_01_response.json",
+  "accepted_stage_input": "paper_revised.md",
+  "difference": "Primary fixed one literal apostrophe escape and normalized UTF8/LF; original live response remains immutable."
+}

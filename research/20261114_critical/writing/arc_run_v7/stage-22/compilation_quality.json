@@ -1,0 +1,26 @@
+{
+  "page_count": 9,
+  "unresolved_refs": [
+    "LaTeX Warning: Reference `fig:framework' on page 3 undefined on input line 55.",
+    "LaTeX Warning: Reference `tab:historical' on page 5 undefined on input line 128",
+    "LaTeX Warning: Reference `fig:ideal_sensitivity' on page 5 undefined on input l",
+    "LaTeX Warning: Reference `tab:realizability' on page 6 undefined on input line",
+    "LaTeX Warning: Reference `tab:allocation' on page 6 undefined on input line 156",
+    "LaTeX Warning: Reference `fig:allocation_contrasts' on page 6 undefined on inpu",
+    "LaTeX Warning: Reference `fig:mechanism_runtime' on page 7 undefined on input l",
+    "LaTeX Warning: Reference `tab:mechanism_cost' on page 7 undefined on input line"
+  ],
+  "unresolved_cites": [],
+  "overfull_hboxes": 0,
+  "orphan_figures": [
+    "fig:allocation_contrasts",
+    "fig:framework",
+    "fig:ideal_sensitivity",
+    "fig:mechanism_runtime"
+  ],
+  "orphan_labels": [],
+  "warnings": [
+    "8 unresolved reference(s)",
+    "4 referenced but undefined figure(s): fig:allocation_contrasts, fig:framework, fig:ideal_sensitivity"
+  ]
+}

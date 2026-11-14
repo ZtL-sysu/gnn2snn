@@ -1,0 +1,35 @@
+{
+  "cited_keys": [
+    "a2q2023",
+    "adafire2024",
+    "atif2023",
+    "bojkovic2024",
+    "bojkovic2025",
+    "degreequant2021",
+    "dwivedi2023",
+    "fas2025",
+    "huang2025",
+    "li2021",
+    "onespike2024"
+  ],
+  "bib_keys": [
+    "li2021",
+    "bojkovic2024",
+    "huang2025",
+    "bojkovic2025",
+    "dwivedi2023",
+    "fas2025",
+    "onespike2024",
+    "a2q2023",
+    "degreequant2021",
+    "adafire2024",
+    "atif2023"
+  ],
+  "missing": [],
+  "rescue_raw_endpoints_reverified": 32,
+  "table_sources_hash_correct": 5,
+  "six_sections": true,
+  "table_markers": 4,
+  "figure_markers": 4,
+  "scope": "numeric/structural check, not independent scientific review"
+}

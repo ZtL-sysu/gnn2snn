@@ -1,0 +1,44 @@
+[
+  {
+    "action": "NARROW",
+    "location": "Related Work and Discussion",
+    "proposition": "Known layer calibration,graph quantization,sensitivity-based budgets and GCN conversion are precedents. State One-Spike includes GCN conversion; formulate this work as a bounded empirical test, remove implied exhaustive novelty-absence claims.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Keep the11existingrefs and nofirst/SOTAclaim."
+  },
+  {
+    "action": "REWRITE",
+    "location": "Method3.2",
+    "proposition": "State first-message and all-message objectives exactly from exact_objectives fact. Add fixed within-graph permutation construction.",
+    "evidence_status": "observed_verified",
+    "factual_check": "All-message still693offsets, first-message146; no later-site message objectives."
+  },
+  {
+    "action": "REWRITE",
+    "location": "Method3.3",
+    "proposition": "Specify u0=0 and perteacher disagreement-gap closure definition.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Do not convert disagreement closure to accuracygap."
+  },
+  {
+    "action": "REWRITE",
+    "location": "Method3.5",
+    "proposition": "Define n512 paired correctness differences and descriptive95%normal CI; explicitly explain selection-exposed reuse among many candidate families.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Preserve historicaltest andvalidationexposure; noindependentconfirmation."
+  },
+  {
+    "action": "REWRITE",
+    "location": "Results4.4",
+    "proposition": "Report cached offline fit-loop cost from fit_loop_cost with inclusions/exclusions and oneobservation qualification, separate fromonlineallocationtime.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Noamortized orpipelinecost invented."
+  },
+  {
+    "action": "REWRITE",
+    "location": "Methods3.4 and visual narration",
+    "proposition": "Add concise method-family/budget prose, introduce eachFigure/Table explicitly near explanation; move realizability tablemarker into4.2.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Preserve all4table and4figuremarkers,numbers,math,negativefindings. Other prose unchanged wherepossible."
+  }
+]

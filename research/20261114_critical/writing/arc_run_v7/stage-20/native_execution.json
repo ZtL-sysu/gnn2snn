@@ -1,0 +1,28 @@
+{
+  "stage": 20,
+  "status": "done",
+  "artifacts": [
+    "quality_report.json",
+    "fabrication_flags.json"
+  ],
+  "actual_arc_executor": "researchclaw.pipeline.stage_impls._review_publish._execute_quality_gate",
+  "executor_source_sha256": "8fad56dfaf795a3cb9a0da0ce3a8cb42eefcd7a2704c38c28b1e062ed56a331d",
+  "client_source_sha256": "dfbbeb34f01944b355d4a72f1cd60aa44725b64faeaf9cfff34a531d0aa143d6",
+  "production": true,
+  "calls": [
+    {
+      "stage": 20,
+      "call": 1,
+      "approved_request_sha256": "f005699f8ea24ce8fc8cadb51e962766a4407dcfea05b82e267006430b66ef84",
+      "emitted_request_sha256": "4770dbe1f73a2af849f3aa5840f5fdcf04e17df090ae4a157b5ed81a79e11399",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "1eb9fdd70725e1d7ed0d4bed9c41b0936a9dbf4d4f584b0371b18db9e17dcceb",
+      "response_sha256": "b2b0f7b8adbc297a38972f3521d19d1f1b43678f386e427ce282cff07650b303"
+    }
+  ],
+  "mode": "native file exchange"
+}

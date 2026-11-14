@@ -1,0 +1,18 @@
+{
+  "stage": 22,
+  "status": "done",
+  "artifacts": [
+    "paper_final.md",
+    "paper_final_latex.md",
+    "references.bib",
+    "paper.tex",
+    "paper.pdf",
+    "compilation_quality.json"
+  ],
+  "actual_arc_executor": "researchclaw.pipeline.stage_impls._review_publish._execute_export_publish",
+  "executor_source_sha256": "8fad56dfaf795a3cb9a0da0ce3a8cb42eefcd7a2704c38c28b1e062ed56a331d",
+  "client_source_sha256": "dfbbeb34f01944b355d4a72f1cd60aa44725b64faeaf9cfff34a531d0aa143d6",
+  "production": true,
+  "calls": [],
+  "mode": "actual programmatic ARC execution"
+}

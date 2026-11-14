@@ -1,0 +1,30 @@
+[
+  {
+    "action": "REWRITE",
+    "location": "Introduction",
+    "proposition": "Replace rhetorical opening question with a direct motivation for comparing next-message calibration and local matching.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Preserve every number, equation, citation and scientific limitation; no broader claim or informal humanizer voice."
+  },
+  {
+    "action": "REWRITE",
+    "location": "Related Work",
+    "proposition": "Merge adjacent sentences that repeat the coding/calibration background role.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Preserve every number, equation, citation and scientific limitation; no broader claim or informal humanizer voice."
+  },
+  {
+    "action": "REWRITE",
+    "location": "Results4.3",
+    "proposition": "State the coexistence of lower immediate messageMSE and failed classification screen directly, without an editorial correction about earlier membrane results.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Preserve every number, equation, citation and scientific limitation; no broader claim or informal humanizer voice."
+  },
+  {
+    "action": "REWRITE",
+    "location": "Conclusion",
+    "proposition": "Replace repeated successful-method disclaimer with a direct bounded empirical conclusion.",
+    "evidence_status": "observed_verified",
+    "factual_check": "Preserve every number, equation, citation and scientific limitation; no broader claim or informal humanizer voice."
+  }
+]

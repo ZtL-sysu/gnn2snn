@@ -117,7 +117,7 @@ def execute_stage(stage,run_dir,client):
              'reviews.md':run_dir/'stage-18/reviews.md',
              'paper_revised.md':run_dir/'stage-19/paper_revised.md',
              'references.bib':run_dir/'references.bib',
-             'paper_final.md':run_dir/'stage-22/paper_final.md',
+             'paper_final.md':run_dir/'accepted_export.md' if (run_dir/'accepted_export.md').exists() else run_dir/'stage-22/paper_final.md',
              'experiment_summary.json':run_dir/'scientific_summary.json'}
     def safe_read(_root,name):
         path=allowed.get(name)

@@ -1,0 +1,9 @@
+{
+  "source_sha256": "43524ca3be70b7cd7ac22edcdc0e6c9833605c468ee116e159261eb4b3983a96",
+  "accepted_sha256": "743a738e3f135a0272907b344f153679466cb7016ad3dbf3715430702733caf3",
+  "numeric_token_sequence_equal": true,
+  "display_equations_equal": true,
+  "citation_sequence_equal": true,
+  "local_edits": 4,
+  "review_execution": "same-agent-role-pass"
+}

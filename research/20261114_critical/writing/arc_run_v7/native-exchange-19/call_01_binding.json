@@ -1,0 +1,9 @@
+{
+  "request_sha256": "72712bc7730e59a01a9d4aae74308b73966bd5c5fd5ae9ad7df5c4a3fdf9fe51",
+  "execution_identity": {
+    "role": "primary native assistant",
+    "model": "not exposed",
+    "reasoning_effort": "not exposed",
+    "reason": "Luna usage limit; primary authoring of targeted scientific revision"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "stage": 17,
+  "status": "done",
+  "artifacts": [
+    "paper_draft.md"
+  ],
+  "actual_arc_executor": "researchclaw.pipeline.stage_impls._paper_writing._execute_paper_draft",
+  "executor_source_sha256": "aa1a84ff85691fed8a6691d0ab1839e5b6e449347840458ed10535432b559321",
+  "client_source_sha256": "aa6d7775bae130eaa4611660656e442d7f16e1683417d7b78219cdb98a4289d3",
+  "production": true,
+  "calls": [
+    {
+      "stage": 17,
+      "call": 1,
+      "approved_request_sha256": "50589df6b47ade2cfa46035ee316993e28e79322c48456310b1abb7e6918dedf",
+      "emitted_request_sha256": "0c421cb7a429311d9821b3ddb1e1966b2141327710291ae0c105a1c1f2d771a8",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "4b398e5247e4f83650821cb9ad5cdde88c2b87f0e5a9c8f08f268d42c4fe10a6",
+      "response_origin": "resumed previously live native exchange",
+      "original_exchange": "research\\20261114_critical\\writing\\arc_run_v4\\native-exchange-17",
+      "original_response_sha256": "c8f7f1012f14e9c757805fc4ed9bb85125770ead575299a0960870771b6a43fe",
+      "new_native_generation": false,
+      "original_execution_identity": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "medium",
+        "context": "fresh"
+      },
+      "response_sha256": "c8f7f1012f14e9c757805fc4ed9bb85125770ead575299a0960870771b6a43fe"
+    },
+    {
+      "stage": 17,
+      "call": 2,
+      "approved_request_sha256": "b5c033b08c0666fc13546b21255fe0549be003cf41e64706feee6f2d33febb38",
+      "emitted_request_sha256": "503d8f1a36fa32c03b8c87130273757ef9d96de38f1ef2e88d8c9a76dd8a06cc",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "fc21e5241d5445ce4318ab686bb5e36c3664242ee5ec49b1c8bffd6a5ced0ea7",
+      "recovered_consumed_prose_from": "research\\20261114_critical\\writing\\arc_run_v4\\native-exchange-17\\call_03_request.json",
+      "recovery_source_sha256": "8996869f13acfe08bd8e63e386d3ee48939389d728745663ed93059586db5194",
+      "original_trace_response_sha256": "0cca2f3d7d884f7ddc2ce470e97cce9324c2579109cb6a302725c192e36fb28b",
+      "late_response_edit_detected": true,
+      "response_origin": "resumed previously live native exchange",
+      "original_exchange": "research\\20261114_critical\\writing\\arc_run_v4\\native-exchange-17",
+      "original_response_sha256": "11ca40bb3c2bcf54d0d365cb4f0991590ee3fb5f606b9c766c942039186f7c44",
+      "new_native_generation": false,
+      "original_execution_identity": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "medium",
+        "context": "fresh"
+      },
+      "response_sha256": "3203a27ebb40170912cbef28547fde868a5b52a57ad9f905d57d536d06f5a538"
+    },
+    {
+      "stage": 17,
+      "call": 3,
+      "approved_request_sha256": "4430bfe2c80ef713c13562b54d437f2fb8e8bb16ba19c93720b973ea90300d9c",
+      "emitted_request_sha256": "8996869f13acfe08bd8e63e386d3ee48939389d728745663ed93059586db5194",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "9a475bcab5a2cab0eb9e9b003e970552196c99e18ef44f49ee779e122fd528f9",
+      "response_origin": "resumed previously live native exchange",
+      "original_exchange": "research\\20261114_critical\\writing\\arc_run_v4\\native-exchange-17",
+      "original_response_sha256": "05ddc43dd11edfe01786e62fc03cf1aec27a28aab85f368b6c01a2c6b008e218",
+      "new_native_generation": false,
+      "original_execution_identity": {
+        "role": "fresh native subagent",
+        "task_name": "/root/native_discussion_v2",
+        "requested_model": "gpt-6-luna",
+        "requested_reasoning_effort": "medium"
+      },
+      "response_sha256": "804c2f608d9f1c5fb21af1aaecf2d33730ca662d0078b0c649d69b8d10bec59a"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+.request_hash.tmp
+writing/**/stage-22/*.aux
+writing/**/stage-22/*.bbl
+writing/**/stage-22/*.blg
+writing/**/stage-22/*.log
+writing/**/stage-22/*.out
+writing/**/stage-22/*.fls
+writing/**/stage-22/*.fdb_latexmk

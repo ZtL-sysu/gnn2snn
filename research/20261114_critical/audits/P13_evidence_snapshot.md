@@ -1,0 +1,1 @@
+Exact-byte P13 TeX acceptance evidence was relocated to paper/source_snapshots/main_p13.tex before any typesetting repairs. The recorded SHA256 is unchanged. Current main.tex remains the working final source; final-source acceptance is separately checked at P15/P20/P21. No scientific gate is retroactively inferred.

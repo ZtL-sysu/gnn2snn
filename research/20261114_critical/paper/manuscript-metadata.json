@@ -1,0 +1,20 @@
+{
+  "title": "Critical-Site Sensitivity and Realizable Calibration in GCN-to-SNN Conversion",
+  "authors": [],
+  "author_status": "anonymous research draft; identities not provided",
+  "affiliations": [],
+  "corresponding_contacts": [],
+  "abstract": "Converting graph convolutional networks (GCNs) at very low temporal budgets couples finite-event approximation with graph-dependent error propagation. We study whether conditional activation-site sensitivity can guide calibration and residual-event selection beyond local reconstruction. Historical three-teacher experiments establish a T1 fidelity gap despite near-teacher accuracy at longer prefixes on MNIST and CIFAR10 superpixel graphs. A continuous causal recovery diagnostic closes 54.08% and 23.54% of teacher-prediction disagreement by recovering the first node site, respectively. Realizable offset, amplitude-alphabet and fixed-opportunity residual-allocation tests then compare actual graph operators with local, feature-only and permuted controls. In single-teacher exploratory screens on 512 validation graphs, actual-message allocation improves immediate message reconstruction but reaches T1 accuracies of 79.49% and 49.22%, against stronger local-fit references of 78.13% and 49.41%; its MNIST accuracy is also close to the permuted selector's 79.30%. At T2 it falls 0.586 percentage points below its unchanged base on both tasks. Instrumented RTX 3060 timing increases relative to local allocation. These results separate conditional sensitivity and message fidelity from demonstrated classification benefit: the tested candidates do not establish a robust graph-specific advantage.",
+  "venue": null,
+  "venue_constraints": "unresolved; none supplied",
+  "declarations": "author-managed, unresolved for submission; none invented",
+  "scientific_status": "completed bounded route-D empirical report; method contribution and submission readiness unsupported",
+  "numbered_sections": [
+    "Introduction",
+    "Related Work",
+    "Method",
+    "Experiments and Results",
+    "Discussion",
+    "Conclusion"
+  ]
+}

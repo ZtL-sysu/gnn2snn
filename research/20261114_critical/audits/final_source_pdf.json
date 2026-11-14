@@ -1,0 +1,20 @@
+{
+  "pages": 12,
+  "warnings": [],
+  "all_page_text_bounds_valid": true,
+  "files": {
+    "paper\\main.tex": "4eca3990dccf2999018efb8e63298820d3dde548cf0c64b51c2f0068d868ff5d",
+    "paper\\main.pdf": "528302f752c4295233130f45a6bb20003eb6e8072416c9b3a7313af89140b5d7",
+    "paper\\references.bib": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d",
+    "paper\\manuscript.md": "ef4a81442ee734b3a330ed4249781aceeb922bb43e9c18252137a8fcd8456353",
+    "paper\\manuscript-metadata.json": "8b93414ddfecc06bb4ce4b4aa3d77ed7232e489d70391e90a724059da8d5f210",
+    "paper\\tables\\allocation.tex": "bd2b8fa91c56450d0d545a72f4c648b97e37728bbb8b4b94a8df8a5f7534add8",
+    "paper\\tables\\historical.tex": "a73dd5e1196cb8890d83df64b1c2171cc11eb8623cbae15a74b2dca03113667f",
+    "paper\\tables\\mechanism_cost.tex": "df75c0b7b06df3c4e6115adf6f71baaa9e4a389e5364073493e9e7c87535b139",
+    "paper\\tables\\realizability.tex": "9adb5287c38d5e719ef8eddabc1440573a72dc0ac193cc5b178c7dbe5d08fcb6",
+    "figures\\framework.png": "64d280df8c7e8497a08200e77d111e989ff8dec4d2d4dbbb3b9f39afde4151db",
+    "figures\\ideal_sensitivity.pdf": "ac1c293764bccebbde5fffc890391e4a67d871f0f9eb141a907de4988dc89284",
+    "figures\\allocation_contrasts.pdf": "b49e27cf963467cb8d937cccc1be766576e1ec3eb123ba27c78c8d54201dd495",
+    "figures\\mechanism_runtime.pdf": "878a757f69ae9401efb7036d02735e187c01baf0abc505bd8a7080f5c42169cf"
+  }
+}

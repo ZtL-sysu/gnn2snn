@@ -118,6 +118,111 @@
       "action": "pass",
       "stage": "P8",
       "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P9",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P10",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P11",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P12",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P13",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P14",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P15",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P16",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P17",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "reopen",
+      "stage": "P17",
+      "reason": "Clarify initial142-input asset audit versus full1264-file historical manifest; unchanged scientific results and scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P17",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P18",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P19",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P20",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P21",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "reopen",
+      "stage": "P21",
+      "reason": "Portable final manifest must exclude reproducible git-ignored compiler cache; accepted scientific source/PDF/archive unchanged"
+    },
+    {
+      "action": "pass",
+      "stage": "P21",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "reopen",
+      "stage": "P21",
+      "reason": "Windows absolute stdin paths missed git-ignore rule; use repository-relative paths and verify every final manifest member is staged/tracked"
+    },
+    {
+      "action": "pass",
+      "stage": "P21",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "reopen",
+      "stage": "P21",
+      "reason": "Git stdin filename protocol required binary NUL framing on Windows; prior staged-coverage assertion failed, so delivery acceptance is reopened and must pass before commit"
+    },
+    {
+      "action": "pass",
+      "stage": "P21",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
     }
   ],
   "stages": [
@@ -502,107 +607,434 @@
     },
     {
       "id": "P9",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P9_action_ledger.md",
+          "sha256": "1ab4a3c365b4c823e15ea3e242c95ee2219f2a77e626378b4e82e7e63fbc89c3"
+        },
+        {
+          "path": "audits/P9_primary_checks.md",
+          "sha256": "5a9f5c30502366b8beaf7e693d26349aa262d10a897e6a2eb5b5993350ce9494"
+        },
+        {
+          "path": "audits/P9_full_manuscript_review.md",
+          "sha256": "e2525ced27db9d2478673719373ec1ce06d4db1714402fe4cdecc1afa42d14d2"
+        },
+        {
+          "path": "audits/P9_numeric_structure.json",
+          "sha256": "656762923707bc50327bea4f0e48ac2e2efb7c89572d0a911809c9c36deadce7"
+        },
+        {
+          "path": "writing/arc_run_v6/stage-18/native_execution.json",
+          "sha256": "f2fffe3255765f042162909c43ac85e4ab4076eadd083430182b03204c8a69cb"
+        },
+        {
+          "path": "writing/arc_run_v6/stage-18/reviews.md",
+          "sha256": "129a8fab0f6918b7a864fb0fa4d63fc738977a03b99d3fcd76627c8b53d9d838"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "actual ARC18 fresh native reviewer and full independent CCFA report plus primary evidence audit"
     },
     {
       "id": "P10",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P10_acceptance.md",
+          "sha256": "dd58e1ea0e6e726bb583a8876553ca3544a767320f292da327bda74ceb932430"
+        },
+        {
+          "path": "paper/manuscript_p10.md",
+          "sha256": "43524ca3be70b7cd7ac22edcdc0e6c9833605c468ee116e159261eb4b3983a96"
+        },
+        {
+          "path": "writing/revision_edits.json",
+          "sha256": "797dda4e2df3106849d5f06bf5351f18ad8547a762b5c8c7183da051c56a8d6e"
+        },
+        {
+          "path": "writing/arc_run_v7/stage-19/native_execution.json",
+          "sha256": "1d34057e902fefd564ae5dd1f1c890df441b6d726326a9facab7ced26acd50e9"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "actual ARC19 with primary native assistant fallback and semantic acceptance"
     },
     {
       "id": "P11",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P11_acceptance.md",
+          "sha256": "600390ce3dadb57c9ef7539528eb748d47282ea436c8dae89f5a12cd48c5119c"
+        },
+        {
+          "path": "writing/arc_run_v7/stage-20/native_execution.json",
+          "sha256": "08f973536ad8933d7d56239145d86c01832ed4f65b50b03b1a1b21e28b171793"
+        },
+        {
+          "path": "writing/arc_run_v7/stage-20/quality_report.json",
+          "sha256": "4352c8ca7d25f1a149583f2b05fbc3c74b280aaf5e787c89999b8e9034731f69"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "actual ARC20 primary native quality assessment; independent P9 review retained"
     },
     {
       "id": "P12",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "reference-dedup-audit.md",
+          "sha256": "2845f5d78053ba752f3869357620ce5453738d68cc8e7bcfbcbfec09df28edaf"
+        },
+        {
+          "path": "audits/reference_audit.md",
+          "sha256": "9a31f44ad749617946ed1b8ce2e0b7e341daf0f22a98845d751b0147eba5e80c"
+        },
+        {
+          "path": "audits/P9_numeric_structure.json",
+          "sha256": "656762923707bc50327bea4f0e48ac2e2efb7c89572d0a911809c9c36deadce7"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "primary citation/context/duplicate audit with fresh primary-source retrieval"
     },
     {
       "id": "P13",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P13_export.md",
+          "sha256": "20bf5e3f01fe2a37a6a3e9a16bcefc773fef179b9c923b2ad967bdb3a1882e02"
+        },
+        {
+          "path": "writing/arc_run_v7/stage-22/native_execution.json",
+          "sha256": "11164a7861edd8d9cf743dda8a79ad2b7f28892d33b09f5df8269e3b8c3c1535"
+        },
+        {
+          "path": "paper/source_snapshots/main_p13.tex",
+          "sha256": "363db17a528cad4c989f205eb8c20b0e2b9d274eef9d0f54efa717f68e0adbbc"
+        },
+        {
+          "path": "paper/references.bib",
+          "sha256": "28554a05f253e855216263e60c34c96b85fc772dfd44cb77fa4458f0d912683d"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "actual ARC22 plus documented deterministic contract-preserving export adapter"
     },
     {
       "id": "P14",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P14_citation_verification.md",
+          "sha256": "bb693d8d18b5c7e915162e07f85f932cad440a8f82876a9d8cec257d29b22b16"
+        },
+        {
+          "path": "reference-dedup-audit.md",
+          "sha256": "2845f5d78053ba752f3869357620ce5453738d68cc8e7bcfbcbfec09df28edaf"
+        },
+        {
+          "path": "writing/arc_run_v7/stage-23/native_execution.json",
+          "sha256": "6fbee37f8737e8bdbef56ed1abfec01c4f8a6bd52847932a5ccecd09d2f5ba42"
+        },
+        {
+          "path": "writing/arc_run_v7/stage-23/verification_report.json",
+          "sha256": "33a83226fd3a01008f0e5e98342d2f7e38028db1890d4e2e05c27d19f591d73f"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "actual ARC23 with explicit API limits plus complete primary-source context verification"
     },
     {
       "id": "P15",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P15_compile_visual.md",
+          "sha256": "4d34b233a954bba39c3d11d9202306e342acbe8e25c130d9827d2a9161f4404c"
+        },
+        {
+          "path": "audits/compile_accepted.txt",
+          "sha256": "432f91f857b21e1b542244f9145ce5d2834db2c2e60f616b10817c3dbd7ebfb4"
+        },
+        {
+          "path": "audits/pdf_structure.json",
+          "sha256": "bb487f42baa6c539e2e4d89215f720d3a2d72801e079ab1eaf2b0607c9aa9a24"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "local Conda-controlled latexmk plus all-page primary visual review"
     },
     {
       "id": "P16",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "submission-constraints.md",
+          "sha256": "98de9755ea8e6a4c26b21b758ea0590652d74675e23c697f1328ceecee8f5754"
+        },
+        {
+          "path": "audits/P15_compile_visual.md",
+          "sha256": "4d34b233a954bba39c3d11d9202306e342acbe8e25c130d9827d2a9161f4404c"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "primary proportionality and unspecified-venue constraint review"
     },
     {
       "id": "P17",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper-guidance-audit.md",
+          "sha256": "44d2e27e43241e588f7d8144af2eb2d95965be791c9fbb02071e75f2b55bd264"
+        },
+        {
+          "path": "audits/final_evidence_check.json",
+          "sha256": "67020b82705f53a5f91945f94d5c80162dc4917108df5278e28810671aea01ef"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "primary corrected audit distinguishing initial asset subset from full historical manifest"
     },
     {
       "id": "P18",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "figure-table-audit.md",
+          "sha256": "622c7d60f165b2ab5b99588b79abae5ee2a4d3192b5628231c3372cd52d5db81"
+        },
+        {
+          "path": "figures/source_hashes.json",
+          "sha256": "f52da61affd2a4c98c7151fdb4dc409322595a03c967d088c3c6891d63c47e44"
+        },
+        {
+          "path": "paper/tables/sources.json",
+          "sha256": "a157924d7c084acefa501cd40b28b58ff299624704306f76eefc1b6b5a743631"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "primary all-visual evidence-caption-placement audit"
     },
     {
       "id": "P19",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P19_selective_polish.md",
+          "sha256": "738194f8e2596bb8af16860dde625cd70958355c2fb0d29b1ec0d64ca9eb3f18"
+        },
+        {
+          "path": "audits/P19_text_invariants.json",
+          "sha256": "43119f37252ba8d74cf29c2c0e18265e03c208311029cf356e43d0086f687a2d"
+        },
+        {
+          "path": "paper/manuscript_p19.md",
+          "sha256": "ef4a81442ee734b3a330ed4249781aceeb922bb43e9c18252137a8fcd8456353"
+        },
+        {
+          "path": "writing/polish_response.json",
+          "sha256": "b2cb7e6daf73ed04ef71cd585f191658d3cf3476e1d6102f21ff28b01345ff50"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "primary selective academic polish through clean adapter profile"
     },
     {
       "id": "P20",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P20_final_consistency.md",
+          "sha256": "01680491c022850c757e211d8d1a55f05b488ca31bd5a691e813a4e4ae712632"
+        },
+        {
+          "path": "audits/final_source_pdf.json",
+          "sha256": "b2be714723445cff00416f9502417fe2e67b13dd64451f4c1acf6d58ddbd67db"
+        },
+        {
+          "path": "paper/manuscript-metadata.json",
+          "sha256": "8b93414ddfecc06bb4ce4b4aa3d77ed7232e489d70391e90a724059da8d5f210"
+        },
+        {
+          "path": "submission-constraints.md",
+          "sha256": "98de9755ea8e6a4c26b21b758ea0590652d74675e23c697f1328ceecee8f5754"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "primary final metadata/source/PDF/visual consistency check"
     },
     {
       "id": "P21",
-      "status": "pending",
+      "status": "passed",
       "contract_version": "v2",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "FINAL_AUDIT.md",
+          "sha256": "519d508239138b11c5d3384188dd423ee4bbda302f24b0241735a8cdc839de37"
+        },
+        {
+          "path": "artifact-manifest.json",
+          "sha256": "6ce7f1f11c779d2379e98ee5226d36e95d110ffdd12f480186dc8d8b5e278e18"
+        },
+        {
+          "path": "delivery/package_verification.json",
+          "sha256": "3a666a428b40f3d385867fd40037ba510db7cf234da8f26f2e1cbcd9d0f5bee1"
+        },
+        {
+          "path": "delivery/SOURCE_README.md",
+          "sha256": "17b3388d847284390491d3a861cefcd04cc4af5f078ea2959d54ee64dc3e1f66"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "primary full-objective and package audit; NUL-safe index-complete portable manifest"
     }
   ]
 }

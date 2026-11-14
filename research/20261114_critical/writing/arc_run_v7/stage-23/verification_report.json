@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "total": 11,
+    "verified": 6,
+    "suspicious": 0,
+    "hallucinated": 5,
+    "skipped": 0,
+    "integrity_score": 0.545
+  },
+  "results": [
+    {
+      "cite_key": "li2021",
+      "title": "A Free Lunch From ANN: Towards Efficient, Accurate Spiking Neural Networks Calibration",
+      "status": "hallucinated",
+      "confidence": 0.7,
+      "method": "title_search",
+      "details": "No results found via Semantic Scholar + arXiv"
+    },
+    {
+      "cite_key": "bojkovic2024",
+      "title": "Data Driven Threshold and Potential Initialization for Spiking Neural Networks",
+      "status": "hallucinated",
+      "confidence": 0.7,
+      "method": "title_search",
+      "details": "No results found via Semantic Scholar + arXiv"
+    },
+    {
+      "cite_key": "huang2025",
+      "title": "Differential Coding for Training-Free {ANN}-to-{SNN} Conversion",
+      "status": "hallucinated",
+      "confidence": 0.7,
+      "method": "title_search",
+      "details": "No results found via Semantic Scholar + arXiv"
+    },
+    {
+      "cite_key": "bojkovic2025",
+      "title": "Temporal Misalignment in {ANN}-{SNN} Conversion and its Mitigation via Probabilistic Spiking Neurons",
+      "status": "hallucinated",
+      "confidence": 0.7,
+      "method": "title_search",
+      "details": "No results found via Semantic Scholar + arXiv"
+    },
+    {
+      "cite_key": "dwivedi2023",
+      "title": "Benchmarking Graph Neural Networks",
+      "status": "hallucinated",
+      "confidence": 0.7,
+      "method": "title_search",
+      "details": "No results found via Semantic Scholar + arXiv"
+    },
+    {
+      "cite_key": "fas2025",
+      "title": "FAS: Fast ANN-SNN Conversion for Spiking Large Language Models",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "arxiv_id",
+      "details": "Confirmed via arXiv: 'FAS: Fast ANN-SNN Conversion for Spiking Large Language Models'"
+    },
+    {
+      "cite_key": "onespike2024",
+      "title": "One-Spike SNN: Single-Spike Phase Coding with Base Manipulation for ANN-to-SNN Conversion Loss Minimization",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "arxiv_id",
+      "details": "Confirmed via arXiv: 'One-Spike SNN: Single-Spike Phase Coding with Base Manipulation for ANN-to-SNN Conversion Loss Minimization'"
+    },
+    {
+      "cite_key": "a2q2023",
+      "title": "{A$^2$Q}: Aggregation-Aware Quantization for Graph Neural Networks",
+      "status": "verified",
+      "confidence": 0.875,
+      "method": "arxiv_id",
+      "details": "Confirmed via arXiv: '$\\rm A^2Q$: Aggregation-Aware Quantization for Graph Neural Networks'"
+    },
+    {
+      "cite_key": "degreequant2021",
+      "title": "{Degree-Quant}: Quantization-Aware Training for Graph Neural Networks",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "arxiv_id",
+      "details": "Confirmed via arXiv: 'Degree-Quant: Quantization-Aware Training for Graph Neural Networks'"
+    },
+    {
+      "cite_key": "adafire2024",
+      "title": "Adaptive Calibration: A Unified Conversion Framework of Spiking Neural Networks",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via CrossRef: 'Adaptive Calibration: A Unified Conversion Framework of Spiking Neural Networks'"
+    },
+    {
+      "cite_key": "atif2023",
+      "title": "Trainable quantization for Speedy Spiking Neural Networks",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via CrossRef: 'Trainable quantization for Speedy Spiking Neural Networks'"
+    }
+  ]
+}

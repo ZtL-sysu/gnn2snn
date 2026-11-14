@@ -1,0 +1,5 @@
+{
+  "reason": "ARC19 live writer failed due Luna usage limit; confirmed terminal session42865. Prior stages copied for context, not re-executed or newly credited.",
+  "source_run": "arc_run_v6",
+  "writer_for_revision": "primary native assistant; model identity not exposed"
+}

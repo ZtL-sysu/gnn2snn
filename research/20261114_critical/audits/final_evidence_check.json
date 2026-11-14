@@ -1,0 +1,8 @@
+{
+  "historical_frozen_files_verified": 1264,
+  "new_raw_endpoints_verified": 142,
+  "new_screen_graph_count": 512,
+  "result": "all hashes and accuracies match; no raw experiment modified",
+  "tests_latest": "20 passed;533 upstream deprecation warnings; no failures",
+  "note": "Read-only verification, not experiment rerun or external confirmation"
+}

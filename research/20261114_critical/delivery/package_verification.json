@@ -1,0 +1,11 @@
+{
+  "archive_sha256": "3de0e52b2cf1068c9a258b71a667e671191f763c7c018bbdeec8421e3a77d3aa",
+  "accepted_pdf_sha256": "528302f752c4295233130f45a6bb20003eb6e8072416c9b3a7313af89140b5d7",
+  "clean_pdf_sha256": "b901081f5c25e35bac406a46e7877e964f118ab4698e969a9bcb4d06b414cd22",
+  "source_files_verified": 22,
+  "pages": 12,
+  "normalized_pdf_text_identical": true,
+  "all_page_render_pixels_identical": true,
+  "warnings": [],
+  "note": "PDF file hashes may differ through build metadata; source entries, text and all rendered pages are compared. Clean compilation is not an experiment rerun."
+}

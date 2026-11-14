@@ -1,0 +1,15 @@
+{
+  "stage": 23,
+  "status": "done",
+  "artifacts": [
+    "verification_report.json",
+    "references_verified.bib",
+    "paper_final_verified.md"
+  ],
+  "actual_arc_executor": "researchclaw.pipeline.stage_impls._review_publish._execute_citation_verify",
+  "executor_source_sha256": "8fad56dfaf795a3cb9a0da0ce3a8cb42eefcd7a2704c38c28b1e062ed56a331d",
+  "client_source_sha256": "abd12a7ed549936e190fb8d798abed929892cd1a769fc4eae5169fa3c9690be7",
+  "production": true,
+  "calls": [],
+  "mode": "actual programmatic ARC execution"
+}
