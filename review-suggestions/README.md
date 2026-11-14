@@ -9,3 +9,4 @@
 当前已有：
 
 - [`grok-bot/gnn2snn-phd-review.md`](grok-bot/gnn2snn-phd-review.md)：Grok Bot 的通读审阅、改进建议与博士论文路线图（2026-11-13）。
+- [`claude/innovation-and-rigor-review.md`](claude/innovation-and-rigor-review.md)：Claude 的创新方向与“做扎实”建议，附能耗比复核脚本（2026-11-14）。
