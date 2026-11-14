@@ -1,0 +1,27 @@
+{
+  "scope": "debug-only real CUDA equivalence trace; no calibration optimization ran",
+  "dataset": "MNIST validation",
+  "teacher_seed": 41,
+  "batch": "first 32 graphs from RNG seed 20261115 permutation of 5000 official validation graphs",
+  "teacher_checkpoint": "full_teacher_runs/MNIST_seed41_full/best.pt",
+  "author_source_commit": "5e0e4c73f1d0e8e17d81befa24ff947deec1f4be",
+  "observations": {
+    "run_screen_failed_baseline_T4_max_abs": [0.05449378490447998, 0.030702829360961914],
+    "failed_screen_T1_T2": "bitwise equal before T4 failure",
+    "deterministic_run_screen_smoke": "completed successfully; all 12 configured rows and the real-data T1/T2/T4/T8 hard-equivalence gate passed",
+    "non_deterministic_trace_order_val_then_train": {
+      "source_repeat_T4_max_abs": 0.0,
+      "core_repeat_T4_max_abs": 0.0,
+      "T1_T2_T4_source_core_max_abs": 0.0,
+      "T8_source_core_max_abs": 0.013253211975097656,
+      "first_current_delta_in_diagnostic": "site 1 tick 1 max abs 9.5367431640625e-07; event outputs still exactly equal"
+    },
+    "deterministic_algorithms_true_and_cublas_workspace_4096_8": {
+      "T1_T2_T4_T8_source_core_max_abs": 0.0,
+      "repeat_T4_max_abs": 0.0,
+      "per_site_current_and_event_differences": "none"
+    }
+  },
+  "interpretation": "Run-to-run varying T4 discrepancy, sub-micro current deltas in the exploratory trace, and exact deterministic runs support nondeterministic CUDA graph aggregation perturbing threshold decisions. This is a supported hypothesis, not uniquely proven. No stable recurrence mismatch was isolated; do not relax equality gate.",
+  "test_script": "debug_real_cuda_trace.py"
+}

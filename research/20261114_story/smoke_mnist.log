@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\xhf\.codex\worktrees\graph-aware-calibration\gnn2snn\research\20261114_story\run_screen.py", line 232, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\xhf\.codex\worktrees\graph-aware-calibration\gnn2snn\research\20261114_story\run_screen.py", line 129, in main
+    raise RuntimeError(f'hard baseline mismatch T{t}: {equality[str(t)]}')
+RuntimeError: hard baseline mismatch T4: 0.05449378490447998

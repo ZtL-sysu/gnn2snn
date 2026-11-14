@@ -1,0 +1,8 @@
+{
+  "status": "aborted_before_calibration",
+  "command": "run_screen.py --dataset MNIST --train-count 64 --val-count 64 --steps 2 --T 1 2 --output research/20261114_story/runs/smoke_mnist",
+  "error": "RuntimeError: hard baseline mismatch T4: 0.05449378490447998",
+  "scope": "real CUDA zero-offset equivalence guard; T1/T2 passed, no optimization or scientific endpoint produced",
+  "root_cause": "under investigation",
+  "raw_log": "../../smoke_mnist.log"
+}
