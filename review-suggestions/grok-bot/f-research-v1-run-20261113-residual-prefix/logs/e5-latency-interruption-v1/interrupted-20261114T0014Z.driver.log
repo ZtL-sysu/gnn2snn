@@ -1,0 +1,1 @@
+CLEAN_JOB_START 2026-11-14T00:04:49Z device=cuda batches=40 warmup=1 repeats=3 configs=37 resume=yes

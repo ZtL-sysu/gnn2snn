@@ -1,0 +1,42 @@
+{
+  "check": "e5_latency_clean_job_environment_interruption_v1",
+  "recorded_at_utc": "2026-11-14T01:42:00+00:00",
+  "classification": "environment_session_boundary_termination_not_a_scientific_failure",
+  "authority": "origin/agent/visual-conversion/20261113-wb-resume @ a2f59acc161cc4bf4bb39d34c84942c9dbd1f1c2 (R6c)",
+  "interrupted_job": {
+    "handle": "TsI47h",
+    "started_utc": "2026-11-14T00:04:49+00:00",
+    "command": "python -X utf8 research/visual-graphs/continuation_20261113/code/e3_e5_v1.py latency --device cuda --batches 40 --warmup 1 --repeats 3 --resume",
+    "driver_log": "logs/e5_latency_v1.clean.driver.log",
+    "incremental_evidence": "results/e3-e5-v1/e5_latency_v1.partial.jsonl"
+  },
+  "observed_facts": [
+    "Wake-up at 2026-11-14T01:36Z (+0800 09:36): nvidia-smi showed 0 % utilisation / 955 MiB, only display (C+G) processes.",
+    "Get-CimInstance Win32_Process broad CommandLine match for e3_e5_v1.py / e5_falsifier_v1.py / conda-script.py run returned no surviving compute process (NO_PYTHON_PROCESS).",
+    "The clean driver log contains exactly one line, CLEAN_JOB_START 2026-11-14T00:04:49Z; there is no traceback, no error and no completion line.",
+    "The incremental JSONL contains exactly 7 completed configurations and its last modification is 2026-11-14T00:14Z (+0800 08:14); no further line was written in the following ~82 minutes.",
+    "results/e3-e5-v1/e5_latency_v1.json does not exist, so the latency report was never published."
+  ],
+  "evidence_validity": {
+    "seven_incremental_rows": "VALID",
+    "reason": "They were produced by the single clean job TsI47h started AFTER both concurrent jobs were terminated, with the reviewed e3_e5_v1.py (frozen thresholds built outside timed loops), full 5000-graph fixed order, 1 warmup and 3 repeats. They are NOT the quarantined concurrency-incident numbers.",
+    "distinct_from": "logs/e3e5-latency-concurrency-incident-v1/ whose wall-clock values remain VOID and must never be cited",
+    "disposition": "kept as the --resume starting point; the resumed job re-validates graphs_per_repeat and repeat count before skipping each row"
+  },
+  "archived_snapshot": {
+    "interrupted-20261114T0014Z.driver.log": "db5363a5e515a2163937604e5effb7dd0e8c377e9a64aadb17d22d7c4bd1b65b",
+    "interrupted-20261114T0014Z.partial.jsonl": "4a28bf41b2bc01a2e745385fc26dc332d302786b2e20065fd8fed26ce0069501",
+    "sha256sums_file": "SHA256SUMS.txt"
+  },
+  "recovery": {
+    "action": "restart the identical --resume command as step 01 of a single serial background driver",
+    "driver": "research/visual-graphs/continuation_20261113/code/gpu_queue_driver_v1.py",
+    "handle": "v10FQp",
+    "driver_pid": 5776,
+    "latency_pid": 11560,
+    "started_utc": "2026-11-14T01:40:39+00:00",
+    "invariant": "--batches 40 --warmup 1 --repeats 3 --resume; no shortened batches, no reduced repeats, no seed or T selection",
+    "single_job_rule": "broad CommandLine liveness check returned exactly one e3_e5_v1.py latency process before and after launch"
+  },
+  "no_result_claim": "No E1 acceptance, no latency conclusion, no cost or energy claim is made from this interruption record. P4 remains running."
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "task_id": "visual-conversion",
+  "agent_id": "20261113-wb-resume",
+  "created_at_utc": "2026-11-14T01:43:35.802578+00:00",
+  "status": "in_progress",
+  "input_git_head": "a2f59acc161cc4bf4bb39d34c84942c9dbd1f1c2",
+  "protocol": {
+    "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/PROTOCOL-v3.md",
+    "sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+    "bytes": 4321
+  },
+  "artifacts": [
+    {
+      "path": "research/visual-graphs/continuation_20261113/code/gpu_queue_driver_v1.py",
+      "sha256": "15cdd4232d4a0a6139fc30bf80debf9f44bfb044112399060f072d8268e75831",
+      "bytes": 7389
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v1/interrupted-20261114T0014Z.driver.log",
+      "sha256": "db5363a5e515a2163937604e5effb7dd0e8c377e9a64aadb17d22d7c4bd1b65b",
+      "bytes": 101
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v1/interrupted-20261114T0014Z.partial.jsonl",
+      "sha256": "4a28bf41b2bc01a2e745385fc26dc332d302786b2e20065fd8fed26ce0069501",
+      "bytes": 1948
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v1/SHA256SUMS.txt",
+      "sha256": "f910377410a352ab7180e5a92cfe6c4567d38221c1fca1fedd128000248127bf",
+      "bytes": 211
+    },
+    {
+      "path": "review-suggestions/grok-bot/f-research-v1-run-20261113-residual-prefix/logs/e5-latency-interruption-v1/INTERRUPTED.json",
+      "sha256": "6ff9c56672b935e8f11c2db9ab7bcdaba8890f584e20305ee75af0d133fd19a6",
+      "bytes": 3188
+    }
+  ]
+}

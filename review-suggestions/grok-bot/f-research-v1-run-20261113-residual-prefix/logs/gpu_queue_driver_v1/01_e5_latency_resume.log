@@ -1,0 +1,4 @@
+
+=== 01_e5_latency_resume START 2026-11-14T01:40:39+00:00 ===
+CMD: <HOME>\miniconda3\envs\dyg-cold\python.exe -X utf8 C:\code\gnn2snn-wb-resume\research\visual-graphs\continuation_20261113\code\e3_e5_v1.py latency --device cuda --batches 40 --warmup 1 --repeats 3 --resume
+{"resumed_completed_configs": 7, "configs_in_this_run": 37}
