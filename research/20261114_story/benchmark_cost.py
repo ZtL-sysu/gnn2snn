@@ -10,7 +10,7 @@ import torch
 from torch_geometric.datasets import GNNBenchmarkDataset
 from torch_geometric.loader import DataLoader
 
-from run_screen import DEFAULT_ASSETS, LEGACY, sha, write_json
+from run_screen import DEFAULT_ASSETS, LEGACY, sha, write_json, resolve_calibration
 from full_teacher_gcn import BenchmarkGCN
 from fold_teacher_bn import fold_model
 import calibration_core as core
@@ -32,11 +32,12 @@ def main():
     dev=torch.device('cuda')
     r=args.assets/'takeover_20261112'/'full_teacher_runs'/f"{m['dataset']}_seed{m['seed']}_full"
     if sha(r/'best.pt')!=m['checkpoint_sha256']: raise RuntimeError('checkpoint mismatch')
-    if sha(r/'calibration_hist_v1.json')!=m['calibration_sha256']: raise RuntimeError('calibration mismatch')
+    calpath=resolve_calibration(args.assets,m['dataset'],m['seed'])
+    if sha(calpath)!=m['calibration_sha256']: raise RuntimeError('calibration mismatch')
     if sha(Path(core.__file__))!=m['core_sha256']: raise RuntimeError('core mismatch')
     for filename,digest in m['dependency_sha256'].items():
         if sha(LEGACY/filename)!=digest: raise RuntimeError('dependency mismatch')
-    cal=json.loads((r/'calibration_hist_v1.json').read_text())
+    cal=json.loads(calpath.read_text())
     teacher_meta=json.loads((r/'metadata.json').read_text())
     for filename,digest in cal['data']['processed_files_sha256'].items():
         if sha(args.assets/'data'/'pyg_bench'/m['dataset']/'processed'/filename)!=digest:

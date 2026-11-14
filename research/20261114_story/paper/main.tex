@@ -1,0 +1,108 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[a4paper,margin=1.8cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\setlength{\columnsep}{0.65cm}
+\title{Calibration Objectives and Computation in Strong-Teacher GNN-to-SNN Conversion}
+\author{Anonymous authors}
+\date{14 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+\input{abstract_results.tex}
+\end{abstract}
+
+\section{Introduction}
+Graph classification introduces two distinct targets for ANN-to-SNN calibration: reconstructing node activations and preserving the final graph prediction. Message propagation and pooling can amplify or cancel node errors, so their average magnitude alone need not determine the prediction error. This observation motivates task-level calibration, but leaves an empirical question: does a graph-output objective improve conversion beyond a local reconstruction objective when both receive the same frozen teacher, examples, parameters and update budget?
+
+We study this question on MNIST and CIFAR10 superpixel graph classification using four-layer residual GCN teachers adapted from the Benchmarking GNNs architecture~\citep{dwivedi2023}. The teacher test accuracies average 91.02\% and 54.94\%, respectively, across three training seeds. A differential conversion adapted from fixed public source units closely matches the teacher at four or eight active ticks, while one tick leaves appreciable classification loss. These settings distinguish a substantial short-prefix problem from the small residual errors at longer prefixes.
+
+Our comparison changes only the calibration objective for 693 channelwise initial-membrane values. It includes local activation reconstruction, graph-logit reconstruction, their fixed mixture, an output-bias control, and a target-correspondence counterfactual. We retain the original calibration failure and a single smaller-step correction, then freeze the configuration for three-teacher evaluation. Per-graph records separate accuracy, teacher agreement, reconstruction error and decision margin. Independent measurements distinguish scalar event counts, dense arithmetic and synchronized GPU time.
+
+The resulting evidence addresses the practical value and limits of objective choice. A basic readout error identity provides motivation; its usefulness as a calibration principle depends on the matched experiments. The contribution is an empirical characterization of this conversion regime, with the supported conclusions stated in Section~\ref{sec:results}.
+
+\section{Related Work}
+Post-conversion calibration already uses ANN knowledge to correct activation mismatch. Li et al.~\citep{li2021} study layerwise reconstruction and adjust parameters including biases and initial potentials. Distribution-based threshold and potential initialization~\citep{bojkovic2024} further establishes potential calibration as an existing technique. Temporal misalignment is another recognized source of low-timestep conversion error~\citep{bojkovic2025}. These precedents motivate a strong local reconstruction control and a restricted interpretation of a learned initial state.
+
+Differential coding transmits changes in represented activations and decodes them with time-dependent weights~\citep{huang2025}. We use the public eight-level signed MTH differential unit in a project adaptation for residual graph convolutions. Its threshold histogram and graph placement differ from the original complete conversion procedure. One-Spike conversion already includes GCNs~\citep{onespike2024}, so converting a graph operator alone does not establish novelty. Coarse-to-fine calibration for language models~\citep{fas2025} also makes output-aware calibration a relevant cross-domain precedent. The question here is the controlled effect of objective choice in strong-teacher, whole-graph classification.
+
+\section{Conversion and Calibration}
+\subsection{Teacher and event semantics}
+For fixed normalized graph propagation $A$, the residual teacher layers are
+\begin{equation}
+ H_{\ell+1}=H_\ell+\operatorname{ReLU}(A H_\ell W_\ell+b_\ell).
+\end{equation}
+An embedding produces $H_0$ from node features and positions. Mean pooling followed by a three-linear-layer MLP produces ten graph logits. Evaluation-time batch normalization is folded into the graph convolution. Four convolutional branches and the two hidden MLP ReLUs form the six converted sites.
+
+Each site emits either zero or one signed scalar event with magnitude $\theta_j 2^{-k}$, $k\in\{0,\ldots,7\}$. Threshold comparisons use the public unit's $0.75$ margin; negative emission additionally requires sufficient cumulative output. These are graded signed events. With zero-latched baseline current, define site current $c_t$, membrane $v_t$, cumulative quantity $C_t$, and represented input/output $a_t,b_t$. Before event selection,
+\begin{align}
+ \widetilde v_t&=v_{t-1}+c_t+a_{t-1}-b_{t-1},\\
+ \widetilde C_t&=C_{t-1}+b_{t-1}.
+\end{align}
+After selecting $s_t$ from the signed threshold ladder,
+\begin{align}
+ v_t&=\widetilde v_t-s_t,& C_t&=\widetilde C_t+s_t,\\
+ a_t&=a_{t-1}+c_t/t,& b_t&=b_{t-1}+s_t/t.
+\end{align}
+The decoded activation is $\widehat H(T)=\sum_{t=1}^T s_t/t$. The static input and affine biases enter at the first active tick. The classifier uses the same weighted event sum. $T$ counts active ticks; a non-emitting zero-latch call is separate.
+
+\subsection{Why local and graph errors can differ}
+Consider a fixed linear propagation $A$, weight matrix $W$ and linear graph readout $R$. If $E=\widehat H-H$, equal bias conventions give
+\begin{equation}\label{eq:linear}
+ \Delta Y=RA(EW).
+\end{equation}
+Equal Frobenius norms of $E$ can therefore yield unequal graph errors through directional sensitivity and cancellation. Equation~\eqref{eq:linear} applies to this fixed linear segment. The residual ReLUs and nonlinear classifier require separate treatment, while dynamic gated graph propagation changes the operator itself. Accordingly, our task-level objective uses the actual final graph logits rather than treating the linear identity as an exact end-to-end formula.
+
+For the nonlinear network, define a local conversion discrepancy $q_\ell$ relative to applying the analog branch to the decoded incoming state. Its residual error obeys
+\begin{align}
+ \Delta H_{\ell+1}={}&\Delta H_\ell+q_\ell\\
+ &+\sigma(A(H_\ell+\Delta H_\ell)W_\ell+b_\ell)
+       -\sigma(AH_\ell W_\ell+b_\ell),\nonumber
+\end{align}
+where $\sigma$ is ReLU. This decomposition exposes both propagated and newly introduced discrepancy. It supplies a useful accounting framework without identifying the dominant source empirically.
+
+\subsection{Matched calibration objectives}
+We freeze all teacher weights and thresholds and set $v_{0,j}=\theta_j\rho_j$. The 693 trainable values $\rho_j$ start at zero and are clipped to $[-0.5,0.5]$. For a calibration batch, let $H_\ell$ denote the six teacher site activations, $z$ the teacher graph logits, and hats their converted counterparts. The objectives are
+\begin{align}
+ L_{\mathrm{local}}&=\frac16\sum_{\ell=1}^{6}
+ \frac{\operatorname{MSE}(\widehat H_\ell,H_\ell)}
+ {\max(\operatorname{mean}(H_\ell^2),10^{-6})},\\
+ L_{\mathrm{graph}}&=\frac{\operatorname{MSE}(\widehat z,z)}
+ {\max(\operatorname{mean}(z^2),10^{-6})},\\
+ L_{\mathrm{mix}}&=(L_{\mathrm{local}}+L_{\mathrm{graph}})/2.
+\end{align}
+Local MSE averages over node elements at the first four sites and graph elements at the last two; sites receive equal normalized weight. The normalization is computed batchwise. A ten-parameter output-bias control uses graph reconstruction with all membrane offsets fixed at zero. It has fewer parameters but receives the same examples and update count.
+
+Hard threshold selection is used in every forward pass. During calibration, the derivative is approximated by replacing a hard event $s$ with $s+[\operatorname{ReLU}(\widetilde v)-\operatorname{stopgrad}\operatorname{ReLU}(\widetilde v)]$. This heuristic supplies a surrogate gradient while retaining the exact hard forward value. It gives no guarantee of globally minimizing either hard reconstruction objective.
+
+The correspondence counterfactual cyclically shifts teacher graph targets within each batch. It preserves the target multiset while breaking target/sample pairing. Its effect measures correspondence sensitivity; a topology-specific explanation additionally requires a graph-structure intervention.
+
+\section{Experimental Setup}
+Official superpixel splits contain 55,000/5,000/10,000 MNIST and 45,000/5,000/10,000 CIFAR10 train/validation/test graphs. Complete graphs and official split identities are preserved. Each method uses the same 512 randomly indexed training graphs, batches of 32, and 64 Adam updates in the same order. Teacher training seeds are 41, 42 and 43; calibration starts deterministically at zero. Thresholds are fixed from the existing full-training histogram calibration.
+
+An initial seed-41 screen used learning rate $10^{-2}$ on 512 validation graphs. Its graph calibration increased hard training MSE at $T=2$. One tenfold reduction to $10^{-3}$ was then checked, and that setting was frozen for all three teachers and $T\in\{1,2,4,8\}$. The initial failure remains part of the results. The full validation analysis additionally reports the 4,488 graphs outside the current screening subset. Both official validation and test splits had historical project exposure; reported endpoints are descriptive, with that exposure retained in their interpretation.
+
+We report each teacher seed and mean$\pm$sample standard deviation. Paired differences compare methods using the same teacher and graph examples. Three-seed $t$ intervals, where shown, use two degrees of freedom and are descriptive under a teacher-seed sampling assumption. They do not turn repeated evaluation on the same graphs into independent dataset replications.
+
+All new inference uses deterministic CUDA algorithms and a fixed cuBLAS workspace on an RTX 3060 12\,GB, PyTorch 2.11.0+cu128 and PyG 2.8.0.post1. Zero-offset conversion is checked against the fixed source-unit forward at all four prefixes before optimization. GPU timing uses a common cached batch of 32 graphs, ten warmups and thirty synchronized, randomized interleaved repeats. Data transfer is excluded. The diagnostic core returns six decoded site activations in every conversion condition. Its wall-clock time describes this implementation, including that instrumentation, rather than an optimized deployment bound.
+
+\section{Results}\label{sec:results}
+\input{generated_results.tex}
+
+\section{Discussion}
+Objective choice changes what the calibration procedure is encouraged to preserve, but the hard event dynamics, surrogate derivative and optimization budget mediate that choice. A graph-logit loss can improve a decision without minimizing every local error, and lower reconstruction error can coexist with a classification loss when samples cross different margins. The matched results should therefore be interpreted jointly through accuracy, agreement and reconstruction error rather than a single objective value.
+
+Numerical determinism is especially relevant at event thresholds. In an early real-data CUDA equivalence check, source/core output discrepancies changed between repeated evaluations. Deterministic execution restored bitwise equality at all checked prefixes. This observation is consistent with small aggregation-order perturbations crossing discrete thresholds. It motivates controlling numerical execution before attributing differences to a calibration mechanism.
+
+Fidelity and runtime describe different properties. The current dense graph projections and edge reductions execute even when many events are zero. Signed event selection, membrane updates and time-prefix iteration add work. A lower event count alone consequently gives neither a measured GPU speedup nor a hardware energy result.
+
+\section{Limitations}
+The controlled method comparison covers two superpixel tasks with one fixed GCN family and three teacher training seeds. Historically exposed validation/test endpoints and a post-screen learning-rate correction limit confirmatory inference. The surrogate optimizer evaluates one bounded implementation of potential calibration, not all possible graph-aware objectives or optimizers. The output-bias control has a smaller parameter budget. Target shuffling tests correspondence rather than graph structure, and marginal error correlations do not establish a causal bottleneck. GatedGCN results provide contextual teacher/conversion endpoints, not evidence that the proposed calibration generalizes to dynamic gates. Runtime measurements cover a diagnostic PyTorch implementation and cached batches; the arithmetic ledger is partial and physical energy is unmeasured.
+
+\section{Conclusion}
+\input{conclusion_results.tex}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

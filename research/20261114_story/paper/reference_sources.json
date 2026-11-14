@@ -1,0 +1,51 @@
+[
+  {
+    "key": "li2021",
+    "url": "https://proceedings.mlr.press/v139/li21d.html",
+    "input_sha256": "e94fe9a054f18b9e8191f5759313894c3505e1560e409d25efe153e776204b7c",
+    "retrieval": "verified cached publication entry; JMLR entry transcribed from publisher metadata",
+    "entry_sha256": "78f941af296bc436c441ed9d328adc8d28193f7109acd071e574203cd2434a24"
+  },
+  {
+    "key": "bojkovic2024",
+    "url": "https://proceedings.mlr.press/v238/bojkovic24a.html",
+    "input_sha256": "de25323d9b3340687560205cc69a734b7e3faae5ef9fc638c3087a5760e13532",
+    "retrieval": "verified cached publication entry; JMLR entry transcribed from publisher metadata",
+    "entry_sha256": "416677fd6eb4cd1ad141abd8f715f751fa18167865c6ca616dbc8f9602434e17"
+  },
+  {
+    "key": "huang2025",
+    "url": "https://proceedings.mlr.press/v267/huang25i.html",
+    "input_sha256": "3d3582e5a429d8f83ce6dd230c314f271d35403de4561fead2c5b9f45a935e53",
+    "retrieval": "verified cached publication entry; JMLR entry transcribed from publisher metadata",
+    "entry_sha256": "9fe6bfdf6561c25259a56a575419b23ebaa976b79e19a3bd00441a131b071a5b"
+  },
+  {
+    "key": "bojkovic2025",
+    "url": "https://proceedings.mlr.press/v267/bojkovic25a.html",
+    "input_sha256": "a2afbb66440a22bfdec3e1e8626aec1deed78ab572f9f130abe0fd6b2cc53f08",
+    "retrieval": "verified cached publication entry; JMLR entry transcribed from publisher metadata",
+    "entry_sha256": "8f407ab080e037b33683bb0dc178ad119e204d2b8ee932f242baa52561dc0cd0"
+  },
+  {
+    "key": "dwivedi2023",
+    "url": "https://jmlr.org/papers/v24/22-0567.html",
+    "input_sha256": "6a7bd8bdb9f41eb4bf47eb3b4d380489775622ee722c920b375313c69f6b4a5f",
+    "retrieval": "verified cached publication entry; JMLR entry transcribed from publisher metadata",
+    "entry_sha256": "cc582aa055bd59e92c99cdc17f351e4ea1df5c413c62db72b7aec012dd6ce4ca"
+  },
+  {
+    "key": "fas2025",
+    "url": "https://arxiv.org/bibtex/2502.04405",
+    "input_sha256": "2abb8babe723a8066b27c02c5fc57b66428e3d460a25d45531fd544acb813215",
+    "retrieval": "verified cached publication entry; JMLR entry transcribed from publisher metadata",
+    "entry_sha256": "9aaf1db1132c65fe53a4ad4e1adb1fc149f7ac44bee0969bc4dd02765e1e6b59"
+  },
+  {
+    "key": "onespike2024",
+    "url": "https://arxiv.org/bibtex/2403.08786",
+    "input_sha256": "7f1e9f533092632cd386b85e9e823239b567e82e47d6351446bdd27850f6b171",
+    "retrieval": "verified cached publication entry; JMLR entry transcribed from publisher metadata",
+    "entry_sha256": "2e223ec67426da1403093559c26ef40242e7f0eeb3523d246bea3523bbeeb4d9"
+  }
+]

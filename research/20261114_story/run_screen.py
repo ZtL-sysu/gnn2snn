@@ -29,6 +29,16 @@ DEFAULT_ASSETS = Path('C:/code/phd-snn/auto-paper/20261110-152407/Operator-Agnos
 SITES = ['gcn_0', 'gcn_1', 'gcn_2', 'gcn_3', 'mlp_0', 'mlp_1']
 
 
+def resolve_calibration(assets, dataset, seed):
+    """Resolve the two historical layouts without changing calibration bytes."""
+    root=Path(assets)/'takeover_20261112'
+    primary=root/'full_teacher_runs'/f'{dataset}_seed{seed}_full'/'calibration_hist_v1.json'
+    if primary.is_file(): return primary
+    replica=root/'rep'/f"{'M' if dataset=='MNIST' else 'C'}{seed}"/'cal.json'
+    if replica.is_file(): return replica
+    raise FileNotFoundError(f'No audited calibration for {dataset} seed {seed}')
+
+
 def sha(path):
     h = hashlib.sha256()
     with Path(path).open('rb') as f:
@@ -84,9 +94,11 @@ def main():
     dev=torch.device(args.device)
     runs=args.assets/'takeover_20261112'/'full_teacher_runs'
     run=runs/f'{args.dataset}_seed{args.seed}_full'
-    calpath=run/'calibration_hist_v1.json'
+    calpath=resolve_calibration(args.assets,args.dataset,args.seed)
     cal=json.loads(calpath.read_text())
     metadata=json.loads((run/'metadata.json').read_text())
+    if cal['dataset']!=args.dataset or metadata['seed']!=args.seed:
+        raise RuntimeError('calibration/teacher identity mismatch')
     checkpoint=run/'best.pt'
     if sha(checkpoint)!=cal['checkpoint_sha256']:
         raise RuntimeError('checkpoint/calibration mismatch')
@@ -142,6 +154,7 @@ def main():
               train_indices=ti.tolist(),val_indices=vi.tolist(),batch_size=32,
               optimizer='Adam',lr=args.lr,offset_bound=0.5,
               checkpoint_sha256=sha(checkpoint),calibration_sha256=sha(calpath),
+              calibration_path=str(calpath.resolve()),
               checkpoint_epoch=state['epoch'],source_commit=source_commit,
               source_provenance=provenance,fold_max_abs=fold_error,baseline_exact_max_abs=equality,
               script_sha256=sha(__file__),core_sha256=sha(HERE/'calibration_core.py'),

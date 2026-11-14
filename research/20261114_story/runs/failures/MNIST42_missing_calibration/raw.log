@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "C:\Users\xhf\.codex\worktrees\graph-aware-calibration\gnn2snn\research\20261114_story\run_screen.py", line 259, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\xhf\.codex\worktrees\graph-aware-calibration\gnn2snn\research\20261114_story\run_screen.py", line 88, in main
+    cal=json.loads(calpath.read_text())
+                   ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\xhf\miniconda3\envs\dyg-cold\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\xhf\miniconda3\envs\dyg-cold\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\xhf\miniconda3\envs\dyg-cold\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\full_teacher_runs\\MNIST_seed42_full\\calibration_hist_v1.json'

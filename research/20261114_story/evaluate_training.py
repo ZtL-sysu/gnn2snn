@@ -74,6 +74,8 @@ def main():
     from fold_teacher_bn import fold_model
     from calibration_core import CalibratedGCN, teacher_sites
     import dcgs_fixed_seed_eval_v2 as dcgs_reference
+    sys.path.insert(0, str(HERE))
+    from run_screen import resolve_calibration
 
     _, source_commit, source_provenance = dcgs_reference.require_author_source(AUTHOR_REPO)
     if source_commit != PINNED_AUTHOR_COMMIT or source_commit != metadata.get("source_commit"):
@@ -82,8 +84,10 @@ def main():
     assets = args.assets.resolve()
     teacher_run = assets / "takeover_20261112" / "full_teacher_runs" / f"{dataset_name}_seed{seed}_full"
     checkpoint = teacher_run / "best.pt"
-    calibration_path = teacher_run / "calibration_hist_v1.json"
+    calibration_path = resolve_calibration(assets, dataset_name, seed)
     calibration = json.loads(calibration_path.read_text(encoding="utf-8"))
+    if calibration.get("dataset") != dataset_name:
+        raise RuntimeError("resolved calibration dataset differs from saved run metadata")
     if sha256(checkpoint) != metadata["checkpoint_sha256"]:
         raise RuntimeError("teacher checkpoint hash differs from saved run metadata")
     if sha256(calibration_path) != metadata["calibration_sha256"]:

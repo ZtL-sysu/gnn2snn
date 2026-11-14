@@ -1,0 +1,7 @@
+{
+  "status": "failed_before_loading_teacher_or_calibration",
+  "error": "Seed42 calibration is archived at takeover_20261112/rep/M42/cal.json, not inside the teacher checkpoint directory",
+  "scientific_parameters_changed": false,
+  "recovery": "Resolve the audited replica layout and verify checkpoint/calibration hashes; do not repeat completed seed41",
+  "raw_log": "raw.log"
+}
