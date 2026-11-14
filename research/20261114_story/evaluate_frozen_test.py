@@ -163,6 +163,14 @@ def main():
     output=args.output.resolve()
     if output.exists(): raise FileExistsError(output)
     output.mkdir(parents=True, exist_ok=False)
+    # Publish a self-contained copy of the actual fitted inputs, not only hashes.
+    input_dir=output/'input_confirmation'; input_dir.mkdir()
+    for name in ('metadata.json','DONE.json','results.json'):
+        shutil.copy2(prepared['run']/name,input_dir/name)
+    for condition,digest in prepared['param_hashes'].items():
+        name=f'{condition}_parameters.npz'
+        shutil.copy2(prepared['run']/name,output/name)
+        if sha(output/name)!=digest: raise RuntimeError('parameter copy mismatch: '+name)
 
     # Load the implementations whose hashes were checked above.
     import numpy as np
@@ -191,7 +199,7 @@ def main():
             net=CalibratedGCN(folded,thresholds).to(device).eval()
             bias=None
             if method!='baseline':
-                path=prepared['run']/f'{method}_T{t}_parameters.npz'
+                path=output/f'{method}_T{t}_parameters.npz'
                 with np.load(path,allow_pickle=False) as bundle, torch.no_grad():
                     for i,offset in enumerate(net.offsets): offset.copy_(torch.as_tensor(bundle[f'offset_{i}'],device=device,dtype=offset.dtype))
                     if method=='output': bias=torch.as_tensor(bundle['output_bias'],device=device,dtype=torch.float32)
@@ -244,6 +252,15 @@ def main():
     if not np.allclose(folded_logits,teacher_logits,rtol=1e-5,atol=1e-4): raise RuntimeError(f'folded teacher mismatch: max abs {fold_max}')
     teacher_pred=teacher_logits.argmax(1); fold_pred=folded_logits.argmax(1)
     fold_pred_diffs=int(np.count_nonzero(teacher_pred!=fold_pred))
+    # Revalidate the frozen inputs before publishing any endpoint as complete.
+    end_inputs=validate_inputs(prepared['run'],prepared['assets'])
+    if end_inputs['param_hashes']!=prepared['param_hashes']:
+        raise RuntimeError('calibration parameters changed during test evaluation')
+    for name in ('metadata.json','DONE.json','results.json'):
+        if sha(input_dir/name)!=sha(prepared['run']/name):
+            raise RuntimeError('confirmation input changed during evaluation: '+name)
+    if sha(Path(__file__))!=source_hashes['evaluate_frozen_test.py']:
+        raise RuntimeError('test evaluator changed during evaluation')
     results=[]
     for method in METHODS:
         for t in prepared['t_values']:
@@ -264,6 +281,7 @@ def main():
               'checkpoint_sha256':sha(prepared['checkpoint']),'calibration_sha256':sha(prepared['calibration']),
               'teacher_reference_sha256':prepared['teacher_test_sha256'],'confirmation_metadata_sha256':sha(prepared['run']/'metadata.json'),
               'confirmation_DONE_sha256':sha(prepared['run']/'DONE.json'),'confirmation_results_sha256':sha(prepared['run']/'results.json'),
+              'calibration_config':{key:m[key] for key in ('steps','optimizer','lr','batch_size','offset_bound')},
               'parameter_sha256':prepared['param_hashes'],'core_sha256':sha(HERE/'calibration_core.py'),
               'dependency_sha256':{name:sha(LEGACY/name) for name in m['dependency_sha256']},'source_snapshots':source_hashes,
               'processed_data_sha256':prepared['data_hashes'],'device':torch.cuda.get_device_name(device),
@@ -275,7 +293,7 @@ def main():
               'qualification':'frozen full-test endpoint; test and validation data historically exposed; descriptive only'}
     (output/'metadata.json').write_text(json.dumps(metadata,indent=2,allow_nan=False)+'\n',encoding='utf-8')
     (output/'results.json').write_text(json.dumps(results,indent=2,allow_nan=False)+'\n',encoding='utf-8')
-    (output/'DONE.json').write_text(json.dumps({'status':'complete','rows':len(results),'test_loaded':True,'training_or_optimization':False},indent=2)+'\n',encoding='utf-8')
+    (output/'DONE.json').write_text(json.dumps({'status':'complete','rows':len(results),'test_loaded':True,'training_or_optimization':False,'total_elapsed_seconds':time.monotonic()-start},indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'status':'complete','output':str(output),'seconds':time.monotonic()-start,'rows':len(results)}))
 
 if __name__=='__main__': main()

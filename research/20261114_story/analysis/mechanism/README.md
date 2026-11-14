@@ -1,0 +1,5 @@
+# Mechanism diagnostics
+
+Baseline T1/T2 only. Each row is a saved graph prediction, with the teacher's top-one class used to define margin and prediction flip. The final graph-logit MSE is an output-space discrepancy, not an isolated propagation/readout projection. The node aggregate averages four site MSE values after dividing each by its across-graph mean; raw site values are also reported. Correlations and AUC are marginal descriptive associations. Shared teacher margins, graph difficulty and class can confound them. This comparison cannot establish a graph-specific causal bottleneck.
+
+Graph groups use data-dependent quartile boundaries of graph size, degree, degree variance and teacher margin. Duplicate boundaries are removed, so low-variation variables may produce fewer than four groups. Quantile boundaries and actual counts are saved. Full validation and the 4488 examples outside the current screen are kept separate; both have historical exposure. The small number of teacher seeds limits generalization.
