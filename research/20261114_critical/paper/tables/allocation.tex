@@ -1,0 +1,13 @@
+\begin{tabular}{lrrrr}
+\toprule
+ & \multicolumn{2}{c}{MNIST} & \multicolumn{2}{c}{CIFAR10} \\
+Policy & $T=1$ & $T=2$ & $T=1$ & $T=2$ \\
+\midrule
+Base (no extra events) & 75.00 & 89.26 & 47.85 & 53.91 \\
+Random & 76.37 & 89.65 & 48.24 & 54.88 \\
+Local residual & 77.15 & 89.65 & 48.63 & 52.34 \\
+Feature-only & 76.76 & 89.45 & 49.22 & 53.12 \\
+Permuted graph & 79.30 & 89.45 & 47.27 & 52.73 \\
+Actual graph & 79.49 & 88.67 & 49.22 & 53.32 \\
+\bottomrule
+\end{tabular}

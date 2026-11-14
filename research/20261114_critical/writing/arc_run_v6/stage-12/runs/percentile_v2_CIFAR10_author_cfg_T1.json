@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "mode": "imported_real_local",
+  "imported_run": true,
+  "arc_experiment_execution": false,
+  "metrics": {
+    "accuracy_percent": 22.4609375,
+    "logit_mse": 23.683298110961914
+  },
+  "dataset": "CIFAR10",
+  "teacher_seed": 41,
+  "graphs": 512,
+  "T": 1,
+  "method": "author_cfg",
+  "source_evidence": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_critical\\runs\\percentile_v2\\CIFAR1041\\author_cfg_T1.npz",
+  "source_sha256": "da0a82d9a11e0f0c8bd48afdba34e944acd0868b121e6d2d3a1829d0697a512d",
+  "qualification": "one-teacher exploratory validation; no new experiment or held-out confirmation"
+}

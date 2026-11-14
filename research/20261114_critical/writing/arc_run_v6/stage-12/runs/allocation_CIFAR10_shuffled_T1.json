@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "mode": "imported_real_local",
+  "imported_run": true,
+  "arc_experiment_execution": false,
+  "metrics": {
+    "accuracy_percent": 47.265625,
+    "logit_mse": 1.0017890930175781
+  },
+  "dataset": "CIFAR10",
+  "teacher_seed": 41,
+  "graphs": 512,
+  "T": 1,
+  "method": "shuffled",
+  "source_evidence": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_critical\\runs\\allocation\\CIFAR1041\\shuffled_T1.npz",
+  "source_sha256": "5a67cd44f024089ab7c446e0fad62d560202926e27dbe5c7e6581157151ad22d",
+  "qualification": "one-teacher exploratory validation; no new experiment or held-out confirmation"
+}

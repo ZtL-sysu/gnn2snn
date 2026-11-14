@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "pipeline": "f-research-v1",
-  "contract_version": "v1",
+  "contract_version": "v2",
   "contract": [
     {
-      "path": "execution-contract-v1.md",
-      "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+      "path": "execution-contract-v2.md",
+      "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
     },
     {
       "path": "inputs/user-guidance.md",
@@ -49,17 +49,86 @@
       "action": "pass",
       "stage": "P4",
       "reason": "finite empirical test complete; method efficacy gate failed, no publication acceptance"
+    },
+    {
+      "action": "reopen",
+      "stage": "P0",
+      "reason": "user-authorized route-D empirical deliverable under v2; failed method criteria retained"
+    },
+    {
+      "action": "pass",
+      "stage": "P0",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P1",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P1A",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P1B",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P2",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P3",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P3A",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P4",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P5",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P5A",
+      "reason": "actual v2 reacceptance from unchanged evidence and explicit conditional scientific scope"
+    },
+    {
+      "action": "pass",
+      "stage": "P6"
+    },
+    {
+      "action": "pass",
+      "stage": "P7",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
+    },
+    {
+      "action": "pass",
+      "stage": "P8",
+      "reason": "primary accepted substantive report and recorded actual artifacts"
     }
   ],
   "stages": [
     {
       "id": "P0",
       "status": "passed",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [
         {
-          "path": "execution-contract-v1.md",
-          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
         },
         {
           "path": "inputs/user-guidance.md",
@@ -70,26 +139,27 @@
         {
           "path": "P0_ACCEPTANCE.md",
           "sha256": "20666b3065e080b6ccc6ac620d61212f36e559b11d082c309f8a76905e6b1369"
+        },
+        {
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
         }
       ],
-      "gate_verdict": "pass"
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P1",
       "status": "passed",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [
         {
-          "path": "execution-contract-v1.md",
-          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
         },
         {
           "path": "inputs/user-guidance.md",
           "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
-        },
-        {
-          "path": "RESCUE_PROTOCOL.md",
-          "sha256": "dcaae65bc0f69315f7580e6042d5410ec86184b1c474138d8da77a41b243ff89"
         }
       ],
       "evidence": [
@@ -98,28 +168,25 @@
           "sha256": "6d590b9626c6a589a68292e4a574ca3ec0ff25aa2a4d8b7cf2a5df468f96d1ea"
         },
         {
-          "path": "LITERATURE_DEEP_REVIEW.md",
-          "sha256": "60c8481e91f69be2b4ddb1076abffc6ae54d21385e36ca757dc9c1b3045e6231"
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
         }
       ],
-      "gate_verdict": "pass"
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P1A",
       "status": "passed",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [
         {
-          "path": "execution-contract-v1.md",
-          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
         },
         {
           "path": "inputs/user-guidance.md",
           "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
-        },
-        {
-          "path": "RESCUE_PROTOCOL.md",
-          "sha256": "dcaae65bc0f69315f7580e6042d5410ec86184b1c474138d8da77a41b243ff89"
         }
       ],
       "evidence": [
@@ -128,50 +195,48 @@
           "sha256": "9551a1b918863a023a06f4f376d0ffdd433e4465eab069d9e477efbc6ce03de6"
         },
         {
-          "path": "LITERATURE_DEEP_REVIEW.md",
-          "sha256": "60c8481e91f69be2b4ddb1076abffc6ae54d21385e36ca757dc9c1b3045e6231"
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
         }
       ],
-      "gate_verdict": "pass"
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P1B",
       "status": "passed",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [
         {
-          "path": "execution-contract-v1.md",
-          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
         },
         {
           "path": "inputs/user-guidance.md",
           "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
-        },
-        {
-          "path": "RESCUE_PROTOCOL.md",
-          "sha256": "dcaae65bc0f69315f7580e6042d5410ec86184b1c474138d8da77a41b243ff89"
         }
       ],
       "evidence": [
         {
-          "path": "FEASIBILITY_REVIEW.md",
-          "sha256": "9551a1b918863a023a06f4f376d0ffdd433e4465eab069d9e477efbc6ce03de6"
-        },
-        {
           "path": "LITERATURE_DEEP_REVIEW.md",
           "sha256": "60c8481e91f69be2b4ddb1076abffc6ae54d21385e36ca757dc9c1b3045e6231"
+        },
+        {
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
         }
       ],
-      "gate_verdict": "pass"
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P2",
       "status": "passed",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [
         {
-          "path": "execution-contract-v1.md",
-          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
         },
         {
           "path": "inputs/user-guidance.md",
@@ -184,24 +249,21 @@
           "sha256": "b64fd4d00e2daf1713c0807e6c8583e726c29a447fdb04c32871a6f98aade079"
         },
         {
-          "path": "rescue_setup_tests.txt",
-          "sha256": "6f3e09789b16870d107c43fdc93878f46ab08a98ee09deac52e513c9e0969d25"
-        },
-        {
-          "path": "dependency_probe.json",
-          "sha256": "a79400fe2c60e1717bd562849d5a84bc71a9d841b7621feed4f87c9c1197786b"
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
         }
       ],
-      "gate_verdict": "pass"
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P3",
       "status": "passed",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [
         {
-          "path": "execution-contract-v1.md",
-          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
         },
         {
           "path": "inputs/user-guidance.md",
@@ -214,24 +276,21 @@
           "sha256": "7caebfd1fa820a4e72797eec9000c5177bcc08cd34540f4d6fc83d897652400e"
         },
         {
-          "path": "analysis/percentile.csv",
-          "sha256": "e77e256cc4ab43eaf374c0e494cf2f6903a0fac8c8045642b25aba566a084bc4"
-        },
-        {
-          "path": "SOURCE_BASELINE_AUDIT.md",
-          "sha256": "cacb7f18784c929f960133576482f23e96e97c042dc558ec2852bf6b32b166c9"
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
         }
       ],
-      "gate_verdict": "pass"
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P3A",
       "status": "passed",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [
         {
-          "path": "execution-contract-v1.md",
-          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
         },
         {
           "path": "inputs/user-guidance.md",
@@ -244,32 +303,25 @@
           "sha256": "7caebfd1fa820a4e72797eec9000c5177bcc08cd34540f4d6fc83d897652400e"
         },
         {
-          "path": "analysis/percentile.csv",
-          "sha256": "e77e256cc4ab43eaf374c0e494cf2f6903a0fac8c8045642b25aba566a084bc4"
-        },
-        {
-          "path": "SOURCE_BASELINE_AUDIT.md",
-          "sha256": "cacb7f18784c929f960133576482f23e96e97c042dc558ec2852bf6b32b166c9"
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
         }
       ],
-      "gate_verdict": "pass"
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P4",
       "status": "passed",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [
         {
-          "path": "execution-contract-v1.md",
-          "sha256": "9517f3162bae5b840b9ff7da687ac352277bf932bf335a709c16b2483d6d7e21"
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
         },
         {
           "path": "inputs/user-guidance.md",
           "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
-        },
-        {
-          "path": "RESCUE_PROTOCOL.md",
-          "sha256": "dcaae65bc0f69315f7580e6042d5410ec86184b1c474138d8da77a41b243ff89"
         }
       ],
       "evidence": [
@@ -278,60 +330,180 @@
           "sha256": "7d994137a787ee5ab45f1c553348df0f8d7dfa5e294dc19167320608d9592332"
         },
         {
-          "path": "analysis/rescue_decision.json",
-          "sha256": "f6b1c1e33f1bafa72486687e1a8cd756b50be16ea1bb267506b4db4af2ef6e2b"
-        },
-        {
-          "path": "analysis/allocation_mechanism_cost.csv",
-          "sha256": "f6f1208b2f2f4c8637ef2de9b805709f83d3ca7be6c74f342ecf4bfe4fa6ffab"
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
         }
       ],
-      "gate_verdict": "pass"
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P5",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v2",
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P5_integrity.md",
+          "sha256": "7b89d8b5eaca4b7d6cf7a5224b47d626bad8cdfaaaa7be05697b09ea096ba216"
+        },
+        {
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "native primary; v2 applicability reacceptance"
     },
     {
       "id": "P5A",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v2",
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P5A_scientific_review.md",
+          "sha256": "39a96f2120fcbbaa18cc716a0db1059c9c6fe4e92247dca3193e3de4d3fc812f"
+        },
+        {
+          "path": "correction-ledger.md",
+          "sha256": "f8531593217896e523286cfbb43f1a248ee4d342b7abda7d6d4a2a1efbb640d2"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "native primary with independent Luna pre-draft scientific review"
     },
     {
       "id": "P6",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v2",
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        },
+        {
+          "path": "writing/outline_request.json",
+          "sha256": "9e6d9949f0c9d2389707bfaa0d83034e04fb26b9dc5af7e0c36c30952d6e6e93"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "writing/outline_decisions.md",
+          "sha256": "3a9c95723759372afa57bfc2b530326f3f31839a28d9ae7b3b8f8dfcb65debb7"
+        },
+        {
+          "path": "writing/arc_run_v1/stage-16/outline.md",
+          "sha256": "7355e273fe7d5e8e41dc62783042cba76489ac52b341882eef4ce5a186ef3349"
+        },
+        {
+          "path": "writing/arc_run_v1/stage-16/native_execution.json",
+          "sha256": "af811248266bc085df75c9a1385d30ca469f163941cc9064e0edfda0c7e42764"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "actual ARC stage16 + live native fresh-context Luna file bridge"
     },
     {
       "id": "P7",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v2",
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P7_acceptance.md",
+          "sha256": "1e391d0de021f34d3ff406a41b6bba04c6b7b55f0655c74cf81899ec72f978f2"
+        },
+        {
+          "path": "audits/ARC_DRAFT_RECOVERY.md",
+          "sha256": "7e18558ff193eae492a64bf0e9870798fd0067664b46aa97a2441cd1ead9df28"
+        },
+        {
+          "path": "writing/arc_run_v6/stage-17/native_execution.json",
+          "sha256": "715a1ba90921e522d4ebef5b9f1e0a353235e03a8e172421e68f71b5eda602de"
+        },
+        {
+          "path": "paper/audits/P7_paragraph_map.md",
+          "sha256": "707bcd8918432ebbfbb6acb58ddbd95e44e3480ce0fa9929bd1ae68595774eef"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "actual ARC17 plus primary scientific corrections"
     },
     {
       "id": "P8",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v2",
+      "inputs": [
+        {
+          "path": "execution-contract-v2.md",
+          "sha256": "51693390c0a265d3e22a6a1808188181df0b2526fa41a063ba96704e6ec58e19"
+        },
+        {
+          "path": "inputs/user-guidance.md",
+          "sha256": "7cbbe89c756ea9a07e1fd3ebe8ecffd70def9c7fcaf4ceb8a5d2b499427c965f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P8_acceptance.md",
+          "sha256": "1185de8c78d8dbdc5d6e4cbda14576afd4ae6d1abf682501c7571040b8109fa5"
+        },
+        {
+          "path": "figures/FIGURE_CONTRACT.md",
+          "sha256": "9bffbf90ab6ece5026c484a7f6651df0d72a30b4c9d05db7784f7c43ddb74702"
+        },
+        {
+          "path": "figures/source_hashes.json",
+          "sha256": "f52da61affd2a4c98c7151fdb4dc409322595a03c967d088c3c6891d63c47e44"
+        },
+        {
+          "path": "paper/tables/sources.json",
+          "sha256": "a157924d7c084acefa501cd40b28b58ff299624704306f76eefc1b6b5a743631"
+        },
+        {
+          "path": "paper/captions.json",
+          "sha256": "6cede0e720656fa3be11466a73d221f9b8f3b146b27e268787c99a944a67a59c"
+        }
+      ],
+      "gate_verdict": "pass",
+      "actual_executor": "Python source-bound plots plus GPT schematic and primary visual inspection"
     },
     {
       "id": "P9",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -339,7 +511,7 @@
     {
       "id": "P10",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -347,7 +519,7 @@
     {
       "id": "P11",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -355,7 +527,7 @@
     {
       "id": "P12",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -363,7 +535,7 @@
     {
       "id": "P13",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -371,7 +543,7 @@
     {
       "id": "P14",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -379,7 +551,7 @@
     {
       "id": "P15",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -387,7 +559,7 @@
     {
       "id": "P16",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -395,7 +567,7 @@
     {
       "id": "P17",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -403,7 +575,7 @@
     {
       "id": "P18",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -411,7 +583,7 @@
     {
       "id": "P19",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -419,7 +591,7 @@
     {
       "id": "P20",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"
@@ -427,7 +599,7 @@
     {
       "id": "P21",
       "status": "pending",
-      "contract_version": "v1",
+      "contract_version": "v2",
       "inputs": [],
       "evidence": [],
       "gate_verdict": "pending"

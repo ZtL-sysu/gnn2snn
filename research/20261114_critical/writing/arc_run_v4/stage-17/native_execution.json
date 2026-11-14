@@ -1,0 +1,51 @@
+{
+  "stage": 17,
+  "status": "done",
+  "artifacts": [
+    "paper_draft.md"
+  ],
+  "actual_arc_executor": "researchclaw.pipeline.stage_impls._paper_writing._execute_paper_draft",
+  "executor_source_sha256": "aa1a84ff85691fed8a6691d0ab1839e5b6e449347840458ed10535432b559321",
+  "client_source_sha256": "307c5e910de6ffb72a9c629cae389f3d2da2991f64d219bf5cef563cedd151f9",
+  "production": true,
+  "calls": [
+    {
+      "stage": 17,
+      "call": 1,
+      "approved_request_sha256": "50589df6b47ade2cfa46035ee316993e28e79322c48456310b1abb7e6918dedf",
+      "emitted_request_sha256": "0c421cb7a429311d9821b3ddb1e1966b2141327710291ae0c105a1c1f2d771a8",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "4b398e5247e4f83650821cb9ad5cdde88c2b87f0e5a9c8f08f268d42c4fe10a6",
+      "response_sha256": "c8f7f1012f14e9c757805fc4ed9bb85125770ead575299a0960870771b6a43fe"
+    },
+    {
+      "stage": 17,
+      "call": 2,
+      "approved_request_sha256": "b5c033b08c0666fc13546b21255fe0549be003cf41e64706feee6f2d33febb38",
+      "emitted_request_sha256": "503d8f1a36fa32c03b8c87130273757ef9d96de38f1ef2e88d8c9a76dd8a06cc",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "fc21e5241d5445ce4318ab686bb5e36c3664242ee5ec49b1c8bffd6a5ced0ea7",
+      "response_sha256": "0cca2f3d7d884f7ddc2ce470e97cce9324c2579109cb6a302725c192e36fb28b"
+    },
+    {
+      "stage": 17,
+      "call": 3,
+      "approved_request_sha256": "4430bfe2c80ef713c13562b54d437f2fb8e8bb16ba19c93720b973ea90300d9c",
+      "emitted_request_sha256": "8996869f13acfe08bd8e63e386d3ee48939389d728745663ed93059586db5194",
+      "arc_call_stack_verified": true,
+      "test_only": false,
+      "writer": "native assistant through live file exchange",
+      "model": "not exposed by native execution",
+      "network_api_invoked": false,
+      "original_arc_prompt_sha256": "9a475bcab5a2cab0eb9e9b003e970552196c99e18ef44f49ee779e122fd528f9"
+    }
+  ]
+}

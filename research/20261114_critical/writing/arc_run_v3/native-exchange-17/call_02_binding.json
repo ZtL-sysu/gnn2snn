@@ -1,0 +1,8 @@
+{
+  "request_sha256": "36c821df040f899eb05ba4c45558f8775770c506207fbef676a30629f4f5ff09",
+  "execution_identity": {
+    "agent": "native subagent",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium"
+  }
+}

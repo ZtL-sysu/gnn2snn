@@ -1,0 +1,9 @@
+{
+  "accepted": false,
+  "issue": "formula escapes and unsupported absolute T2 numbers; ideal intervention and per-graph budget description incorrect",
+  "invalid_control_character_codes": [
+    12
+  ],
+  "evidence": "writing/arc_run_v3/native-exchange-17/call_02_response.json",
+  "action": "preserve failed outputs, correct complete scientific packet and serialization, new live native execution; no experiment rerun"
+}

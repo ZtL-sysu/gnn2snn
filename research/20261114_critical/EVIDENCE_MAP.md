@@ -9,8 +9,8 @@
 |旧logits目标无稳定优势|20261114_story/REPORT.md及paired汇总|限当前参数与优化器|Ablation/Discussion|不能推及所有图级目标|
 |首位置理想恢复较大|20261114_story/analysis/ideal/aggregate.csv|仅理想化诊断|Motivation|54.1%/23.5%是教师预测不一致缺口关闭比例，不是准确率缺口恢复比例；不是可部署方法|
 |当前GPU无加速|20261114_story/costs/及COST_DEFINITIONS.md|已验证实现限定|Efficiency|有符号多级事件，密集后端，无硬件能耗结论|
-|消息预激活扰动恒等式|本轮objective.py与test_objective.py|理论条件明确/待实现验证|Method设计依据|不宣称新定理或Gated适用|
-|消息保持独立分类收益|本轮runs/待生成|待确认|有证据才进Main Results|必须超过局部及图内置换/特征控制|
+|消息预激活扰动恒等式|本轮objective.py与test_objective.py|条件与实现已验证|Method设计依据|不宣称新定理或Gated适用|
+|消息保持独立分类收益|本轮analysis/endpoints.csv、rescue_decision.json|所测候选未通过联合门槛|Ablation/Discussion|不能宣称成功方法或泛化地否定全部结构方法|
 
 ## 本轮已完成证据的论文判断
 |发现|证据|状态|论文角色|含义|

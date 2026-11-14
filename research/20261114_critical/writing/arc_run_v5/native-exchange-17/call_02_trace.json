@@ -1,0 +1,22 @@
+{
+  "stage": 17,
+  "call": 2,
+  "approved_request_sha256": "b5c033b08c0666fc13546b21255fe0549be003cf41e64706feee6f2d33febb38",
+  "emitted_request_sha256": "503d8f1a36fa32c03b8c87130273757ef9d96de38f1ef2e88d8c9a76dd8a06cc",
+  "arc_call_stack_verified": true,
+  "test_only": false,
+  "writer": "native assistant through live file exchange",
+  "model": "not exposed by native execution",
+  "network_api_invoked": false,
+  "original_arc_prompt_sha256": "fc21e5241d5445ce4318ab686bb5e36c3664242ee5ec49b1c8bffd6a5ced0ea7",
+  "response_origin": "resumed previously live native exchange",
+  "original_exchange": "research\\20261114_critical\\writing\\arc_run_v4\\native-exchange-17",
+  "original_response_sha256": "11ca40bb3c2bcf54d0d365cb4f0991590ee3fb5f606b9c766c942039186f7c44",
+  "new_native_generation": false,
+  "original_execution_identity": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "context": "fresh"
+  },
+  "response_sha256": "976efcc0865ed255e15d63efdd7ac1f733c7369b9074869ae0cef19715395b62"
+}

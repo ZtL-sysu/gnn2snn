@@ -1,0 +1,486 @@
+{
+  "metrics_summary": {
+    "percentile_v2_CIFAR10_author_cfg_T1_accuracy": {
+      "mean": 22.4609375,
+      "min": 22.4609375,
+      "max": 22.4609375,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "percentile_v2_CIFAR10_author_cfg_T2_accuracy": {
+      "mean": 32.8125,
+      "min": 32.8125,
+      "max": 32.8125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "percentile_v2_CIFAR10_matched8_T1_accuracy": {
+      "mean": 46.2890625,
+      "min": 46.2890625,
+      "max": 46.2890625,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "percentile_v2_CIFAR10_matched8_T2_accuracy": {
+      "mean": 55.078125,
+      "min": 55.078125,
+      "max": 55.078125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "percentile_v2_MNIST_author_cfg_T1_accuracy": {
+      "mean": 23.4375,
+      "min": 23.4375,
+      "max": 23.4375,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "percentile_v2_MNIST_author_cfg_T2_accuracy": {
+      "mean": 49.21875,
+      "min": 49.21875,
+      "max": 49.21875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "percentile_v2_MNIST_matched8_T1_accuracy": {
+      "mean": 71.875,
+      "min": 71.875,
+      "max": 71.875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "percentile_v2_MNIST_matched8_T2_accuracy": {
+      "mean": 88.0859375,
+      "min": 88.0859375,
+      "max": 88.0859375,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_baseline_T1_accuracy": {
+      "mean": 47.8515625,
+      "min": 47.8515625,
+      "max": 47.8515625,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_baseline_T2_accuracy": {
+      "mean": 53.90625,
+      "min": 53.90625,
+      "max": 53.90625,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_random_T1_accuracy": {
+      "mean": 48.2421875,
+      "min": 48.2421875,
+      "max": 48.2421875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_random_T2_accuracy": {
+      "mean": 54.8828125,
+      "min": 54.8828125,
+      "max": 54.8828125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_local_T1_accuracy": {
+      "mean": 48.6328125,
+      "min": 48.6328125,
+      "max": 48.6328125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_local_T2_accuracy": {
+      "mean": 52.34375,
+      "min": 52.34375,
+      "max": 52.34375,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_identity_T1_accuracy": {
+      "mean": 49.21875,
+      "min": 49.21875,
+      "max": 49.21875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_identity_T2_accuracy": {
+      "mean": 53.125,
+      "min": 53.125,
+      "max": 53.125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_shuffled_T1_accuracy": {
+      "mean": 47.265625,
+      "min": 47.265625,
+      "max": 47.265625,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_shuffled_T2_accuracy": {
+      "mean": 52.734375,
+      "min": 52.734375,
+      "max": 52.734375,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_message_T1_accuracy": {
+      "mean": 49.21875,
+      "min": 49.21875,
+      "max": 49.21875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_CIFAR10_message_T2_accuracy": {
+      "mean": 53.3203125,
+      "min": 53.3203125,
+      "max": 53.3203125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_baseline_T1_accuracy": {
+      "mean": 75.0,
+      "min": 75.0,
+      "max": 75.0,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_baseline_T2_accuracy": {
+      "mean": 89.2578125,
+      "min": 89.2578125,
+      "max": 89.2578125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_random_T1_accuracy": {
+      "mean": 76.3671875,
+      "min": 76.3671875,
+      "max": 76.3671875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_random_T2_accuracy": {
+      "mean": 89.6484375,
+      "min": 89.6484375,
+      "max": 89.6484375,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_local_T1_accuracy": {
+      "mean": 77.1484375,
+      "min": 77.1484375,
+      "max": 77.1484375,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_local_T2_accuracy": {
+      "mean": 89.6484375,
+      "min": 89.6484375,
+      "max": 89.6484375,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_identity_T1_accuracy": {
+      "mean": 76.7578125,
+      "min": 76.7578125,
+      "max": 76.7578125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_identity_T2_accuracy": {
+      "mean": 89.453125,
+      "min": 89.453125,
+      "max": 89.453125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_shuffled_T1_accuracy": {
+      "mean": 79.296875,
+      "min": 79.296875,
+      "max": 79.296875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_shuffled_T2_accuracy": {
+      "mean": 89.453125,
+      "min": 89.453125,
+      "max": 89.453125,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_message_T1_accuracy": {
+      "mean": 79.4921875,
+      "min": 79.4921875,
+      "max": 79.4921875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    },
+    "allocation_MNIST_message_T2_accuracy": {
+      "mean": 88.671875,
+      "min": 88.671875,
+      "max": 88.671875,
+      "count": 1,
+      "unit": "percent",
+      "graphs": 512,
+      "teacher_seeds": 1
+    }
+  },
+  "condition_summaries": {
+    "percentile_v2_CIFAR10_author_cfg_T1": {
+      "primary_metric": 22.4609375,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "percentile_v2_CIFAR10_author_cfg_T2": {
+      "primary_metric": 32.8125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "percentile_v2_CIFAR10_matched8_T1": {
+      "primary_metric": 46.2890625,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "percentile_v2_CIFAR10_matched8_T2": {
+      "primary_metric": 55.078125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "percentile_v2_MNIST_author_cfg_T1": {
+      "primary_metric": 23.4375,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "percentile_v2_MNIST_author_cfg_T2": {
+      "primary_metric": 49.21875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "percentile_v2_MNIST_matched8_T1": {
+      "primary_metric": 71.875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "percentile_v2_MNIST_matched8_T2": {
+      "primary_metric": 88.0859375,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_baseline_T1": {
+      "primary_metric": 47.8515625,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_baseline_T2": {
+      "primary_metric": 53.90625,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_random_T1": {
+      "primary_metric": 48.2421875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_random_T2": {
+      "primary_metric": 54.8828125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_local_T1": {
+      "primary_metric": 48.6328125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_local_T2": {
+      "primary_metric": 52.34375,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_identity_T1": {
+      "primary_metric": 49.21875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_identity_T2": {
+      "primary_metric": 53.125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_shuffled_T1": {
+      "primary_metric": 47.265625,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_shuffled_T2": {
+      "primary_metric": 52.734375,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_message_T1": {
+      "primary_metric": 49.21875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_CIFAR10_message_T2": {
+      "primary_metric": 53.3203125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_baseline_T1": {
+      "primary_metric": 75.0,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_baseline_T2": {
+      "primary_metric": 89.2578125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_random_T1": {
+      "primary_metric": 76.3671875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_random_T2": {
+      "primary_metric": 89.6484375,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_local_T1": {
+      "primary_metric": 77.1484375,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_local_T2": {
+      "primary_metric": 89.6484375,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_identity_T1": {
+      "primary_metric": 76.7578125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_identity_T2": {
+      "primary_metric": 89.453125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_shuffled_T1": {
+      "primary_metric": 79.296875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_shuffled_T2": {
+      "primary_metric": 89.453125,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_message_T1": {
+      "primary_metric": 79.4921875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    },
+    "allocation_MNIST_message_T2": {
+      "primary_metric": 88.671875,
+      "metric_name": "accuracy_percent",
+      "teacher_seed": 41,
+      "evaluation_graphs": 512
+    }
+  }
+}

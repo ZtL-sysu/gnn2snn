@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "mode": "imported_real_local",
+  "imported_run": true,
+  "arc_experiment_execution": false,
+  "metrics": {
+    "accuracy_percent": 23.4375,
+    "logit_mse": 56.89654541015625
+  },
+  "dataset": "MNIST",
+  "teacher_seed": 41,
+  "graphs": 512,
+  "T": 1,
+  "method": "author_cfg",
+  "source_evidence": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_critical\\runs\\percentile_v2\\MNIST41\\author_cfg_T1.npz",
+  "source_sha256": "5b94a30135a48c89d53a6381f76ae9080e4900ad0c2c232f9fdfec2ba2ee815e",
+  "qualification": "one-teacher exploratory validation; no new experiment or held-out confirmation"
+}

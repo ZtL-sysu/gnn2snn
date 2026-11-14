@@ -1,0 +1,19 @@
+\begin{tabular}{lrrr}
+\toprule
+Condition & Scalars & MNIST & CIFAR10 \\
+\midrule
+Uncalibrated & 0 & 69.73 & 45.12 \\
+All-local ($10^{-3}$) & 693 & 75.00 & 47.85 \\
+All-local ($10^{-2}$) & 693 & 78.12 & 49.41 \\
+First-local ($10^{-3}$) & 146 & 73.63 & 45.51 \\
+First-message ($10^{-3}$) & 146 & 73.83 & 43.95 \\
+First-local ($10^{-2}$) & 146 & 75.59 & 46.68 \\
+First-message ($10^{-2}$) & 146 & 75.39 & 45.70 \\
+Hard-grid local & 146 & 69.73 & 45.12 \\
+Hard-grid message & 146 & 70.70 & 44.92 \\
+Local alphabet & 1168 & 82.23 & 48.44 \\
+Diagonal message alphabet & 1168 & 82.23 & 47.46 \\
+Refined local alphabet & 1168 & 83.20 & 47.46 \\
+Refined message alphabet & 1168 & 82.03 & 46.09 \\
+\bottomrule
+\end{tabular}

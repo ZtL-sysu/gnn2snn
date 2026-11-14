@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "mode": "imported_real_local",
+  "imported_run": true,
+  "arc_experiment_execution": false,
+  "metrics": {
+    "accuracy_percent": 53.3203125,
+    "logit_mse": 0.21809940040111542
+  },
+  "dataset": "CIFAR10",
+  "teacher_seed": 41,
+  "graphs": 512,
+  "T": 2,
+  "method": "message",
+  "source_evidence": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_critical\\runs\\allocation\\CIFAR1041\\message_T2.npz",
+  "source_sha256": "9100b0324a467d3baa835c8368a189fb72cd85202bf14cba02e35eb7ab0bc432",
+  "qualification": "one-teacher exploratory validation; no new experiment or held-out confirmation"
+}

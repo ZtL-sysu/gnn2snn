@@ -1,0 +1,109 @@
+{
+  "section_analysis": [
+    {
+      "heading": "Critical-Site Sensitivity and Realizable Calibration in GCN-to-SNN Conversion",
+      "word_count": 0,
+      "canonical": ""
+    },
+    {
+      "heading": "Abstract",
+      "word_count": 188,
+      "canonical": "abstract",
+      "target": [
+        180,
+        220
+      ],
+      "status": "ok",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "1 Introduction",
+      "word_count": 362,
+      "canonical": "",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "2 Related Work",
+      "word_count": 210,
+      "canonical": "",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "3 Method",
+      "word_count": 1115,
+      "canonical": ""
+    },
+    {
+      "heading": "4 Experiments and Results",
+      "word_count": 950,
+      "canonical": ""
+    },
+    {
+      "heading": "Results",
+      "word_count": 9,
+      "canonical": "results",
+      "target": [
+        600,
+        800
+      ],
+      "status": "severely_short",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "Discussion",
+      "word_count": 1,
+      "canonical": "discussion",
+      "target": [
+        400,
+        600
+      ],
+      "status": "severely_short",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "Limitations",
+      "word_count": 1,
+      "canonical": "limitations",
+      "target": [
+        200,
+        300
+      ],
+      "status": "severely_short",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "Conclusion",
+      "word_count": 1,
+      "canonical": "conclusion",
+      "target": [
+        200,
+        300
+      ],
+      "status": "severely_short",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    }
+  ],
+  "overall_warnings": [
+    "Results is severely under target (9 words, target 600-800)",
+    "Discussion is severely under target (1 words, target 400-600)",
+    "Limitations is severely under target (1 words, target 200-300)",
+    "Conclusion is severely under target (1 words, target 200-300)",
+    "Section imbalance: results (9 words) vs discussion (1 words) — ratio 9.0x",
+    "Only 5 unique citations found (target: >=15 for a full paper)"
+  ],
+  "revision_directives": [
+    "EXPAND Results from 9 to 600+ words. Add substantive content — do NOT pad with filler.",
+    "EXPAND Discussion from 1 to 400+ words. Add substantive content — do NOT pad with filler.",
+    "EXPAND Limitations from 1 to 200+ words. Add substantive content — do NOT pad with filler.",
+    "EXPAND Conclusion from 1 to 200+ words. Add substantive content — do NOT pad with filler.",
+    "Rebalance sections: expand discussion and/or compress results to achieve more even section lengths.",
+    "Add more references — a top-venue paper typically cites 25-40 works. Currently only 5 unique citations."
+  ]
+}

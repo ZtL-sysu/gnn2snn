@@ -1,0 +1,65 @@
+{
+  "section_analysis": [
+    {
+      "heading": "Critical-Site Sensitivity and Realizable Calibration in GCN-to-SNN Conversion",
+      "word_count": 0,
+      "canonical": ""
+    },
+    {
+      "heading": "Abstract",
+      "word_count": 188,
+      "canonical": "abstract",
+      "target": [
+        180,
+        220
+      ],
+      "status": "ok",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "1 Introduction",
+      "word_count": 362,
+      "canonical": "",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "2 Related Work",
+      "word_count": 210,
+      "canonical": "",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "3 Method",
+      "word_count": 1115,
+      "canonical": ""
+    },
+    {
+      "heading": "4 Experiments and Results",
+      "word_count": 950,
+      "canonical": ""
+    },
+    {
+      "heading": "5 Discussion",
+      "word_count": 574,
+      "canonical": "",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    },
+    {
+      "heading": "6 Conclusion",
+      "word_count": 108,
+      "canonical": "",
+      "bullet_density": 0.0,
+      "bullet_status": "ok"
+    }
+  ],
+  "overall_warnings": [
+    "Only 5 unique citations found (target: >=15 for a full paper)"
+  ],
+  "revision_directives": [
+    "Add more references — a top-venue paper typically cites 25-40 works. Currently only 5 unique citations."
+  ]
+}

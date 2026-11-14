@@ -1,0 +1,13 @@
+{
+  "stage": 17,
+  "call": 2,
+  "approved_request_sha256": "b5c033b08c0666fc13546b21255fe0549be003cf41e64706feee6f2d33febb38",
+  "emitted_request_sha256": "503d8f1a36fa32c03b8c87130273757ef9d96de38f1ef2e88d8c9a76dd8a06cc",
+  "arc_call_stack_verified": true,
+  "test_only": false,
+  "writer": "native assistant through live file exchange",
+  "model": "not exposed by native execution",
+  "network_api_invoked": false,
+  "original_arc_prompt_sha256": "fc21e5241d5445ce4318ab686bb5e36c3664242ee5ec49b1c8bffd6a5ced0ea7",
+  "response_sha256": "0cca2f3d7d884f7ddc2ce470e97cce9324c2579109cb6a302725c192e36fb28b"
+}

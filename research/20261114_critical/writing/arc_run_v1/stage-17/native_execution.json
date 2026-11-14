@@ -1,0 +1,12 @@
+{
+  "stage": 17,
+  "status": "failed",
+  "artifacts": [
+    "paper_draft.md"
+  ],
+  "actual_arc_executor": "researchclaw.pipeline.stage_impls._paper_writing._execute_paper_draft",
+  "executor_source_sha256": "aa1a84ff85691fed8a6691d0ab1839e5b6e449347840458ed10535432b559321",
+  "client_source_sha256": "9337b6a1c6bb515167cebce94e11ffa5c7069ae919550f5ccc0bb37b1656f049",
+  "production": true,
+  "calls": []
+}

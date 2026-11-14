@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "mode": "imported_real_local",
+  "imported_run": true,
+  "arc_experiment_execution": false,
+  "metrics": {
+    "accuracy_percent": 89.453125,
+    "logit_mse": 0.888098418712616
+  },
+  "dataset": "MNIST",
+  "teacher_seed": 41,
+  "graphs": 512,
+  "T": 2,
+  "method": "identity",
+  "source_evidence": "C:\\Users\\xhf\\.codex\\worktrees\\graph-aware-calibration\\gnn2snn\\research\\20261114_critical\\runs\\allocation\\MNIST41\\identity_T2.npz",
+  "source_sha256": "3240e63c9277318728fbadd1c1e51bba9515326f37a4fd9a48664020d5e56705",
+  "qualification": "one-teacher exploratory validation; no new experiment or held-out confirmation"
+}
