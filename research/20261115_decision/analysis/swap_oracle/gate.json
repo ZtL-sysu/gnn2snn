@@ -1,0 +1,29 @@
+{
+  "capacity_gate_pass": true,
+  "per_dataset": {
+    "MNIST": {
+      "graphs_with_margin_gain_at_least_0_1": 19,
+      "fraction": 0.1484375,
+      "T1_teacher_agreement_gain_pp": 0.78125,
+      "T2_teacher_agreement_gain_pp": 0.78125,
+      "capacity_admission_pass": true
+    },
+    "CIFAR10": {
+      "graphs_with_margin_gain_at_least_0_1": 13,
+      "fraction": 0.1015625,
+      "T1_teacher_agreement_gain_pp": 2.34375,
+      "T2_teacher_agreement_gain_pp": 0.0,
+      "capacity_admission_pass": true
+    }
+  },
+  "proposal_rng_seed": 20261117,
+  "teacher_seed": 41,
+  "proposal_seed_evidence": "propose_swaps default in saved source/event_swap.py; graph-ID-derived independent streams",
+  "deployable_method_established": false,
+  "independent_graph_contribution_established": false,
+  "qualification": "training-only optimistic oracle; selection and evaluation use same graphs; descriptive bootstrap is not generalization",
+  "source_hashes": {
+    "runs\\swap_oracle\\MNIST41\\candidates.npz": "c193ceef7c5ef8ca4f38c46e2df174c9ef9f4a5cc84d3c972de4dfca6820180f",
+    "runs\\swap_oracle\\CIFAR1041\\candidates.npz": "159784b759757e204b32720263a5ddf6f09e6549a3efdc771f64c2656c4d4b5c"
+  }
+}

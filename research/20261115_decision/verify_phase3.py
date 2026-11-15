@@ -93,6 +93,34 @@ def main():
         assert sa['endpoints']==16 and sa['raw_array_metrics_recomputed']
         for path,digest in sa['source_hashes'].items():assert sha256(HERE/path)==digest
         check['source_TI_16_endpoints_source_snapshots_moments_and_forward']='pass'
+    swap_root=HERE/'runs/swap_oracle'
+    if swap_root.exists():
+        from summarize_swap_oracle import class_margins,budget_mask
+        for ds in ('MNIST','CIFAR10'):
+            run=swap_root/f'{ds}41'
+            sm=json.loads((run/'metadata.json').read_text())
+            assert sm['training_only'] and not sm['validation_loaded'] and not sm['test_loaded']
+            assert sm['labels_used_for_selection'] is False and sm['candidate_swaps']==8
+            paramfile=HERE/'runs/objectives'/f'{ds}41'/'local_t1_parameters.npz'
+            assert sha256(paramfile)==sm['baseline_parameters_sha256']
+            oldmeta=json.loads((paramfile.parent/'metadata.json').read_text())
+            assert oldmeta['checkpoint_sha256']==sm['checkpoint_sha256']
+            assert oldmeta['calibration_sha256']==sm['calibration_sha256']
+            assert oldmeta['train_indices'][:128]==sm['training_indices']
+            for name,digest in sm['source_sha256'].items():assert sha256(run/'source'/name)==digest
+            a=dict(np.load(run/'candidates.npz'))
+            assert sha256(run/'candidates.npz')==sm['candidate_npz_sha256']
+            assert a['logits_T1'].shape==a['logits_T2'].shape==(9,128,10)
+            assert np.array_equal(a['indices'],sm['training_indices'])
+            assert a['events_T1'].dtype==a['events_T2'].dtype==np.int64
+            margins={T:class_margins(a[f'logits_T{T}'],a['teacher'].argmax(1)) for T in (1,2)}
+            for budget in ('exact_events','nonincrease','first_site_only'):
+                assert budget_mask(a,margins,budget)[0].all()
+        verdict=json.loads((HERE/'analysis/swap_oracle/gate.json').read_text())
+        assert verdict['deployable_method_established'] is False
+        assert verdict['independent_graph_contribution_established'] is False
+        for path,digest in verdict['source_hashes'].items():assert sha256(HERE/path)==digest
+        check['training_only_8_swap_banks_and_cost_oracle_provenance']='pass; not a deployment claim'
     result=dict(engineering_acceptance=True,method_discovery_goal_achieved=False,checks=check,
         runtime=dict(python=sys.executable,torch=torch.__version__,cuda=torch.version.cuda,
             gpu=torch.cuda.get_device_name(0),numpy=np.__version__),

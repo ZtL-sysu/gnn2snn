@@ -13,7 +13,8 @@
     "historical_directories_unchanged": true,
     "all_40_objective_endpoints_and_v1_v2_trace_reproduction": "pass",
     "historical_three_teacher_archive_reconstruction": "pass",
-    "source_TI_16_endpoints_source_snapshots_moments_and_forward": "pass"
+    "source_TI_16_endpoints_source_snapshots_moments_and_forward": "pass",
+    "training_only_8_swap_banks_and_cost_oracle_provenance": "pass; not a deployment claim"
   },
   "runtime": {
     "python": "C:\\Users\\xhf\\miniconda3\\envs\\dyg-cold\\python.exe",

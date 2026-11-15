@@ -13,7 +13,8 @@
 |Ordinary logits accuracy/event tradeoff|T1 +1.171875pp both tasks; `paired.csv`, `event_accuracy.svg`|Exploratory objective ablation / Pareto|CIs cross zero; CIFAR agreement −2.1484pp; not fixed exact event equality, not graph innovation|
 |Ranking loss decreases while third competitors win|`analysis/optimization_audit/results.json`|Objective limitation / next mechanism|Training-only, one bounded audit; not all-class ranking failure|
 |Events, amplitude proxies, storage and timing|`analysis/phase3/main_table.csv`, raw NPZ|Cost transparency|Dense backend; event proxy excludes residual/readout arithmetic; no chip energy or deployment latency claims|
-|Graph-conditioned novel encoder and four-arm controls|Not admitted by Gate2|No Proposed Method success section|No independent graph contribution established|
+|Graph-conditioned novel encoder and same-capacity controls|Original Gate2 failed; new reassignment capacity diagnostic only admits a written bounded prototype design|No Proposed Method success section|No deployable method or independent graph contribution established|
+|Fixed-support same-channel event reassignment capacity|`analysis/swap_oracle/summary.md`, two training128 candidate banks|Finite-code realizability diagnosis|Oracle sees teacher and full future cost offline; strict equal-events joint feasibility0; no deployable selector or CIFAR accuracy gain established|
 |Source-linked TI graph adaptation|16 raw-derived/source-checked endpoints, `analysis/source_ti/summary.md`|Stronger source-algorithm control|Source TI/fallback unchanged; eight-level channel GCN adaptation, not literal ImageNet reproduction or new method|
 |New multi-teacher/external task confirmation|Not launched|Explicit missing evidence|Old seed results cannot validate new objective/encoder|
 
