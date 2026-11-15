@@ -9,3 +9,6 @@ data/centered_validation/* -text
 *.json text eol=lf
 *.csv text eol=lf
 audit/*.txt text eol=lf
+
+early/raw/* -text
+data/centered_validation/* -text
