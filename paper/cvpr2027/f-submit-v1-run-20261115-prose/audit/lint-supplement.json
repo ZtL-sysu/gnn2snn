@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "semantic-review-required",
+  "errors": [],
+  "findings": [
+    {
+      "rule_id": "W003",
+      "file": "revised\\supplement.tex",
+      "line": 34,
+      "original": "Frozen evaluation batch normalization is folded into affine weights. The fixed-GCN graph normalization uses the source outdegree and destination indegree of the existing directed edges; self-loops are not added. The residual connection is kept explicitly. Calibration uses per-channel histograms on the training split. Learned initial potentials change neither graph nor teacher weights, and are bounded to half a threshold in either direction. Local normalized MSE averages the six activation-site errors, dividing each by its teacher activation mean square with floor $10^{-6}$. Output fitting uses teacher logits; shuffled targets are a correspondence control, not a graph-specific baseline.",
+      "type": "possible repeated defense",
+      "suggested_action": "NARROW or MERGE; retain uncertainty",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    },
+    {
+      "rule_id": "W004",
+      "file": "revised\\supplement.tex",
+      "line": 75,
+      "original": "For currents $(0.01,1.58)$ the first emitted event is $1/128$ because the positive threshold test requires $m\\geq0.75q$. The second emitted event is $1$, giving $1/128+1/2=0.5078125$. For currents $(1,-0.4)$ the first event is $1$ and the second is $-1/2$, giving $1-1/4=0.75$. Both weighted current sums are $0.8$ and both event counts are two. The negative eligibility condition is checked in the source replay, including its cumulative-output state. A fixed classifier can therefore separate the two outputs with a threshold of $0.6$.",
+      "type": "claim-strength check",
+      "suggested_action": "VERIFY against comparison/interval/design; no automatic deletion",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    },
+    {
+      "rule_id": "W004",
+      "file": "revised\\supplement.tex",
+      "line": 108,
+      "original": "The retained historical results use corrected Planetoid row alignment, duplicate-edge handling, bias-calibration masks, and accumulation of actual hidden events. Superseded values are excluded. The analysis also distinguishes symmetric normalization from row-stochastic normalization and treats saturated inputs separately in the hidden-error bound. Large readout differences, particularly on ogbn-arxiv, illustrate the importance of decoder semantics rather than establish a new SOTA result. Because the compact historical package lacks per-seed raw SNN predictions, these means provide contextual evidence with weaker provenance than the retained visual raw arrays.",
+      "type": "claim-strength check",
+      "suggested_action": "VERIFY against comparison/interval/design; no automatic deletion",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    }
+  ],
+  "checker_versions": {
+    "scripts/manuscript_lint.py": "1da3429448970adf1b3c75fffe902ad363be1876ab41d8a494e66ac87d8ca134",
+    "scripts/writing_adapter.py": "849cc9c4359720879214015f0a5f35c034b12b501f19caca9dcc5c80100c7187",
+    "references/scientific-writing-contract.md": "5ea84114722267e6e81689f75ebeb3dbb098bd01830d1efcd7d4041d20912f5e",
+    "references/module-quality-rubric.md": "f33b9bca553b63df199ef451c07c7b08b0c21bf1c03fbe7d9f4e420f525fd750"
+  },
+  "dependencies": [
+    {
+      "path": "revised\\supplement.tex",
+      "sha256": "238df06c29b7f79c9baff9dff341b335b1e7f1611a5be949dd068421c8050fd5"
+    },
+    {
+      "path": "revised\\supplement.pdf",
+      "sha256": "ffdc1a237810d7f219ef2d9140cfe469c6ca1c6394c6c9a6eb9087a9b1aea773"
+    }
+  ],
+  "parser_limits": "Not a TeX engine: no macro expansion, conditional evaluation, bibliography rendering or OCR. Inspect rendered PDF and figures; provided labels are not proof of pixels.",
+  "semantic_checks": [
+    "facts/model-condition-direction/CI-vs-SD",
+    "observed-vs-planned",
+    "negative findings",
+    "paragraph reverse outline",
+    "Introduction-Conclusion scope",
+    "Results-Discussion roles",
+    "declaration routing",
+    "rendered captions/labels"
+  ]
+}

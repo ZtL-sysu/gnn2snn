@@ -1,0 +1,20 @@
+--- original/supplement.tex
++++ revised/supplement.tex
+@@ -8,7 +8,7 @@
+ \author{Anonymous authors}
+ \begin{document}\maketitle
+ \section{Evidence and Reproducibility}
+-The main text connects frozen experiments through a common scientific question; it does not combine their numerical results into a single algorithm. Table~\ref{tab:scope} summarizes the evidence boundaries. All visual official validation and test splits were used during earlier development. The final endpoint evaluations are consequently descriptive, including when parameters were frozen before those evaluations. The present manuscript preparation reuses saved results and predictions and performs no new training or test inference.
++The evidence addresses a common question across several graph models and event codes. Table~\ref{tab:scope} distinguishes the role and scope of each experiment. All official visual validation and test splits were used during earlier development, so their endpoint evaluations are descriptive even when the evaluated parameters had been frozen. The manuscript reuses the recorded results and predictions; no new training or test inference was performed for this preparation.
+ 
+ \begin{table*}[t]\centering\small
+ \caption{Evidence families and their distinct roles. Counts refer to graphs per task unless otherwise stated.}
+@@ -105,7 +105,7 @@
+ ogbn-arxiv &65.895&66.259&25.658&66.242&25.845\\\bottomrule
+ \end{tabular}\end{table*}
+ 
+-The historical audit repaired Planetoid row alignment, duplicate-edge handling, bias-calibration masks, and simulation of actual hidden events. Superseded values from before those repairs are excluded. A prior global row-sum argument was invalid for symmetric normalization, and a global error bound failed to separate saturation. These corrected assumptions are retained in the current analysis. Large readout differences, particularly on ogbn-arxiv, motivate checking decoder semantics; they are not interpreted as a new SOTA result. Per-seed raw SNN predictions are absent from the compact historical package, so those means have weaker evidential status than the retained visual raw arrays.
++The retained historical results use corrected Planetoid row alignment, duplicate-edge handling, bias-calibration masks, and accumulation of actual hidden events. Superseded values are excluded. The analysis also distinguishes symmetric normalization from row-stochastic normalization and treats saturated inputs separately in the hidden-error bound. Large readout differences, particularly on ogbn-arxiv, illustrate the importance of decoder semantics rather than establish a new SOTA result. Because the compact historical package lacks per-seed raw SNN predictions, these means provide contextual evidence with weaker provenance than the retained visual raw arrays.
+ 
+ \section{Residual Centering and Complete Costs}
+ For identity residuals, cumulative nonnegative branch increments define $q_\ell=h_\ell-h_0$ and $r_\ell=e_\ell-e_0$. Centered coding transmits these increments to shared projection consumers while keeping the raw graded skip unchanged. At each threshold scale, the comparison uses exactly the same channel thresholds, set from the maximum of raw-state and cumulative-branch calibration ranges. The first layer remains exact in both arms. This controls both a privileged first layer and threshold range. Scale 1 and scale 8 are separate settings, not selected optimal values.

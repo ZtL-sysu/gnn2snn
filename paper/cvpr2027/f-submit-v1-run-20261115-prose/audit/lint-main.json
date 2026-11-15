@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "semantic-review-required",
+  "errors": [],
+  "findings": [
+    {
+      "rule_id": "W004",
+      "file": "revised\\main.tex",
+      "line": 119,
+      "original": "For position analysis, an ideal causal ReLU replaces one selected converted activation while leaving the graph, weights, and incoming converted computation fixed. It is a continuous diagnostic. Restoring all six sites reproduces the ANN; an empty intervention reproduces the conversion. Group effects are nonadditive because interventions alter subsequent computation.",
+      "type": "claim-strength check",
+      "suggested_action": "VERIFY against comparison/interval/design; no automatic deletion",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    },
+    {
+      "rule_id": "W004",
+      "file": "revised\\main.tex",
+      "line": 142,
+      "original": "At one tick, fixed-GCN conversion falls to $71.44\\pm2.80\\%$ on MNIST and $46.80\\pm1.22\\%$ on CIFAR10. Which sites cause this gap? Figure~\\ref{fig:positions} shows conditional recovery on the full 5,000-graph validation split for each teacher. The first node site closes 54.08\\% and 23.54\\% of the disagreement gap, measured per teacher and then averaged. Recovering all four node sites closes 80.4\\% and 45.2\\%; the two readout sites close 8.8\\% and 14.9\\%. The first site is the largest single-site accuracy recovery on both tasks. This locates a useful intervention point, but the recovery uses a continuous response and imposes no finite-event constraint.",
+      "type": "claim-strength check",
+      "suggested_action": "VERIFY against comparison/interval/design; no automatic deletion",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    },
+    {
+      "rule_id": "W003",
+      "file": "revised\\main.tex",
+      "line": 236,
+      "original": "The distinction also matters for event allocation. Actual-message allocation costs 0.834/0.991 ms per graph versus local allocation's 0.668/0.806 in its own matched timing experiment. Exact local codeword exchanges can change downstream events even when first-site counts are fixed. Thus neither low $T$, local sparsity, nor the projected additions in Fig.~\\ref{fig:centered} is a complete efficiency claim. A useful conversion must specify its event type, continuous work, prefix requirements, and backend.",
+      "type": "possible repeated defense",
+      "suggested_action": "NARROW or MERGE; retain uncertainty",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    }
+  ],
+  "checker_versions": {
+    "scripts/manuscript_lint.py": "1da3429448970adf1b3c75fffe902ad363be1876ab41d8a494e66ac87d8ca134",
+    "scripts/writing_adapter.py": "849cc9c4359720879214015f0a5f35c034b12b501f19caca9dcc5c80100c7187",
+    "references/scientific-writing-contract.md": "5ea84114722267e6e81689f75ebeb3dbb098bd01830d1efcd7d4041d20912f5e",
+    "references/module-quality-rubric.md": "f33b9bca553b63df199ef451c07c7b08b0c21bf1c03fbe7d9f4e420f525fd750"
+  },
+  "dependencies": [
+    {
+      "path": "revised\\main.tex",
+      "sha256": "a3786fcea51be050c233de08e0b369ef78a655c109ca7f984b97209dd9613fa5"
+    },
+    {
+      "path": "revised\\main.pdf",
+      "sha256": "10a88155b64fbf71e46b0417afce2fdf43a3f0833d9d06809511bb63cb4429ce"
+    }
+  ],
+  "parser_limits": "Not a TeX engine: no macro expansion, conditional evaluation, bibliography rendering or OCR. Inspect rendered PDF and figures; provided labels are not proof of pixels.",
+  "semantic_checks": [
+    "facts/model-condition-direction/CI-vs-SD",
+    "observed-vs-planned",
+    "negative findings",
+    "paragraph reverse outline",
+    "Introduction-Conclusion scope",
+    "Results-Discussion roles",
+    "declaration routing",
+    "rendered captions/labels"
+  ]
+}

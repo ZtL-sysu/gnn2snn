@@ -1,0 +1,47 @@
+[
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\main.tex",
+    "snapshot": "sources\\main.tex",
+    "sha256": "dc23ffcf13d01e8a2420c3b93af94fae64006e5cd172c61b6d6d3f7ab24f4d36"
+  },
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\supplement.tex",
+    "snapshot": "sources\\supplement.tex",
+    "sha256": "3b823a08d31bd142c28e1baa16d381d8eaf22d726b531e685d0c3272e7939820"
+  },
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\main.pdf",
+    "snapshot": "sources\\main.pdf",
+    "sha256": "239bcb972cf8ccb6679d98bcf0fba415c8386414626fa7acd796dbc2e74dcaa2"
+  },
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\supplement.pdf",
+    "snapshot": "sources\\supplement.pdf",
+    "sha256": "709a506979dc1cdea40e03e8250a728d698438a0a8e9cdbc6adeb5b28e1ab386"
+  },
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\references.bib",
+    "snapshot": "sources\\references.bib",
+    "sha256": "319e919de60706693cc7eeb120411491279c13531d2e1cbf31fde5f04fe821eb"
+  },
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\cvpr.sty",
+    "snapshot": "sources\\cvpr.sty",
+    "sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4"
+  },
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\ieeenat_fullname.bst",
+    "snapshot": "sources\\ieeenat_fullname.bst",
+    "sha256": "e38e6166bd7b1e6d23a1b79dcdb55c656e4fcdbe91bdf6b50d827e6b5d1aacfc"
+  },
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\CLAIMS.md",
+    "snapshot": "sources\\CLAIMS.md",
+    "sha256": "d7c7735e3a86b5c5d7c79c9b792cc5312abab2a7e551dc79c0518c171f426da8"
+  },
+  {
+    "path": "C:\\code\\gnn2snn-cvpr-sprint\\paper\\cvpr2027\\source_sha_manifest.json",
+    "snapshot": "sources\\source_sha_manifest.json",
+    "sha256": "c83ea6c29fd2be43c6c388ec92e5881e3c9727bf3be4f2b937aabc088ce67d19"
+  }
+]

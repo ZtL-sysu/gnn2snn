@@ -1,0 +1,22 @@
+[
+  {
+    "proposition": "Improve prose cohesion without changing scientific assertions.",
+    "evidence_status": "author_reported",
+    "action": "REWRITE",
+    "location": "Abstract, Introduction, Related Work, selected interpretive sentences, Discussion and supplementary exposition",
+    "factual_check": "Every number, equation, citation, graphic, table and required disclosure remains unchanged; repeated caveats can be rephrased but their conditions survive.",
+    "composition": {
+      "point": "Explain the spatial-direction and temporal-history distinctions as one supported scientific argument.",
+      "fact_ids": [
+        "scope",
+        "bounds"
+      ],
+      "preserve": [
+        "All scientific definitions and result scopes",
+        "Every equation and numeric claim",
+        "All uncertainty and exposure boundaries",
+        "The complete LLM Usage Statement verbatim"
+      ]
+    }
+  }
+]

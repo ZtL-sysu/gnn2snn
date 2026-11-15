@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "brief": {
+    "question": "Which spatial and temporal information must a low-timestep graph conversion preserve to retain its decision?",
+    "answer": "Immediate message error norms and exact local terminal decoding can each fail to preserve downstream decisions in the studied frozen graph classifiers.",
+    "audience": "Computer vision and spiking/graph learning researchers",
+    "section_jobs": {
+      "Abstract": "State the problem, paired intervention design and central findings.",
+      "Introduction": "Explain the two discarded information types and the controlled tests.",
+      "Related Work": "Synthesize prior capabilities fairly.",
+      "Methods": "Define exact scientific operations.",
+      "Results": "Preserve all comparisons and scopes.",
+      "Discussion": "Interpret without replaying inventories."
+    },
+    "author_constraints": {
+      "edit_scope": [
+        "prose-only"
+      ],
+      "declaration_mode": "preserve",
+      "allow_new_experiments": false,
+      "editing_round_budget": 2
+    },
+    "style": "Follow installed scientific-paper-writing; keep formal academic register and precise terms."
+  },
+  "facts": [
+    {
+      "id": "scope",
+      "kind": "definition",
+      "statement": "The study evaluates frozen graph classifiers with signed graded differential events; a message norm and a local decoded endpoint retain different information from a downstream state trajectory.",
+      "status": "author_reported",
+      "evidence": [
+        {
+          "path": "sources/main.tex",
+          "sha256": "dc23ffcf13d01e8a2420c3b93af94fae64006e5cd172c61b6d6d3f7ab24f4d36"
+        }
+      ]
+    },
+    {
+      "id": "bounds",
+      "kind": "limitation",
+      "statement": "Core hard interventions use one teacher and exposed validation data; local temporal equivalence tests use training graphs. Centered shared-threshold training and separate three-teacher validation are distinct evidence. No complete energy or algorithm-superiority claim is established.",
+      "status": "author_reported",
+      "evidence": [
+        {
+          "path": "sources/CLAIMS.md",
+          "sha256": "d7c7735e3a86b5c5d7c79c9b792cc5312abab2a7e551dc79c0518c171f426da8"
+        }
+      ]
+    }
+  ]
+}
