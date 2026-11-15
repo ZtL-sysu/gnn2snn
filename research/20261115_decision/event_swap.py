@@ -69,6 +69,11 @@ def propose_swaps(
     if count == 0:
         return []
 
+    # Same iteration/group insertion/RNG order as the frozen diagnostic source,
+    # without a Python Tensor scalar extraction at every occupied cell.
+    event_values = events.detach().to(torch.float64).numpy()
+    degree_values = outdegree.numpy()
+
     per_graph: list[list[Swap | None]] = []
     for gi, graph_id in enumerate(ids):
         lo, hi = int(ptr[gi]), int(ptr[gi + 1])
@@ -77,9 +82,9 @@ def propose_swaps(
         # symbol alphabet is small for multi-level event codes; storage is O(NC).
         grouped: dict[tuple[int, int], dict[float, list[int]]] = defaultdict(lambda: defaultdict(list))
         for node in range(lo, hi):
-            degree = int(outdegree[node])
+            degree = int(degree_values[node])
             for channel in range(events.shape[1]):
-                value = float(events[node, channel])
+                value = float(event_values[node, channel])
                 if value != 0.0:
                     grouped[(channel, degree)][value].append(node)
         buckets = [(key, values) for key, values in grouped.items() if len(values) >= 2]

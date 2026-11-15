@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import unittest
+import importlib.util
+from pathlib import Path
 
 import torch
 
@@ -19,6 +21,15 @@ def fixture():
 
 
 class EventSwapTests(unittest.TestCase):
+    def test_fast_proposals_match_frozen_capacity_bank_implementation(self):
+        path=Path(__file__).parent/'runs/swap_oracle/MNIST41/source/event_swap.py'
+        spec=importlib.util.spec_from_file_location('frozen_swap_sampler',path)
+        frozen=importlib.util.module_from_spec(spec);spec.loader.exec_module(frozen)
+        events,ptr,degree=fixture()
+        for seed in (7,20261117):
+            self.assertEqual(propose_swaps(events,ptr,degree,[101,202],count=8,seed=seed),
+                frozen.propose_swaps(events,ptr,degree,[101,202],count=8,seed=seed))
+
     def test_swaps_preserve_support_histogram_deliveries_and_input(self):
         events, ptr, degree = fixture()
         original = events.clone()

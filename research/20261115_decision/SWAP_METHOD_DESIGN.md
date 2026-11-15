@@ -1,6 +1,6 @@
 # Evidence-dependent next prototype: learned event reassignment
 
-Status: **design only; no deployable method result yet**. This is not a reopened loss-coefficient search. The actual coding change is a same-channel swap of two existing nonzero node events; no new event magnitude or support is introduced at the first site. Oracle feasibility passed the pre-run capacity gate, but CIFAR training accuracy did not improve under the full nonincrease constraints, and strict equal-event feasible swaps were absent. Treat this as weak admission for one bounded falsifiable prototype, not a promising-method claim or confirmation.
+Status: **implemented and tested; method gate FAILED; family stopped after one alignment audit**. Results: `analysis/learned_swap/summary.md`; source/target audit: `analysis/learned_swap/alignment_audit.json`. The original pre-run design and thresholds below are retained without retrospective relaxation. This is not a reopened loss-coefficient search. The actual coding change is a same-channel swap of two existing nonzero node events; no new event magnitude or support is introduced at the first site. Oracle feasibility passed the pre-run capacity gate, but CIFAR training accuracy did not improve under the full nonincrease constraints, and strict equal-event feasible swaps were absent. This admitted one bounded falsifiable prototype, not a promising-method claim or confirmation.
 
 ## Why this is a different mechanism
 

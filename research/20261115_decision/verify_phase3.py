@@ -121,6 +121,33 @@ def main():
         assert verdict['independent_graph_contribution_established'] is False
         for path,digest in verdict['source_hashes'].items():assert sha256(HERE/path)==digest
         check['training_only_8_swap_banks_and_cost_oracle_provenance']='pass; not a deployment claim'
+    learned_root=HERE/'runs/learned_swap'
+    if learned_root.exists():
+        arms=['baseline','nongraph_local','graph_local','nongraph_decision','graph_decision','shuffled_decision','toppin_decision']
+        for ds in ('MNIST','CIFAR10'):
+            run=learned_root/f'{ds}41'
+            lm=json.loads((run/'metadata.json').read_text())
+            assert not lm['online_teacher'] and not lm['online_downstream_lookahead'] and lm['online_full_passes']==1
+            assert not lm['test_loaded'] and not lm['labels_used_for_fit']
+            assert json.loads((run/'DONE.json').read_text())['endpoints']==14
+            for name,digest in lm['source_sha256'].items():assert sha256(run/'source'/name)==digest
+            fitted=json.loads((run/'fit_audit.json').read_text())
+            assert len(fitted)==6 and all(f['fitted_coefficients']==1304 and f['examples']==1024 for f in fitted)
+            for arm in arms:
+                a=dict(np.load(run/f'{arm}_T1.npz'));b=dict(np.load(run/f'{arm}_T2.npz'))
+                assert np.array_equal(a['indices'],lm['val_indices']) and np.array_equal(a['choice'],b['choice'])
+                assert len(a['labels'])==512 and np.isfinite(a['logits']).all() and np.isfinite(b['logits']).all()
+                if arm=='baseline':
+                    for T,current in [(1,a),(2,b)]:
+                        old=np.load(HERE/'runs/objectives'/f'{ds}41'/f'local_t1_T{T}.npz')
+                        assert np.array_equal(current['logits'],old['logits'])
+                        assert np.array_equal(current['events'],old['events'].astype(np.int64))
+            timed=json.loads((run/'timing.json').read_text())
+            assert not timed['teacher_in_timed_block'] and timed['state_dependent_proposals_and_prediction_in_timed_block']
+        lg=json.loads((HERE/'analysis/learned_swap/gate.json').read_text())
+        assert lg['method_gate_pass'] is False and lg['one_alignment_audit_completed']
+        for path,digest in lg['source_hashes'].items():assert sha256(HERE/path)==digest
+        check['single_pass_learned_28_endpoints_equal_capacity_and_source_alignment']='pass; scientific method gate FAIL'
     result=dict(engineering_acceptance=True,method_discovery_goal_achieved=False,checks=check,
         runtime=dict(python=sys.executable,torch=torch.__version__,cuda=torch.version.cuda,
             gpu=torch.cuda.get_device_name(0),numpy=np.__version__),

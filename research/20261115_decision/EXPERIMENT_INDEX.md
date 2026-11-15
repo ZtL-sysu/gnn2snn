@@ -18,6 +18,9 @@ $py = 'C:/Users/xhf/miniconda3/envs/dyg-cold/python.exe'
 & $py -X utf8 research/20261115_decision/run_swap_oracle.py --dataset MNIST --output research/20261115_decision/runs/reproduction/swap_oracle/MNIST41
 & $py -X utf8 research/20261115_decision/run_swap_oracle.py --dataset CIFAR10 --output research/20261115_decision/runs/reproduction/swap_oracle/CIFAR1041
 & $py -X utf8 research/20261115_decision/summarize_swap_oracle.py
+& $py -X utf8 research/20261115_decision/run_learned_swap.py --dataset MNIST --output research/20261115_decision/runs/reproduction/learned_swap/MNIST41
+& $py -X utf8 research/20261115_decision/run_learned_swap.py --dataset CIFAR10 --output research/20261115_decision/runs/reproduction/learned_swap/CIFAR1041
+& $py -X utf8 research/20261115_decision/summarize_learned_swap.py
 & $py -m pytest research/20261115_decision/test_intervention.py research/20261115_decision/test_objectives.py -q
 ```
 
@@ -33,6 +36,7 @@ Model runners refuse to overwrite output directories. `audit_optimization.py` li
 |Automatic tables/paired CI/cost scatter|`analysis/phase3/*`|Raw NPZ recomputation,2000 graph-bootstrap samples; actual events reduced in int64|Not teacher-seed CI or independent confirmation|
 |Source threshold iteration follow-up|`runs/source_ti/{MNIST41,CIFAR1041}`, `analysis/source_ti/*`|Two predeclared source calibration horizons H1/H2, n256/512; same training512; zero optimizer updates; sixteen H×T endpoints, all same-vector prefixes|Eight additional T1/T2 selection endpoints and eight high-T functional checks, all exposed val512; no test inference|
 |Finite-event reassignment capacity oracle|`runs/swap_oracle/*/candidates.npz`, `analysis/swap_oracle/*`|First128 training graphs/task,8 swaps+baseline each,sharedT1/T2,zero fitting.48 descriptive budget/policy/prefix rows from two banks. Wall10.6/15.3seconds|No val/test load; selected and evaluated same training graphs; optimistic teacher/future-cost oracle, not deployable performance|
+|Single-pass learned reassignment|`runs/learned_swap/*`, `analysis/learned_swap/*`|6 predictors+unchanged reference,T1/T2,28 val endpoints;ridgeλ.001 once;128×8 incremental calibration candidates,prior512 baseline calibration shared;source/feature/targets/models saved|Same exposed val512,no labels in fit,no new test/teacher training;one alignment audit,no post-failure tuning;run wall53.5/75.7seconds|
 
 Teacher and calibration/source/data SHA checks are inherited from frozen loaders; each new objective run records their identity, fixed train/val indices, parameters, loss trace, gradient norms, full offset NPZ, T1/2/4/8 outputs and wall times. Original implementation snapshots are recoverable at commit `7cb5021`; modified intervention tracing is separately hashed in v2 metadata. `verify_phase3.py` verifies all recorded script identities against current code or immutable Git objects and builds a final artifact manifest.
 
