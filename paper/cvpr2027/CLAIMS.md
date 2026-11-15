@@ -20,3 +20,5 @@ All paths below are repository-relative; exact numerical data and hashes are pre
 | Node context | `paper/cvpr2027/early/raw/`, `six_dataset_summary.csv`, `sha256_manifest.json` | copied unchanged audited archive; aggregate-only SNN |
 
 Main mathematical relations are explicitly standard identities/sufficient conditions. Graph degree descriptors and incremental in-sample R² come from `research/20261115_decision/analysis/cached/summary.json`. No new graph-specific performance or novelty is inferred from their values.
+
+Separate centered full-validation campaign: `data/centered_validation/` preserves summaries, full metric CSV, latency and cost ledgers from branch agent/visual-conversion/20261113-wb-resume at 58a2578, with original byte hashes. Three-teacher fidelity is supported; joint complete-cost/latency advantage is not. Shared-theta training evidence and this validation matrix are separate.

@@ -1,0 +1,23 @@
+{
+  "input_hashes": true,
+  "raw_interventions_MNIST_1": true,
+  "raw_interventions_MNIST_2": true,
+  "raw_interventions_CIFAR10_1": true,
+  "raw_interventions_CIFAR10_2": true,
+  "main_anonymous": true,
+  "main_resolved": true,
+  "main_no_overfull": true,
+  "main_body_pages": 7,
+  "main_page_limit": true,
+  "disclosure_before_references": true,
+  "main_pages": 8,
+  "main_fonts_embedded": true,
+  "supplement_anonymous": true,
+  "supplement_resolved": true,
+  "supplement_no_overfull": true,
+  "supplement_pages": 4,
+  "supplement_fonts_embedded": true,
+  "citation_keys": true,
+  "official_style": true,
+  "all_checks_pass": true
+}

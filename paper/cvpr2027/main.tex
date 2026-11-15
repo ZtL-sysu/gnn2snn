@@ -9,6 +9,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \title{Beyond Reconstruction: Decision and Temporal Fidelity\\in Graph-to-Spike Conversion}
+\switchlinenumbers*
 \author{Anonymous authors}
 \begin{document}
 \maketitle
@@ -226,6 +227,8 @@ The static carrier can be cached, and one encoded residual stream can serve the 
 \end{figure}
 
 Under identical shared thresholds, centering lowers logit MSE and prospective coded-projection additions at every tested prefix ($T=1,2,4$) for both threshold scales (1 and 8). At scale 1 and $T=1$, teacher agreement rises by 2.04 points, while projected additions fall from $9.099\times10^{11}$ to $6.650\times10^{11}$ across the full training split. Agreement improves in five of six comparisons, with a 0.0044-point decrease at scale 1, $T=4$. This is constructive evidence that choosing the encoded origin matters even with matched thresholds. It measures teacher fidelity and one arithmetic component for one training-split teacher, rather than test accuracy or total runtime. It also exemplifies the central distinction: a favorable representation and local work proxy still require separate decision and complete-cost validation.
+
+A separate three-teacher campaign evaluates centered conversion on all 5,000 exposed CIFAR10 validation graphs. At $T=4/8$, centered mean accuracy is 70.53\%/70.56\%, within 0.07/0.05 points of the strongest recorded controls. However, its matched dense implementation takes 6.245/12.049 ms per graph against 6.213/3.132 for the strongest controls at those horizons. That campaign also retains nine unresolved cost-accounting items. It therefore extends the evidence for centered fidelity beyond training, while leaving a complete efficiency advantage unestablished. These controls use their own calibration and head conventions; they are kept separate from the shared-threshold training comparison in Fig.~\ref{fig:centered} and from the historical test adapters in Table~\ref{tab:main}.
 
 \subsection{Activity, simulation time, and applicability}
 The primary conversion runs dense graph projections on every tick; zero events do not skip kernels. On an RTX 3060, synchronized cached-batch timings average 0.152/0.157 ms per graph for the MNIST/CIFAR10 ANN, versus 0.366/0.493 at $T=1$ and 1.238/1.762 at $T=4$ for the diagnostic converter. These are averages of three seed-level medians, using 32-graph batches and 30 interleaved repeats. They include decoded-site accumulation, exclude transfer and loading, and are not optimized deployment bounds. No chip energy is measured.

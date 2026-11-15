@@ -1,0 +1,83 @@
+{
+  "accuracy_only_ok": true,
+  "check": "e3_e5_criterion_v1",
+  "cost_leg_strictly_lower": false,
+  "criterion": {
+    "T4": {
+      "accuracy_gap_pp": 0.06666666666665932,
+      "accuracy_within_0.3pp": true,
+      "complete_known_cost": {
+        "AC": {
+          "candidate_pJ_per_graph": 69174673.484,
+          "candidate_strictly_lower": false,
+          "strongest_control_pJ_per_graph": 68964102.8846
+        },
+        "conservative_MAC": {
+          "candidate_pJ_per_graph": 535975930.4143999,
+          "candidate_strictly_lower": false,
+          "strongest_control_pJ_per_graph": 535975930.4143999
+        }
+      },
+      "matched_wall_clock": {
+        "candidate_ms_per_graph": 6.244877579994499,
+        "candidate_strictly_lower": false,
+        "repeats": 3,
+        "strongest_ms_per_graph": 6.213038300001062,
+        "warmup_passes": 1
+      },
+      "strongest_matched_control": "centered_shared_theta"
+    },
+    "T8": {
+      "accuracy_gap_pp": 0.04666666666667263,
+      "accuracy_within_0.3pp": true,
+      "complete_known_cost": {
+        "AC": {
+          "candidate_pJ_per_graph": 102182275.9832,
+          "candidate_strictly_lower": false,
+          "strongest_control_pJ_per_graph": 44065574.72696
+        },
+        "conservative_MAC": {
+          "candidate_pJ_per_graph": 1071236990.8688,
+          "candidate_strictly_lower": false,
+          "strongest_control_pJ_per_graph": 1057295693.7296
+        }
+      },
+      "matched_wall_clock": {
+        "candidate_ms_per_graph": 12.048615619982593,
+        "candidate_strictly_lower": false,
+        "repeats": 3,
+        "strongest_ms_per_graph": 3.13154457998462,
+        "warmup_passes": 1
+      },
+      "strongest_matched_control": "dc_adapt_six_site"
+    }
+  },
+  "head_addendum_sha256": "8bde5832d556c8c7b04ee630f2390703c33a26fa750f196f4dc1c94da61291f6",
+  "latency_leg_strictly_lower": false,
+  "new_test_inference_performed": false,
+  "notes": "This closes the previous 'NOT EVALUABLE' evidence gap with real declared cost counts and real 3-repeat median wall-clock; it does NOT lower the frozen acceptance bar and does NOT claim a pass.",
+  "p4_status": "running",
+  "protocol_sha256": "8573171a65a55fb10c044d315eeba70101eab643e208d01941014de254904543",
+  "reasons": [
+    "accuracy-only condition met at both T4 and T8 (gap <= 0.3pp)",
+    "complete known-operation cost strictly lower at BOTH T and under BOTH conventions: False",
+    "matched median wall-clock strictly lower at BOTH T: False",
+    "9 unresolved items remain in the accounting; per PROTOCOL-v3 'Cost with unresolved omitted work cannot pass', so the cost leg cannot credit a pass",
+    "dense PyTorch prototype recomputes all four graph layers at every tick; no event-driven backend or fused cache is implemented"
+  ],
+  "status": "evidence_backed_criterion_evaluation_no_method_advantage_claim",
+  "story_decision": "DEFERRED - written validation-only Story decision requires E2/E4/E6 and the full E5 mechanism/falsifier evidence first; accuracy-only supports a dataflow result (protocol: neither -> Story B) but no Story is recorded here",
+  "unresolved_item_count": 9,
+  "unresolved_items": [
+    "hardware latency and hardware energy (not measured; no chip-energy claim)",
+    "real DRAM/cache memory traffic bytes (only DECLARED scalar counts)",
+    "event-bank construction, pre-scaling, 1/t time-specific bank variants, address/routing logic",
+    "cache-equality checks, invalidation and maintenance for reused layer-0 state",
+    "sigmoid/division/ReLU transcendental hardware cost (priced only by declared ADD/MUL equivalents)",
+    "weight/bank storage precision, accumulator width, overflow handling, quantization",
+    "BN fold-vs-execute implementation choice; bias/setup terms beyond declared embedding",
+    "the fused first-analog/centered cache and event-driven projection backend are NOT implemented: the dense prototype recomputes all four graph layers at every tick",
+    "host-side Python/DataLoader overhead and host<->device transfer time are excluded from the declared arithmetic ledger (measured separately as wall-clock)"
+  ],
+  "verdict": "E1 NOT PASSED (method advantage not established)"
+}

@@ -20,7 +20,7 @@ DSRLVY+DejaVuSans                    CID TrueType      Identity-H       yes yes 
 MFOMKL+CMSY9                         Type 1            Builtin          yes yes yes    166  0
 GXTJFU+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    169  0
 DJZWSY+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    195  0
-HFJVBV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    223  0
-PVATSI+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    238  0
-CPUQYB+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    239  0
-PJZRLC+CMR6                          Type 1            Builtin          yes yes yes    275  0
+HFJVBV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    225  0
+PVATSI+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    240  0
+CPUQYB+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    241  0
+PJZRLC+CMR6                          Type 1            Builtin          yes yes yes    277  0

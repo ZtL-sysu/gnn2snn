@@ -47,6 +47,7 @@ with zipfile.ZipFile(HERE/'paper_source.zip','w',zipfile.ZIP_DEFLATED) as z:
 with zipfile.ZipFile(HERE/'evidence_inputs.zip','w',zipfile.ZIP_DEFLATED) as z:
  for x in m['source_files']:z.write(ROOT/x['path'],x['path'])
  for p in (HERE/'early/raw').glob('*'):z.write(p,p.relative_to(ROOT))
+ for p in (HERE/'data/centered_validation').glob('*'):z.write(p,p.relative_to(ROOT))
 checks['all_checks_pass']=all(v for k,v in checks.items() if isinstance(v,bool))
 (HERE/'audit/verification.json').write_text(json.dumps(checks,indent=2)+'\n')
 print(json.dumps(checks,indent=2))

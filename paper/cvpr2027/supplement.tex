@@ -4,6 +4,7 @@
 \usepackage[pagebackref,breaklinks,colorlinks,allcolors=blue]{hyperref}
 \def\confName{CVPR}\def\confYear{2027}
 \title{Beyond Reconstruction: Decision and Temporal Fidelity in Graph-to-Spike Conversion\\Supplementary Material}
+\switchlinenumbers*
 \author{Anonymous authors}
 \begin{document}\maketitle
 \section{Evidence and Reproducibility}
@@ -112,6 +113,11 @@ For identity residuals, cumulative nonnegative branch increments define $q_\ell=
 The partial projection proxy is $70\sum_{\text{coded sites}}(4N_{\rm node}+N_{\rm edge})$, counting four width-70 node consumers and one edge consumer for a shared stream. It excludes the static carrier, gate products and sigmoid, denominator normalization, residual arithmetic, memory, and head. Prospective additions do not equal dense execution time. At scale 1, centered/raw MSE ratios at $T=1,2,4$ are approximately 0.818, 0.926, 0.805, with addition ratios 0.731, 0.740, 0.762. These remain label-free training-split comparisons.
 
 The primary converter's software timing uses cached 32-graph batches, ten warmups, thirty randomized interleaved repeats, and CUDA synchronization. Median batch time is divided by 32 and then averaged across the three teacher medians. It includes diagnostic decoded-site accumulation, excludes loading and transfer, and uses dense graph kernels. Allocation timings come from a separate experiment with five warmups and twenty interleaved repeats, including policy instrumentation. Timing ratios must not mix these experiments. Event opportunities, realized nonzero events, scalar amplitude, consumer deliveries, and measured latency are separate quantities. No measured hardware-energy result is available.
+
+\paragraph{Separate full-validation centered campaign.}
+An earlier independent branch retains a three-teacher, 5,000-graph CIFAR10 validation matrix with raw/shared-threshold coding, exact-first-layer and source-adapter controls. Its centered $T=4/8$ mean accuracies are 70.5267\%/70.5600\%; strongest controls reach 70.5933\%/70.6067\%. Several raw trajectories are numerical aliases (per-consumer, generic and common-subexpression-only) and are not independent method wins. At $T=4$ the strongest accuracy control is centered shared-threshold; at $T=8$ it is the six-site source adapter. Their matched wall times are 6.2130 and 3.1315 ms per graph versus centered's 6.2449 and 12.0486. Timing uses batch 128, the full 5,000 graphs, one warmup pass and three timed repeats. These times belong to a distinct implementation and are not comparable with the cached-batch fixed-GCN timings.
+
+The corresponding declared arithmetic proxy is also not strictly lower at both horizons under either its addition-based or conservative MAC convention. Nine unresolved items include event banks, cache maintenance and actual memory traffic. This campaign supplies validation fidelity, while the shared-threshold training experiment isolates the coordinate change. Neither establishes a complete runtime or hardware-energy advantage. We use this evidence to retain centering as a meaningful representation result without promoting the partial projection proxy to overall efficiency.
 
 \section{Failure Boundaries and Research Scope}
 Two implemented coding prototypes test the gap between a diagnostic and a realizable policy. A spatial selector exchanges occupied same-channel, equal-outdegree events and predicts consequences using 1,304 fitted coefficients. Six matched controls include local, non-graph, true-graph, permuted-graph and topology-descriptor conditions. It preserves first-site counts and amplitude histograms, but fails full-network cost and prefix criteria. A temporal selector uses 584 coefficients and source-verified codeword alternatives. It preserves first-site $T=2$ output but likewise fails the joint cost and accuracy criteria. These are counterexamples to treating local invariants as deployment guarantees, not impossibility results for future encoders.

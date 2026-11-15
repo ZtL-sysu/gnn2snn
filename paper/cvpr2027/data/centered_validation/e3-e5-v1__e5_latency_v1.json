@@ -1,0 +1,556 @@
+{
+  "batches_used": 40,
+  "check": "e5_latency_v1",
+  "configs": 37,
+  "cudnn_benchmark": false,
+  "deterministic_algorithms": true,
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 3060",
+  "graphs_per_repeat": 5000,
+  "limitations": [
+    "Wall-clock on a dense PyTorch prototype is not SNN hardware latency or energy.",
+    "Includes Python loop, host->device transfer if any, and kernel launch overhead; excludes dataset load.",
+    "Measured on seed-41 frozen teacher only; graph shapes are seed-independent.",
+    "No event-count-as-speedup, no efficiency or chip-energy claim."
+  ],
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]",
+  "repeats": 3,
+  "representative_batch_manual_check": {
+    "batch": 0,
+    "centered_double_forward_bitwise_equal": true,
+    "edges": 120152,
+    "graphs": 128,
+    "labels_absent_from_converter_input": true,
+    "nodes": 15019,
+    "teacher_double_forward_bitwise_equal": true
+  },
+  "results": [
+    {
+      "T": 0,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 0.18040288002230226,
+      "median_ms_per_graph": 0.17879526000469922,
+      "median_wall_seconds": 0.8939763000234962,
+      "min_ms_per_graph": 0.17794906001072378,
+      "mode": "ANN",
+      "repeat_wall_seconds": [
+        0.893976,
+        0.889745,
+        0.902014
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 1.700504199997522,
+      "median_ms_per_graph": 1.688881039991975,
+      "median_wall_seconds": 8.444405199959874,
+      "min_ms_per_graph": 1.6829463000176474,
+      "mode": "centered",
+      "repeat_wall_seconds": [
+        8.414732,
+        8.444405,
+        8.502521
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 3.240542560000904,
+      "median_ms_per_graph": 3.2378326000180095,
+      "median_wall_seconds": 16.189163000090048,
+      "min_ms_per_graph": 3.225388059997931,
+      "mode": "centered",
+      "repeat_wall_seconds": [
+        16.189163,
+        16.12694,
+        16.202713
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 6.247854320006445,
+      "median_ms_per_graph": 6.244877579994499,
+      "median_wall_seconds": 31.2243878999725,
+      "min_ms_per_graph": 6.242051560012624,
+      "mode": "centered",
+      "repeat_wall_seconds": [
+        31.210258,
+        31.224388,
+        31.239272
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 12.054684960003943,
+      "median_ms_per_graph": 12.048615619982593,
+      "median_wall_seconds": 60.243078099912964,
+      "min_ms_per_graph": 12.04254294000566,
+      "mode": "centered",
+      "repeat_wall_seconds": [
+        60.243078,
+        60.273425,
+        60.212715
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 1.506759120011702,
+      "median_ms_per_graph": 1.5058148800162598,
+      "median_wall_seconds": 7.529074400081299,
+      "min_ms_per_graph": 1.5047282199840992,
+      "mode": "first_analog",
+      "repeat_wall_seconds": [
+        7.529074,
+        7.523641,
+        7.533796
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 2.8973015600116923,
+      "median_ms_per_graph": 2.8802153399912642,
+      "median_wall_seconds": 14.40107669995632,
+      "min_ms_per_graph": 2.879685700009577,
+      "mode": "first_analog",
+      "repeat_wall_seconds": [
+        14.398429,
+        14.401077,
+        14.486508
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 5.5185245999833565,
+      "median_ms_per_graph": 5.517629019985907,
+      "median_wall_seconds": 27.588145099929534,
+      "min_ms_per_graph": 5.508056020014919,
+      "mode": "first_analog",
+      "repeat_wall_seconds": [
+        27.592623,
+        27.54028,
+        27.588145
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 10.53860528001096,
+      "median_ms_per_graph": 10.528435639990494,
+      "median_wall_seconds": 52.64217819995247,
+      "min_ms_per_graph": 10.52380862000864,
+      "mode": "first_analog",
+      "repeat_wall_seconds": [
+        52.693026,
+        52.642178,
+        52.619043
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 1.9346474800026043,
+      "median_ms_per_graph": 1.9336144199827685,
+      "median_wall_seconds": 9.668072099913843,
+      "min_ms_per_graph": 1.933119700010866,
+      "mode": "generic",
+      "repeat_wall_seconds": [
+        9.673237,
+        9.665599,
+        9.668072
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 3.7028222599998117,
+      "median_ms_per_graph": 3.7015487000113354,
+      "median_wall_seconds": 18.507743500056677,
+      "min_ms_per_graph": 3.700714319990948,
+      "mode": "generic",
+      "repeat_wall_seconds": [
+        18.503572,
+        18.514111,
+        18.507744
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 7.166417760006152,
+      "median_ms_per_graph": 7.159233519993722,
+      "median_wall_seconds": 35.79616759996861,
+      "min_ms_per_graph": 7.150213999999687,
+      "mode": "generic",
+      "repeat_wall_seconds": [
+        35.75107,
+        35.832089,
+        35.796168
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 13.623775480012409,
+      "median_ms_per_graph": 13.614464000007137,
+      "median_wall_seconds": 68.07232000003569,
+      "min_ms_per_graph": 13.610896059987136,
+      "mode": "generic",
+      "repeat_wall_seconds": [
+        68.07232,
+        68.05448,
+        68.118877
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 0.3980611199978739,
+      "median_ms_per_graph": 0.39605789999477564,
+      "median_wall_seconds": 1.9802894999738783,
+      "min_ms_per_graph": 0.39433845998719336,
+      "mode": "dc_adapt_analog_head",
+      "repeat_wall_seconds": [
+        1.980289,
+        1.971692,
+        1.990306
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 0.7563995599979535,
+      "median_ms_per_graph": 0.7542839400004595,
+      "median_wall_seconds": 3.7714197000022978,
+      "min_ms_per_graph": 0.7529544600052759,
+      "mode": "dc_adapt_analog_head",
+      "repeat_wall_seconds": [
+        3.764772,
+        3.77142,
+        3.781998
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 1.4731132199987769,
+      "median_ms_per_graph": 1.4705613600090146,
+      "median_wall_seconds": 7.352806800045073,
+      "min_ms_per_graph": 1.4670840200036763,
+      "mode": "dc_adapt_analog_head",
+      "repeat_wall_seconds": [
+        7.365566,
+        7.352807,
+        7.33542
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 2.8903010200010613,
+      "median_ms_per_graph": 2.8900151600129904,
+      "median_wall_seconds": 14.450075800064951,
+      "min_ms_per_graph": 2.8887154599884526,
+      "mode": "dc_adapt_analog_head",
+      "repeat_wall_seconds": [
+        14.443577,
+        14.450076,
+        14.451505
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 2.679653900000267,
+      "median_ms_per_graph": 2.6791657800087707,
+      "median_wall_seconds": 13.395828900043853,
+      "min_ms_per_graph": 2.6787217000033707,
+      "mode": "per_consumer",
+      "repeat_wall_seconds": [
+        13.393609,
+        13.395829,
+        13.39827
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 5.124651199998334,
+      "median_ms_per_graph": 5.121835580002516,
+      "median_wall_seconds": 25.609177900012583,
+      "min_ms_per_graph": 5.119509380008094,
+      "mode": "per_consumer",
+      "repeat_wall_seconds": [
+        25.609178,
+        25.623256,
+        25.597547
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 9.88473526001908,
+      "median_ms_per_graph": 9.880366619979032,
+      "median_wall_seconds": 49.40183309989516,
+      "min_ms_per_graph": 9.877397139999085,
+      "mode": "per_consumer",
+      "repeat_wall_seconds": [
+        49.423676,
+        49.401833,
+        49.386986
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 18.82809354001656,
+      "median_ms_per_graph": 18.818995919986627,
+      "median_wall_seconds": 94.09497959993314,
+      "min_ms_per_graph": 18.81172583999578,
+      "mode": "per_consumer",
+      "repeat_wall_seconds": [
+        94.09498,
+        94.058629,
+        94.140468
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 1.9422860800055788,
+      "median_ms_per_graph": 1.9419721799902618,
+      "median_wall_seconds": 9.709860899951309,
+      "min_ms_per_graph": 1.9419574399944395,
+      "mode": "cse_only",
+      "repeat_wall_seconds": [
+        9.71143,
+        9.709787,
+        9.709861
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 3.722178220003843,
+      "median_ms_per_graph": 3.722153460001573,
+      "median_wall_seconds": 18.610767300007865,
+      "min_ms_per_graph": 3.7184224199969322,
+      "mode": "cse_only",
+      "repeat_wall_seconds": [
+        18.592112,
+        18.610891,
+        18.610767
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 7.176519700000062,
+      "median_ms_per_graph": 7.172751079988666,
+      "median_wall_seconds": 35.86375539994333,
+      "min_ms_per_graph": 7.17005722001195,
+      "mode": "cse_only",
+      "repeat_wall_seconds": [
+        35.882599,
+        35.863755,
+        35.850286
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 13.633741879998706,
+      "median_ms_per_graph": 13.626187919988297,
+      "median_wall_seconds": 68.13093959994148,
+      "min_ms_per_graph": 13.623190840007737,
+      "mode": "cse_only",
+      "repeat_wall_seconds": [
+        68.115954,
+        68.13094,
+        68.168709
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 0.43636686000972985,
+      "median_ms_per_graph": 0.43535589999519286,
+      "median_wall_seconds": 2.1767794999759644,
+      "min_ms_per_graph": 0.43494551999028774,
+      "mode": "dc_adapt_six_site",
+      "repeat_wall_seconds": [
+        2.174728,
+        2.181834,
+        2.176779
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 0.8218305799877271,
+      "median_ms_per_graph": 0.8214236600091681,
+      "median_wall_seconds": 4.10711830004584,
+      "min_ms_per_graph": 0.8212520000059158,
+      "mode": "dc_adapt_six_site",
+      "repeat_wall_seconds": [
+        4.10626,
+        4.109153,
+        4.107118
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 1.60884606000036,
+      "median_ms_per_graph": 1.5970205999910831,
+      "median_wall_seconds": 7.985102999955416,
+      "min_ms_per_graph": 1.5931379599962383,
+      "mode": "dc_adapt_six_site",
+      "repeat_wall_seconds": [
+        7.96569,
+        8.04423,
+        7.985103
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 3.1323265200015156,
+      "median_ms_per_graph": 3.13154457998462,
+      "median_wall_seconds": 15.657722899923101,
+      "min_ms_per_graph": 3.130436660000123,
+      "mode": "dc_adapt_six_site",
+      "repeat_wall_seconds": [
+        15.652183,
+        15.661633,
+        15.657723
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 1.5081841599894688,
+      "median_ms_per_graph": 1.505781719996594,
+      "median_wall_seconds": 7.5289085999829695,
+      "min_ms_per_graph": 1.5055869800038635,
+      "mode": "first_analog_shared_theta",
+      "repeat_wall_seconds": [
+        7.540921,
+        7.528909,
+        7.527935
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 2.886449440009892,
+      "median_ms_per_graph": 2.8846102999988945,
+      "median_wall_seconds": 14.423051499994472,
+      "min_ms_per_graph": 2.882324679987505,
+      "mode": "first_analog_shared_theta",
+      "repeat_wall_seconds": [
+        14.423051,
+        14.432247,
+        14.411623
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 5.510640659998171,
+      "median_ms_per_graph": 5.509376259986311,
+      "median_wall_seconds": 27.546881299931556,
+      "min_ms_per_graph": 5.508099320018664,
+      "mode": "first_analog_shared_theta",
+      "repeat_wall_seconds": [
+        27.546881,
+        27.540497,
+        27.553203
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 10.50581737998873,
+      "median_ms_per_graph": 10.50464916001074,
+      "median_wall_seconds": 52.5232458000537,
+      "min_ms_per_graph": 10.488728339993395,
+      "mode": "first_analog_shared_theta",
+      "repeat_wall_seconds": [
+        52.529087,
+        52.523246,
+        52.443642
+      ]
+    },
+    {
+      "T": 1,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 1.677011080016382,
+      "median_ms_per_graph": 1.6754317799815908,
+      "median_wall_seconds": 8.377158899907954,
+      "min_ms_per_graph": 1.6734187999973074,
+      "mode": "centered_shared_theta",
+      "repeat_wall_seconds": [
+        8.367094,
+        8.385055,
+        8.377159
+      ]
+    },
+    {
+      "T": 2,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 3.2176686400081964,
+      "median_ms_per_graph": 3.2156111799879,
+      "median_wall_seconds": 16.0780558999395,
+      "min_ms_per_graph": 3.2153715800028295,
+      "mode": "centered_shared_theta",
+      "repeat_wall_seconds": [
+        16.076858,
+        16.078056,
+        16.088343
+      ]
+    },
+    {
+      "T": 4,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 6.216174679994583,
+      "median_ms_per_graph": 6.213038300001062,
+      "median_wall_seconds": 31.065191500005312,
+      "min_ms_per_graph": 6.212764519988559,
+      "mode": "centered_shared_theta",
+      "repeat_wall_seconds": [
+        31.063823,
+        31.065192,
+        31.080873
+      ]
+    },
+    {
+      "T": 8,
+      "graphs_per_repeat": 5000,
+      "max_ms_per_graph": 11.99593968000263,
+      "median_ms_per_graph": 11.991973920003511,
+      "median_wall_seconds": 59.959869600017555,
+      "min_ms_per_graph": 11.987967499997467,
+      "mode": "centered_shared_theta",
+      "repeat_wall_seconds": [
+        59.95987,
+        59.979698,
+        59.939837
+      ]
+    }
+  ],
+  "resumed_configs": 9,
+  "resumed_from_partial": true,
+  "scope": "same local RTX 3060, batch 128, fixed sequential validation order, identical warmup and 3 repeats, median wall-clock per graph; frozen thresholds constructed ONCE outside all timed loops; dense PyTorch prototype only, NOT neuromorphic hardware latency",
+  "status": "measured_matched_wall_clock_dense_prototype_not_hardware_latency",
+  "teacher_seed": 41,
+  "torch": "2.11.0+cu128",
+  "total_job_seconds": 2888.476159599959,
+  "total_timed_span_seconds_this_process": 2888.476158299949,
+  "warmup_passes": 1
+}
