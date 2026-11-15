@@ -1,0 +1,33 @@
+{
+  "endpoints": 24,
+  "training_only": true,
+  "T2_local_decode_exact": true,
+  "T1_decode_preserved": false,
+  "whole_network_cost_guaranteed": false,
+  "source_hashes": {
+    "runs\\prefix_diagnostic\\MNIST41\\baseline_T1.npz": "87eace3191749dd8be9aef8d22f409039a43d95660d894005ab41cf1025ae271",
+    "runs\\prefix_diagnostic\\MNIST41\\baseline_T2.npz": "ed4e9290526502aa41877767197adec442faf151bb4e4939d8cab7d97c882b6e",
+    "runs\\prefix_diagnostic\\MNIST41\\all_eligible_T1.npz": "2a25aaf5253cf6e455735bcc9bea6d9e5c628b3dc536ea6401e268288f0bbc83",
+    "runs\\prefix_diagnostic\\MNIST41\\all_eligible_T2.npz": "3d9d7fe4a2f9ec79034590ca19e8672b15c5fd09d726b12772b6fc9c14cd1294",
+    "runs\\prefix_diagnostic\\MNIST41\\deterministic_half_T1.npz": "2903828de8f0f64a46920e6edc7a9b0be1c77117338b4b8a2634bccd11a61095",
+    "runs\\prefix_diagnostic\\MNIST41\\deterministic_half_T2.npz": "4f2e480682d9d81f668fb55b6a91c1c610479977c7a9cc88d83d7e807eb894d7",
+    "runs\\prefix_diagnostic\\CIFAR1041\\baseline_T1.npz": "4f788f1dd310370894641e620428e8187606efb4a27f3dfb6099ecc94e87efea",
+    "runs\\prefix_diagnostic\\CIFAR1041\\baseline_T2.npz": "7152b437dfca251b02c7187dd1629a13fb87a6467f1a108e51fffba07296a402",
+    "runs\\prefix_diagnostic\\CIFAR1041\\all_eligible_T1.npz": "7c31dca39fd0cd963429c886d22ef5cbfd31b99cd1bd3fa50c2b8a6f4cf60415",
+    "runs\\prefix_diagnostic\\CIFAR1041\\all_eligible_T2.npz": "54f97796398bbdf43f145f3577f891fac2210b0e27b9840b35e70444b81768d1",
+    "runs\\prefix_diagnostic\\CIFAR1041\\deterministic_half_T1.npz": "44de9efa8544b3686d01661594b4b7d749e28b23e0f78f5a2758bf5cdeb3555a",
+    "runs\\prefix_diagnostic\\CIFAR1041\\deterministic_half_T2.npz": "a8e98a40d712f13a35608979d7ef6172696bb34525cf41c5a013d3f23101a979",
+    "runs\\prefix_double\\MNIST41\\baseline_T1.npz": "08c5b9f38138d780af99de2d6ac7791496ee3db7e1f143a8590d82c30436aec9",
+    "runs\\prefix_double\\MNIST41\\baseline_T2.npz": "31a62b4c023997d8524c1985e941fea35a1f03bc7b3f7786a1ab5dfdd5d44624",
+    "runs\\prefix_double\\MNIST41\\all_eligible_T1.npz": "7e3a522f01ea1d2007830be4a42fb78ff85dbc82b1cb3b89a719bc65573c8990",
+    "runs\\prefix_double\\MNIST41\\all_eligible_T2.npz": "b990233171eeb32828268151a7bb70687eb16446b814baea8cf4628d5a189aba",
+    "runs\\prefix_double\\MNIST41\\deterministic_half_T1.npz": "143a7e1d561017b74962017acd84c360ee63f1a75ab4291b393b26eb041b44c7",
+    "runs\\prefix_double\\MNIST41\\deterministic_half_T2.npz": "8ca64ef88d26d006f52e1ec56ceba4a5e51cd7cf81f233774e847d06a0a5537e",
+    "runs\\prefix_double\\CIFAR1041\\baseline_T1.npz": "c91ffe3f26ab5231345ca092c026f84be763702ebac98ddea7643c0420b02893",
+    "runs\\prefix_double\\CIFAR1041\\baseline_T2.npz": "676c022c20e217dec371d2cb9abc5a92a6882bafa76a7b3762ebd43f7f000092",
+    "runs\\prefix_double\\CIFAR1041\\all_eligible_T1.npz": "32125805f986198341443133c9a6f8885f34c7a647fc9787eeae6ecfd30e36c3",
+    "runs\\prefix_double\\CIFAR1041\\all_eligible_T2.npz": "565ad6eea266f95aa30dd3e8969a6fcfabf5ace0b8d9c1952264c8a4c20615a9",
+    "runs\\prefix_double\\CIFAR1041\\deterministic_half_T1.npz": "a7985c04c07d6f1c8c6febfdae451752fc75301cadfe515785362286b96332cc",
+    "runs\\prefix_double\\CIFAR1041\\deterministic_half_T2.npz": "43d281c58dcc03a5ed0e60e04d02f92a540c2a05baa11299785ab76313e08d25"
+  }
+}

@@ -42,3 +42,8 @@
 候选：保持每位置每tick实际非零支持和原幅值字母表，交换少量已有事件的幅值；离线用**全部竞争类别**和T1/T2共同约束学习轻量选择规则。比较同容量的当前状态控制、随机分组、真实结构条件与结构置换条件，在线只读当前状态和缓存图统计。需要先证明硬事件oracle在固定总事件、幅值成本/投递成本下确实存在跨任务一致的全类margin收益，再训练可部署规则。若真实结构不优于同容量非图控制，去掉Graph-aware主张。
 
 这是待检验假设，尚未实施或证明新颖。当前普通任务目标的Gate2联合准入失败，不以该假设为借口跳过门控或扩大搜索。
+# Additional causal temporal-history check
+
+`test_prefix_network.py::test_identical_integrated_input_and_event_counts_do_not_fix_next_layer_decode` executes the frozen scalar source with theta1 and zero initialization. Currents `(0.01,1.58)` and `(1,-0.4)` both integrate under the author's decoder to `u1+u2/2=0.8`, and both emit exactly two nonzero signed/multilevel events. Yet their decoded outputs are respectively0.5078125 and0.75. A fixed class boundary0.6 distinguishes them. This is a controlled source-recurrence counterexample, not an observed dataset accuracy estimate: equal integrated input, alphabet, T and event count do not determine a nonlinear neuron's decoded output. Temporal history matters independently of reconstruction norm.
+
+The first-site two-word diagnostic further enforces bitwise identical **local T2 output** on128 real training graphs per task, using both verified orientations. Downstream costs and classes can still differ. Halving first events reduces local amplitude but increases whole-network events; reversing the word can reduce some CIFAR costs but is inconsistent across tasks. Thus a local prefix guarantee cannot justify a whole-network cost or decision guarantee. These are training-only mechanism diagnostics; learned-selector validation results are in `analysis/temporal/`, separately labeled as exposed validation evidence. T1 local error arrays are placeholders; only T2 equality is asserted.

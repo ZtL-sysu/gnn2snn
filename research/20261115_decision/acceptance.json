@@ -1,5 +1,6 @@
 {
   "engineering_acceptance": true,
+  "bounded_research_delivery_complete": true,
   "method_discovery_goal_achieved": false,
   "checks": {
     "historical_142_raw_endpoints": "pass",
@@ -15,7 +16,9 @@
     "historical_three_teacher_archive_reconstruction": "pass",
     "source_TI_16_endpoints_source_snapshots_moments_and_forward": "pass",
     "training_only_8_swap_banks_and_cost_oracle_provenance": "pass; not a deployment claim",
-    "single_pass_learned_28_endpoints_equal_capacity_and_source_alignment": "pass; scientific method gate FAIL"
+    "single_pass_learned_28_endpoints_equal_capacity_and_source_alignment": "pass; scientific method gate FAIL",
+    "prefix_diagnostic_24_training_only_rows_raw_arrays_and_source_hashes": "pass",
+    "temporal_28_validation_endpoints_584_parameters_baseline_and_gate": "pass"
   },
   "runtime": {
     "python": "C:\\Users\\xhf\\miniconda3\\envs\\dyg-cold\\python.exe",

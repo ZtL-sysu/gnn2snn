@@ -21,6 +21,15 @@ $py = 'C:/Users/xhf/miniconda3/envs/dyg-cold/python.exe'
 & $py -X utf8 research/20261115_decision/run_learned_swap.py --dataset MNIST --output research/20261115_decision/runs/reproduction/learned_swap/MNIST41
 & $py -X utf8 research/20261115_decision/run_learned_swap.py --dataset CIFAR10 --output research/20261115_decision/runs/reproduction/learned_swap/CIFAR1041
 & $py -X utf8 research/20261115_decision/summarize_learned_swap.py
+& $py -X utf8 research/20261115_decision/run_prefix_diagnostic.py --dataset MNIST --direction halve --output research/20261115_decision/runs/reproduction/prefix_diagnostic/MNIST41
+& $py -X utf8 research/20261115_decision/run_prefix_diagnostic.py --dataset CIFAR10 --direction halve --output research/20261115_decision/runs/reproduction/prefix_diagnostic/CIFAR1041
+& $py -X utf8 research/20261115_decision/run_prefix_diagnostic.py --dataset MNIST --direction double --output research/20261115_decision/runs/reproduction/prefix_double/MNIST41
+& $py -X utf8 research/20261115_decision/run_prefix_diagnostic.py --dataset CIFAR10 --direction double --output research/20261115_decision/runs/reproduction/prefix_double/CIFAR1041
+& $py -X utf8 research/20261115_decision/run_temporal_fit.py --dataset MNIST --output research/20261115_decision/runs/reproduction/temporal/MNIST41
+& $py -X utf8 research/20261115_decision/run_temporal_fit.py --dataset CIFAR10 --output research/20261115_decision/runs/reproduction/temporal/CIFAR1041
+& $py -X utf8 research/20261115_decision/summarize_temporal.py
+& $py -m pytest research/20261115_decision -q
+& $py -X utf8 research/20261115_decision/verify_phase3.py
 & $py -m pytest research/20261115_decision/test_intervention.py research/20261115_decision/test_objectives.py -q
 ```
 
@@ -37,6 +46,8 @@ Model runners refuse to overwrite output directories. `audit_optimization.py` li
 |Source threshold iteration follow-up|`runs/source_ti/{MNIST41,CIFAR1041}`, `analysis/source_ti/*`|Two predeclared source calibration horizons H1/H2, n256/512; same training512; zero optimizer updates; sixteen H×T endpoints, all same-vector prefixes|Eight additional T1/T2 selection endpoints and eight high-T functional checks, all exposed val512; no test inference|
 |Finite-event reassignment capacity oracle|`runs/swap_oracle/*/candidates.npz`, `analysis/swap_oracle/*`|First128 training graphs/task,8 swaps+baseline each,sharedT1/T2,zero fitting.48 descriptive budget/policy/prefix rows from two banks. Wall10.6/15.3seconds|No val/test load; selected and evaluated same training graphs; optimistic teacher/future-cost oracle, not deployable performance|
 |Single-pass learned reassignment|`runs/learned_swap/*`, `analysis/learned_swap/*`|6 predictors+unchanged reference,T1/T2,28 val endpoints;ridgeλ.001 once;128×8 incremental calibration candidates,prior512 baseline calibration shared;source/feature/targets/models saved|Same exposed val512,no labels in fit,no new test/teacher training;one alignment audit,no post-failure tuning;run wall53.5/75.7seconds|
+|Exact temporal two-word diagnostic|`runs/prefix_diagnostic/*`, `runs/prefix_double/*`, `analysis/prefix_diagnostic/*`|First128 training graphs;halve/double orientations,unchanged/all/seeded-half policies,T1/T2;24 descriptive train rows,no fit;source snapshots preserve the original one-direction code|No validation/test load. Same training graphs select/evaluate; not a method benefit estimate. T2 local equality only; full-network costs measured|
+|Second/final bounded temporal selector|`runs/temporal/*`, `analysis/temporal/*`|6 arms+baseline,T1/T2,28 validation endpoints;584 coefficients per arm;first128 train,batch32,Adam64 lr.01;frozen693 shared offsets. Actual probes/copies/cache/selection charged in warm/cold timing|Exposed val512;no online teacher/labels/future full-network pass;fixed final weights;no further parameter/data search. Total Phase3 validation endpoints112|
 
 Teacher and calibration/source/data SHA checks are inherited from frozen loaders; each new objective run records their identity, fixed train/val indices, parameters, loss trace, gradient norms, full offset NPZ, T1/2/4/8 outputs and wall times. Original implementation snapshots are recoverable at commit `7cb5021`; modified intervention tracing is separately hashed in v2 metadata. `verify_phase3.py` verifies all recorded script identities against current code or immutable Git objects and builds a final artifact manifest.
 

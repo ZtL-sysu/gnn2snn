@@ -1,0 +1,60 @@
+{
+  "method_gate_pass": false,
+  "per_dataset": {
+    "MNIST": {
+      "T1_gain_over_local_pp": -5.2734375,
+      "T1_gain_over_nongraph_pp": -0.1953125,
+      "T1_gain_over_ordinary_logits_pp": -6.4453125,
+      "T2_delta_pp": -0.78125,
+      "T1_agreement_delta_pp": -4.4921875,
+      "structure_control_pass": false,
+      "actual_cost_pass": false,
+      "admission_pass": false
+    },
+    "CIFAR10": {
+      "T1_gain_over_local_pp": 1.3671875,
+      "T1_gain_over_nongraph_pp": 2.1484375,
+      "T1_gain_over_ordinary_logits_pp": 0.1953125,
+      "T2_delta_pp": -0.78125,
+      "T1_agreement_delta_pp": 1.171875,
+      "structure_control_pass": true,
+      "actual_cost_pass": false,
+      "admission_pass": false
+    }
+  },
+  "independent_confirmation": false,
+  "new_validation_endpoints": 28,
+  "validation_endpoints_total": 112,
+  "source_hashes": {
+    "runs\\temporal\\MNIST41\\baseline_T1.npz": "f7e44d7c844e73b43b2d7cb7e69169e7b0f3a9e52a3e54707cf84a43eee762de",
+    "runs\\temporal\\MNIST41\\baseline_T2.npz": "d24cb7b4b857fd872ab2db3b4dea2f83f3869df75db5875d4c7c5a9821836aa1",
+    "runs\\temporal\\MNIST41\\nongraph_local_T1.npz": "612fa6f2e87270d48fea364dfd767ed86c69c0d109b33dcc30cbce0f0bbdac8f",
+    "runs\\temporal\\MNIST41\\nongraph_local_T2.npz": "852b8ef54d6aeb3ec1ed18213d18a8845fb0b4ace0a743348c6b888002c7bea8",
+    "runs\\temporal\\MNIST41\\graph_local_T1.npz": "418d7e77d4127c75dfcd9e68b0f3080dd86f1d526569a1268d1d0f2fe1e8dbcc",
+    "runs\\temporal\\MNIST41\\graph_local_T2.npz": "b9ac6a4275f3bf81705e5c9c747dbe14241004ba8eb5c120f80c5776a5cd37de",
+    "runs\\temporal\\MNIST41\\nongraph_decision_T1.npz": "85265ce30ce9ae1277cebc90babdde920bda08b9e92c3bfeb7dd5056521476bf",
+    "runs\\temporal\\MNIST41\\nongraph_decision_T2.npz": "8358911c4de487ad83b3b7e46af52facff97a6ce42e91bc95922091db2bb61a4",
+    "runs\\temporal\\MNIST41\\graph_decision_T1.npz": "e9cc3bf2026732e56413234e1ea6c660fa74785e52e07c4be4a88b9983ed242b",
+    "runs\\temporal\\MNIST41\\graph_decision_T2.npz": "0f16d33f5420bfea2883087aa6184c19baf44ff4dc61d8364095170f0034f1e0",
+    "runs\\temporal\\MNIST41\\shuffled_decision_T1.npz": "906ba966aab222157c8d5b1573788293a3913a713f54a3d2cbec47583582febb",
+    "runs\\temporal\\MNIST41\\shuffled_decision_T2.npz": "317b88710ffdc4f7a29803dfb2180a08db88c4524d589152356f51b5e72029d4",
+    "runs\\temporal\\MNIST41\\toppin_decision_T1.npz": "f4d5dd867a2b1ca0483fa08d505fe2cd04a2900f114019e0dc457e9620a88da9",
+    "runs\\temporal\\MNIST41\\toppin_decision_T2.npz": "abd0646268c0ba73e8b1b112ef242bc968ff779bf1ba689eb05fdc1b340232be",
+    "runs\\temporal\\CIFAR1041\\baseline_T1.npz": "c3d4d3fabae5d64c1bf85be6bd97fdd50dba6197a721accd432597cb568e787c",
+    "runs\\temporal\\CIFAR1041\\baseline_T2.npz": "0c98037f305beaa1e93b1160adc6632b55ad7d546cefe3d01a1b4a97f5df1c65",
+    "runs\\temporal\\CIFAR1041\\nongraph_local_T1.npz": "79ed9a0133a6b004867aaad08a965ab61cf502beaca254775ad53fa31a445589",
+    "runs\\temporal\\CIFAR1041\\nongraph_local_T2.npz": "37dff7fbcea51063b7b700c4c24ef39245bd242050386b16ca6af8938c9d8b0c",
+    "runs\\temporal\\CIFAR1041\\graph_local_T1.npz": "e55c50c114db3325387355d4658b776f589f465b216d30985a81eff00590434e",
+    "runs\\temporal\\CIFAR1041\\graph_local_T2.npz": "1c956fc1e765d397fd113348be35ce6bf71f71fba4db265fb284c69eb7378ca6",
+    "runs\\temporal\\CIFAR1041\\nongraph_decision_T1.npz": "b10a3f437c8b487ff8c45ddbeee3b232a0b676f88f8318cb0a930a5df4fe416a",
+    "runs\\temporal\\CIFAR1041\\nongraph_decision_T2.npz": "33609c2bd233e403ce6afb01d77b2d5a0779560c788c4f14aab31fc4235fb5cf",
+    "runs\\temporal\\CIFAR1041\\graph_decision_T1.npz": "6823e898d5dc2b55e52dfa026acd819b66a2c5065476301a3dc030e4ad126dae",
+    "runs\\temporal\\CIFAR1041\\graph_decision_T2.npz": "42940a51c056487578a77154567b8565505f2df8b77c090388bffa3dced8f908",
+    "runs\\temporal\\CIFAR1041\\shuffled_decision_T1.npz": "89900d72156891d4f0ed643053cd34fcbf9bae0690e7f14394eb9741dcd43d79",
+    "runs\\temporal\\CIFAR1041\\shuffled_decision_T2.npz": "e49fdaca0e4bb580dcfab14812b2d477c2e086a9bc297eb4a123959df558b150",
+    "runs\\temporal\\CIFAR1041\\toppin_decision_T1.npz": "d2a507988d6633c5fff4bee2f326761af62499bbdf045d033600b88b05909d66",
+    "runs\\temporal\\CIFAR1041\\toppin_decision_T2.npz": "e6c28506bd4f7cbe53aee315eaa1979e23a77a13f2408b92dd01b85f5eaf5f8c"
+  },
+  "one_alignment_audit_completed": true,
+  "refitting_after_validation": false
+}
