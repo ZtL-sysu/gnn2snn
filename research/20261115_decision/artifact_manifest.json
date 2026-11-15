@@ -1,4 +1,5 @@
 {
+  ".gitattributes": "c608ad7e5e20257172ddac219ffd74b8ae3ab236d2254c2423d9939c1e126646",
   "acceptance.json": "88b9a6a7f615a3744fde2841879136f202bfb96d383a02e7ef6166b863b9835a",
   "analysis\\cached\\endpoint_recomputation.csv": "238d1f9470195e4a0a8f6d88d91e27bd678bef73ae9b2e29b5edcaa1781f0e0e",
   "analysis\\cached\\input_hashes.csv": "a65aceb57860921b1fa16e987fa38fe1b72b32eaf269f719ac4158e57e83abb2",
@@ -9,7 +10,7 @@
   "analysis\\optimization_audit\\results.json": "761ba18875a92760d1a2566250c588b5eeec436f740b1c25375ff5df2800ecec",
   "analysis\\phase3\\all_lost_agreement_examples.csv": "2f00b746b6877d5b7be4cf05a5853a0c133b0a8fbe31c0d460bd7df642c24263",
   "analysis\\phase3\\event_accuracy.png": "e15046c8328ffaf9f04e7f5dd338b9dc403ed1c30c284fe6eac483ed9237788a",
-  "analysis\\phase3\\event_accuracy.svg": "37a27a3a361712d375dc6f24fe1ebe71764506de5078d4d2db511abbfc4b7412",
+  "analysis\\phase3\\event_accuracy.svg": "5a2407776b29d936dde72541fcbc503e7fb4b8251aea54d947f12094e05c3a80",
   "analysis\\phase3\\gate.json": "ecf31af35fe753d3974529a52a2466cfe7f23bb067605f8381936080a9dccc65",
   "analysis\\phase3\\intervention_cluster_ci.csv": "08bf8584ed0c6bcc1911c1e9d20b3f16cba71e2074a9cc7014fbd572e7fc380b",
   "analysis\\phase3\\main_table.csv": "10f6925ca5ead94f5ad6cde02cdd7155ffd2ad6528e40572cba8f6efe244f769",
@@ -103,7 +104,7 @@
   "runs\\objectives\\MNIST41\\ranking_T8.npz": "4dd6111167abf833f14e1bdf79b6faf51f7d043c09a86df852d0d6357a90ae90",
   "runs\\objectives\\MNIST41\\ranking_training.json": "8ad167b358b9cf4b5eee6351f20dea8255902ea6e5b84b4e1cb16e3f7db2c4cd",
   "runs\\objectives\\MNIST41\\results.json": "5626433ea39beb1dacfa966e87631366a721fb4655dc196fe8fb456f9c700b43",
-  "summarize_phase3.py": "f15dbca164fa6e21251d0c7575543bc7054ae0a8b7913d2e45c2b200f30826ba",
+  "summarize_phase3.py": "99afca3e4aa2ba8eada2f0569844d7a1c755c703187ad7d1e094f7ba3fb68c9d",
   "test_intervention.py": "f1a3bba8525b4e174794b29c5b6b4483273c921e1f2b264377e19214376336df",
   "test_objectives.py": "cf34024f75fa3db2ecc2d742385f5c3fa71b5cc5ada9abea2d0e588d3e60f3da",
   "verify_phase3.py": "3ad90ae48243895833c4a006893d1b2dfd87831f7f121142d7f55b19b9cc6ad0"

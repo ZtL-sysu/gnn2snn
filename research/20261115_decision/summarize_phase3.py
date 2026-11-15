@@ -107,7 +107,7 @@ def main():
             lines.append(f"|{ds}|{m}|{rr[1]['accuracy_percent']:.4f}/{rr[1]['teacher_agreement_percent']:.4f}|{rr[2]['accuracy_percent']:.4f}/{rr[2]['teacher_agreement_percent']:.4f}|{rr[4]['accuracy_percent']:.4f}|{rr[8]['accuracy_percent']:.4f}|{rr[1]['events']}|")
     lines+=['','Gate2 admission: **'+('PASS' if status['gate2_pass'] else 'FAIL')+'**. See paired.csv for graph bootstrap intervals. No graph-specific new method established.']
     (OUT/'main_table.md').write_text('\n'.join(lines)+'\n')
-    plt.rcParams.update({'font.size':9,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none'})
+    plt.rcParams.update({'font.size':9,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none','svg.hashsalt':'phase3-20261115'})
     fig,axes=plt.subplots(1,2,figsize=(9,3.6),layout='constrained')
     colors=['#0072B2','#009E73','#D55E00','#CC79A7','#777777']
     for ax,ds in zip(axes,('MNIST','CIFAR10')):
@@ -118,7 +118,10 @@ def main():
         ax.set(title=ds+' T1 (teacher41; exposed val512)',xlabel='Actual nonzero events (millions)',ylabel='Accuracy (%)')
         ax.margins(x=.20,y=.12)
         ax.grid(alpha=.2)
-    fig.savefig(OUT/'event_accuracy.png',dpi=180);fig.savefig(OUT/'event_accuracy.svg');plt.close(fig)
+    fig.savefig(OUT/'event_accuracy.png',dpi=180)
+    svg=OUT/'event_accuracy.svg'
+    fig.savefig(svg,metadata={'Date':None});plt.close(fig)
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n',encoding='utf-8',newline='\n')
     print(json.dumps(status,indent=2))
 
 
