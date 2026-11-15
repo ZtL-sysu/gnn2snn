@@ -1,0 +1,10 @@
+*.pdf binary
+*.png binary
+*.zip binary
+early/raw/* -text
+*.tex text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+audit/*.txt text eol=lf
