@@ -14,6 +14,7 @@
 |Ranking loss decreases while third competitors win|`analysis/optimization_audit/results.json`|Objective limitation / next mechanism|Training-only, one bounded audit; not all-class ranking failure|
 |Events, amplitude proxies, storage and timing|`analysis/phase3/main_table.csv`, raw NPZ|Cost transparency|Dense backend; event proxy excludes residual/readout arithmetic; no chip energy or deployment latency claims|
 |Graph-conditioned novel encoder and four-arm controls|Not admitted by Gate2|No Proposed Method success section|No independent graph contribution established|
+|Source-linked TI graph adaptation|16 raw-derived/source-checked endpoints, `analysis/source_ti/summary.md`|Stronger source-algorithm control|Source TI/fallback unchanged; eight-level channel GCN adaptation, not literal ImageNet reproduction or new method|
 |New multi-teacher/external task confirmation|Not launched|Explicit missing evidence|Old seed results cannot validate new objective/encoder|
 
-The prior route-D manuscript is unchanged. No new manuscript/PDF is generated: the evidence supports diagnostics and an exploratory ordinary calibration control, not an algorithm-type method paper. Full DCGS threshold iteration, faithful One-Spike comparison, new-encoder graph independence, and external confirmation remain explicit gaps.
+The prior route-D manuscript is unchanged. No new manuscript/PDF is generated: the evidence supports diagnostics and ordinary/source controls, not an algorithm-type method paper. The missing DCGS threshold-iteration component now executes faithfully in the graph adaptation; faithful One-Spike comparison, new-encoder graph independence and external confirmation remain explicit gaps.

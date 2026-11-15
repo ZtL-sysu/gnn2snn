@@ -1,0 +1,98 @@
+[
+  {
+    "calibration_horizon": 1,
+    "T": 1,
+    "source_intended_operating_point": true,
+    "accuracy_percent": 71.484375,
+    "teacher_agreement_percent": 74.21875,
+    "events": 8745041,
+    "amplitude_sum": 7153740.9541015625,
+    "optimizer_updates": 0,
+    "statistic_plus_TI_seconds": 0.5535215998534113,
+    "threshold_storage_bytes": 2772
+  },
+  {
+    "calibration_horizon": 1,
+    "T": 2,
+    "source_intended_operating_point": false,
+    "accuracy_percent": 89.6484375,
+    "teacher_agreement_percent": 97.65625,
+    "events": 17724743,
+    "amplitude_sum": 12042755.75,
+    "optimizer_updates": 0,
+    "statistic_plus_TI_seconds": 0.5535215998534113,
+    "threshold_storage_bytes": 2772
+  },
+  {
+    "calibration_horizon": 1,
+    "T": 4,
+    "source_intended_operating_point": false,
+    "accuracy_percent": 91.2109375,
+    "teacher_agreement_percent": 100.0,
+    "events": 30131859,
+    "amplitude_sum": 14142104.04296875,
+    "optimizer_updates": 0,
+    "statistic_plus_TI_seconds": 0.5535215998534113,
+    "threshold_storage_bytes": 2772
+  },
+  {
+    "calibration_horizon": 1,
+    "T": 8,
+    "source_intended_operating_point": false,
+    "accuracy_percent": 91.2109375,
+    "teacher_agreement_percent": 100.0,
+    "events": 37111627,
+    "amplitude_sum": 14432522.346679688,
+    "optimizer_updates": 0,
+    "statistic_plus_TI_seconds": 0.5535215998534113,
+    "threshold_storage_bytes": 2772
+  },
+  {
+    "calibration_horizon": 2,
+    "T": 1,
+    "source_intended_operating_point": false,
+    "accuracy_percent": 72.0703125,
+    "teacher_agreement_percent": 75.0,
+    "events": 8746202,
+    "amplitude_sum": 7153434.736816406,
+    "optimizer_updates": 0,
+    "statistic_plus_TI_seconds": 0.5535050998441875,
+    "threshold_storage_bytes": 2772
+  },
+  {
+    "calibration_horizon": 2,
+    "T": 2,
+    "source_intended_operating_point": true,
+    "accuracy_percent": 89.453125,
+    "teacher_agreement_percent": 97.0703125,
+    "events": 17726861,
+    "amplitude_sum": 12042424.015625,
+    "optimizer_updates": 0,
+    "statistic_plus_TI_seconds": 0.5535050998441875,
+    "threshold_storage_bytes": 2772
+  },
+  {
+    "calibration_horizon": 2,
+    "T": 4,
+    "source_intended_operating_point": false,
+    "accuracy_percent": 91.015625,
+    "teacher_agreement_percent": 99.8046875,
+    "events": 30132912,
+    "amplitude_sum": 14138856.549804688,
+    "optimizer_updates": 0,
+    "statistic_plus_TI_seconds": 0.5535050998441875,
+    "threshold_storage_bytes": 2772
+  },
+  {
+    "calibration_horizon": 2,
+    "T": 8,
+    "source_intended_operating_point": false,
+    "accuracy_percent": 91.2109375,
+    "teacher_agreement_percent": 99.8046875,
+    "events": 37099802,
+    "amplitude_sum": 14428748.469726562,
+    "optimizer_updates": 0,
+    "statistic_plus_TI_seconds": 0.5535050998441875,
+    "threshold_storage_bytes": 2772
+  }
+]

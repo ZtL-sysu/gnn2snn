@@ -1,5 +1,12 @@
 # Overview
-Goal: a credible GNN→SNN method paper, conditional on genuine algorithmic evidence. Current phase: bounded methods and budget-allocation rescue complete; conditional route-D integration and scientific review remain active. Branch `research/20261114-critical-site`. Updated 2026-11-14.
+Goal: a credible GNN→SNN method paper, conditional on genuine algorithmic evidence. Current phase: Phase3 decision-aware diagnostics and bounded objective controls; no successful new method established. Branch `research/20261115-decision-aware`. Updated 2026-11-15. Current resume entry: [Phase3 report](../research/20261115_decision/REPORT.md), [Phase3 decisions](../research/20261115_decision/DECISIONS.md), [Phase3 handoff](agents/codex-decision-20261115.md). Prior route-D manuscript/delivery were completed at cb742f2; older pending notes below are historical and superseded by this entry.
+
+## Phase3 authoritative status
+- `research/20261115_decision/` preserves new code, original40 objective endpoints, controlled event interventions, per-graph/structural diagnostics, 142 historical raw endpoint checks, archived three-teacher audit and cost tables. Latest published checkpoint before baseline follow-up: `01fd708`, verified on origin/research/20261115-decision-aware.
+- Gate1: actual hard-event message norm decreases can worsen all-competitor teacher margin. Gate2: logits T1 accuracy +1.171875pp on both tasks with fewer nonzero events, but CIFAR teacher agreement −2.1484375pp and graph-bootstrap intervals cross0. KL and top2-ranking fail. One training-only audit completed; no broader objective search admitted.
+- All new selection evidence is teacher41, exposed val512. Historical independently fitted T2 calibration is not the new shared-prefix baseline. No new test inference, teacher training, graph-method claim or new PDF.
+- Source threshold-iteration follow-up complete:16 new raw-recomputed/source-checked endpoints, all-source moments/TI/NaN fallback/converter-zero rules unchanged. Source H=T T1/T2: MNIST71.4844/89.4531%,CIFAR45.3125/52.1484%. Full highT checks retained; no external epsilon repair. This closes the TI component in the fixed-GCN adaptation, does not reverse Gate2 or claim novelty. See `analysis/source_ti/summary.md`. Total new objective/source endpoints56, all teacher41/exposed val512.
+- Long-term discovery remains active and unproven. No external resource/input blocker has been identified. Do not force positive results or repeat closed MSE/temperature/seed searches.
 
 ## Verified
 - Prior campaign is preserved at `research/20261114_story/`; 142 frozen input hashes rechecked unchanged.

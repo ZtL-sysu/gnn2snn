@@ -67,12 +67,32 @@ def main():
     hashes=json.loads((HERE/'analysis/phase3/source_hashes.json').read_text())
     for path,digest in hashes.items():assert sha256(HERE/path)==digest
     changes=subprocess.check_output(['git','diff','--name-only','cb742f2'],cwd=ROOT,text=True).splitlines()
-    assert all(p.startswith('research/20261115_decision/') for p in changes),changes
+    collaboration_files={'collaboration/STATE.md','collaboration/TASKS.md','collaboration/agents/codex-decision-20261115.md'}
+    assert all(p.startswith('research/20261115_decision/') or p in collaboration_files for p in changes),changes
     check['historical_directories_unchanged']=True
     check['all_40_objective_endpoints_and_v1_v2_trace_reproduction']='pass'
     history=json.loads((HERE/'analysis/historical/audit.json').read_text())
     assert history['new_test_inference'] is False and history['archived_logits_only']
     check['historical_three_teacher_archive_reconstruction']='pass'
+    source_root=HERE/'runs/source_ti'
+    if source_root.exists():
+        for ds in ('MNIST','CIFAR10'):
+            run=source_root/f'{ds}41'
+            sm=json.loads((run/'metadata.json').read_text())
+            assert sm['test_loaded'] is False and sm['labels_used'] is False
+            assert json.loads((run/'DONE.json').read_text())['endpoints']==8
+            for name,digest in sm['snapshots'].items():assert sha256(run/'source'/name)==digest
+            for H in (1,2):
+                fit=json.loads((run/f'H{H}_fit.json').read_text())
+                assert fit['effective_steps_n']==H*256 and fit['scale_iterations']==100
+                assert all(json.loads((run/f'H{H}_source_acceptance.json').read_text()).values())
+                vectors=np.load(run/f'H{H}_thresholds.npz')
+                for site in fit['sites']:
+                    assert np.array_equal(vectors[f"threshold_{site['site']}"],site['converter_threshold_after_negative_to_zero_mapping'])
+        sa=json.loads((HERE/'analysis/source_ti/acceptance.json').read_text())
+        assert sa['endpoints']==16 and sa['raw_array_metrics_recomputed']
+        for path,digest in sa['source_hashes'].items():assert sha256(HERE/path)==digest
+        check['source_TI_16_endpoints_source_snapshots_moments_and_forward']='pass'
     result=dict(engineering_acceptance=True,method_discovery_goal_achieved=False,checks=check,
         runtime=dict(python=sys.executable,torch=torch.__version__,cuda=torch.version.cuda,
             gpu=torch.cuda.get_device_name(0),numpy=np.__version__),

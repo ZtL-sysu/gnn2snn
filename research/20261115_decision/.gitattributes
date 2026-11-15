@@ -1,1 +1,2 @@
 * whitespace=cr-at-eol
+runs/source_ti/*/source/* -whitespace

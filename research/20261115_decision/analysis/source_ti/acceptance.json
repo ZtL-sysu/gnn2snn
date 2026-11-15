@@ -1,0 +1,25 @@
+{
+  "endpoints": 16,
+  "raw_array_metrics_recomputed": true,
+  "all_source_snapshot_hashes_match": true,
+  "all_source_forward_checks_pass": true,
+  "source_hashes": {
+    "runs\\source_ti\\MNIST41\\H1_T1.npz": "0627d939ae18bebd34dfa39c840fa8f94ac114e2f40e9ab50009808a303f7c2b",
+    "runs\\source_ti\\MNIST41\\H1_T2.npz": "3da810763ec6fab22a56c7cde52b4f99973d11d2527d3c01014ebb53177adc97",
+    "runs\\source_ti\\MNIST41\\H1_T4.npz": "6043d6614249af92f51ec0e11cf6bbe1b7d3989100817b95ec416119f23e7179",
+    "runs\\source_ti\\MNIST41\\H1_T8.npz": "bca4884043e5be847a5828291800de45482d7a51be2a65aa509589318d9f017c",
+    "runs\\source_ti\\MNIST41\\H2_T1.npz": "ae68c97dd9ca79ea59c3513b2b245bbd079c427ad94370503f4970d7b95f0e22",
+    "runs\\source_ti\\MNIST41\\H2_T2.npz": "4837112aed51a6bc1834e288f2d595b47af5f7726da70cf396dc0fcdeae3b222",
+    "runs\\source_ti\\MNIST41\\H2_T4.npz": "794f00d1b4cd8c368e252a94d8b69cb274176ec3f20c281eb56f3b2b6a8bd233",
+    "runs\\source_ti\\MNIST41\\H2_T8.npz": "1d7c7b6666c5b20b426fb63b32d5e34c87452ac7be107b70de7b3784a13b29fe",
+    "runs\\source_ti\\CIFAR1041\\H1_T1.npz": "52e4e260753bbb8b0f3f98c00eb6153e81025bd431086ea52a10ec15cf52ef6b",
+    "runs\\source_ti\\CIFAR1041\\H1_T2.npz": "6cab7897d373c93536449e41930a3c05b5e21040e015c81657ba4febd5ceee50",
+    "runs\\source_ti\\CIFAR1041\\H1_T4.npz": "dc3a6279b8ccc9e066f7c5adf56233b9129ee06b666a6a039a877822e8479226",
+    "runs\\source_ti\\CIFAR1041\\H1_T8.npz": "fea99092a030a75a6f37b35b59aa2b1969243a250321755161150f553132a34d",
+    "runs\\source_ti\\CIFAR1041\\H2_T1.npz": "60adb20ec367865e65b939ca2a211218d50bc1880bbff69c5a2b8fff2c912594",
+    "runs\\source_ti\\CIFAR1041\\H2_T2.npz": "294e16243e50b261f6545c574dffaff9e5f2f3f95d8aecbcb7cfb1953632cb45",
+    "runs\\source_ti\\CIFAR1041\\H2_T4.npz": "7a017831d9d6dafa135dc283bc5683637dce5c19150a9009d51a24b4679ce118",
+    "runs\\source_ti\\CIFAR1041\\H2_T8.npz": "5d3b6bc26d21a1d2f4e8d3e1c319f49e7434f18064d14a424206125cb45ed447"
+  },
+  "qualification": "single teacher, selection-exposed validation; graph bootstrap descriptive only"
+}

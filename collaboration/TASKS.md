@@ -1,7 +1,10 @@
 # Tasks
 |Task|Owner|Status|Entry|
 |---|---|---|---|
+|Phase3 cached/hard-event decision diagnostics and matched ordinary objectives|codex-decision-20261115|done, scientific admission failed|research/20261115_decision/REPORT.md|
+|Phase3 source threshold-iteration strong baseline gap|primary + bounded Luna source adapter|done:16 source-checked adaptation endpoints, no method success|research/20261115_decision/analysis/source_ti/summary.md|
+|New finite-event encoding with independent graph contribution|primary|not established; evidence-dependent admission required|research/20261115_decision/DECISIONS.md|
 |Critical-site bounded experiments and stage delivery|codex-critical-20261114|done|research/20261114_critical/analysis/SUMMARY.md|
 |Install requested f-skills and preserve originals|codex-critical-20261114|done|research/20261114_critical/skill_update.json|
 |Reaccept P0–P4, source-percentile baseline, finite residual-budget test, cost diagnosis|codex-critical-20261114|done|research/20261114_critical/pipeline-state.json|
-|Conditional route-D correction, P5 scientific review and manuscript integration|primary next turn|todo|research/20261114_critical/RESEARCH_SUMMARY.md; writing/scientific_packet_v1.json|
+|Prior conditional route-D correction, scientific review and manuscript delivery|codex-critical-20261114|done at cb742f2; not a new method success|research/20261114_critical/FINAL_AUDIT.md|

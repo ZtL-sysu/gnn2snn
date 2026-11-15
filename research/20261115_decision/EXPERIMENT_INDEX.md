@@ -12,6 +12,9 @@ $py = 'C:/Users/xhf/miniconda3/envs/dyg-cold/python.exe'
 & $py -X utf8 research/20261115_decision/run_objectives.py --dataset CIFAR10 --output research/20261115_decision/runs/reproduction/objectives/CIFAR1041
 & $py -X utf8 research/20261115_decision/audit_optimization.py --output research/20261115_decision/analysis/optimization_reproduction
 & $py -X utf8 research/20261115_decision/summarize_phase3.py
+& $py -X utf8 research/20261115_decision/run_source_ti.py --dataset MNIST --output research/20261115_decision/runs/reproduction/source_ti/MNIST41
+& $py -X utf8 research/20261115_decision/run_source_ti.py --dataset CIFAR10 --output research/20261115_decision/runs/reproduction/source_ti/CIFAR1041
+& $py -X utf8 research/20261115_decision/summarize_source_ti.py
 & $py -m pytest research/20261115_decision/test_intervention.py research/20261115_decision/test_objectives.py -q
 ```
 
@@ -25,6 +28,7 @@ Model runners refuse to overwrite output directories. `audit_optimization.py` li
 |Five matched objectives|`runs/objectives/{MNIST41,CIFAR1041}`|512 train, batch32,64 Adam updates lr.01;693 offsets; no labels.40 total accuracy endpoints (2 tasks×5 arms×4 T), including20 T1/T2 selection endpoints and20 high-T regressions|All 40 reported, no best-epoch/temperature/restart selection|
 |Single optimization/capacity audit|`analysis/optimization_audit/results.json`|Training only;4 interpolations between zero and fitted offsets for each arm;no new fit or validation selection|Zero new validation endpoints|
 |Automatic tables/paired CI/cost scatter|`analysis/phase3/*`|Raw NPZ recomputation,2000 graph-bootstrap samples; actual events reduced in int64|Not teacher-seed CI or independent confirmation|
+|Source threshold iteration follow-up|`runs/source_ti/{MNIST41,CIFAR1041}`, `analysis/source_ti/*`|Two predeclared source calibration horizons H1/H2, n256/512; same training512; zero optimizer updates; sixteen H×T endpoints, all same-vector prefixes|Eight additional T1/T2 selection endpoints and eight high-T functional checks, all exposed val512; no test inference|
 
 Teacher and calibration/source/data SHA checks are inherited from frozen loaders; each new objective run records their identity, fixed train/val indices, parameters, loss trace, gradient norms, full offset NPZ, T1/2/4/8 outputs and wall times. Original implementation snapshots are recoverable at commit `7cb5021`; modified intervention tracing is separately hashed in v2 metadata. `verify_phase3.py` verifies all recorded script identities against current code or immutable Git objects and builds a final artifact manifest.
 
