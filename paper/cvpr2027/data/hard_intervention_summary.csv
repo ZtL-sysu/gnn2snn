@@ -1,0 +1,5 @@
+dataset,T,graphs,interventions,message_mse_improved,improved_and_margin_worse,fraction,cluster_bootstrap95_low,cluster_bootstrap95_high,margin_improved_count_within_mse_improved,qualification
+MNIST,1,512,2048,811,332,0.409371146732,0.372771541647,0.445712632092,310,repeated interventions clustered by graph; teacher41; exposed validation512
+MNIST,2,512,2048,811,395,0.487053020962,0.450181430606,0.524169617226,358,repeated interventions clustered by graph; teacher41; exposed validation512
+CIFAR10,1,512,2048,928,296,0.318965517241,0.286634144921,0.353125,321,repeated interventions clustered by graph; teacher41; exposed validation512
+CIFAR10,2,512,2048,928,409,0.440732758621,0.405373514431,0.47603627383,401,repeated interventions clustered by graph; teacher41; exposed validation512

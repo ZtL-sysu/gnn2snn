@@ -1,0 +1,7 @@
+dataset,N,hidden,ANN_test_mean,ANN_record_level,FTBC_membrane_T8,FTBC_count_T8,FTBC_membrane_T16,FTBC_count_T16,SNN_record_level,source_file
+cora,,16,0.804600,recomputed_from_5_ANN_seed_records,0.801600,0.771800,0.803800,0.790000,aggregate_means_only_for_SNN; ANN records retained,results__cora_analytic.json
+citeseer,,16,0.701600,recomputed_from_5_ANN_seed_records,0.687200,0.663000,0.699800,0.696800,aggregate_means_only_for_SNN; ANN records retained,results__citeseer_analytic.json
+pubmed,,16,0.775000,recomputed_from_5_ANN_seed_records,0.772800,0.767600,0.775600,0.776400,aggregate_means_only_for_SNN; ANN records retained,results__pubmed_analytic.json
+chameleon,2277,64,0.632018,aggregate_only,0.634649,0.585965,0.636842,0.583333,aggregate_means_only_for_ANN_and_SNN,results__strengthen_extended_hetero.json
+squirrel,5201,64,0.467627,aggregate_only,0.467051,0.435159,0.472238,0.451105,aggregate_means_only_for_ANN_and_SNN,results__strengthen_extended_hetero.json
+ogbn-arxiv,169343,64,0.658951,aggregate_only,0.662589,0.256585,0.662416,0.258449,aggregate_means_only_for_ANN_and_SNN,results__strengthen_extended_arxiv.json

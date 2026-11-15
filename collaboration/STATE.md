@@ -27,3 +27,7 @@ Current quarter-node opportunity-budget residual allocation was tested and faile
 User asks for stage-wise GitHub delivery; do not wait for the final paper to push valid work. Newly updated research workflow is being migrated from real evidence, with pending stages left pending. [Handoff](agents/codex-critical-20261114.md) contains exact next actions; [paper evidence roles](../research/20261114_critical/EVIDENCE_MAP.md) separates reusable motivation from new claims.
 
 ARC source at `C:/code/AutoResearchClaw` commit84dad0a imports in Conda; stage IDs16/17/18/19/20/22/23 verified. This is capability inspection only, not writing execution. Actual writer context isolation must be verified against the installed writing_adapter contract before granting ARC stage credit. No API credentials or global settings changed.
+
+## Manuscript sprint, 2026-11-15
+New user-authorized paper-first sprint completed on paper/20261115-cvpr-sprint: see paper/cvpr2027/README.md and collaboration/agents/codex-paper-20261115.md. Mechanism manuscript integrates existing spatial-direction and temporal-history evidence; seven-page main text plus disclosure/references, separate four-page supplement, source/data/figures/Chinese report. Historical experiments unchanged. No new-method or registration claim.
+

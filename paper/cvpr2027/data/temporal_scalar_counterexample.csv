@@ -1,0 +1,2 @@
+current_history_1,current_history_2,weighted_integral_both,decoded_output_1,decoded_output_2,classification_boundary,two_nonzero_events_each,qualification
+"(0.01, 1.58)","(1, -0.4)",0.8,0.5078125,0.75,0.6,2,controlled frozen scalar recurrence counterexample; not observed accuracy

@@ -12,3 +12,5 @@
 |Install requested f-skills and preserve originals|codex-critical-20261114|done|research/20261114_critical/skill_update.json|
 |Reaccept P0–P4, source-percentile baseline, finite residual-budget test, cost diagnosis|codex-critical-20261114|done|research/20261114_critical/pipeline-state.json|
 |Prior conditional route-D correction, scientific review and manuscript delivery|codex-critical-20261114|done at cb742f2; not a new method success|research/20261114_critical/FINAL_AUDIT.md|
+
+|CVPR-style integrated mechanism manuscript, figures, supplement and audit|codex-paper-20261115|completed manuscript package; scientific risks explicit, no external submission|paper/cvpr2027/README.md|

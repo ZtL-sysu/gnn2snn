@@ -1,0 +1,7 @@
+# Manuscript sprint handoff
+
+Branch: `paper/20261115-cvpr-sprint`. Integrated latest main and completed decision-aware history, preserving all prior research and raw results unchanged. New manuscript: `paper/cvpr2027/main.tex`, separate supplement and PDF files. The story is mechanism research on directional and temporal information lost by reconstruction metrics. No new converter superiority, blind test or energy claim.
+
+Completed: early six-dataset asset audit; visual/centered evidence audit; primary-source citation correction; English manuscript; six main figures; three main tables; four-page supplementary; Chinese story/contribution/risk report; official CVPR2027 template; truthful LLM usage; raw-count, source hash, page, font, citation and anonymity checks; source ZIP and clean extracted compilation. New inference/training/search was not run. Two existing source/prefix CPU tests passed in dyg-cold. Independent manuscript review attempt hit worker quota; primary performed final scientific review. All historical research artifacts unchanged relative to 274bafd.
+
+Scientific risks remain candidly documented: single-teacher intervention and temporal evidence, exposed splits, mechanism novelty versus existing quantization/TPP work, no complete mediation or independent prediction study, incomplete One-Spike comparison. No conference registration was found, and no external submission made. Human registration/authorship/approval checks are administrative prerequisites to an actual submission, not fabricated completed actions.

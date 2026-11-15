@@ -1,0 +1,9 @@
+dataset,direction,policy,T,baseline_whole_network_events,candidate_whole_network_events,delta_events,delta_percent,local_decode_max_error,local_T2_decode_checked,train_graphs
+MNIST,halve,all_eligible,2,4351056,4499463,148407,3.41082716472,0,True,128
+MNIST,halve,deterministic_half,2,4351056,4409417,58361,1.34130657018,0,True,128
+MNIST,double,all_eligible,2,4351056,4386496,35440,0.814514913161,0,True,128
+MNIST,double,deterministic_half,2,4351056,4354971,3915,0.0899781570267,0,True,128
+CIFAR10,halve,all_eligible,2,6876233,7219258,343025,4.98855986992,0,True,128
+CIFAR10,halve,deterministic_half,2,6876233,7030944,154711,2.24993830197,0,True,128
+CIFAR10,double,all_eligible,2,6876233,6785108,-91125,-1.32521687383,0,True,128
+CIFAR10,double,deterministic_half,2,6876233,6799431,-76802,-1.11691968553,0,True,128

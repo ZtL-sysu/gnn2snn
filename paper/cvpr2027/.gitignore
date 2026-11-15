@@ -1,0 +1,14 @@
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+audit/rendered/
+audit/official-template/
+audit/clean-source/
+audit/author-kit-CVPR2027-v1-latex.zip
+__pycache__/

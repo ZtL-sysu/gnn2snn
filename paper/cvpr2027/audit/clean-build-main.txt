@@ -1,0 +1,954 @@
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C",
+	LC_NUMERIC = "C",
+	LC_COLLATE = "C",
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("Chinese (Simplified)_China.936").
+Initial Win CP for (console input, console output, system): (CP936, CP65001, CP936)
+I changed them all to CP936
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+Latexmk: Changing directory to 'audit/clean-source/'
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo)) (./cvpr.sty
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/times.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/dvipsnam.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/silence/silence.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
+(c:/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/axessibility/axessibility.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty))
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/backref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))))
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2026/texmf-dist/tex/latex/grfext/grfext.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+ABD: EveryShipout initializing macros
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+
+Package lineno Warning: Line number reference failed, re-run to get it right.
+
+
+Package natbib Warning: Citation `li2021' on page 1 undefined on input line 22.
+
+
+
+Package natbib Warning: Citation `wu2024ftbc' on page 1 undefined on input line
+ 22.
+
+
+Package natbib Warning: Citation `huang2025' on page 1 undefined on input line 
+22.
+
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1phv.fd) [1{c:/texlive/2026/texm
+f-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/
+dvips/base/8r.enc}]
+
+Package natbib Warning: Citation `li2021' on page 2 undefined on input line 41.
+
+
+
+Package natbib Warning: Citation `bojkovic2024' on page 2 undefined on input li
+ne 41.
+
+
+Package natbib Warning: Citation `wu2024ftbc' on page 2 undefined on input line
+ 41.
+
+
+Package natbib Warning: Citation `huang2025' on page 2 undefined on input line 
+43.
+
+
+Package natbib Warning: Citation `hwang2025onespike' on page 2 undefined on inp
+ut line 43.
+
+
+Package natbib Warning: Citation `bojkovic2025' on page 2 undefined on input li
+ne 43.
+
+
+Package natbib Warning: Citation `degreequant2021' on page 2 undefined on input
+ line 46.
+
+
+Package natbib Warning: Citation `a2q2023' on page 2 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `dwivedi2023' on page 2 undefined on input lin
+e 46.
+
+[2 <./figures/concept.pdf>]
+
+LaTeX Warning: Reference `eq:margin' on page 3 undefined on input line 91.
+
+
+LaTeX Warning: Reference `eq:sufficient' on page 3 undefined on input line 95.
+
+
+LaTeX Warning: Reference `eq:state' on page 3 undefined on input line 98.
+
+
+LaTeX Warning: Reference `fig:concept' on page 3 undefined on input line 100.
+
+
+LaTeX Warning: Reference `fig:temporal-mechanism' on page 3 undefined on input 
+line 107.
+
+
+Package natbib Warning: Citation `bojkovic2025' on page 3 undefined on input li
+ne 107.
+
+[3 <./figures/temporal_mechanism.pdf>]
+
+LaTeX Warning: Reference `tab:main' on page 4 undefined on input line 126.
+
+
+LaTeX Warning: Reference `fig:positions' on page 4 undefined on input line 141.
+
+
+
+LaTeX Warning: Reference `tab:main' on page 4 undefined on input line 150.
+
+[4 <./figures/position_recovery.pdf>]
+
+LaTeX Warning: Reference `eq:margin' on page 5 undefined on input line 173.
+
+
+LaTeX Warning: Reference `tab:calibration' on page 5 undefined on input line 17
+8.
+
+
+LaTeX Warning: Reference `eq:margin' on page 5 undefined on input line 193.
+
+[5 <./figures/message_decision.pdf>]
+
+LaTeX Warning: Reference `fig:temporal' on page 6 undefined on input line 201.
+
+
+LaTeX Warning: Reference `eq:words' on page 6 undefined on input line 201.
+
+
+LaTeX Warning: Reference `eq:center' on page 6 undefined on input line 219.
+
+[6 <./figures/temporal_equivalence.pdf>]
+
+LaTeX Warning: Reference `fig:centered' on page 7 undefined on input line 233.
+
+[7 <./figures/centered_tradeoff.pdf>]
+No file main.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[8] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texl
+ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2026/t
+exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2026/texmf-dist/fonts
+/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/t
+exlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (8 pages, 462459 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Missing bbl file 'main.bbl' in following:
+ No file main.bbl.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Create bibtex main
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Category 'other':
+  Rerun of 'bibtex main' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (TeX Live 2026)
+The top-level auxiliary file: main.aux
+The style file: ieeenat_fullname.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.bbl
+  main.out
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo)) (./cvpr.sty
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/times.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/dvipsnam.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/silence/silence.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
+(c:/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/axessibility/axessibility.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty))
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/backref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))))
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2026/texmf-dist/tex/latex/grfext/grfext.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+ABD: EveryShipout initializing macros
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg) (./main.out)
+(./main.out) (c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+
+Package natbib Warning: Citation `li2021' on page 1 undefined on input line 22.
+
+
+
+Package natbib Warning: Citation `wu2024ftbc' on page 1 undefined on input line
+ 22.
+
+
+Package natbib Warning: Citation `huang2025' on page 1 undefined on input line 
+22.
+
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1phv.fd) [1{c:/texlive/2026/texm
+f-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/
+dvips/base/8r.enc}]
+
+Package natbib Warning: Citation `li2021' on page 2 undefined on input line 41.
+
+
+
+Package natbib Warning: Citation `bojkovic2024' on page 2 undefined on input li
+ne 41.
+
+
+Package natbib Warning: Citation `wu2024ftbc' on page 2 undefined on input line
+ 41.
+
+
+Package natbib Warning: Citation `huang2025' on page 2 undefined on input line 
+43.
+
+
+Package natbib Warning: Citation `hwang2025onespike' on page 2 undefined on inp
+ut line 43.
+
+
+Package natbib Warning: Citation `bojkovic2025' on page 2 undefined on input li
+ne 43.
+
+
+Package natbib Warning: Citation `degreequant2021' on page 2 undefined on input
+ line 46.
+
+
+Package natbib Warning: Citation `a2q2023' on page 2 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `dwivedi2023' on page 2 undefined on input lin
+e 46.
+
+[2 <./figures/concept.pdf>]
+
+Package natbib Warning: Citation `bojkovic2025' on page 3 undefined on input li
+ne 107.
+
+[3 <./figures/temporal_mechanism.pdf>] [4 <./figures/position_recovery.pdf>]
+[5 <./figures/message_decision.pdf>] [6 <./figures/temporal_equivalence.pdf>]
+[7 <./figures/centered_tradeoff.pdf>] (./main.bbl
+No file main.brf.
+
+Package lineno Warning: Line number reference failed, re-run to get it right.
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+[8] (./main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+Package rerunfilecheck Warning: File `main.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+ )<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texli
+ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2026/texmf-dist/f
+onts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/
+helvetic/uhvr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pf
+b><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2026
+/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (8 pages, 494037 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Missing input file 'main.brf' message in .log file:
+  No file main.brf.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 2 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (TeX Live 2026)
+The top-level auxiliary file: main.aux
+The style file: ieeenat_fullname.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.brf
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo)) (./cvpr.sty
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/times.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/dvipsnam.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/silence/silence.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
+(c:/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/axessibility/axessibility.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty))
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/backref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))))
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2026/texmf-dist/tex/latex/grfext/grfext.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+ABD: EveryShipout initializing macros
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg) (./main.out)
+(./main.out) (c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1phv.fd) [1{c:/texlive/2026/texm
+f-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/
+dvips/base/8r.enc}] [2 <./figures/concept.pdf>] [3 <./figures/temporal_mechanis
+m.pdf>] [4 <./figures/position_recovery.pdf>] [5 <./figures/message_decision.pd
+f>] [6 <./figures/temporal_equivalence.pdf>] [7 <./figures/centered_tradeoff.pd
+f>] (./main.bbl (./main.brf)) [8] (./main.aux)
+
+Package rerunfilecheck Warning: File `main.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+ )<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texli
+ve/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2026/texmf-dist/f
+onts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/
+helvetic/uhvr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pf
+b><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2026
+/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (8 pages, 497163 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 3 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (TeX Live 2026)
+The top-level auxiliary file: main.aux
+The style file: ieeenat_fullname.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.brf
+
+------------
+Run number 4 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo)) (./cvpr.sty
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/times.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/dvipsnam.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/silence/silence.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
+(c:/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/axessibility/axessibility.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty))
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/backref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))))
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2026/texmf-dist/tex/latex/grfext/grfext.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+ABD: EveryShipout initializing macros
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg) (./main.out)
+(./main.out) (c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1phv.fd) [1{c:/texlive/2026/texm
+f-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/
+dvips/base/8r.enc}] [2 <./figures/concept.pdf>] [3 <./figures/temporal_mechanis
+m.pdf>] [4 <./figures/position_recovery.pdf>] [5 <./figures/message_decision.pd
+f>] [6 <./figures/temporal_equivalence.pdf>] [7 <./figures/centered_tradeoff.pd
+f>] (./main.bbl (./main.brf)
+
+Package lineno Warning: Line number reference failed, re-run to get it right.
+
+) [8] (./main.aux) )<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texl
+ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive
+/2026/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2026/texmf-dis
+t/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/u
+rw/times/utmb8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b><c:/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (8 pages, 500006 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 4 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (TeX Live 2026)
+The top-level auxiliary file: main.aux
+The style file: ieeenat_fullname.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 5 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo)) (./cvpr.sty
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/times.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/dvipsnam.def)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/silence/silence.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
+(c:/texlive/2026/texmf-dist/tex/latex/lineno/lineno.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/axessibility/axessibility.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(c:/texlive/2026/texmf-dist/tex/generic/pdftex/glyphtounicode.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty))
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/backref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))))
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def)
+(c:/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2026/texmf-dist/tex/latex/grfext/grfext.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+ABD: EveryShipout initializing macros
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-ptm.cfg) (./main.out)
+(./main.out) (c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1phv.fd) [1{c:/texlive/2026/texm
+f-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/
+dvips/base/8r.enc}] [2 <./figures/concept.pdf>] [3 <./figures/temporal_mechanis
+m.pdf>] [4 <./figures/position_recovery.pdf>] [5 <./figures/message_decision.pd
+f>] [6 <./figures/temporal_equivalence.pdf>] [7 <./figures/centered_tradeoff.pd
+f>] (./main.bbl (./main.brf)) [8] (./main.aux) )<c:/texlive/2026/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive
+/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pf
+b><c:/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2
+026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2026/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on main.pdf (8 pages, 500004 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: All targets (main.pdf) are up-to-date
+Latexmk: Undoing directory change
+
+Reverting Windows console CPs to (in,out) = (936,65001)
