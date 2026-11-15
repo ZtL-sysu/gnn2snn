@@ -15,6 +15,7 @@ CRIT = ROOT / "research" / "20261114_critical"
 OUT = ROOT / "research" / "20261115_decision" / "analysis" / "cached"
 BOOT_SEED = 20261115
 BOOT_REPS = 2000
+DATA_ROOT = Path("C:/code/phd-snn/auto-paper/20261110-152407/Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs/f-research-v1-run-20261110-172308-superpixel-graph-vision/data/pyg_bench")
 
 
 def sha256(path: Path) -> str:
@@ -71,6 +72,63 @@ def accuracy_bootstrap(delta: np.ndarray, rng: np.random.Generator) -> tuple[flo
 def _load_npz(path: Path) -> dict[str, np.ndarray]:
     with np.load(path, allow_pickle=False) as f:
         return {k: f[k].copy() for k in f.files}
+
+
+def load_structure_features(dataset: str, indices: np.ndarray) -> list[dict[str, Any]]:
+    """Compute graph/feature-only neighborhood descriptors from official val graphs."""
+    from torch_geometric.datasets import GNNBenchmarkDataset
+
+    ds = GNNBenchmarkDataset(root=str(DATA_ROOT), name=dataset, split="val")
+    out = []
+    for idx in indices.astype(int):
+        g = ds[int(idx)]  # no label access; only x, pos, edge_index
+        x = g.x.detach().cpu().numpy().astype(np.float64)
+        pos = g.pos.detach().cpu().numpy().astype(np.float64)
+        edge = g.edge_index.detach().cpu().numpy()
+        n = int(x.shape[0]); src, dst = edge
+        indeg = np.bincount(dst, minlength=n).astype(np.float64)
+        outdeg = np.bincount(src, minlength=n).astype(np.float64)
+        if edge.shape[1]:
+            dx2 = np.square(x[src] - x[dst]).mean(axis=1)
+            dp2 = np.square(pos[src] - pos[dst]).sum(axis=1)
+            lengths = np.sqrt(dp2)
+            feature_mse = float(dx2.mean())
+            pos_mse = float(dp2.mean())
+            edge_len = float(lengths.mean())
+            edge_len_var = float(lengths.var())
+        else:
+            feature_mse = pos_mse = edge_len = edge_len_var = 0.0
+        out.append({"dataset": dataset, "index": int(idx), "nodes": n,
+                    "edges_directed": int(edge.shape[1]),
+                    "mean_in_degree": float(indeg.mean()), "in_degree_variance": float(indeg.var()),
+                    "mean_out_degree": float(outdeg.mean()), "out_degree_variance": float(outdeg.var()),
+                    "neighbor_feature_mse": feature_mse,
+                    "neighbor_position_squared_distance_mean": pos_mse,
+                    "edge_length_mean": edge_len, "edge_length_variance": edge_len_var})
+    return out
+
+
+def ols_record(y: np.ndarray, base: dict[str, np.ndarray], extended: dict[str, np.ndarray]) -> dict[str, Any]:
+    def fit(features: dict[str, np.ndarray]) -> tuple[float, int, list[str], list[float]]:
+        names = list(features)
+        cols = [np.ones(len(y), dtype=float)] + [np.asarray(features[k], dtype=float) for k in names]
+        X = np.column_stack(cols)
+        beta, _, rank, _ = np.linalg.lstsq(X, y.astype(float), rcond=None)
+        resid = y - X @ beta
+        denom = float(np.square(y - y.mean()).sum())
+        r2 = 1.0 - float(np.square(resid).sum()) / denom if denom > 0 else 0.0
+        constants = [n for n in names if np.ptp(np.asarray(features[n], dtype=float)) < 1e-12]
+        return r2, int(rank), constants, beta.tolist()
+    base_r2, base_rank, base_const, base_beta = fit(base)
+    ext_r2, ext_rank, ext_const, ext_beta = fit(extended)
+    return {"n": len(y), "base_features": list(base), "extended_features": list(extended),
+            "base_rank_including_intercept": base_rank, "extended_rank_including_intercept": ext_rank,
+            "base_constant_features": base_const, "extended_constant_features": ext_const,
+            "base_in_sample_r2": base_r2, "extended_in_sample_r2": ext_r2,
+            "incremental_in_sample_r2": ext_r2-base_r2,
+            "base_coefficients_intercept_then_features": base_beta,
+            "extended_coefficients_intercept_then_features": ext_beta,
+            "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"}
 
 
 def _json_rows(path: Path) -> list[dict[str, Any]]:
@@ -130,6 +188,7 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     rng = np.random.default_rng(BOOT_SEED)
     graph_rows: list[dict[str, Any]] = []
+    all_structure_rows: list[dict[str, Any]] = []
     summaries: list[dict[str, Any]] = []
     hashes: dict[str, str] = {}
     missing: list[str] = []
@@ -137,6 +196,18 @@ def main() -> None:
     for ds in ("CIFAR10", "MNIST"):
         short = "CIFAR1041" if ds == "CIFAR10" else "MNIST41"
         alloc_dir = CRIT / "runs" / "allocation" / short
+        run_meta = json.loads((alloc_dir / "metadata.json").read_text(encoding="utf-8"))
+        cal_path = Path(run_meta["calibration_path"])
+        if sha256(cal_path) != run_meta["calibration_sha256"]:
+            raise ValueError(f"{ds}: calibration metadata hash mismatch")
+        cal_record = json.loads(cal_path.read_text(encoding="utf-8"))
+        val_expected = cal_record["data"]["processed_files_sha256"]["val_data.pt"]
+        val_path = DATA_ROOT / ds / "processed" / "val_data.pt"
+        val_hash = sha256(val_path)
+        if val_hash != val_expected:
+            raise ValueError(f"{ds}: official validation processed-data hash mismatch")
+        hashes[cal_path.as_posix()] = sha256(cal_path)
+        hashes[val_path.relative_to(ROOT).as_posix() if val_path.is_relative_to(ROOT) else val_path.as_posix()] = val_hash
         diag_path = CRIT / "analysis" / "allocation_diagnostics" / f"{ds}_per_graph.npz"
         if not diag_path.exists():
             missing.append(str(diag_path)); continue
@@ -147,6 +218,14 @@ def main() -> None:
         li, mi = policies.index("local"), policies.index("message")
         indices = diag["indices"]
         graph_features: dict[str, np.ndarray] = {"nodes": diag["graph_sizes"].astype(float)}
+        structure_rows = load_structure_features(ds, indices)
+        all_structure_rows.extend(structure_rows)
+        structure_names = ("in_degree_variance", "out_degree_variance", "neighbor_feature_mse",
+                           "neighbor_position_squared_distance_mean", "edge_length_mean", "edge_length_variance")
+        structure_arrays = {name: np.asarray([r[name] for r in structure_rows], dtype=float) for name in structure_names}
+        structure_by_index = {r["index"]: r for r in structure_rows}
+        if len(structure_by_index) != len(indices):
+            raise ValueError(f"{ds}: duplicate/missing validation graph IDs in structure features")
 
         alloc: dict[tuple[str, int], dict[str, np.ndarray]] = {}
         for method in ("baseline", "local", "message", "random", "identity", "shuffled"):
@@ -159,6 +238,16 @@ def main() -> None:
                 for feature in ("nodes", "mean_degree", "degree_variance"):
                     if feature in a and feature not in graph_features:
                         graph_features[feature] = a[feature].astype(float)
+
+        # Indices align row order, but do not establish that each artifact carries
+        # the same target graph labels or frozen teacher. Guard that independently.
+        canonical = alloc.get(("baseline", 1))
+        if canonical is not None:
+            for (method, t), a in alloc.items():
+                if not np.array_equal(a["labels"], canonical["labels"]):
+                    raise ValueError(f"{ds} {method} T{t}: labels differ from aligned baseline labels")
+                if not np.array_equal(a["teacher"], canonical["teacher"]):
+                    raise ValueError(f"{ds} {method} T{t}: teacher logits differ from aligned baseline teacher")
 
         if not all((m, t) in alloc for m in ("local", "message") for t in (1, 2)):
             continue
@@ -220,6 +309,9 @@ def main() -> None:
                     "mean_degree": float(graph_features["mean_degree"][i]) if "mean_degree" in graph_features else None,
                     "degree_variance": float(graph_features["degree_variance"][i]) if "degree_variance" in graph_features else None,
                 }
+                for name, value in structure_by_index[int(idx)].items():
+                    if name not in ("dataset", "index"):
+                        row[f"structure_{name}"] = value
                 row["teacher_margin_quartile"] = int(np.searchsorted(q[1:-1], row["teacher_top2_margin"], side="right") + 1)
                 graph_rows.append(row)
 
@@ -236,6 +328,17 @@ def main() -> None:
             cov_names = [k for k in ("nodes", "mean_degree", "degree_variance") if k in graph_features]
             X = np.column_stack([np.ones(len(paired))] + [graph_features[k] for k in cov_names])
             beta = np.linalg.lstsq(X, paired, rcond=None)[0]
+            base_margin = {"teacher_top2_margin": tm["teacher_top2_margin"],
+                           "teacher_truth_vs_competitor_margin": tm["teacher_truth_vs_competitor_margin"]}
+            structural_control = {"nodes": graph_features["nodes"]}
+            if "mean_degree" in graph_features: structural_control["cached_mean_degree"] = graph_features["mean_degree"]
+            if "degree_variance" in graph_features: structural_control["cached_degree_variance"] = graph_features["degree_variance"]
+            structural_control.update(structure_arrays)
+            accuracy_ols = ols_record(paired, base_margin, {**base_margin, **structural_control})
+            teacher_disagreement_delta = msg_teacher_correct.astype(float) - loc_teacher_correct.astype(float)
+            # The same delta with sign inverted is mismatch(message)-mismatch(local).
+            mismatch_delta = -teacher_disagreement_delta
+            mismatch_ols = ols_record(mismatch_delta, base_margin, {**base_margin, **structural_control})
             summaries.append({"dataset": ds, "seed": 41, "T": t, "n_graphs": len(y),
                 "message_mse_better_count": int(message_mse_better.sum()),
                 "message_mse_better_and_accuracy_worsened_count": int((message_mse_better & worsened).sum()),
@@ -263,7 +366,9 @@ def main() -> None:
                 "margin_quartiles": strata,
                 "exploratory_ols_covariates": cov_names,
                 "exploratory_ols_coefficients_intercept_then_covariates": beta.tolist(),
-                "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"})
+                "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset",
+                "margin_control_plus_structure_incremental_ols_accuracy_delta": accuracy_ols,
+                "margin_control_plus_structure_incremental_ols_teacher_mismatch_delta": mismatch_ols})
 
     # Critical endpoint CSV counts/hashes and original result records are separately retained by scope.
     endpoint_audit = audit_endpoints(hashes)
@@ -322,6 +427,9 @@ def main() -> None:
     with (OUT / "input_hashes.csv").open("w", encoding="utf-8", newline="") as f:
         w = csv.writer(f); w.writerow(["path", "sha256"])
         for path, digest in sorted(hashes.items()): w.writerow([path, digest])
+    with (OUT / "structure_features.csv").open("w", encoding="utf-8", newline="") as f:
+        if all_structure_rows:
+            w = csv.DictWriter(f, fieldnames=list(all_structure_rows[0])); w.writeheader(); w.writerows(all_structure_rows)
     with (OUT / "endpoint_recomputation.csv").open("w", encoding="utf-8", newline="") as f:
         rows = endpoint_audit["records"]
         if rows:

@@ -117,14 +117,17 @@ def main():
             assert np.allclose(z.cpu().numpy(), archived['logits'][offset:offset+len(z)], atol=1e-5, rtol=1e-5)
             base[T] = (z, trace)
             equality.append(dict(T=T, batch_offset=offset, exact_unpatched=True))
-        for selector in ('random', 'residual'):
+        for selector in ('deterministic_coordinate', 'residual'):
             for direction in (-1, 1):
                 for T in (1, 2):
                     z, _, trace = measured_forward(net, batch, T, direction, selector)
                     bz, bt = base[T]
                     assert trace['first_nonzero_preserved']
+                    coords={c[0]:c[1:] for c in trace.get('coordinates',[])}
                     for g in range(len(z)):
                         rows.append(dict(dataset=args.dataset, index=ids[offset+g], T=T,
+                            actual_first_event_changed=g in coords,
+                            changed_node=coords.get(g,[-1,-1])[0],changed_channel=coords.get(g,[-1,-1])[1],
                             selector=selector, direction=direction, teacher_class=int(cls[g]), label=int(labels[g]),
                             teacher_margin=float(margin(teacher,cls)[g]), baseline_margin=float(margin(bz,cls)[g]),
                             changed_margin=float(margin(z,cls)[g]), baseline_pred=int(bz[g].argmax()),

@@ -1,0 +1,734 @@
+{
+  "archived_logits_only": true,
+  "new_test_inference": false,
+  "test_history_exposed": true,
+  "rows": [
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "condition": "original_conversion",
+      "T": 1,
+      "teacher_accuracy_percent": 90.94,
+      "accuracy_percent": 74.46000000000001,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "condition": "original_conversion",
+      "T": 2,
+      "teacher_accuracy_percent": 90.94,
+      "accuracy_percent": 90.14999999999999,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "condition": "original_conversion",
+      "T": 4,
+      "teacher_accuracy_percent": 90.94,
+      "accuracy_percent": 90.94,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "condition": "original_conversion",
+      "T": 8,
+      "teacher_accuracy_percent": 90.94,
+      "accuracy_percent": 90.93,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "condition": "historical_all_position_local",
+      "T": 1,
+      "teacher_accuracy_percent": 90.94,
+      "accuracy_percent": 78.48,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "condition": "historical_all_position_local",
+      "T": 2,
+      "teacher_accuracy_percent": 90.94,
+      "accuracy_percent": 89.96,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "condition": "historical_all_position_local",
+      "T": 4,
+      "teacher_accuracy_percent": 90.94,
+      "accuracy_percent": 90.86,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "condition": "historical_all_position_local",
+      "T": 8,
+      "teacher_accuracy_percent": 90.94,
+      "accuracy_percent": 90.95,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "condition": "original_conversion",
+      "T": 1,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "accuracy_percent": 70.91,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "condition": "original_conversion",
+      "T": 2,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "accuracy_percent": 90.64999999999999,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "condition": "original_conversion",
+      "T": 4,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "accuracy_percent": 91.34,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "condition": "original_conversion",
+      "T": 8,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "accuracy_percent": 91.31,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "condition": "historical_all_position_local",
+      "T": 1,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "accuracy_percent": 80.61,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "condition": "historical_all_position_local",
+      "T": 2,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "accuracy_percent": 90.38000000000001,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "condition": "historical_all_position_local",
+      "T": 4,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "accuracy_percent": 91.33,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 42,
+      "condition": "historical_all_position_local",
+      "T": 8,
+      "teacher_accuracy_percent": 91.32000000000001,
+      "accuracy_percent": 91.3,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "condition": "original_conversion",
+      "T": 1,
+      "teacher_accuracy_percent": 90.81,
+      "accuracy_percent": 68.93,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "condition": "original_conversion",
+      "T": 2,
+      "teacher_accuracy_percent": 90.81,
+      "accuracy_percent": 89.67,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "condition": "original_conversion",
+      "T": 4,
+      "teacher_accuracy_percent": 90.81,
+      "accuracy_percent": 90.86,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "condition": "original_conversion",
+      "T": 8,
+      "teacher_accuracy_percent": 90.81,
+      "accuracy_percent": 90.81,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "condition": "historical_all_position_local",
+      "T": 1,
+      "teacher_accuracy_percent": 90.81,
+      "accuracy_percent": 76.41,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "condition": "historical_all_position_local",
+      "T": 2,
+      "teacher_accuracy_percent": 90.81,
+      "accuracy_percent": 89.9,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "condition": "historical_all_position_local",
+      "T": 4,
+      "teacher_accuracy_percent": 90.81,
+      "accuracy_percent": 90.82000000000001,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 43,
+      "condition": "historical_all_position_local",
+      "T": 8,
+      "teacher_accuracy_percent": 90.81,
+      "accuracy_percent": 90.82000000000001,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "condition": "original_conversion",
+      "T": 1,
+      "teacher_accuracy_percent": 54.87,
+      "accuracy_percent": 45.5,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "condition": "original_conversion",
+      "T": 2,
+      "teacher_accuracy_percent": 54.87,
+      "accuracy_percent": 53.87,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "condition": "original_conversion",
+      "T": 4,
+      "teacher_accuracy_percent": 54.87,
+      "accuracy_percent": 54.879999999999995,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "condition": "original_conversion",
+      "T": 8,
+      "teacher_accuracy_percent": 54.87,
+      "accuracy_percent": 54.93,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "condition": "historical_all_position_local",
+      "T": 1,
+      "teacher_accuracy_percent": 54.87,
+      "accuracy_percent": 49.87,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "condition": "historical_all_position_local",
+      "T": 2,
+      "teacher_accuracy_percent": 54.87,
+      "accuracy_percent": 54.269999999999996,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "condition": "historical_all_position_local",
+      "T": 4,
+      "teacher_accuracy_percent": 54.87,
+      "accuracy_percent": 54.86,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "condition": "historical_all_position_local",
+      "T": 8,
+      "teacher_accuracy_percent": 54.87,
+      "accuracy_percent": 54.879999999999995,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "condition": "original_conversion",
+      "T": 1,
+      "teacher_accuracy_percent": 54.94,
+      "accuracy_percent": 47.910000000000004,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "condition": "original_conversion",
+      "T": 2,
+      "teacher_accuracy_percent": 54.94,
+      "accuracy_percent": 53.99,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "condition": "original_conversion",
+      "T": 4,
+      "teacher_accuracy_percent": 54.94,
+      "accuracy_percent": 54.86,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "condition": "original_conversion",
+      "T": 8,
+      "teacher_accuracy_percent": 54.94,
+      "accuracy_percent": 54.949999999999996,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "condition": "historical_all_position_local",
+      "T": 1,
+      "teacher_accuracy_percent": 54.94,
+      "accuracy_percent": 49.82,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "condition": "historical_all_position_local",
+      "T": 2,
+      "teacher_accuracy_percent": 54.94,
+      "accuracy_percent": 54.010000000000005,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "condition": "historical_all_position_local",
+      "T": 4,
+      "teacher_accuracy_percent": 54.94,
+      "accuracy_percent": 54.99000000000001,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 42,
+      "condition": "historical_all_position_local",
+      "T": 8,
+      "teacher_accuracy_percent": 54.94,
+      "accuracy_percent": 54.93,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "condition": "original_conversion",
+      "T": 1,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "accuracy_percent": 47.010000000000005,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "condition": "original_conversion",
+      "T": 2,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "accuracy_percent": 54.33,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "condition": "original_conversion",
+      "T": 4,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "accuracy_percent": 55.010000000000005,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "condition": "original_conversion",
+      "T": 8,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "accuracy_percent": 55.02,
+      "n": 10000,
+      "scope": "historically exposed test logits only"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "condition": "historical_all_position_local",
+      "T": 1,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "accuracy_percent": 50.080000000000005,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "condition": "historical_all_position_local",
+      "T": 2,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "accuracy_percent": 54.25,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "condition": "historical_all_position_local",
+      "T": 4,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "accuracy_percent": 55.03,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 43,
+      "condition": "historical_all_position_local",
+      "T": 8,
+      "teacher_accuracy_percent": 55.010000000000005,
+      "accuracy_percent": 55.04,
+      "n": 10000,
+      "scope": "historically exposed test logits; original local protocol, not new Phase3 calibration"
+    },
+    {
+      "dataset": "CIFAR10_GatedGCN",
+      "seed": 41,
+      "condition": "gated_hybrid",
+      "T": 4,
+      "teacher_accuracy_percent": 69.19999999999999,
+      "accuracy_percent": 69.1,
+      "n": 10000,
+      "scope": "historically exposed test; analog gates retained; not pure SNN"
+    },
+    {
+      "dataset": "CIFAR10_GatedGCN",
+      "seed": 41,
+      "condition": "gated_hybrid",
+      "T": 8,
+      "teacher_accuracy_percent": 69.19999999999999,
+      "accuracy_percent": 69.16,
+      "n": 10000,
+      "scope": "historically exposed test; analog gates retained; not pure SNN"
+    },
+    {
+      "dataset": "CIFAR10_GatedGCN",
+      "seed": 42,
+      "condition": "gated_hybrid",
+      "T": 4,
+      "teacher_accuracy_percent": 68.39,
+      "accuracy_percent": 68.44,
+      "n": 10000,
+      "scope": "historically exposed test; analog gates retained; not pure SNN"
+    },
+    {
+      "dataset": "CIFAR10_GatedGCN",
+      "seed": 42,
+      "condition": "gated_hybrid",
+      "T": 8,
+      "teacher_accuracy_percent": 68.39,
+      "accuracy_percent": 68.38,
+      "n": 10000,
+      "scope": "historically exposed test; analog gates retained; not pure SNN"
+    },
+    {
+      "dataset": "CIFAR10_GatedGCN",
+      "seed": 43,
+      "condition": "gated_hybrid",
+      "T": 4,
+      "teacher_accuracy_percent": 68.72,
+      "accuracy_percent": 68.71000000000001,
+      "n": 10000,
+      "scope": "historically exposed test; analog gates retained; not pure SNN"
+    },
+    {
+      "dataset": "CIFAR10_GatedGCN",
+      "seed": 43,
+      "condition": "gated_hybrid",
+      "T": 8,
+      "teacher_accuracy_percent": 68.72,
+      "accuracy_percent": 68.73,
+      "n": 10000,
+      "scope": "historically exposed test; analog gates retained; not pure SNN"
+    }
+  ],
+  "means": [
+    {
+      "dataset": "CIFAR10",
+      "condition": "historical_all_position_local",
+      "T": 1,
+      "seeds": 3,
+      "teacher_accuracy_mean": 54.94,
+      "accuracy_mean": 49.92333333333334
+    },
+    {
+      "dataset": "CIFAR10",
+      "condition": "historical_all_position_local",
+      "T": 2,
+      "seeds": 3,
+      "teacher_accuracy_mean": 54.94,
+      "accuracy_mean": 54.17666666666667
+    },
+    {
+      "dataset": "CIFAR10",
+      "condition": "historical_all_position_local",
+      "T": 4,
+      "seeds": 3,
+      "teacher_accuracy_mean": 54.94,
+      "accuracy_mean": 54.96
+    },
+    {
+      "dataset": "CIFAR10",
+      "condition": "historical_all_position_local",
+      "T": 8,
+      "seeds": 3,
+      "teacher_accuracy_mean": 54.94,
+      "accuracy_mean": 54.949999999999996
+    },
+    {
+      "dataset": "CIFAR10",
+      "condition": "original_conversion",
+      "T": 1,
+      "seeds": 3,
+      "teacher_accuracy_mean": 54.94,
+      "accuracy_mean": 46.80666666666667
+    },
+    {
+      "dataset": "CIFAR10",
+      "condition": "original_conversion",
+      "T": 2,
+      "seeds": 3,
+      "teacher_accuracy_mean": 54.94,
+      "accuracy_mean": 54.06333333333333
+    },
+    {
+      "dataset": "CIFAR10",
+      "condition": "original_conversion",
+      "T": 4,
+      "seeds": 3,
+      "teacher_accuracy_mean": 54.94,
+      "accuracy_mean": 54.916666666666664
+    },
+    {
+      "dataset": "CIFAR10",
+      "condition": "original_conversion",
+      "T": 8,
+      "seeds": 3,
+      "teacher_accuracy_mean": 54.94,
+      "accuracy_mean": 54.96666666666667
+    },
+    {
+      "dataset": "CIFAR10_GatedGCN",
+      "condition": "gated_hybrid",
+      "T": 4,
+      "seeds": 3,
+      "teacher_accuracy_mean": 68.77,
+      "accuracy_mean": 68.75
+    },
+    {
+      "dataset": "CIFAR10_GatedGCN",
+      "condition": "gated_hybrid",
+      "T": 8,
+      "seeds": 3,
+      "teacher_accuracy_mean": 68.77,
+      "accuracy_mean": 68.75666666666666
+    },
+    {
+      "dataset": "MNIST",
+      "condition": "historical_all_position_local",
+      "T": 1,
+      "seeds": 3,
+      "teacher_accuracy_mean": 91.02333333333333,
+      "accuracy_mean": 78.5
+    },
+    {
+      "dataset": "MNIST",
+      "condition": "historical_all_position_local",
+      "T": 2,
+      "seeds": 3,
+      "teacher_accuracy_mean": 91.02333333333333,
+      "accuracy_mean": 90.08
+    },
+    {
+      "dataset": "MNIST",
+      "condition": "historical_all_position_local",
+      "T": 4,
+      "seeds": 3,
+      "teacher_accuracy_mean": 91.02333333333333,
+      "accuracy_mean": 91.00333333333333
+    },
+    {
+      "dataset": "MNIST",
+      "condition": "historical_all_position_local",
+      "T": 8,
+      "seeds": 3,
+      "teacher_accuracy_mean": 91.02333333333333,
+      "accuracy_mean": 91.02333333333333
+    },
+    {
+      "dataset": "MNIST",
+      "condition": "original_conversion",
+      "T": 1,
+      "seeds": 3,
+      "teacher_accuracy_mean": 91.02333333333333,
+      "accuracy_mean": 71.43333333333334
+    },
+    {
+      "dataset": "MNIST",
+      "condition": "original_conversion",
+      "T": 2,
+      "seeds": 3,
+      "teacher_accuracy_mean": 91.02333333333333,
+      "accuracy_mean": 90.15666666666665
+    },
+    {
+      "dataset": "MNIST",
+      "condition": "original_conversion",
+      "T": 4,
+      "seeds": 3,
+      "teacher_accuracy_mean": 91.02333333333333,
+      "accuracy_mean": 91.04666666666667
+    },
+    {
+      "dataset": "MNIST",
+      "condition": "original_conversion",
+      "T": 8,
+      "seeds": 3,
+      "teacher_accuracy_mean": 91.02333333333333,
+      "accuracy_mean": 91.01666666666667
+    }
+  ],
+  "input_hashes": {
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_mn_test1.npz": "99ef284445ac8dbaf2f8a3213f94ef98cc0023e666c8598dc0c74b8aa28c81ac",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_mn_test1.json": "6dd6a1fee847ae795afd31802f81b396b0e654e6b68acb13a35e200f88b0bfd9",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST41\\node_T1.npz": "663b1b92ac309b604af6f7a2be967f74ccb4e7d7847bb4bcd6bbd9adf40b881c",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST41\\node_T2.npz": "76778af00204ac950da6c09fcd434a6e48b6f6b6a858d69a26c195416944b3cb",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST41\\node_T4.npz": "1c9e606ced1fb04d98f16c8eea0dfe2c29b9407c79b8f18ade057bae786e2a29",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST41\\node_T8.npz": "fe618a3cccf200668323cbc4f4b98dc9640c371538df461bcbf61b6e9f1278e1",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M42\\dc_test_v3.npz": "cc0641ee35895b55901164d1f96e68a70909113a251ea2907073a7b663f3a245",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M42\\dc_test_v3.json": "6e2fcef830b832abdc5d37c00e05687fad3a1bb19ac7b800e58cae95efa3f3bf",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST42\\node_T1.npz": "8ec8d34b6ed9cb4410cd06ad359ec01c04efe7376362c92ec7a8d494456a3dbd",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST42\\node_T2.npz": "2a97ec8453fde81ebb4dbd26d13cb7e979b01de184489f8218b03347b7128929",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST42\\node_T4.npz": "9efe8c5374757f24660bfa94a09ab29d74180338399f32893e6c88442f7d9f7f",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST42\\node_T8.npz": "eb94f927858ba1cf745966c4cf7a014245cd79bb9ebabe7f1c84b998c57b8d40",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M43\\dc_test_v3.npz": "78d632ea4424143dd7e94ea7d28a816d1be2f6165cf343080ff27a4ea7550d9c",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\M43\\dc_test_v3.json": "68e8927ef3e64d23b12872a97b5d085611e183fabea87c8d9f8275b16843d7a6",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST43\\node_T1.npz": "f9a289a7befd320d320bae4025a4a0747e4e97bccae77d1d45c23971466d6b12",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST43\\node_T2.npz": "3b6300da3f4273b31c997fce22d44c7eaf371ed4c356f63c13b4e9f8004d80ff",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST43\\node_T4.npz": "480e1ee259d598d202535fcd1fb29cfe39f206203df4fc1068bbadfbd2edab1e",
+    "research\\20261114_story\\runs\\frozen_test\\MNIST43\\node_T8.npz": "a4c0f0c4673569692fecddb787c5d6460715d92123ccf7ee7e4416777f4fc006",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_cf_test1.npz": "0c9d0abd93309c946f1da0a5b73bd2e5d68a0d22d2163feef646b04f951ad4a0",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\dc_cf_test1.json": "c54791b81c3c62c6ed1571d68ec591764e458671817d08237052d5a7f0810f52",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1041\\node_T1.npz": "d284289719c33718ae656e4554532a1544d423ab5f1ad5ca6215d719ef6a1239",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1041\\node_T2.npz": "e3518f59b8833189860a2cf48c1c4112f7b979a56d1c261b0cf5fb54a86ed3be",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1041\\node_T4.npz": "c335331e15dde15109689c6b0a768c969597176e811e8788c79853b42e1f6dd2",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1041\\node_T8.npz": "8955f20e0a92d98c9eae063c6025e0b9b2183b0725ba45d1f9bc9168f1d1df84",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C42\\dc_test_v3.npz": "670c6dbbc6a336b5598ac9f4f86d6389f9c0684b7d69a963f4b54859b3503e90",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C42\\dc_test_v3.json": "8362fa156f0984ca1a0cf72fa23a6d9ee974482b0f27522d5872a79f0ff88094",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1042\\node_T1.npz": "d6f27b5c328e6df30abb9ff47f14d8031838c1b919e9f8ec0f3161f7834bbe18",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1042\\node_T2.npz": "b6c0c6ee2e11554003c8dcf842971d482ac0ab771272f328fb8733cee78921de",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1042\\node_T4.npz": "4b61d7e218bb98b375172f95c30455f2656a68b7bbd08561745b000789f5d9f3",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1042\\node_T8.npz": "887c05b9bd3f79fb7a3ed5489f65c64c5c49fc957b7aa08b79db85b2cc983a0f",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C43\\dc_test_v3.npz": "caa24468e94a1d27c1e8d5830828bb773476970178562d1cf698c6f205c0f5bf",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\rep\\C43\\dc_test_v3.json": "eca551d0ae70f96b873844ba64b3caf325347511b71bc083ec448c667459d3de",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1043\\node_T1.npz": "5aa156e9450aaa817b6106f42d1462682209f86d7de51013229ba5a6842dff13",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1043\\node_T2.npz": "79e863cddbb3343b6c76c810dfca310281230470ab026da1e3313bf284bd1f97",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1043\\node_T4.npz": "9596c225c3fce34eb99943e2ece736a486adb9978e2798c5965d7bc3eadddaba",
+    "research\\20261114_story\\runs\\frozen_test\\CIFAR1043\\node_T8.npz": "8522aefa83afc21441e3c6158d07edeee095b4f1bdb5586e5a7676366fa27cae",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\gd_test1.npz": "19e039d0a42c2fb7949b572811ed59b3bfe075f616587a61aba77cbd5cc37ec1",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\g42test.npz": "4e141c1222880449f6c358c7d9b8ed8e550eeaa0f5398175c7a7f6f6b4fe2e77",
+    "C:\\code\\phd-snn\\auto-paper\\20261110-152407\\Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs\\f-research-v1-run-20261110-172308-superpixel-graph-vision\\takeover_20261112\\g43test.npz": "22e9deddcab17a56c5aacc6e0941594f6decfeb8175077297488c8a5a8289f4d"
+  }
+}

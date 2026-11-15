@@ -1,0 +1,26 @@
+{
+  "engineering_acceptance": true,
+  "method_discovery_goal_achieved": false,
+  "checks": {
+    "historical_142_raw_endpoints": "pass",
+    "scientific_gate2": "FAIL, retained without changing thresholds",
+    "MNIST_objective_source": "current",
+    "MNIST_intervention_source": "git:7cb5021",
+    "MNIST_intervention_v2_source": "current",
+    "CIFAR10_objective_source": "current",
+    "CIFAR10_intervention_source": "git:7cb5021",
+    "CIFAR10_intervention_v2_source": "current",
+    "historical_directories_unchanged": true,
+    "all_40_objective_endpoints_and_v1_v2_trace_reproduction": "pass",
+    "historical_three_teacher_archive_reconstruction": "pass"
+  },
+  "runtime": {
+    "python": "C:\\Users\\xhf\\miniconda3\\envs\\dyg-cold\\python.exe",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "numpy": "2.4.4"
+  },
+  "git_base": "cb742f2bd30b2408cab5d09a7d9af8ff4d7c67c8",
+  "branch": "research/20261115-decision-aware"
+}

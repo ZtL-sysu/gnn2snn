@@ -1,4 +1,8 @@
 path,sha256
+C:/code/phd-snn/auto-paper/20261110-152407/Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs/f-research-v1-run-20261110-172308-superpixel-graph-vision/data/pyg_bench/CIFAR10/processed/val_data.pt,e5c407f4fa7f3530e04101a7832cf66687df7224a0dfbe792efb8ce693373dce
+C:/code/phd-snn/auto-paper/20261110-152407/Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs/f-research-v1-run-20261110-172308-superpixel-graph-vision/data/pyg_bench/MNIST/processed/val_data.pt,390ab8f8d21eed78dc256e064df5d9f59d552ba2e61fb84f14005be45a7e1e0a
+C:/code/phd-snn/auto-paper/20261110-152407/Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs/f-research-v1-run-20261110-172308-superpixel-graph-vision/takeover_20261112/full_teacher_runs/CIFAR10_seed41_full/calibration_hist_v1.json,408c05d7835004dd4ebe8435efe147f3efa72ee3dee557f1a27b0e3d494c69ee
+C:/code/phd-snn/auto-paper/20261110-152407/Operator-Agnostic-ANN-to-SNN-Conversion-for-Vision-and-Graphs/f-research-v1-run-20261110-172308-superpixel-graph-vision/takeover_20261112/full_teacher_runs/MNIST_seed41_full/calibration_hist_v1.json,895bdefa787953884b832116ef6f6e82f43d56047d885d8721a3eeda57ec1d4e
 research/20261114_critical/analysis/allocation_diagnostics/CIFAR10_per_graph.npz,459589e5306fee13a9f8745e88e532077e7280a99e87ad21b4e0ab22d6cb7876
 research/20261114_critical/analysis/allocation_diagnostics/MNIST_per_graph.npz,23a618909eec7a4972f30db39cbf18f0594e74bca2bb6f0f3ab92306be17dcc0
 research/20261114_critical/analysis/endpoints.csv,1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a

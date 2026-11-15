@@ -1,0 +1,48 @@
+{
+  "gate2_pass": false,
+  "criteria": "pre-run DECISIONS.md: both tasks gain>=0.5pp against both local controls, T2 loss<=0.5pp, T1 agreement nonworse",
+  "per_dataset": {
+    "MNIST": {
+      "logits": {
+        "T1_min_accuracy_gain_pp": 1.171875,
+        "T2_delta_pp": 0.1953125,
+        "T1_agreement_delta_pp": 0.390625,
+        "admission_pass": true
+      },
+      "kl": {
+        "T1_min_accuracy_gain_pp": 0.390625,
+        "T2_delta_pp": -1.953125,
+        "T1_agreement_delta_pp": -0.390625,
+        "admission_pass": false
+      },
+      "ranking": {
+        "T1_min_accuracy_gain_pp": -24.4140625,
+        "T2_delta_pp": -20.703125,
+        "T1_agreement_delta_pp": -27.5390625,
+        "admission_pass": false
+      }
+    },
+    "CIFAR10": {
+      "logits": {
+        "T1_min_accuracy_gain_pp": 1.171875,
+        "T2_delta_pp": -0.1953125,
+        "T1_agreement_delta_pp": -2.1484375,
+        "admission_pass": false
+      },
+      "kl": {
+        "T1_min_accuracy_gain_pp": -2.1484375,
+        "T2_delta_pp": -1.953125,
+        "T1_agreement_delta_pp": 0.5859375,
+        "admission_pass": false
+      },
+      "ranking": {
+        "T1_min_accuracy_gain_pp": -12.6953125,
+        "T2_delta_pp": -8.7890625,
+        "T1_agreement_delta_pp": -25.78125,
+        "admission_pass": false
+      }
+    }
+  },
+  "conditional_gate3_admitted": false,
+  "limits": "single teacher, selection-exposed validation512; graph-bootstrap CIs are descriptive, not teacher-seed/generalization uncertainty"
+}

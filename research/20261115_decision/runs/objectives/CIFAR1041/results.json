@@ -142,5 +142,101 @@
     "parameter_bytes": 2772,
     "calibration_seconds": 3.639998000115156,
     "evaluation_instrumented_seconds": 2.473311600042507
+  },
+  {
+    "method": "kl",
+    "T": 1,
+    "accuracy_percent": 47.265625,
+    "teacher_agreement_percent": 70.1171875,
+    "events": 13032401,
+    "amplitude_sum": 9185478.0,
+    "parameters": 693,
+    "parameter_bytes": 2772,
+    "calibration_seconds": 3.6487845999654382,
+    "evaluation_instrumented_seconds": 0.5672281999140978
+  },
+  {
+    "method": "kl",
+    "T": 2,
+    "accuracy_percent": 51.953125,
+    "teacher_agreement_percent": 85.9375,
+    "events": 26565144,
+    "amplitude_sum": 14875347.0,
+    "parameters": 693,
+    "parameter_bytes": 2772,
+    "calibration_seconds": 3.6487845999654382,
+    "evaluation_instrumented_seconds": 0.7617167998105288
+  },
+  {
+    "method": "kl",
+    "T": 4,
+    "accuracy_percent": 54.6875,
+    "teacher_agreement_percent": 93.1640625,
+    "events": 48633992,
+    "amplitude_sum": 17824314.0,
+    "parameters": 693,
+    "parameter_bytes": 2772,
+    "calibration_seconds": 3.6487845999654382,
+    "evaluation_instrumented_seconds": 1.328060599975288
+  },
+  {
+    "method": "kl",
+    "T": 8,
+    "accuracy_percent": 55.2734375,
+    "teacher_agreement_percent": 97.265625,
+    "events": 80090352,
+    "amplitude_sum": 19423400.0,
+    "parameters": 693,
+    "parameter_bytes": 2772,
+    "calibration_seconds": 3.6487845999654382,
+    "evaluation_instrumented_seconds": 2.4779247001279145
+  },
+  {
+    "method": "ranking",
+    "T": 1,
+    "accuracy_percent": 36.71875,
+    "teacher_agreement_percent": 43.75,
+    "events": 13377426,
+    "amplitude_sum": 10414469.0,
+    "parameters": 693,
+    "parameter_bytes": 2772,
+    "calibration_seconds": 3.8476505000144243,
+    "evaluation_instrumented_seconds": 0.48578849993646145
+  },
+  {
+    "method": "ranking",
+    "T": 2,
+    "accuracy_percent": 45.1171875,
+    "teacher_agreement_percent": 59.9609375,
+    "events": 27439608,
+    "amplitude_sum": 17384480.0,
+    "parameters": 693,
+    "parameter_bytes": 2772,
+    "calibration_seconds": 3.8476505000144243,
+    "evaluation_instrumented_seconds": 0.7626151000149548
+  },
+  {
+    "method": "ranking",
+    "T": 4,
+    "accuracy_percent": 51.7578125,
+    "teacher_agreement_percent": 76.953125,
+    "events": 51701556,
+    "amplitude_sum": 22411686.0,
+    "parameters": 693,
+    "parameter_bytes": 2772,
+    "calibration_seconds": 3.8476505000144243,
+    "evaluation_instrumented_seconds": 1.323745199944824
+  },
+  {
+    "method": "ranking",
+    "T": 8,
+    "accuracy_percent": 53.3203125,
+    "teacher_agreement_percent": 88.8671875,
+    "events": 93392168,
+    "amplitude_sum": 26095678.0,
+    "parameters": 693,
+    "parameter_bytes": 2772,
+    "calibration_seconds": 3.8476505000144243,
+    "evaluation_instrumented_seconds": 2.4564432001207024
   }
 ]

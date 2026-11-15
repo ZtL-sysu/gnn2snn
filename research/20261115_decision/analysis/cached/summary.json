@@ -228,7 +228,109 @@
         0.036975234024159115,
         0.0
       ],
-      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"
+      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset",
+      "margin_control_plus_structure_incremental_ols_accuracy_delta": {
+        "n": 512,
+        "base_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin"
+        ],
+        "extended_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin",
+          "nodes",
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "in_degree_variance",
+          "out_degree_variance",
+          "neighbor_feature_mse",
+          "neighbor_position_squared_distance_mean",
+          "edge_length_mean",
+          "edge_length_variance"
+        ],
+        "base_rank_including_intercept": 3,
+        "extended_rank_including_intercept": 9,
+        "base_constant_features": [],
+        "extended_constant_features": [
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "out_degree_variance"
+        ],
+        "base_in_sample_r2": 0.00033860919062367323,
+        "extended_in_sample_r2": 0.009982046259936594,
+        "incremental_in_sample_r2": 0.009643437069312921,
+        "base_coefficients_intercept_then_features": [
+          0.012499826560105844,
+          -0.004686132941414547,
+          -0.00012500517850585547
+        ],
+        "extended_coefficients_intercept_then_features": [
+          -0.4287962413209963,
+          -0.004797023612674506,
+          -0.00025572655328530127,
+          -0.003055946720634064,
+          -3.4303698552848494,
+          5.228872348127245e-13,
+          0.019391626008892295,
+          2.042810365310288e-14,
+          1.0800897289475004,
+          -1635.011110439778,
+          429.0441657715913,
+          1634.701060390688
+        ],
+        "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"
+      },
+      "margin_control_plus_structure_incremental_ols_teacher_mismatch_delta": {
+        "n": 512,
+        "base_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin"
+        ],
+        "extended_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin",
+          "nodes",
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "in_degree_variance",
+          "out_degree_variance",
+          "neighbor_feature_mse",
+          "neighbor_position_squared_distance_mean",
+          "edge_length_mean",
+          "edge_length_variance"
+        ],
+        "base_rank_including_intercept": 3,
+        "extended_rank_including_intercept": 9,
+        "base_constant_features": [],
+        "extended_constant_features": [
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "out_degree_variance"
+        ],
+        "base_in_sample_r2": 0.005201703973803484,
+        "extended_in_sample_r2": 0.03145802285727073,
+        "incremental_in_sample_r2": 0.026256318883467245,
+        "base_coefficients_intercept_then_features": [
+          0.00757140737273819,
+          -0.013933848736379498,
+          0.013646308185030777
+        ],
+        "extended_coefficients_intercept_then_features": [
+          0.8192330993456028,
+          -0.014303890084314704,
+          0.01370339718077939,
+          -0.02542766071781786,
+          6.553864669585643,
+          -1.2957412920400202e-12,
+          -0.05305247756162876,
+          -6.394884621840902e-14,
+          -1.8333318100267995,
+          2655.753532691882,
+          -728.1901868467421,
+          -2761.9141877370466
+        ],
+        "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"
+      }
     },
     {
       "dataset": "CIFAR10",
@@ -305,7 +407,109 @@
         0.023327052788333996,
         0.0
       ],
-      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"
+      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset",
+      "margin_control_plus_structure_incremental_ols_accuracy_delta": {
+        "n": 512,
+        "base_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin"
+        ],
+        "extended_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin",
+          "nodes",
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "in_degree_variance",
+          "out_degree_variance",
+          "neighbor_feature_mse",
+          "neighbor_position_squared_distance_mean",
+          "edge_length_mean",
+          "edge_length_variance"
+        ],
+        "base_rank_including_intercept": 3,
+        "extended_rank_including_intercept": 9,
+        "base_constant_features": [],
+        "extended_constant_features": [
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "out_degree_variance"
+        ],
+        "base_in_sample_r2": 0.00034656360914098183,
+        "extended_in_sample_r2": 0.03582048753051548,
+        "incremental_in_sample_r2": 0.035473923921374495,
+        "base_coefficients_intercept_then_features": [
+          0.014126190685431304,
+          -0.0031839027437460315,
+          0.0007951041174273762
+        ],
+        "extended_coefficients_intercept_then_features": [
+          0.43050762119681146,
+          -0.0027030247069889917,
+          0.0016484477725235815,
+          0.0014714487982175296,
+          3.4440608876469563,
+          -9.499640657439912e-13,
+          -0.0034251619596059792,
+          3.6415315207705135e-14,
+          0.904772676989867,
+          1653.4967435525518,
+          -428.99095667759485,
+          -1877.7647943303757
+        ],
+        "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"
+      },
+      "margin_control_plus_structure_incremental_ols_teacher_mismatch_delta": {
+        "n": 512,
+        "base_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin"
+        ],
+        "extended_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin",
+          "nodes",
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "in_degree_variance",
+          "out_degree_variance",
+          "neighbor_feature_mse",
+          "neighbor_position_squared_distance_mean",
+          "edge_length_mean",
+          "edge_length_variance"
+        ],
+        "base_rank_including_intercept": 3,
+        "extended_rank_including_intercept": 9,
+        "base_constant_features": [],
+        "extended_constant_features": [
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "out_degree_variance"
+        ],
+        "base_in_sample_r2": 0.0009923459247994648,
+        "extended_in_sample_r2": 0.012129764721044656,
+        "incremental_in_sample_r2": 0.011137418796245191,
+        "base_coefficients_intercept_then_features": [
+          0.0014192335078006548,
+          0.0021871964350289076,
+          -0.003506571133279617
+        ],
+        "extended_coefficients_intercept_then_features": [
+          -0.19947087418066897,
+          0.0028957910076084746,
+          -0.004062645684439292,
+          0.004738827625310166,
+          -1.595766961417013,
+          2.612215999064915e-13,
+          0.01258313521954597,
+          3.8191672047105385e-14,
+          -0.5720812229316631,
+          -686.7499397410893,
+          184.3380083762228,
+          701.6634586455459
+        ],
+        "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"
+      }
     },
     {
       "dataset": "MNIST",
@@ -382,7 +586,109 @@
         0.0048122054698977275,
         0.0
       ],
-      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"
+      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset",
+      "margin_control_plus_structure_incremental_ols_accuracy_delta": {
+        "n": 512,
+        "base_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin"
+        ],
+        "extended_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin",
+          "nodes",
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "in_degree_variance",
+          "out_degree_variance",
+          "neighbor_feature_mse",
+          "neighbor_position_squared_distance_mean",
+          "edge_length_mean",
+          "edge_length_variance"
+        ],
+        "base_rank_including_intercept": 3,
+        "extended_rank_including_intercept": 9,
+        "base_constant_features": [],
+        "extended_constant_features": [
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "out_degree_variance"
+        ],
+        "base_in_sample_r2": 0.0077832421705670285,
+        "extended_in_sample_r2": 0.01732620328802026,
+        "incremental_in_sample_r2": 0.00954296111745323,
+        "base_coefficients_intercept_then_features": [
+          0.07113614627283159,
+          -0.01453071209227779,
+          0.007210519039418453
+        ],
+        "extended_coefficients_intercept_then_features": [
+          0.04670460916799227,
+          -0.013060911516639006,
+          0.006685526345089695,
+          -0.015129100914539624,
+          0.3736368737467595,
+          -3.4655958658369457e-13,
+          0.019528714103846972,
+          2.4868995751603507e-14,
+          -0.6310292424901336,
+          34.08710061342303,
+          -14.367408384336327,
+          -187.64663598927132
+        ],
+        "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"
+      },
+      "margin_control_plus_structure_incremental_ols_teacher_mismatch_delta": {
+        "n": 512,
+        "base_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin"
+        ],
+        "extended_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin",
+          "nodes",
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "in_degree_variance",
+          "out_degree_variance",
+          "neighbor_feature_mse",
+          "neighbor_position_squared_distance_mean",
+          "edge_length_mean",
+          "edge_length_variance"
+        ],
+        "base_rank_including_intercept": 3,
+        "extended_rank_including_intercept": 9,
+        "base_constant_features": [],
+        "extended_constant_features": [
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "out_degree_variance"
+        ],
+        "base_in_sample_r2": 0.005403586608020761,
+        "extended_in_sample_r2": 0.014933820125230812,
+        "incremental_in_sample_r2": 0.009530233517210052,
+        "base_coefficients_intercept_then_features": [
+          -0.05073575057867097,
+          -0.0025846753144890943,
+          0.007426211967116503
+        ],
+        "extended_coefficients_intercept_then_features": [
+          -0.004761487037550371,
+          -0.004149645783935789,
+          0.008110327151213723,
+          0.008241306508027568,
+          -0.03809189641971144,
+          6.121058521157963e-14,
+          -0.022942246131600914,
+          -7.993605777301127e-15,
+          0.6982772356643437,
+          13.163078295064345,
+          -6.1578880565715615,
+          111.37829968733885
+        ],
+        "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"
+      }
     },
     {
       "dataset": "MNIST",
@@ -459,11 +765,113 @@
         0.0035133194273339165,
         0.0
       ],
-      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"
+      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset",
+      "margin_control_plus_structure_incremental_ols_accuracy_delta": {
+        "n": 512,
+        "base_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin"
+        ],
+        "extended_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin",
+          "nodes",
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "in_degree_variance",
+          "out_degree_variance",
+          "neighbor_feature_mse",
+          "neighbor_position_squared_distance_mean",
+          "edge_length_mean",
+          "edge_length_variance"
+        ],
+        "base_rank_including_intercept": 3,
+        "extended_rank_including_intercept": 9,
+        "base_constant_features": [],
+        "extended_constant_features": [
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "out_degree_variance"
+        ],
+        "base_in_sample_r2": 0.010893386220507395,
+        "extended_in_sample_r2": 0.01460928131400474,
+        "incremental_in_sample_r2": 0.0037158950934973456,
+        "base_coefficients_intercept_then_features": [
+          -0.02883544906952426,
+          -0.0035462406726669672,
+          0.007032543981717297
+        ],
+        "extended_coefficients_intercept_then_features": [
+          0.020179092055944804,
+          -0.004079861495959327,
+          0.007364773820050992,
+          -0.008931823438487734,
+          0.1614327363314337,
+          1.0207112932647533e-13,
+          0.008591645131902087,
+          -3.9968028886505635e-15,
+          -0.1746775734703018,
+          -9.09095170999799,
+          -3.482346667185723,
+          64.13744159156728
+        ],
+        "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"
+      },
+      "margin_control_plus_structure_incremental_ols_teacher_mismatch_delta": {
+        "n": 512,
+        "base_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin"
+        ],
+        "extended_features": [
+          "teacher_top2_margin",
+          "teacher_truth_vs_competitor_margin",
+          "nodes",
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "in_degree_variance",
+          "out_degree_variance",
+          "neighbor_feature_mse",
+          "neighbor_position_squared_distance_mean",
+          "edge_length_mean",
+          "edge_length_variance"
+        ],
+        "base_rank_including_intercept": 3,
+        "extended_rank_including_intercept": 9,
+        "base_constant_features": [],
+        "extended_constant_features": [
+          "cached_mean_degree",
+          "cached_degree_variance",
+          "out_degree_variance"
+        ],
+        "base_in_sample_r2": 0.03619719510004826,
+        "extended_in_sample_r2": 0.05364881344541195,
+        "incremental_in_sample_r2": 0.017451618345363684,
+        "base_coefficients_intercept_then_features": [
+          -0.05198038639500425,
+          -0.009869436236426925,
+          0.016031157539365622
+        ],
+        "extended_coefficients_intercept_then_features": [
+          -0.09341776119516822,
+          -0.008006726948389241,
+          0.014798791786359726,
+          0.013442450464086566,
+          -0.747342090092769,
+          5.71962616158217e-13,
+          0.001083269700487587,
+          -1.687538997430238e-14,
+          -0.5893135415060666,
+          -106.92837060093976,
+          48.44707216326658,
+          96.91755683144065
+        ],
+        "interpretation": "exploratory in-sample OLS; non-causal; fixed selection-exposed validation graphs"
+      }
     }
   ],
   "missing_inputs": [],
-  "input_hash_count": 166,
+  "input_hash_count": 170,
   "limits": [
     "No teacher/checkpoint loading or GPU inference was performed.",
     "Allocation message-MSE values are graphwise; no unrecorded message-error quantities were imputed.",
