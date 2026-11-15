@@ -1,0 +1,472 @@
+{
+  "scope": "cached CPU-only diagnostics; teacher 41, fixed 512 validation indices; descriptive/selection-exposed",
+  "bootstrap": {
+    "seed": 20261115,
+    "replicates": 2000,
+    "interval": "percentile 95% paired graph bootstrap"
+  },
+  "endpoint_audit": {
+    "results_json_rows": 196,
+    "recomputable_rows": 187,
+    "verified_rows": 187,
+    "unevaluable_rows": 9,
+    "mismatch_count": 0,
+    "mismatches": []
+  },
+  "critical_endpoint_csvs": {
+    "endpoints.csv": {
+      "rows": 110,
+      "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a",
+      "columns": [
+        "phase",
+        "dataset",
+        "seed",
+        "T",
+        "method",
+        "accuracy_percent",
+        "teacher_agreement_percent",
+        "logit_mse",
+        "parameters",
+        "calibration_seconds",
+        "initial_hard_loss",
+        "final_hard_loss",
+        "source",
+        "source_sha256"
+      ]
+    },
+    "rescue_endpoints.csv": {
+      "rows": 32,
+      "sha256": "aadc504a45c84a0f01a56d8900f4256c387d186d3910bb4ce1bd1a4c06869085",
+      "columns": [
+        "phase",
+        "dataset",
+        "seed",
+        "T",
+        "method",
+        "accuracy_percent",
+        "teacher_agreement_percent",
+        "logit_mse",
+        "selected_nodes",
+        "opportunity_slots",
+        "extra_nonzero_events",
+        "extra_edge_deliveries",
+        "diagnostic_eval_seconds",
+        "source",
+        "sha256"
+      ]
+    }
+  },
+  "raw_endpoint_audit": {
+    "endpoints.csv": {
+      "rows": 110,
+      "source_hash_and_metrics_verified": 110,
+      "failure_count": 0,
+      "failures": []
+    },
+    "rescue_endpoints.csv": {
+      "rows": 32,
+      "source_hash_and_metrics_verified": 32,
+      "failure_count": 0,
+      "failures": []
+    }
+  },
+  "all_local_protocol_scopes": [
+    {
+      "scope": "optimizer_check",
+      "results_file": "runs/optimizer_check/CIFAR1041/results.json",
+      "T": 1,
+      "accuracy_percent": 49.4140625,
+      "teacher_agreement_percent": 69.53125,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "optimizer_check",
+      "results_file": "runs/optimizer_check/CIFAR1041/results.json",
+      "T": 2,
+      "accuracy_percent": 54.296875,
+      "teacher_agreement_percent": 92.96875,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "optimizer_check",
+      "results_file": "runs/optimizer_check/MNIST41/results.json",
+      "T": 1,
+      "accuracy_percent": 78.125,
+      "teacher_agreement_percent": 81.8359375,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "optimizer_check",
+      "results_file": "runs/optimizer_check/MNIST41/results.json",
+      "T": 2,
+      "accuracy_percent": 90.234375,
+      "teacher_agreement_percent": 95.703125,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "screen",
+      "results_file": "runs/screen/CIFAR1041/results.json",
+      "T": 1,
+      "accuracy_percent": 47.8515625,
+      "teacher_agreement_percent": 70.5078125,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "screen",
+      "results_file": "runs/screen/CIFAR1041/results.json",
+      "T": 2,
+      "accuracy_percent": 53.3203125,
+      "teacher_agreement_percent": 91.6015625,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "screen",
+      "results_file": "runs/screen/MNIST41/results.json",
+      "T": 1,
+      "accuracy_percent": 75.0,
+      "teacher_agreement_percent": 78.125,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "screen",
+      "results_file": "runs/screen/MNIST41/results.json",
+      "T": 2,
+      "accuracy_percent": 89.2578125,
+      "teacher_agreement_percent": 96.2890625,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "other",
+      "results_file": "runs/smoke/results.json",
+      "T": 1,
+      "accuracy_percent": 71.875,
+      "teacher_agreement_percent": 78.125,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    },
+    {
+      "scope": "other",
+      "results_file": "runs/smoke/results.json",
+      "T": 2,
+      "accuracy_percent": 84.375,
+      "teacher_agreement_percent": 96.875,
+      "qualification": "scope-specific cached endpoint; do not pool across optimization protocols"
+    }
+  ],
+  "diagnostic_summaries": [
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "T": 1,
+      "n_graphs": 512,
+      "message_mse_better_count": 491,
+      "message_mse_better_and_accuracy_worsened_count": 27,
+      "message_mse_better_and_accuracy_improved_count": 31,
+      "message_mse_better_but_accuracy_same_count": 433,
+      "local_accuracy_worsened_count": 28,
+      "local_accuracy_improved_count": 31,
+      "teacher_correct_count": 283,
+      "teacher_wrong_count": 229,
+      "teacher_correct_and_conversion_correct_local": 226,
+      "teacher_correct_and_conversion_wrong_local": 57,
+      "teacher_correct_and_conversion_correct_message": 223,
+      "teacher_correct_and_conversion_wrong_message": 60,
+      "teacher_wrong_but_conversion_correct_local": 23,
+      "teacher_wrong_and_conversion_wrong_local": 206,
+      "teacher_wrong_but_conversion_correct_message": 29,
+      "teacher_wrong_and_conversion_wrong_message": 200,
+      "runnerup_class_switched_local_vs_message_count": 174,
+      "prediction_switched_count": 90,
+      "baseline_T1_to_T2_prediction_flip_count": 154,
+      "local_T1_to_T2_prediction_flip_count": 151,
+      "message_T1_to_T2_prediction_flip_count": 142,
+      "paired_accuracy_delta_message_minus_local_pp": 0.5859375,
+      "paired_bootstrap95_low_pp": -2.5390625,
+      "paired_bootstrap95_high_pp": 3.515625,
+      "bootstrap_seed": 20261115,
+      "bootstrap_reps": 2000,
+      "teacher_top2_margin_mean": 1.4124609530226735,
+      "teacher_truth_vs_competitor_margin_mean": 0.17176696150636417,
+      "teacher_prediction_vs_truth_margin_mean": 0.8395397246349603,
+      "margin_quartiles": [
+        {
+          "quartile": 1,
+          "n": 128,
+          "local_accuracy_percent": 33.59375,
+          "message_accuracy_percent": 36.71875,
+          "paired_delta_message_minus_local_pp": 3.125
+        },
+        {
+          "quartile": 2,
+          "n": 128,
+          "local_accuracy_percent": 31.25,
+          "message_accuracy_percent": 28.90625,
+          "paired_delta_message_minus_local_pp": -2.34375
+        },
+        {
+          "quartile": 3,
+          "n": 128,
+          "local_accuracy_percent": 46.09375,
+          "message_accuracy_percent": 48.4375,
+          "paired_delta_message_minus_local_pp": 2.34375
+        },
+        {
+          "quartile": 4,
+          "n": 128,
+          "local_accuracy_percent": 83.59375,
+          "message_accuracy_percent": 82.8125,
+          "paired_delta_message_minus_local_pp": -0.78125
+        }
+      ],
+      "exploratory_ols_covariates": [
+        "nodes",
+        "mean_degree",
+        "degree_variance"
+      ],
+      "exploratory_ols_coefficients_intercept_then_covariates": [
+        0.004621904253019835,
+        -0.0025038927753972527,
+        0.036975234024159115,
+        0.0
+      ],
+      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"
+    },
+    {
+      "dataset": "CIFAR10",
+      "seed": 41,
+      "T": 2,
+      "n_graphs": 512,
+      "message_mse_better_count": 491,
+      "message_mse_better_and_accuracy_worsened_count": 6,
+      "message_mse_better_and_accuracy_improved_count": 11,
+      "message_mse_better_but_accuracy_same_count": 474,
+      "local_accuracy_worsened_count": 6,
+      "local_accuracy_improved_count": 11,
+      "teacher_correct_count": 283,
+      "teacher_wrong_count": 229,
+      "teacher_correct_and_conversion_correct_local": 257,
+      "teacher_correct_and_conversion_wrong_local": 26,
+      "teacher_correct_and_conversion_correct_message": 259,
+      "teacher_correct_and_conversion_wrong_message": 24,
+      "teacher_wrong_but_conversion_correct_local": 11,
+      "teacher_wrong_and_conversion_wrong_local": 218,
+      "teacher_wrong_but_conversion_correct_message": 14,
+      "teacher_wrong_and_conversion_wrong_message": 215,
+      "runnerup_class_switched_local_vs_message_count": 73,
+      "prediction_switched_count": 32,
+      "baseline_T1_to_T2_prediction_flip_count": 154,
+      "local_T1_to_T2_prediction_flip_count": 151,
+      "message_T1_to_T2_prediction_flip_count": 142,
+      "paired_accuracy_delta_message_minus_local_pp": 0.9765625,
+      "paired_bootstrap95_low_pp": -0.5859375,
+      "paired_bootstrap95_high_pp": 2.5390625,
+      "bootstrap_seed": 20261115,
+      "bootstrap_reps": 2000,
+      "teacher_top2_margin_mean": 1.4124609530226735,
+      "teacher_truth_vs_competitor_margin_mean": 0.17176696150636417,
+      "teacher_prediction_vs_truth_margin_mean": 0.8395397246349603,
+      "margin_quartiles": [
+        {
+          "quartile": 1,
+          "n": 128,
+          "local_accuracy_percent": 35.9375,
+          "message_accuracy_percent": 34.375,
+          "paired_delta_message_minus_local_pp": -1.5625
+        },
+        {
+          "quartile": 2,
+          "n": 128,
+          "local_accuracy_percent": 33.59375,
+          "message_accuracy_percent": 38.28125,
+          "paired_delta_message_minus_local_pp": 4.6875
+        },
+        {
+          "quartile": 3,
+          "n": 128,
+          "local_accuracy_percent": 55.46875,
+          "message_accuracy_percent": 56.25,
+          "paired_delta_message_minus_local_pp": 0.78125
+        },
+        {
+          "quartile": 4,
+          "n": 128,
+          "local_accuracy_percent": 84.375,
+          "message_accuracy_percent": 84.375,
+          "paired_delta_message_minus_local_pp": 0.0
+        }
+      ],
+      "exploratory_ols_covariates": [
+        "nodes",
+        "mean_degree",
+        "degree_variance"
+      ],
+      "exploratory_ols_coefficients_intercept_then_covariates": [
+        0.002915881598541715,
+        -0.001528074968862083,
+        0.023327052788333996,
+        0.0
+      ],
+      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "T": 1,
+      "n_graphs": 512,
+      "message_mse_better_count": 440,
+      "message_mse_better_and_accuracy_worsened_count": 17,
+      "message_mse_better_and_accuracy_improved_count": 28,
+      "message_mse_better_but_accuracy_same_count": 395,
+      "local_accuracy_worsened_count": 17,
+      "local_accuracy_improved_count": 29,
+      "teacher_correct_count": 467,
+      "teacher_wrong_count": 45,
+      "teacher_correct_and_conversion_correct_local": 387,
+      "teacher_correct_and_conversion_wrong_local": 80,
+      "teacher_correct_and_conversion_correct_message": 398,
+      "teacher_correct_and_conversion_wrong_message": 69,
+      "teacher_wrong_but_conversion_correct_local": 8,
+      "teacher_wrong_and_conversion_wrong_local": 37,
+      "teacher_wrong_but_conversion_correct_message": 9,
+      "teacher_wrong_and_conversion_wrong_message": 36,
+      "runnerup_class_switched_local_vs_message_count": 172,
+      "prediction_switched_count": 54,
+      "baseline_T1_to_T2_prediction_flip_count": 109,
+      "local_T1_to_T2_prediction_flip_count": 101,
+      "message_T1_to_T2_prediction_flip_count": 86,
+      "paired_accuracy_delta_message_minus_local_pp": 2.34375,
+      "paired_bootstrap95_low_pp": -0.1953125,
+      "paired_bootstrap95_high_pp": 4.8828125,
+      "bootstrap_seed": 20261115,
+      "bootstrap_reps": 2000,
+      "teacher_top2_margin_mean": 6.17281062287293,
+      "teacher_truth_vs_competitor_margin_mean": 5.824364024101669,
+      "teacher_prediction_vs_truth_margin_mean": 0.18945077327953186,
+      "margin_quartiles": [
+        {
+          "quartile": 1,
+          "n": 128,
+          "local_accuracy_percent": 40.625,
+          "message_accuracy_percent": 48.4375,
+          "paired_delta_message_minus_local_pp": 7.8125
+        },
+        {
+          "quartile": 2,
+          "n": 128,
+          "local_accuracy_percent": 75.78125,
+          "message_accuracy_percent": 76.5625,
+          "paired_delta_message_minus_local_pp": 0.78125
+        },
+        {
+          "quartile": 3,
+          "n": 128,
+          "local_accuracy_percent": 93.75,
+          "message_accuracy_percent": 93.75,
+          "paired_delta_message_minus_local_pp": 0.0
+        },
+        {
+          "quartile": 4,
+          "n": 128,
+          "local_accuracy_percent": 98.4375,
+          "message_accuracy_percent": 99.21875,
+          "paired_delta_message_minus_local_pp": 0.78125
+        }
+      ],
+      "exploratory_ols_covariates": [
+        "nodes",
+        "mean_degree",
+        "degree_variance"
+      ],
+      "exploratory_ols_coefficients_intercept_then_covariates": [
+        0.0006015256837372141,
+        -0.00022248417831348505,
+        0.0048122054698977275,
+        0.0
+      ],
+      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"
+    },
+    {
+      "dataset": "MNIST",
+      "seed": 41,
+      "T": 2,
+      "n_graphs": 512,
+      "message_mse_better_count": 440,
+      "message_mse_better_and_accuracy_worsened_count": 9,
+      "message_mse_better_and_accuracy_improved_count": 4,
+      "message_mse_better_but_accuracy_same_count": 427,
+      "local_accuracy_worsened_count": 10,
+      "local_accuracy_improved_count": 5,
+      "teacher_correct_count": 467,
+      "teacher_wrong_count": 45,
+      "teacher_correct_and_conversion_correct_local": 450,
+      "teacher_correct_and_conversion_wrong_local": 17,
+      "teacher_correct_and_conversion_correct_message": 451,
+      "teacher_correct_and_conversion_wrong_message": 16,
+      "teacher_wrong_but_conversion_correct_local": 9,
+      "teacher_wrong_and_conversion_wrong_local": 36,
+      "teacher_wrong_but_conversion_correct_message": 3,
+      "teacher_wrong_and_conversion_wrong_message": 42,
+      "runnerup_class_switched_local_vs_message_count": 73,
+      "prediction_switched_count": 18,
+      "baseline_T1_to_T2_prediction_flip_count": 109,
+      "local_T1_to_T2_prediction_flip_count": 101,
+      "message_T1_to_T2_prediction_flip_count": 86,
+      "paired_accuracy_delta_message_minus_local_pp": -0.9765625,
+      "paired_bootstrap95_low_pp": -2.5390625,
+      "paired_bootstrap95_high_pp": 0.390625,
+      "bootstrap_seed": 20261115,
+      "bootstrap_reps": 2000,
+      "teacher_top2_margin_mean": 6.17281062287293,
+      "teacher_truth_vs_competitor_margin_mean": 5.824364024101669,
+      "teacher_prediction_vs_truth_margin_mean": 0.18945077327953186,
+      "margin_quartiles": [
+        {
+          "quartile": 1,
+          "n": 128,
+          "local_accuracy_percent": 65.625,
+          "message_accuracy_percent": 61.71875,
+          "paired_delta_message_minus_local_pp": -3.90625
+        },
+        {
+          "quartile": 2,
+          "n": 128,
+          "local_accuracy_percent": 94.53125,
+          "message_accuracy_percent": 94.53125,
+          "paired_delta_message_minus_local_pp": 0.0
+        },
+        {
+          "quartile": 3,
+          "n": 128,
+          "local_accuracy_percent": 98.4375,
+          "message_accuracy_percent": 98.4375,
+          "paired_delta_message_minus_local_pp": 0.0
+        },
+        {
+          "quartile": 4,
+          "n": 128,
+          "local_accuracy_percent": 100.0,
+          "message_accuracy_percent": 100.0,
+          "paired_delta_message_minus_local_pp": 0.0
+        }
+      ],
+      "exploratory_ols_covariates": [
+        "nodes",
+        "mean_degree",
+        "degree_variance"
+      ],
+      "exploratory_ols_coefficients_intercept_then_covariates": [
+        0.0004391649284167383,
+        -0.0005442375233813096,
+        0.0035133194273339165,
+        0.0
+      ],
+      "exploratory_ols_note": "descriptive, non-causal, single teacher and selection-exposed validation subset"
+    }
+  ],
+  "missing_inputs": [],
+  "input_hash_count": 166,
+  "limits": [
+    "No teacher/checkpoint loading or GPU inference was performed.",
+    "Allocation message-MSE values are graphwise; no unrecorded message-error quantities were imputed.",
+    "Margin strata and OLS are exploratory, not causal; no independent validation/test claim."
+  ]
+}
