@@ -1,0 +1,135 @@
+[
+  {
+    "proposition": "The abstract chain is correct but clause-stacked and paced as an inventory.",
+    "evidence_status": "author_reported",
+    "action": "REWRITE",
+    "location": "abstract",
+    "factual_check": "Preserve all rates, denominators, CIs, two invariants, conditional scope, and evaluation implication.",
+    "composition": {
+      "point": "Present the proxy gap, first conditional finding, second exact-equivalence finding, mechanism, and reporting consequence as five clean moves.",
+      "fact_ids": [
+        "f-conditional-errors",
+        "f-temporal-equality",
+        "f-eval-checklist"
+      ],
+      "preserve": [
+        "332/811",
+        "296/928",
+        "40.9%",
+        "31.9%",
+        "first-tick message MSE",
+        "terminal equality",
+        "equal local event counts",
+        "conditional scope"
+      ]
+    }
+  },
+  {
+    "proposition": "The introduction opens too generically and announces the contribution twice.",
+    "evidence_status": "author_reported",
+    "action": "REWRITE",
+    "location": "introduction",
+    "factual_check": "Preserve finite-event failure, teacher-agreement/accuracy distinction, all numeric findings, and checklist scope.",
+    "composition": {
+      "point": "Open with the finite-event decision failure, compress conversion context, then state one bounded claim and one reporting consequence.",
+      "fact_ids": [
+        "f-conditional-errors",
+        "f-temporal-equality",
+        "f-position-recovery",
+        "f-boundary"
+      ],
+      "preserve": [
+        "332/811",
+        "296/928",
+        "54.1%",
+        "23.5%",
+        "one teacher",
+        "exposed splits",
+        "no new converter"
+      ]
+    }
+  },
+  {
+    "proposition": "Related work is a citation inventory rather than a capability argument.",
+    "evidence_status": "author_reported",
+    "action": "REWRITE",
+    "location": "related work",
+    "factual_check": "Preserve all citation keys and precise distinctions of PD-Quant and One-Spike.",
+    "composition": {
+      "point": "Group prior work by calibration/readout, coding/timing, decision-aware quantization, and graph-dependent approximation, ending with the graph-specific audit question.",
+      "fact_ids": [
+        "f-boundary"
+      ],
+      "preserve": [
+        "PD-Quant optimizes quantization parameters",
+        "One-Spike is a single-spike phase-coding converter",
+        "our interventions are inside a frozen DCGS-derived adapter"
+      ]
+    }
+  },
+  {
+    "proposition": "Several results subsections open with table references and dense numeric inventories.",
+    "evidence_status": "author_reported",
+    "action": "REWRITE",
+    "location": "results",
+    "factual_check": "Preserve every rate, interval, count, split label, direction, and immediate qualification.",
+    "composition": {
+      "point": "Lead each result block with the answered question or observed finding; let tables carry cell-level values and reserve prose for interpretation.",
+      "fact_ids": [
+        "f-conditional-errors",
+        "f-temporal-equality",
+        "f-historical-fidelity",
+        "f-position-recovery"
+      ],
+      "preserve": [
+        "conditional rates",
+        "graph-cluster bootstrap intervals",
+        "training-only temporal evidence",
+        "exposed test/validation labels",
+        "whole-network activity definition"
+      ]
+    }
+  },
+  {
+    "proposition": "The conclusion repeats results and ends with defensive negation.",
+    "evidence_status": "author_reported",
+    "action": "REWRITE",
+    "location": "conclusion",
+    "factual_check": "Preserve audit framing, one-teacher/exposed-data boundary, and absence of new claims.",
+    "composition": {
+      "point": "Close by calling back decision, required prefixes, and activity as separately reportable quantities within the audited setting.",
+      "fact_ids": [
+        "f-eval-checklist",
+        "f-boundary"
+      ],
+      "preserve": [
+        "no new converter",
+        "no conversion-wide frequency",
+        "fixed residual GCNs",
+        "one teacher"
+      ]
+    }
+  },
+  {
+    "proposition": "Table 1 and Fig. 5 captions overload caveats and defensive wording.",
+    "evidence_status": "author_reported",
+    "action": "REWRITE",
+    "location": "figure/table captions",
+    "factual_check": "Preserve teacher count, split exposure, local equality, amplitude caveat, and training-only status.",
+    "composition": {
+      "point": "Use compact self-contained captions that identify the plotted quantity and its essential scope without replaying the results section.",
+      "fact_ids": [
+        "f-historical-fidelity",
+        "f-temporal-equality"
+      ],
+      "preserve": [
+        "historical full-test",
+        "previously exposed",
+        "128 training graphs",
+        "bitwise equal local decoded tensor",
+        "equal local event count",
+        "uncontrolled first-prefix profile and amplitude"
+      ]
+    }
+  }
+]

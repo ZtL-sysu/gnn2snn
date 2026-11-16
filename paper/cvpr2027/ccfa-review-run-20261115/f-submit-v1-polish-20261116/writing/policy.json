@@ -1,0 +1,36 @@
+{
+  "protected_sections": [],
+  "protected_artifacts": [
+    {
+      "path": "sources/main.tex",
+      "sha256": "efa5dba3efa114f48c9f42bab5a870dbede6f37c7cf526818a8dfd99d642738a"
+    },
+    {
+      "path": "sources/data/hard_intervention_per_graph.csv",
+      "sha256": "d5dc5fe9aa7d3e4038bf1f6ac1e3c49b9cd29943bf31e8bfb12ba66d94b316e1"
+    },
+    {
+      "path": "sources/data/temporal_decision_effects.csv",
+      "sha256": "f9fb8c4bd6c6756b4a9bf0413c7d66c7fe642c91e532a74134a8eb359566fead"
+    }
+  ],
+  "assertions": [
+    {
+      "id": "hard-rate-mnist",
+      "location_pattern": "MNIST.*332 / 811.*40\\.94.*37\\.28,44\\.57",
+      "pattern": "332 / 811.*40\\.94.*37\\.28,44\\.57",
+      "forbidden": "universal frequency"
+    },
+    {
+      "id": "hard-rate-cifar",
+      "location_pattern": "CIFAR10.*296 / 928.*31\\.90.*28\\.66,35\\.31",
+      "pattern": "296 / 928.*31\\.90.*28\\.66,35\\.31"
+    },
+    {
+      "id": "temporal-scope",
+      "location_pattern": "first-prefix profile and absolute amplitude are not",
+      "pattern": "first-prefix profile and absolute amplitude are not",
+      "forbidden": "isolates timing from amplitude"
+    }
+  ]
+}

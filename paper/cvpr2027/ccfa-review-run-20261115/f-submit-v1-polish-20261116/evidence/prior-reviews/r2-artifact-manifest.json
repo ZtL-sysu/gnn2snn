@@ -1,0 +1,125 @@
+{
+  "description": "Anonymous R2 audit artifacts: raw/endpoint evidence for the two central counterexamples and deterministic source scripts.",
+  "files": {
+    "hard_intervention_rows/CIFAR1041_graphs.csv": {
+      "bytes": 798609,
+      "sha256": "6839a037ddf607007613cbdd87cebada0f14623fd166b638dccb42f07b25c10f"
+    },
+    "hard_intervention_rows/MNIST41_graphs.csv": {
+      "bytes": 789277,
+      "sha256": "18d09a3778756a06997fc0db84d7cf66df4f8250fd58fa53a0a541d3ab07ffe4"
+    },
+    "prefix_diagnostic/CIFAR1041/all_eligible_T2.npz": {
+      "bytes": 73382,
+      "sha256": "54f97796398bbdf43f145f3577f891fac2210b0e27b9840b35e70444b81768d1"
+    },
+    "prefix_diagnostic/CIFAR1041/baseline_T2.npz": {
+      "bytes": 57142,
+      "sha256": "7152b437dfca251b02c7187dd1629a13fb87a6467f1a108e51fffba07296a402"
+    },
+    "prefix_diagnostic/CIFAR1041/metadata.json": {
+      "bytes": 2522,
+      "sha256": "93adc99156f4aa027d0084e3127853a70e794fcb2c9c5730456b99ccd2ebad2e"
+    },
+    "prefix_diagnostic/CIFAR1041/results.json": {
+      "bytes": 2307,
+      "sha256": "d38f8c9efc2c0a45b1b3634b02bbaa8984221ee65e36b499120f35f3de5e6f5b"
+    },
+    "prefix_diagnostic/CIFAR1041/source/intervention.py": {
+      "bytes": 668,
+      "sha256": "c6d38d6b86fff55532c6526c7d97de4b0b1dde12f0da025efa73bd4a5f686e1e"
+    },
+    "prefix_diagnostic/CIFAR1041/source/prefix_codec.py": {
+      "bytes": 4157,
+      "sha256": "4cc738509d1abe64609d56888346fa3d391fa53ebd675c094b784dc48e0774d8"
+    },
+    "prefix_diagnostic/CIFAR1041/source/run_prefix_diagnostic.py": {
+      "bytes": 8494,
+      "sha256": "8010cf4fe495074d5001e5e84a980944506707226d26db71d7448681ab29b723"
+    },
+    "prefix_diagnostic/MNIST41/all_eligible_T2.npz": {
+      "bytes": 63467,
+      "sha256": "3d9d7fe4a2f9ec79034590ca19e8672b15c5fd09d726b12772b6fc9c14cd1294"
+    },
+    "prefix_diagnostic/MNIST41/baseline_T2.npz": {
+      "bytes": 49496,
+      "sha256": "ed4e9290526502aa41877767197adec442faf151bb4e4939d8cab7d97c882b6e"
+    },
+    "prefix_diagnostic/MNIST41/metadata.json": {
+      "bytes": 2526,
+      "sha256": "5af12293c461e8862032b08a6dda78e990f7b1f64f4c29fe300dc5a31e4824c7"
+    },
+    "prefix_diagnostic/MNIST41/results.json": {
+      "bytes": 2305,
+      "sha256": "7aaa69dde109a995a385f56fe63c3081fe3365dd430dc5574c6d76fcf4337c82"
+    },
+    "prefix_diagnostic/MNIST41/source/intervention.py": {
+      "bytes": 668,
+      "sha256": "c6d38d6b86fff55532c6526c7d97de4b0b1dde12f0da025efa73bd4a5f686e1e"
+    },
+    "prefix_diagnostic/MNIST41/source/prefix_codec.py": {
+      "bytes": 4157,
+      "sha256": "4cc738509d1abe64609d56888346fa3d391fa53ebd675c094b784dc48e0774d8"
+    },
+    "prefix_diagnostic/MNIST41/source/run_prefix_diagnostic.py": {
+      "bytes": 8494,
+      "sha256": "8010cf4fe495074d5001e5e84a980944506707226d26db71d7448681ab29b723"
+    },
+    "prefix_double/CIFAR1041/all_eligible_T2.npz": {
+      "bytes": 69330,
+      "sha256": "565ad6eea266f95aa30dd3e8969a6fcfabf5ace0b8d9c1952264c8a4c20615a9"
+    },
+    "prefix_double/CIFAR1041/baseline_T2.npz": {
+      "bytes": 55115,
+      "sha256": "676c022c20e217dec371d2cb9abc5a92a6882bafa76a7b3762ebd43f7f000092"
+    },
+    "prefix_double/CIFAR1041/metadata.json": {
+      "bytes": 2548,
+      "sha256": "5ba5b58a20f87c32f6f08f8d7ffb3ce6f363de5e8bebd864d88d3273b91ed92b"
+    },
+    "prefix_double/CIFAR1041/results.json": {
+      "bytes": 2304,
+      "sha256": "736dba9710aee6b388dd6d51967e614a97ba095c61c66fde92ba2afc4bd4d9ec"
+    },
+    "prefix_double/CIFAR1041/source/intervention.py": {
+      "bytes": 668,
+      "sha256": "c6d38d6b86fff55532c6526c7d97de4b0b1dde12f0da025efa73bd4a5f686e1e"
+    },
+    "prefix_double/CIFAR1041/source/prefix_codec.py": {
+      "bytes": 6210,
+      "sha256": "cd8ab003fa9c5ba368d100c33aae43539f9cba83087b2fd067b18aaf3c5a6a54"
+    },
+    "prefix_double/CIFAR1041/source/run_prefix_diagnostic.py": {
+      "bytes": 8659,
+      "sha256": "9c74569a3f90887164c30b4dcc63bf6c4fdf54f1828befc4fd8f4ad19938e8c1"
+    },
+    "prefix_double/MNIST41/all_eligible_T2.npz": {
+      "bytes": 61676,
+      "sha256": "b990233171eeb32828268151a7bb70687eb16446b814baea8cf4628d5a189aba"
+    },
+    "prefix_double/MNIST41/baseline_T2.npz": {
+      "bytes": 48583,
+      "sha256": "31a62b4c023997d8524c1985e941fea35a1f03bc7b3f7786a1ab5dfdd5d44624"
+    },
+    "prefix_double/MNIST41/metadata.json": {
+      "bytes": 2552,
+      "sha256": "ff8aca2ef1e4b3ebd58b49c63b80d6feb680b2aa5a63a2192aaee263aeb6ddf2"
+    },
+    "prefix_double/MNIST41/results.json": {
+      "bytes": 2306,
+      "sha256": "928375dfdc73b8338add8ecce84f98a4e2a07e667e5d2a9e8efd49ac075402cd"
+    },
+    "prefix_double/MNIST41/source/intervention.py": {
+      "bytes": 668,
+      "sha256": "c6d38d6b86fff55532c6526c7d97de4b0b1dde12f0da025efa73bd4a5f686e1e"
+    },
+    "prefix_double/MNIST41/source/prefix_codec.py": {
+      "bytes": 6210,
+      "sha256": "cd8ab003fa9c5ba368d100c33aae43539f9cba83087b2fd067b18aaf3c5a6a54"
+    },
+    "prefix_double/MNIST41/source/run_prefix_diagnostic.py": {
+      "bytes": 8659,
+      "sha256": "9c74569a3f90887164c30b4dcc63bf6c4fdf54f1828befc4fd8f4ad19938e8c1"
+    }
+  }
+}

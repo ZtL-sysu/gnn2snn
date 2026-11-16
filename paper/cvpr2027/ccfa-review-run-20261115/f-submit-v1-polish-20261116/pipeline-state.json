@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "pipeline": "f-submit-v1",
+  "contract_version": "v1",
+  "contract": [
+    {
+      "path": "execution-contract-v1.md",
+      "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+    }
+  ],
+  "history": [
+    {
+      "action": "pass",
+      "stage": "S0"
+    },
+    {
+      "action": "pass",
+      "stage": "S1"
+    },
+    {
+      "action": "pass",
+      "stage": "S1A"
+    },
+    {
+      "action": "pass",
+      "stage": "S2"
+    },
+    {
+      "action": "pass",
+      "stage": "S3"
+    },
+    {
+      "action": "pass",
+      "stage": "S4"
+    },
+    {
+      "action": "pass",
+      "stage": "S5"
+    },
+    {
+      "action": "pass",
+      "stage": "S6"
+    },
+    {
+      "action": "pass",
+      "stage": "S7"
+    },
+    {
+      "action": "reopen",
+      "stage": "S7",
+      "reason": "S8 round 1 found Results and Figures/Tables below comparator thresholds; narrow second prose pass required."
+    },
+    {
+      "action": "pass",
+      "stage": "S7"
+    },
+    {
+      "action": "pass",
+      "stage": "S8"
+    },
+    {
+      "action": "pass",
+      "stage": "S9"
+    },
+    {
+      "action": "pass",
+      "stage": "S10"
+    }
+  ],
+  "stages": [
+    {
+      "id": "S0",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "manifest.json",
+          "sha256": "759e5ed316321ad05264db403640a58d0a5e6bf9a17fac266064fa0f5824f302"
+        },
+        {
+          "path": "sources/main.tex",
+          "sha256": "efa5dba3efa114f48c9f42bab5a870dbede6f37c7cf526818a8dfd99d642738a"
+        },
+        {
+          "path": "sources/supplement.tex",
+          "sha256": "435aedb434ba8e5c61a2f49dbdd6004afed4d9064552aee84c28a02b0d1b925b"
+        },
+        {
+          "path": "sources/references.bib",
+          "sha256": "2e93b8b9a8c0cf98a64d3fababb2b43cb63126da83e8f9a3e73f572d7cb490cf"
+        },
+        {
+          "path": "sources/main.pdf",
+          "sha256": "c1b2de41cf281eb56299851d4cd0e636885f10b119b98c82c58682ba23e4e2d5"
+        },
+        {
+          "path": "sources/supplement.pdf",
+          "sha256": "344b45d6475c4340894a8fc2ad0fe279e9d4865cd9b9b0a6a98da8a5ed4d6e21"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/s0-gate.md",
+          "sha256": "f50d51327fabb91af711ecca5df6dd2233904df9fd169dcc35d88d2858efc624"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S1",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/manuscript-module-map.md",
+          "sha256": "60ea4050f5db8ff837542bf429ff1c20c3f130cbeb9239ac7fea4e3c38fc965a"
+        },
+        {
+          "path": "evidence/narrative-consistency-map.md",
+          "sha256": "4c2bb95f3a681e3813ca23481fa2a6e12c731557ba367cd4788f6f500277a5eb"
+        },
+        {
+          "path": "evidence/s1-gate.md",
+          "sha256": "dcff3dd1bda130e7f385b8882a5628df39938cd723e6194ffde6474614cc8236"
+        },
+        {
+          "path": "evidence/evidence-manifest-s1-s2.md",
+          "sha256": "699e9f2009698d17d49fc1ccfb08e906a17d85108462deea8a7159af75e3c646"
+        },
+        {
+          "path": "sources/main.tex",
+          "sha256": "efa5dba3efa114f48c9f42bab5a870dbede6f37c7cf526818a8dfd99d642738a"
+        },
+        {
+          "path": "sources/supplement.tex",
+          "sha256": "435aedb434ba8e5c61a2f49dbdd6004afed4d9064552aee84c28a02b0d1b925b"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S1A",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/claim-disposition.md",
+          "sha256": "3aa8b0bf4f303aed7058e408489acb5ff4273c07439eaa1d05c673675f07ad69"
+        },
+        {
+          "path": "evidence/s1a-gate.md",
+          "sha256": "57c9aaa90f70a975df7ee4d5cc22eb17961dbf268a1449a2602f1a5b8517c3ed"
+        },
+        {
+          "path": "evidence/evidence-manifest-s1a.md",
+          "sha256": "63f9744805dd5d50efe93360862fb1e5b321ae19a05e3e0a28e39aaae4813e16"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S2",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/submission-profile.md",
+          "sha256": "690f693eef86d4f93d00fda6f88f6a1146fdb6e49e2731c7b645510a4115677e"
+        },
+        {
+          "path": "evidence/s2-gate.md",
+          "sha256": "a9af8ec97683be1cc1da5b88aab9aaa2a8a362623e2e60868c57577338cd7f63"
+        },
+        {
+          "path": "evidence/evidence-manifest-s1-s2.md",
+          "sha256": "699e9f2009698d17d49fc1ccfb08e906a17d85108462deea8a7159af75e3c646"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S3",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/candidate-search-log.md",
+          "sha256": "d2289d5084776ee70065447ed9cf7471dd898aa624cea78111c46a4ed564e062"
+        },
+        {
+          "path": "evidence/s3-gate.md",
+          "sha256": "401c2b818f8ae32d3614fb3f08ba92e4c6877127bec9a035c90fb79aa281a52e"
+        },
+        {
+          "path": "evidence/evidence-manifest-s3-s5.md",
+          "sha256": "655ce0f017bcd780705550de0270ba9ef487a3ffbbb3a39dc9386f885b8b6ac6"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S4",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/comparator-literature-table.md",
+          "sha256": "0443730f75518ec8c9472ace4dce7e1466e2ea44fb9897f1534da2e920b00c11"
+        },
+        {
+          "path": "evidence/s4-gate.md",
+          "sha256": "724995993b1350abc308ee890703ce7c2a3355b9686ce5147230adeabb49c97a"
+        },
+        {
+          "path": "evidence/evidence-manifest-s3-s5.md",
+          "sha256": "655ce0f017bcd780705550de0270ba9ef487a3ffbbb3a39dc9386f885b8b6ac6"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S5",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/comparator-section-patterns.md",
+          "sha256": "cd7a2d76573d498c7968fbb82f53d042a1b331407fdf6648fc54a8493b8c8ae6"
+        },
+        {
+          "path": "evidence/s5-gate.md",
+          "sha256": "9cb7594f4902fb33081eafb0fbe5e8cc00f5e2883a204d9ad7a03388560609b6"
+        },
+        {
+          "path": "evidence/evidence-manifest-s3-s5.md",
+          "sha256": "655ce0f017bcd780705550de0270ba9ef487a3ffbbb3a39dc9386f885b8b6ac6"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S6",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/module-quality-review.md",
+          "sha256": "cda8543939790996e586712f0b1c174948a82fbc63e81e5802c89c97e9676a0f"
+        },
+        {
+          "path": "evidence/s6-gate.md",
+          "sha256": "7bd9124669be8478192f8da46be9a314b13c35ca7dd8c975d81604aca0aeee1f"
+        },
+        {
+          "path": "evidence/evidence-manifest-s6.md",
+          "sha256": "5668e691b19a22a7f88b93beae64192c146d6d3b6afda95c23241ff1bc45d829"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S7",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "working/main.tex",
+          "sha256": "6b160fa447e2c1f453d9d7f91f57d9535671cb98e2b06a6f982cfbd451f5cf25"
+        },
+        {
+          "path": "working/main.pdf",
+          "sha256": "23e1f84488c656832fc3d6839fcda07b122759f7311c1cf8b0a039049fe4d7bb"
+        },
+        {
+          "path": "writing/request-round2.json",
+          "sha256": "ecadc61c8716a36f5ca0691cb762fd4b5bdc251b4e91b98a03d02619ccdefcda"
+        },
+        {
+          "path": "writing/edits-round2.json",
+          "sha256": "aa48c519b242a11584e18c80020723da72fe6e5378d50afeb850288205a6541e"
+        },
+        {
+          "path": "writing/lint-round2.json",
+          "sha256": "209b056452bc1a3a2b2deb4b085d9582fdc1eb15e2485121996324691f6a84aa"
+        },
+        {
+          "path": "evidence/checks-round2.json",
+          "sha256": "452970ff30fcc5c99393f844d941c96967f14924e125b0c042fe2ebaad9644e1"
+        },
+        {
+          "path": "evidence/s7-reopen-round2.md",
+          "sha256": "772a0b83e459eb85e050e9afe7613ea51aaeb7222ee759a13bc85e03edb672dd"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S8",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/module-rescore-round2.md",
+          "sha256": "52b85abb10caea0b75cc25c0d1856aa4940bb37684f05e4da596a4537621202e"
+        },
+        {
+          "path": "evidence/s8-gate-round2.md",
+          "sha256": "09b12bf0ffff085c6c521d98629ac34c4da37c9bcff497a5148079f012885330"
+        },
+        {
+          "path": "evidence/evidence-manifest-s8-round2.md",
+          "sha256": "2b7f99b2dd773a3857d0a1551876781e8a356ecbab96c0b8bdeecf5181820cea"
+        },
+        {
+          "path": "working/main.tex",
+          "sha256": "6b160fa447e2c1f453d9d7f91f57d9535671cb98e2b06a6f982cfbd451f5cf25"
+        },
+        {
+          "path": "working/main.pdf",
+          "sha256": "23e1f84488c656832fc3d6839fcda07b122759f7311c1cf8b0a039049fe4d7bb"
+        },
+        {
+          "path": "writing/lint-round2.json",
+          "sha256": "209b056452bc1a3a2b2deb4b085d9582fdc1eb15e2485121996324691f6a84aa"
+        },
+        {
+          "path": "evidence/checks-round2.json",
+          "sha256": "452970ff30fcc5c99393f844d941c96967f14924e125b0c042fe2ebaad9644e1"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S9",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "evidence/final-submission-audit.md",
+          "sha256": "90b5affc0c213591fc237854832d7da93ef8f4d990979a5e0564125e596d950c"
+        },
+        {
+          "path": "evidence/final-checks.json",
+          "sha256": "d2fcd62de3cd5f0b7dadf2febf1439b01ce6f90cc0df0e567b2e6c8e6c205b3a"
+        },
+        {
+          "path": "evidence/submission-constraints.md",
+          "sha256": "938469ebc39a026bbb0148b3e1c8225e8fb108173cbb774200ec57b45b6eba4c"
+        },
+        {
+          "path": "evidence/manuscript-metadata.md",
+          "sha256": "5c8a8ce161db79d17f3738e8464d8d2a9b6631c600187701306253e1ac070412"
+        },
+        {
+          "path": "evidence/upload-map.md",
+          "sha256": "a68bb33f25a2be325d5706660d8dde1f5efbf52afc8d3365c986cbe91e7cfd41"
+        },
+        {
+          "path": "evidence/evidence-manifest-s9.md",
+          "sha256": "dfcaeaae4fda9a42d7119b92ddc22d5131f73fe5a8149f3bb38704a7b73b1b72"
+        },
+        {
+          "path": "evidence/s9-gate.md",
+          "sha256": "0e85ff2719166c2cfd07250a356eabf91d80f64270c57181cc7f6cf10a4c0476"
+        },
+        {
+          "path": "delivery/gnn2snn-cvpr2027-source.zip",
+          "sha256": "ca7182860211685c1447c1c0c86735c293020988094e319ca3dfbd1fabe1bc33"
+        },
+        {
+          "path": "working/main.tex",
+          "sha256": "6b160fa447e2c1f453d9d7f91f57d9535671cb98e2b06a6f982cfbd451f5cf25"
+        },
+        {
+          "path": "working/main.pdf",
+          "sha256": "23e1f84488c656832fc3d6839fcda07b122759f7311c1cf8b0a039049fe4d7bb"
+        },
+        {
+          "path": "working/supplement.tex",
+          "sha256": "435aedb434ba8e5c61a2f49dbdd6004afed4d9064552aee84c28a02b0d1b925b"
+        },
+        {
+          "path": "working/supplement.pdf",
+          "sha256": "81af234f5b6e1d17f2a14e62aaf7e2e0873ba19234d7111df647a535298768e4"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "S10",
+      "status": "passed",
+      "contract_version": "v1",
+      "inputs": [
+        {
+          "path": "execution-contract-v1.md",
+          "sha256": "d4693986c95358f5868bc9ccd9c4069de8eb5d06efdc25a785bf4f579860a73c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "FINAL_REPORT_ZH.md",
+          "sha256": "6d5978b06c1da6b55d6fc01b4dbb27e971af5331cca1e9eed74482ce0da99799"
+        },
+        {
+          "path": "working/main.tex",
+          "sha256": "6b160fa447e2c1f453d9d7f91f57d9535671cb98e2b06a6f982cfbd451f5cf25"
+        },
+        {
+          "path": "working/main.pdf",
+          "sha256": "23e1f84488c656832fc3d6839fcda07b122759f7311c1cf8b0a039049fe4d7bb"
+        },
+        {
+          "path": "working/supplement.tex",
+          "sha256": "435aedb434ba8e5c61a2f49dbdd6004afed4d9064552aee84c28a02b0d1b925b"
+        },
+        {
+          "path": "working/supplement.pdf",
+          "sha256": "81af234f5b6e1d17f2a14e62aaf7e2e0873ba19234d7111df647a535298768e4"
+        },
+        {
+          "path": "delivery/gnn2snn-cvpr2027-source.zip",
+          "sha256": "ca7182860211685c1447c1c0c86735c293020988094e319ca3dfbd1fabe1bc33"
+        },
+        {
+          "path": "evidence/upload-map.md",
+          "sha256": "a68bb33f25a2be325d5706660d8dde1f5efbf52afc8d3365c986cbe91e7cfd41"
+        },
+        {
+          "path": "evidence/final-submission-audit.md",
+          "sha256": "90b5affc0c213591fc237854832d7da93ef8f4d990979a5e0564125e596d950c"
+        },
+        {
+          "path": "evidence/final-checks.json",
+          "sha256": "d2fcd62de3cd5f0b7dadf2febf1439b01ce6f90cc0df0e567b2e6c8e6c205b3a"
+        },
+        {
+          "path": "evidence/evidence-manifest-s9.md",
+          "sha256": "dfcaeaae4fda9a42d7119b92ddc22d5131f73fe5a8149f3bb38704a7b73b1b72"
+        },
+        {
+          "path": "evidence/s9-gate.md",
+          "sha256": "0e85ff2719166c2cfd07250a356eabf91d80f64270c57181cc7f6cf10a4c0476"
+        }
+      ],
+      "gate_verdict": "pass"
+    }
+  ]
+}

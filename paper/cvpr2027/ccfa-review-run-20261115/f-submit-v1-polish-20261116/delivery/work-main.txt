@@ -1,0 +1,636 @@
+CVPR                                                                                                                                             CVPR
+                                 CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
+
+
+
+
+                            A Finite-Event Audit of Decision and Temporal Fidelity
+                                        in Graph-to-Spike Conversion
+
+                                                    Anonymous CVPR submission
+
+
+                                Abstract                                          Two forms of information loss are relevant. Next-message        039
+                                                                               error uses the actual adjacency and weights, yet its norm          040
+       Reconstruction error is a convenient proxy for ANN-to-SNN               discards the perturbation’s direction relative to class bound-
+                                                                              001                                                                 041
+       conversion, but it does not say whether a graph classifier              aries. Exact local terminal reconstruction preserves the de-
+                                                                              002                                                                 042
+       preserves its decision. We audit two finite-event invariants            coded value, but omits the intermediate states encountered
+                                                                              003                                                                 043
+       in frozen superpixel graph classifiers. First, legal one-event          by downstream event units. A correction can therefore re-
+                                                                              004                                                                 044
+       changes that reduce actual graph-message error worsen                   duce message error while moving the final decision toward
+                                                                              005                                                                 045
+       the teacher-class margin in 40.9% and 31.9% of message-                 a competing class; a code can match its local endpoint while
+                                                                              006                                                                 046
+       improving interventions on MNIST and CIFAR10. The rates                 changing the downstream trajectory.
+                                                                              007                                                                 047
+       describe these intervention distributions: the effect persists         008
+                                                                                  We test these distinctions through controlled hard-event        048
+       under coordinate and residual selection rules, with larger             009
+                                                                               interventions in frozen graph classifiers. The primary setting     049
+       adverse rates for residual selection. Second, exchanging               010
+                                                                               is MNIST and CIFAR10 superpixel classification with resid-         050
+       legal two-tick codewords with bitwise-equal local decoded              011
+                                                                               ual GCNs. A complementary GatedGCN study examines                  051
+       tensors and equal local event counts changes downstream                012
+                                                                               residual centering, while classical node classification sup-       052
+       predictions and whole-network activity. These exchanges do             013
+                                                                               plies context for propagation and readout effects. Prediction      053
+       not control first-prefix profile or absolute amplitude. A direc-       014
+                                                                               agreement measures fidelity to the teacher; ground-truth ac-       054
+       tional margin analysis and an executable source recurrence             015
+                                                                               curacy measures task performance. Local event counts and           055
+       explain why message error and matched local endpoints omit             016
+                                                                               whole-network cost are reported separately.                        056
+       signed decision direction and downstream state history. The            017
+       controlled counterexamples motivate reporting decisions at             018 The central finding is therefore: improving a local re-         057
+       every required prefix, the intervention rule and eligible set,          construction metric need not preserve the downstream de-
+                                                                              019                                                                 058
+       and whole-network activity.                                             cision, and matching a local terminal reconstruction need
+                                                                              020                                                                 059
+                                                                               not preserve the computation that produces it. In the spatial      060
+                                                                               experiment, legal one-event changes that reduce immediate          061
+       1. Introduction                                                         message MSE worsen the teacher-class margin in 332/811
+                                                                              021                                                                 062
+                                                                               MNIST and 296/928 CIFAR10 cases. In the temporal exper-            063
+       A finite event can improve a reconstruction metric and still           022
+                                                                               iment, two codewords with identical local two-tick decoding        064
+       move a graph classifier toward the wrong class. In a visual            023
+                                                                               and equal local event counts change downstream predic-             065
+       superpixel graph, a one-level change to a single event can             024
+                                                                               tions and whole-network activity when exchanged. A three-          066
+       reduce the next-message error while reversing the teacher-             025
+                                                                               teacher continuous diagnostic localizes the largest single-site    067
+       class margin. A different finite-event change can preserve a           026
+                                                                               one-tick sensitivity to the first node activation: recovering      068
+       local decoded endpoint exactly and still alter the trajectory          027
+                                                                               it closes 54.1% and 23.5% of the teacher-disagreement gap,         069
+       delivered to later layers. These two cases expose a basic              028
+                                                                               compared with 8.8% and 14.9% for both readout sites.               070
+       question: which downstream quantities does local recon-                029
+       struction actually preserve?                                           030 The contribution is a controlled finite-event audit of one      071
+          ANN-to-SNN conversion approximates a pretrained net-                 frozen graph computation. Directional class margins con-
+                                                                              031                                                                 072
+       work without retraining its weights. Calibration, bias cor-             nect graph-propagated errors to classification, and exact lo-
+                                                                              032                                                                 073
+       rection, and differential coding support high fidelity at short         cal codeword equivalences expose temporal-prefix history
+                                                                              033                                                                 074
+       prefixes [6, 9, 13]. Our graph adaptations follow this pat-             under a matched endpoint and event count. These tests
+                                                                              034                                                                 075
+       tern: four active ticks approximately preserve the accuracy             support a reporting consequence: assess decisions at every
+                                                                              035                                                                 076
+       of three independently trained teachers on fixed and gated              required prefix, report the intervention rule and eligible set,
+                                                                              036                                                                 077
+       superpixel networks, while one tick leaves a clear gap. That            and account for whole-network activity after each realizable
+                                                                              037                                                                 078
+       short-prefix regime makes the preserved quantities testable.            intervention.
+                                                                              038                                                                 079
+
+
+                                                                          1
+CVPR                                                                                                                                                                                                                                                                                           CVPR
+                                                   CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
+
+
+
+                  (a) Norm omits direction                                   (b) Same integral = 0.8       stream decisions and whole-network activity?                                                                                                                                         116
+       orthogonal direction
+
+
+                                                                                 two events each
+
+
+
+
+                                                     decoded output
+                                larger                                0.75
+                                                                                     boundary              Graph-dependent approximation. Degree-Quant studies                                                                                                                                  117
+                                                                      0.50                                 quantization-aware graph training, and A2 Q incorporates ag-                                                                                                                         118
+                                         smaller                                                           gregation into quantization design [12, 14]. Both account for                                                                                                                        119
+                                                                      0.25
+                                                                                                           structural effects on approximation. We examine a related                                                                                                                            120
+                                                                      0.00                                 issue in a frozen converted computation: the relationship                                                                                                                            121
+                              decision direction                              history A    history B       between immediate message fidelity and the final decision.                                                                                                                           122
+                                                                                                           Feature-only and permuted-operator controls isolate the role                                                                                                                         123
+       Figure 1. Two information losses in reconstruction metrics. Left: a
+                                                                                                           of the actual propagation operator while preserving the task                                                                                                                         124
+       smaller error norm can cross a decision boundary when its direction
+       changes (schematic). Right: two input histories have identical                                      graph and fitting budget. The visual models and data fol-                                                                                                                            125
+       integrated input and two emitted events, but the fixed source neuron                                low Benchmarking GNNs [4]. Static propagation, feature-                                                                                                                              126
+       decodes them differently. The temporal values are an executable                                     dependent gating, and classical node classification use dif-                                                                                                                         127
+       recurrence counterexample, rather than a dataset estimate.                                          ferent operators and codes and are analyzed separately.                                                                                                                              128
+
+                                                                                                           3. Analysis and Experimental Design                                                                                                                                                  129
+ 080   2. Related Work                                                                                     3.1. Frozen graph computation and event semantics                                                                                                                                    130
+
+ 081   Conversion, calibration, and readout. Calibration meth-                                             Our primary teacher has four residual graph-convolution                                                                                                                              131
+ 082   ods correct systematic approximation errors in converted                                            layers of width 146. For fixed normalized adjacency A, its                                                                                                                           132
+ 083   networks: layerwise calibration matches pretrained ANN re-                                          evaluation-mode layer is                                                                                                                                                             133
+ 084   sponses [9], while distribution-based threshold and potential
+ 085   initialization, forward temporal bias correction, and error-                                                     H_{\ell +1}=H_\ell +\operatorname {ReLU}(AH_\ell W_\ell ^\top +b_\ell ), \label {eq:block}                                                                       (1)    134
+ 086   aware parameter calibration address related mismatches [1,
+ 087   10, 13]. Readout addresses a complementary loss: retaining                                          with batch normalization folded into Wℓ , bℓ . Node features                                                                                                                         135
+
+ 088   the final membrane residual preserves information discarded                                         and positions are embedded together. Mean pooling feeds a                                                                                                                            136
+
+ 089   by integer spike counts, including under uneven arrivals [5].                                       146–73–36–10 MLP with two hidden ReLUs. The conver-                                                                                                                                  137
+
+ 090   This distinction motivates our early node experiments sepa-                                         sion has four node activation sites and two readout sites. Its                                                                                                                       138
+
+ 091   rating hidden approximation from output quantization.                                               graph operator weights each original directed edge u → v by                                                                                                                          139
+                                                                                                           [max(dout (u), 1) max(din (v), 1)]−1/2 , without adding self-                                                                                                                        140
+ 092       Event-level coding and timing determine what a con-                                             loops. The residual path supplies the identity connection.                                                                                                                           141
+ 093   sumer sees within a finite prefix. Differential coding with                                             An event is a signed scalar from {0, ±θ, . . . , ±θ/128},                                                                                                                        142
+ 094   graded units and spiking neurons (DCGS) transmits activa-                                           with per-channel threshold θ > 0. It is not a binary spike.                                                                                                                          143
+ 095   tion changes and supplies a threshold-iteration procedure [6];                                      We call the total number of nonzero scalar events across                                                                                                                             144
+ 096   its public event unit underlies the graph adaptations studied                                       the network whole-network activity; this quantity is distinct                                                                                                                        145
+ 097   here. One-Spike SNN is a single-spike phase-coding con-                                             from effective spike count, delivered weight, memory traffic,                                                                                                                        146
+ 098   verter that also demonstrates GCN conversion [7]; our one-                                          latency, and energy. Let ct be the current at active tick                                                                                                                            147
+ 099   event changes are diagnostic interventions inside a DCGS-                                           t, and let (v, C, a, b) denote membrane, cumulative output,                                                                                                                          148
+ 100   derived adapter and are neither an implementation of nor                                            integrated input, and integrated output states. The source                                                                                                                           149
+ 101   a matched comparison against that converter. Temporal-                                              differential unit first computes                                                                                                                                                     150
+ 102   misalignment research shows that event order affects low-
+ 103   latency conversion [2], and closed-loop feature/output align-                                                    m=v+c_t+a-b,\qquad \widetilde C=C+b.                                                                                                                             (2)    151
+ 104   ment has been studied at short horizons [8].
+ 105       Decision-aware objectives use downstream predictions to                                         It emits the largest eligible magnitude st . A positive level                                                                                                                        152
+ 106   choose quantization parameters. PD-Quant optimizes quan-                                            q = θ2−k requires m ≥ 0.75q; a negative level requires                                                                                                                               153
+ 107   tization parameters using prediction differences rather than                                        m ≤ −0.75q and C   e ≥ q. The updates are                                                                                                                                            154
+ 108   layerwise reconstruction [11]; we change no quantization
+ 109   parameter or calibration rule and instead ask which exact                                                                \begin {split} v&\leftarrow m-s_t,\quad C\leftarrow \widetilde C+s_t,\\ a&\leftarrow a+c_t/t,\quad b\leftarrow b+s_t/t. \end {split}\label {eq:state} 
+                                                                                                                                                                                                                                                                                         (3)    155
+ 110   local invariants fail to determine downstream behavior. Col-
+ 111   lectively, these works establish that reconstruction, decisions,                                                                PT
+ 112   and event timing are distinct concerns. Our experiment asks                                         The decoder is DT (s) = t=1 st /t. Raw inputs and affine                                                                                                                             156
+ 113   a narrower graph-specific question: inside a frozen graph                                           biases enter once, at the first active tick. We use T for active                                                                                                                     157
+ 114   event converter, does exact terminal equality at a local site,                                      ticks, not measured latency. Residual and readout arithmetic                                                                                                                         158
+ 115   together with an equal local event count, preserve down-                                            remains continuous where specified by the adapter.                                                                                                                                   159
+
+
+                                                                                                       2
+CVPR                                                                                                                                                                                                                                      CVPR
+                                                          CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
+
+
+
+ 160   3.2. What a graph message norm does not deter-                                                                                       3.3. What terminal reconstruction does not deter-                                              209
+ 161        mine                                                                                                                                 mine                                                                                      210
+
+ 162   For an activation perturbation E at a fixed site, the immediate                                                                      Equation (3) stores more than a decoded terminal activation.                                   211
+ 163   next-message perturbation is exactly                                                                                                 Replacing a first-tick event by s1 + δ must also change                                        212
+                                                                                                                                            v ← v − δ, C ← C + δ, and b ← b + δ. A later event                                             213
+ 164                                             \Delta M=AEW^\top .\label {eq:message}                                           (4)
+                                                                                                                                            consequently depends on both the incoming history and                                          214
+                                                  2
+ 165   Consequently, ∥∆M ∥F accounts for the actual propagation                                                                             state. Matching DT (s) at one site cannot by itself match the                                  215
+ 166   operator, but compresses a signed, graph-dependent per-                                                                              intermediate currents received at its consumers.                                               216
+ 167   turbation to one scalar. A two-layer classifier with linear                                                                             A scalar counterexample uses exactly the frozen source re-                                  217
+ 168   graph readout R gives the particularly transparent relation                                                                          currence, θ = 1, zero initial state, and T = 2. The input his-                                 218
+ 169   ∆z = RAEW ⊤ . This identity is elementary linear algebra.                                                                            tories (c1 , c2 ) = (0.01, 1.58) and (1, −0.4) have the same                                   219
+ 170   Its value here is to expose which information a norm omits.                                                                          integrated input c1 + c2 /2 = 0.8. Both emit two nonzero                                       220
+ 171       Let y = arg maxk zk be the teacher class, and define its                                                                         events. Yet the decoded outputs are 0.5078125 and 0.75. A                                      221
+ 172   margin against every competitor k ̸= y by mk = zy − zk .                                                                             fixed decision boundary at 0.6 separates them (Fig. 1). Thus                                   222
+ 173   The converted prediction agrees with y precisely when                                                                                equality of integrated input, alphabet, time budget, and event                                 223
+
+ 174               m_k+\Delta z_y-\Delta z_k>0\quad \text {for all }k\ne y, \label {eq:margin}                                    (5)       count does not determine a nonlinear consumer’s decoded                                        224
+                                                                                                                                            result.                                                                                        225
+ 175   apart from ties. In a linear downstream region, write ∆z =                                                                              To test the same issue inside real graphs, we use source-                                   226
+ 176   J vec(E), with J including the graph and readout. Then the                                                                           verified first-site codeword pairs                                                             227
+ 177   relevant perturbations are the signed projections
+                                                                                                                                                            (q,-q/2)\quad \longleftrightarrow \quad (q/2,q/2). \label {eq:words}    (8)    228
+ 178                                          (J_y-J_k)\operatorname {vec}(E),                                                    (6)
+                                                                                                                                            Both decode to 3q/4 and contain two events (Fig. 2). They                                      229
+ 179   rather than the reconstruction norm alone. A sufficient con-
+                                                                                                                                            differ in first-prefix profile and in unweighted absolute am-                                  230
+ 180   dition is
+                                                                                                                                            plitude: the unweighted magnitudes sum to 3q/2 and q,                                          231
+ 181                     \norm {\operatorname {vec}(E)}_2< \min _{k\ne y}\frac {m_k}{\norm {J_y-J_k}_2},\label {eq:sufficient}    (7)       respectively. We apply a replacement only when all levels                                      232
+                                                                                                                                            belong to the original alphabet and actual source replay un-                                   233
+ 182   with zero rows imposing no restriction. Smaller norms                                                                                der the known zero second-tick input produces the required                                     234
+ 183   tighten this worst-case bound; they do not order two actual                                                                          second event. Both directions are checked; the subsequent                                      235
+ 184   errors pointing in different directions. In the full converted                                                                       forward pass executes normally. This is an exact local equiv-                                  236
+ 185   network, later event boundaries can also change J or invali-                                                                         alence test, not a proposed efficient encoder. Equality at                                     237
+ 186   date a fixed-region linearization. We therefore use Eq. (5) as                                                                       every consumed tick, together with identical initial state,                                    238
+ 187   an exact decision condition and test message interventions                                                                           would preserve a deterministic downstream trajectory by in-                                    239
+ 188   with the actual hard forward pass.                                                                                                   duction. Equality only at its terminal tick is weaker. This is                                 240
+ 189       For reported interventions, the scalar teacher-class mar-                                                                        consistent with prior temporal-misalignment results [2]; our                                   241
+ 190   gin is the converted logit of y minus the largest converted                                                                          diagnostic tests terminal equality together with fixed local                                   242
+ 191   competing logit. The competing class can change after in-                                                                            event count inside the graph adapter, while leaving absolute                                   243
+ 192   tervention. Fixing the teacher’s original runner-up can miss                                                                         amplitude and the first-prefix profile uncontrolled.                                           244
+ 193   a newly dominant class. Ground-truth accuracy answers a
+ 194   different question: a converted prediction can disagree with
+                                                                                                                                            3.4. Interventions, controls, and evidence scope                                               245
+
+ 195   an incorrect teacher and become correct. We retain both                                                                              We use three complementary evidence levels. First, full                                        246
+ 196   metrics instead of treating improved accuracy as evidence of                                                                         historical official test predictions from three teacher seeds                                  247
+ 197   improved conversion fidelity.                                                                                                        characterize conversion fidelity, and full validation position                                 248
+ 198       This perspective connects to early node-conversion analy-                                                                        interventions localize error. Second, single-teacher hard                                      249
+ 199   sis. Under nonsaturating constant-drive IF coding, rate error                                                                        interventions and calibration comparisons use 512 fixed, pre-                                  250
+ 200   scales with θ/T ; retaining the membrane residual removes                                                                            viously exposed validation graphs per task. Third, exact                                       251
+ 201   the final count quantization. Combining a valid hidden-error                                                                         temporal-code tests use 128 training graphs per task, and the                                  252
+ 202   envelope with Eq. (7) gives a sufficient time budget depend-                                                                         centered-residual profiles use all 45,000 CIFAR10 training                                     253
+ 203   ing on propagation and margin. It does not imply that a                                                                              graphs for one GatedGCN teacher. These splits serve differ-                                    254
+ 204   common time budget, global bias sign, or row-stochastic                                                                              ent purposes. Official validation and test sets were exposed                                   255
+ 205   bound applies to every graph. Symmetric degree normal-                                                                               during earlier development; their results are descriptive evi-                                 256
+ 206   ization is not generally row stochastic. The supplementary                                                                           dence, not new blind confirmation.                                                             257
+ 207   material gives the readout identity, assumptions, and histori-                                                                          For position analysis, an ideal causal ReLU replaces                                        258
+ 208   cal node results.                                                                                                                    one selected converted activation while leaving the graph,                                     259
+
+
+                                                                                                                                        3
+CVPR                                                                                                                                                                                                  CVPR
+                                       CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
+
+
+
+                                                                                                       Table 1. Historical full-test accuracy (%), mean ± sample SD over
+                     1.0              word A                        1.00
+                                                                                                       three teacher seeds on the same 10,000 graphs. The tests were
+
+
+
+
+                                               Decoded prefix / q
+                                      word B
+                                                                    0.75
+                                                                                                       previously exposed. GatedGCN is a separate hybrid adapter with
+        Event / q
+
+
+
+
+                     0.5                                                                               continuous gates; the table establishes fidelity, not superiority of a
+                                                                    0.50       same endpoint           new method.
+                     0.0
+                                                                    0.25                                                             Task / teacher              ANN        T =4       T =8
+                    −0.5                                            0.00                                                             MNIST / GCN     91.02 ± .27 91.05 ± .26 91.02 ± .26
+                           1               2                               1                   2                                     CIFAR10 / GCN 54.94 ± .07 54.92 ± .08 54.97 ± .05
+                               Tick                                                 Tick
+                                                                                                                                     CIFAR10 / Gated 68.77 ± .41 68.75 ± .33 68.76 ± .39
+
+
+
+
+                                                                                                       Disagreement gap closed (%)
+       Figure 2. The local equivalence test. Two legal codewords have two                                                             80          MNIST
+       nonzero events and the same decoded endpoint 3q/4, but present                                                                             CIFAR10
+       different first-prefix values to downstream consumers. Source re-
+       play verifies eligibility before replacement; the rest of the network                                                          60
+       is then executed without resetting its states.
+                                                                                                                                      40
+
+ 260   weights, and incoming converted computation fixed. It is
+                                                                                                                                      20
+ 261   a continuous diagnostic. Restoring all six sites reproduces
+ 262   the ANN; an empty intervention reproduces the conversion.
+ 263   Group effects are nonadditive because interventions alter                                                                       0
+
+ 264   subsequent computation.                                                                                                                                                          s
+                                                                                                                                             N1       N2    N3    N4   R1     R2     de          ad
+ 265       For hard intervention, we modify one existing nonzero                                                                                                                   No       He
+ 266   first-site event up or down one legal amplitude level, update
+ 267   all affected states, and replay the network. Two label-free                                     Figure 3. First-site recovery at T = 1 dominates the conditional
+ 268   coordinate rules are used: a deterministic coordinate and the                                   one-tick sensitivity. Gap closure is the recovered fraction of teacher
+ 269   largest eligible local residual. The eligible coordinate sets                                   disagreement on full, previously exposed validation data, averaged
+ 270   can differ between upward and downward moves. Each task                                         across three teachers; sample SD is shown. Node and readout
+                                                                                                       groups restore four and two sites and are nonadditive.
+ 271   yields four attempts per graph, or 2,048 first-tick interven-
+ 272   tions. The teacher is used only afterward to measure margin
+ 273   and agreement. Confidence intervals resample graphs, re-
+ 274   taining their repeated interventions together.                                                  latter retains continuous gates, products, normalization, and                                   294
+ 275       Calibration controls share teacher weights, histogram                                       readout; its high fidelity therefore demonstrates a hybrid                                      295
+ 276   thresholds, 512 training graphs, 693 initial-potential off-                                     graph adaptation with event placement different from the                                        296
+ 277   sets, and 64 Adam updates. The offsets are θρ with ρ ∈                                          fixed-GCN experiment.                                                                           297
+ 278   [−0.5, 0.5]. Local fitting averages normalized site MSE;                                            Position interventions localize the short-prefix gap to the                                 298
+ 279   graph-output fitting targets teacher logits; their mixture uses                                 first node site. At one tick, fixed-GCN conversion falls to                                     299
+ 280   both. A second control family fits an immediate-message                                         71.44 ± 2.80% on MNIST and 46.80 ± 1.22% on CIFAR10.                                            300
+ 281   objective and compares actual A with identity and within-                                       On the full 5,000-graph validation split for each teacher,                                      301
+ 282   graph conjugation P −1 AP . The graph used for the task                                         restoring the first node site closes 54.08% and 23.54% of the                                   302
+ 283   is unchanged. We also retain the source 100-step thresh-                                        teacher-disagreement gap, measured per teacher and then                                         303
+ 284   old iteration and fallback rules as a graph adaptation; its                                     averaged. Restoring all four node sites closes 80.4% and                                        304
+ 285   placement, eight-level setting, and calibration horizon are                                     45.2%; the two readout sites close 8.8% and 14.9%. The                                          305
+ 286   specified separately in the supplement.                                                         first site is the largest single-site accuracy recovery on both                                 306
+                                                                                                       tasks. This recovery measures conditional sensitivity using a                                   307
+ 287   4. Results                                                                                      continuous response without finite-event constraints.                                           308
+                                                                                                           Classical node classification provides a compatible but                                     309
+ 288   4.1. High fidelity and a concentrated short-prefix                                              distinct observation. Audited historical two-layer IF experi-                                   310
+ 289        bottleneck                                                                                 ments approach their own ANN teachers at longer horizons                                        311
+ 290   Fidelity at longer prefixes is high, but it does not resolve the                                when analytic bias compensation and membrane readout are                                        312
+ 291   first-tick gap. At four or eight ticks (Table 1), the adapted                                   used. For example, Cora reaches 80.16% at T = 8 against                                         313
+ 292   differential code closely matches teacher accuracy on both                                      an 80.46% teacher. The decoder and time scale differ from                                       314
+ 293   fixed GCNs and the stronger CIFAR10 GatedGCN. The                                               Table 1; supplementary results retain this separation rather                                    315
+
+
+                                                                                                   4
+CVPR                                                                                                                                                                                                                                                    CVPR
+                                  CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
+
+
+
+
+                                                                                Adverse margin rate among MSE improvements (%)
+       Table 2. Lowering first-tick message MSE can worsen the teacher-
+       class margin. Rates use the same first-tick MSE condition at T = 1                                                                               The adverse rate varies with the intervention rule
+       and T = 2, with 512 graphs and 2,048 attempts per task and 95%                                                                                        MNIST                                                     CIFAR10
+                                                                                                                                                                     48.5%         49.0%
+       graph-cluster bootstrap intervals.                                                                                                                                                                                                     42.6%
+                                                                                                                                 40                                                                                             38.5%
+                                                                                                                                         36.2%
+                                                                                                                                                       30.6%
+                                                                                                                                                                                                    24.7%
+                                                                                                                                                                                                                  20.4%
+        Task        Readout Adverse / improved Rate [interval] (%)                                                               20
+
+
+
+        MNIST   T =1                    332 / 811 40.94 [37.28,44.57]                                                             0
+                                                                                                                                        Coord −       Coord +      Residual −    Residual +        Coord −       Coord +     Residual −    Residual +
+                T =2                    395 / 811 48.71 [45.02,52.42]
+                                                                                                                                       One teacher, 512 exposed validation graphs per task; repeated interventions are not independent samples.
+        CIFAR10 T = 1                   296 / 928 31.90 [28.66,35.31]
+                T =2                    409 / 928 44.07 [40.54,47.60]
+
+                                                                                Figure 4. Largest-residual selection has higher adverse rates than
+                                                                                deterministic coordinates in every direction stratum at T = 1.
+ 316   than pooling the two as one converter.
+                                                                                One teacher and 512 exposed validation graphs per task; repeated
+ 317   4.2. A better message can have a worse decision                          interventions are not independent samples.
+ 318        direction
+                                                                                Table 3. Matched local, output, and mixed objectives give setting-
+ 319   Message improvement does not order downstream decision                   dependent accuracy (%) on historical full tests. Values are mean ±
+ 320   quality. On MNIST, 811 of 2,048 interventions reduce the                 sample SD over three teachers; all objectives share 693 offsets, 512
+ 321   actual first-tick next-message MSE; 332 worsen the teacher-              training graphs, and 64 updates, and each horizon was calibrated
+ 322   class margin (40.94%, graph-cluster bootstrap 95% interval               separately.
+ 323   [37.28,44.57]%). On CIFAR10, the corresponding count
+ 324   is 296 of 928 (31.90% [28.66,35.31]%). The same first-                                                                         Task               T                      Local                   Output                        Mixed
+ 325   tick modifications worsen the T = 2 margin in 48.71%
+                                                                                                                                      MNIST   1 78.50 ± 2.10 78.70 ± 2.19 78.95 ± 2.08
+ 326   and 44.07% of message-improving cases. These later per-
+                                                                                                                                              2 90.08 ± .26 90.26 ± .35 90.19 ± .44
+ 327   centages retain the first-tick message condition; the rates                                                                    CIFAR10 1 49.92 ± .14 49.75 ± .68 49.72 ± .32
+ 328   are conditional on the intervention distribution and are not                                                                           2 54.18 ± .14 54.37 ± .26 54.42 ± .25
+ 329   conversion-wide frequencies.
+ 330      The mismatch also occurs in one teacher example with
+ 331   a large top-two margin. On MNIST validation graph
+                                                                                other graphs can offset these losses in aggregate accuracy,                                                                                                              357
+ 332   437, the teacher and ground truth are class 5, and the
+                                                                                so an improved mean can coexist with adverse individual                                                                                                                  358
+ 333   teacher’s top-two margin is 5.20378. A deterministic down-
+                                                                                decisions. These policies share extra event opportunities;                                                                                                               359
+ 334   ward event change reduces message MSE from 0.00604723
+                                                                                their realized event counts can differ.                                                                                                                                  360
+ 335   to 0.00604511, while the converted teacher-class margin
+ 336   changes from 1.97242 to −3.74764, flipping its prediction                4.3. Sensitivity does not select a superior calibration                                                                                                                  361
+ 337   from 5 to 4. The message norm improves, but Eq. (5) fails                      target                                                                                                                                                             362
+ 338   for the perturbed decision.
+ 339      The adverse rate is present under every selection rule,               Calibration targets do not show a consistent decision ad-                                                                                                                363
+ 340   but its magnitude depends on which eligible event changes.               vantage under matched resources (Table 3). Local calibra-                                                                                                                364
+ 341   Figure 4 separates two label-free coordinate rules and two               tion already recovers much of the one-tick accuracy gap.                                                                                                                 365
+ 342   amplitude directions at T = 1: on MNIST the adverse rate                 Switching to graph-output or mixed fitting produces small,                                                                                                               366
+ 343   is 30.6–36.2% under deterministic coordinates and 48.5–                  setting-dependent changes: output-minus-local differences                                                                                                                367
+ 344   49.0% under largest-residual selection, with corresponding               on full historical tests are +0.20/ + 0.18 percentage points                                                                                                             368
+ 345   CIFAR10 ranges of 20.4–24.7% and 38.5–42.6%. At the                      at MNIST T = 1/2, and −0.18/ + 0.19 on CIFAR10. Full-                                                                                                                    369
+ 346   graph level, 50.2% of MNIST and 42.2% of CIFAR10 graphs                  validation differences are −0.10/ − 0.13 and −0.27/ + 0.43.                                                                                                              370
+ 347   have at least one adverse message-improving intervention,                None of the tested objectives shows a consistent advantage,                                                                                                              371
+ 348   and 7.8%/12.7% have at least one resulting prediction change             and these differences do not isolate an optimal correction                                                                                                               372
+ 349   under these fixed rules.                                                 target.                                                                                                                                                                  373
+ 350      Finite residual allocation exhibits the same distinction.                 The single-teacher shared-prefix controls are also infor-                                                                                                            374
+ 351   Compared with local allocation, actual-message alloca-                   mative. Fitting logits at T = 1, 2 raises T = 1 accuracy                                                                                                                 375
+ 352   tion reduces normalized message MSE from 0.001378 to                     by 1.17 points relative to strong local fitting on each task,                                                                                                            376
+ 353   0.001280 on MNIST and from 0.002018 to 0.001717 on                       but CIFAR10 teacher agreement falls by 2.15 points. Their                                                                                                                377
+ 354   CIFAR10. On CIFAR10, 491 of 512 graphs improve this                      paired graph-sampling intervals for accuracy differences in-                                                                                                             378
+ 355   metric, yet 27 of those change from correct to incorrect. The            clude zero. A top-two ranking objective decreases its hard                                                                                                               379
+ 356   corresponding MNIST counts are 440 and 17. Gains on                      training loss yet moves predictions toward previously uncon-                                                                                                             380
+
+
+                                                                            5
+CVPR                                                                                                                                                                                                                          CVPR
+                                 CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
+
+
+
+                                                                                                                        Exact local T2 equality changes downstream decisions
+ 381   strained third classes: the fraction outside the teacher’s top
+                                                                                                                               MNIST                                                       CIFAR10
+ 382   two rises from 4.69% to 22.95% on MNIST and from 9.47%                                                                                                                +16
+
+
+
+
+                                                                              Graphs out of 128
+ 383   to 27.34% on CIFAR10. Protecting one competitor leaves                                     10
+                                                                                                                                                                                                               +10
+                                                                                                                 +6
+ 384   others in Eq. (5) unprotected. These controls identify distinct                                                                             +2
+                                                                                                   0
+ 385   limitations of proxy choice; they do not establish the opti-                                               3
+                                                                                                                                                    1
+                                                                                                                                                                                                                5
+ 386   mality of the chosen optimizer or rule out other task-aware                                              Halve                           Double
+                                                                                                                                                                               7
+                                                                                                                                                                            Halve                            Double
+ 387   objectives.                                                                                                         prediction changes            agreement gained             agreement lost
+                                                                                                       All eligible first-site codewords exchanged; local decoded tensors and local event counts are bitwise matched.
+ 388      The source threshold-iteration control provides a differ-
+ 389   ent correction mechanism. Calling its original moment es-              Figure 5. Exact local T = 2 equality does not preserve paired
+ 390   timates, 100 update steps and fallback rules yields one-tick           downstream decisions. Bars count changed predictions and gained
+ 391   accuracies of 71.48%/45.31% on MNIST/CIFAR10 with cal-                 or lost teacher agreement after all eligible exchanges. Both direc-
+ 392   ibration horizon one. At four ticks, the same fitted thresholds        tions preserve the local decoded tensor and event count but differ
+ 393   yield 91.21%/54.88%. This comparison establishes that high-            in absolute amplitude; training-only, 128 graphs per task.
+ 394   prefix fidelity and a severe first-prefix gap coexist under an
+ 395   alternative source-linked calibration, beyond the histogram
+                                                                              changes 6/128 MNIST and 16/128 CIFAR10 predictions,                                                                                              432
+ 396   preset. Its graph placement and eight-level configuration are
+                                                                              with equal numbers of teacher agreements gained and lost                                                                                         433
+ 397   adaptations; the results do not evaluate the original complete
+                                                                              on MNIST and a net gain of one on CIFAR10. The re-                                                                                               434
+ 398   source converter on its published benchmarks.
+                                                                              versed, amplitude-increasing exchange changes 2/128 and                                                                                          435
+                                                                              10/128 predictions. Mean aggregate accuracy therefore hides                                                                                      436
+ 399   Graph structure does not yield a unique aggregate deci-                paired decision changes in opposite directions. These are                                                                                        437
+ 400   sion signal. Using the task operator does not clearly out-             descriptive training-set effects with no policy selected on                                                                                      438
+ 401   perform feature-only or relabeled-operator controls. Actual-           their labels.                                                                                                                                    439
+ 402   message allocation is close to conjugated allocation on                    The same exchanges change whole-network activity:                                                                                            440
+ 403   MNIST (79.49% versus 79.30%), and equal to feature-only                halving all eligible events raises total T = 2 events by 3.41%                                                                                   441
+ 404   allocation on CIFAR10 (49.22%). These controls weaken an               on MNIST and 4.99% on CIFAR10, while the amplitude-                                                                                              442
+ 405   attribution of aggregate gains specifically to the correct adja-       increasing direction lowers CIFAR10 events by 1.33%. Thus                                                                                        443
+ 406   cency. They are especially necessary on superpixel graphs:             neither a matched local endpoint nor a fixed local event count                                                                                   444
+ 407   outdegree is fixed by construction, so its variance cannot             fixes global cost. The per-graph event totals are retained in                                                                                    445
+ 408   explain graph-to-graph changes. Reconstructed indegree                 the anonymous review package.                                                                                                                    446
+ 409   and neighborhood variables do vary, but adding them af-                    Because the exchanged codewords have different first-                                                                                        447
+ 410   ter teacher margin gives small in-sample incremental R2                prefix profiles and amplitudes, this experiment does not iso-                                                                                    448
+ 411   values (0.004–0.035 across tasks and prefixes), a descrip-             late event timing from amplitude. Its controlled statement                                                                                       449
+ 412   tive association rather than independent prediction evidence.          is narrower: terminal equality plus a fixed local event count                                                                                    450
+ 413   Inference-scale complexity analysis further explains why               does not determine the downstream trajectory or decisions.                                                                                       451
+ 414   local event counts cannot stand in for complete cost [3].              The first-site replacement changes the signal delivered to                                                                                       452
+                                                                              later layers; their nonlinear event states integrate it before                                                                                   453
+ 415   4.4. Identical local decoding can change the down-
+                                                                              local equality is restored. The scalar counterexample isolates                                                                                   454
+ 416         stream network
+                                                                              this state dependence, and the graph experiment shows that                                                                                       455
+ 417   Matching a local endpoint and local event count does not               the matched terminal tensor does not fix the downstream                                                                                          456
+ 418   determine the downstream network. The codeword test of                 trajectory. Likewise, lowering the first site’s unweighted                                                                                       457
+ 419   Eq. (8) uses 128 fixed training graphs per task; source re-            amplitude need not lower whole-network activity.                                                                                                 458
+ 420   play and forwarding verify bitwise equality of the first-site
+ 421   T = 2 decoded tensor and equal first-site nonzero event                4.5. Residual centering: a useful representation                                                                                                 459
+ 422   counts (Fig. 2). The eligible pool contains 84,905 first-site               change with a limited guarantee                                                                                                             460
+ 423   coordinates on MNIST and 132,899 on CIFAR10 for the                    A complementary GatedGCN diagnostic asks which part of a                                                                                         461
+ 424   halving exchange, and 55,510 and 63,500 for the doubling               residual state needs event encoding. Write hℓ = h0 + qℓ and                                                                                      462
+ 425   exchange. Legality, the local task graph, the terminal tensor,         eℓ = e0 + rℓ , where qℓ , rℓ accumulate nonnegative residual                                                                                     463
+ 426   and the local event count are fixed; first-prefix profile and          branch increments. For a projection,                                                                                                             464
+ 427   absolute amplitude are not.
+ 428      When all eligible first events are halved, total T = 2                                                             Wh_\ell +b=(Wh_0+b)+Wq_\ell .\label {eq:center}                                            (9)    465
+ 429   events increase from 4,351,056 to 4,499,463 on MNIST
+ 430   and from 6,876,233 to 7,219,258 on CIFAR10. Figure 5                   The static carrier can be cached, and one encoded residual                                                                                       466
+ 431   makes the decision effect explicit: the halving exchange               stream can serve the node consumers within a layer. Both                                                                                         467
+
+
+                                                                          6
+CVPR                                                                                                                                                               CVPR
+                                                    CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
+
+
+
+                                        Logit MSE                     Projection ADDs             4.6. Activity, simulation time, and applicability                 500
+                              1.0                          1.00
+       Centered / raw-input
+
+
+                                                                                                  Low event counts do not imply low simulation time in the pri-     501
+                                                           0.95                                   mary converter. It runs dense graph projections on every tick,    502
+                              0.9
+                                                           0.90                                   so zero events do not skip kernels. On an RTX 3060, syn-          503
+                                                                                    scale 1
+                              0.8                                                   scale 8
+                                                                                                  chronized cached-batch timings average 0.152/0.157 ms per         504
+                                                           0.85
+                                                                                                  graph for the MNIST/CIFAR10 ANN, versus 0.366/0.493               505
+                              0.7                          0.80                                   at T = 1 and 1.238/1.762 at T = 4 for the diagnostic con-         506
+                                                           0.75                                   verter. These are averages of three seed-level medians with       507
+                              0.6                                                                 32-graph batches and 30 interleaved repeats; they include         508
+                                    1   2              4          1      2                4       decoded-site accumulation, exclude transfer and loading,          509
+                                         Prefix T                        Prefix T                 and are not optimized deployment bounds. No chip energy           510
+                                                                                                  is measured.                                                      511
+       Figure 6. Centering lowers the measured logit-error and projection-
+                                                                                                     The distinction also matters for event allocation. Actual-     512
+       work ratios after an identical exact first layer. Ratios below one
+                                                                                                  message allocation costs 0.834/0.991 ms per graph versus          513
+       favor centered coding under shared channel thresholds. Full 45,000-
+       graph CIFAR10 training split, one GatedGCN teacher; ADDs count                             local allocation’s 0.668/0.806 in its own matched timing          514
+       prospective coded projections and exclude static carriers and the                          experiment. Exact local codeword exchanges can change             515
+       rest of inference.                                                                         downstream events even when first-site counts are fixed.          516
+                                                                                                  These measurements distinguish low T , local sparsity, and        517
+                                                                                                  the projected additions in Fig. 6 from complete inference         518
+                                                                                                  cost. A useful conversion must specify its event type, contin-    519
+ 468   compared implementations keep the first layer exact and                                    uous work, prefix requirements, and backend.                      520
+ 469   preserve the same raw residual skip. Centering changes sub-
+ 470   sequent coded inputs from raw states to residual increments.                               5. Discussion and Conclusion                                      521
+ 471   Equation (9) is an affine identity; caching and shared streams
+                                                                                                  The experiments expose two scoped information losses in           522
+ 472   are implementation opportunities, not new algebra.
+                                                                                                  reconstruction-based evaluation. The measured message             523
+ 473       Under identical shared thresholds, centering lowers logit                              norm omits the signed direction of an event error relative to     524
+ 474   MSE and prospective coded-projection additions at every                                    competing classes, while a matched local terminal tensor and      525
+ 475   tested prefix (T = 1, 2, 4) for both threshold scales (1 and                               event count admit different prefixes and amplitudes. Position     526
+ 476   8). At scale 1 and T = 1, teacher agreement rises by 2.04                                  recovery locates influential sites; hard-event changes show       527
+ 477   points, while projected additions fall from 9.099 × 1011                                   that improving a local metric can worsen the decision; exact      528
+ 478   to 6.650 × 1011 across the full training split. Agreement                                  codeword exchanges show that local terminal equality does         529
+ 479   improves in five of six comparisons, with a 0.0044-point                                   not determine the downstream trajectory.                          530
+ 480   decrease at scale 1, T = 4. This is constructive evidence                                     A useful design criterion follows from these distinctions.     531
+ 481   that choosing the encoded origin matters even with matched                                 Specify the downstream quantity preserved by an approxi-          532
+ 482   thresholds. It measures teacher fidelity and one arithmetic                                mation, then evaluate a realizable finite-event change under      533
+ 483   component for one training-split teacher, rather than test                                 fixed task computation. Report teacher agreement and ac-          534
+ 484   accuracy or total runtime. It also exemplifies the central                                 curacy separately, check every required prefix, and account       535
+ 485   distinction: a favorable representation and local work proxy                               for whole-network activity. Residual centering and task-          536
+ 486   still require separate decision and complete-cost validation.                              aware calibration illustrate why a representation identity or     537
+                                                                                                  a decision-driven objective still requires separate decision      538
+ 487       A separate three-teacher campaign evaluates centered con-                              and complete-cost validation.                                     539
+ 488   version on all 5,000 exposed CIFAR10 validation graphs. At                                    The core tests concern fixed residual GCNs on superpixel       540
+ 489   T = 4/8, centered mean accuracy is 70.53%/70.56%, within                                   graphs and use one teacher with previously used validation        541
+ 490   0.07/0.05 points of the strongest recorded controls. However,                              or training graphs. Effects on other teachers, tasks, convert-    542
+ 491   its matched dense implementation takes 6.245/12.049 ms                                     ers, and topologies remain open, as do a matched One-Spike        543
+ 492   per graph against 6.213/3.132 for the strongest controls at                                comparison and a feature-dependent gate perturbation study.       544
+ 493   those horizons. That campaign also retains nine unresolved                                 Within these conditions, the evaluation checklist makes deci-     545
+ 494   cost-accounting items. It therefore extends the evidence for                               sion, prefix, and activity visible where message fidelity and     546
+ 495   centered fidelity beyond training, while leaving a complete                                local terminal equality do not.                                   547
+ 496   efficiency advantage unestablished. These controls use their
+ 497   own calibration and head conventions; they are kept separate
+ 498   from the shared-threshold training comparison in Fig. 6 and
+ 499   from the historical test adapters in Table 1.
+
+
+                                                                                              7
+CVPR                                                                                                                                                   CVPR
+                                  CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
+
+
+
+ 548   LLM Usage Statement                                                             closed-loop CKA distillation. In International Conference on     602
+                                                                                       Machine Learning, pages 68392–68402, 2026. 2                     603
+ 549   OpenAI Codex was used for research-asset inspection, anal-                  [9] Yuhang Li, Shikuang Deng, Xin Dong, Ruihao Gong, and             604
+ 550   ysis and experimental code, evidence checks, mathemati-                         Shi Gu. A free lunch from ann: Towards efficient, accurate       605
+ 551   cal discussion, manuscript organization and drafting, figure-                   spiking neural networks calibration. In Proceedings of the       606
+ 552   generation code, and compilation checks. Independent fresh-                     38th International Conference on Machine Learning, pages         607
+ 553   context reviews of the revised manuscript were conducted                        6316–6325. PMLR, 2021. 1, 2                                      608
+ 554   with Kimi K3.1 Pro and DeepSeek V4.1 Flash. Earlier                        [10] Yuhang Li, Shikuang Deng, Xin Dong, and Shi Gu. Error-           609
+ 555   project stages used WorkBuddy for research planning and                         aware conversion from ANN to SNN via post-training param-        610
+ 556   execution assistance, and Claude and Grok for written re-                       eter calibration. International Journal of Computer Vision,      611
+ 557   views and suggestions. Historical records do not identify                       132:3586–3609, 2024. 2                                           612
+ 558   every underlying model version used in those earlier stages.               [11] Jiawei Liu, Lin Niu, Zhihang Yuan, Dawei Yang, Xinggang          613
+ 559   The scientific results reported here originate from recorded                    Wang, and Wenyu Liu. PD-Quant: Post-training quantization        614
+                                                                                       based on prediction difference metric. In Proceedings of         615
+ 560   numerical experiments and executable analyses; language-
+                                                                                       the IEEE/CVF Conference on Computer Vision and Pattern           616
+ 561   model suggestions are not treated as experimental evidence.                     Recognition, pages 24427–24437, 2023. 2                          617
+ 562   The figures in this manuscript are programmatically rendered               [12] Shyam A. Tailor, Javier Fernandez-Marques, and Nicholas D.       618
+ 563   from recorded data or explicitly labeled mathematical ex-                       Lane. Degree-Quant: Quantization-aware training for graph        619
+ 564   amples, without generated experimental imagery. Human                           neural networks. In International Conference on Learning         620
+ 565   authors remain responsible for verifying all claims, citations,                 Representations, 2021. 2                                         621
+ 566   code, and disclosures and for approving any submission.                    [13] Xiaofeng Wu, Velibor Bojkovic, Bin Gu, Kun Suo, and Kai          622
+                                                                                       Zou. Ftbc: Forward temporal bias correction for optimizing       623
+ 567   References                                                                      ann-snn conversion. In European Conference on Computer           624
+                                                                                       Vision, 2024. 1, 2                                               625
+ 568    [1] Velibor Bojkovic, Srinivas Anumasa, Giulia De Masi, Bin
+                                                                                  [14] Zeyu Zhu, Fanrong Li, Zitao Mo, Qinghao Hu, Gang Li, Ze-         626
+ 569        Gu, and Huan Xiong. Data driven threshold and potential
+                                                                                       jian Liu, Xiaoyao Liang, and Jian Cheng. A2 Q: Aggregation-      627
+ 570        initialization for spiking neural networks. In Proceedings of
+                                                                                       aware quantization for graph neural networks. In The Eleventh    628
+ 571        The 27th International Conference on Artificial Intelligence
+                                                                                       International Conference on Learning Representations, 2023.      629
+ 572        and Statistics, pages 4771–4779. PMLR, 2024. 2
+                                                                                       2                                                                630
+ 573    [2] Velibor Bojkovic, Xiaofeng Wu, and Bin Gu. Temporal mis-
+ 574        alignment in ANN-SNN conversion and its mitigation via
+ 575        probabilistic spiking neurons. In Proceedings of the 42nd
+ 576        International Conference on Machine Learning, pages 4791–
+ 577        4822. PMLR, 2025. 2, 3
+ 578    [3] Tong Bu, Maohua Li, and Zhaofei Yu. Inference-scale com-
+ 579        plexity in ANN-SNN conversion for high-performance and
+ 580        low-power applications. In Proceedings of the IEEE/CVF
+ 581        Conference on Computer Vision and Pattern Recognition,
+ 582        pages 24387–24397, 2025. 6
+ 583    [4] Vijay Prakash Dwivedi, Chaitanya K. Joshi, Anh Tuan Luu,
+ 584        Thomas Laurent, Yoshua Bengio, and Xavier Bresson. Bench-
+ 585        marking graph neural networks. Journal of Machine Learning
+ 586        Research, 24(43):1–48, 2023. 2
+ 587    [5] Zecheng Hao, Tong Bu, Jianhao Ding, Tiejun Huang, and
+ 588        Zhaofei Yu. Reducing ANN-SNN conversion error through
+ 589        residual membrane potential. In Proceedings of the AAAI
+ 590        Conference on Artificial Intelligence, pages 11–21, 2023. 2
+ 591    [6] Zihan Huang, Wei Fang, Tong Bu, Peng Xue, Zecheng Hao,
+ 592        Wenxuan Liu, Yuanhong Tang, Zhaofei Yu, and Tiejun Huang.
+ 593        Differential coding for training-free ann-to-snn conversion. In
+ 594        Proceedings of the 42nd International Conference on Machine
+ 595        Learning, pages 25235–25264, 2025. 1, 2
+ 596    [7] Sangwoo Hwang and Jaeha Kung. One-spike snn: Single-
+ 597        spike phase coding with base manipulation for ann-to-snn
+ 598        conversion loss minimization. IEEE Transactions on Emerg-
+ 599        ing Topics in Computing, 13(1):162–172, 2025. 2
+ 600    [8] Bozhou Li, Chubo Liu, Yan Ding, Yufeng Zhang, Zhuo Tang,
+ 601        and Kenli Li. High-fidelity ANN-to-SNN conversion via
+
+
+                                                                              8
+

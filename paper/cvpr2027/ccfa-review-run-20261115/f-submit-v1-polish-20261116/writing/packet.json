@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "brief": {
+    "question": "What do local reconstruction metrics omit about downstream decisions and finite-event computation in frozen graph-to-spike classifiers?",
+    "answer": "Exact message improvement and matched local terminal decoding can fail to preserve decisions, prefixes, and whole-network activity under controlled interventions.",
+    "audience": "CVPR reviewers and researchers working on ANN-to-SNN conversion, spiking graph learning, and efficient visual inference.",
+    "domain_bridge": "Graph propagation converts local activation errors into class-margin changes; finite-event codes add temporal state, so downstream decisions and activity must be audited directly.",
+    "priorities": {
+      "main": [
+        "conditional message-improvement/decision mismatch",
+        "exact local terminal equality/decision and activity mismatch"
+      ],
+      "supporting": [
+        "position recovery",
+        "calibration and centering controls"
+      ],
+      "diagnostic": [
+        "historical fidelity",
+        "runtime and activity analysis"
+      ]
+    },
+    "terminology": {
+      "decision_fidelity": "teacher prediction agreement and teacher-class margin",
+      "whole_network_activity": "total nonzero scalar events across the network",
+      "finite_event": "a legal signed event sequence over a fixed active-tick prefix"
+    },
+    "paragraph_plan": [],
+    "qualification_placement": [
+      {
+        "fact_id": "f-conditional-errors",
+        "repeat_when": "interpreting adverse-rate results or conditional frequency",
+        "home": "Abstract"
+      },
+      {
+        "fact_id": "f-temporal-equality",
+        "repeat_when": "interpreting temporal exchange results",
+        "home": "Analysis"
+      }
+    ],
+    "section_jobs": {
+      "Introduction": "State the finite-event failure mode, the two missing quantities, and the bounded audit.",
+      "Methods": "Define exact interventions, invariants, and selection rules.",
+      "Results": "Report decision and activity consequences with their evidence scope.",
+      "Discussion": "Interpret the two mismatches and delimit the evidence.",
+      "Conclusion": "Answer the opening question without adding a claim."
+    },
+    "style": {
+      "register": "concise top-conference scientific prose",
+      "avoid": [
+        "AI work-report tone",
+        "defensive negations",
+        "methodological inventory"
+      ]
+    },
+    "journal_requirements": {
+      "source": "execution-contract-v1.md",
+      "length": "CVPR main-conference 8-page body",
+      "explicit_author_requirements": [
+        "anonymous review mode",
+        "LLM Usage Statement preserved",
+        "no new experiments"
+      ]
+    },
+    "author_constraints": {
+      "edit_scope": [
+        "structural",
+        "prose-only"
+      ],
+      "protected_sections": [],
+      "protected_artifacts": [],
+      "declaration_mode": "preserve",
+      "allow_new_experiments": false,
+      "editing_round_budget": 3
+    }
+  },
+  "facts": [
+    {
+      "id": "f-conditional-errors",
+      "kind": "result",
+      "statement": "Legal one-event changes that reduce first-tick graph-message MSE worsen the teacher-class margin in 332/811 MNIST and 296/928 CIFAR10 message-improving interventions; rates are conditional on the intervention distribution.",
+      "status": "observed_verified",
+      "evidence": [
+        {
+          "path": "sources/data/hard_intervention_per_graph.csv",
+          "sha256": "d5dc5fe9aa7d3e4038bf1f6ac1e3c49b9cd29943bf31e8bfb12ba66d94b316e1"
+        }
+      ],
+      "model": "frozen DCGS-derived graph classifier",
+      "condition": "reported intervention/control setting",
+      "metric": "f-conditional-errors",
+      "value": "see manuscript",
+      "unit": "percent or count as reported",
+      "aggregation": "as reported in manuscript",
+      "uncertainty": "as reported in manuscript",
+      "measurement_scope": "reported data split and teacher setting"
+    },
+    {
+      "id": "f-temporal-equality",
+      "kind": "result",
+      "statement": "Two legal two-tick codewords have identical local decoded tensors and equal local event counts but can change downstream predictions and whole-network activity; first-prefix profile and absolute amplitude are uncontrolled.",
+      "status": "author_reported",
+      "evidence": [
+        {
+          "path": "sources/data/temporal_decision_effects.csv",
+          "sha256": "f9fb8c4bd6c6756b4a9bf0413c7d66c7fe642c91e532a74134a8eb359566fead"
+        }
+      ],
+      "model": "frozen DCGS-derived graph classifier",
+      "condition": "reported intervention/control setting",
+      "metric": "f-temporal-equality",
+      "value": "see manuscript",
+      "unit": "percent or count as reported",
+      "aggregation": "as reported in manuscript",
+      "uncertainty": "as reported in manuscript",
+      "measurement_scope": "reported data split and teacher setting"
+    },
+    {
+      "id": "f-historical-fidelity",
+      "kind": "result",
+      "statement": "Four or eight active ticks closely match teacher accuracy for the historical exposed-test adapters, with converted accuracy within the reported small deviations of 91.02/54.94/68.77 percent ANN baselines.",
+      "status": "author_reported",
+      "evidence": [
+        {
+          "path": "sources/data/hard_intervention_stratified.csv",
+          "sha256": "0ef8c9f4e86299536babbe26975350d8575b9137b96cfc331112d1e40af02880"
+        }
+      ],
+      "model": "frozen DCGS-derived graph classifier",
+      "condition": "reported intervention/control setting",
+      "metric": "f-historical-fidelity",
+      "value": "see manuscript",
+      "unit": "percent or count as reported",
+      "aggregation": "as reported in manuscript",
+      "uncertainty": "as reported in manuscript",
+      "measurement_scope": "reported data split and teacher setting"
+    },
+    {
+      "id": "f-position-recovery",
+      "kind": "result",
+      "statement": "The first node site closes 54.08 percent (MNIST) and 23.54 percent (CIFAR10) of the one-tick teacher-disagreement gap on exposed validation data.",
+      "status": "author_reported",
+      "evidence": [
+        {
+          "path": "sources/data/hard_intervention_stratified.csv",
+          "sha256": "0ef8c9f4e86299536babbe26975350d8575b9137b96cfc331112d1e40af02880"
+        }
+      ],
+      "model": "frozen DCGS-derived graph classifier",
+      "condition": "reported intervention/control setting",
+      "metric": "f-position-recovery",
+      "value": "see manuscript",
+      "unit": "percent or count as reported",
+      "aggregation": "as reported in manuscript",
+      "uncertainty": "as reported in manuscript",
+      "measurement_scope": "reported data split and teacher setting"
+    },
+    {
+      "id": "f-eval-checklist",
+      "kind": "limitation",
+      "statement": "The evidence supports a diagnostic reporting checklist covering decisions at every required prefix, the intervention rule and eligible set, and whole-network activity.",
+      "status": "author_reported",
+      "evidence": [
+        {
+          "path": "sources/main.tex",
+          "sha256": "efa5dba3efa114f48c9f42bab5a870dbede6f37c7cf526818a8dfd99d642738a"
+        }
+      ]
+    },
+    {
+      "id": "f-boundary",
+      "kind": "limitation",
+      "statement": "The study audits frozen DCGS-derived graph adapters on superpixel graphs with exposed splits and one teacher in the hard/temporal tests; it does not establish converter-wide frequency or a new converter.",
+      "status": "author_reported",
+      "evidence": [
+        {
+          "path": "sources/main.tex",
+          "sha256": "efa5dba3efa114f48c9f42bab5a870dbede6f37c7cf526818a8dfd99d642738a"
+        }
+      ]
+    }
+  ],
+  "internal": {
+    "note": "All numbers, equations, citation keys, split descriptions, and the LLM Usage Statement are protected. Comparator papers inform presentation only."
+  }
+}

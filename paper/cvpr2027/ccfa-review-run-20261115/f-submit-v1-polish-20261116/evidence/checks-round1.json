@@ -1,0 +1,20 @@
+{
+  "revision_round": 1,
+  "compiler": "TeX Live 2026 latexmk/pdflatex",
+  "main_pages": 8,
+  "supplement_pages": 4,
+  "undefined_citations": 0,
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "latex_errors": 0,
+  "protected_source_unchanged": false,
+  "figures_unchanged": true,
+  "numbers_checked": "core rates/intervals/counts preserved",
+  "lint_status": "semantic-review-required; candidates=4",
+  "lint_candidate_dispositions": [
+    "One-Spike non-identity is a necessary close comparison",
+    "continuous diagnostic definition retained for reproducibility",
+    "global-cost mismatch retained as the central finding",
+    "temporal amplication/first-prefix boundary retained beside the result"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "status": "semantic-review-required",
+  "errors": [],
+  "findings": [
+    {
+      "rule_id": "W003",
+      "file": "working\\main.tex",
+      "line": 44,
+      "original": "Event-level coding and timing determine what a consumer sees within a finite prefix. Differential coding with graded units and spiking neurons (DCGS) transmits activation changes and supplies a threshold-iteration procedure~\\cite{huang2025}; its public event unit underlies the graph adaptations studied here. One-Spike SNN is a single-spike phase-coding converter that also demonstrates GCN conversion~\\cite{hwang2025onespike}; our one-event changes are diagnostic interventions inside a DCGS-derived adapter and are neither an implementation of nor a matched comparison against that converter. Temporal-misalignment research shows that event order affects low-latency conversion~\\cite{bojkovic2025}, and closed-loop feature/output alignment has been studied at short horizons~\\cite{li2026cka}.",
+      "type": "possible repeated defense",
+      "suggested_action": "NARROW or MERGE; retain uncertainty",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    },
+    {
+      "rule_id": "W004",
+      "file": "working\\main.tex",
+      "line": 121,
+      "original": "For position analysis, an ideal causal ReLU replaces one selected converted activation while leaving the graph, weights, and incoming converted computation fixed. It is a continuous diagnostic. Restoring all six sites reproduces the ANN; an empty intervention reproduces the conversion. Group effects are nonadditive because interventions alter subsequent computation.",
+      "type": "claim-strength check",
+      "suggested_action": "VERIFY against comparison/interval/design; no automatic deletion",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    },
+    {
+      "rule_id": "W003",
+      "file": "working\\main.tex",
+      "line": 217,
+      "original": "The same exchanges change whole-network activity: halving all eligible events raises total $T=2$ events by 3.41\\% on MNIST and 4.99\\% on CIFAR10, while the amplitude-increasing direction lowers CIFAR10 events by 1.33\\%. Thus neither a matched local endpoint nor a fixed local event count fixes global cost. The per-graph event totals are retained in the anonymous review package.",
+      "type": "possible repeated defense",
+      "suggested_action": "NARROW or MERGE; retain uncertainty",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    },
+    {
+      "rule_id": "W004",
+      "file": "working\\main.tex",
+      "line": 219,
+      "original": "Because the exchanged codewords have different first-prefix profiles and amplitudes, this experiment does not isolate event timing from amplitude. Its controlled statement is narrower: terminal equality plus a fixed local event count does not determine the downstream trajectory or decisions. The first-site replacement changes the signal delivered to later layers; their nonlinear event states integrate it before local equality is restored. The scalar counterexample isolates this state dependence, and the graph experiment shows that the matched terminal tensor does not fix the downstream trajectory. Likewise, lowering the first site's unweighted amplitude need not lower whole-network activity.",
+      "type": "claim-strength check",
+      "suggested_action": "VERIFY against comparison/interval/design; no automatic deletion",
+      "status": "needs-human-judgment",
+      "confidence": "candidate"
+    }
+  ],
+  "checker_versions": {
+    "scripts/manuscript_lint.py": "1da3429448970adf1b3c75fffe902ad363be1876ab41d8a494e66ac87d8ca134",
+    "scripts/writing_adapter.py": "849cc9c4359720879214015f0a5f35c034b12b501f19caca9dcc5c80100c7187",
+    "references/scientific-writing-contract.md": "5ea84114722267e6e81689f75ebeb3dbb098bd01830d1efcd7d4041d20912f5e",
+    "references/module-quality-rubric.md": "f33b9bca553b63df199ef451c07c7b08b0c21bf1c03fbe7d9f4e420f525fd750"
+  },
+  "dependencies": [
+    {
+      "path": "sources\\data\\hard_intervention_per_graph.csv",
+      "sha256": "d5dc5fe9aa7d3e4038bf1f6ac1e3c49b9cd29943bf31e8bfb12ba66d94b316e1"
+    },
+    {
+      "path": "sources\\data\\temporal_decision_effects.csv",
+      "sha256": "f9fb8c4bd6c6756b4a9bf0413c7d66c7fe642c91e532a74134a8eb359566fead"
+    },
+    {
+      "path": "sources\\main.tex",
+      "sha256": "efa5dba3efa114f48c9f42bab5a870dbede6f37c7cf526818a8dfd99d642738a"
+    },
+    {
+      "path": "working\\main.tex",
+      "sha256": "cc8b3175167e39158ff419c48ad3b222026b0a746375b5e82ad2855f1f51238e"
+    },
+    {
+      "path": "writing\\visible-labels.json",
+      "sha256": "ae0c1a356bf5090c4b1c9317a7aaea68b63f11490ac75907cb948f456e9cd984"
+    },
+    {
+      "path": "working\\main.pdf",
+      "sha256": "b5ccd685e8cc6b09a3d2c1ffca2fa267e28b59a029b9a46887d40e404dc4a0ef"
+    },
+    {
+      "path": "sources\\data\\hard_intervention_per_graph.csv",
+      "sha256": "d5dc5fe9aa7d3e4038bf1f6ac1e3c49b9cd29943bf31e8bfb12ba66d94b316e1"
+    },
+    {
+      "path": "sources\\data\\temporal_decision_effects.csv",
+      "sha256": "f9fb8c4bd6c6756b4a9bf0413c7d66c7fe642c91e532a74134a8eb359566fead"
+    },
+    {
+      "path": "writing\\policy.json",
+      "sha256": "fb4a5b062a5fdd040fcb4a29bd741dfc786796833be90ac61b893109730270c4"
+    }
+  ],
+  "parser_limits": "Not a TeX engine: no macro expansion, conditional evaluation, bibliography rendering or OCR. Inspect rendered PDF and figures; provided labels are not proof of pixels.",
+  "semantic_checks": [
+    "facts/model-condition-direction/CI-vs-SD",
+    "observed-vs-planned",
+    "negative findings",
+    "paragraph reverse outline",
+    "Introduction-Conclusion scope",
+    "Results-Discussion roles",
+    "declaration routing",
+    "rendered captions/labels"
+  ]
+}

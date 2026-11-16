@@ -1,0 +1,15 @@
+# Clean-extraction test workspace is reproducible from the source ZIP and is not a deliverable.
+delivery/clean-extract/
+
+# LaTeX intermediate/build products are regenerated from the accepted sources.
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.xdv
+main.txt

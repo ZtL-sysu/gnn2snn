@@ -1,0 +1,85 @@
+{
+  "stage": "S9",
+  "status": "PASS_WITH_SCOPED_LIMITATION",
+  "main": {
+    "source": "working/main.tex",
+    "pdf": "working/main.pdf",
+    "source_sha256": "6b160fa447e2c1f453d9d7f91f57d9535671cb98e2b06a6f982cfbd451f5cf25",
+    "pdf_sha256": "23e1f84488c656832fc3d6839fcda07b122759f7311c1cf8b0a039049fe4d7bb",
+    "pages": 8,
+    "page_size": "612 x 792 pts (letter)",
+    "log_undefined_citations": 0,
+    "log_undefined_references": 0,
+    "log_overfull_hbox": 0,
+    "log_underfull_hbox": 0,
+    "log_latex_errors": 0,
+    "bibliography_entries": 14,
+    "figures": 6,
+    "tables": 3
+  },
+  "supplement": {
+    "source": "working/supplement.tex",
+    "pdf": "working/supplement.pdf",
+    "source_sha256": "435aedb434ba8e5c61a2f49dbdd6004afed4d9064552aee84c28a02b0d1b925b",
+    "pdf_sha256": "81af234f5b6e1d17f2a14e62aaf7e2e0873ba19234d7111df647a535298768e4",
+    "pages": 4,
+    "log_undefined_citations": 0,
+    "log_undefined_references": 0,
+    "log_overfull_hbox": 0,
+    "log_underfull_hbox": 0,
+    "log_latex_errors": 0,
+    "tables": 4
+  },
+  "extracted_text_checks": {
+    "main_title_present": true,
+    "anonymous_author_block_present": true,
+    "llm_usage_statement_present": true,
+    "llm_statement_names_openai_codex": true,
+    "llm_statement_names_kimi_k3_1_pro": true,
+    "llm_statement_names_deepseek_v4_1_flash": true,
+    "llm_statement_names_human_authors_responsibility": true,
+    "core_rate_40_94_present": true,
+    "core_rate_31_90_present": true,
+    "cifar10_activity_change_1_33_present": true,
+    "supplement_title_present": true,
+    "supplement_scope_sections_present": true
+  },
+  "anonymity": {
+    "main_pdf_author_line": "Anonymous CVPR submission",
+    "supplement_pdf_author_line": "Anonymous authors",
+    "university_affiliation_terms": 0,
+    "email_addresses": 0,
+    "author_names_outside_bibliography": 0
+  },
+  "protected_artifacts": {
+    "baseline_main_tex_sha256": "efa5dba3efa114f48c9f42bab5a870dbede6f37c7cf526818a8dfd99d642738a",
+    "figure_pdf_differences": [],
+    "data_file_changes_in_working": [],
+    "bibliography_unchanged": true,
+    "style_files_unchanged": true,
+    "supplement_source_unchanged": true,
+    "llm_statement_unchanged_from_baseline": true
+  },
+  "package_integrity": {
+    "source_zip": "delivery/gnn2snn-cvpr2027-source.zip",
+    "clean_extract": "delivery/clean-extract",
+    "source_hashes_match_extract": true,
+    "figure_hashes_match_extract": true,
+    "data_hashes_match_extract": true,
+    "artifact_hashes_match_extract": true,
+    "clean_main_compile_exit": 0,
+    "clean_main_pages": 8,
+    "clean_main_undefined_citations": 0,
+    "clean_main_undefined_references": 0,
+    "clean_main_overfull_hbox": 0,
+    "clean_main_latex_errors": 0,
+    "clean_supplement_compile_exit": 0,
+    "clean_supplement_pages": 4,
+    "normalized_pdf_text_equal_to_working": true
+  },
+  "scoped_limitation": {
+    "id": "L-S9-1",
+    "severity": "non-blocking",
+    "text": "No live CVPR 2027 submission portal or registration was available to this run; portal-specific form fields and upload statuses cannot be verified."
+  }
+}
