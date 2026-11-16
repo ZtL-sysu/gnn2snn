@@ -1,0 +1,85 @@
+{
+  "description": "CCFA R2 final manuscript and audit package; raw evidence files are listed in artifact-manifest.json.",
+  "files": [
+    {
+      "path": "artifact-manifest.json",
+      "bytes": 5245,
+      "sha256": "6293882b203959b4e9927be42ffeece9d732c88d5d6b6918e79e20e7f6299270"
+    },
+    {
+      "path": "verify_r1.py",
+      "bytes": 6457,
+      "sha256": "4cf3019d8e305bfc2311c0d48883996e3412e6954cf53c8197ffccb8d41cc3e8"
+    },
+    {
+      "path": "make_ccfa_tables.py",
+      "bytes": 5262,
+      "sha256": "d70164ebeb01cae28427c79cd3b06dd959de9b74ed8567585851d5fbc72f28ec"
+    },
+    {
+      "path": "make_ccfa_figures.py",
+      "bytes": 4442,
+      "sha256": "4ff53c441a95b8ebcc4b67cc43109fbf64e047ba9e40a06f85c162f542f07122"
+    },
+    {
+      "path": "revision-log.md",
+      "bytes": 2552,
+      "sha256": "590a641dfc359ea01185671ffb146da311dcb7f86c0f7d7689f8073a1111f521"
+    },
+    {
+      "path": "audit/verification.json",
+      "bytes": 4660,
+      "sha256": "1862bb1f4baeb4d55e6d2af388da69207093e033fc2decead6c760cc2730f44a"
+    },
+    {
+      "path": "source/main.tex",
+      "bytes": 38877,
+      "sha256": "c01a4658d57533e58549971f221c02b014e8b38bb48e624dd471e3456b792d86"
+    },
+    {
+      "path": "source/main.pdf",
+      "bytes": 530774,
+      "sha256": "86b746fc6f560c58469673d8dad03de30b4263c569d9a81bd1470242dfb548f3"
+    },
+    {
+      "path": "source/supplement.tex",
+      "bytes": 20151,
+      "sha256": "435aedb434ba8e5c61a2f49dbdd6004afed4d9064552aee84c28a02b0d1b925b"
+    },
+    {
+      "path": "source/supplement.pdf",
+      "bytes": 177499,
+      "sha256": "344b45d6475c4340894a8fc2ad0fe279e9d4865cd9b9b0a6a98da8a5ed4d6e21"
+    },
+    {
+      "path": "source/references.bib",
+      "bytes": 6182,
+      "sha256": "2e93b8b9a8c0cf98a64d3fababb2b43cb63126da83e8f9a3e73f572d7cb490cf"
+    },
+    {
+      "path": "data/hard_intervention_stratified.csv",
+      "bytes": 1137,
+      "sha256": "0ef8c9f4e86299536babbe26975350d8575b9137b96cfc331112d1e40af02880"
+    },
+    {
+      "path": "data/hard_intervention_per_graph.csv",
+      "bytes": 134,
+      "sha256": "d5dc5fe9aa7d3e4038bf1f6ac1e3c49b9cd29943bf31e8bfb12ba66d94b316e1"
+    },
+    {
+      "path": "data/temporal_decision_effects.csv",
+      "bytes": 688,
+      "sha256": "f9fb8c4bd6c6756b4a9bf0413c7d66c7fe642c91e532a74134a8eb359566fead"
+    },
+    {
+      "path": "figures/hard_intervention_stratified.pdf",
+      "bytes": 18897,
+      "sha256": "d42131fb22c642051ed004bc55f194d88adfff3b5659df0e83f0460e354b3168"
+    },
+    {
+      "path": "figures/temporal_decision_effects.pdf",
+      "bytes": 19309,
+      "sha256": "2cabd6cb93e80350a500a5f09ab5ffdcc10dfe9c678306634f01f43f4a567d0d"
+    }
+  ]
+}

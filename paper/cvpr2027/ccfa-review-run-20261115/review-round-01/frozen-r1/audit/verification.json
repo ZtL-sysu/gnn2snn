@@ -1,0 +1,37 @@
+{
+  "generated": "ccfa R1 verification",
+  "source_hashes": {
+    "main.tex": "f1e10278f87a2d018f09329bfaa6f8d7a7088d3023191c858f03f57dade0d60f",
+    "supplement.tex": "2c7343a64d7c1ef7c3cf201922b8c3abb38951ca240db28fb88c36701b686a73",
+    "references.bib": "2e93b8b9a8c0cf98a64d3fababb2b43cb63126da83e8f9a3e73f572d7cb490cf",
+    "main.pdf": "515ec766659837a4c11a1ad7559a3d146e28964edb2f181fbbda5a93ab274e55",
+    "supplement.pdf": "30867b38d27a76f73b4a0a43bf0d54d46e8498f8af615a87c885bf5fd180c7fc"
+  },
+  "table_hashes": {
+    "hard_intervention_per_graph.csv": "d5dc5fe9aa7d3e4038bf1f6ac1e3c49b9cd29943bf31e8bfb12ba66d94b316e1",
+    "hard_intervention_stratified.csv": "0ef8c9f4e86299536babbe26975350d8575b9137b96cfc331112d1e40af02880",
+    "temporal_decision_effects.csv": "f9fb8c4bd6c6756b4a9bf0413c7d66c7fe642c91e532a74134a8eb359566fead"
+  },
+  "checks": {
+    "main_pages": 8,
+    "main_anonymous": true,
+    "main_resolved": true,
+    "main_fonts_embedded": true,
+    "main_clean_log": true,
+    "supplement_pages": 4,
+    "supplement_anonymous": true,
+    "supplement_resolved": true,
+    "supplement_fonts_embedded": true,
+    "supplement_clean_log": true,
+    "llm_before_references": true,
+    "citation_keys": true,
+    "headline_mnist": true,
+    "headline_cifar10": true,
+    "strata_counts": true,
+    "temporal_counts": {
+      "mnist_halve": true,
+      "cifar_halve": true
+    },
+    "all_pass": true
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "status": "complete",
+  "scope": "derived publication assets only; no model inference or experiment",
+  "generator": "paper/cvpr2027/build_assets.py",
+  "generator_sha256": "c5d833686128936dbe782d558d8741ea7f898e35e486a8c20a526390fb159c11",
+  "source_files": [
+    {
+      "key": "ideal",
+      "path": "research/20261114_story/analysis/ideal/aggregate.csv",
+      "sha256": "8128cd708e3654436cf10396c8ef6fb921fc2665f6484f04ed3b0c89337e4e20",
+      "bytes": 62784
+    },
+    {
+      "key": "intervention_mnist",
+      "path": "research/20261115_decision/runs/intervention_v2/MNIST41/graphs.csv",
+      "sha256": "18d09a3778756a06997fc0db84d7cf66df4f8250fd58fa53a0a541d3ab07ffe4",
+      "bytes": 789277
+    },
+    {
+      "key": "intervention_cifar",
+      "path": "research/20261115_decision/runs/intervention_v2/CIFAR1041/graphs.csv",
+      "sha256": "6839a037ddf607007613cbdd87cebada0f14623fd166b638dccb42f07b25c10f",
+      "bytes": 798609
+    },
+    {
+      "key": "intervention_ci",
+      "path": "research/20261115_decision/analysis/phase3/intervention_cluster_ci.csv",
+      "sha256": "08bf8584ed0c6bcc1911c1e9d20b3f16cba71e2074a9cc7014fbd572e7fc380b",
+      "bytes": 457
+    },
+    {
+      "key": "centered_s1",
+      "path": "research/visual-graphs/takeover_20261112/affine_centered_shared_s1_tr1.json",
+      "sha256": "259ba716027d16dbaf7e314f30274d4ae65d0d69a95e294a8a88b11da70b4b81",
+      "bytes": 55919
+    },
+    {
+      "key": "first_analog_s1",
+      "path": "research/visual-graphs/takeover_20261112/affine_first_analog_shared_s1_tr1.json",
+      "sha256": "1c6007634a28b29b7978c24b32057cffc88eb1a5a55a129182eb6d0b72b43e38",
+      "bytes": 57216
+    },
+    {
+      "key": "centered_s8",
+      "path": "research/visual-graphs/takeover_20261112/affine_centered_shared_s8_tr1.json",
+      "sha256": "97a45c785e4cc6a96101d6aed488aefd4165f2560959a128f1dc3929433b9443",
+      "bytes": 54575
+    },
+    {
+      "key": "first_analog_s8",
+      "path": "research/visual-graphs/takeover_20261112/affine_first_analog_shared_s8_tr1.json",
+      "sha256": "bfba9c0073cc4be5e858a85ddb51f083c0b0b85bb29f42a8757261b59b7cdddc",
+      "bytes": 55297
+    },
+    {
+      "key": "temporal",
+      "path": "research/20261115_decision/analysis/prefix_diagnostic/endpoints.csv",
+      "sha256": "3d16e43f1e74d62fe4ca6f728163c647c4a91f6adcc3fb889beefc76f19b30f8",
+      "bytes": 3460
+    },
+    {
+      "key": "scalar_note",
+      "path": "research/20261115_decision/RQ1_diagnostic.md",
+      "sha256": "9794568bdacc2d575d5bcc66a8f3f94c105e0b4eb33f1d13ad54e91994bb7bec",
+      "bytes": 7237
+    },
+    {
+      "key": "teacher_fidelity",
+      "path": "research/20261114_story/analysis/confirmation/aggregate.csv",
+      "sha256": "1b81196b56f1768942531084fd4b6fb60224a25a4cbcb7628fbd6442d2a266c1",
+      "bytes": 126464
+    },
+    {
+      "key": "historical_calibration",
+      "path": "research/20261114_critical/analysis/endpoints.csv",
+      "sha256": "1149c24b7f8287bfcfc2994d941faf9ab953efae0385c59530026f04c5d06f3a",
+      "bytes": 25501
+    },
+    {
+      "key": "phase3_controls",
+      "path": "research/20261115_decision/analysis/phase3/main_table.csv",
+      "sha256": "10f6925ca5ead94f5ad6cde02cdd7155ffd2ad6528e40572cba8f6efe244f769",
+      "bytes": 4783
+    }
+  ],
+  "outputs": [
+    {
+      "path": "paper/cvpr2027/data/centered_shared_theta.csv",
+      "sha256": "1950f2a13b393442d3e25d2c8bac8aed87309bf9d9fa8253bce49eb38e64f812",
+      "bytes": 1447
+    },
+    {
+      "path": "paper/cvpr2027/data/hard_intervention_summary.csv",
+      "sha256": "31704123126a6ec9136d91275d97276a4826fdb9c8af4b7844abd6c394d51665",
+      "bytes": 789
+    },
+    {
+      "path": "paper/cvpr2027/data/historical_full_test.csv",
+      "sha256": "b3cc11cfda0fba66d179462ca66239b731d244ed3782a89531345b41e972080c",
+      "bytes": 45615
+    },
+    {
+      "path": "paper/cvpr2027/data/position_recovery_t1.csv",
+      "sha256": "f5b8e37954a691795453526cb1a5a39b5ba45fbd38db405e549526bad531fe51",
+      "bytes": 5110
+    },
+    {
+      "path": "paper/cvpr2027/data/results_context_compact.csv",
+      "sha256": "f047acbb47a197f7b01afc4605997b84dacc611bfc3c821f0b3b7ea45667499d",
+      "bytes": 5057
+    },
+    {
+      "path": "paper/cvpr2027/data/temporal_prefix_events.csv",
+      "sha256": "19db041dd1bc2f6a1be93f6015b9717f4e3474998eb03e6225c3a0d91221b0e5",
+      "bytes": 812
+    },
+    {
+      "path": "paper/cvpr2027/data/temporal_scalar_counterexample.csv",
+      "sha256": "fe1b925f5856942ade56832bccce0e6a689bee6ee70f2e5fd83afb201b5fa7a8",
+      "bytes": 281
+    },
+    {
+      "path": "paper/cvpr2027/figures/centered_shared_theta.pdf",
+      "sha256": "569f6eacef29791039832e5d70caedc0f675cd02f83cdc950e320022e2281a74",
+      "bytes": 21162
+    },
+    {
+      "path": "paper/cvpr2027/figures/centered_shared_theta.png",
+      "sha256": "22a201ba714a526e0ec4aff356d8f4d66283c851c7c58ac50c24cb9897c9340e",
+      "bytes": 131256
+    },
+    {
+      "path": "paper/cvpr2027/figures/centered_tradeoff.pdf",
+      "sha256": "4553653daba7aa4fb627d5565cce2762e8118d92e330ab15729461f85f0013dc",
+      "bytes": 17515
+    },
+    {
+      "path": "paper/cvpr2027/figures/centered_tradeoff.png",
+      "sha256": "4516a594bd844b54b4207742988c2bbea23e5be019f7740c53074c38bd5ab56d",
+      "bytes": 56199
+    },
+    {
+      "path": "paper/cvpr2027/figures/concept.pdf",
+      "sha256": "25c4af0ab590b709949c9791d6600e79891b20cb418ca13e872626d536aabfb7",
+      "bytes": 12852
+    },
+    {
+      "path": "paper/cvpr2027/figures/concept.png",
+      "sha256": "96271b19b98ba0142fac86f536bbbbff600caae7d3c8643fdd997cc8f8ae478c",
+      "bytes": 58534
+    },
+    {
+      "path": "paper/cvpr2027/figures/hard_intervention_mse_margin.pdf",
+      "sha256": "971fad2c60aba5901001e27ba93f3a3a304a6eabf17d70b0b3721ba216760ae8",
+      "bytes": 36034
+    },
+    {
+      "path": "paper/cvpr2027/figures/hard_intervention_mse_margin.png",
+      "sha256": "417beec73c2cb2e1d8b973a3296dbbfdedb1c42ad6bf74255e800308db7cb592",
+      "bytes": 231933
+    },
+    {
+      "path": "paper/cvpr2027/figures/message_decision.pdf",
+      "sha256": "d3f38f64c2b6c490435aca464e6fd6cb9de42e36de1d54e1b6dea5af46b927f9",
+      "bytes": 18349
+    },
+    {
+      "path": "paper/cvpr2027/figures/message_decision.png",
+      "sha256": "536d5d27c5e6e56b155d29af826ef8de4de76fc1ca2e9131130f11af274d4880",
+      "bytes": 74298
+    },
+    {
+      "path": "paper/cvpr2027/figures/position_recovery.pdf",
+      "sha256": "84091408618494ead8f541aceb74ba68a5222e897abb27bbaefb1ba81fb24ca2",
+      "bytes": 14444
+    },
+    {
+      "path": "paper/cvpr2027/figures/position_recovery.png",
+      "sha256": "55a53ff77f0554b1c02e95f27b8d3b4882b4aad68340734d55affbe900a4d9b3",
+      "bytes": 40818
+    },
+    {
+      "path": "paper/cvpr2027/figures/position_recovery_t1.pdf",
+      "sha256": "7a6244bac7f5179c04831cb51ac7cd3755c6d70ab86368a32ab15768161b1968",
+      "bytes": 18279
+    },
+    {
+      "path": "paper/cvpr2027/figures/position_recovery_t1.png",
+      "sha256": "e8cbf2301ec43bf745a98827bba4e170b07d7ebaa3f710c37c5895cfc9aba7b3",
+      "bytes": 120583
+    },
+    {
+      "path": "paper/cvpr2027/figures/temporal_equivalence.pdf",
+      "sha256": "4af34a474ef099fd6e7edb994e08412f0324c14f4d8d95bbecce5a47e26ebb42",
+      "bytes": 12201
+    },
+    {
+      "path": "paper/cvpr2027/figures/temporal_equivalence.png",
+      "sha256": "d7b6d1e736f0b1295843dc62f4727c7593c98ca21a47d36fe6f742c02141d1c2",
+      "bytes": 29762
+    },
+    {
+      "path": "paper/cvpr2027/figures/temporal_local_equal_global_events.pdf",
+      "sha256": "9b888693143e4b0d0e3ec2603c9eeec7ff24fc3592f9dc6b55f43c473fba63f9",
+      "bytes": 20789
+    },
+    {
+      "path": "paper/cvpr2027/figures/temporal_local_equal_global_events.png",
+      "sha256": "a756598cb74514ae6617269f22e82d7a88caf4d994b4d16a8b75d2aa5ddd66cc",
+      "bytes": 125766
+    },
+    {
+      "path": "paper/cvpr2027/figures/temporal_mechanism.pdf",
+      "sha256": "ef508b28da1c0315e814167754e74b30f7e41949879ae1694be7e07cc08d2e2c",
+      "bytes": 15860
+    },
+    {
+      "path": "paper/cvpr2027/figures/temporal_mechanism.png",
+      "sha256": "9d09db8e1a32f4f3f653edd8bff27b595bbac26e5c78951ab31125833da5b77b",
+      "bytes": 52720
+    }
+  ],
+  "qualifications": [
+    "three-seed means/SD use shared exposed full-validation examples",
+    "hard interventions are repeated within graph; intervals are graph-cluster bootstrap",
+    "centered profiles are label-free training diagnostics for one teacher; ADD is partial arithmetic only",
+    "temporal local decode equality is checked on 128 training graphs and does not imply equal global cost"
+  ],
+  "refinement_generator": "paper/cvpr2027/refine_assets.py",
+  "refinement_sha256": "6a69cccb5e2652d4fc403ef5a6873e6d54e240872dccc101bee453740f087c67"
+}

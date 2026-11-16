@@ -1,0 +1,62 @@
+[
+  {
+    "path": "audit/main.txt",
+    "bytes": 92419,
+    "sha256": "ded1521a1c057fac3b95d7a9d20569182ff14a67251c7a8ce28023547affaf75"
+  },
+  {
+    "path": "audit/supplement.txt",
+    "bytes": 32521,
+    "sha256": "76100c21a112d641df9fdfe8d9243c72b1ee10357aa5087342a197c924816d93"
+  },
+  {
+    "path": "audit/verification.json",
+    "bytes": 1462,
+    "sha256": "9e3090614c755f2a26015f15f464c1ae3ef81b5817df6982d00a1f29cbe63678"
+  },
+  {
+    "path": "data/hard_intervention_per_graph.csv",
+    "bytes": 134,
+    "sha256": "d5dc5fe9aa7d3e4038bf1f6ac1e3c49b9cd29943bf31e8bfb12ba66d94b316e1"
+  },
+  {
+    "path": "data/hard_intervention_stratified.csv",
+    "bytes": 1137,
+    "sha256": "0ef8c9f4e86299536babbe26975350d8575b9137b96cfc331112d1e40af02880"
+  },
+  {
+    "path": "data/temporal_decision_effects.csv",
+    "bytes": 688,
+    "sha256": "f9fb8c4bd6c6756b4a9bf0413c7d66c7fe642c91e532a74134a8eb359566fead"
+  },
+  {
+    "path": "revision-log.md",
+    "bytes": 2368,
+    "sha256": "54064a39195923dcec595da820e2bf30f4745c4257b5d9678dad56449e8fc971"
+  },
+  {
+    "path": "sources/main.pdf",
+    "bytes": 527241,
+    "sha256": "515ec766659837a4c11a1ad7559a3d146e28964edb2f181fbbda5a93ab274e55"
+  },
+  {
+    "path": "sources/main.tex",
+    "bytes": 38544,
+    "sha256": "f1e10278f87a2d018f09329bfaa6f8d7a7088d3023191c858f03f57dade0d60f"
+  },
+  {
+    "path": "sources/references.bib",
+    "bytes": 6182,
+    "sha256": "2e93b8b9a8c0cf98a64d3fababb2b43cb63126da83e8f9a3e73f572d7cb490cf"
+  },
+  {
+    "path": "sources/supplement.pdf",
+    "bytes": 177197,
+    "sha256": "30867b38d27a76f73b4a0a43bf0d54d46e8498f8af615a87c885bf5fd180c7fc"
+  },
+  {
+    "path": "sources/supplement.tex",
+    "bytes": 19895,
+    "sha256": "2c7343a64d7c1ef7c3cf201922b8c3abb38951ca240db28fb88c36701b686a73"
+  }
+]
