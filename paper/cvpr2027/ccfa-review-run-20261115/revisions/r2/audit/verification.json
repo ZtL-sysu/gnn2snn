@@ -1,10 +1,10 @@
 {
   "generated": "ccfa R2 verification",
   "source_hashes": {
-    "main.tex": "c01a4658d57533e58549971f221c02b014e8b38bb48e624dd471e3456b792d86",
+    "main.tex": "efa5dba3efa114f48c9f42bab5a870dbede6f37c7cf526818a8dfd99d642738a",
     "supplement.tex": "435aedb434ba8e5c61a2f49dbdd6004afed4d9064552aee84c28a02b0d1b925b",
     "references.bib": "2e93b8b9a8c0cf98a64d3fababb2b43cb63126da83e8f9a3e73f572d7cb490cf",
-    "main.pdf": "86b746fc6f560c58469673d8dad03de30b4263c569d9a81bd1470242dfb548f3",
+    "main.pdf": "c1b2de41cf281eb56299851d4cd0e636885f10b119b98c82c58682ba23e4e2d5",
     "supplement.pdf": "344b45d6475c4340894a8fc2ad0fe279e9d4865cd9b9b0a6a98da8a5ed4d6e21"
   },
   "table_hashes": {

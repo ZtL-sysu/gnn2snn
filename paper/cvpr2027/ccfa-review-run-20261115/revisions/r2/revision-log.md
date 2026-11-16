@@ -10,8 +10,9 @@ This revision incorporates the two independent frozen-R1 reviews in `../../revie
 - Defined whole-network activity as the total number of nonzero scalar events and used the term consistently.
 - Replaced the supplement's overbroad audit-package claim with an exact inventory. The anonymous package now contains the hard-intervention rows, temporal endpoint arrays, source scripts, derived tables, figures, manifests, and verification record. Results requiring checkpoints or historical aggregates are explicitly marked as outside this package.
 - Corrected the LLM Usage Statement to name Kimi K3.1 Pro and DeepSeek V4.1 Flash as the actual fresh-context reviewers and removed the inaccurate GPT-6-Luna claim.
-- Regenerated Figures 4 and 5 with larger labels, removed the pooled-count overlay from Figure 4, and moved Figure 5's legend outside the bars.
+- Regenerated Figures 4 and 5 with larger labels, removed the pooled-count overlay from Figure 4, and moved Figure 5's legend outside the bars. A third-party R3 audit found that the first R2 compilation still embedded the old figure files; the regenerated figures were synchronized into `source/figures/`, the main PDF was rebuilt, and all derived hashes were refreshed.
 - Compressed the conclusion while retaining the evidence boundaries and evaluation checklist.
+- Corrected the CIFAR10 doubling activity change from 1.31% to 1.33%, matching the bundled temporal CSV (6,876,233 to 6,785,108).
 
 ## Deferred large experiments
 

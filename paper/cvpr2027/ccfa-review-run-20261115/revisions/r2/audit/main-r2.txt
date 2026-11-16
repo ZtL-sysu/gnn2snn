@@ -327,7 +327,7 @@ CVPR                                                                            
 
 
                                                                                                    4
-CVPR                                                                                                                                                                                                                                                                   CVPR
+CVPR                                                                                                                                                                                                                                                 CVPR
                                  CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
 
 
@@ -335,126 +335,106 @@ CVPR                                                                            
 
                                                                               Adverse margin rate among MSE improvements (%)
        Table 2. Core hard-intervention result. Among changes lowering
-                                                                                                                                                               The adverse rate varies with the intervention rule
-       first-tick message MSE, how often does the final teacher-class
-                                                                                                                                                                 MNIST                                                           CIFAR10
-       margin worsen? Each task has 512 graphs and 2,048 attempts.                                                             50                                        48.5%          49.0%
-                                                                                                                                                                                   332/811 pooled                                                     296/928 pooled
-                                                                                                                                                                                                                                                           42.6%
-       T = 2 reuses the same interventions and MSE condition. Intervals                                                        40       36.2%
-                                                                                                                                                                                                                                           38.5%
-
-                                                                                                                                                         30.6%
-       are 95% graph-cluster bootstrap.                                                                                        30
-                                                                                                                                                                                                            24.7%
-                                                                                                                                                                                                                           20.4%
+       first-tick message MSE, how often does the final teacher-class                                                                                The adverse rate varies with the intervention rule
+       margin worsen? Each task has 512 graphs and 2,048 attempts.                                                                                        MNIST                                                     CIFAR10
+                                                                                                                                                                  48.5%         49.0%
+       T = 2 reuses the same interventions and MSE condition. Intervals                                                                                                                                                                    42.6%
+                                                                                                                               40                                                                                            38.5%
+                                                                                                                                      36.2%
+       are 95% graph-cluster bootstrap.                                                                                                             30.6%
+                                                                                                                                                                                                 24.7%
+                                                                                                                                                                                                               20.4%
                                                                                                                                20
 
-                                                                                                                               10
 
-        Task       Readout Adverse / improved Rate [interval] (%)                                                               0
-
-                                                                                                                                       rd −            rd +         idua
-                                                                                                                                                                         l−
-                                                                                                                                                                                     idua
-                                                                                                                                                                                          l+               rd −             rd +         idua
-                                                                                                                                                                                                                                              l−
-                                                                                                                                                                                                                                                       idua
-                                                                                                                                                                                                                                                            l+
-                                                                                                                                    Coo             Coo          Res              Res                   Coo             Coo           Res           Res
-        MNIST   T =1                   332 / 811 40.94 [37.28,44.57]                                                                          One teacher, 512 exposed validation graphs per task; repeated interventions are not independent samples.
-
-
+        Task       Readout Adverse / improved Rate [interval] (%)
+                                                                                                                                0
+                                                                                                                                     Coord −       Coord +      Residual −    Residual +        Coord −       Coord +     Residual −    Residual +
+        MNIST   T =1                   332 / 811 40.94 [37.28,44.57]
+                                                                                                                                    One teacher, 512 exposed validation graphs per task; repeated interventions are not independent samples.
                 T =2                   395 / 811 48.71 [45.02,52.42]
         CIFAR10 T = 1                  296 / 928 31.90 [28.66,35.31]
-                T =2                   409 / 928 44.07 [40.54,47.60]          Figure 4. Adverse margin rate among message-improving events at
+                T =2                   409 / 928 44.07 [40.54,47.60]
+                                                                              Figure 4. Adverse margin rate among message-improving events at
                                                                               T = 1, separated by coordinate rule and amplitude direction. The
                                                                               effect is present in every stratum and is stronger for largest-residual
-                                                                              selection. One teacher, 512 exposed validation graphs per task;
  314      Classical node classification provides a compatible but
-                                                                              repeated interventions are not independent samples.
- 315   distinct observation. Audited historical two-layer IF experi-
+                                                                              selection. One teacher, 512 exposed validation graphs per task;
+ 315   distinct observation. Audited historical two-layer IF experi-          repeated interventions are not independent samples.
  316   ments approach their own ANN teachers at longer horizons
- 317   when analytic bias compensation and membrane readout are               of MNIST and 42.2% of CIFAR10 graphs have at least one                                                                                                                                    354
- 318   used. For example, Cora reaches 80.16% at T = 8 against                adverse message-improving intervention, and 7.8%/12.7%                                                                                                                                    355
- 319   an 80.46% teacher. The decoder and time scale differ from              have at least one resulting prediction change under these                                                                                                                                 356
- 320   Table 1; supplementary results retain this separation rather           fixed rules.                                                                                                                                                                              357
- 321   than pooling the two as one converter.
-                                                                                 Finite residual allocation exhibits the same distinction.                                                                                                                              358
- 322   4.2. A better message can have a worse decision                        Compared with local allocation, actual-message alloca-                                                                                                                                    359
- 323        direction                                                         tion reduces normalized message MSE from 0.001378 to                                                                                                                                      360
-                                                                              0.001280 on MNIST and from 0.002018 to 0.001717 on                                                                                                                                        361
- 324   The controlled event changes directly test whether mes-
-                                                                              CIFAR10. On CIFAR10, 491 of 512 graphs improve this                                                                                                                                       362
- 325   sage improvement orders downstream decision quality. On
-                                                                              metric, yet 27 of those change from correct to incorrect. The                                                                                                                             363
- 326   MNIST, 811 of 2,048 interventions reduce the actual first-
-                                                                              corresponding MNIST counts are 440 and 17. Gains on                                                                                                                                       364
- 327   tick next-message MSE. Of these, 332 worsen the teacher-
-                                                                              other graphs can offset these losses in aggregate accuracy,                                                                                                                               365
- 328   class margin: 40.94%, with a graph-cluster bootstrap 95%
-                                                                              so an improved mean can coexist with adverse individual                                                                                                                                   366
- 329   interval of [37.28,44.57]%. On CIFAR10, the corresponding
-                                                                              decisions. These policies share extra event opportunities;                                                                                                                                367
- 330   count is 296 of 928, or 31.90% [28.66,35.31]%. The same
-                                                                              their realized event counts can differ.                                                                                                                                                   368
- 331   first-tick modifications worsen the T = 2 margin in 48.71%
- 332   and 44.07% of message-improving cases. These later per-                4.3. Sensitivity does not select a superior calibration                                                                                                                                   369
- 333   centages concern the same first-tick message metric, not                     target                                                                                                                                                                              370
+ 317   when analytic bias compensation and membrane readout are
+ 318   used. For example, Cora reaches 80.16% at T = 8 against                of MNIST and 42.2% of CIFAR10 graphs have at least one                                                                                                                  354
+ 319   an 80.46% teacher. The decoder and time scale differ from              adverse message-improving intervention, and 7.8%/12.7%                                                                                                                  355
+ 320   Table 1; supplementary results retain this separation rather           have at least one resulting prediction change under these                                                                                                               356
+ 321   than pooling the two as one converter.                                 fixed rules.                                                                                                                                                            357
+                                                                                 Finite residual allocation exhibits the same distinction.                                                                                                            358
+ 322   4.2. A better message can have a worse decision                        Compared with local allocation, actual-message alloca-                                                                                                                  359
+ 323        direction                                                         tion reduces normalized message MSE from 0.001378 to                                                                                                                    360
+ 324   The controlled event changes directly test whether mes-                0.001280 on MNIST and from 0.002018 to 0.001717 on                                                                                                                      361
+ 325   sage improvement orders downstream decision quality. On                CIFAR10. On CIFAR10, 491 of 512 graphs improve this                                                                                                                     362
+ 326   MNIST, 811 of 2,048 interventions reduce the actual first-             metric, yet 27 of those change from correct to incorrect. The                                                                                                           363
+ 327   tick next-message MSE. Of these, 332 worsen the teacher-               corresponding MNIST counts are 440 and 17. Gains on                                                                                                                     364
+ 328   class margin: 40.94%, with a graph-cluster bootstrap 95%               other graphs can offset these losses in aggregate accuracy,                                                                                                             365
+ 329   interval of [37.28,44.57]%. On CIFAR10, the corresponding              so an improved mean can coexist with adverse individual                                                                                                                 366
+ 330   count is 296 of 928, or 31.90% [28.66,35.31]%. The same                decisions. These policies share extra event opportunities;                                                                                                              367
+ 331   first-tick modifications worsen the T = 2 margin in 48.71%             their realized event counts can differ.                                                                                                                                 368
+ 332   and 44.07% of message-improving cases. These later per-
+ 333   centages concern the same first-tick message metric, not
+                                                                              4.3. Sensitivity does not select a superior calibration                                                                                                                 369
+
  334   cumulative two-tick message error. The rates are conditional
- 335   on the intervention distribution and should not be read as             Table 3 compares objectives under the same fitting resources.                                                                                                                             371
- 336   conversion-wide frequencies.                                           Local calibration already recovers much of the one-tick ac-                                                                                                                               372
- 337       The mismatch also occurs in one teacher example with               curacy gap. Switching to graph-output or mixed fitting pro-                                                                                                                               373
- 338   a large top-two margin. On MNIST validation graph                      duces small, setting-dependent changes: output-minus-local                                                                                                                                374
- 339   437, the teacher and ground truth are class 5, and the                 differences on full historical tests are +0.20/ + 0.18 per-                                                                                                                               375
- 340   teacher’s top-two margin is 5.20378. A deterministic down-             centage points at MNIST T = 1/2, and −0.18/ + 0.19 on                                                                                                                                     376
- 341   ward event change reduces message MSE from 0.00604723                  CIFAR10. Full-validation differences are −0.10/ − 0.13                                                                                                                                    377
- 342   to 0.00604511, while the converted teacher-class margin                and −0.27/ + 0.43. None of the tested objectives shows a                                                                                                                                  378
- 343   changes from 1.97242 to −3.74764, flipping its prediction              consistent advantage; these small differences do not isolate                                                                                                                              379
- 344   from 5 to 4. The message norm improves, but Eq. (5) fails              an optimal correction target.                                                                                                                                                             380
- 345   for the perturbed decision.                                                The single-teacher shared-prefix controls are also infor-                                                                                                                             381
- 346       Figure 4 decomposes the pooled count by the two label-             mative. Fitting logits at T = 1, 2 raises T = 1 accuracy                                                                                                                                  382
- 347   free coordinate rules and two amplitude directions. At                 by 1.17 points relative to strong local fitting on each task,                                                                                                                             383
- 348   T = 1, the adverse rate is 30.6–36.2% under determinis-                but CIFAR10 teacher agreement falls by 2.15 points. Their                                                                                                                                 384
- 349   tic coordinates and 48.5–49.0% under the largest-residual              paired graph-sampling intervals for accuracy differences in-                                                                                                                              385
- 350   rule on MNIST; the corresponding ranges are 20.4–24.7%                 clude zero. A top-two ranking objective decreases its hard                                                                                                                                386
- 351   and 38.5–42.6% on CIFAR10. Thus the polarity of the result             training loss yet moves predictions toward previously uncon-                                                                                                                              387
- 352   is stable across all four strata, but its magnitude depends on         strained third classes: the fraction outside the teacher’s top                                                                                                                            388
- 353   which eligible event is changed. At the graph level, 50.2%             two rises from 4.69% to 22.95% on MNIST and from 9.47%                                                                                                                                    389
+                                                                                    target                                                                                                                                                            370
+
+ 335   on the intervention distribution and should not be read as             Table 3 compares objectives under the same fitting resources.                                                                                                           371
+ 336   conversion-wide frequencies.                                           Local calibration already recovers much of the one-tick ac-                                                                                                             372
+ 337       The mismatch also occurs in one teacher example with               curacy gap. Switching to graph-output or mixed fitting pro-                                                                                                             373
+ 338   a large top-two margin. On MNIST validation graph                      duces small, setting-dependent changes: output-minus-local                                                                                                              374
+ 339   437, the teacher and ground truth are class 5, and the                 differences on full historical tests are +0.20/ + 0.18 per-                                                                                                             375
+ 340   teacher’s top-two margin is 5.20378. A deterministic down-             centage points at MNIST T = 1/2, and −0.18/ + 0.19 on                                                                                                                   376
+ 341   ward event change reduces message MSE from 0.00604723                  CIFAR10. Full-validation differences are −0.10/ − 0.13                                                                                                                  377
+ 342   to 0.00604511, while the converted teacher-class margin                and −0.27/ + 0.43. None of the tested objectives shows a                                                                                                                378
+ 343   changes from 1.97242 to −3.74764, flipping its prediction              consistent advantage; these small differences do not isolate                                                                                                            379
+ 344   from 5 to 4. The message norm improves, but Eq. (5) fails              an optimal correction target.                                                                                                                                           380
+ 345   for the perturbed decision.                                                The single-teacher shared-prefix controls are also infor-                                                                                                           381
+ 346       Figure 4 decomposes the pooled count by the two label-             mative. Fitting logits at T = 1, 2 raises T = 1 accuracy                                                                                                                382
+ 347   free coordinate rules and two amplitude directions. At                 by 1.17 points relative to strong local fitting on each task,                                                                                                           383
+ 348   T = 1, the adverse rate is 30.6–36.2% under determinis-                but CIFAR10 teacher agreement falls by 2.15 points. Their                                                                                                               384
+ 349   tic coordinates and 48.5–49.0% under the largest-residual              paired graph-sampling intervals for accuracy differences in-                                                                                                            385
+ 350   rule on MNIST; the corresponding ranges are 20.4–24.7%                 clude zero. A top-two ranking objective decreases its hard                                                                                                              386
+ 351   and 38.5–42.6% on CIFAR10. Thus the polarity of the result             training loss yet moves predictions toward previously uncon-                                                                                                            387
+ 352   is stable across all four strata, but its magnitude depends on         strained third classes: the fraction outside the teacher’s top                                                                                                          388
+ 353   which eligible event is changed. At the graph level, 50.2%             two rises from 4.69% to 22.95% on MNIST and from 9.47%                                                                                                                  389
 
 
                                                                           5
-CVPR                                                                                                                                                                                                                                  CVPR
+CVPR                                                                                                                                                                                                                        CVPR
                                    CVPR 2027 Submission. CONFIDENTIAL REVIEW COPY. DO NOT DISTRIBUTE.
 
 
 
-                                                                                                                          Exact local T2 equality changes downstream decisions
+                                                                                                                            Exact local T2 equality changes downstream decisions
        Table 3. Matched calibration on historical full tests. Accuracy (%),
-                                                                                                                               MNIST                                                              CIFAR10
-       mean ± sample SD across three teachers. All fitted objectives share                                                                                                        +16
-                                                                                                      15                                                                                                   prediction changes
-       693 offsets, 512 training graphs, and 64 updates. Each historical                                                                                                                                   teacher agreement gained
+       mean ± sample SD across three teachers. All fitted objectives share                                                         MNIST                                                       CIFAR10
+                                                                                                                                                                                 +16
+       693 offsets, 512 training graphs, and 64 updates. Each historical
 
 
 
 
                                                                                   Graphs out of 128
-                                                                                                                                                                                                                       +10
-                                                                                                                                                                                                           teacher agreement lost
+                                                                                                                                                                                                                   +10
                                                                                                       10
-       horizon was calibrated separately; this is not the shared-prefix                                        +6
-                                                                                                       5
-       experiment below.                                                                                                                             +2
+       horizon was calibrated separately; this is not the shared-prefix                                              +6
+                                                                                                                                                       +2
+       experiment below.                                                                               0
+                                                                                                                                                        1
+                                                                                                                      3
+                                                                                                                                                                                                                    5
+                                                                                                                                                                                   7
 
-                                                                                                       0
-
-
-                                                                                                      −5
-
-          Task        T          Local          Output          Mixed                                          Halve                                 Double                         Halve                               Double
+          Task        T          Local          Output          Mixed                                               Halve                           Double                      Halve                            Double
+                                                                                                                               prediction changes            agreement gained             agreement lost
                                                                                                            All eligible first-site codewords exchanged; local decoded tensors and local event counts are bitwise matched.
-
           MNIST   1 78.50 ± 2.10 78.70 ± 2.19 78.95 ± 2.08
                   2 90.08 ± .26 90.26 ± .35 90.19 ± .44                           Figure 5. Paired downstream decisions under exact local T = 2
           CIFAR10 1 49.92 ± .14 49.75 ± .68 49.72 ± .32                           equality. Bars count graphs whose prediction changes and whose
@@ -464,57 +444,46 @@ CVPR                                                                            
  390   to 27.34% on CIFAR10. Protecting one competitor leaves                     Training-only diagnostic, 128 graphs per task.
  391   others in Eq. (5) unprotected. These controls identify distinct
  392   limitations of proxy choice; they do not establish the opti-
- 393   mality of the chosen optimizer or rule out other task-aware                exactly equal first-site nonzero event counts. The eligible                                                                                          428
-
- 394   objectives.                                                                pool contains 84,905 first-site coordinates on MNIST and                                                                                             429
-                                                                                  132,899 on CIFAR10 for the halving exchange, and 55,510                                                                                              430
- 395      The source threshold-iteration control provides a differ-
-                                                                                  and 63,500 for the doubling exchange. The exchange fixes                                                                                             431
- 396   ent correction mechanism. Calling its original moment es-
-                                                                                  source legality, the local task graph, the exact local terminal                                                                                      432
- 397   timates, 100 update steps and fallback rules yields one-tick
-                                                                                  tensor, and the local event count; it does not match first-                                                                                          433
- 398   accuracies of 71.48%/45.31% on MNIST/CIFAR10 with cal-
-                                                                                  prefix profile or absolute amplitude.                                                                                                                434
- 399   ibration horizon one. At four ticks, the same fitted thresholds
- 400   yield 91.21%/54.88%. This comparison establishes that high-                    When all eligible first events are halved, total T = 2                                                                                           435
-
- 401   prefix fidelity and a severe first-prefix gap coexist under an             events increase from 4,351,056 to 4,499,463 on MNIST                                                                                                 436
-
- 402   alternative source-linked calibration, beyond the histogram                and from 6,876,233 to 7,219,258 on CIFAR10. Figure 5                                                                                                 437
-
- 403   preset. Its graph placement and eight-level configuration are              makes the decision effect explicit: the halving exchange                                                                                             438
-
- 404   adaptations; the results do not evaluate the original complete             changes 6/128 MNIST and 16/128 CIFAR10 predictions,                                                                                                  439
-
- 405   source converter on its published benchmarks.                              with equal numbers of teacher agreements gained and lost                                                                                             440
-                                                                                  on MNIST and a net gain of one on CIFAR10. The re-                                                                                                   441
-                                                                                  versed, amplitude-increasing exchange changes 2/128 and                                                                                              442
- 406   Does graph structure add a decision signal? The actual-                    10/128 predictions. Mean aggregate accuracy therefore hides                                                                                          443
- 407   message objective uses the task operator, whereas the feature-             paired decision changes in opposite directions. These are                                                                                            444
- 408   only control omits propagation and the conjugated control                  descriptive training-set effects with no policy selected on                                                                                          445
- 409   relabels it relative to features. Actual-message allocation is             their labels.                                                                                                                                        446
- 410   close to conjugated allocation on MNIST (79.49% versus                         The same exchanges change whole-network activity:                                                                                                447
- 411   79.30%), and equal to feature-only allocation on CIFAR10                   halving all eligible events raises total T = 2 events by 3.41%                                                                                       448
- 412   (49.22%). These controls weaken an attribution of aggregate                on MNIST and 4.99% on CIFAR10, while the amplitude-                                                                                                  449
- 413   gains specifically to using the correct adjacency. They are                increasing direction lowers CIFAR10 events by 1.31%. Thus                                                                                            450
- 414   especially necessary on superpixel graphs: outdegree is fixed              neither a matched local endpoint nor a fixed local event count                                                                                       451
- 415   by construction, so outdegree variance cannot explain graph-               fixes global cost. The per-graph event totals are retained in                                                                                        452
- 416   to-graph changes. Reconstructed indegree and neighbor-                     the anonymous review package.                                                                                                                        453
- 417   hood variables do vary, but adding them after teacher margin                   Because the exchanged codewords have different first-                                                                                            454
- 418   gives small in-sample incremental R2 values (0.004–0.035                   prefix profiles and amplitudes, this experiment does not iso-                                                                                        455
- 419   across tasks and prefixes). This is a descriptive association,             late event timing from amplitude. Its controlled statement                                                                                           456
- 420   rather than independent prediction evidence. Inference-scale               is narrower: terminal equality plus a fixed local event count                                                                                        457
- 421   complexity analysis further explains why local event counts                does not determine the downstream trajectory or decisions.                                                                                           458
- 422   cannot stand in for complete cost [3].                                     The first-site replacement changes the signal delivered to                                                                                           459
-                                                                                  later layers; their nonlinear event states integrate it before                                                                                       460
+ 393   mality of the chosen optimizer or rule out other task-aware                exactly equal first-site nonzero event counts. The eligible                                                                                428
+ 394   objectives.                                                                pool contains 84,905 first-site coordinates on MNIST and                                                                                   429
+ 395      The source threshold-iteration control provides a differ-               132,899 on CIFAR10 for the halving exchange, and 55,510                                                                                    430
+ 396   ent correction mechanism. Calling its original moment es-                  and 63,500 for the doubling exchange. The exchange fixes                                                                                   431
+ 397   timates, 100 update steps and fallback rules yields one-tick               source legality, the local task graph, the exact local terminal                                                                            432
+ 398   accuracies of 71.48%/45.31% on MNIST/CIFAR10 with cal-                     tensor, and the local event count; it does not match first-                                                                                433
+ 399   ibration horizon one. At four ticks, the same fitted thresholds            prefix profile or absolute amplitude.                                                                                                      434
+ 400   yield 91.21%/54.88%. This comparison establishes that high-                    When all eligible first events are halved, total T = 2                                                                                 435
+ 401   prefix fidelity and a severe first-prefix gap coexist under an             events increase from 4,351,056 to 4,499,463 on MNIST                                                                                       436
+ 402   alternative source-linked calibration, beyond the histogram                and from 6,876,233 to 7,219,258 on CIFAR10. Figure 5                                                                                       437
+ 403   preset. Its graph placement and eight-level configuration are              makes the decision effect explicit: the halving exchange                                                                                   438
+ 404   adaptations; the results do not evaluate the original complete             changes 6/128 MNIST and 16/128 CIFAR10 predictions,                                                                                        439
+ 405   source converter on its published benchmarks.                              with equal numbers of teacher agreements gained and lost                                                                                   440
+                                                                                  on MNIST and a net gain of one on CIFAR10. The re-                                                                                         441
+                                                                                  versed, amplitude-increasing exchange changes 2/128 and                                                                                    442
+ 406   Does graph structure add a decision signal? The actual-                    10/128 predictions. Mean aggregate accuracy therefore hides                                                                                443
+ 407   message objective uses the task operator, whereas the feature-             paired decision changes in opposite directions. These are                                                                                  444
+ 408   only control omits propagation and the conjugated control                  descriptive training-set effects with no policy selected on                                                                                445
+ 409   relabels it relative to features. Actual-message allocation is             their labels.                                                                                                                              446
+ 410   close to conjugated allocation on MNIST (79.49% versus                         The same exchanges change whole-network activity:                                                                                      447
+ 411   79.30%), and equal to feature-only allocation on CIFAR10                   halving all eligible events raises total T = 2 events by 3.41%                                                                             448
+ 412   (49.22%). These controls weaken an attribution of aggregate                on MNIST and 4.99% on CIFAR10, while the amplitude-                                                                                        449
+ 413   gains specifically to using the correct adjacency. They are                increasing direction lowers CIFAR10 events by 1.33%. Thus                                                                                  450
+ 414   especially necessary on superpixel graphs: outdegree is fixed              neither a matched local endpoint nor a fixed local event count                                                                             451
+ 415   by construction, so outdegree variance cannot explain graph-               fixes global cost. The per-graph event totals are retained in                                                                              452
+ 416   to-graph changes. Reconstructed indegree and neighbor-                     the anonymous review package.                                                                                                              453
+ 417   hood variables do vary, but adding them after teacher margin                   Because the exchanged codewords have different first-                                                                                  454
+ 418   gives small in-sample incremental R2 values (0.004–0.035                   prefix profiles and amplitudes, this experiment does not iso-                                                                              455
+ 419   across tasks and prefixes). This is a descriptive association,             late event timing from amplitude. Its controlled statement                                                                                 456
+ 420   rather than independent prediction evidence. Inference-scale               is narrower: terminal equality plus a fixed local event count                                                                              457
+ 421   complexity analysis further explains why local event counts                does not determine the downstream trajectory or decisions.                                                                                 458
+ 422   cannot stand in for complete cost [3].                                     The first-site replacement changes the signal delivered to                                                                                 459
+                                                                                  later layers; their nonlinear event states integrate it before                                                                             460
  423   4.4. Identical local decoding can change the down-
-                                                                                  local equality is restored. The scalar counterexample isolates                                                                                       461
+                                                                                  local equality is restored. The scalar counterexample isolates                                                                             461
  424         stream network
-                                                                                  this state dependence, and the graph experiment shows that                                                                                           462
- 425   The codeword test of Eq. (8) uses 128 fixed training graphs                the matched terminal tensor does not fix the downstream                                                                                              463
- 426   of each task. Source replay and actual forwarding verify                   trajectory. Likewise, lowering the first site’s unweighted                                                                                           464
- 427   bitwise equality of the first-site T = 2 decoded tensor, and               amplitude need not lower whole-network activity.                                                                                                     465
+                                                                                  this state dependence, and the graph experiment shows that                                                                                 462
+ 425   The codeword test of Eq. (8) uses 128 fixed training graphs                the matched terminal tensor does not fix the downstream                                                                                    463
+ 426   of each task. Source replay and actual forwarding verify                   trajectory. Likewise, lowering the first site’s unweighted                                                                                 464
+ 427   bitwise equality of the first-site T = 2 decoded tensor, and               amplitude need not lower whole-network activity.                                                                                           465
 
 
                                                                               6

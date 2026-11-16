@@ -26,7 +26,7 @@
 - 分层 adverse rate：MNIST deterministic 30.6%/36.2%、residual 49.0%/48.5%；CIFAR10 deterministic 20.4%/24.7%、residual 42.6%/38.5%。
 - 图级：MNIST any adverse 50.2%、any prediction change 7.8%；CIFAR10 为 42.2% 和 12.7%。
 - 时间 codeword exchange：halving 的 eligible 数为 84,905（MNIST）和 132,899（CIFAR10）；doubling 为 55,510 和 63,500；所有 endpoint 的 local decode max error 为 0，局部事件数逐图相同。
-- 全局事件：halving 增加 3.41%/4.99%；doubling 在 MNIST 增加 0.81%，在 CIFAR10 降低 1.31%。
+- 全局事件：halving 增加 3.41%/4.99%；doubling 在 MNIST 增加 0.81%，在 CIFAR10 降低 1.33%（6,876,233 → 6,785,108）。
 - 校准对照只支持“在所测试目标中没有一致优势”，不声称最优校准目标。
 - 历史全测试与节点分类结果均明确标为暴露数据或上下文证据，不充当新盲测。
 
@@ -52,7 +52,7 @@ R2 已采纳的修改：
 - 主 PDF：8 页正文加 1 页 LLM statement 与 references；结论结尾只占第 8 页少量空间，statement 与参考文献从下一页开始。CVPR 的 8 页正文限制按内容与 statement/references 分开核算。
 - 补充 PDF：4 页。
 - 自动化验证 `audit/verification.json` 全部通过：匿名性、resolved references/citations、嵌入字体、clean logs、LLM statement 位置、核心数字、strata、temporal counts、30 个原始/端点/脚本文件哈希、4 组 temporal endpoint 不变量、PD-Quant/One-Spike/temporal/activity 措辞、LLM 披露和 artifact claim。
-- 两张重画图已人工目视检查，按双栏缩放仍可辨认。
+- 两张重画图已同步进入 `source/figures/` 并重新编译进主 PDF；人工目视检查确认按双栏缩放仍可辨认，pooled overlay 已移除、图例位于绘图区外。
 - 所有历史原件、原始实验数据和 R1 冻结包均未覆盖。
 
 ## 投稿前仍存在的实质性问题
