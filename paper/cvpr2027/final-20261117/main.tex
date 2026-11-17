@@ -37,8 +37,8 @@ Our experiments reveal that neither form of local fidelity is sufficient to dete
 These observations motivate a broader evaluation principle: conversion quality should be assessed at the level at which the converted model is required to operate. We therefore examine teacher agreement and task accuracy separately, measure decisions at the required prefixes, and distinguish local event counts from whole-network activity and measured execution cost. Complementary studies of calibration objectives and residual centering show how this perspective informs the evaluation of conversion strategies.
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/concept.png}
-\caption{A finite-event audit beyond local reconstruction. We examine a frozen graph classifier converted to a finite-event computation. (a) A legal one-event modification can reduce the actual next-message error while worsening the teacher-class margin or changing the prediction. The highlighted example is an executed MNIST intervention; displayed margins are rounded, and Sec.~\ref{sec:decision-results} reports the full values. The boundary drawing is schematic. (b) Source-verified codewords can share an identical local decoded endpoint and event count while presenting different intermediate prefixes and absolute amplitudes. Exchanging all eligible codewords changes predictions and whole-network activity on 128 training graphs per task. The two tests separate decision fidelity, prefix fidelity, and global activity from local reconstruction.}
+\includegraphics[width=0.88\textwidth]{figures/concept.png}
+\caption{A finite-event audit beyond reconstruction. The input graph is illustrative. We study a frozen four-layer residual graph classifier and intervene at the first node site N1. (a) A legal one-event change can reduce the next-message error while worsening the teacher-class margin; the rounded MNIST graph-437 values are detailed in Sec.~\ref{sec:decision-results}, and the boundary sketch is schematic. Percentages are adverse margins among message-improving interventions. (b) Source-verified codewords share the decoded endpoint and event count but differ in prefixes and amplitude. Exchanging them changes predictions and global nonzero event counts on 128 training graphs per task; this is not a timing-only test. The audits separate decision, prefix, and network-level fidelity from local reconstruction.}
 \label{fig:concept}
 \end{figure*}
 
@@ -302,7 +302,7 @@ The evidence concerns frozen superpixel graph classifiers and signed graded-even
 Graph-to-spike conversion requires more than accurate local reconstruction. Through realizable finite-event interventions, we show that reducing graph-message error can worsen a classifier's decision, and that identical local decoded endpoints with equal event counts can still produce different downstream predictions and activity. Directional class margins and the stateful event recurrence explain why these local measures omit decision-relevant and temporal information. The audit therefore motivates evaluating conversion through prefix-wise decision fidelity and whole-network activity alongside reconstruction accuracy.
 
 \section*{LLM Usage Statement}
-OpenAI's ChatGPT (GPT models) was used to assist in editing and refining the original manuscript content, particularly to improve its clarity, organization, and presentation.
+OpenAI's ChatGPT (GPT models) was used to assist in editing and refining the original manuscript content, particularly to improve its clarity, organization, and presentation. OpenAI's image generation tool was used in the preparation of the conceptual illustration in Figure~1. The authors verified the depicted scientific content and numerical values against the recorded experimental results; the illustration is schematic and did not generate experimental data.
 
 \setlength{\bibsep}{0pt}
 \fontsize{8.5}{9.5}\selectfont

@@ -25,8 +25,11 @@
 
 ## 成稿状态
 
-- 源文件在 paper/cvpr2027/final-20261117。匿名审稿 PDF 为 main_submission.pdf。正文、LLM 声明和 24 篇参考文献共 8 页。图 1 已替换为本次提供的总览图，并保留其余机制图与结果图。补充材料 4 页。
-- 除新提供的图 1 外，其余图由 scripts/make_figures.py 从记录表绘制；新图作为作者提供的概览图，画面中的数字与正文记录一致。
+- 源文件在 paper/cvpr2027/final-20261117。匿名审稿 PDF 为 main_submission.pdf。正文 8 页。图 1 已按作者第二次指定的 `C:\Users\xhf\Downloads\图到脉冲转换审计框架与关键发现.png` 替换，并保留其余机制图与结果图。补充材料 4 页。
+- 已核对本地保存的 CVPR2027-v1 官方模板：最终目录中的 `cvpr.sty` 与官方模板以及 `paper/cvpr2027/cvpr.sty` 的 SHA-256 一致，`ieeenat_fullname.bst` 也与官方文件一致。文档类保持 `article[10pt,twocolumn,letterpaper]`，使用 `\usepackage[review]{cvpr}`、匿名作者、CVPR 2027 配置，未修改官方样式文件。
+- 图 1 保留作者指定构图和配色，仅作局部科学文字修订：Four residual GCN layers、N1 干预位置、illustrative input、Teacher-class margin、Global nonzero event counts。图注同步说明几何边界为示意、百分比含义、局部码字交换不是纯时序因果关系、128 张训练图。图注和数据仍与正文一致。
+- LLM Usage Statement 已加入作者要求的图像生成工具披露，并说明数值和内容由作者核对；Figure 1 为概念示意图，未生成实验数据。
+- 最终图注较长，跨栏图实际落在第 3 页顶部（Introduction 首次引用之后、最接近的合法跨栏位置），正文仍严格保持 8 页；没有通过缩小字号、改变页边距或增加空白来凑页数。
 - 作者栏为 Anonymous CVPR submission，PDF 元数据 author 为空。未改登记作者信息。
 - 最终标题是 Beyond Reconstruction: Auditing Decision and Temporal Fidelity in Graph-to-Spike Conversion。可直接复制的纯文本标题和摘要见 `openreview_title_abstract.txt`。
 
@@ -38,3 +41,4 @@
 - 验证集和测试集在开发中已经使用，不能写成新的盲测。
 - 硬干预和码字实验各用一个教师。码字交换同时改变前缀和绝对幅度，不能解释成纯时序因果。
 - 位置恢复不是有限事件修复。中心化没有端到端速度优势。这次没有补实验。
+- 目标文件建议补充 Method 协议表、Decision/Temporal 结果表、经典图结果表并扩充正文至八页。现有审稿后的正文已经达到八页；在无新实验且要求保持标题摘要和科学主体稳定的前提下，本次没有再加入可能与现有表格重复的协议表或重排大段正文，以免超出八页或引入新的口径风险。
