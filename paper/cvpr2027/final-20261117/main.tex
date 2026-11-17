@@ -111,7 +111,7 @@ apart from ties. In a fixed downstream linear region, write $\Delta z=J\operator
 \end{equation}
 for nonzero rows; a zero row imposes no restriction. A smaller norm tightens this worst-case bound but does not order perturbations in different directions. The bound assumes a fixed local $J$; hard-event changes can leave that region. Our interventions instead use Eq.~\eqref{eq:margin} and replay the full hard forward pass.
 
-For each intervention, the teacher-class margin is the teacher class minus the largest competing converted logit; the competitor may change. Margin deterioration, prediction change, and ground-truth error differ, so we report teacher agreement and accuracy separately.
+For each intervention, the teacher-class margin is defined as the converted logit of the teacher's predicted class minus the largest competing converted logit. The competitor may change. Margin deterioration, prediction change, and ground-truth error differ, so we report teacher agreement and accuracy separately.
 
 Under a nonsaturating constant-drive integrator, rate error scales as $\theta/T$ and membrane readout removes final count quantization. With a valid hidden-error envelope, Eq.~\eqref{eq:sufficient} gives a sufficient, margin-dependent budget rather than a universal graph bound; the supplement states the conditions.
 
@@ -168,10 +168,12 @@ Calibration controls share teacher weights, thresholds, 512 training graphs, 693
 \subsection{Where short-prefix conversion loses accuracy}
 Visual graph classifiers recover nearly their ANN accuracy at four and eight ticks, but one tick leaves a large gap (Table~\ref{tab:main}). We audit the early prefixes, where local errors pass through the remaining graph computation.
 
-\begin{table}[t]
+\begin{table*}[t]
 \caption{Full-test accuracy (\%), mean $\pm$ sample SD over three teacher seeds on the same exposed 10{,}000 graphs. GatedGCN uses a separate hybrid adapter; its one-tick endpoint is unavailable.}
 \label{tab:main}
-\centering\small
+\centering
+\begin{minipage}{0.62\textwidth}
+\small
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{lrrrr}\toprule
 Task / teacher & ANN & $T{=}1$ & $T{=}4$ & $T{=}8$\\\midrule
@@ -179,7 +181,8 @@ MNIST / GCN & $91.02\pm.27$ & $71.44\pm2.80$ & $91.05\pm.26$ & $91.02\pm.26$\\
 CIFAR-10 / GCN & $54.94\pm.07$ & $46.80\pm1.22$ & $54.92\pm.08$ & $54.97\pm.05$\\
 CIFAR-10 / Gated & $68.77\pm.41$ & -- & $68.75\pm.33$ & $68.76\pm.39$\\\bottomrule
 \end{tabular}
-\end{table}
+\end{minipage}
+\end{table*}
 
 At one tick, fixed-GCN conversion falls to $71.44\pm2.80\%$ on MNIST and $46.80\pm1.22\%$ on CIFAR-10. On each full 5{,}000-graph validation split, restoring the first node activation closes 54.08\% and 23.54\% of the teacher-disagreement gap. All four node sites close 80.4\% and 45.2\%; both readout sites close 8.8\% and 14.9\% (Fig.~\ref{fig:positions}). N1 is therefore the target of the event interventions. This continuous recovery is diagnostic; group effects are nonadditive.
 
@@ -238,7 +241,7 @@ Despite local equality, reducing exchanges change 6/128 MNIST and 16/128 CIFAR-1
 \label{fig:temporal-decisions}
 \end{figure}
 
-The exchanges also fail to determine global activity. Reducing exchanges raise total nonzero events from 4{,}351{,}056 to 4{,}499{,}463 on MNIST and 6{,}876{,}233 to 7{,}219{,}258 on CIFAR-10, by 3.41\% and 4.99\%; increasing exchanges change activity by $+0.81\%$ and $-1.33\%$. Neither local event count nor local absolute amplitude determines whole-network activity.
+Equal local event counts do not guarantee equal whole-network activity, and reducing local absolute amplitude can increase global event counts. Reducing exchanges raise total nonzero events from 4{,}351{,}056 to 4{,}499{,}463 on MNIST and 6{,}876{,}233 to 7{,}219{,}258 on CIFAR-10, by 3.41\% and 4.99\%; increasing exchanges change activity by $+0.81\%$ and $-1.33\%$.
 
 A terminal decoder retains a weighted event sum but not the intermediate currents consumed downstream. Stateful consumers can therefore diverge before local equality is restored. Since the codewords also differ in absolute amplitude, this test does not isolate timing: it shows that terminal equality plus a fixed local event count does not establish downstream equivalence.
 

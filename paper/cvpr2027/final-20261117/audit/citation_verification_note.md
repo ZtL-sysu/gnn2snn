@@ -24,6 +24,7 @@ The first inventory contained several machine-extracted identifiers that did not
 3. `degreequant2021` and `a2q2023` had DOI-shaped arXiv identifiers that Crossref does not resolve. They were replaced by arXiv ids `2008.05000` and `2302.00193`.
 4. `han2022vig` received the Crossref-verified DOI `10.52202/068431-0603`.
 5. `bojkovic2025` received the arXiv id `2502.14487` corresponding to the PMLR paper.
+6. `jiang2025fission` was reconciled with the NeurIPS 2025 official page and Crossref; the authoritative DOI `10.52202/085713-5157` was added to the bibliography and inventory.
 
 ## Frozen audit inputs
 

@@ -117,12 +117,13 @@
     "key": "jiang2025fission",
     "title": "Adaptive fission: Post-training encoding for low-latency spike neural networks",
     "year": 2025,
-    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/e2e0a9004132490db1be58bffa419268-Abstract-Conference.html",
+    "source_url": "https://doi.org/10.52202/085713-5157",
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
       "Temporal alignment and stateful computation."
-    ]
+    ],
+    "doi": "10.52202/085713-5157"
   },
   {
     "key": "li2021",
