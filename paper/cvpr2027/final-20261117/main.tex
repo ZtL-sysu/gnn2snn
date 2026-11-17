@@ -12,10 +12,19 @@
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \title{Beyond Reconstruction: Auditing Decision and Temporal\\Fidelity in Graph-to-Spike Conversion}
 \author{Anonymous authors}
-\switchlinenumbers*
 \hypersetup{pdftitle={},pdfauthor={},pdfsubject={},pdfkeywords={}}
 
 \begin{document}
+\makeatletter
+\def\columnwiseLineNumber{%
+  \if@firstcolumn
+    \makeLineNumberLeft
+  \else
+    \makeLineNumberRight
+  \fi}
+\let\makeLineNumberOdd\columnwiseLineNumber
+\let\makeLineNumberEven\columnwiseLineNumber
+\makeatother
 \maketitle
 
 \begin{abstract}
