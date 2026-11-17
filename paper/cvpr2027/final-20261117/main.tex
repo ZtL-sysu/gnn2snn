@@ -1,6 +1,6 @@
 \documentclass[10pt,twocolumn,letterpaper]{article}
 \usepackage[review]{cvpr}
-\usepackage{times,graphicx,amsmath,amssymb,booktabs,microtype,multirow}
+\usepackage{times,graphicx,amsmath,amssymb,booktabs,microtype,multirow,url}
 \usepackage[accsupp]{axessibility}
 \usepackage[pagebackref,breaklinks,colorlinks,allcolors=blue]{hyperref}
 \def\paperID{-----}
@@ -247,7 +247,7 @@ The initial representation can act as a static carrier, while subsequent residua
 
 Under shared channel thresholds, centered coding lowers logit MSE and prospective coded-projection additions at every tested prefix, $T\in\{1,2,4\}$, for threshold scales 1 and 8 (Fig.~\ref{fig:centered}). At scale 1 and $T{=}1$, teacher agreement rises by 2.04 points, while projected additions fall from $9.099\times10^{11}$ to $6.650\times10^{11}$ across the 45{,}000-graph training split. Agreement improves in five of the six comparisons and decreases by 0.0044 points at scale 1, $T{=}4$. The choice of representation origin changes both reconstruction and one component of arithmetic work. The projected additions exclude the static carrier and the rest of inference, so they are not a measured energy or latency saving.
 
-\begin{figure}[t]
+\begin{figure}[!t]
 \centering
 \includegraphics[width=\linewidth]{figures/centered_tradeoff.pdf}
 \caption{Residual centering reduces logit error and prospective coded-projection work under shared thresholds. Ratios below one favor centered coding. The dashed line is the raw-input reference. Results use one CIFAR-10 GatedGCN teacher and the full training split. Projection additions count the specified coded operations.}
@@ -276,6 +276,7 @@ OpenAI's ChatGPT (GPT models) was used to assist in editing and refining the ori
 
 \setlength{\bibsep}{0pt}
 \fontsize{8.5}{9.5}\selectfont
+\urlstyle{rm}
 \bibliographystyle{ieeenat_fullname}
 \bibliography{references}
 \end{document}

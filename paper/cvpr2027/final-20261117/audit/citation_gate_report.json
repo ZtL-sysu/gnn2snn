@@ -1,0 +1,43 @@
+{
+  "verdict": "PASS_USER_THRESHOLD_OFFICIAL_GATE_NOT_APPLICABLE",
+  "policy": {
+    "unique_citation_requirement": ">20 (explicit user instruction)",
+    "configured_min_unique": 21,
+    "as_of": "2026-11-17",
+    "recent_window_years": 5,
+    "recent_years_inclusive": [
+      2022,
+      2026
+    ],
+    "require_recent_majority": true,
+    "official_script_note": "f-research-v1/scripts/citation_requirements.py hard-codes min_unique>=36; it rejects this policy by design. The user-authorized threshold is 21."
+  },
+  "counts": {
+    "cited_unique_keys": 24,
+    "inventory_records": 24,
+    "bib_inventory_matched": true,
+    "recent_sources_2022_2026": 17,
+    "recent_majority": true,
+    "unknown_cited_keys": 0,
+    "unverified_or_irrelevant": 0
+  },
+  "checks": {
+    "duplicate_normalized_titles": {},
+    "duplicate_dois": {},
+    "duplicate_arxiv_ids": {},
+    "missing_inventory_keys": [],
+    "identifier_errors_fixed": [
+      "li2021 wrong DOI removed; arXiv ID 2106.06984 recorded",
+      "liu2023pdquant DOI corrected to 10.1109/CVPR52729.2023.02340",
+      "degreequant2021 and a2q2023 DOI fields corrected to arXiv IDs",
+      "han2022vig official DOI 10.52202/068431-0603 verified",
+      "bojkovic2025 arXiv ID 2502.14487 verified"
+    ]
+  },
+  "input_hashes_sha256": {
+    "main.tex": "7f3c069333a3bd427853d3dd6ffe8721cfd536e78cd766ca939c7b142a4a7780",
+    "references.bib": "aae7f5574443d42b89e6cd45e415ab733e84e6cb007e179cdba07113f2150b76",
+    "audit/citation_inventory.json": "1a9ad978cb85d41715d2b8a9282df0f8280057fcec1974e1ff60de2d5dc6cb5e",
+    "audit/citation_policy.json": "7125515eb67bc1d61374355ead4ecdecec3835aecaece7fb91b2b84bf45d181b"
+  }
+}

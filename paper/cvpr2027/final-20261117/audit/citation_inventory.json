@@ -7,7 +7,7 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; spiking-network background"
+      "Introduction"
     ],
     "doi": "10.1016/S0893-6080(97)00011-7"
   },
@@ -19,8 +19,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; conversion fidelity",
-      "Related Work; conversion pipeline"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.1109/IJCNN.2015.7280696"
   },
@@ -32,8 +32,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; conversion background",
-      "Related Work; conversion pipeline"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.3389/fnins.2017.00682"
   },
@@ -45,8 +45,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; conversion fidelity",
-      "Related Work; residual membrane readout"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.3389/fnins.2019.00095"
   },
@@ -58,8 +58,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; conversion fidelity",
-      "Related Work; residual membrane readout"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.1109/CVPR42600.2020.01357"
   },
@@ -71,8 +71,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; conversion fidelity",
-      "Related Work; conversion pipeline"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.1609/aaai.v36i2.20061"
   },
@@ -80,12 +80,13 @@
     "key": "han2022vig",
     "title": "Vision GNN: An image is worth graph of nodes",
     "year": 2022,
-    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/2b25b6c21e2cf163b6fa8d8c3a68a7f5-Abstract-Conference.html",
+    "source_url": "https://doi.org/10.52202/068431-0603",
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; visual graph classifiers"
-    ]
+      "Introduction"
+    ],
+    "doi": "10.52202/068431-0603"
   },
   {
     "key": "wang2025adaptivecalibration",
@@ -95,8 +96,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; conversion fidelity",
-      "Related Work; calibration"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.1609/aaai.v39i2.32150"
   },
@@ -108,7 +109,7 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; decision-aware quantization"
+      "Reconstruction and decision preservation."
     ],
     "doi": "10.1016/j.neunet.2025.107832"
   },
@@ -120,7 +121,7 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; temporal encoding"
+      "Temporal alignment and stateful computation."
     ]
   },
   {
@@ -131,9 +132,10 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; calibration"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
-    "doi": "10.1145/3446776"
+    "arxiv_id": "2106.06984"
   },
   {
     "key": "bojkovic2024",
@@ -143,8 +145,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; calibration",
-      "Related Work; calibration"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ]
   },
   {
@@ -155,8 +157,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; calibration",
-      "Related Work; calibration"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.1007/978-3-031-72890-7_10"
   },
@@ -168,8 +170,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; differential coding",
-      "Related Work; event coding"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ]
   },
   {
@@ -180,7 +182,7 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; phase coding"
+      "Conversion and finite-prefix fidelity."
     ],
     "doi": "10.1109/TETC.2024.3386893"
   },
@@ -192,8 +194,9 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; temporal alignment"
-    ]
+      "Temporal alignment and stateful computation."
+    ],
+    "arxiv_id": "2502.14487"
   },
   {
     "key": "degreequant2021",
@@ -203,9 +206,9 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; graph quantization"
+      "Reconstruction and decision preservation."
     ],
-    "doi": "10.48550/arXiv.2008.05000"
+    "arxiv_id": "2008.05000"
   },
   {
     "key": "a2q2023",
@@ -215,20 +218,21 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; graph quantization"
+      "Reconstruction and decision preservation."
     ],
-    "doi": "10.48550/arXiv.2302.00193"
+    "arxiv_id": "2302.00193"
   },
   {
     "key": "dwivedi2023",
     "title": "Benchmarking Graph Neural Networks",
     "year": 2023,
-    "source_url": "https://jmlr.org/papers/v24/23-0113.html",
+    "source_url": "https://arxiv.org/abs/2003.00982",
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; visual graph classifiers"
-    ]
+      "Introduction"
+    ],
+    "arxiv_id": "2003.00982"
   },
   {
     "key": "liu2023pdquant",
@@ -238,9 +242,9 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; decision-aware quantization"
+      "Reconstruction and decision preservation."
     ],
-    "doi": "10.1109/CVPR52729.2023.02344"
+    "doi": "10.1109/CVPR52729.2023.02340"
   },
   {
     "key": "hao2023residual",
@@ -250,7 +254,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; residual membrane readout"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.1609/aaai.v37i1.25071"
   },
@@ -262,7 +267,8 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Introduction; calibration"
+      "Conversion and finite-prefix fidelity.",
+      "Introduction"
     ],
     "doi": "10.1007/s11263-024-02046-2"
   },
@@ -274,7 +280,7 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; execution cost"
+      "Temporal alignment and stateful computation."
     ],
     "doi": "10.1109/CVPR52734.2025.02271"
   },
@@ -286,7 +292,7 @@
     "verification_status": "verified",
     "relevance_status": "relevant",
     "support_locations": [
-      "Related Work; feature-output alignment"
+      "Temporal alignment and stateful computation."
     ]
   }
 ]
