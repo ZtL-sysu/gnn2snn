@@ -11,3 +11,4 @@
 | 永久删除 trash | done | codex-reorg-20261117 | `archive-gnn2snn/trash/` | 用户确认；124 文件约 6.38 GiB 已删除 |
 | 创建 GitHub PR | todo | unassigned | `docs/resource-reorg-20261117` | 用户确认 |
 | 根目录二次整理：脚本与 `_nv*` 归档 | done | codex-reorg-20261117 | `legacy/`、根目录兼容链接 | 用户要求 |
+| 删除根目录 `_nv*` 兼容链接并收拢 docs | done | codex-reorg-20261117 | `legacy/`、`docs/agent-prompts/` | 用户再次明确要求 |

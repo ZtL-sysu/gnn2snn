@@ -37,13 +37,7 @@ archive-gnn2snn/**/.git/
 # Local archives and historical pull snapshots are large local-only evidence.
 auto-paper/
 legacy/
-_nv*/
-_nv*/
-_r*/
 pull003/
-round-*/
-round-*.json
-round-*.txt
 fly-connectome-cvpr2027/
 third_party/
 archive-gnn2snn/

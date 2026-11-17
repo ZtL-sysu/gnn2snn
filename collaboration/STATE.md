@@ -38,7 +38,8 @@
 - `verified-evidence.zip` 在 6 个位置 SHA256 完全相同；只保留 `archive-gnn2snn/gnn2snn-main/artifacts/verified-evidence.zip`，其余 5 份移入 trash。
 - 对 7 个根目录做文件大小分组 + SHA256 校验，识别 12155 个重复组；只处理前 25 个最大浪费组，共 66 文件约 1.40 GiB 移入 `archive-gnn2snn/trash/large-duplicates/`。完整重复清单曾写入 `output/duplicates-inventory.json`，因含本机全路径已从工作区删除；保留 trash 中的实际隔离副本作为恢复依据。
 - 2026-11-17 用户确认“删除吧，把那些没用重复的”：已递归删除 `archive-gnn2snn/trash/`，共 124 文件约 6.38 GiB，删除后路径不存在。
-- 2026-11-17 根目录二次整理：18 个 `_r*.py` 探针脚本、平台结果/round/WSL 日志/路径指针、10 个 `_nv*` 运行目录及 12 个 `_nv*` 根文件移入 `legacy/`；旧 `_nv*` 路径用 Junction（目录）和 SymbolicLink（文件）保持兼容。验证无跟踪文件删除。
+- 2026-11-17 根目录二次整理：18 个 `_r*.py` 探针脚本、平台结果/round/WSL 日志/路径指针、10 个 `_nv*` 运行目录及 12 个 `_nv*` 根文件移入 `legacy/`。兼容链接曾短暂保留，但用户明确要求根目录不要 `_nv*`，随后已删除全部 22 个根目录链接；真实数据仍在 `legacy/novix/`。
+- 2026-11-17 根目录三次整理：3 份 agent prompt/brief 文档移入 `docs/agent-prompts/`，根目录只保留入口文档和大型研究目录。
 
 ## Hypothesis（当前假设）
 

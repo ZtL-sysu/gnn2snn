@@ -15,6 +15,7 @@
 - 顶层 Git 初始化，创建分支 `docs/resource-reorg-20261117`，提交 `157db24` 并 push 到 `ZtL-sysu/gnn2snn`；`git ls-remote` 验证本地/远端 SHA 一致。
 - 用户确认删除无用重复项后，递归删除 `archive-gnn2snn/trash/`（124 文件，约 6.38 GiB），删除后确认路径不存在。
 - 根目录二次整理：把 18 个 `_r*.py` 探针脚本、平台结果/round/WSL 日志/路径指针、10 个 `_nv*` 运行目录及 12 个 `_nv*` 根文件移入 `legacy/`；旧 `_nv*` 路径用 Junction（目录）和 SymbolicLink（文件）保持兼容。验证 `git diff --diff-filter=D` 无跟踪文件删除。
+- 用户指出根目录仍有 `_nv*` 链接后，删除全部 22 个根目录链接（只删链接，不删 `legacy/novix/` 真实数据），并把 3 份 agent 文档移入 `docs/agent-prompts/`。根目录 `_nv*` 数量验证为 0。
 
 ## 关键发现
 
@@ -29,7 +30,7 @@
 
 ## 下一步（Resume Entry）
 
-- 目标：完成后续 PR 或被授权的小代码上传。
+- 目标：完成后续 PR 或被授权的小代码上传；保持根目录无脚本、JSON 和 `_nv*` 条目。
 - 入口：先读 `AGENTS.md` → `collaboration/STATE.md` → `collaboration/TASKS.md`；再运行 `git -C C:\code\phd-snn status --short --branch`。
 - 已有结果：`archive-gnn2snn/` 已收拢；trash 已永久删除；`legacy/` 收拢历史平台证据；`manifests/release-files.json` 可定位大文件。
 - 建议动作：1. 如用户需要 PR，打开 `https://github.com/ZtL-sysu/gnn2snn/pull/new/docs/resource-reorg-20261117`；2. 如需上传 `_r*_probe.py`，先移除 token 读取逻辑和本机路径依赖。
@@ -38,6 +39,6 @@
 ## 相关位置
 
 - `C:\code\phd-snn\archive-gnn2snn\`：统一归档入口。
-- `C:\code\phd-snn\legacy\`：历史平台证据与脚本归档，不是 trash，不得清理或上传。
+- `C:\code\phd-snn\legacy\`：历史平台证据与脚本归档，不是 trash，不得清理或上传。根目录 `_nv*` 已删除，真实数据只在这个目录下。
 - `C:\code\phd-snn\archive-gnn2snn\gnn2snn-prep-archive\manifests\release-files.json`：878 个原始数据/权重路径和哈希映射。
 - 删除依据：删除前检查 `archive-gnn2snn/trash/` 位于 `C:\code\phd-snn` 内，共 124 文件约 6.38 GiB。

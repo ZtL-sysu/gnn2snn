@@ -13,7 +13,8 @@ GNN→SNN 转换、动态图/视觉图实验与论文资料本地总入口。
 
 - `auto-paper/`：完整研究流程、数据、结果与论文材料。
 - `archive-gnn2snn/`：同级 `gnn2snn*` 目录收拢后的统一归档入口。
-- `legacy/`：历史 Novix/平台运行、探针脚本、round 结果、WSL 日志和路径指针归档；旧根目录 `_nv*` 路径通过 junction/symlink 兼容。
+- `legacy/`：历史 Novix/平台运行、探针脚本、round 结果、WSL 日志和路径指针归档；根目录不再保留 `_nv*` 兼容链接。
+- `docs/agent-prompts/`：agent brief、prompt 和 teacher probe 文档。
 - `fly-connectome-cvpr2027/`、`third_party/`：专题研究与第三方代码。
 - `_nv*/`、`pull003/`、`round-*`：平台拉取结果、探针脚本与审计日志。
 - `collaboration/`：跨 Agent 研究记忆。

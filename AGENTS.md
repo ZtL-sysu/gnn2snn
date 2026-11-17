@@ -10,6 +10,7 @@
   - `auto-paper/`：按日期编排的完整研究流程、数据、结果、快照与论文材料。
   - `archive-gnn2snn/`：从同级目录收拢的 gnn2snn 工作树、参考实现、打包脚本和重复项隔离区。
   - `legacy/`：历史平台证据和根目录脚本归档；`_nv*` 旧根目录路径保留为兼容 junction/symlink。
+  - `docs/agent-prompts/`：从根目录收拢的 agent brief/prompt/teacher probe 文档。
   - `fly-connectome-cvpr2027/`、`third_party/`：专题研究与第三方代码。
   - `_nv*/`、`pull003/`、`round-*`：平台拉取结果、探针脚本和审计日志。
   - `collaboration/`：跨 Agent 接手文档。
@@ -30,6 +31,6 @@
 
 ## 当前注意事项
 
-- 重复项和 junk 隔离区已按用户确认永久删除，不再保留恢复副本。`legacy/` 是历史证据归档，不是 trash，不得清理。
+- 重复项和 junk 隔离区已按用户确认永久删除，不再保留恢复副本。`legacy/` 是历史证据归档，不是 trash，不得清理。根目录 `_nv*` 兼容链接已按用户要求删除；请从 `legacy/novix/` 访问。
 - `archive-gnn2snn/gnn2snn-main`、`gnn2snn-cvpr-sprint`、`gnn2snn-wb-resume` 是同一 GitHub 仓库的 worktree，Git 指针已改到新路径。
 - `archive-gnn2snn/gnn2snn-dcgs-reference` 是独立第三方参考仓库，不要当成普通副本删除。
