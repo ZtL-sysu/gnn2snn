@@ -1,0 +1,67 @@
+# Git / collaboration metadata
+.git/
+.claude/
+.codex-finalizer/
+.codex-ppt-build/
+.workbuddy/
+
+# Recoverable cleanup area and duplicate inventory
+archive-gnn2snn/trash/
+output/duplicates-inventory.json
+
+# Large local-only research data and weights
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+*.bin
+*.gz
+*.7z
+*.tar
+*.onnx
+
+# Caches and Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Nested repositories remain independent; do not vendor them into the top-level repo
+auto-paper/**/.git/
+third_party/**/.git/
+archive-gnn2snn/**/.git/
+
+# Local archives and historical pull snapshots are large local-only evidence.
+auto-paper/
+_nv*/
+_r*/
+pull003/
+round-*/
+round-*.json
+round-*.txt
+fly-connectome-cvpr2027/
+third_party/
+archive-gnn2snn/
+output/
+tmp/
+
+# Large top-level JSON task snapshots.
+_*_get.json
+_*_result*.json
+_*_debug*.json
+_*_tasklist.json
+_*_final.json
+_nv*_finalReply.md
+_library_gnn2snn_vision_report.txt
+
+# Local runtime artifacts
+*.log
+*.err
+*.tmp
+*.part
+*.bak
+.DS_Store
+Thumbs.db
