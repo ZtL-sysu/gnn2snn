@@ -1,0 +1,5 @@
+dataset,direction,policy,train_graphs,eligible_first_site_coordinates,local_T2_decode_max_error,base_accuracy_percent,changed_accuracy_percent,base_agreement_percent,changed_agreement_percent,prediction_changes,agreement_lost,agreement_gained,whole_network_events_base,whole_network_events_changed
+MNIST,halve,all_eligible,128,84905,0,94.53125,94.53125,96.09375,96.09375,6,3,3,4351056,4499463
+MNIST,double,all_eligible,128,55510,0,94.53125,94.53125,96.09375,96.09375,2,1,1,4351056,4386496
+CIFAR10,halve,all_eligible,128,132899,0,66.40625,67.96875,85.15625,84.375,16,7,6,6876233,7219258
+CIFAR10,double,all_eligible,128,63500,0,66.40625,66.40625,85.15625,84.375,10,5,4,6876233,6785108
