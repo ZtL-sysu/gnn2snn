@@ -45,7 +45,7 @@ Our experiments reveal that neither form of local fidelity is sufficient to dete
 These observations motivate a broader evaluation principle: conversion quality should be assessed at the level at which the converted model is required to operate. We therefore examine teacher agreement and task accuracy separately, measure decisions at the required prefixes, and distinguish local event counts from whole-network activity and measured execution cost. Complementary studies of calibration objectives and residual centering show how this perspective informs the evaluation of conversion strategies.
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.88\textwidth]{figures/concept.pdf}
+\includegraphics[width=0.88\textwidth]{figures/concept.png}
 \caption{A finite-event audit beyond reconstruction. The input graph is illustrative. We study a frozen four-layer residual graph classifier and intervene at the first node site N1. (a) A legal one-event change can reduce the next-message error while worsening the teacher-class margin; the rounded MNIST graph-437 values are detailed in Sec.~\ref{sec:decision-results}, and the boundary sketch is schematic. Percentages are adverse margins among message-improving interventions. (b) Source-verified codewords share the decoded endpoint and event count but differ in prefixes and amplitude. Exchanging them changes predictions and global nonzero event counts on 128 training graphs per task; this is not a timing-only test. The audits separate decision, prefix, and network-level fidelity from local reconstruction.}
 \label{fig:concept}
 \end{figure*}
