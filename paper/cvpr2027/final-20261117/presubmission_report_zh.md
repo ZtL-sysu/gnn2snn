@@ -28,11 +28,11 @@
 - 源文件在 paper/cvpr2027/final-20261117。匿名审稿 PDF 为 main_submission.pdf。正文、LLM 声明和 24 篇参考文献共 8 页。图 1 已替换为本次提供的总览图，并保留其余机制图与结果图。补充材料 4 页。
 - 除新提供的图 1 外，其余图由 scripts/make_figures.py 从记录表绘制；新图作为作者提供的概览图，画面中的数字与正文记录一致。
 - 作者栏为 Anonymous CVPR submission，PDF 元数据 author 为空。未改登记作者信息。
-- 新标题是 Beyond Reconstruction: Auditing Decision and Temporal Fidelity in Graph-to-Spike Conversion。如果 OpenReview 已锁定旧标题，上传前改回原题即可。
+- 最终标题是 Beyond Reconstruction: Auditing Decision and Temporal Fidelity in Graph-to-Spike Conversion。可直接复制的纯文本标题和摘要见 `openreview_title_abstract.txt`。
 
 ## 投稿前仍未解决的问题
 
-- 没有登录 OpenReview，因此没有核实注册是否存在、标题是否可改，也没有核对是否与其他 CVPR 稿件构成重复投稿。
+- 已通过本机 Chrome 的登录态核查 CVPR 2027 作者控制台：当前账号在该会议只有 3 篇已提交稿件，其中一篇是 2026-11-11 提交的相近主题稿件；没有当前标题对应的投稿或草稿，因此没有可在 OpenReview 上同步标题和摘要的目标记录，也没有修改其他投稿。OpenReview 未提供作者投稿全文的公开检索能力，登录态下的核查可排除当前账号内的同名重复，但无法替代会议方对全部同期投稿的重复检测。
 - 当前按用户要求使用 24 篇真实相关引用；本地引用门槛设为 21 篇，其中 2022--2026 年文献 17 篇，满足近五年占多数。官方 citation_requirements.py 硬性要求至少 36 篇，与用户明确门槛冲突，因此不能把该脚本标记为 PASS；已按 skill 的真实性、相关性、逐条支持、查重和冻结哈希要求完成本地审计，记录见 audit/。
 - 核验中修正了 4 类错误标识：`li2021` 的无关 DOI、`liu2023pdquant` 的错位 DOI，以及两篇图量化论文被误写成 DOI 的 arXiv 编号。
 - 验证集和测试集在开发中已经使用，不能写成新的盲测。
