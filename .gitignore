@@ -36,6 +36,8 @@ archive-gnn2snn/**/.git/
 
 # Local archives and historical pull snapshots are large local-only evidence.
 auto-paper/
+legacy/
+_nv*/
 _nv*/
 _r*/
 pull003/

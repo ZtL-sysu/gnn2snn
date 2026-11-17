@@ -3,7 +3,7 @@
 ## Overview
 
 - 项目目标：统一保存 GNN→SNN 研究的数据、代码、模型权重、论文与可接续记录。
-- 当前阶段：2026-11-17 完成同级 `gnn2snn*` 资料归档、去重与首次研究同步文档建设。
+- 当前阶段：2026-11-17 完成同级 `gnn2snn*` 资料归档、去重、根目录 legacy 归档与 GitHub 研究同步。
 - 当前路线：以 `phd-snn` 为唯一本地入口；保留数据集、研究代码和有用权重；大文件与原始 checkpoint 留在本地，不上传 GitHub。
 - 下一步重点：整理记录已同步到 GitHub 分支 `docs/resource-reorg-20261117`；重复项 trash 已按用户确认永久删除，剩余为 PR 与少量探针代码是否上传的选择。
 - 最后更新：2026-11-17。
@@ -38,6 +38,7 @@
 - `verified-evidence.zip` 在 6 个位置 SHA256 完全相同；只保留 `archive-gnn2snn/gnn2snn-main/artifacts/verified-evidence.zip`，其余 5 份移入 trash。
 - 对 7 个根目录做文件大小分组 + SHA256 校验，识别 12155 个重复组；只处理前 25 个最大浪费组，共 66 文件约 1.40 GiB 移入 `archive-gnn2snn/trash/large-duplicates/`。完整重复清单曾写入 `output/duplicates-inventory.json`，因含本机全路径已从工作区删除；保留 trash 中的实际隔离副本作为恢复依据。
 - 2026-11-17 用户确认“删除吧，把那些没用重复的”：已递归删除 `archive-gnn2snn/trash/`，共 124 文件约 6.38 GiB，删除后路径不存在。
+- 2026-11-17 根目录二次整理：18 个 `_r*.py` 探针脚本、平台结果/round/WSL 日志/路径指针、10 个 `_nv*` 运行目录及 12 个 `_nv*` 根文件移入 `legacy/`；旧 `_nv*` 路径用 Junction（目录）和 SymbolicLink（文件）保持兼容。验证无跟踪文件删除。
 
 ## Hypothesis（当前假设）
 
@@ -46,6 +47,7 @@
 ## Pending（待验证）
 
 - `third_party/SpikeGraphormer` 仍有原有未提交修改和未跟踪数据，整理过程未触碰。
+- `legacy/` 中可能含平台 token 读取逻辑和本机绝对路径，不上传 GitHub。
 - 顶层工作区仍有未跟踪的小型 `_r*_probe.py` 和 `_current_*.txt`；它们可能含平台 token 读取逻辑或路径配置，未加入本次公开提交。
 
 ## Superseded（已推翻／已替代，勿引用）
