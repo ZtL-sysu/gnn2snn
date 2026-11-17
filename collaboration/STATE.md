@@ -5,7 +5,7 @@
 - 项目目标：统一保存 GNN→SNN 研究的数据、代码、模型权重、论文与可接续记录。
 - 当前阶段：2026-11-17 完成同级 `gnn2snn*` 资料归档、去重与首次研究同步文档建设。
 - 当前路线：以 `phd-snn` 为唯一本地入口；保留数据集、研究代码和有用权重；大文件与原始 checkpoint 留在本地，不上传 GitHub。
-- 下一步重点：整理记录已同步到 GitHub 分支 `docs/resource-reorg-20261117`；等待用户决定是否创建 PR、永久删除 trash 或继续上传少量审查过的探针代码。
+- 下一步重点：整理记录已同步到 GitHub 分支 `docs/resource-reorg-20261117`；重复项 trash 已按用户确认永久删除，剩余为 PR 与少量探针代码是否上传的选择。
 - 最后更新：2026-11-17。
 
 ## Key Decisions
@@ -37,6 +37,7 @@
 - 归档后 `git -C archive-gnn2snn/gnn2snn-main worktree list --porcelain` 显示的 3 个同级 worktree 都指向新路径；其余 5 个 worktree 在用户目录下，未移动。
 - `verified-evidence.zip` 在 6 个位置 SHA256 完全相同；只保留 `archive-gnn2snn/gnn2snn-main/artifacts/verified-evidence.zip`，其余 5 份移入 trash。
 - 对 7 个根目录做文件大小分组 + SHA256 校验，识别 12155 个重复组；只处理前 25 个最大浪费组，共 66 文件约 1.40 GiB 移入 `archive-gnn2snn/trash/large-duplicates/`。完整重复清单曾写入 `output/duplicates-inventory.json`，因含本机全路径已从工作区删除；保留 trash 中的实际隔离副本作为恢复依据。
+- 2026-11-17 用户确认“删除吧，把那些没用重复的”：已递归删除 `archive-gnn2snn/trash/`，共 124 文件约 6.38 GiB，删除后路径不存在。
 
 ## Hypothesis（当前假设）
 
@@ -44,7 +45,6 @@
 
 ## Pending（待验证）
 
-- `archive-gnn2snn/trash/` 保留约 6.4 GiB 可恢复隔离副本；永久删除前需用户确认。
 - `third_party/SpikeGraphormer` 仍有原有未提交修改和未跟踪数据，整理过程未触碰。
 - 顶层工作区仍有未跟踪的小型 `_r*_probe.py` 和 `_current_*.txt`；它们可能含平台 token 读取逻辑或路径配置，未加入本次公开提交。
 
@@ -59,5 +59,4 @@
 ## Next
 
 1. 用户决定是否从 `docs/resource-reorg-20261117` 创建 PR。
-2. 复核 trash 与 `.gitignore` 后决定是否永久删除隔离副本。
-3. 如需上传平台探针代码，先逐个去除 token 读取逻辑和路径依赖。
+2. 如需上传平台探针代码，先逐个去除 token 读取逻辑和路径依赖。

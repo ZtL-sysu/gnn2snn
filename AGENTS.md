@@ -29,6 +29,6 @@
 
 ## 当前注意事项
 
-- `archive-gnn2snn/trash/` 是重复项和 junk 隔离区，未确认前不要恢复或上传。
+- 重复项和 junk 隔离区已按用户确认永久删除，不再保留恢复副本。
 - `archive-gnn2snn/gnn2snn-main`、`gnn2snn-cvpr-sprint`、`gnn2snn-wb-resume` 是同一 GitHub 仓库的 worktree，Git 指针已改到新路径。
 - `archive-gnn2snn/gnn2snn-dcgs-reference` 是独立第三方参考仓库，不要当成普通副本删除。
