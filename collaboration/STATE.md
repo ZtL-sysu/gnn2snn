@@ -5,7 +5,7 @@
 - 项目目标：统一保存 GNN→SNN 研究的数据、代码、模型权重、论文与可接续记录。
 - 当前阶段：2026-11-17 完成同级 `gnn2snn*` 资料归档、去重与首次研究同步文档建设。
 - 当前路线：以 `phd-snn` 为唯一本地入口；保留数据集、研究代码和有用权重；大文件与原始 checkpoint 留在本地，不上传 GitHub。
-- 下一步重点：初始化顶层 Git 仓库并同步整理后的文档与代码；复核隔离区后再永久删除。
+- 下一步重点：整理记录已同步到 GitHub 分支 `docs/resource-reorg-20261117`；等待用户决定是否创建 PR、永久删除 trash 或继续上传少量审查过的探针代码。
 - 最后更新：2026-11-17。
 
 ## Key Decisions
@@ -33,6 +33,7 @@
 
 ## Verified（已验证，有证据）
 
+- 顶层 Git 已初始化并创建分支 `docs/resource-reorg-20261117`；提交 `157db24` 已 push 到 `ZtL-sysu/gnn2snn`，`git ls-remote` 验证远端 SHA 与本地 HEAD 一致。
 - 归档后 `git -C archive-gnn2snn/gnn2snn-main worktree list --porcelain` 显示的 3 个同级 worktree 都指向新路径；其余 5 个 worktree 在用户目录下，未移动。
 - `verified-evidence.zip` 在 6 个位置 SHA256 完全相同；只保留 `archive-gnn2snn/gnn2snn-main/artifacts/verified-evidence.zip`，其余 5 份移入 trash。
 - 对 7 个根目录做文件大小分组 + SHA256 校验，识别 12155 个重复组；只处理前 25 个最大浪费组，共 66 文件约 1.40 GiB 移入 `archive-gnn2snn/trash/large-duplicates/`。
@@ -43,9 +44,9 @@
 
 ## Pending（待验证）
 
-- 顶层 Git 仓库的目标 remote 尚未确认；本地仓库初始化后需显式 stage 文档与代码。
-- `archive-gnn2snn/trash/` 保留约 6.2 GiB 可恢复隔离副本；永久删除前需用户确认。
+- `archive-gnn2snn/trash/` 保留约 6.4 GiB 可恢复隔离副本；永久删除前需用户确认。
 - `third_party/SpikeGraphormer` 仍有原有未提交修改和未跟踪数据，整理过程未触碰。
+- 顶层工作区仍有未跟踪的小型 `_r*_probe.py` 和 `_current_*.txt`；它们可能含平台 token 读取逻辑或路径配置，未加入本次公开提交。
 
 ## Superseded（已推翻／已替代，勿引用）
 
@@ -57,6 +58,6 @@
 
 ## Next
 
-1. 确认 GitHub 目标仓库；初始化 `phd-snn` 顶层 Git 并写 `.gitignore`。
-2. 显式 add 本次文档和必要小文件，commit/push 并确认远端 SHA。
-3. 复核 trash 与 `.gitignore` 后决定是否永久删除隔离副本。
+1. 用户决定是否从 `docs/resource-reorg-20261117` 创建 PR。
+2. 复核 trash 与 `.gitignore` 后决定是否永久删除隔离副本。
+3. 如需上传平台探针代码，先逐个去除 token 读取逻辑和路径依赖。

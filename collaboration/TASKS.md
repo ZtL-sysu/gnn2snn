@@ -7,5 +7,6 @@
 | 保留数据集、研究代码和有用权重 | done | codex-reorg-20261117 | `auto-paper/`、`third_party/`、`archive-gnn2snn/` | 盘点 |
 | 删除/隔离无用重复项 | done with trash retained | codex-reorg-20261117 | `archive-gnn2snn/trash/` | SHA256 去重 |
 | 建立本地研究同步日记 | done | codex-reorg-20261117 | `AGENTS.md`、`collaboration/` | none |
-| 初始化顶层 Git 并同步到 GitHub | doing | codex-reorg-20261117 | 顶层 `.gitignore`、`AGENTS.md`、`collaboration/`、少量文档 | 历史授权已确认 `ZtL-sysu/gnn2snn` |
+| 初始化顶层 Git 并同步到 GitHub | done | codex-reorg-20261117 | 顶层 `.gitignore`、`AGENTS.md`、`collaboration/`、少量文档 | 历史授权已确认 `ZtL-sysu/gnn2snn`；远端 SHA 已验证 |
 | 复核 trash 后永久删除 | blocked | unassigned | `archive-gnn2snn/trash/` | 用户确认 |
+| 创建 GitHub PR | todo | unassigned | `docs/resource-reorg-20261117` | 用户确认 |
