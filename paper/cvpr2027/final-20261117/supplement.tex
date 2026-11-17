@@ -10,7 +10,7 @@
 \renewcommand\linenumberfont{\fontsize{7}{8}\selectfont\color[rgb]{.5,.5,1}}
 \begin{document}\maketitle
 \section{Evidence and Reproducibility}
-The evidence addresses a common question across several graph models and event codes. Table~\ref{tab:scope} distinguishes the role and scope of each experiment. All official visual validation and test splits were used during earlier development, so their endpoint evaluations are descriptive even when the evaluated parameters had been frozen. The manuscript reuses the recorded results and predictions; no new training or test inference was performed for this preparation.
+
 
 \begin{table*}[t]\centering\small
 \caption{Evidence families and their distinct roles. Counts refer to graphs per task unless otherwise stated.}
@@ -23,10 +23,10 @@ Matched objective fitting & fixed GCN, 3 & train 512; exposed test 10,000 & effe
 Hard-event perturbations & fixed GCN, teacher 41 & exposed validation / 512 & message--decision mismatch\\
 Local temporal equivalence & fixed GCN, teacher 41 & training / 128 & local equality versus global trajectory\\
 Shared-threshold centering & GatedGCN, teacher 41 & CIFAR-10 training / 45,000 & fidelity and partial projection proxy\\
-Classical node context & two-layer IF, 5 seeds reported & historical node splits & readout / horizon context\\\bottomrule
+
 \end{tabular}\end{table*}
 
-The anonymous review package contains three derived CSV tables, the source-indexed hard-intervention rows, per-graph endpoint arrays for the exact codeword experiments, and deterministic scripts that regenerate the new tables, figures, and verification record. A hash manifest identifies every included input. The hard-intervention rows record graph index, selected node and channel, event direction, teacher class, baseline and changed margin, message MSE, and realized activity. The endpoint arrays retain per-graph logits, teacher logits, labels, decoded-tensor checks, and activity endpoints. From these files one can recompute Tables~2--3, Figures~4--5, their stratified reanalyses, and the reported graph-level counts without loading official datasets or teacher checkpoints. Other manuscript results and Figure~3 use historical aggregates that are described but not included in this anonymous package. Replaying network inference requires the frozen teacher checkpoints, calibration files, dataset installation, and the recorded seed-41 configuration; their identity hashes remain in the run metadata. Thus the package verifies the derived evidence and reported arithmetic, not every recorded forward pass.
+
 
 \paragraph{Intervention selection and eligibility.} A hard intervention starts from each occupied first-site event whose magnitude has an adjacent legal amplitude. The deterministic rule selects candidate flat index $(g\cdot104729+41)\bmod n_g$ for graph $g$, where $n_g$ is the number of eligible coordinates in that graph. The residual rule selects the eligible coordinate maximizing $|s-\operatorname{ReLU}(c)|$, where $s$ is the emitted event and $c$ is the first-tick current. The direction moves the signed amplitude one geometric level up or down. All affected recurrence states are updated, and teacher logits are consulted only after replay. The temporal exchange uses source replay on cloned states with zero second-tick current; a coordinate is eligible only when the halved or doubled first event is legal, the natural second event has the required sign and magnitude, and the two-tick local decoded tensors are exactly equal. The deterministic half uses a SHA-256 seed derived from the graph index and a fixed run seed.
 
@@ -37,7 +37,7 @@ Superpixel datasets use 60,000 MNIST and 50,000 CIFAR-10 development images part
 
 Frozen evaluation batch normalization is folded into affine weights. The fixed-GCN graph normalization uses the source outdegree and destination indegree of the existing directed edges; self-loops are not added. The residual connection is kept explicitly. Calibration uses per-channel histograms on the training split. Learned initial potentials change neither graph nor teacher weights, and are bounded to half a threshold in either direction. Local normalized MSE averages the six activation-site errors, dividing each by its teacher activation mean square with floor $10^{-6}$. Output fitting uses teacher logits; shuffled targets are a correspondence control, not a graph-specific baseline.
 
-\paragraph{Two fitting conventions.} Historical three-teacher calibration fits offsets separately for each target horizon. Later shared-prefix experiments fit one parameter vector and reuse it at $T=1,2,4,8$. A degradation across prefixes in the latter is not directly comparable with separately refitted historical offsets. The shared-prefix ordinary controls use 693 offsets, 512 training graphs, 64 Adam updates at learning rate 0.01, and actual hard events in the forward pass. Their backward pass uses a ReLU membrane surrogate. Their $T=1$ results appear in Table~\ref{tab:objectives}.
+
 
 \begin{table}[t]\centering\small
 \caption{Shared-prefix ordinary controls at $T=1$, teacher 41, 512 exposed validation graphs. Accuracy and agreement are percentages; events are whole-network nonzero scalar events in millions. None is a newly proposed method.}
@@ -94,10 +94,10 @@ where $R(b')$ is the range of the perturbed messages including zero. Indeed, $\l
 \section{Classical Node Classification Context}
 The early model embeds input features before a fixed aggregation and linear output. It is distinct from the four-layer visual residual network. A binary reset-by-subtraction IF unit with constant current $c\in[0,\theta]$, zero initial membrane, and at most one event per tick obeys $\theta N_T+u_T=Tc$, with $0\leq u_T<\theta$. Hence rate decoding has error $-u_T/T$. The analytic correction $\beta=\theta/(2T)$ centers the quantizer under approximately uniform residual phases, away from clipping and activation boundaries. Saturated inputs $c>\theta$ require a separate error term; a global $\theta/T$ bound would be invalid there.
 
-At the output, with the same spike train, retaining the residual membrane uses $(\theta N_T+u_T)/T$ rather than the integer count $\theta N_T/T$. This removes output count quantization while retaining any hidden encoding error. It changes the readout and its continuous storage requirements, not the emitted events. Table~\ref{tab:nodes} reports historical means. It supplies cross-task context for the readout mechanism, rather than validating the hard-event visual interventions.
+
 
 \begin{table*}[t]\centering\small
-\caption{Audited historical node-classification context. Accuracy (\%), five seeds reported in archived summaries. FTBC denotes the early FTBC-style graph implementation with analytic compensation, not a complete reproduction of the published procedure. Membrane and count columns use the corresponding archived runs. ANN means for the first three datasets were recomputed from retained seed records; SNN means and the last three ANN means are retained aggregates.}
+
 \label{tab:nodes}
 \begin{tabular}{lrrrrr}\toprule
 Dataset & ANN & Membrane $T=8$ & Count $T=8$ & Membrane $T=16$ & Count $T=16$\\\midrule
@@ -109,7 +109,7 @@ Squirrel &46.763&46.705&43.516&47.224&45.110\\
 ogbn-arxiv &65.895&66.259&25.658&66.242&25.845\\\bottomrule
 \end{tabular}\end{table*}
 
-The retained historical results use corrected Planetoid row alignment, duplicate-edge handling, bias-calibration masks, and accumulation of actual hidden events. Superseded values are excluded. The analysis also distinguishes symmetric normalization from row-stochastic normalization and treats saturated inputs separately in the hidden-error bound. Large readout differences, particularly on ogbn-arxiv, illustrate the importance of decoder semantics rather than establish a new SOTA result. Because the compact historical package lacks per-seed raw SNN predictions, these means provide contextual evidence with weaker provenance than the retained visual raw arrays.
+
 
 \section{Residual Centering and Complete Costs}
 For identity residuals, cumulative nonnegative branch increments define $q_\ell=h_\ell-h_0$ and $r_\ell=e_\ell-e_0$. Centered coding transmits these increments to shared projection consumers while keeping the raw graded skip unchanged. At each threshold scale, the comparison uses exactly the same channel thresholds, set from the maximum of raw-state and cumulative-branch calibration ranges. The first layer remains exact in both arms. This controls both a privileged first layer and threshold range. Scale 1 and scale 8 are separate settings, not selected optimal values.
@@ -118,10 +118,10 @@ The partial projection proxy is $70\sum_{\text{coded sites}}(4N_{\rm node}+N_{\r
 
 The primary converter's software timing uses cached 32-graph batches, ten warmups, thirty randomized interleaved repeats, and CUDA synchronization. Median batch time is divided by 32 and then averaged across the three teacher medians. It includes diagnostic decoded-site accumulation, excludes loading and transfer, and uses dense graph kernels. Allocation timings come from a separate experiment with five warmups and twenty interleaved repeats, including policy instrumentation. Timing ratios must not mix these experiments. Event opportunities, realized nonzero events, scalar amplitude, consumer deliveries, and measured latency are separate quantities. No measured hardware-energy result is available.
 
-\paragraph{Separate full-validation centered campaign.}
+
 An earlier independent branch retains a three-teacher, 5,000-graph CIFAR-10 validation matrix with raw/shared-threshold coding, exact-first-layer and source-adapter controls. Its centered $T=4/8$ mean accuracies are 70.5267\%/70.5600\%; strongest controls reach 70.5933\%/70.6067\%. Several raw trajectories are numerical aliases (per-consumer, generic and common-subexpression-only) and are not independent method wins. At $T=4$ the strongest accuracy control is centered shared-threshold; at $T=8$ it is the six-site source adapter. Their matched wall times are 6.2130 and 3.1315 ms per graph versus centered's 6.2449 and 12.0486. Timing uses batch 128, the full 5,000 graphs, one warmup pass and three timed repeats. These times belong to a distinct implementation and are not comparable with the cached-batch fixed-GCN timings.
 
-The corresponding declared arithmetic proxy is also not strictly lower at both horizons under either its addition-based or conservative MAC convention. Nine unresolved items include event banks, cache maintenance and actual memory traffic. This campaign supplies validation fidelity, while the shared-threshold training experiment isolates the coordinate change. Neither establishes a complete runtime or hardware-energy advantage. We use this evidence to retain centering as a meaningful representation result without promoting the partial projection proxy to overall efficiency.
+
 
 \section{Failure Boundaries and Research Scope}
 Two implemented coding prototypes test the gap between a diagnostic and a realizable policy. A spatial selector exchanges occupied same-channel, equal-outdegree events and predicts consequences using 1,304 fitted coefficients. Six matched controls include local, non-graph, true-graph, permuted-graph and topology-descriptor conditions. It preserves first-site counts and amplitude histograms, but fails full-network cost and prefix criteria. A temporal selector uses 584 coefficients and source-verified codeword alternatives. It preserves first-site $T=2$ output but likewise fails the joint cost and accuracy criteria. These are counterexamples to treating local invariants as deployment guarantees, not impossibility results for future encoders.

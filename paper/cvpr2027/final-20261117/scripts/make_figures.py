@@ -4,6 +4,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, Circle, FancyArrowPatch, Rectangle, Polygon
+from matplotlib.lines import Line2D
 import numpy as np
 import pandas as pd
 
@@ -25,6 +26,12 @@ PALE = "#f6f8f9"
 plt.rcParams.update({
     "font.family": "DejaVu Sans",
     "font.size": 8,
+    "font.weight": "regular",
+    "axes.labelsize": 8,
+    "axes.titlesize": 9,
+    "xtick.labelsize": 7.5,
+    "ytick.labelsize": 7.5,
+    "legend.fontsize": 7.5,
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
     "axes.linewidth": 0.6,
@@ -171,12 +178,12 @@ def overview():
 
 
 def temporal_mechanism():
-    fig, axs = plt.subplots(1, 2, figsize=(6.95, 2.55))
+    fig, axs = plt.subplots(1, 2, figsize=(7.0, 2.65))
     ticks = np.array([1, 2])
     a = np.array([1.0, -0.5])
     b = np.array([0.5, 0.5])
-    axs[0].plot(ticks, a, "-o", color=BLUE, lw=1.5, ms=5.5, label="Codeword A: (q, −q/2)", zorder=3)
-    axs[0].plot(ticks, b, "-o", color=ORANGE, lw=1.5, ms=5.5, label="Codeword B: (q/2, q/2)", zorder=3)
+    axs[0].plot(ticks, a, "-o", color=BLUE, lw=1.5, ms=5.5, label="A: (q, −q/2)", zorder=3)
+    axs[0].plot(ticks, b, "-o", color=ORANGE, lw=1.5, ms=5.5, label="B: (q/2, q/2)", zorder=3)
     axs[0].axhline(0, color="#d5dbdf", lw=0.6)
     axs[0].set_xticks([1, 2])
     axs[0].set_xlim(0.75, 2.38)
@@ -193,6 +200,7 @@ def temporal_mechanism():
     axs[1].plot(ticks, da, "-o", color=BLUE, lw=1.5, ms=5.5, zorder=3)
     axs[1].plot(ticks, db, "-o", color=ORANGE, lw=1.5, ms=5.5, zorder=3)
     axs[1].scatter([2], [0.75], s=48, facecolors="none", edgecolors=TEAL, lw=1.3, zorder=4)
+    axs[1].axhspan(0.70, 0.80, xmin=0.58, xmax=0.98, color=PALE_T, zorder=0)
     axs[1].annotate("same endpoint  3/4", xy=(2, 0.75), xytext=(1.05, 0.18),
                     fontsize=7.2, color=TEAL, ha="left",
                     arrowprops=dict(arrowstyle="-|>", color=TEAL, lw=0.7))
@@ -222,14 +230,14 @@ def stratified():
         ("residual", 1, "Residual +"),
     ]
     colors = [BLUE, "#4f83b8", ORANGE, "#e08a45"]
-    fig, axs = plt.subplots(1, 2, figsize=(6.95, 2.45), sharey=True)
+    fig, axs = plt.subplots(1, 2, figsize=(7.05, 2.85), sharey=True)
     for ax, dataset, title in zip(axs, ["MNIST", "CIFAR10"], ["MNIST", "CIFAR-10"]):
         vals = []
         for sel, direction, _ in order:
             row = frame[(frame.dataset == dataset) & (frame.selector == sel) & (frame.direction == direction)].iloc[0]
             vals.append(float(row.adverse_rate_percent))
         ax.bar(range(4), vals, color=colors, width=0.72)
-        ax.set_xticks(range(4), [x[2] for x in order])
+        ax.set_xticks(range(4), [x[2].replace(" ", "\n") for x in order])
         ax.set_title(title)
         ax.set_ylim(0, 68)
         ax.grid(axis="y", color="#eef1f3", lw=0.5)
@@ -237,14 +245,16 @@ def stratified():
         for i, v in enumerate(vals):
             ax.text(i, v + 1.3, f"{v:.1f}", ha="center", fontsize=7.3, color=INK)
     axs[0].set_ylabel("Adverse margin rate (%)")
+    axs[0].text(0.0, -0.28, "− / +: decrease / increase event amplitude", transform=axs[0].transAxes,
+                fontsize=7.2, color=GRAY, ha="left")
     fig.tight_layout()
     save(fig, "hard_intervention_stratified")
 
 
 def temporal():
     frame = pd.read_csv(DATA / "temporal_decision_effects.csv")
-    fig, axs = plt.subplots(1, 2, figsize=(6.95, 2.5))
-    labels = ["MNIST\nhalve", "MNIST\ndouble", "CIFAR-10\nhalve", "CIFAR-10\ndouble"]
+    fig, axs = plt.subplots(1, 2, figsize=(7.05, 2.9), gridspec_kw={"wspace": 0.32})
+    labels = ["MNIST\nA→B", "MNIST\nB→A", "CIFAR-10\nA→B", "CIFAR-10\nB→A"]
     keys = [("MNIST", "halve"), ("MNIST", "double"), ("CIFAR10", "halve"), ("CIFAR10", "double")]
     changes, activity = [], []
     for ds, direction in keys:
@@ -257,7 +267,7 @@ def temporal():
     ax = axs[0]
     ax.bar(range(4), changes, color=cols, width=0.7)
     ax.set_xticks(range(4), labels)
-    ax.set_ylabel("Graphs with a changed prediction")
+    ax.set_ylabel("Changed predictions (of 128)")
     ax.set_ylim(0, 22)
     for i, v in enumerate(changes):
         ax.text(i, v + 0.35, str(v), ha="center", fontsize=7.5)
@@ -277,20 +287,22 @@ def temporal():
             ax.text(i, v - 0.12, f"{v:+.2f}", ha="center", va="top", fontsize=7.2)
     ax.grid(axis="y", color="#eef1f3", lw=0.5)
     ax.set_axisbelow(True)
-    fig.tight_layout()
+    fig.text(0.5, 0.995, "Fixed local endpoint and event count; changed downstream behavior",
+             ha="center", va="top", fontsize=9, color=TEAL, fontweight="bold")
+    fig.tight_layout(rect=(0, 0, 1, 0.90))
     save(fig, "temporal_decision_effects")
 
 
 def centered():
     frame = pd.read_csv(DATA / "centered_shared_theta.csv")
-    fig, axs = plt.subplots(1, 2, figsize=(6.95, 2.45), sharex=True)
+    fig, axs = plt.subplots(1, 2, figsize=(7.05, 2.65), sharex=True)
     for scale, color, marker in [(1, BLUE, "o"), (8, ORANGE, "s")]:
         g = frame[frame.scale == scale].sort_values("T")
         axs[0].plot(g["T"], g.centered_over_first_analog_mse, marker=marker, color=color, lw=1.3, label=f"scale {scale}")
         axs[1].plot(g["T"], g.centered_over_first_analog_adds, marker=marker, color=color, lw=1.3, label=f"scale {scale}")
-    titles = ["Logit MSE", "Coded-projection additions"]
+    titles = ["Logit MSE", "Prospective coded-projection additions"]
     for ax, title in zip(axs, titles):
-        ax.axhline(1.0, color=GRAY, lw=0.7, ls="--")
+        ax.axhline(1.0, color=GRAY, lw=0.8, ls="--", zorder=0)
         ax.set_xticks([1, 2, 4])
         ax.set_xlabel("Active ticks")
         ax.set_ylabel("Centered / raw-input coding")
@@ -299,7 +311,7 @@ def centered():
         ax.grid(axis="y", color="#eef1f3", lw=0.5)
         ax.set_axisbelow(True)
         ax.legend(frameon=False, fontsize=7)
-    axs[1].text(2.55, 1.035, "raw-input reference", color=GRAY, fontsize=6.2, ha="left")
+    axs[1].text(2.75, 1.035, "raw input = 1", color=GRAY, fontsize=7.2, ha="center")
     fig.tight_layout()
     save(fig, "centered_tradeoff")
 
@@ -308,25 +320,41 @@ def position():
     frame = pd.read_csv(DATA / "position_gap_closure_t1.csv")
     methods = ["site0", "site1", "site2", "site3", "site4", "site5", "nodes0_3", "head4_5"]
     labels = ["N1", "N2", "N3", "N4", "R1", "R2", "Nodes", "Head"]
-    fig, ax = plt.subplots(figsize=(6.95, 2.55))
+    fig, ax = plt.subplots(figsize=(7.05, 3.0))
     width = 0.36
     x = np.arange(len(methods))
     ax.axvspan(-0.5, 5.5, color="#f7f9fb", zorder=0)
     ax.axvspan(5.5, 7.5, color="#fbf6f1", zorder=0)
+    ax.axvspan(-0.5, 0.5, color=PALE_B, zorder=0)
     for ds, offset, color in [("MNIST", -width / 2, BLUE), ("CIFAR10", width / 2, ORANGE)]:
         q = frame[frame.dataset == ds].set_index("method").loc[methods]
         means = 100 * q.agreement_gap_closed_mean.to_numpy()
         sds = 100 * q.agreement_gap_closed_sample_sd.to_numpy()
-        ax.bar(x + offset, means, width=width, color=color, label="MNIST" if ds == "MNIST" else "CIFAR-10", zorder=2)
+        bar_colors = [BLUE] + [color] * (len(methods) - 1)
+        ax.bar(x + offset, means, width=width, color=bar_colors, label="MNIST" if ds == "MNIST" else "CIFAR-10", zorder=2)
         ax.errorbar(x + offset, means, yerr=sds, fmt="none", ecolor=INK, elinewidth=0.6, capsize=2, zorder=3)
     ax.axhline(0, color=GRAY, lw=0.5)
     ax.set_xticks(x, labels)
+    for tick in ax.get_xticklabels():
+        if tick.get_text() in ("N1", "Nodes", "Head"):
+            tick.set_fontweight("bold")
+        if tick.get_text() == "N1":
+            tick.set_color(TEAL)
     ax.set_ylabel("Disagreement gap closed (%)")
     ax.set_ylim(-12, 100)
-    ax.legend(frameon=False, ncol=2, loc="upper left", bbox_to_anchor=(0.30, 0.98))
+    handles = [
+        Line2D([0], [0], color=BLUE, lw=6, label="MNIST"),
+        Line2D([0], [0], color=ORANGE, lw=6, label="CIFAR-10"),
+    ]
+    ax.legend(handles=handles, frameon=False, ncol=2, loc="upper left", bbox_to_anchor=(0.30, 0.98))
     ax.grid(axis="y", color="#e6ebef", lw=0.5)
     ax.set_axisbelow(False)
     ax.axvline(5.5, color="#d9dee3", lw=0.6, zorder=1)
+    ax.text(0, 96, "N1: largest single-site recovery", color=BLUE, fontsize=7.8,
+            ha="center", va="top", fontweight="bold")
+    ax.text(2.5, 7, "Single sites", color=GRAY, fontsize=7.2, ha="center", va="bottom")
+    ax.text(6.5, 7, "Joint restoration", color=GRAY, fontsize=7.2, ha="center", va="bottom")
+    ax.set_ylim(-12, 104)
     fig.tight_layout()
     save(fig, "position_recovery")
 

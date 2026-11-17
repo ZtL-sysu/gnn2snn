@@ -25,7 +25,7 @@
 
 ## 成稿状态
 
-- 源文件在 paper/cvpr2027/final-20261117。匿名审稿 PDF 为 main_submission.pdf。正文和 LLM 声明在前 8 页，24 篇参考文献在第 9 页，总计 9 页。图 1 使用提供的最终总览图，并保留其余机制图与结果图。补充材料 4 页。
+- 源文件在 paper/cvpr2027/final-20261117。匿名审稿 PDF 为 main_submission.pdf。正文、LLM 声明和 24 篇参考文献共 8 页。图 1 已替换为本次提供的总览图，并保留其余机制图与结果图。补充材料 4 页。
 - 除新提供的图 1 外，其余图由 scripts/make_figures.py 从记录表绘制；新图作为作者提供的概览图，画面中的数字与正文记录一致。
 - 作者栏为 Anonymous CVPR submission，PDF 元数据 author 为空。未改登记作者信息。
 - 新标题是 Beyond Reconstruction: Auditing Decision and Temporal Fidelity in Graph-to-Spike Conversion。如果 OpenReview 已锁定旧标题，上传前改回原题即可。
