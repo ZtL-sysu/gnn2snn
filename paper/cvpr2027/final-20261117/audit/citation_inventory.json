@@ -1,0 +1,292 @@
+[
+  {
+    "key": "maass1997",
+    "title": "Networks of spiking neurons: The third generation of neural network models",
+    "year": 1997,
+    "source_url": "https://doi.org/10.1016/S0893-6080(97)00011-7",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; spiking-network background"
+    ],
+    "doi": "10.1016/S0893-6080(97)00011-7"
+  },
+  {
+    "key": "diehl2015",
+    "title": "Fast-classifying, high-accuracy spiking deep networks through weight and threshold balancing",
+    "year": 2015,
+    "source_url": "https://doi.org/10.1109/IJCNN.2015.7280696",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; conversion fidelity",
+      "Related Work; conversion pipeline"
+    ],
+    "doi": "10.1109/IJCNN.2015.7280696"
+  },
+  {
+    "key": "rueckauer2017",
+    "title": "Conversion of continuous-valued deep networks to efficient event-driven networks for image classification",
+    "year": 2017,
+    "source_url": "https://doi.org/10.3389/fnins.2017.00682",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; conversion background",
+      "Related Work; conversion pipeline"
+    ],
+    "doi": "10.3389/fnins.2017.00682"
+  },
+  {
+    "key": "sengupta2019",
+    "title": "Going deeper in spiking neural networks: VGG and residual architectures",
+    "year": 2019,
+    "source_url": "https://doi.org/10.3389/fnins.2019.00095",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; conversion fidelity",
+      "Related Work; residual membrane readout"
+    ],
+    "doi": "10.3389/fnins.2019.00095"
+  },
+  {
+    "key": "han2020rmp",
+    "title": "RMP-SNN: Residual membrane potential neuron for enabling deeper high-accuracy and low-latency spiking neural network",
+    "year": 2020,
+    "source_url": "https://doi.org/10.1109/CVPR42600.2020.01357",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; conversion fidelity",
+      "Related Work; residual membrane readout"
+    ],
+    "doi": "10.1109/CVPR42600.2020.01357"
+  },
+  {
+    "key": "liu2022spikeconverter",
+    "title": "SpikeConverter: An efficient conversion framework zipping the gap between artificial neural networks and spiking neural networks",
+    "year": 2022,
+    "source_url": "https://doi.org/10.1609/aaai.v36i2.20061",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; conversion fidelity",
+      "Related Work; conversion pipeline"
+    ],
+    "doi": "10.1609/aaai.v36i2.20061"
+  },
+  {
+    "key": "han2022vig",
+    "title": "Vision GNN: An image is worth graph of nodes",
+    "year": 2022,
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/2b25b6c21e2cf163b6fa8d8c3a68a7f5-Abstract-Conference.html",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; visual graph classifiers"
+    ]
+  },
+  {
+    "key": "wang2025adaptivecalibration",
+    "title": "Adaptive calibration: A unified conversion framework of spiking neural networks",
+    "year": 2025,
+    "source_url": "https://doi.org/10.1609/aaai.v39i2.32150",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; conversion fidelity",
+      "Related Work; calibration"
+    ],
+    "doi": "10.1609/aaai.v39i2.32150"
+  },
+  {
+    "key": "sun2025posttraining",
+    "title": "Post-training quantization for efficient ANN-SNN conversion",
+    "year": 2025,
+    "source_url": "https://doi.org/10.1016/j.neunet.2025.107832",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; decision-aware quantization"
+    ],
+    "doi": "10.1016/j.neunet.2025.107832"
+  },
+  {
+    "key": "jiang2025fission",
+    "title": "Adaptive fission: Post-training encoding for low-latency spike neural networks",
+    "year": 2025,
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/e2e0a9004132490db1be58bffa419268-Abstract-Conference.html",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; temporal encoding"
+    ]
+  },
+  {
+    "key": "li2021",
+    "title": "A Free Lunch From ANN: Towards Efficient, Accurate Spiking Neural Networks Calibration",
+    "year": 2021,
+    "source_url": "https://proceedings.mlr.press/v139/li21d.html",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; calibration"
+    ],
+    "doi": "10.1145/3446776"
+  },
+  {
+    "key": "bojkovic2024",
+    "title": "Data Driven Threshold and Potential Initialization for Spiking Neural Networks",
+    "year": 2024,
+    "source_url": "https://proceedings.mlr.press/v238/bojkovic24a.html",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; calibration",
+      "Related Work; calibration"
+    ]
+  },
+  {
+    "key": "wu2024ftbc",
+    "title": "FTBC: Forward Temporal Bias Correction for Optimizing ANN-SNN Conversion",
+    "year": 2024,
+    "source_url": "https://doi.org/10.1007/978-3-031-72890-7_10",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; calibration",
+      "Related Work; calibration"
+    ],
+    "doi": "10.1007/978-3-031-72890-7_10"
+  },
+  {
+    "key": "huang2025",
+    "title": "Differential Coding for Training-Free ANN-to-SNN Conversion",
+    "year": 2025,
+    "source_url": "https://proceedings.mlr.press/v267/huang25i.html",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; differential coding",
+      "Related Work; event coding"
+    ]
+  },
+  {
+    "key": "hwang2025onespike",
+    "title": "One-Spike SNN: Single-Spike Phase Coding With Base Manipulation for ANN-to-SNN Conversion Loss Minimization",
+    "year": 2025,
+    "source_url": "https://doi.org/10.1109/TETC.2024.3386893",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; phase coding"
+    ],
+    "doi": "10.1109/TETC.2024.3386893"
+  },
+  {
+    "key": "bojkovic2025",
+    "title": "Temporal Misalignment in {ANN}-{SNN} Conversion and its Mitigation via Probabilistic Spiking Neurons",
+    "year": 2025,
+    "source_url": "https://proceedings.mlr.press/v267/bojkovic25a.html",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; temporal alignment"
+    ]
+  },
+  {
+    "key": "degreequant2021",
+    "title": "{Degree-Quant}: Quantization-Aware Training for Graph Neural Networks",
+    "year": 2021,
+    "source_url": "https://openreview.net/forum?id=NSBrFgJAHg",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; graph quantization"
+    ],
+    "doi": "10.48550/arXiv.2008.05000"
+  },
+  {
+    "key": "a2q2023",
+    "title": "{A$^2$Q}: Aggregation-Aware Quantization for Graph Neural Networks",
+    "year": 2023,
+    "source_url": "https://openreview.net/forum?id=7L2mgi0TNEP",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; graph quantization"
+    ],
+    "doi": "10.48550/arXiv.2302.00193"
+  },
+  {
+    "key": "dwivedi2023",
+    "title": "Benchmarking Graph Neural Networks",
+    "year": 2023,
+    "source_url": "https://jmlr.org/papers/v24/23-0113.html",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; visual graph classifiers"
+    ]
+  },
+  {
+    "key": "liu2023pdquant",
+    "title": "{PD-Quant}: Post-Training Quantization Based on Prediction Difference Metric",
+    "year": 2023,
+    "source_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_PD-Quant_Post-Training_Quantization_Based_on_Prediction_Difference_Metric_CVPR_2023_paper.pdf",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; decision-aware quantization"
+    ],
+    "doi": "10.1109/CVPR52729.2023.02344"
+  },
+  {
+    "key": "hao2023residual",
+    "title": "Reducing {ANN}-{SNN} Conversion Error through Residual Membrane Potential",
+    "year": 2023,
+    "source_url": "https://doi.org/10.1609/aaai.v37i1.25071",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; residual membrane readout"
+    ],
+    "doi": "10.1609/aaai.v37i1.25071"
+  },
+  {
+    "key": "li2024erroraware",
+    "title": "Error-Aware Conversion from {ANN} to {SNN} via Post-training Parameter Calibration",
+    "year": 2024,
+    "source_url": "https://doi.org/10.1007/s11263-024-02046-2",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Introduction; calibration"
+    ],
+    "doi": "10.1007/s11263-024-02046-2"
+  },
+  {
+    "key": "bu2025complexity",
+    "title": "Inference-Scale Complexity in {ANN}-{SNN} Conversion for High-Performance and Low-Power Applications",
+    "year": 2025,
+    "source_url": "https://doi.org/10.1109/CVPR52734.2025.02271",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; execution cost"
+    ],
+    "doi": "10.1109/CVPR52734.2025.02271"
+  },
+  {
+    "key": "li2026cka",
+    "title": "High-Fidelity {ANN}-to-{SNN} Conversion via Closed-Loop {CKA} Distillation",
+    "year": 2026,
+    "source_url": "https://proceedings.mlr.press/v306/li26db.html",
+    "verification_status": "verified",
+    "relevance_status": "relevant",
+    "support_locations": [
+      "Related Work; feature-output alignment"
+    ]
+  }
+]
