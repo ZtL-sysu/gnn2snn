@@ -35,7 +35,7 @@
     ]
   },
   "input_hashes_sha256": {
-    "main.tex": "b611d4939ffa35dd01a2087facd9447e6c292b370854b52b99756ec80376ce7e",
+    "main.tex": "616c05ea3346f4df9a93f03a4fa527b88fec8c319a40d3f71c6e0c0c5592b5e1",
     "references.bib": "3ab59ae7d671a38c22f682e1fbe25088ae50d308620d403542b181a815710314",
     "audit/citation_inventory.json": "e839b6cefb862a8cbba93c8256c22ade23e5aa93d5dc5338804e05d3bba93366",
     "audit/citation_policy.json": "7125515eb67bc1d61374355ead4ecdecec3835aecaece7fb91b2b84bf45d181b"
