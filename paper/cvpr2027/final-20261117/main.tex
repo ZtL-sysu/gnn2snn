@@ -15,6 +15,7 @@
 \leftlinenumbers*
 \setlength{\linenumbersep}{0.10cm}
 \renewcommand\linenumberfont{\fontsize{7}{8}\selectfont\color[rgb]{.5,.5,1}}
+\hypersetup{pdftitle={},pdfauthor={},pdfsubject={},pdfkeywords={}}
 
 \begin{document}
 \maketitle
@@ -98,6 +99,12 @@ Let $R_M$ denote the pre-intervention message residual relative to the ANN teach
 \label{eq:improvement}
 \end{equation}
 Equation~(5) measures teacher fidelity, whereas $\Delta M$ is the change caused by the intervention.
+
+Expanding Eq.~\eqref{eq:improvement} gives
+\begin{equation}
+2\langle R_M,AEW^\top\rangle_F+\norm{AEW^\top}_F^2<0.
+\end{equation}
+This inequality constrains one signed inner product in message space. The decision instead depends on the projections $(J_y-J_k)\operatorname{vec}(E)$ in Eq.~\eqref{eq:margin}. A perturbation can therefore reduce the message residual while moving the logit gap toward a competitor.
 
 Let $y$ be the teacher class and let $z$ denote the pre-intervention converted logits. The margin against competitor $k\neq y$ is $m_k=z_y-z_k$. After a perturbation that changes the logits by $\Delta z$, the converted prediction agrees with $y$ when
 \begin{equation}
@@ -217,6 +224,15 @@ CIFAR-10 & $T{=}1$ & 296 / 928 & 31.90 [28.66, 35.31]\\
 
 A clear case is MNIST graph 437: teacher and label are digit 5 with top-two margin 5.20378. A deterministic downward event modification reduces next-message MSE from 0.00604723 to 0.00604511, but changes the converted margin from 1.97242 to $-3.74764$ and the prediction from 5 to 4.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/decision_scatter.pdf}
+\caption{Message-improving interventions with adverse and favorable margin changes. Each point is one first-tick intervention on a previously exposed validation graph; both tasks use one teacher and 512 graphs. The horizontal axis is the reduction in next-message MSE, and the vertical axis is the change in teacher-class margin. Points below the dashed line worsen the decision despite reduced message error.}
+\label{fig:decision-scatter}
+\end{figure}
+
+Figure~\ref{fig:decision-scatter} shows that adverse cases are not a few rounded examples: they occupy a substantial part of the message-improving intervention cloud in both tasks. Similar MSE reductions can have margin changes of opposite sign, consistent with the different sensitivity directions in message space and logit space.
+
 The effect appears under all four rule--direction combinations, with rates depending on eligible interventions (Fig.~\ref{fig:hard-strat}). At $T{=}1$, deterministic selection is adverse in 30.6\%/36.2\% of downward/upward MNIST interventions and 20.4\%/24.7\% on CIFAR-10; largest-residual selection gives 49.0\%/48.5\% and 42.6\%/38.5\%. At least one adverse intervention occurs on 50.2\% of MNIST and 42.2\% of CIFAR-10 graphs; fixed rules change a prediction on 7.8\% and 12.7\%. The intervention distribution is part of the result.
 
 \begin{figure}[t]
@@ -230,7 +246,7 @@ Aggregate gains can coexist with harmful individual changes: actual-message allo
 \subsection{Does exact local decoding preserve the network?}
 Exact local reconstruction is a stronger possible guarantee. Source-verified codeword exchanges hold the first-site two-tick decoded tensor and local event count fixed while all subsequent states evolve normally.
 
-Eligible pools contain 84{,}905 first-site coordinates on MNIST and 132{,}899 on CIFAR-10 for reducing exchanges, and 55{,}510 and 63{,}500 for increasing exchanges. Source replay has zero decoded-tensor error; first-prefix profile and absolute amplitude are uncontrolled.
+Source replay verifies legal amplitude levels and reproduces the required second event under the known zero second-tick input. Eligibility differs by exchange direction; first-prefix profile and absolute amplitude remain uncontrolled.
 
 Despite local equality, reducing exchanges change 6/128 MNIST and 16/128 CIFAR-10 predictions; reverse exchanges change 2 and 10 (Fig.~\ref{fig:temporal-decisions}). On CIFAR-10 the reducing exchange loses seven teacher agreements and gains six: accuracy rises from 66.41\% to 67.97\% while teacher agreement falls from 85.16\% to 84.38\%.
 
@@ -240,6 +256,24 @@ Despite local equality, reducing exchanges change 6/128 MNIST and 16/128 CIFAR-1
 \caption{Exact local codeword equivalence changes downstream decisions and activity. Each exchange preserves the local two-tick decoded tensor and local event count. Both directions are evaluated on 128 training graphs per task. Activity is the change in nonzero scalar events over the whole network.}
 \label{fig:temporal-decisions}
 \end{figure}
+
+The two directions are not a matched intervention set; both preserve the local two-tick decoded tensor exactly.
+\begin{table*}[t]
+\caption{Both exchange directions on 128 training graphs per task. Local two-tick decoded-tensor error is zero in every row. Agreement lost/gained counts teacher-class decisions changed from agree/disagree and vice versa.}
+\label{tab:temporal-summary}
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrrr}
+\toprule
+Task & Exchange & Eligible & Changed & Agree $-$/$+$ & Acc.\ base$\to$changed & Events base$\to$changed & $\Delta$ activity\\
+\midrule
+MNIST & halve & 84{,}905 & 6 & 3/3 & 94.53$\to$94.53\% & 4.351$\to$4.499M & $+3.41\%$\\
+ & double & 55{,}510 & 2 & 1/1 & 94.53$\to$94.53\% & 4.351$\to$4.386M & $+0.81\%$\\
+CIFAR-10 & halve & 132{,}899 & 16 & 7/6 & 66.41$\to$67.97\% & 6.876$\to$7.219M & $+4.99\%$\\
+ & double & 63{,}500 & 10 & 5/4 & 66.41$\to$66.41\% & 6.876$\to$6.785M & $-1.33\%$\\
+\bottomrule
+\end{tabular}
+\end{table*}
 
 Equal local event counts do not guarantee equal whole-network activity, and reducing local absolute amplitude can increase global event counts. Reducing exchanges raise total nonzero events from 4{,}351{,}056 to 4{,}499{,}463 on MNIST and 6{,}876{,}233 to 7{,}219{,}258 on CIFAR-10, by 3.41\% and 4.99\%; increasing exchanges change activity by $+0.81\%$ and $-1.33\%$.
 
@@ -299,8 +333,9 @@ The findings guide conversion design. Position recovery identifies influential s
 The evidence concerns frozen superpixel graph classifiers and signed graded-event adapters. Hard interventions use one teacher per task; three-teacher studies characterize conversion fidelity and position sensitivity. Codeword exchanges preserve terminal decoding and event count, but not absolute amplitude or first-prefix profile. Other converters, teacher populations, and feature-dependent graph operators remain open.
 
 \section{Conclusion}
-Graph-to-spike conversion requires more than accurate local reconstruction. Through realizable finite-event interventions, we show that reducing graph-message error can worsen a classifier's decision, and that identical local decoded endpoints with equal event counts can still produce different downstream predictions and activity. Directional class margins and the stateful event recurrence explain why these local measures omit decision-relevant and temporal information. The audit therefore motivates evaluating conversion through prefix-wise decision fidelity and whole-network activity alongside reconstruction accuracy.
+Graph-to-spike conversion requires more than accurate local reconstruction. Realizable finite-event interventions show that reducing graph-message error can worsen a decision, while identical local endpoints and event counts can still change downstream predictions and activity. The audit therefore motivates evaluating prefix-wise decision fidelity and whole-network activity alongside reconstruction accuracy.
 
+\clearpage
 \section*{LLM Usage Statement}
 OpenAI's ChatGPT (GPT models) was used to assist in editing and refining the original manuscript content, particularly to improve its clarity, organization, and presentation. OpenAI's image generation tool was used in the preparation of the conceptual illustration in Figure~1. The authors verified the depicted scientific content and numerical values against the recorded experimental results; the illustration is schematic and did not generate experimental data.
 
