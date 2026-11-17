@@ -23,7 +23,6 @@ GNN→SNN 转换、动态图/视觉图实验与论文资料本地总入口。
 
 - `archive-gnn2snn/gnn2snn-prep-archive/manifests/release-files.json`
 - `archive-gnn2snn/gnn2snn-prep-archive/manifests/release-assets.json`
-- `output/duplicates-inventory.json`
 
 `archive-gnn2snn/trash/` 存放重复项和 junk 隔离副本，未确认前不要恢复或上传。
 

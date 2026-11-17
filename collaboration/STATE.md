@@ -36,7 +36,7 @@
 - 顶层 Git 已初始化并创建分支 `docs/resource-reorg-20261117`；提交 `157db24` 已 push 到 `ZtL-sysu/gnn2snn`，`git ls-remote` 验证远端 SHA 与本地 HEAD 一致。
 - 归档后 `git -C archive-gnn2snn/gnn2snn-main worktree list --porcelain` 显示的 3 个同级 worktree 都指向新路径；其余 5 个 worktree 在用户目录下，未移动。
 - `verified-evidence.zip` 在 6 个位置 SHA256 完全相同；只保留 `archive-gnn2snn/gnn2snn-main/artifacts/verified-evidence.zip`，其余 5 份移入 trash。
-- 对 7 个根目录做文件大小分组 + SHA256 校验，识别 12155 个重复组；只处理前 25 个最大浪费组，共 66 文件约 1.40 GiB 移入 `archive-gnn2snn/trash/large-duplicates/`。
+- 对 7 个根目录做文件大小分组 + SHA256 校验，识别 12155 个重复组；只处理前 25 个最大浪费组，共 66 文件约 1.40 GiB 移入 `archive-gnn2snn/trash/large-duplicates/`。完整重复清单曾写入 `output/duplicates-inventory.json`，因含本机全路径已从工作区删除；保留 trash 中的实际隔离副本作为恢复依据。
 
 ## Hypothesis（当前假设）
 

@@ -29,7 +29,7 @@
 
 - 目标：完成后续 PR、trash 永久删除或被授权的小代码上传。
 - 入口：先读 `AGENTS.md` → `collaboration/STATE.md` → `collaboration/TASKS.md`；再运行 `git -C C:\code\phd-snn status --short --branch`。
-- 已有结果：`archive-gnn2snn/` 已收拢；`output/duplicates-inventory.json` 保留完整重复清单；`manifests/release-files.json` 可定位大文件。
+- 已有结果：`archive-gnn2snn/` 已收拢；trash 保留实际隔离副本；`manifests/release-files.json` 可定位大文件。
 - 建议动作：1. 如用户需要 PR，打开 `https://github.com/ZtL-sysu/gnn2snn/pull/new/docs/resource-reorg-20261117`；2. 如用户确认删除，再清空 `archive-gnn2snn/trash/`；3. 如需上传 `_r*_probe.py`，先移除 token 读取逻辑和本机路径依赖。
 - 注意：不要使用 `git add .` / `git add -A`；不要上传原始数据、checkpoint、trash 或凭证；不要清理嵌套仓库的未提交修改。
 
@@ -38,4 +38,4 @@
 - `C:\code\phd-snn\archive-gnn2snn\`：统一归档入口。
 - `C:\code\phd-snn\archive-gnn2snn\trash\`：重复项隔离区，约 6.4 GiB。
 - `C:\code\phd-snn\archive-gnn2snn\gnn2snn-prep-archive\manifests\release-files.json`：878 个原始数据/权重路径和哈希映射。
-- `C:\code\phd-snn\output\duplicates-inventory.json`：SHA256 重复清单。
+- `C:\code\phd-snn\archive-gnn2snn\trash\large-duplicates\`：最大重复组的隔离副本。
